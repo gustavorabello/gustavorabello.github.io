@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>
+        BASIC blog excerpts feed    </title>
+        <link href="/videos/excerpts.xml" rel="self" />
+    
+        <link href="/"/>
+    
+        
+    <updated>2016-01-29T14:35:30Z</updated>
+
+    <id>/videos/excerpts.xml/</id>
+
+            <entry>
+            <title type="html">Sessile drop</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/1.html"/>
+            <updated>2013-03-21T23:23:04Z</updated>
+            <published>2013-03-21T23:23:04Z</published>
+            <id>/videos/1.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;In this test case, the numerical solution of a sessile drop is compared to the exact solution given by a set of ordinary equations for a 3D axisymmetric drop, both compared during the last 2 seconds of this animation. The test consists in releasing a drop and, due to gravitational force, the drop approaches the wall.&amp;nbsp;I&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">3D vortex field</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/2.html"/>
+            <updated>2013-02-10T19:51:41Z</updated>
+            <published>2013-02-10T19:51:41Z</published>
+            <id>/videos/2.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;3-dimensional vortex field test case. This particular benchmark tests extensively the remeshing methodology implemented in our &lt;span class=&#34;caps&#34;&gt;CFD&lt;/span&gt; code. The test consists in applying a 3d vortex field on a sphere which will be complete distorted in t=0.5T, where T is the total time of the simulation. From t=0.5T to t=T, the vortex&amp;nbsp;fie&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Single vortex simulation</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/3.html"/>
+            <updated>2012-11-03T14:14:25Z</updated>
+            <published>2012-11-03T14:14:25Z</published>
+            <id>/videos/3.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;In this test case, the remeshing methodology is massively tested while the bubble is subjected to a single vortex field. The tetrahedral background mesh is colored by the magnitude of the vortex field velocity. The red color represents high velocity, while the blue one stands for low intensity. As can be seen, the&amp;nbsp;volu&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Zalesak&#39;s rotating sphere test case</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/4.html"/>
+            <updated>2012-11-01T06:40:39Z</updated>
+            <published>2012-11-01T06:40:39Z</published>
+            <id>/videos/4.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;The Zalesak&amp;#8217;s test case is a common benchmark to evaluate the reconstruction of the interface while the Zalesak sphere is rotating. The background flow is imposed with no need of solving the Navier-Stokes equations. As can be seen in the animation and despite the coarse mesh used on this test case, our moving mesh&amp;nbsp;meth&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Squeezing of 2 bubbles</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/5.html"/>
+            <updated>2012-07-16T14:08:05Z</updated>
+            <published>2012-07-16T14:08:05Z</published>
+            <id>/videos/5.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;Modeling of last stage of two bubble&amp;#8217;s coalescence process. The animation shows three different views of the same simulation to illustrate the approaching of two bubbles. Using the 3D &lt;span class=&#34;caps&#34;&gt;ALE&lt;/span&gt;-&lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt; code, we are able to study the physical phenomena that takes place before the unexplored and non-trivial process of bubble&amp;nbsp;coale&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">cross section triangle</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/6.html"/>
+            <updated>2012-07-16T14:08:05Z</updated>
+            <published>2012-07-16T14:08:05Z</published>
+            <id>/videos/6.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;Two-phase flow of a single bubble in a triangular channel. The Navier-Stokes equations are discretized through the Arbitrary Lagrangian-Eulerian framework in which the interface between fluids are accessed sharply by defining a triangular surface embed on the tetrahedral mesh. In such a particular simulation, the&amp;nbsp;confi&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Two-phase flow evaporation in microchannel</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/10.html"/>
+            <updated>2012-06-05T15:52:11Z</updated>
+            <published>2012-06-05T15:52:11Z</published>
+            <id>/videos/10.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;Heat and Mass transfer of refrigerant R1234ze in square cross-section microchannels with a constant heat flux applied on the bottom of the domain. Red color represent high temperature and blue stands for low&amp;nbsp;temperature.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Microchannel two-phase flow of refrigerant R1234ze.</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/11.html"/>
+            <updated>2012-06-05T15:52:11Z</updated>
+            <published>2012-06-05T15:52:11Z</published>
+            <id>/videos/11.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;Two-phase slug flow in square cross-section microchannels. 3D Finite Element simulation was successfully carried out to predict bubble shape, velocity, liquid slug and liquid film thickness in the scope of the &lt;span class=&#34;caps&#34;&gt;CMOSAIC&lt;/span&gt; project financed by NanoTera in Switzerland. The liquid and gas phases correspond to the refrigerant&amp;nbsp;R&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Rising air bubble in glycerol solution</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/12.html"/>
+            <updated>2012-06-05T15:52:11Z</updated>
+            <published>2012-06-05T15:52:11Z</published>
+            <id>/videos/12.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;Gravity-driven flow of an air bubble in sugar-syrup solution. The 3D equations were discretized using the &lt;span class=&#34;caps&#34;&gt;ALE&lt;/span&gt; framework and the Finite Element Method. The numerical result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the rising velocity. Bubble shape and liquid film&amp;nbsp;t&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Rising air bubble in sugar syrup solution</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/7.html"/>
+            <updated>2012-06-05T15:52:11Z</updated>
+            <published>2012-06-05T15:52:11Z</published>
+            <id>/videos/7.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;Gravity-driven flow of an air bubble in sugar-syrup solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the rising velocity of the air bubble and the liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Rising air bubble in sucrose solution</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/8.html"/>
+            <updated>2012-06-05T15:52:11Z</updated>
+            <published>2012-06-05T15:52:11Z</published>
+            <id>/videos/8.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;Gravity-driven flow of an air bubble in sucrose solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the  rising velocity of the air bubble and liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Rising air bubble in sucrose solution</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/9.html"/>
+            <updated>2012-06-05T15:52:11Z</updated>
+            <published>2012-06-05T15:52:11Z</published>
+            <id>/videos/9.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;Gravity-driven flow of an air bubble in sucrose solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the rising velocity of the air bubble and liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">2D Rising Bubble Heat Transfer</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/13.html"/>
+            <updated>2012-02-03T22:37:34Z</updated>
+            <published>2012-02-03T22:37:34Z</published>
+            <id>/videos/13.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;2D simulation of a rising bubble with heat transfer. The bubble, lighter then the surrounding fluid, rises and moves towards the heat interface (green color) . The non-dimensional numbers used in this simulations were Re = 200, Sc = 1000, We = 10, mu_in = 0.5, mu_out = 1.0, rho_out = 1.0, rho_in = 0.01. On the right&amp;nbsp;ha&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">2D Heat Transfer Bubble Rising</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/14.html"/>
+            <updated>2011-11-28T11:25:57Z</updated>
+            <published>2011-11-28T11:25:57Z</published>
+            <id>/videos/14.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;Rising of a single bubble immersed in a fluid where the bottom part (red) is heated and has temperature higher then the upper part (blue). The bubble is then release and due to buoyancy effect, it crosses the heat transition line (green color). The heat transfer process takes place into the bubble dynamic and due to&amp;nbsp;th&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">3D Point Deletion Strategy</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/15.html"/>
+            <updated>2011-11-14T15:39:58Z</updated>
+            <published>2011-11-14T15:39:58Z</published>
+            <id>/videos/15.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;The interface between fluids is represented by a set of points, edges and facets. These facets are triangles which are part of the tetrahedron mesh. Each triangle represents the shared facet of two adjacent tetrahedrons. As can be seen, while the surface movies with respect to the flow, the elements are compressed&amp;nbsp;spoi&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">3D Point Insertion Strategy</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/16.html"/>
+            <updated>2011-11-14T15:39:58Z</updated>
+            <published>2011-11-14T15:39:58Z</published>
+            <id>/videos/16.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;The interface between fluids is represented by a set of points, edges and facets. These facets are triangles which are part of the tetrahedron mesh. Each triangle represents the shared facet of two adjacent tetrahedrons. As can be seen, while the surface movies with respect to the flow, the elements are stretched&amp;nbsp;spoil&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">3D Air-Water Flow</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/17.html"/>
+            <updated>2011-11-14T15:39:58Z</updated>
+            <published>2011-11-14T15:39:58Z</published>
+            <id>/videos/17.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;The rising of a single air bubble in a stagnant column of water has been simulated. The 3-dimensional two-phase flow phenomena can be numerically predicted. At the leftmost frame, the interface between fluid is represented by a set of points, edges and triangular facets which are part of the tetrahedron domain mesh.&amp;nbsp;Th&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">2D Microchannel Coalescence</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/18.html"/>
+            <updated>2011-11-14T15:39:58Z</updated>
+            <published>2011-11-14T15:39:58Z</published>
+            <id>/videos/18.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;Numerical simulation of 2D microchannel two-phase flow. The equations are written in the Arbitrary Lagrangian-Eulerian framework (&lt;span class=&#34;caps&#34;&gt;ALE&lt;/span&gt;) through the Finite Element method (&lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt;), &lt;span class=&#34;caps&#34;&gt;ANJOS&lt;/span&gt; et al. (2013). The bubble velocity profile is shown on the top of the figure where the highest horizontal speed is represented by the&amp;nbsp;red &lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">3D Air-Water-Sugar Flow</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/19.html"/>
+            <updated>2011-11-14T15:39:58Z</updated>
+            <published>2011-11-14T15:39:58Z</published>
+            <id>/videos/19.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;Numerical simulation of 3-dimensional two-phase flow is performed to predict the rising of an air bubble in a initially stagnant water-sugar solution. At the leftmost frame, the interface between fluid is represented by a set of points, edges and triangular facets which are part of the tetrahedron domain mesh. The&amp;nbsp;midd&lt;/p&gt;            </content>
+        </entry>
+    </feed>

@@ -1,0 +1,66 @@
+
+/* COURSE.CSS - EXTENSION OF SITE LAYOUT */
+
+#item 
+{
+ margin-top:30px;
+ margin-bottom:30px;
+}
+
+#item li
+{
+ font-size:18px;
+ text-decoration:none;
+ color:black;
+ letter-spacing:-1px;
+ padding-left:30px;
+ padding-bottom:3px;
+ text-align:justify;
+ line-height:0.5%;
+}
+
+#item ul 
+{
+ margin-left:50px;
+}
+
+#item h1
+{ 
+ font-size:44px;
+ text-align:justify;
+ letter-spacing:-1px;
+ margin-left:10px;
+ margin-bottom:10px;
+ color:black;
+}
+
+#item img
+{ 
+ height:50px;
+ text-align:center;
+ color:black;
+}
+
+#text
+{
+ margin-top:30px;
+ margin-bottom:30px;
+ font-size:18px;
+ text-decoration:none;
+ color:black;
+ text-align:justify;
+}
+
+#text h1
+{ 
+ margin-top:30px;
+ font-size:24px;
+ text-align:justify;
+ color:blue;
+}
+
+#text p
+{
+ color:black;
+ margin-left:20px;
+}

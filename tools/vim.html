@@ -1,0 +1,198 @@
+<!doctype html>
+<!-- https://github.com/paulirish/html5-boilerplate/blob/master/index.html -->
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <!-- encoding must be specified within the first 512 bytes
+        www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset -->
+
+  <!-- meta element for compatibility mode needs to be before
+        all elements except title & meta
+        msdn.microsoft.com/en-us/library/cc288325(VS.85).aspx -->
+  <!-- Chrome Frame is only invoked if meta element for
+        compatibility mode is within the first 1K bytes
+        code.google.com/p/chromium/issues/detail?id=23003 -->
+
+  <title>Vim Commands</title>
+  <meta name="description" content="">
+  <meta name="author" content="Gustavo R Anjos">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <!-- Place favicon.ico & apple-touch-icon.png
+        in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/media/favicon.ico">
+  <link rel="apple-touch-icon" href="/media/apple-touch-icon.png">
+  
+    <link rel="stylesheet" href="/media/css/site.css">
+  <link rel="stylesheet" href="/media/css/syntax.css">
+  
+    <!-- All JavaScript at the bottom, except for Modernizr which
+        enables HTML5 elements & feature detects -->
+    <script src="/media/js/libs/modernizr-1.7.min.js"></script>
+    </head>
+<body id="vim">
+    <div id="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <div class="col1">
+            <h1>Gustavo Rabello dos Anjos</h1>
+            <h3>Professional Website</h3>
+		  </div>
+		  <div class="col2">
+		   <b>PROFESSIONAL ADDRESS</b>:
+		   <br>
+		   <a href="http://www.gesar.uerj.br" target="_blank"> GESAR </a> 
+		   <br>
+		   Rua Fonseca Teles, 121 <br>
+		   S&atilde;o Crist&oacute;v&atilde;o, Rio de Janeiro <br>
+		   20940-903 RJ - Brasil <br>
+		   <b> Tel: </b> +55 21 2332-4733 <br>
+		   <b> E-mail: </b> <a href="mailto:gustavo.anjos@uerj.br" 
+			target="_top"> gustavo.anjos@uerj.br </a>
+		   <br>
+		  </div>                              <nav class=main_nav>
+    <ul>
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                href="/index.html">
+                About
+            </a>
+        </li>        <li>
+            <a title="Research"
+                class="button white research"
+                href="/research">
+                Research
+            </a>
+        </li>        <li>
+            <a title="Education"
+                class="button white education"
+                href="/education">
+                Education
+            </a>
+        </li>        <li>
+            <a title="Publications"
+                class="button white publications"
+                href="/publications">
+                Publications
+            </a>
+        </li>        <li>
+            <a title="Tools"
+                class="button white active tools"
+                href="/tools">
+                Tools
+            </a>
+        </li>        <li>
+            <a title="Images"
+                class="button white images"
+                href="/images">
+                Images
+            </a>
+        </li>        <li>
+            <a title="Videos"
+                class="button white videos"
+                href="/videos">
+                Videos
+            </a>
+        </li>    </ul>
+</nav>
+                    </header>
+          <section class="content">
+          
+<p><head>
+<link rel="stylesheet" href="/media/css/tools.css">
+ </head>
+ <div id="text"></p>
+<h1>Basics</h1>
+<p>:w                  save&nbsp;document</p>
+<p>:q                  quit&nbsp;document</p>
+<p>:qa                 quit all&nbsp;documents</p>
+<p>:wq                 save and quit&nbsp;document</p>
+<p>:wqa                save and quit all&nbsp;documents</p>
+<p>:saveas filename    save new&nbsp;document</p>
+<p>:e .                open file&nbsp;explore</p>
+<p>:args               list of&nbsp;files</p>
+<p>:e filename         edit another&nbsp;file</p>
+<p>:split filename     split windows and load another&nbsp;file</p>
+<p>:vsplit filename    vertical split windows and load another&nbsp;file</p>
+<p>:sview filename     open a read-only&nbsp;file</p>
+<p>:set backup         set tilde file&nbsp;backup</p>
+<p>:ggVG               select the entire&nbsp;document</p>
+<p>:make               run Makefile&nbsp;script</p>
+<p>:32                 go to line&nbsp;32</p>
+<h1>Substitution</h1>
+<p>i                   insert&nbsp;text</p>
+<p>o                   insert new line after&nbsp;cursor</p>
+<p>O                   insert new line before&nbsp;cursor</p>
+<p>a                   append text in the next cursor&nbsp;space</p>
+<p>A                   append text in the end of&nbsp;line</p>
+<p>w                   go to the next&nbsp;word</p>
+<p>s                   substitute character under&nbsp;cursor</p>
+<p>S                   delete line and start insert&nbsp;text</p>
+<p>x                   delete character under&nbsp;cursor</p>
+<h1>Registers</h1>
+<p>q[a-z;0-9]          start record to&nbsp;[a-z;0-9]</p>
+<p>set of&nbsp;command     </p>
+<p>q                   end of&nbsp;record</p>
+<p>@[a-z;0-9]          execute set of&nbsp;command</p>
+<p>@@[a-z;0-9]         repeat&nbsp;execution</p>
+<p>5@@[a-z;0-9]        repeat execution 5&nbsp;times</p>
+<h1>Bibliography</h1>
+<p><a href="http://www.vim.org">vim online (official&nbsp;site)</a></p>
+<p><a href="http://www.oualline.com/vim-cook.html#all_files">vim&nbsp;cookbook</a></p>
+<p><a href="http://jmcpherson.org/editing.html">efficient editing with&nbsp;vim</a></p>
+<p><a href="http://www.worldtimzone.com/res/vi.html">vim cheat&nbsp;sheet</a></p>
+<p><a href="http://rayninfo.co.uk/vimtips.html">key feature&nbsp;zzaper</a></p>
+<p><a href="http://web.cs.swarthmore.edu/help/vim/vim7.html">vim tips and&nbsp;tricks</a></p>
+<p><a href="http://aurelio.net/doc/vim/vim-comandos.html">aur&eacute;lio.net</a></p>
+<p><a href="http://pt.wikibooks.org/wiki/Vim:_Repeti%C3%A7%C3%A3o_de_Comandos">vim&nbsp;wikibooks</a></p>
+<p><a href="http://vim.wikia.com/wiki/Main_Page">vim tips&nbsp;wiki</a></p>
+</div>          </section>
+      </div>
+      </div> <!--! end of #container -->
+  <footer>
+      Powered by <a href="http://hyde.github.io">hyde</a>.
+  </footer>
+      <!-- Javascript at the bottom for fast page loading -->
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.5.1.min.js">\x3C/script>')</script>
+  
+    
+
+  <!--[if lt IE 7 ]>
+    <script src="js/libs/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+  <![endif]-->
+
+    <script>
+ (function(i,s,o,g,r,a,m)
+ {
+  i['GoogleAnalyticsObject']=r;i[r]=i[r] || function()
+  {
+   (i[r].q=i[r].q||[]).push(arguments)
+  },i[r].l=1*new Date();
+  a=s.createElement(o), 
+  m=s.getElementsByTagName(o)[0];
+  a.async=1;
+  a.src=g;
+  m.parentNode.insertBefore(a,m)
+ })
+ (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ ga('create', 'UA-27563209-1', 'auto'); ga('send','pageview');
+</script>
+
+  
+  </body>
+</html>

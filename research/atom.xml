@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>
+        BASIC blog full text feed    </title>
+        <link href="/research/atom.xml" rel="self" />
+    
+        <link href="/"/>
+    
+        
+    <updated>2016-01-29T14:35:28Z</updated>
+
+    <id>/research/atom.xml/</id>
+
+            <entry>
+            <title type="html">Professorship</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/professor.html"/>
+            <updated>2014-07-14T10:00:00Z</updated>
+            <published>2014-07-14T10:00:00Z</published>
+            <id>/research/professor.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="professor"
+                        label="Professor" />
+                        <category   scheme="/res.url/tags"
+                        term="mechanical"
+                        label="Mechanical" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/under-construction.png&#34; /&gt;
+Currently I am professor of fluid dynamics at the Mechanical Department
+of the State University of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;). More info will be
+updated soon!
+&lt;a href=&#34;/media/images/research/professor/under-construction.png&#34;&gt;My Man Jeeves by &lt;span class=&#34;caps&#34;&gt;PG&lt;/span&gt;&amp;nbsp;Wodehouse&lt;/a&gt;&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Post-Doc (UERJ)</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/postdoc2.html"/>
+            <updated>2013-11-02T10:00:00Z</updated>
+            <published>2013-11-02T10:00:00Z</published>
+            <id>/research/postdoc2.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element"
+                        label="Finite Element" />
+                        <category   scheme="/res.url/tags"
+                        term="surface tension"
+                        label="Surface Tension" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;sin&#34; src=&#34;/media/images/research/postdoc/gesar4.png&#34; /&gt;
+The topic of the post-doc is numerical two-phase flows with emphasis in
+micro-macro two-phase flows in capillaries with different geometries
+found in many applications within the oil and gas field. The work is
+being performed in Gesar Group - &lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;. (&lt;span class=&#34;caps&#34;&gt;GESAR&lt;/span&gt;) at the State University
+of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;). More info will be updated soon!
+&lt;a href=&#34;/media/images/research/postdoc/gesar1.png&#34;&gt;My Man Jeeves by &lt;span class=&#34;caps&#34;&gt;PG&lt;/span&gt;&amp;nbsp;Wodehouse&lt;/a&gt;&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Post-Doc (MIT)</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/postdoc1.html"/>
+            <updated>2012-08-01T10:00:00Z</updated>
+            <published>2012-08-01T10:00:00Z</published>
+            <id>/research/postdoc1.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite volume"
+                        label="Finite Volume" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="turbulence"
+                        label="Turbulence" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="nuclear"
+                        label="Nuclear" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/postdoc/under-construction.png&#34; /&gt;
+The topic of the post-doc is boiling and condensation in convective flow
+with multiple bubbles. The work is being performed in the Nuclear
+Science and Engineering (&lt;span class=&#34;caps&#34;&gt;NSE&lt;/span&gt;) at the Massachussetts Institute of
+Technology (&lt;span class=&#34;caps&#34;&gt;MIT&lt;/span&gt;). More info will be updated soon!
+&lt;a href=&#34;/media/images/research/postdoc/under-construction.png&#34;&gt;My Man Jeeves by &lt;span class=&#34;caps&#34;&gt;PG&lt;/span&gt;&amp;nbsp;Wodehouse&lt;/a&gt;&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Ph.D.</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/phd.html"/>
+            <updated>2012-07-30T10:00:00Z</updated>
+            <published>2012-07-30T10:00:00Z</published>
+            <id>/research/phd.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="bubble"
+                        label="Bubble" />
+                        <category   scheme="/res.url/tags"
+                        term="surface tension"
+                        label="Surface Tension" />
+                        <category   scheme="/res.url/tags"
+                        term="curvature"
+                        label="Curvature" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="drop"
+                        label="Drop" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;vortex&#34; src=&#34;/media/images/research/phd/singleVortex.png&#34; /&gt;
+The topic of the doctorate is two-phase flow and heat transfer in
+microchannels. One of the major aspects of this thesis will be to extend
+the single phase code (developed during the masters studies) and
+implement two-phase and heat transfer bringing the surface tension
+effects into the code for elongated bubble flows, annular flows and
+bubbly flows (for both evaporating flows and perhaps also for some
+condensing flows).
+&lt;img alt=&#34;disk&#34; src=&#34;/media/images/research/phd/3Dbubble.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Both Finite Element Method (&lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt;) and the Arbitrary
+Lagrangian-Eulerian (&lt;span class=&#34;caps&#34;&gt;ALE&lt;/span&gt;) framework will be used to achieve such a task.
+Another interesting aspect could be for an isolated bubble growing at a
+wall in a cross-flow in a microchannel with down stream coalescence of
+the train of departing bubbles. All these works are done in the Heat and
+Mass Transfer Laboratory (&lt;span class=&#34;caps&#34;&gt;LTCM&lt;/span&gt;) at the Swiss Federal Institute of
+Technology in Lausanne&amp;nbsp;(&lt;span class=&#34;caps&#34;&gt;EPFL&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/media/images/research/phd/singleVortex.png&#34;&gt;My Man Jeeves by &lt;span class=&#34;caps&#34;&gt;PG&lt;/span&gt;&amp;nbsp;Wodehouse&lt;/a&gt;&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">GESAR (post-M.Sc.)</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/postmsc.html"/>
+            <updated>2007-04-01T10:00:00Z</updated>
+            <published>2007-04-01T10:00:00Z</published>
+            <id>/research/postmsc.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="laminar"
+                        label="Laminar" />
+                        <category   scheme="/res.url/tags"
+                        term="reservoir"
+                        label="Reservoir" />
+                        <category   scheme="/res.url/tags"
+                        term="single phase"
+                        label="Single Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;res1&#34; src=&#34;/media/images/research/postmsc/simU225.png&#34; /&gt;
+From 2007 to mid-2008 I worked as a young researcher in the Group for
+Study and Simulations of Reservoir Filling (&lt;span class=&#34;caps&#34;&gt;GESAR&lt;/span&gt;) . This one-year
+experience brought me the necessary skills for large code development,
+since the multi-disciplinary project required experience in many
+different areas such as engineering, biology, chemistry and mathematics.
+The project consisted in numerical simulation of hydropower reservoirs
+filling.
+&lt;img alt=&#34;res1&#34; src=&#34;/media/images/research/postmsc/simC225.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The Navier-Stokes&amp;#8217;s equation was used to describe the behaviour
+of the interaction between the surrounded nature (nutrients, vegetation,
+chemical components) and the flow itself. The previous master&amp;#8217;s code was
+improved and massively tested against important nature phenomenas which
+occurs due to the filling of large Brazilian reservoirs. The Finite
+Element Method had been used for the mathematical discretization using
+triangular (2D) and tetrahedral (3D) elements. The final result is the
+development of a powerful software able to predict the natural variables
+found in a generic hydropower reservoirs&amp;nbsp;filling.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/media/images/research/postmsc/simU225.png&#34;&gt;My Man Jeeves by &lt;span class=&#34;caps&#34;&gt;PG&lt;/span&gt;&amp;nbsp;Wodehouse&lt;/a&gt;&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">M.Sc.</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/msc.html"/>
+            <updated>2005-03-20T10:00:00Z</updated>
+            <published>2005-03-20T10:00:00Z</published>
+            <id>/research/msc.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="single phase"
+                        label="Single Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="transition"
+                        label="Transition" />
+                        <category   scheme="/res.url/tags"
+                        term="finite element"
+                        label="Finite Element" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;disk&#34; src=&#34;/media/images/research/msc/disk.png&#34; /&gt;
+Followed by the end of my bachelor&amp;#8217;s project, I started my masters
+studies at the Federal University of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UFRJ&lt;/span&gt;) in the
+Metallurgical and Materials Engineering Department (&lt;span class=&#34;caps&#34;&gt;COPPE&lt;/span&gt;). The period
+of two years is required to receive the Master&amp;#8217;s degree and during this
+period we must follow some courses and write a dissertation based on a
+specific theme.
+We have chosen to follow three directions of courses:
+scientific computing, mathematics and fluid mechanics, all of them were
+done in their respective departments. The aim of the masters thesis was
+to develop a three dimensional Finite Element code, under the
+object-oriented paradigm, to simulate the flow field close to an
+electrochemical cell immerse in h3SO4 solution. The Navier-Stokes&amp;#8217;s
+equations were used to model the real system. We used the
+Semi-Lagrangian approach to treat the convective (non-linear) term,
+present in the equations, which is one of the most problematic issue in
+such a modelling. The others terms namely pressure and viscous terms,
+were discretized by the standard Galerkin method. The final linear
+system Ax=b was treated by the &lt;span class=&#34;caps&#34;&gt;LU&lt;/span&gt; projection method, thus decoupling
+velocity and pressure in two smaller systems. In 2007 I received my
+master&amp;#8217;s degree&amp;nbsp;(M.Sc.).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/media/images/research/msc/disk.png&#34;&gt;My Man Jeeves by &lt;span class=&#34;caps&#34;&gt;PG&lt;/span&gt;&amp;nbsp;Wodehouse&lt;/a&gt;&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">B.Eng.</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/bsc.html"/>
+            <updated>2000-01-03T10:00:00Z</updated>
+            <published>2000-01-03T10:00:00Z</published>
+            <id>/research/bsc.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="single phase"
+                        label="Single Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="experimental"
+                        label="Experimental" />
+                        <category   scheme="/res.url/tags"
+                        term="wind tunnel"
+                        label="Wind Tunnel" />
+                        <category   scheme="/res.url/tags"
+                        term="turbulence"
+                        label="Turbulence" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;avelino&#34; src=&#34;/media/images/research/bsc/avelino.png&#34; /&gt;
+I received my bachelor diploma (B.Eng.) in mechanical engineering at the
+State University of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;) in 2005. In early 2003, I
+started to be involved in research by participating in monitoring and
+undergraduate research. During this period I focoused my studies on
+fluid dynamics and finally presented my bachelor project
+entitled &amp;#8220;Atmospheric Boundary Layer Simulation in Wild Tunnel&amp;#8221; where we
+had analyzed experimentally the effects of fluid flow and its boundary
+layer over a tropical and dense forest. This project had been started
+after some issues of local measurement and thus the experimental
+simulation in wind tunnel was performed to understand the atmospheric
+conditions in the Amazon Rainforest. After this project I received the
+mechanical engineer&amp;nbsp;diploma.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/media/images/research/bsc/avelino.png&#34;&gt;My Man Jeeves by &lt;span class=&#34;caps&#34;&gt;PG&lt;/span&gt;&amp;nbsp;Wodehouse&lt;/a&gt;&lt;/p&gt;            </content>
+        </entry>
+    </feed>
