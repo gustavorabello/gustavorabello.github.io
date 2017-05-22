@@ -7,10 +7,49 @@
         <link href="/"/>
     
         
-    <updated>2016-01-29T14:35:29Z</updated>
+    <updated>2017-05-22T12:07:31Z</updated>
 
     <id>/tools/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Homebrew</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/tools/homebrew.html"/>
+            <updated>2016-08-14T09:00:00Z</updated>
+            <published>2016-08-14T09:00:00Z</published>
+            <id>/tools/homebrew.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="osx"
+                        label="Osx" />
+                        <category   scheme="/res.url/tags"
+                        term="commands"
+                        label="Commands" />
+                        <category   scheme="/res.url/tags"
+                        term="homebrew"
+                        label="Homebrew" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Linux Commands</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/tools/linux-commands.html"/>
+            <updated>2016-04-28T09:00:00Z</updated>
+            <published>2016-04-28T09:00:00Z</published>
+            <id>/tools/linux-commands.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="linux"
+                        label="Linux" />
+                        <category   scheme="/res.url/tags"
+                        term="commands"
+                        label="Commands" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
             <entry>
             <title type="html">GIT Commands</title>
             <author><name>Gustavo R Anjos</name></author>

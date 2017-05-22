@@ -23,8 +23,7 @@
         code.google.com/p/chromium/issues/detail?id=23003 -->
 
   <title>Post-Doc (MIT)</title>
-  <meta name="description" content="Temper. Temper. Temper.
-">
+  <meta name="description" content="Post-Doc description">
   <meta name="author" content="Gustavo R Anjos">
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
@@ -71,16 +70,22 @@
                 About
             </a>
         </li>        <li>
+            <a title="Carreer"
+                class="button white carreer"
+                href="/carreer">
+                Career
+            </a>
+        </li>        <li>
+            <a title="Teaching"
+                class="button white teaching"
+                href="/teaching">
+                Teaching
+            </a>
+        </li>        <li>
             <a title="Research"
                 class="button white active research"
                 href="/research">
                 Research
-            </a>
-        </li>        <li>
-            <a title="Education"
-                class="button white education"
-                href="/education">
-                Education
             </a>
         </li>        <li>
             <a title="Publications"
@@ -114,14 +119,14 @@
 <nav class="post_nav">
 <a class="backlink" href="/research">Back to list</a>
 <a class="prev"
-    title="Zalesak's rotating sphere test case"
-        href="/videos/4.html">
+    title="Post-Doc (NSE-MIT)"
+        href="/carreer/postdoc1.html">
     Prev
 </a>
 
 <a class="next"
     title="Ph.D."
-        href="/research/phd.html">
+        href="/carreer/phd.html">
     Next
 </a>
 </nav>
@@ -164,12 +169,68 @@
     </a>
 </li>
 </ul>
-<p><img alt="constr" src="/media/images/research/postdoc/under-construction.png" />
+<p><img alt="constr" src="/media/images/research/postdoc/mit-logo.png" />
 The topic of the post-doc is boiling and condensation in convective flow
-with multiple bubbles. The work is being performed in the Nuclear
-Science and Engineering (<span class="caps">NSE</span>) at the Massachussetts Institute of
-Technology (<span class="caps">MIT</span>). More info will be updated soon!
-<a href="/media/images/research/postdoc/under-construction.png">My Man Jeeves by <span class="caps">PG</span>&nbsp;Wodehouse</a></p></article>          </section>
+with multiple bubbles found in nuclear reactors. The work was performed
+in the Nuclear Science and Engineering (<span class="caps">NSE</span>) at the Massachussetts
+Institute of Technology (<span class="caps">MIT</span>).</p>
+<h1>Motivation and&nbsp;approach</h1>
+<ul>
+<li>Accurate prediction of the bubble size, which depends on the bubble
+  departure diameter (initial condition) and the condensation&nbsp;rate;</li>
+<li>Identification of the <span class="caps">PWR</span> flow conditions including bubble sizes,
+  shapes, non-dimensional numbers,&nbsp;etc;</li>
+<li>Literature review of data and empirical correlations for bubble&nbsp;condensation;</li>
+<li>Benchmark test cases to spot one physical effect at a time are divided
+  as: Heat Transfer from a solid sphere, 1-dimensional Stefan Problem,
+  Isothermal Bubble rise, Bubble growth in a liquid at rest (boiling),
+  Bubble collapse in a liquid at rest&nbsp;(condensation).</li>
+</ul>
+<p>&nbsp;</p>
+<p><img src=/media/images/research/postdoc/nuclear.png 
+align="middle"></p>
+<p>&nbsp;</p>
+<p><img src=/media/images/research/postdoc/bubbles.png 
+align="middle"></p>
+<p>&nbsp;</p>
+<h1>Results</h1>
+<p>The Table shows benchmark results for 2 different mesh refinement levels
+compared to experimental results for a isothermal rising bubble. In
+Figure with red background, the numerical simulation of a bubble growth
+in a liquid at rest is compared to the well known Scriven solution for
+the bubble history. The Table presents a summary of conditions and
+applicability for pressurized water reactor (<span class="caps">PWR</span>) and 4 different models
+found in the literature. It shows that none of the currently available
+correlations is suitable for <span class="caps">PWR</span> application. These 4 correlations are
+plotted in Figures for the <span class="caps">PWR</span> conditions. As can be seen, the
+discrepancy of predicting bubble history and Nuc is large among&nbsp;them.</p>
+<p>&nbsp;</p>
+<p><img src=/media/images/research/postdoc/results1.png 
+align="middle"></p>
+<p>&nbsp;</p>
+<p><img src=/media/images/research/postdoc/table-results.png 
+align="middle"></p>
+<p>&nbsp;</p>
+<p><img src=/media/images/research/postdoc/table.png 
+align="middle"></p>
+<p>&nbsp;</p>
+<h1>Conclusions and further&nbsp;work</h1>
+<ul>
+<li>Correlations were testes using different conditions and further
+  evaluated at the pressurized water reactor conditions in terms of the
+  bubble history (beta) and the condensation Nusselt number Nuc during the
+  condensation process of a detached vapor&nbsp;bubble.</li>
+<li>Current standard tool for prediction of liquid-to-bubble heat transfer
+  is the Ranz and Marshall’s correlation (Ranz and Marshall, Jr., 1952).
+  It was found that the available resources are insufficient to describe
+  accurately the condensation process occurring at <span class="caps">PWR</span> conditions.
+  However, we suggest the Chen and Meyinger’s correlation due to the
+  easiness of implementation in numerical codes and its linear evolution
+  with time&nbsp;(Fo);</li>
+<li>We have started direct numerical simulations of the bubble
+  condensation process in subcooled flow boiling using the commercial
+  code&nbsp;TransAT. </li>
+</ul></article>          </section>
       </div>
       </div> <!--! end of #container -->
   <footer>
@@ -201,7 +262,7 @@ Technology (<span class="caps">MIT</span>). More info will be updated soon!
   m.parentNode.insertBefore(a,m)
  })
  (window,document,'script','//www.google-analytics.com/analytics.js','ga');
- ga('create', 'UA-27563209-1', 'auto'); ga('send','pageview');
+ ga('create', 'UA-77166360-1', 'auto'); ga('send','pageview');
 </script>
 
   

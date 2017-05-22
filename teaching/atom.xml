@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>
+        BASIC blog full text feed    </title>
+        <link href="/teaching/atom.xml" rel="self" />
+    
+        <link href="/"/>
+    
+        
+    <updated>2017-05-22T12:07:30Z</updated>
+
+    <id>/teaching/atom.xml/</id>
+
+            <entry>
+            <title type="html">Heat Transfer 1 - FEN03-05190</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/transcal1.html"/>
+            <updated>2015-07-15T10:00:00Z</updated>
+            <published>2015-07-15T10:00:00Z</published>
+            <id>/teaching/transcal1.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="massa"
+                        label="Massa" />
+                        <category   scheme="/res.url/tags"
+                        term="calor"
+                        label="Calor" />
+                        <category   scheme="/res.url/tags"
+                        term="termodin&acirc;mica"
+                        label="Termodin&acirc;mica" />
+            
+            <content type="html">
+                                &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/transcal1/ementa.pdf&#34;&gt;content&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/transcal1/diario.pdf&#34;&gt;agenda&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/transcal1/aula1.pdf&#34;&gt;1st.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/transcal1/bibliografia.pdf&#34;&gt;bibliography&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;/media/pdf/teaching/transcal1/normas.pdf&#34;&gt;rules&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;/media/pdf/teaching/transcal1/exercicios-p1.pdf&#34;&gt;task list&amp;nbsp;1&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/transcal1/exercicios-p2.pdf&#34;&gt;task list&amp;nbsp;2&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/transcal1/intro-mef.pdf&#34;&gt;introduction to &lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt;&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/transcal1/exercicio-mef.pdf&#34;&gt;task &lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt;&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Heat Transfer 2 - FEN03-05217</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/transcal2.html"/>
+            <updated>2015-07-14T10:00:00Z</updated>
+            <published>2015-07-14T10:00:00Z</published>
+            <id>/teaching/transcal2.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="massa"
+                        label="Massa" />
+                        <category   scheme="/res.url/tags"
+                        term="calor"
+                        label="Calor" />
+                        <category   scheme="/res.url/tags"
+                        term="termodin&acirc;mica"
+                        label="Termodin&acirc;mica" />
+            
+            <content type="html">
+                                &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/transcal2/ementa.pdf&#34;&gt;content&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/transcal2/diario.pdf&#34;&gt;agenda&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/transcal2/aula1.pdf&#34;&gt;1st.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;/media/pdf/teaching/transcal2/bibliografia.pdf&#34;&gt;bibliography&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;/media/pdf/teaching/transcal2/normas.pdf&#34;&gt;rules&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/nusselt.pdf&#34;&gt;Nusselt&amp;nbsp;analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/transcal2/exercicios-p1.pdf&#34;&gt;Task list&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/transcal2/exercicios-p2.pdf&#34;&gt;Task list&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Transport Phenomena - FEN03-02040</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/fentran.html"/>
+            <updated>2015-07-13T10:00:00Z</updated>
+            <published>2015-07-13T10:00:00Z</published>
+            <id>/teaching/fentran.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="fluid dynamic"
+                        label="Fluid Dynamic" />
+                        <category   scheme="/res.url/tags"
+                        term="heat transfer"
+                        label="Heat Transfer" />
+                        <category   scheme="/res.url/tags"
+                        term="mass transfer"
+                        label="Mass Transfer" />
+                        <category   scheme="/res.url/tags"
+                        term="termodynamic"
+                        label="Termodynamic" />
+            
+            <content type="html">
+                                &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/fentran/ementa.pdf&#34;&gt;content&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/fentran/diario.pdf&#34;&gt;agenda&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/fentran/aula1.pdf&#34;&gt;1st.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/fentran/bibliografia.pdf&#34;&gt;bibliography&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;/media/pdf/teaching/fentran/stats.pdf&#34;&gt;statistics&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;/media/pdf/teaching/fentran/lista1.pdf&#34;&gt;task list&amp;nbsp;1&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/fentran/lista2.pdf&#34;&gt;task list&amp;nbsp;2&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/fentran/solucao-lista1.pdf&#34;&gt;solution of list&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/fentran/solucao-lista2.pdf&#34;&gt;solution of list&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Multiphase flows (MSc/PhD) - FEN03-711</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/multifasico.html"/>
+            <updated>2015-07-12T10:00:00Z</updated>
+            <published>2015-07-12T10:00:00Z</published>
+            <id>/teaching/multifasico.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="fentran"
+                        label="Fentran" />
+                        <category   scheme="/res.url/tags"
+                        term="fluidos"
+                        label="Fluidos" />
+                        <category   scheme="/res.url/tags"
+                        term="multifasico"
+                        label="Multifasico" />
+            
+            <content type="html">
+                                &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/ementa.pdf&#34;&gt;content&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/diario.pdf&#34;&gt;agenda&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/notes.pdf&#34;&gt;notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/nusselt.pdf&#34;&gt;Nusselt&amp;nbsp;analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/project.pdf&#34;&gt;Task&amp;nbsp;project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/bibliografia.pdf&#34;&gt;bibliography&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/aula1.pdf&#34;&gt;1st.&amp;nbsp;lecture&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/aula2.pdf&#34;&gt;2nd.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/aula3.pdf&#34;&gt;3rd.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/aula4.pdf&#34;&gt;4th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/aula6.pdf&#34;&gt;6th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/multifasico/aula8.pdf&#34;&gt;8th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">External Courses</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/external.html"/>
+            <updated>2010-01-01T00:00:00Z</updated>
+            <published>2010-01-01T00:00:00Z</published>
+            <id>/teaching/external.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="heat transfer"
+                        label="Heat Transfer" />
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="calculus"
+                        label="Calculus" />
+            
+            <content type="html">
+                                &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/external/fem-interpack-2015.pdf&#34;&gt;Tutorial Finite Element Method &amp;#8212; interPACK 2015, San Francisco - &lt;span class=&#34;caps&#34;&gt;USA&lt;/span&gt;&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/external/fem-lausanne-2016_1.pdf&#34;&gt;Intro 1D-2D Finite Element Method &amp;#8212; 1st Workshop on Advances in &lt;span class=&#34;caps&#34;&gt;CFD&lt;/span&gt;, Lausanne -&amp;nbsp;Switzerland&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;            </content>
+        </entry>
+    </feed>
