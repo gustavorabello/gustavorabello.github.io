@@ -1,0 +1,13 @@
+*~
+*swp
+.DS*
+.hyde*
+*.pyc
+deploy/
+paginas/
+tags
+content/musics/*/
+content/videos/?.html
+content/videos/??.html
+content/videos/???.html
+*oauth2.json
