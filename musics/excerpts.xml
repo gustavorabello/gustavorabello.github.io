@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2017-05-22T21:31:30Z</updated>
+    <updated>2017-05-26T10:13:05Z</updated>
 
     <id>/musics/excerpts.xml/</id>
 
@@ -1452,6 +1452,18 @@
                             </content>
         </entry>
             <entry>
+            <title type="html">O Que E O Que E (Gonzaguinha)</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/musics/misc/oQueEOQueE%20%28gonzaguinha%29.html"/>
+            <updated>2010-01-01T00:00:00Z</updated>
+            <published>2010-01-01T00:00:00Z</published>
+            <id>/musics/misc/oQueEOQueE%20%28gonzaguinha%29.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
             <title type="html">Pizza Com Guarana (Jingle)</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/musics/misc/pizzaComGuarana%20%28jingle%29.html"/>
@@ -2154,6 +2166,18 @@
             <updated>2010-01-01T00:00:00Z</updated>
             <published>2010-01-01T00:00:00Z</published>
             <id>/musics/toquinhoEVinicius/ondeAndaVoce.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Pout Pourri Bahia</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/musics/toquinhoEVinicius/poutPourriBahia.html"/>
+            <updated>2010-01-01T00:00:00Z</updated>
+            <published>2010-01-01T00:00:00Z</published>
+            <id>/musics/toquinhoEVinicius/poutPourriBahia.html</id>
             
             <content type="html">
                 
