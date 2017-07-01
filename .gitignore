@@ -1,5 +1,2 @@
-*~
-*swp
-.DS*
-.hyde*
-*.pyc
+
+.DS_Store
