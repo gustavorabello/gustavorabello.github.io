@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2017-05-26T10:13:05Z</updated>
+    <updated>2017-09-12T22:56:21Z</updated>
 
     <id>/musics/excerpts.xml/</id>
 
@@ -1434,6 +1434,18 @@
             <updated>2010-01-01T00:00:00Z</updated>
             <published>2010-01-01T00:00:00Z</published>
             <id>/musics/misc/mrJones%20%28countingCrows%29.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Nao Precisa (Paula Fernandes)</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/musics/misc/naoPrecisa%20%28paulaFernandes%29.html"/>
+            <updated>2010-01-01T00:00:00Z</updated>
+            <published>2010-01-01T00:00:00Z</published>
+            <id>/musics/misc/naoPrecisa%20%28paulaFernandes%29.html</id>
             
             <content type="html">
                 
