@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2017-09-12T23:09:53Z</updated>
+    <updated>2017-10-14T23:57:51Z</updated>
 
     <id>/teaching/atom.xml/</id>
 
@@ -173,6 +173,12 @@
                                 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/external/fem-interpack-2015.pdf&#34;&gt;Tutorial Finite Element Method &amp;#8212; interPACK 2015, San Francisco -&amp;nbsp;&lt;span class=&#34;caps&#34;&gt;USA&lt;/span&gt;&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/external/fem-lausanne-2016_1.pdf&#34;&gt;Intro 1D-2D Finite Element Method &amp;#8212; 1st Workshop on Advances in &lt;span class=&#34;caps&#34;&gt;CFD&lt;/span&gt;, Lausanne -&amp;nbsp;Switzerland&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;/media/pdf/teaching/external/fem-lausanne-2017_1.pdf&#34;&gt;Intro 1D-2D Finite Element Method &amp;#8212; 2nd Workshop on Advances in Theoretical and Computational Modelling of Interface Dynamics in Capillary Two-Phase Flows  -&amp;nbsp;Switzerland&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;/media/codes/triAreaFunction.py&#34;&gt;2D shape functions -&amp;nbsp;python&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;            </content>
         </entry>
     </feed>
