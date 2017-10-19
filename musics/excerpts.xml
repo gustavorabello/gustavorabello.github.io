@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2017-10-14T23:57:34Z</updated>
+    <updated>2017-10-19T10:08:44Z</updated>
 
     <id>/musics/excerpts.xml/</id>
 
@@ -54,6 +54,18 @@
             <updated>2010-01-01T00:00:00Z</updated>
             <published>2010-01-01T00:00:00Z</published>
             <id>/musics/arlindoCruz/oShowTemQueContinuar.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Samba De Arere</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/musics/arlindoCruz/sambaDeArere.html"/>
+            <updated>2010-01-01T00:00:00Z</updated>
+            <published>2010-01-01T00:00:00Z</published>
+            <id>/musics/arlindoCruz/sambaDeArere.html</id>
             
             <content type="html">
                 
