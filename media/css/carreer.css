@@ -53,12 +53,13 @@
  margin-top:10px;
  margin-left:40px;
  float:left;
- width:40%;
+ width:30%;
 }
 
 #item .right
 { 
  margin-top:10px;
- float:right;
- width:48%;
+ margin-left:60px;
+ float:left;
+ width:28%;
 }
