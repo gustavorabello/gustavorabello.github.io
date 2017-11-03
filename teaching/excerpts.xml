@@ -7,10 +7,31 @@
         <link href="/"/>
     
         
-    <updated>2017-11-02T11:13:29Z</updated>
+    <updated>2017-11-03T12:58:41Z</updated>
 
     <id>/teaching/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">External Courses</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/external.html"/>
+            <updated>2015-11-01T10:00:00Z</updated>
+            <published>2015-11-01T10:00:00Z</published>
+            <id>/teaching/external.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="heat transfer"
+                        label="Heat Transfer" />
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="calculus"
+                        label="Calculus" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
             <entry>
             <title type="html">Heat Transfer 1 - FEN03-05190</title>
             <author><name>Gustavo R Anjos</name></author>
@@ -93,27 +114,6 @@
                         <category   scheme="/res.url/tags"
                         term="multifasico"
                         label="Multifasico" />
-            
-            <content type="html">
-                
-                            </content>
-        </entry>
-            <entry>
-            <title type="html">External Courses</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/teaching/external.html"/>
-            <updated>2010-01-01T00:00:00Z</updated>
-            <published>2010-01-01T00:00:00Z</published>
-            <id>/teaching/external.html</id>
-                        <category   scheme="/res.url/tags"
-                        term="heat transfer"
-                        label="Heat Transfer" />
-                        <category   scheme="/res.url/tags"
-                        term="finite element method"
-                        label="Finite Element Method" />
-                        <category   scheme="/res.url/tags"
-                        term="calculus"
-                        label="Calculus" />
             
             <content type="html">
                 
