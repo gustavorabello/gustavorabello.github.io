@@ -165,26 +165,35 @@
 </li>
 </ul>
 <p><img alt="disk" src="/media/images/carreer/msc/ufrj.png" />
-Followed by the end of my bachelor&#8217;s project, I started my masters
-studies at the Federal University of Rio de Janeiro (<span class="caps">UFRJ</span>) in the
-Metallurgical and Materials Engineering Department (<span class="caps">COPPE</span>). The period
-of two years is required to receive the Master&#8217;s degree and during this
-period we must follow some courses and write a dissertation based on a
-specific theme.
-We have chosen to follow three directions of courses:
-scientific computing, mathematics and fluid mechanics, all of them were
-done in their respective departments. The aim of the masters thesis was
-to develop a three dimensional Finite Element code, under the
-object-oriented paradigm, to simulate the flow field close to an
-electrochemical cell immerse in h3SO4 solution. The Navier-Stokes&#8217;s
-equations were used to model the real system. We used the
-Semi-Lagrangian approach to treat the convective (non-linear) term,
-present in the equations, which is one of the most problematic issue in
-such a modelling. The others terms namely pressure and viscous terms,
-were discretized by the standard Galerkin method. The final linear
-system Ax=b was treated by the <span class="caps">LU</span> projection method, thus decoupling
-velocity and pressure in two smaller systems. In 2007 I received my
-master&#8217;s degree&nbsp;(M.Sc.).</p></article>          </section>
+Current instabilities in electrochemical cells is a research subject of
+the Applied Electrochemistry Group in the Metallurgy and Materials
+Program – <span class="caps">COPPE</span>/<span class="caps">UFRJ</span>. Electrochemical cells containing a 1M sulfuric
+acid electrolyte and an iron rotating disk electrode are used by the
+group and present this instability. A possible reason for the phenomena
+is a reduction of the stability of the flow, induced by the existence
+of a thin mass concentration boundary layer, produced by the dissolution
+of the electrode.
+The group has addressed the problem by performing
+linear stability analysis of the flow for electrolytes with a viscosity
+profile depending on the axial coordinate z only and, subsequently, by
+coupling the hydrodynamic and the mass concentration field produced by
+the dissolution of the electrode, through the fluid viscosity. The
+results suggest a significant reduction of the stability of the flow,
+due to the coupling of fields. The purpose of this work is to develop a
+computational platform for further studying the hydrodynamic field close
+to the rotating disk electrode, through a 3D Direct Numerical
+Simulation using the Finite Element Method. Viscous and pressure terms
+are discretized through the Galerkin method and the convective term is
+treated through a semi-Lagrangean method. Time derivatives are
+discretized by a first-order backward Euler implicit scheme. Velocity
+and pressure are decoupled through a projection method based on <span class="caps">LU</span>
+decomposition. The resulting linear system is solved by the
+pre-conditioned conjugate gradient method. A hydrodynamic field, very
+close to the generalized von Kármán solution for the rotating disk
+flow was obtained, validating the code. The code, developed within the
+object oriented paradigm, constitutes a platform for the study of 3D
+perturbations in electrochemical cells in the linear regimen and in the
+saturation and the modes interaction in the non-linear&nbsp;regimen.</p></article>          </section>
       </div>
       </div> <!--! end of #container -->
   <footer>

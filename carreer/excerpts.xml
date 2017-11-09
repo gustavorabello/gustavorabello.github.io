@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2017-11-06T09:45:14Z</updated>
+    <updated>2017-11-09T07:18:13Z</updated>
 
     <id>/carreer/excerpts.xml/</id>
 
@@ -127,13 +127,12 @@ Technology&amp;nbsp;(&lt;span class=&#34;caps&#34;&gt;MIT&lt;/span&gt;).&lt;/p&g
             
             <content type="html">
                 &lt;p&gt;&lt;img alt=&#34;vortex&#34; src=&#34;/media/images/carreer/phd/epfl.png&#34; /&gt;&lt;/p&gt;
-                &lt;p&gt;The topic of the doctorate is two-phase flow and heat transfer in
-microchannels. One of the major aspects of this thesis will be to extend
-the single phase code (developed during the masters studies) and
-implement two-phase and heat transfer bringing the surface tension
-effects into the code for elongated bubble flows, annular flows and
-bubbly flows (for both evaporating flows and perhaps also for some
-condensating two-phase&amp;nbsp;flows).&lt;/p&gt;            </content>
+                &lt;p&gt;A new numerical method is proposed to study two-phase flow and heat
+transfer for interlayer cooling of the new generation of multi-stacked
+computer chips. The fluid flow equations are developed in 3-dimensions
+based on the Arbitrary Lagrangian-Eulerian formulation (&lt;span class=&#34;caps&#34;&gt;ALE&lt;/span&gt;) and the
+Finite Element Method (&lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt;), creating a new two-phase method with an
+improved model for the liquid-gas&amp;nbsp;interface.&lt;/p&gt;            </content>
         </entry>
             <entry>
             <title type="html">Post-M.Sc. (GESAR-UERJ)</title>
@@ -186,12 +185,14 @@ The project consisted in numerical simulation of hydropower reservoirs&amp;nbsp;
             
             <content type="html">
                 &lt;p&gt;&lt;img alt=&#34;disk&#34; src=&#34;/media/images/carreer/msc/ufrj.png&#34; /&gt;&lt;/p&gt;
-                &lt;p&gt;Followed by the end of my bachelor&amp;#8217;s project, I started my masters
-studies at the Federal University of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UFRJ&lt;/span&gt;) in the
-Metallurgical and Materials Engineering Department (&lt;span class=&#34;caps&#34;&gt;COPPE&lt;/span&gt;). The period
-of two years is required to receive the Master&amp;#8217;s degree and during this
-period we must follow some courses and write a dissertation based on a
-specific&amp;nbsp;theme.&lt;/p&gt;            </content>
+                &lt;p&gt;Current instabilities in electrochemical cells is a research subject of
+the Applied Electrochemistry Group in the Metallurgy and Materials
+Program – &lt;span class=&#34;caps&#34;&gt;COPPE&lt;/span&gt;/&lt;span class=&#34;caps&#34;&gt;UFRJ&lt;/span&gt;. Electrochemical cells containing a 1M sulfuric
+acid electrolyte and an iron rotating disk electrode are used by the
+group and present this instability. A possible reason for the phenomena
+is a reduction of the stability of the flow, induced by the existence
+of a thin mass concentration boundary layer, produced by the dissolution
+of the&amp;nbsp;electrode.&lt;/p&gt;            </content>
         </entry>
             <entry>
             <title type="html">B.Eng.</title>
