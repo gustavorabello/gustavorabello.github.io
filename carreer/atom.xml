@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2017-11-09T07:18:13Z</updated>
+    <updated>2017-12-01T13:04:14Z</updated>
 
     <id>/carreer/atom.xml/</id>
 
@@ -46,7 +46,8 @@ dedicate my work time in teaching and research.
 Currently I&amp;#8217;m teaching Fundamentals of Heat and Transfer I and &lt;span class=&#34;caps&#34;&gt;II&lt;/span&gt; for
 undergraduate students and Multiphase Flows for graduate students
 (master and doctoral levels). Moreover I am the coordinator of the
-Seminars Sections of the Graduate Program in Mechanical Engineering of&amp;nbsp;&lt;span class=&#34;caps&#34;&gt;PPG&lt;/span&gt;-&lt;span class=&#34;caps&#34;&gt;EM&lt;/span&gt;/&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;. &lt;/p&gt;
+Seminars Sections of the Graduate Program in Mechanical Engineering of
+&lt;span class=&#34;caps&#34;&gt;PPG&lt;/span&gt;-&lt;span class=&#34;caps&#34;&gt;EM&lt;/span&gt;/&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;. &lt;/p&gt;
 &lt;p&gt;I am member of the International Conference on Multiphase Flows (&lt;span class=&#34;caps&#34;&gt;ICMF&lt;/span&gt;)
 organizing committee of the next conference to be held in Rio de Janeiro
 in May&amp;nbsp;2019.&lt;/p&gt;            </content>
@@ -77,7 +78,7 @@ The topic of the post-doc is numerical two-phase flows with emphasis in
 micro-macro two-phase flows in capillaries with different geometries
 found in many applications within the oil and gas field. The work is
 being performed in Gesar Group - &lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;. (&lt;span class=&#34;caps&#34;&gt;GESAR&lt;/span&gt;) at the State University
-of Rio de Janeiro&amp;nbsp;(&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;).&lt;/p&gt;            </content>
+of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;).&lt;/p&gt;            </content>
         </entry>
             <entry>
             <title type="html">Post-Doc (NSE-MIT)</title>
@@ -107,7 +108,7 @@ of Rio de Janeiro&amp;nbsp;(&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;).
 The topic of the post-doc is boiling and condensation in convective flow
 with multiple bubbles. The work is being performed in the Nuclear
 Science and Engineering (&lt;span class=&#34;caps&#34;&gt;NSE&lt;/span&gt;) at the Massachussetts Institute of
-Technology&amp;nbsp;(&lt;span class=&#34;caps&#34;&gt;MIT&lt;/span&gt;).&lt;/p&gt;
+Technology (&lt;span class=&#34;caps&#34;&gt;MIT&lt;/span&gt;).&lt;/p&gt;
 &lt;h1&gt;Motivation and&amp;nbsp;approach&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Accurate prediction of the bubble size, which depends on the bubble
@@ -279,11 +280,11 @@ Current instabilities in electrochemical cells is a research subject of
 the Applied Electrochemistry Group in the Metallurgy and Materials
 Program – &lt;span class=&#34;caps&#34;&gt;COPPE&lt;/span&gt;/&lt;span class=&#34;caps&#34;&gt;UFRJ&lt;/span&gt;. Electrochemical cells containing a 1M sulfuric
 acid electrolyte and an iron rotating disk electrode are used by the
-group and present this instability. A possible reason for the phenomena
+group and present this instability.
+A possible reason for the phenomena
 is a reduction of the stability of the flow, induced by the existence
 of a thin mass concentration boundary layer, produced by the dissolution
-of the electrode.
-The group has addressed the problem by performing
+of the electrode. The group has addressed the problem by performing
 linear stability analysis of the flow for electrolytes with a viscosity
 profile depending on the axial coordinate z only and, subsequently, by
 coupling the hydrodynamic and the mass concentration field produced by
