@@ -7,10 +7,32 @@
         <link href="/"/>
     
         
-    <updated>2017-12-01T13:04:15Z</updated>
+    <updated>2017-12-02T04:42:56Z</updated>
 
     <id>/carreer/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Board of directors</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/carreer/abcm.html"/>
+            <updated>2017-12-03T10:00:00Z</updated>
+            <published>2017-12-03T10:00:00Z</published>
+            <id>/carreer/abcm.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="professor"
+                        label="Professor" />
+                        <category   scheme="/res.url/tags"
+                        term="mechanical"
+                        label="Mechanical" />
+                        <category   scheme="/res.url/tags"
+                        term="association"
+                        label="Association" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/carreer/abcm/logo.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;After successful elections, I am member of the board of directors of the 
+Brazilian Society of Mechanical Engineering for the years&amp;nbsp;2017-2019.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Professorship</title>
             <author><name>Gustavo R Anjos</name></author>
