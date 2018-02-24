@@ -7,10 +7,44 @@
         <link href="/"/>
     
         
-    <updated>2018-02-10T14:05:45Z</updated>
+    <updated>2018-02-24T16:32:05Z</updated>
 
     <id>/recipes/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Sopa de batata baroa</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/recipes/sopaDeBatataBaroa.html"/>
+            <updated>2018-02-19T12:00:00Z</updated>
+            <published>2018-02-19T12:00:00Z</published>
+            <id>/recipes/sopaDeBatataBaroa.html</id>
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;disk&#34; src=&#34;/media/images/recipes/sopaDeBatataBaroa.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Refogar a cebola e o alho-por&amp;oacute; no azeite, acrescentando em
+seguida sal, pimenta do reino e noz moscada. Depois da cebola murchar,
+acrescentar a batata baroa e refogar mais um pouco para a batata pegar o
+gosto do tempero. Colocar &amp;aacute;gua e apurar a quantidade de sal.
+Abafar e cozinhar por cerca de 20min depois da &amp;aacute;gua entrar em
+ebuli&amp;ccedil;&amp;atilde;o. Quando a batata estiver no ponto de desmanchar,
+bater no liquidificador para&amp;nbsp;homogeneiza&amp;ccedil;&amp;atilde;o.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Pesto</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/recipes/doceDeAbobora.html"/>
+            <updated>2018-02-19T10:00:00Z</updated>
+            <published>2018-02-19T10:00:00Z</published>
+            <id>/recipes/doceDeAbobora.html</id>
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;disk&#34; src=&#34;/media/images/recipes/doceDeAbobora.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Em uma panela, misturar todos os ingredientes menos o c&amp;ocirc;co ralado e
+levar para cozinhar em fogo baixo em uma panela semi-tampada. Mexer
+sempre para n&amp;atilde;o colar no fundo da panela e amassar com uma colher de pau
+para desmanchar a ab&amp;oacute;bora. Misturar o c&amp;ocirc;co com 20 minutos antes de
+finalizar o cozimento. Tempo de preparo: + ou -&amp;nbsp;40min.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Tresse au Berre</title>
             <author><name>Gustavo R Anjos</name></author>
