@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2018-10-08T14:45:16Z</updated>
+    <updated>2018-10-21T05:42:48Z</updated>
 
     <id>/teaching/atom.xml/</id>
 
@@ -31,13 +31,13 @@
             <content type="html">
                                 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/external/fem-interpack-2015.pdf&#34;&gt;Tutorial Finite Element Method &amp;#8212; interPACK - &lt;span class=&#34;caps&#34;&gt;USA&lt;/span&gt;&amp;nbsp;2015&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/media/pdf/teaching/external/fem-lausanne-2016_1.pdf&#34;&gt;Intro 1D-2D Finite Element Method &amp;#8212; 1st Workshop in 2-Phase Flows - Switzerland&amp;nbsp;2016&lt;/a&gt; &lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/external/fem-lausanne-2016_1.pdf&#34;&gt;Intro 1D-2D Finite Element Method &amp;#8212; 1st Workshop in 2-Phase Flows - Switzerland&amp;nbsp;2016&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;/media/pdf/teaching/external/fem-lausanne-2017_1.pdf&#34;&gt;Intro 1D-2D Finite Element Method &amp;#8212; 2nd Workshop 2-Phase Flows - Switzerland&amp;nbsp;2017&lt;/a&gt; &lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/external/fem-kobe-2018_1.pdf&#34;&gt;Intro 1D-2D Finite Element Method &amp;#8212; 3rd Workshop 2-Phase Flows - Kobe&amp;nbsp;2018&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;/media/pdf/teaching/external/fem-kobe-2018_1.pdf&#34;&gt;Intro 1D-2D Finite Element Method &amp;#8212; 3rd Workshop 2-Phase Flows - Kobe&amp;nbsp;2018&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/media/pdf/teaching/external/fem-kobe-2018_2.pdf&#34;&gt;Axisymmetric &lt;span class=&#34;caps&#34;&gt;ALE&lt;/span&gt;-&lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt; &amp;#8212; 3rd Workshop 2-Phase Flows - Kobe&amp;nbsp;2018&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/media/codes/triAreaFunction.py&#34;&gt;2D shape functions -&amp;nbsp;python&lt;/a&gt; &lt;/li&gt;
 &lt;/ul&gt;            </content>
