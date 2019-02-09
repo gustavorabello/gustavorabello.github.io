@@ -7,10 +7,50 @@
         <link href="/"/>
     
         
-    <updated>2019-02-09T17:37:54Z</updated>
+    <updated>2019-02-09T18:19:51Z</updated>
 
     <id>/carreer/atom.xml/</id>
 
+            <entry>
+            <title type="html">Professorship</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/carreer/professor-ufrj.html"/>
+            <updated>2019-02-04T10:00:00Z</updated>
+            <published>2019-02-04T10:00:00Z</published>
+            <id>/carreer/professor-ufrj.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="professor"
+                        label="Professor" />
+                        <category   scheme="/res.url/tags"
+                        term="mechanical"
+                        label="Mechanical" />
+                        <category   scheme="/res.url/tags"
+                        term="ufrj"
+                        label="Ufrj" />
+                        <category   scheme="/res.url/tags"
+                        term="coppe"
+                        label="Coppe" />
+                        <category   scheme="/res.url/tags"
+                        term="heat transfer"
+                        label="Heat Transfer" />
+                        <category   scheme="/res.url/tags"
+                        term="multiphase flows"
+                        label="Multiphase Flows" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/carreer/professor/ufrj.png&#34; /&gt;
+From February 2019 I have been appointed as an adjunct professor of
+fluid dynamics and Heat Transfer at the Mechanical Department of the
+Federal University of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;) located at the surrounding
+area of the city of Rio de Janeiro. I dedicate my work time in teaching
+and research.
+I teach Numerical Heat Transfer and Fluid Dynamics for
+undergraduate students and Multiphase Flows for graduate students
+(master and doctoral&amp;nbsp;levels).  &lt;/p&gt;
+&lt;p&gt;I am member the Brazilian Society of Mechanical Engineering and I&amp;#8217;m part
+of the organizing committee of the International Conference on
+Multiphase Flows (&lt;span class=&#34;caps&#34;&gt;ICMF&lt;/span&gt;) to be held in Rio de Janeiro in May&amp;nbsp;2019.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Board of directors</title>
             <author><name>Gustavo R Anjos</name></author>
@@ -61,18 +101,15 @@ Brazilian Society of Mechanical Engineering for the years&amp;nbsp;2017-2019.&lt
             
             <content type="html">
                                 &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/carreer/professor/uerj.png&#34; /&gt;
-Since July 2014 I am adjoint professor of fluid dynamics at the
-Mechanical Department of the State University of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;)
-located at Maracana neighbourhood in the city of Rio de Janeiro. I
-dedicate my work time in teaching and research.
-Currently I&amp;#8217;m teaching Fundamentals of Heat and Transfer I and &lt;span class=&#34;caps&#34;&gt;II&lt;/span&gt; for
+From July 2014 to February 2019 I wasm adjoint professor of fluid
+dynamics at the Mechanical Department of the State University of Rio de
+Janeiro (&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;) located at Maracana neighbourhood in the city of Rio de
+Janeiro. I dedicated my work time in teaching and research.
+I teached Fundamentals of Heat and Transfer I and &lt;span class=&#34;caps&#34;&gt;II&lt;/span&gt; for
 undergraduate students and Multiphase Flows for graduate students
-(master and doctoral levels). Moreover I am the coordinator of the
+(master and doctoral levels). Moreover I was the coordinator of the
 Seminars Sections of the Graduate Program in Mechanical Engineering of
-&lt;span class=&#34;caps&#34;&gt;PPG&lt;/span&gt;-&lt;span class=&#34;caps&#34;&gt;EM&lt;/span&gt;/&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;. &lt;/p&gt;
-&lt;p&gt;I am member of the International Conference on Multiphase Flows (&lt;span class=&#34;caps&#34;&gt;ICMF&lt;/span&gt;)
-organizing committee of the next conference to be held in Rio de Janeiro
-in May&amp;nbsp;2019.&lt;/p&gt;            </content>
+&lt;span class=&#34;caps&#34;&gt;PPG&lt;/span&gt;-&lt;span class=&#34;caps&#34;&gt;EM&lt;/span&gt;/&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;. &lt;/p&gt;            </content>
         </entry>
             <entry>
             <title type="html">Post-Doc (GESAR-UERJ)</title>

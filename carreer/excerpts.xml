@@ -7,10 +7,44 @@
         <link href="/"/>
     
         
-    <updated>2019-02-09T17:37:56Z</updated>
+    <updated>2019-02-09T18:19:52Z</updated>
 
     <id>/carreer/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Professorship</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/carreer/professor-ufrj.html"/>
+            <updated>2019-02-04T10:00:00Z</updated>
+            <published>2019-02-04T10:00:00Z</published>
+            <id>/carreer/professor-ufrj.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="professor"
+                        label="Professor" />
+                        <category   scheme="/res.url/tags"
+                        term="mechanical"
+                        label="Mechanical" />
+                        <category   scheme="/res.url/tags"
+                        term="ufrj"
+                        label="Ufrj" />
+                        <category   scheme="/res.url/tags"
+                        term="coppe"
+                        label="Coppe" />
+                        <category   scheme="/res.url/tags"
+                        term="heat transfer"
+                        label="Heat Transfer" />
+                        <category   scheme="/res.url/tags"
+                        term="multiphase flows"
+                        label="Multiphase Flows" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/carreer/professor/ufrj.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;From February 2019 I have been appointed as an adjunct professor of
+fluid dynamics and Heat Transfer at the Mechanical Department of the
+Federal University of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;) located at the surrounding
+area of the city of Rio de Janeiro. I dedicate my work time in teaching
+and&amp;nbsp;research.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Board of directors</title>
             <author><name>Gustavo R Anjos</name></author>
@@ -61,10 +95,10 @@ Brazilian Society of Mechanical Engineering for the years&amp;nbsp;2017-2019.&lt
             
             <content type="html">
                 &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/carreer/professor/uerj.png&#34; /&gt;&lt;/p&gt;
-                &lt;p&gt;Since July 2014 I am adjoint professor of fluid dynamics at the
-Mechanical Department of the State University of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;)
-located at Maracana neighbourhood in the city of Rio de Janeiro. I
-dedicate my work time in teaching and&amp;nbsp;research.&lt;/p&gt;            </content>
+                &lt;p&gt;From July 2014 to February 2019 I wasm adjoint professor of fluid
+dynamics at the Mechanical Department of the State University of Rio de
+Janeiro (&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;) located at Maracana neighbourhood in the city of Rio de
+Janeiro. I dedicated my work time in teaching and&amp;nbsp;research.&lt;/p&gt;            </content>
         </entry>
             <entry>
             <title type="html">Post-Doc (GESAR-UERJ)</title>
