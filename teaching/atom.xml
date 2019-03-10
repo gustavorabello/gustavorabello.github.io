@@ -7,10 +7,70 @@
         <link href="/"/>
     
         
-    <updated>2019-03-03T19:03:42Z</updated>
+    <updated>2019-03-10T20:45:12Z</updated>
 
     <id>/teaching/atom.xml/</id>
 
+            <entry>
+            <title type="html">Computational Fluid Mech and Heat Transfer - EEK-597</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/compFluidMecHT.html"/>
+            <updated>2019-03-10T12:00:00Z</updated>
+            <published>2019-03-10T12:00:00Z</published>
+            <id>/teaching/compFluidMecHT.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite elements"
+                        label="Finite Elements" />
+                        <category   scheme="/res.url/tags"
+                        term="finte volume"
+                        label="Finte Volume" />
+                        <category   scheme="/res.url/tags"
+                        term="python"
+                        label="Python" />
+            
+            <content type="html">
+                                &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/open?id=1bzOuelC6TBkhdldcYPeBZLIeqRARV7na&#34;&gt;content&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/open?id=1qaHEretJhSil4bL8f4edTOsqsjLA9G0j&#34;&gt;1st.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/open?id=1A3N_W8MoKy73f3oPuccWx_I3f0oq5u8I&#34;&gt;bibliography&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/open?id=1iq_KzFdAsapfh0gMV_n64Da36bBP1bJH&#34;&gt;rules&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/open?id=1F3hddkpuzMoLg7nFrfRq0jxB7JGMD8NR&#34;&gt;notes&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Math Methods for Mech Eng - EEK-300</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/metMat.html"/>
+            <updated>2019-03-10T10:00:00Z</updated>
+            <published>2019-03-10T10:00:00Z</published>
+            <id>/teaching/metMat.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="ordinary equations"
+                        label="Ordinary Equations" />
+                        <category   scheme="/res.url/tags"
+                        term="partial equations"
+                        label="Partial Equations" />
+                        <category   scheme="/res.url/tags"
+                        term="linear algebra"
+                        label="Linear Algebra" />
+            
+            <content type="html">
+                                &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/open?id=114zC0sRl5gqUtwmBLBHFSAeO5Y1UnUnw&#34;&gt;content&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/open?id=1IeEpnHjgj2k0XE9N8KZBxWUE0THMsezK&#34;&gt;1st.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/open?id=1U0WF0NL1tlPhnMg8XahvI4MWwreU-Ubh&#34;&gt;bibliography&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/open?id=1nIKm0EOvyP0AIcp1eAAr0Pqun0IXm3D9&#34;&gt;rules&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/open?id=1F3hddkpuzMoLg7nFrfRq0jxB7JGMD8NR&#34;&gt;notes&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;            </content>
+        </entry>
             <entry>
             <title type="html">External Courses</title>
             <author><name>Gustavo R Anjos</name></author>
