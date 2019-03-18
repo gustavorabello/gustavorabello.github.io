@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2019-03-12T20:40:18Z</updated>
+    <updated>2019-03-18T09:35:24Z</updated>
 
     <id>/teaching/excerpts.xml/</id>
 
@@ -27,6 +27,27 @@
                         <category   scheme="/res.url/tags"
                         term="calculus"
                         label="Calculus" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">2-phase flows (MSc/PhD) - COM825</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/2-phaseFlow.html"/>
+            <updated>2019-03-11T10:00:00Z</updated>
+            <published>2019-03-11T10:00:00Z</published>
+            <id>/teaching/2-phaseFlow.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="fentran"
+                        label="Fentran" />
+                        <category   scheme="/res.url/tags"
+                        term="fluidos"
+                        label="Fluidos" />
+                        <category   scheme="/res.url/tags"
+                        term="multifasico"
+                        label="Multifasico" />
             
             <content type="html">
                 
@@ -135,27 +156,6 @@
                         <category   scheme="/res.url/tags"
                         term="termodynamic"
                         label="Termodynamic" />
-            
-            <content type="html">
-                
-                            </content>
-        </entry>
-            <entry>
-            <title type="html">Multiphase flows (MSc/PhD) - FEN03-711</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/teaching/multifasico.html"/>
-            <updated>2015-07-12T10:00:00Z</updated>
-            <published>2015-07-12T10:00:00Z</published>
-            <id>/teaching/multifasico.html</id>
-                        <category   scheme="/res.url/tags"
-                        term="fentran"
-                        label="Fentran" />
-                        <category   scheme="/res.url/tags"
-                        term="fluidos"
-                        label="Fluidos" />
-                        <category   scheme="/res.url/tags"
-                        term="multifasico"
-                        label="Multifasico" />
             
             <content type="html">
                 
