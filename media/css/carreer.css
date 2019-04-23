@@ -51,15 +51,23 @@
 #item .left
 { 
  margin-top:10px;
- margin-left:40px;
+ margin-left:20px;
  float:left;
- width:30%;
+ width:25%;
+}
+
+#item .middle
+{ 
+ margin-top:10px;
+ margin-left:20px;
+ float:left;
+ width:25%;
 }
 
 #item .right
 { 
  margin-top:10px;
- margin-left:60px;
+ margin-left:20px;
  float:left;
- width:28%;
+ width:25%;
 }
