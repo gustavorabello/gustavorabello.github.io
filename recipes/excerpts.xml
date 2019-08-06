@@ -7,10 +7,29 @@
         <link href="/"/>
     
         
-    <updated>2019-07-18T18:09:49Z</updated>
+    <updated>2019-08-06T18:06:15Z</updated>
 
     <id>/recipes/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Hamburger</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/recipes/hamburger.html"/>
+            <updated>2019-01-08T10:00:00Z</updated>
+            <published>2019-01-08T10:00:00Z</published>
+            <id>/recipes/hamburger.html</id>
+            
+            <content type="html">
+                &lt;p&gt;&lt;br&gt;
+&lt;img alt=&#34;disk&#34; src=&#34;/media/images/recipes/burger.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Misturar com as m&amp;otilde;es a carne mo&amp;iacute;da, o ovo e o creme de
+cebola at&amp;eacute; ficar uma massa homog&amp;ecirc;na. Com as m&amp;atilde;os,
+fazer uma bola de carne com a quantidade desejada e jogar de uma
+m&amp;atilde;o para a outra at&amp;eacute; ficar uma bola homog&amp;ecirc;nia.
+Colocar a bola de carne sobre papel manteiga e apert&amp;aacute;-lo
+at&amp;eacute; ficar igual ao formato do hamburger. Fritar. Misturar queijo
+e tomate a gosto no&amp;nbsp;sandu&amp;iacute;che.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Sopa de batata baroa</title>
             <author><name>Gustavo R Anjos</name></author>
