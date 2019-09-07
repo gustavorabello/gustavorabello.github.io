@@ -7,10 +7,31 @@
         <link href="/"/>
     
         
-    <updated>2019-08-09T10:37:06Z</updated>
+    <updated>2019-09-07T09:52:01Z</updated>
 
     <id>/teaching/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Math Methods for Mech Eng - COM-774</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/coppeMetMat.html"/>
+            <updated>2019-09-07T10:00:00Z</updated>
+            <published>2019-09-07T10:00:00Z</published>
+            <id>/teaching/coppeMetMat.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="ordinary equations"
+                        label="Ordinary Equations" />
+                        <category   scheme="/res.url/tags"
+                        term="partial equations"
+                        label="Partial Equations" />
+                        <category   scheme="/res.url/tags"
+                        term="linear algebra"
+                        label="Linear Algebra" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
             <entry>
             <title type="html">External Courses</title>
             <author><name>Gustavo R Anjos</name></author>
