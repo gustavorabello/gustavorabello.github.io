@@ -7,10 +7,37 @@
         <link href="/"/>
     
         
-    <updated>2020-03-25T12:30:40Z</updated>
+    <updated>2020-05-06T16:14:35Z</updated>
 
     <id>/recipes/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Bolo Brownie</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/recipes/boloBrownie.html"/>
+            <updated>2020-05-02T10:00:00Z</updated>
+            <published>2020-05-02T10:00:00Z</published>
+            <id>/recipes/boloBrownie.html</id>
+            
+            <content type="html">
+                &lt;p&gt;&lt;br&gt;
+&lt;img alt=&#34;disk&#34; src=&#34;/media/images/recipes/brownie.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Misturar tudo e entragar para&amp;nbsp;Deus!&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Cocada</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/recipes/cocada.html"/>
+            <updated>2020-04-25T10:00:00Z</updated>
+            <published>2020-04-25T10:00:00Z</published>
+            <id>/recipes/cocada.html</id>
+            
+            <content type="html">
+                &lt;p&gt;&lt;br&gt;
+&lt;img alt=&#34;disk&#34; src=&#34;/media/images/recipes/cocada.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Misturar tudo e entragar para Deus!
+Tempo de preparo:&amp;nbsp;1h30min&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Hamburger</title>
             <author><name>Gustavo R Anjos</name></author>

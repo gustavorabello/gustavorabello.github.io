@@ -7,34 +7,17 @@
         <link href="/"/>
     
         
-    <updated>2020-03-25T12:30:45Z</updated>
+    <updated>2020-05-06T16:14:39Z</updated>
 
     <id>/videos/atom.xml/</id>
 
             <entry>
-            <title type="html">Rising of air bubble in water-sugar solution (Bhaga and Weber, 1981)</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/1.html"/>
-            <updated>2020-03-03T06:29:20Z</updated>
-            <published>2020-03-03T06:29:20Z</published>
-            <id>/videos/1.html</id>
-                        <category   scheme="/res.url/tags"
-                        term="two-phase"
-                        label="Two-Phase" />
-            
-            <content type="html">
-                                &lt;iframe src=&#34;https://www.youtube.com/embed/FaEt8mLmgSg?rel=0&#34;frameborder=&#34;1&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;This movie shows the numerical solution of an initially spherical air bubble in a quiescent water-sugar solution using a moving frame view point where the bubble&amp;#8217;s centroid remains fixed in space while fluid flows downward. In this approach, the interface mesh is built as a set of interconnected nodes and finite triang
-le elements. The red and blue colours of the  background tetrahedral mesh represent the horizontal velocity component.  Red color is positive velocity and blue color is negative velocity. As can be seen, in the current approach, very low adaptive remeshing is required since bubble is fixed in space. Additionally, only the normal component of the velocity is used to move nodes lying at the the interface, thus avoiding extensive remeshing at the surface. This approach leeds to very accurate results when simulating two-phase flow systems with high interface&amp;nbsp;deformation.&lt;/p&gt;            </content>
-        </entry>
-            <entry>
             <title type="html">VIV ALE-FE</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/2.html"/>
+            <link href="/videos/1.html"/>
             <updated>2019-07-08T09:55:24Z</updated>
             <published>2019-07-08T09:55:24Z</published>
-            <id>/videos/2.html</id>
+            <id>/videos/1.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -47,10 +30,10 @@ le elements. The red and blue colours of the  background tetrahedral mesh repres
             <entry>
             <title type="html">Rotating disk flow</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/3.html"/>
+            <link href="/videos/2.html"/>
             <updated>2016-09-02T21:16:46Z</updated>
             <published>2016-09-02T21:16:46Z</published>
-            <id>/videos/3.html</id>
+            <id>/videos/2.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -63,10 +46,10 @@ le elements. The red and blue colours of the  background tetrahedral mesh repres
             <entry>
             <title type="html">Sessile drop</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/4.html"/>
+            <link href="/videos/3.html"/>
             <updated>2013-03-21T23:23:04Z</updated>
             <published>2013-03-21T23:23:04Z</published>
-            <id>/videos/4.html</id>
+            <id>/videos/3.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -80,10 +63,10 @@ mmediately before adhering the wall, the drop assumes a steady shape, which can 
             <entry>
             <title type="html">3D vortex field</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/5.html"/>
+            <link href="/videos/4.html"/>
             <updated>2013-02-10T19:51:41Z</updated>
             <published>2013-02-10T19:51:41Z</published>
-            <id>/videos/5.html</id>
+            <id>/videos/4.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -97,10 +80,10 @@ ld is reverted and the original sphere shape is thus expected. The characteristi
             <entry>
             <title type="html">Single vortex simulation</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/6.html"/>
+            <link href="/videos/5.html"/>
             <updated>2012-11-03T14:14:25Z</updated>
             <published>2012-11-03T14:14:25Z</published>
-            <id>/videos/6.html</id>
+            <id>/videos/5.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -114,10 +97,10 @@ me and interface remeshing algorihtms keep the finite elements with excellent as
             <entry>
             <title type="html">Zalesak&#39;s rotating sphere test case</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/7.html"/>
+            <link href="/videos/6.html"/>
             <updated>2012-11-01T06:40:39Z</updated>
             <published>2012-11-01T06:40:39Z</published>
-            <id>/videos/7.html</id>
+            <id>/videos/6.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -131,10 +114,10 @@ odology keeps the interface sharp and with minimal numerical diffusion after man
             <entry>
             <title type="html">Squeezing of 2 bubbles</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/8.html"/>
+            <link href="/videos/7.html"/>
             <updated>2012-07-16T14:08:05Z</updated>
             <published>2012-07-16T14:08:05Z</published>
-            <id>/videos/8.html</id>
+            <id>/videos/7.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -147,10 +130,10 @@ odology keeps the interface sharp and with minimal numerical diffusion after man
             <entry>
             <title type="html">cross section triangle</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/9.html"/>
+            <link href="/videos/8.html"/>
             <updated>2012-07-16T14:08:05Z</updated>
             <published>2012-07-16T14:08:05Z</published>
-            <id>/videos/9.html</id>
+            <id>/videos/8.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -162,7 +145,7 @@ odology keeps the interface sharp and with minimal numerical diffusion after man
 ned bubble is deformed due to the wall efects and its shape corresponds to the cross section shape of the channel. Three views are available to look in details the flow: single bubble side view, rear view and a cut plane along the channel which describes the remeshing methodology of the outer tetrahedron&amp;nbsp;mesh.&lt;/p&gt;            </content>
         </entry>
             <entry>
-            <title type="html">Rising air bubble in sugar syrup solution</title>
+            <title type="html">Rising air bubble in sucrose solution</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/videos/10.html"/>
             <updated>2012-06-05T15:52:11Z</updated>
@@ -173,9 +156,9 @@ ned bubble is deformed due to the wall efects and its shape corresponds to the c
                         label="Two-Phase" />
             
             <content type="html">
-                                &lt;iframe src=&#34;https://www.youtube.com/embed/2nEl0GazNsk?rel=0&#34;frameborder=&#34;1&#34; allowfullscreen&gt;&lt;/iframe&gt;
+                                &lt;iframe src=&#34;https://www.youtube.com/embed/Tn9I9t86vTo?rel=0&#34;frameborder=&#34;1&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;Gravity-driven flow of an air bubble in sugar-syrup solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the rising velocity of the air bubble and the liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
+&lt;p&gt;Gravity-driven flow of an air bubble in sucrose solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the  rising velocity of the air bubble and liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
         </entry>
             <entry>
             <title type="html">Rising air bubble in sucrose solution</title>
@@ -189,22 +172,6 @@ ned bubble is deformed due to the wall efects and its shape corresponds to the c
                         label="Two-Phase" />
             
             <content type="html">
-                                &lt;iframe src=&#34;https://www.youtube.com/embed/Tn9I9t86vTo?rel=0&#34;frameborder=&#34;1&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Gravity-driven flow of an air bubble in sucrose solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the  rising velocity of the air bubble and liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
-        </entry>
-            <entry>
-            <title type="html">Rising air bubble in sucrose solution</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/12.html"/>
-            <updated>2012-06-05T15:52:11Z</updated>
-            <published>2012-06-05T15:52:11Z</published>
-            <id>/videos/12.html</id>
-                        <category   scheme="/res.url/tags"
-                        term="two-phase"
-                        label="Two-Phase" />
-            
-            <content type="html">
                                 &lt;iframe src=&#34;https://www.youtube.com/embed/WrmnBh7mTNs?rel=0&#34;frameborder=&#34;1&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Gravity-driven flow of an air bubble in sucrose solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the rising velocity of the air bubble and liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
@@ -212,10 +179,10 @@ ned bubble is deformed due to the wall efects and its shape corresponds to the c
             <entry>
             <title type="html">Two-phase flow evaporation in microchannel</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/13.html"/>
+            <link href="/videos/12.html"/>
             <updated>2012-06-05T15:52:11Z</updated>
             <published>2012-06-05T15:52:11Z</published>
-            <id>/videos/13.html</id>
+            <id>/videos/12.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -228,10 +195,10 @@ ned bubble is deformed due to the wall efects and its shape corresponds to the c
             <entry>
             <title type="html">Microchannel two-phase flow of refrigerant R1234ze.</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/14.html"/>
+            <link href="/videos/13.html"/>
             <updated>2012-06-05T15:52:11Z</updated>
             <published>2012-06-05T15:52:11Z</published>
-            <id>/videos/14.html</id>
+            <id>/videos/13.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -245,10 +212,10 @@ ned bubble is deformed due to the wall efects and its shape corresponds to the c
             <entry>
             <title type="html">Rising air bubble in glycerol solution</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/15.html"/>
+            <link href="/videos/14.html"/>
             <updated>2012-06-05T15:52:11Z</updated>
             <published>2012-06-05T15:52:11Z</published>
-            <id>/videos/15.html</id>
+            <id>/videos/14.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -260,12 +227,28 @@ ned bubble is deformed due to the wall efects and its shape corresponds to the c
 hickness were successfully compared to the&amp;nbsp;literature.&lt;/p&gt;            </content>
         </entry>
             <entry>
+            <title type="html">Rising air bubble in sugar syrup solution</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/9.html"/>
+            <updated>2012-06-05T15:52:11Z</updated>
+            <published>2012-06-05T15:52:11Z</published>
+            <id>/videos/9.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                                &lt;iframe src=&#34;https://www.youtube.com/embed/2nEl0GazNsk?rel=0&#34;frameborder=&#34;1&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Gravity-driven flow of an air bubble in sugar-syrup solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the rising velocity of the air bubble and the liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
             <title type="html">2D Rising Bubble Heat Transfer</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/16.html"/>
+            <link href="/videos/15.html"/>
             <updated>2012-02-03T22:37:34Z</updated>
             <published>2012-02-03T22:37:34Z</published>
-            <id>/videos/16.html</id>
+            <id>/videos/15.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -279,10 +262,10 @@ nd side, the inner and interface meshes are shown. It can be seen that after a c
             <entry>
             <title type="html">2D Heat Transfer Bubble Rising</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/17.html"/>
+            <link href="/videos/16.html"/>
             <updated>2011-11-28T11:25:57Z</updated>
             <published>2011-11-28T11:25:57Z</published>
-            <id>/videos/17.html</id>
+            <id>/videos/16.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -296,10 +279,10 @@ e bubble rising speed, the heat is advected along with the bubble, thus the two 
             <entry>
             <title type="html">3D Point Deletion Strategy</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/18.html"/>
+            <link href="/videos/17.html"/>
             <updated>2011-11-14T15:39:58Z</updated>
             <published>2011-11-14T15:39:58Z</published>
-            <id>/videos/18.html</id>
+            <id>/videos/17.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -313,10 +296,10 @@ ling the their quality ratios, thus the algorithm should remove excessive concen
             <entry>
             <title type="html">3D Point Insertion Strategy</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/19.html"/>
+            <link href="/videos/18.html"/>
             <updated>2011-11-14T15:39:58Z</updated>
             <published>2011-11-14T15:39:58Z</published>
-            <id>/videos/19.html</id>
+            <id>/videos/18.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -330,10 +313,10 @@ ing their quality ratios, thus the algorithm should insert points when an edge b
             <entry>
             <title type="html">3D Air-Water Flow</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/20.html"/>
+            <link href="/videos/19.html"/>
             <updated>2011-11-14T15:39:58Z</updated>
             <published>2011-11-14T15:39:58Z</published>
-            <id>/videos/20.html</id>
+            <id>/videos/19.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -347,10 +330,10 @@ e middle frame is a contour plot of the same interface and the rightmost one is 
             <entry>
             <title type="html">2D Microchannel Coalescence</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/21.html"/>
+            <link href="/videos/20.html"/>
             <updated>2011-11-14T15:39:58Z</updated>
             <published>2011-11-14T15:39:58Z</published>
-            <id>/videos/21.html</id>
+            <id>/videos/20.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -364,10 +347,10 @@ color and the lowest one is represented by the blue color. The mesh used in this
             <entry>
             <title type="html">3D Air-Water-Sugar Flow</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/22.html"/>
+            <link href="/videos/21.html"/>
             <updated>2011-11-14T15:39:58Z</updated>
             <published>2011-11-14T15:39:58Z</published>
-            <id>/videos/22.html</id>
+            <id>/videos/21.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
