@@ -7,10 +7,43 @@
         <link href="/"/>
     
         
-    <updated>2020-05-24T11:32:02Z</updated>
+    <updated>2020-06-01T13:04:34Z</updated>
 
     <id>/recipes/atom.xml/</id>
 
+            <entry>
+            <title type="html">Empadinha</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/recipes/empadinha.html"/>
+            <updated>2020-06-01T10:00:00Z</updated>
+            <published>2020-06-01T10:00:00Z</published>
+            <id>/recipes/empadinha.html</id>
+            
+            <content type="html">
+                                &lt;p&gt;&lt;br&gt;
+&lt;img alt=&#34;disk&#34; src=&#34;/media/images/recipes/empadinha.png&#34; /&gt;
+&lt;span class=&#34;caps&#34;&gt;INGREDIENTES&lt;/span&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;250g de&amp;nbsp;margarina&lt;/li&gt;
+&lt;li&gt;3 xicaras de farinha de&amp;nbsp;trigo&lt;/li&gt;
+&lt;li&gt;2 gemas de&amp;nbsp;ovo&lt;/li&gt;
+&lt;li&gt;1/2 colher de cha de&amp;nbsp;sal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;caps&#34;&gt;ANTES&lt;/span&gt; &lt;span class=&#34;caps&#34;&gt;DE&lt;/span&gt; &lt;span class=&#34;caps&#34;&gt;IR&lt;/span&gt; &lt;span class=&#34;caps&#34;&gt;AO&lt;/span&gt; &lt;span class=&#34;caps&#34;&gt;FORNO&lt;/span&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1 gema de&amp;nbsp;ovo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;caps&#34;&gt;RECHEIO&lt;/span&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;qualquer&amp;nbsp;um&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;caps&#34;&gt;MODO&lt;/span&gt; &lt;span class=&#34;caps&#34;&gt;DE&lt;/span&gt; &lt;span class=&#34;caps&#34;&gt;PREPARO&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;Coloque os ingredientes numa bacia. Trabalhe a massa com as mãos até
+ficar homogênea e soltando dos dedos. Distribua a massa nas formas e
+coloque o recheio, faça tampinhas e cubra as empadas. Pincele a gema e
+arrume-as numa assadeira. Leve ao forno pré-aquecido a 205 graus por 35&amp;nbsp;minutos.&lt;/p&gt;
+&lt;p&gt;Tempo de preparo:&amp;nbsp;60min &lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Requeijao</title>
             <author><name>Gustavo R Anjos</name></author>
