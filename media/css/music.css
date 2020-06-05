@@ -31,6 +31,15 @@
  margin-bottom:10px;
 }
 
+#twoColumns span
+{ 
+ font-size:10px; 
+ vertical-align:text-top;
+ letter-spacing:-1px;
+ font-weight:none; 
+ color:blue;
+}
+
 #twoColumns ul
 { 
  margin-left:-20px;
