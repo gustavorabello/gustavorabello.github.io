@@ -7,16 +7,16 @@
         <link href="/"/>
     
         
-    <updated>2020-06-21T13:32:23Z</updated>
+    <updated>2020-06-21T14:47:27Z</updated>
 
     <id>/videos/excerpts.xml/</id>
 
             <entry>
-            <title type="html">2D particle collisions</title>
+            <title type="html">2d Particle Collisions</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/videos/1.html"/>
-            <updated>2020-06-20T14:37:42Z</updated>
-            <published>2020-06-20T14:37:42Z</published>
+            <updated>2020-06-21T17:38:42Z</updated>
+            <published>2020-06-21T17:38:42Z</published>
             <id>/videos/1.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
