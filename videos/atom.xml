@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2020-07-18T14:07:32Z</updated>
+    <updated>2020-08-19T22:13:28Z</updated>
 
     <id>/videos/atom.xml/</id>
 
@@ -385,23 +385,6 @@ color and the lowest one is represented by the blue color. The mesh used in this
             <updated>2011-11-14T15:39:58Z</updated>
             <published>2011-11-14T15:39:58Z</published>
             <id>/videos/23.html</id>
-                        <category   scheme="/res.url/tags"
-                        term="two-phase"
-                        label="Two-Phase" />
-            
-            <content type="html">
-                                &lt;iframe src=&#34;https://www.youtube.com/embed/CBv8NA5pEQk?rel=0&#34;frameborder=&#34;1&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Numerical simulation of 3-dimensional two-phase flow is performed to predict the rising of an air bubble in a initially stagnant water-sugar solution. At the leftmost frame, the interface between fluid is represented by a set of points, edges and triangular facets which are part of the tetrahedron domain mesh. The midd
-le frame is a contour plot of the same interface and the rightmost one is a side view of the 3-dimensional domain. Due to the flow nature, the initially spherical shape deforms while in ascension, then later the air bubble converges to its final shape as show in this&amp;nbsp;animation.&lt;/p&gt;            </content>
-        </entry>
-            <entry>
-            <title type="html">3D Air-Water-Sugar Flow</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/24.html"/>
-            <updated>2011-11-14T15:39:58Z</updated>
-            <published>2011-11-14T15:39:58Z</published>
-            <id>/videos/24.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
