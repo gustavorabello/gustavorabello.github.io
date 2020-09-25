@@ -7,10 +7,50 @@
         <link href="/"/>
     
         
-    <updated>2020-08-24T19:08:02Z</updated>
+    <updated>2020-09-24T21:58:05Z</updated>
 
     <id>/research/atom.xml/</id>
 
+            <entry>
+            <title type="html">Study of COVID-19/SARS-Cov-2 propagation between individuals and group of individuals during social contact</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/emergencial-2020.html"/>
+            <updated>2020-09-17T10:00:00Z</updated>
+            <published>2020-09-17T10:00:00Z</published>
+            <id>/research/emergencial-2020.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="multiphase"
+                        label="Multiphase" />
+                        <category   scheme="/res.url/tags"
+                        term="covid"
+                        label="Covid" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/faperj.png&#34; /&gt;
+This proposal aims to investigate the means of propagating of the
+&lt;span class=&#34;caps&#34;&gt;COVID&lt;/span&gt;-19/&lt;span class=&#34;caps&#34;&gt;SARS&lt;/span&gt;-CoV-2 through two complementary approaches between
+individuals and groups of individuals during social contact. A small
+scale model is proposed to investigate the behavior of salivary droplets
+between individuals who may be contaminated by orally transmitted
+diseases.
+At the same time, a study on contamination of groups of individuals
+through population dynamics will be carried out for macroscopic
+understanding of epidemic behavior disease. It is within this scope that
+the present project is inserted, aiming at improvement of a
+computational studies platform, supported by &lt;span class=&#34;caps&#34;&gt;FAPERJ&lt;/span&gt; in several ongoing
+projects, using numerical simulation high level in order to characterize
+particle dynamics and the dynamics of infection through contact between
+groups of people from the same locality and between regions of Brazil.
+The different scales of these two approaches will allow a detailed
+understanding of the rapid spread of &lt;span class=&#34;caps&#34;&gt;COVID&lt;/span&gt;-19 viral load and the
+effectiveness of containment effects of the disease in our&amp;nbsp;society.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Simulation of Multiphase Systems in Complex Ophthalmologic Applications</title>
             <author><name>Gustavo R Anjos</name></author>
