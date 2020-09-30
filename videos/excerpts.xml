@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2020-09-24T22:42:21Z</updated>
+    <updated>2020-09-29T23:12:11Z</updated>
 
     <id>/videos/excerpts.xml/</id>
 
@@ -348,21 +348,6 @@
             <updated>2011-11-14T15:39:58Z</updated>
             <published>2011-11-14T15:39:58Z</published>
             <id>/videos/23.html</id>
-                        <category   scheme="/res.url/tags"
-                        term="two-phase"
-                        label="Two-Phase" />
-            
-            <content type="html">
-                
-                &lt;p&gt;Numerical simulation of 3-dimensional two-phase flow is performed to predict the rising of an air bubble in a initially stagnant water-sugar solution. At the leftmost frame, the interface between fluid is represented by a set of points, edges and triangular facets which are part of the tetrahedron domain mesh. The&amp;nbsp;midd&lt;/p&gt;            </content>
-        </entry>
-            <entry>
-            <title type="html">3D Air-Water-Sugar Flow</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/24.html"/>
-            <updated>2011-11-14T15:39:58Z</updated>
-            <published>2011-11-14T15:39:58Z</published>
-            <id>/videos/24.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
