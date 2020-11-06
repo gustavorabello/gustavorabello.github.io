@@ -7,10 +7,32 @@
         <link href="/"/>
     
         
-    <updated>2020-10-29T12:25:59Z</updated>
+    <updated>2020-11-06T20:49:13Z</updated>
 
     <id>/students/atom.xml/</id>
 
+            <entry>
+            <title type="html">ALE-FE Method in Python for an Oscillating Cylinder in a Transversal Flow</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/jessicaSilva.html"/>
+            <updated>2020-11-06T09:00:00Z</updated>
+            <published>2020-11-06T09:00:00Z</published>
+            <id>/students/bsc/jessicaSilva.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">Numerical Methods for the Analysis of Biofuel Systems</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/ramonMoreira.html"/>
+            <updated>2020-10-06T09:00:00Z</updated>
+            <published>2020-10-06T09:00:00Z</published>
+            <id>/students/bsc/ramonMoreira.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
             <entry>
             <title type="html">To be defined soon</title>
             <author><name>Gustavo R Anjos</name></author>
@@ -84,6 +106,17 @@
             <updated>2020-09-17T15:00:00Z</updated>
             <published>2020-09-17T15:00:00Z</published>
             <id>/students/bsc/gabrielAguiar.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">Numerical Methods for the Analysis of Biofuel Systems</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/julianaCerqueira.html"/>
+            <updated>2020-09-06T09:00:00Z</updated>
+            <published>2020-09-06T09:00:00Z</published>
+            <id>/students/bsc/julianaCerqueira.html</id>
             
             <content type="html">
                                             </content>
