@@ -7,10 +7,97 @@
         <link href="/"/>
     
         
-    <updated>2020-11-19T19:53:53Z</updated>
+    <updated>2020-11-21T10:10:37Z</updated>
 
     <id>/teaching/atom.xml/</id>
 
+            <entry>
+            <title type="html">2-Phase Flows (MSc/PhD) - COM825</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/2-phaseFlow.html"/>
+            <updated>2020-10-13T10:00:00Z</updated>
+            <published>2020-10-13T10:00:00Z</published>
+            <id>/teaching/2-phaseFlow.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="fentran"
+                        label="Fentran" />
+                        <category   scheme="/res.url/tags"
+                        term="fluidos"
+                        label="Fluidos" />
+                        <category   scheme="/res.url/tags"
+                        term="multifasico"
+                        label="Multifasico" />
+            
+            <content type="html">
+                                &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Nj8KHJhDbgToHr_-uoz9Er-umuP-KOI9/view?usp=sharing&#34;&gt;program&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1kj8rbohCQLys7XLgll69o-KlduMdv6PC/view?usp=sharing&#34;&gt;rules&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1WV3dU0r1ODKFm0RSFcDn947nWzUuWdcN/view?usp=sharing&#34;&gt;task&amp;nbsp;project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1dx5dj3-IfdpzCMUu7wmgaIXNYrC80zbp/view?usp=sharing&#34;&gt;bibliography&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Vwv0MQztD-sbMidH6-sV1wKXZ5fztw_x/view?usp=sharing&#34;&gt;notes&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Z_H54Hz926gbPC3NMGH_yoGvx3iaGufo/view?usp=sharing&#34;&gt;1st.&amp;nbsp;lecture&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1yzDYCPL-HOgqJ3qba0w5uz6-_b2PKh7n/view?usp=sharing&#34;&gt;2nd.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1UgCAuBB_BY8KJkHCulPFMSUae6wf3qFT/view?usp=sharing&#34;&gt;3rd.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/19gjDazUsm3BcrnNUDGXDhPoi4OcArPJb/view?usp=sharing&#34;&gt;4th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1dJB2shtGQmgYPOGS9oM9TROH1tMoDQV1/view?usp=sharing&#34;&gt;5th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Q7S9ZhTWjheeQ1nRxZpJBsd2NUOe55wy/view?usp=sharing&#34;&gt;6th.&amp;nbsp;lecture&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/11KPgNxCL5wQR4BBki-ugOyBIIwbobMCD/view?usp=sharing&#34;&gt;7th.&amp;nbsp;lecture&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/14OAzLlOCuAQwBJw0ZXoVH9QALgr75UxC/view?usp=sharing&#34;&gt;8th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1VnfFCZxw2sGDDGv6QBnFFAgN8wv7Kz0J/view?usp=sharing&#34;&gt;9th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/19RWE_CGDhoSJRmWHGjBm71DZxQEVrBju/view?usp=sharing&#34;&gt;10th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/16Xays6njDMbgswNULrACdsCaep4D9ufB/view?usp=sharing&#34;&gt;11th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1WKp-uJ-IRvbz_cwQzs067zgjGz3tywUP/view?usp=sharing&#34;&gt;12th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Computational Fluid Mech and Heat Transfer - EEK-597</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/compFluidMecHT.html"/>
+            <updated>2020-10-10T12:00:00Z</updated>
+            <published>2020-10-10T12:00:00Z</published>
+            <id>/teaching/compFluidMecHT.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite elements"
+                        label="Finite Elements" />
+                        <category   scheme="/res.url/tags"
+                        term="finte volume"
+                        label="Finte Volume" />
+                        <category   scheme="/res.url/tags"
+                        term="python"
+                        label="Python" />
+            
+            <content type="html">
+                                &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/132aI8utLUHt64mlUV8bMzWcw3_ghjd8H/view?usp=sharing&#34;&gt;content&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1UY1ZiOisgHvburJAE4L9XfV6am73HO2D/view?usp=sharing&#34;&gt;1st.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1J0v1MdllvMWarvvD8GvuxDIhTePtA_G6/view?usp=sharing&#34;&gt;bibliography&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/12I-OWRpv_fIZ60SRZhtquNuGsOofgxXx/view?usp=sharing&#34;&gt;evaluation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Vwv0MQztD-sbMidH6-sV1wKXZ5fztw_x/view?usp=sharing&#34;&gt;notes&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1VbWdLzyLOFjrDn1NSvECThuMhvdUKAvd/view?usp=sharing&#34;&gt;tasks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/drive/folders/1ehshlxM9gAA-h6sona29zQZ5O9Uz8wvl?usp=sharing&#34;&gt;python&amp;nbsp;codes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1k97nJ7XPtBShGOJlsssib7j20xb6N9dq/view?usp=sharing&#34;&gt;partial/final&amp;nbsp;grades&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/19a20d1gmjCwEyuyuRTatXSe8ss0atdkR/view?usp=sharing&#34;&gt;final&amp;nbsp;project&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1J1tNWfMQgQP6oujZ4zbaeYYwhC5iF5Qz/view?usp=sharing&#34;&gt;ref1: &lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt;&amp;nbsp;omega-psi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Z9CZbEBkfkfoMZb1498S7HqX5RthNsSG/view?usp=sharing&#34;&gt;ref2: &lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt;&amp;nbsp;omega-psi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1e4Fqth0VV5Tkt6eAwo724yo7_0DqZP3r/view?usp=sharing&#34;&gt;ref3: &lt;span class=&#34;caps&#34;&gt;ALE&lt;/span&gt;-&lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt;&amp;nbsp;omega-psi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Math Methods for Mech Eng - COM-774</title>
             <author><name>Gustavo R Anjos</name></author>
@@ -69,92 +156,6 @@
 &lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1BnG8tQsYqCRMvNQiRrIXh6Ncth7Z8HV_/view?usp=sharing&#34;&gt;Axisymmetric &lt;span class=&#34;caps&#34;&gt;ALE&lt;/span&gt;-&lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt; &amp;#8212; 4th Workshop 2-Phase Flows - Rio&amp;nbsp;2019&lt;/a&gt; &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1pVW7ZDNoERPQPVRG8hV61yhjrz4YlO_U/view?usp=sharing&#34;&gt;2D shape functions -&amp;nbsp;python&lt;/a&gt; &lt;/li&gt;
-&lt;/ul&gt;            </content>
-        </entry>
-            <entry>
-            <title type="html">2-phase flows (MSc/PhD) - COM825</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/teaching/2-phaseFlow.html"/>
-            <updated>2019-03-11T10:00:00Z</updated>
-            <published>2019-03-11T10:00:00Z</published>
-            <id>/teaching/2-phaseFlow.html</id>
-                        <category   scheme="/res.url/tags"
-                        term="fentran"
-                        label="Fentran" />
-                        <category   scheme="/res.url/tags"
-                        term="fluidos"
-                        label="Fluidos" />
-                        <category   scheme="/res.url/tags"
-                        term="multifasico"
-                        label="Multifasico" />
-            
-            <content type="html">
-                                &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Nj8KHJhDbgToHr_-uoz9Er-umuP-KOI9/view?usp=sharing&#34;&gt;program&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1kj8rbohCQLys7XLgll69o-KlduMdv6PC/view?usp=sharing&#34;&gt;rules&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1WV3dU0r1ODKFm0RSFcDn947nWzUuWdcN/view?usp=sharing&#34;&gt;task&amp;nbsp;project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1dx5dj3-IfdpzCMUu7wmgaIXNYrC80zbp/view?usp=sharing&#34;&gt;bibliography&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Vwv0MQztD-sbMidH6-sV1wKXZ5fztw_x/view?usp=sharing&#34;&gt;notes&lt;/a&gt; &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Z_H54Hz926gbPC3NMGH_yoGvx3iaGufo/view?usp=sharing&#34;&gt;1st.&amp;nbsp;lecture&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1yzDYCPL-HOgqJ3qba0w5uz6-_b2PKh7n/view?usp=sharing&#34;&gt;2nd.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1UgCAuBB_BY8KJkHCulPFMSUae6wf3qFT/view?usp=sharing&#34;&gt;3rd.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/19gjDazUsm3BcrnNUDGXDhPoi4OcArPJb/view?usp=sharing&#34;&gt;4th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1dJB2shtGQmgYPOGS9oM9TROH1tMoDQV1/view?usp=sharing&#34;&gt;5th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Q7S9ZhTWjheeQ1nRxZpJBsd2NUOe55wy/view?usp=sharing&#34;&gt;6th.&amp;nbsp;lecture&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/11KPgNxCL5wQR4BBki-ugOyBIIwbobMCD/view?usp=sharing&#34;&gt;7th.&amp;nbsp;lecture&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/14OAzLlOCuAQwBJw0ZXoVH9QALgr75UxC/view?usp=sharing&#34;&gt;8th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1VnfFCZxw2sGDDGv6QBnFFAgN8wv7Kz0J/view?usp=sharing&#34;&gt;9th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/19RWE_CGDhoSJRmWHGjBm71DZxQEVrBju/view?usp=sharing&#34;&gt;10th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/16Xays6njDMbgswNULrACdsCaep4D9ufB/view?usp=sharing&#34;&gt;11th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1WKp-uJ-IRvbz_cwQzs067zgjGz3tywUP/view?usp=sharing&#34;&gt;12th.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;            </content>
-        </entry>
-            <entry>
-            <title type="html">Computational Fluid Mech and Heat Transfer - EEK-597</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/teaching/compFluidMecHT.html"/>
-            <updated>2019-03-10T12:00:00Z</updated>
-            <published>2019-03-10T12:00:00Z</published>
-            <id>/teaching/compFluidMecHT.html</id>
-                        <category   scheme="/res.url/tags"
-                        term="finite elements"
-                        label="Finite Elements" />
-                        <category   scheme="/res.url/tags"
-                        term="finte volume"
-                        label="Finte Volume" />
-                        <category   scheme="/res.url/tags"
-                        term="python"
-                        label="Python" />
-            
-            <content type="html">
-                                &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/132aI8utLUHt64mlUV8bMzWcw3_ghjd8H/view?usp=sharing&#34;&gt;content&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1UY1ZiOisgHvburJAE4L9XfV6am73HO2D/view?usp=sharing&#34;&gt;1st.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1J0v1MdllvMWarvvD8GvuxDIhTePtA_G6/view?usp=sharing&#34;&gt;bibliography&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/12I-OWRpv_fIZ60SRZhtquNuGsOofgxXx/view?usp=sharing&#34;&gt;evaluation&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Vwv0MQztD-sbMidH6-sV1wKXZ5fztw_x/view?usp=sharing&#34;&gt;notes&lt;/a&gt; &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1VbWdLzyLOFjrDn1NSvECThuMhvdUKAvd/view?usp=sharing&#34;&gt;tasks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/drive/folders/1ehshlxM9gAA-h6sona29zQZ5O9Uz8wvl?usp=sharing&#34;&gt;python&amp;nbsp;codes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1k97nJ7XPtBShGOJlsssib7j20xb6N9dq/view?usp=sharing&#34;&gt;partial/final&amp;nbsp;grades&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/19a20d1gmjCwEyuyuRTatXSe8ss0atdkR/view?usp=sharing&#34;&gt;final&amp;nbsp;project&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1J1tNWfMQgQP6oujZ4zbaeYYwhC5iF5Qz/view?usp=sharing&#34;&gt;ref1: &lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt;&amp;nbsp;omega-psi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Z9CZbEBkfkfoMZb1498S7HqX5RthNsSG/view?usp=sharing&#34;&gt;ref2: &lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt;&amp;nbsp;omega-psi&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;            </content>
         </entry>
             <entry>
