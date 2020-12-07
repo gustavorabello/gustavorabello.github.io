@@ -7,10 +7,59 @@
         <link href="/"/>
     
         
-    <updated>2020-11-21T10:10:34Z</updated>
+    <updated>2020-12-07T12:27:33Z</updated>
 
     <id>/research/atom.xml/</id>
 
+            <entry>
+            <title type="html">ACoolTPS - Advanced Cooling of high power microsystems using Two-Phase Flows Systems in complex geometries</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/newton-2020.html"/>
+            <updated>2020-11-20T10:00:00Z</updated>
+            <published>2020-11-20T10:00:00Z</published>
+            <id>/research/newton-2020.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="multiphase"
+                        label="Multiphase" />
+                        <category   scheme="/res.url/tags"
+                        term="cooling of electronics"
+                        label="Cooling Of Electronics" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/royalSociety.png&#34; /&gt;
+Cooling of electronics is a challenging subject due to the fast growth
+of computer processing capacity. Cooling of datacenters is estimated to
+have an annual electricity cost of 1.4 billion dollars in the &lt;span class=&#34;caps&#34;&gt;USA&lt;/span&gt; and
+over 3 billion dollars worldwide. Currently, pure air/water cooling is
+the most widely used means for thermal regulation of datacenters, which
+represents around 45% of the total energy consumed in a datacenter.
+However, the energy efficiency of these methods is very low. Therefore,
+improvements are essential to ensure faster processors with sustainable
+energy management.
+Phase-change cooling devices directly over processor
+chips using microchannels offer promise to reduce such a demanding
+energy consumption. These are light-weight and hence can be used to cool
+electronics on earth and in space This is because as liquids evaporate
+they remove more heat than non-vaporising liquids. However, phase-change
+liquids pose major design challenges due to the presence of both liquid
+and vapour phases in the cooling device. This work aims to enhance our
+understanding of the underlying phenomena using advanced computational
+methods. Simulations can give an unprecedented insight into the dynamics
+eventually helping design low cost and energy-efficient microchannel
+cooling devices. We propose to further develop our simulators accounting
+for complex geometries, process the generated large scale data using
+machine learning and validate simulations using experiments. Edinburgh&amp;#8217;s
+expertise in computational and experimental phase-change, parallel
+computing, and machine-learning will complement the Brazilian team&amp;#8217;s
+expertise in finite-element models. The advanced simulators resulting
+from this project will be made freely available to&amp;nbsp;public.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Study of COVID-19/SARS-Cov-2 propagation between individuals and group of individuals during social contact</title>
             <author><name>Gustavo R Anjos</name></author>
