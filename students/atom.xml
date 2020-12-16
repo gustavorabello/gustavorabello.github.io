@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2020-12-16T11:07:30Z</updated>
+    <updated>2020-12-16T12:05:34Z</updated>
 
     <id>/students/atom.xml/</id>
 
@@ -70,9 +70,20 @@
             <title type="html">To be defined soon</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/students/msc/joaoPaulo.html"/>
+            <updated>2020-09-23T19:00:00Z</updated>
+            <published>2020-09-23T19:00:00Z</published>
+            <id>/students/msc/joaoPaulo.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">To be defined</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/msc/haroldoJunior.html"/>
             <updated>2020-09-23T09:00:00Z</updated>
             <published>2020-09-23T09:00:00Z</published>
-            <id>/students/msc/joaoPaulo.html</id>
+            <id>/students/msc/haroldoJunior.html</id>
             
             <content type="html">
                                             </content>
@@ -95,17 +106,6 @@
             <updated>2020-09-20T09:00:00Z</updated>
             <published>2020-09-20T09:00:00Z</published>
             <id>/students/phd/leandroMarques.html</id>
-            
-            <content type="html">
-                                            </content>
-        </entry>
-            <entry>
-            <title type="html">To be defined</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/msc/haroldoJunior.html"/>
-            <updated>2020-09-19T09:00:00Z</updated>
-            <published>2020-09-19T09:00:00Z</published>
-            <id>/students/msc/haroldoJunior.html</id>
             
             <content type="html">
                                             </content>
