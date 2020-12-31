@@ -7,17 +7,49 @@
         <link href="/"/>
     
         
-    <updated>2020-12-26T17:11:05Z</updated>
+    <updated>2020-12-31T10:26:40Z</updated>
 
     <id>/teaching/atom.xml/</id>
 
             <entry>
-            <title type="html">2-Phase Flows (MSc/PhD) - COM825</title>
+            <title type="html">Computational Fluid Dynamics - Finite Element (MSc/PhD) - COM-701</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/teaching/2-phaseFlow.html"/>
+            <link href="/teaching/coppeCFD-FEM.html"/>
+            <updated>2020-12-28T12:00:00Z</updated>
+            <published>2020-12-28T12:00:00Z</published>
+            <id>/teaching/coppeCFD-FEM.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="fluids"
+                        label="Fluids" />
+                        <category   scheme="/res.url/tags"
+                        term="finite element"
+                        label="Finite Element" />
+                        <category   scheme="/res.url/tags"
+                        term="python"
+                        label="Python" />
+            
+            <content type="html">
+                                &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1NH4PEN3muoACzxIt3uCoHFHT8Ad8I65F/view?usp=sharing&#34;&gt;content&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/1gKQsEaytzffIkUtE-dp6c8oS3KLX66c_/view?usp=sharing&#34;&gt;1st.&amp;nbsp;lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1y-KTZZMuJKyvNYeM9ebjBWvdO01mt82a/view?usp=sharing&#34;&gt;bibliography&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Vwv0MQztD-sbMidH6-sV1wKXZ5fztw_x/view?usp=sharing&#34;&gt;notes&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/15aN4Ajyi3XypEZBTLTwWhMlXZ04H5wn4/view?usp=sharing&#34;&gt;final&amp;nbsp;project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/drive/folders/1sVRZ8FbWtzUg0Olh1LP_xokSvTbbPI-1?usp=sharing&#34;&gt;python&amp;nbsp;codes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/17gPNmE9zT-aambQQ5kWW23QOr2I46jvC/view?usp=sharing&#34;&gt;partial/final&amp;nbsp;grades&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">2-Phase Flows (MSc/PhD) - COM-825</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/coppe2PhaseFlows.html"/>
             <updated>2020-10-13T10:00:00Z</updated>
             <published>2020-10-13T10:00:00Z</published>
-            <id>/teaching/2-phaseFlow.html</id>
+            <id>/teaching/coppe2PhaseFlows.html</id>
                         <category   scheme="/res.url/tags"
                         term="fentran"
                         label="Fentran" />

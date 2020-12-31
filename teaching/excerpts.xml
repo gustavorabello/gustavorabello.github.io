@@ -7,17 +7,38 @@
         <link href="/"/>
     
         
-    <updated>2020-12-26T17:11:05Z</updated>
+    <updated>2020-12-31T10:26:40Z</updated>
 
     <id>/teaching/excerpts.xml/</id>
 
             <entry>
-            <title type="html">2-Phase Flows (MSc/PhD) - COM825</title>
+            <title type="html">Computational Fluid Dynamics - Finite Element (MSc/PhD) - COM-701</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/teaching/2-phaseFlow.html"/>
+            <link href="/teaching/coppeCFD-FEM.html"/>
+            <updated>2020-12-28T12:00:00Z</updated>
+            <published>2020-12-28T12:00:00Z</published>
+            <id>/teaching/coppeCFD-FEM.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="fluids"
+                        label="Fluids" />
+                        <category   scheme="/res.url/tags"
+                        term="finite element"
+                        label="Finite Element" />
+                        <category   scheme="/res.url/tags"
+                        term="python"
+                        label="Python" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">2-Phase Flows (MSc/PhD) - COM-825</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/coppe2PhaseFlows.html"/>
             <updated>2020-10-13T10:00:00Z</updated>
             <published>2020-10-13T10:00:00Z</published>
-            <id>/teaching/2-phaseFlow.html</id>
+            <id>/teaching/coppe2PhaseFlows.html</id>
                         <category   scheme="/res.url/tags"
                         term="fentran"
                         label="Fentran" />
