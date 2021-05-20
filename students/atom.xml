@@ -7,10 +7,32 @@
         <link href="/"/>
     
         
-    <updated>2021-03-16T15:10:20Z</updated>
+    <updated>2021-05-19T22:50:17Z</updated>
 
     <id>/students/atom.xml/</id>
 
+            <entry>
+            <title type="html">Solution of the Three-Dimensional Transient Heat Equation Using the Finite Element Analysis Applied to Disk Breaks</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/felipeMello.html"/>
+            <updated>2021-05-14T10:00:00Z</updated>
+            <published>2021-05-14T10:00:00Z</published>
+            <id>/students/bsc/felipeMello.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">To be defined</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/msc/felipeFeres.html"/>
+            <updated>2021-03-17T09:00:00Z</updated>
+            <published>2021-03-17T09:00:00Z</published>
+            <id>/students/msc/felipeFeres.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
             <entry>
             <title type="html">Finite Element Method Applied to Barrage Temperature Profile</title>
             <author><name>Gustavo R Anjos</name></author>
@@ -100,17 +122,6 @@
                                             </content>
         </entry>
             <entry>
-            <title type="html">To be defined</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/msc/haroldoJunior.html"/>
-            <updated>2020-09-23T09:00:00Z</updated>
-            <published>2020-09-23T09:00:00Z</published>
-            <id>/students/msc/haroldoJunior.html</id>
-            
-            <content type="html">
-                                            </content>
-        </entry>
-            <entry>
             <title type="html">ALE-FE Method Applied to the Stream Function-Vorticity Formulation</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/students/msc/luisHenrique.html"/>
@@ -144,6 +155,17 @@
                                             </content>
         </entry>
             <entry>
+            <title type="html">To be defined</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/msc/rafaelVidal.html"/>
+            <updated>2020-09-17T09:00:00Z</updated>
+            <published>2020-09-17T09:00:00Z</published>
+            <id>/students/msc/rafaelVidal.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
             <title type="html">Numerical Methods for the Analysis of Biofuel Systems</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/students/bsc/julianaCerqueira.html"/>
@@ -172,6 +194,17 @@
             <updated>2020-04-03T15:00:00Z</updated>
             <published>2020-04-03T15:00:00Z</published>
             <id>/students/bsc/joseGomes.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">ALE-FEM in Vortex Induced Vibrations</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/msc/afranioGoncalves.html"/>
+            <updated>2020-03-10T09:00:00Z</updated>
+            <published>2020-03-10T09:00:00Z</published>
+            <id>/students/msc/afranioGoncalves.html</id>
             
             <content type="html">
                                             </content>
