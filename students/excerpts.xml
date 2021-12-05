@@ -7,10 +7,22 @@
         <link href="/"/>
     
         
-    <updated>2021-12-03T23:34:26Z</updated>
+    <updated>2021-12-05T12:43:58Z</updated>
 
     <id>/students/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">CFD Analysis of Flow in Coronary Arteries for Different Flow Restrictions Configurations</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/matheusGomes.html"/>
+            <updated>2021-10-15T10:00:00Z</updated>
+            <published>2021-10-15T10:00:00Z</published>
+            <id>/students/bsc/matheusGomes.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
             <entry>
             <title type="html">Numerical Methods for the Analysis of Biofuel Systems</title>
             <author><name>Gustavo R Anjos</name></author>
