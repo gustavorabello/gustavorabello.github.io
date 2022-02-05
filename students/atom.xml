@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2022-02-01T15:34:11Z</updated>
+    <updated>2022-02-04T23:14:13Z</updated>
 
     <id>/students/atom.xml/</id>
 
@@ -249,17 +249,6 @@
             <updated>2020-08-01T09:00:00Z</updated>
             <published>2020-08-01T09:00:00Z</published>
             <id>/students/phd/fabioGaspar.html</id>
-            
-            <content type="html">
-                                            </content>
-        </entry>
-            <entry>
-            <title type="html">Numerical Simulation of Fluid Flow using FEM</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/msc/victorBarcellos.html"/>
-            <updated>2020-07-01T09:00:00Z</updated>
-            <published>2020-07-01T09:00:00Z</published>
-            <id>/students/msc/victorBarcellos.html</id>
             
             <content type="html">
                                             </content>
