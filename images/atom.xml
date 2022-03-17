@@ -7,12 +7,12 @@
         <link href="/"/>
     
         
-    <updated>2022-03-14T23:56:38Z</updated>
+    <updated>2022-03-17T15:07:03Z</updated>
 
     <id>/images/atom.xml/</id>
 
             <entry>
-            <title type="html">Normal and Tangent Interface Vectors</title>
+            <title type="html">Normal and Tangent Interface Velocity Vectors</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/images/interterface2d.html"/>
             <updated>2021-03-14T10:00:00Z</updated>
@@ -30,11 +30,15 @@
             
             <content type="html">
                                 &lt;p&gt;&lt;img alt=&#34;disk&#34; src=&#34;/media/images/interface2d.png&#34; /&gt;
-Two-phase flow of an ascendent bubble. The figure shows one
-stage of the interface mesh motion with the normal (red) and tangent
-(blue) vectors highlighted.
-The simulation is therefore performed and results on the bubble flow
-dynamics is&amp;nbsp;achived.&lt;/p&gt;            </content>
+Snapshot of 2-dimensional two-phase flow of an ascendent bubble. The
+figure shows one stage of the interface mesh motion with the normal
+component of the velocity (red) and tangent component of the velocity
+(blue) for all interface nodes.
+Note that the normal high speed (represented here by the long arrows)
+are found to be in the center of the image (bottom and top of the
+interface), while the tangent high speed is found at the side-bottom of
+the interface. The simulation is therefore carried out and results on
+the bubble flow dynamics is&amp;nbsp;achived.&lt;/p&gt;            </content>
         </entry>
             <entry>
             <title type="html">Sinusoidal channel</title>
