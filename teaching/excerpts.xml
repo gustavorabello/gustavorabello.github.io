@@ -7,10 +7,31 @@
         <link href="/"/>
     
         
-    <updated>2022-03-23T21:08:53Z</updated>
+    <updated>2022-04-07T23:35:34Z</updated>
 
     <id>/teaching/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Heat Transfer 2 - EEK-501</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/teaching/heatTransfer2.html"/>
+            <updated>2022-12-04T12:00:00Z</updated>
+            <published>2022-12-04T12:00:00Z</published>
+            <id>/teaching/heatTransfer2.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite elements"
+                        label="Finite Elements" />
+                        <category   scheme="/res.url/tags"
+                        term="heat transfer"
+                        label="Heat Transfer" />
+                        <category   scheme="/res.url/tags"
+                        term="python"
+                        label="Python" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
             <entry>
             <title type="html">Computational Fluid Dynamics - Finite Element (MSc/PhD) - COM-701</title>
             <author><name>Gustavo R Anjos</name></author>
