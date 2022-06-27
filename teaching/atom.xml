@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2022-04-07T23:35:34Z</updated>
+    <updated>2022-06-27T14:36:56Z</updated>
 
     <id>/teaching/atom.xml/</id>
 
@@ -50,11 +50,11 @@
 &lt;/ul&gt;            </content>
         </entry>
             <entry>
-            <title type="html">Computational Fluid Dynamics - Finite Element (MSc/PhD) - COM-701</title>
+            <title type="html">Computational Heat Transfer - Finite Element (MSc/PhD) - COM-728</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/teaching/coppeCFD-FEM.html"/>
-            <updated>2020-12-28T12:00:00Z</updated>
-            <published>2020-12-28T12:00:00Z</published>
+            <updated>2022-06-28T12:00:00Z</updated>
+            <published>2022-06-28T12:00:00Z</published>
             <id>/teaching/coppeCFD-FEM.html</id>
                         <category   scheme="/res.url/tags"
                         term="fluids"
@@ -75,7 +75,7 @@
 &lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1XJtQZNZ7WnzZ8XWGKK-uhOlNBJInN0TQ/view?usp=sharing&#34;&gt;vector&amp;nbsp;calculus&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Vwv0MQztD-sbMidH6-sV1wKXZ5fztw_x/view?usp=sharing&#34;&gt;notes&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1Vwv0MQztD-sbMidH6-sV1wKXZ5fztw_x/view?usp=sharing&#34;&gt;handbook&lt;/a&gt; &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/15aN4Ajyi3XypEZBTLTwWhMlXZ04H5wn4/view?usp=sharing&#34;&gt;final&amp;nbsp;project&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://drive.google.com/drive/folders/1sVRZ8FbWtzUg0Olh1LP_xokSvTbbPI-1?usp=sharing&#34;&gt;python&amp;nbsp;codes&lt;/a&gt;&lt;/li&gt;
