@@ -3,7 +3,7 @@
 
 #singleColumns 
 { 
- height:1700px;
+ height:2400px;
  width:670px;
 }
 
@@ -28,7 +28,7 @@
  font-size:24px; 
  font-weight:none; 
  color:blue;
- width:200px;
+ width:400px;
  border-bottom: 2px solid black;
  margin-top:20px;
  margin-bottom:10px;

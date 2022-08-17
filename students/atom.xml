@@ -7,10 +7,21 @@
         <link href="/"/>
     
         
-    <updated>2022-08-12T22:48:57Z</updated>
+    <updated>2022-08-17T20:18:32Z</updated>
 
     <id>/students/atom.xml/</id>
 
+            <entry>
+            <title type="html">Analysis of Vibration Induced by Internal Flow in a Bi-Supported Pipe Using Finite Element Method</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/victorRieger.html"/>
+            <updated>2022-08-17T16:00:00Z</updated>
+            <published>2022-08-17T16:00:00Z</published>
+            <id>/students/bsc/victorRieger.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
             <entry>
             <title type="html">Simulation of Lift and Drag Coefficients for a Free Flow Using the Stream-Vorticity Formulation</title>
             <author><name>Gustavo R Anjos</name></author>
@@ -89,6 +100,17 @@
                                             </content>
         </entry>
             <entry>
+            <title type="html">Numerical Analysis of Filters in Biofuel Systems</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/ic/annaBarbara.html"/>
+            <updated>2022-01-01T09:00:00Z</updated>
+            <published>2022-01-01T09:00:00Z</published>
+            <id>/students/ic/annaBarbara.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
             <title type="html">Particle-Laden Multiphase Flows - A Finite Element Analysis on Biofuel Particle Emission</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/students/msc/joaoPaulo.html"/>
@@ -122,12 +144,12 @@
                                             </content>
         </entry>
             <entry>
-            <title type="html">Numerical Methods for the Analysis of Biofuel Systems</title>
+            <title type="html">Analysis of Biofuel Systems Using the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/danielSpesani.html"/>
-            <updated>2021-08-02T09:00:00Z</updated>
-            <published>2021-08-02T09:00:00Z</published>
-            <id>/students/bsc/danielSpesani.html</id>
+            <link href="/students/ic/joaoPedro.html"/>
+            <updated>2021-10-02T09:00:00Z</updated>
+            <published>2021-10-02T09:00:00Z</published>
+            <id>/students/ic/joaoPedro.html</id>
             
             <content type="html">
                                             </content>
@@ -135,10 +157,21 @@
             <entry>
             <title type="html">Numerical Methods for the Analysis of Biofuel Systems</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/matheusDias.html"/>
+            <link href="/students/ic/danielSpesani.html"/>
+            <updated>2021-08-02T09:00:00Z</updated>
+            <published>2021-08-02T09:00:00Z</published>
+            <id>/students/ic/danielSpesani.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">Numerical Methods for the Analysis of Biofuel Systems</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/ic/matheusDias.html"/>
             <updated>2021-08-01T09:00:00Z</updated>
             <published>2021-08-01T09:00:00Z</published>
-            <id>/students/bsc/matheusDias.html</id>
+            <id>/students/ic/matheusDias.html</id>
             
             <content type="html">
                                             </content>
@@ -243,12 +276,12 @@
                                             </content>
         </entry>
             <entry>
-            <title type="html">Numerical Methods for the Analysis of Biofuel Systems</title>
+            <title type="html">Numerial Simulations for the Analysis of Biofuel Systems</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/ramonMoreira.html"/>
+            <link href="/students/ic/ramonMoreira.html"/>
             <updated>2020-10-06T09:00:00Z</updated>
             <published>2020-10-06T09:00:00Z</published>
-            <id>/students/bsc/ramonMoreira.html</id>
+            <id>/students/ic/ramonMoreira.html</id>
             
             <content type="html">
                                             </content>
@@ -320,12 +353,23 @@
                                             </content>
         </entry>
             <entry>
-            <title type="html">Numerical Methods for the Analysis of Biofuel Systems</title>
+            <title type="html">Numerical Analysis of the Effect of Porosity on the Production of Biofuels in the Streamfunction Vorticity Formulation Using Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/students/bsc/julianaCerqueira.html"/>
             <updated>2020-09-06T09:00:00Z</updated>
             <published>2020-09-06T09:00:00Z</published>
             <id>/students/bsc/julianaCerqueira.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">Numerical Methods for the Analysis of Biofuel Systems</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/ic/julianaCerqueira.html"/>
+            <updated>2020-09-06T09:00:00Z</updated>
+            <published>2020-09-06T09:00:00Z</published>
+            <id>/students/ic/julianaCerqueira.html</id>
             
             <content type="html">
                                             </content>
@@ -381,6 +425,17 @@
             <updated>2020-02-01T15:00:00Z</updated>
             <published>2020-02-01T15:00:00Z</published>
             <id>/students/bsc/luisHenrique.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">Streamfunction-Vorticity Formulation for Conjugated Heat Transfer Problems using FEM</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/ic/luisHenrique.html"/>
+            <updated>2020-02-01T15:00:00Z</updated>
+            <published>2020-02-01T15:00:00Z</published>
+            <id>/students/ic/luisHenrique.html</id>
             
             <content type="html">
                                             </content>
