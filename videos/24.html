@@ -22,7 +22,7 @@
         compatibility mode is within the first 1K bytes
         code.google.com/p/chromium/issues/detail?id=23003 -->
 
-  <title>3D Point Insertion Strategy</title>
+  <title>3D Point Deletion Strategy</title>
   <meta name="description" content="">
   <meta name="author" content="Gustavo R Anjos">
 
@@ -118,20 +118,20 @@
 <nav class="post_nav">
 <a class="backlink" href="/videos">Back to list</a>
 <a class="prev"
-    title="3D Point Deletion Strategy"
+    title="2D Heat Transfer Bubble Rising"
         href="/videos/23.html">
     Prev
 </a>
 
 <a class="next"
-    title="3D Air-Water Flow"
+    title="3D Point Insertion Strategy"
         href="/videos/25.html">
     Next
 </a>
 </nav>
 <h1 class="title">
     <a href="/videos/24.html">
-        3D Point Insertion Strategy
+        3D Point Deletion Strategy
     </a>
 </h1>
 <time datetime="2011-11-14">
@@ -148,10 +148,10 @@
     </a>
 </li>
 </ul>
-<iframe src="https://www.youtube.com/embed/O_XaZa5wyOU?rel=0"frameborder="1" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/W-BRGcCDmsk?rel=0"frameborder="1" allowfullscreen></iframe>
 
-<p>The interface between fluids is represented by a set of points, edges and facets. These facets are triangles which are part of the tetrahedron mesh. Each triangle represents the shared facet of two adjacent tetrahedrons. As can be seen, while the surface movies with respect to the flow, the elements are stretched spoil
-ing their quality ratios, thus the algorithm should insert points when an edge becomes bigger then a calculated value. Such a value is based on the local curvature and its required&nbsp;precision.</p></article>          </section>
+<p>The interface between fluids is represented by a set of points, edges and facets. These facets are triangles which are part of the tetrahedron mesh. Each triangle represents the shared facet of two adjacent tetrahedrons. As can be seen, while the surface movies with respect to the flow, the elements are compressed spoi
+ling the their quality ratios, thus the algorithm should remove excessive concentration of points and remesh locally the hole formed by the deletion&nbsp;process.</p></article>          </section>
       </div>
       </div> <!--! end of #container -->
   <footer>
