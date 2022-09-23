@@ -7,17 +7,32 @@
         <link href="/"/>
     
         
-    <updated>2022-09-18T02:43:22Z</updated>
+    <updated>2022-09-23T20:16:51Z</updated>
 
     <id>/videos/excerpts.xml/</id>
 
             <entry>
-            <title type="html">Rising bubble in quiescent liquid using arbitrary quadrilateral mesh</title>
+            <title type="html">Channel width comparison for 2D Two-Phase flows</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/videos/1.html"/>
+            <updated>2022-09-19T06:58:08Z</updated>
+            <published>2022-09-19T06:58:08Z</published>
+            <id>/videos/1.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;This test shows the deceleration of a rising bubble due to the distance between lateral walls. As can be seen, the larger is the channel width the faster is the rising bubble. The right hand side figure does not even arrive at the middle of the channel length for the exactly same parameters and time step to all&amp;nbsp;simulat&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Rising bubble in quiescent liquid using arbitrary quadrilateral mesh</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/2.html"/>
             <updated>2022-09-10T15:32:30Z</updated>
             <published>2022-09-10T15:32:30Z</published>
-            <id>/videos/1.html</id>
+            <id>/videos/2.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -35,21 +50,6 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">Efficient Laplacian Smoothing on Quadrilateral Mesh</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/2.html"/>
-            <updated>2022-09-05T03:13:39Z</updated>
-            <published>2022-09-05T03:13:39Z</published>
-            <id>/videos/2.html</id>
-                        <category   scheme="/res.url/tags"
-                        term="two-phase"
-                        label="Two-Phase" />
-            
-            <content type="html">
-                
-                &lt;p&gt;This animations show the effect of the Laplacian Smoothing operation on quadrilateral mesh in a rectangular domain. Such a mesh is commonly used in Finite Element Analysis and can be further employed in single- and two-phase flow simulations. The main advantage of arbitrary quadrilateral meshes over triangular meshes&amp;nbsp;i&lt;/p&gt;            </content>
-        </entry>
-            <entry>
-            <title type="html">Efficient Laplacian Smoothing on Quadrilateral Mesh</title>
-            <author><name>Gustavo R Anjos</name></author>
             <link href="/videos/3.html"/>
             <updated>2022-09-05T03:13:39Z</updated>
             <published>2022-09-05T03:13:39Z</published>
@@ -63,12 +63,27 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
                 &lt;p&gt;This animations show the effect of the Laplacian Smoothing operation on quadrilateral mesh in a rectangular domain. Such a mesh is commonly used in Finite Element Analysis and can be further employed in single- and two-phase flow simulations. The main advantage of arbitrary quadrilateral meshes over triangular meshes&amp;nbsp;i&lt;/p&gt;            </content>
         </entry>
             <entry>
-            <title type="html">Passive particle transport of 200 particles</title>
+            <title type="html">Efficient Laplacian Smoothing on Quadrilateral Mesh</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/videos/4.html"/>
+            <updated>2022-09-05T03:13:39Z</updated>
+            <published>2022-09-05T03:13:39Z</published>
+            <id>/videos/4.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
+                &lt;p&gt;This animations show the effect of the Laplacian Smoothing operation on quadrilateral mesh in a rectangular domain. Such a mesh is commonly used in Finite Element Analysis and can be further employed in single- and two-phase flow simulations. The main advantage of arbitrary quadrilateral meshes over triangular meshes&amp;nbsp;i&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Passive particle transport of 200 particles</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/5.html"/>
             <updated>2022-03-24T00:05:18Z</updated>
             <published>2022-03-24T00:05:18Z</published>
-            <id>/videos/4.html</id>
+            <id>/videos/5.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -80,10 +95,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">Bloodstream flow with drug-eluting stents in coronary artery</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/5.html"/>
+            <link href="/videos/6.html"/>
             <updated>2020-11-12T19:40:52Z</updated>
             <published>2020-11-12T19:40:52Z</published>
-            <id>/videos/5.html</id>
+            <id>/videos/6.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -95,10 +110,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">Slug flow in sinusoidal channel</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/6.html"/>
+            <link href="/videos/7.html"/>
             <updated>2020-11-12T19:31:01Z</updated>
             <published>2020-11-12T19:31:01Z</published>
-            <id>/videos/6.html</id>
+            <id>/videos/7.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -110,10 +125,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">Jet stream during conversation (COVID-19/SARS-CoV-2)</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/7.html"/>
+            <link href="/videos/8.html"/>
             <updated>2020-10-21T01:16:29Z</updated>
             <published>2020-10-21T01:16:29Z</published>
-            <id>/videos/7.html</id>
+            <id>/videos/8.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -125,10 +140,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">2d Particle Collisions</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/8.html"/>
+            <link href="/videos/9.html"/>
             <updated>2020-06-21T17:38:42Z</updated>
             <published>2020-06-21T17:38:42Z</published>
-            <id>/videos/8.html</id>
+            <id>/videos/9.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -140,10 +155,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">Rising of air bubble in water-sugar solution (Bhaga and Weber, 1981)</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/9.html"/>
+            <link href="/videos/10.html"/>
             <updated>2020-03-03T06:29:20Z</updated>
             <published>2020-03-03T06:29:20Z</published>
-            <id>/videos/9.html</id>
+            <id>/videos/10.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -155,10 +170,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">VIV ALE-FE</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/10.html"/>
+            <link href="/videos/11.html"/>
             <updated>2019-07-08T09:55:24Z</updated>
             <published>2019-07-08T09:55:24Z</published>
-            <id>/videos/10.html</id>
+            <id>/videos/11.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -170,10 +185,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">Rotating disk flow</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/11.html"/>
+            <link href="/videos/12.html"/>
             <updated>2016-09-02T21:16:46Z</updated>
             <published>2016-09-02T21:16:46Z</published>
-            <id>/videos/11.html</id>
+            <id>/videos/12.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -185,10 +200,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">Sessile drop</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/12.html"/>
+            <link href="/videos/13.html"/>
             <updated>2013-03-21T23:23:04Z</updated>
             <published>2013-03-21T23:23:04Z</published>
-            <id>/videos/12.html</id>
+            <id>/videos/13.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -200,10 +215,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">3D vortex field</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/13.html"/>
+            <link href="/videos/14.html"/>
             <updated>2013-02-10T19:51:41Z</updated>
             <published>2013-02-10T19:51:41Z</published>
-            <id>/videos/13.html</id>
+            <id>/videos/14.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -215,10 +230,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">Single vortex simulation</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/14.html"/>
+            <link href="/videos/15.html"/>
             <updated>2012-11-03T14:14:25Z</updated>
             <published>2012-11-03T14:14:25Z</published>
-            <id>/videos/14.html</id>
+            <id>/videos/15.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -230,10 +245,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">Zalesak&#39;s rotating sphere test case</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/15.html"/>
+            <link href="/videos/16.html"/>
             <updated>2012-11-01T06:40:39Z</updated>
             <published>2012-11-01T06:40:39Z</published>
-            <id>/videos/15.html</id>
+            <id>/videos/16.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -245,10 +260,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">Squeezing of 2 bubbles</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/16.html"/>
+            <link href="/videos/17.html"/>
             <updated>2012-07-16T14:08:05Z</updated>
             <published>2012-07-16T14:08:05Z</published>
-            <id>/videos/16.html</id>
+            <id>/videos/17.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -260,10 +275,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">cross section triangle</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/17.html"/>
+            <link href="/videos/18.html"/>
             <updated>2012-07-16T14:08:05Z</updated>
             <published>2012-07-16T14:08:05Z</published>
-            <id>/videos/17.html</id>
+            <id>/videos/18.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -275,21 +290,6 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">Rising air bubble in sugar syrup solution</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/18.html"/>
-            <updated>2012-06-05T15:52:11Z</updated>
-            <published>2012-06-05T15:52:11Z</published>
-            <id>/videos/18.html</id>
-                        <category   scheme="/res.url/tags"
-                        term="two-phase"
-                        label="Two-Phase" />
-            
-            <content type="html">
-                
-                &lt;p&gt;Gravity-driven flow of an air bubble in sugar-syrup solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the rising velocity of the air bubble and the liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
-        </entry>
-            <entry>
-            <title type="html">Rising air bubble in sucrose solution</title>
-            <author><name>Gustavo R Anjos</name></author>
             <link href="/videos/19.html"/>
             <updated>2012-06-05T15:52:11Z</updated>
             <published>2012-06-05T15:52:11Z</published>
@@ -300,7 +300,7 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             
             <content type="html">
                 
-                &lt;p&gt;Gravity-driven flow of an air bubble in sucrose solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the  rising velocity of the air bubble and liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
+                &lt;p&gt;Gravity-driven flow of an air bubble in sugar-syrup solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the rising velocity of the air bubble and the liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
         </entry>
             <entry>
             <title type="html">Rising air bubble in sucrose solution</title>
@@ -315,10 +315,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             
             <content type="html">
                 
-                &lt;p&gt;Gravity-driven flow of an air bubble in sucrose solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the rising velocity of the air bubble and liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
+                &lt;p&gt;Gravity-driven flow of an air bubble in sucrose solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the  rising velocity of the air bubble and liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
         </entry>
             <entry>
-            <title type="html">Two-phase flow evaporation in microchannel</title>
+            <title type="html">Rising air bubble in sucrose solution</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/videos/21.html"/>
             <updated>2012-06-05T15:52:11Z</updated>
@@ -330,10 +330,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             
             <content type="html">
                 
-                &lt;p&gt;Heat and Mass transfer of refrigerant R1234ze in square cross-section microchannels with a constant heat flux applied on the bottom of the domain. Red color represent high temperature and blue stands for low&amp;nbsp;temperature.&lt;/p&gt;            </content>
+                &lt;p&gt;Gravity-driven flow of an air bubble in sucrose solution. The result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the rising velocity of the air bubble and liquid film&amp;nbsp;thickness.&lt;/p&gt;            </content>
         </entry>
             <entry>
-            <title type="html">Microchannel two-phase flow of refrigerant R1234ze.</title>
+            <title type="html">Two-phase flow evaporation in microchannel</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/videos/22.html"/>
             <updated>2012-06-05T15:52:11Z</updated>
@@ -345,10 +345,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             
             <content type="html">
                 
-                &lt;p&gt;Two-phase slug flow in square cross-section microchannels. 3D Finite Element simulation was successfully carried out to predict bubble shape, velocity, liquid slug and liquid film thickness in the scope of the &lt;span class=&#34;caps&#34;&gt;CMOSAIC&lt;/span&gt; project financed by NanoTera in Switzerland. The liquid and gas phases correspond to the refrigerant&amp;nbsp;R&lt;/p&gt;            </content>
+                &lt;p&gt;Heat and Mass transfer of refrigerant R1234ze in square cross-section microchannels with a constant heat flux applied on the bottom of the domain. Red color represent high temperature and blue stands for low&amp;nbsp;temperature.&lt;/p&gt;            </content>
         </entry>
             <entry>
-            <title type="html">Rising air bubble in glycerol solution</title>
+            <title type="html">Microchannel two-phase flow of refrigerant R1234ze.</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/videos/23.html"/>
             <updated>2012-06-05T15:52:11Z</updated>
@@ -360,15 +360,30 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             
             <content type="html">
                 
+                &lt;p&gt;Two-phase slug flow in square cross-section microchannels. 3D Finite Element simulation was successfully carried out to predict bubble shape, velocity, liquid slug and liquid film thickness in the scope of the &lt;span class=&#34;caps&#34;&gt;CMOSAIC&lt;/span&gt; project financed by NanoTera in Switzerland. The liquid and gas phases correspond to the refrigerant&amp;nbsp;R&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Rising air bubble in glycerol solution</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/videos/24.html"/>
+            <updated>2012-06-05T15:52:11Z</updated>
+            <published>2012-06-05T15:52:11Z</published>
+            <id>/videos/24.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                
                 &lt;p&gt;Gravity-driven flow of an air bubble in sugar-syrup solution. The 3D equations were discretized using the &lt;span class=&#34;caps&#34;&gt;ALE&lt;/span&gt; framework and the Finite Element Method. The numerical result was compared to the White and Beardmore flow pattern map (1962) and good agreement was found for the rising velocity. Bubble shape and liquid film&amp;nbsp;t&lt;/p&gt;            </content>
         </entry>
             <entry>
             <title type="html">2D Rising Bubble Heat Transfer</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/24.html"/>
+            <link href="/videos/25.html"/>
             <updated>2012-02-03T22:37:34Z</updated>
             <published>2012-02-03T22:37:34Z</published>
-            <id>/videos/24.html</id>
+            <id>/videos/25.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -380,10 +395,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">2D Heat Transfer Bubble Rising</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/25.html"/>
+            <link href="/videos/26.html"/>
             <updated>2011-11-28T11:25:57Z</updated>
             <published>2011-11-28T11:25:57Z</published>
-            <id>/videos/25.html</id>
+            <id>/videos/26.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -395,10 +410,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">3D Point Deletion Strategy</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/26.html"/>
+            <link href="/videos/27.html"/>
             <updated>2011-11-14T15:39:58Z</updated>
             <published>2011-11-14T15:39:58Z</published>
-            <id>/videos/26.html</id>
+            <id>/videos/27.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -410,10 +425,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">3D Point Insertion Strategy</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/27.html"/>
+            <link href="/videos/28.html"/>
             <updated>2011-11-14T15:39:58Z</updated>
             <published>2011-11-14T15:39:58Z</published>
-            <id>/videos/27.html</id>
+            <id>/videos/28.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -425,10 +440,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">3D Air-Water Flow</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/28.html"/>
+            <link href="/videos/29.html"/>
             <updated>2011-11-14T15:39:58Z</updated>
             <published>2011-11-14T15:39:58Z</published>
-            <id>/videos/28.html</id>
+            <id>/videos/29.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -440,10 +455,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">2D Microchannel Coalescence</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/29.html"/>
+            <link href="/videos/30.html"/>
             <updated>2011-11-14T15:39:58Z</updated>
             <published>2011-11-14T15:39:58Z</published>
-            <id>/videos/29.html</id>
+            <id>/videos/30.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
@@ -455,10 +470,10 @@ density ratio =&amp;nbsp;100&lt;/p&gt;            </content>
             <entry>
             <title type="html">3D Air-Water-Sugar Flow</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/videos/30.html"/>
+            <link href="/videos/31.html"/>
             <updated>2011-11-14T15:39:58Z</updated>
             <published>2011-11-14T15:39:58Z</published>
-            <id>/videos/30.html</id>
+            <id>/videos/31.html</id>
                         <category   scheme="/res.url/tags"
                         term="two-phase"
                         label="Two-Phase" />
