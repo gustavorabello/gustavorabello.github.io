@@ -1,0 +1,103 @@
+/* publications */
+
+#block
+{
+ margin-left:40px;
+ padding-bottom:30px;
+ width:630px;
+ height:20px;
+}
+
+#block img
+{
+ width:25px;
+ margin-bottom:5px;
+}
+
+#block h1
+{
+ font-size:18px;
+ color:black;
+}
+
+
+#block p
+{
+ font-size:14px;
+ text-align:justify;
+ color:black;
+}
+
+#block li
+{
+ list-style-type: none;
+ font-size:14px;
+ text-align:justify;
+ text-decoration:none;
+ color:black;
+}
+
+#block a
+{
+ font-size:14px;
+ text-align:justify;
+ text-decoration:none;
+ color:black;
+}
+
+#block .left
+{ 
+ float:left;
+ width:5%;
+ height:30px;
+}
+
+#block .right
+{ 
+ float:right;
+ width:86%;
+ height:30px;
+}
+
+#page
+{
+ width:600px;
+ margin-top:10px;
+ margin-bottom:60px;
+ text-align:center;
+ font-size:13px;
+ letter-spacing:-1px;
+}
+
+#page a
+{ 
+ font-family:Arial, Helvetica, sans-serif;
+}
+
+#page a:hover
+{ 
+ color:red;
+ border-bottom:1px;
+}
+
+#page p
+{ 
+ text-align:left;
+}
+
+#page h1
+{
+ font-size:24px;
+ font-weight:bold;
+ text-align:justify;
+ margin-left:30px;
+ margin-top:10px;
+ color:black;
+ border-bottom: 1px solid blue;
+ width:640px;
+}
+
+#page h2
+{
+ padding-bottom:30px;
+}
