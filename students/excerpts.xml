@@ -7,10 +7,22 @@
         <link href="/"/>
     
         
-    <updated>2023-01-07T17:35:52Z</updated>
+    <updated>2023-01-16T08:36:34Z</updated>
 
     <id>/students/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Medicine Diffusion from Drug-eluting Stents in Coronary Arteries</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/gabrielSantos.html"/>
+            <updated>2023-01-09T10:00:00Z</updated>
+            <published>2023-01-09T10:00:00Z</published>
+            <id>/students/bsc/gabrielSantos.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
             <entry>
             <title type="html">Study of the Implementation of Tesla Valves in Heat Exchangers by the Finite Elements Method</title>
             <author><name>Gustavo R Anjos</name></author>
