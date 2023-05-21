@@ -7,10 +7,33 @@
         <link href="/"/>
     
         
-    <updated>2023-05-21T09:59:09Z</updated>
+    <updated>2023-05-21T10:17:14Z</updated>
 
     <id>/carreer/atom.xml/</id>
 
+            <entry>
+            <title type="html">Coordinator of International Affairs Office</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/carreer/international.html"/>
+            <updated>2021-07-22T10:00:00Z</updated>
+            <published>2021-07-22T10:00:00Z</published>
+            <id>/carreer/international.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="professor"
+                        label="Professor" />
+                        <category   scheme="/res.url/tags"
+                        term="international"
+                        label="International" />
+                        <category   scheme="/res.url/tags"
+                        term="coppe"
+                        label="Coppe" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/carreer/coppe/logo.png&#34; /&gt;
+Appointed as the coordinator of International Affairs Office of Coppe in
+2021. Consequently, I&amp;#8217;m the first Center of Technology representative of
+the internationalization council of &lt;span class=&#34;caps&#34;&gt;UFRJ&lt;/span&gt;.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Board of directors</title>
             <author><name>Gustavo R Anjos</name></author>
