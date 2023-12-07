@@ -7,10 +7,34 @@
         <link href="/"/>
     
         
-    <updated>2023-10-18T12:11:57Z</updated>
+    <updated>2023-12-07T13:53:48Z</updated>
 
     <id>/students/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Analysis of Filtration Efficiency in Biocombustion Emissions Through Numerical Simulation on Unstructured Grids</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/annaBarbara.html"/>
+            <updated>2023-10-19T10:00:00Z</updated>
+            <published>2023-10-19T10:00:00Z</published>
+            <id>/students/bsc/annaBarbara.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Analysis of Filtration Efficiency in Biocombustion Emissions Through Numerical Simulation on Unstructured Grids</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/ic/annaBarbara.html"/>
+            <updated>2023-10-18T09:00:00Z</updated>
+            <published>2023-10-18T09:00:00Z</published>
+            <id>/students/ic/annaBarbara.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
             <entry>
             <title type="html">Numerical Analizys of Two-Phase Flows in Biodiesel Microreactor Production</title>
             <author><name>Gustavo R Anjos</name></author>
@@ -30,6 +54,18 @@
             <updated>2023-08-30T10:00:00Z</updated>
             <published>2023-08-30T10:00:00Z</published>
             <id>/students/bsc/gabrielWaelmeldt.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Numerical Solution of the Elliptical Problem of Air Potential Flow Around High Speed Trains Profiles Through the Finite Element Method</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/antonioPires.html"/>
+            <updated>2023-08-11T10:00:00Z</updated>
+            <published>2023-08-11T10:00:00Z</published>
+            <id>/students/bsc/antonioPires.html</id>
             
             <content type="html">
                 
@@ -246,18 +282,6 @@
             <updated>2022-03-07T13:00:00Z</updated>
             <published>2022-03-07T13:00:00Z</published>
             <id>/students/bsc/victorGuido.html</id>
-            
-            <content type="html">
-                
-                            </content>
-        </entry>
-            <entry>
-            <title type="html">Numerical Analysis of Filters in Biofuel Systems</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/ic/annaBarbara.html"/>
-            <updated>2022-01-01T09:00:00Z</updated>
-            <published>2022-01-01T09:00:00Z</published>
-            <id>/students/ic/annaBarbara.html</id>
             
             <content type="html">
                 
