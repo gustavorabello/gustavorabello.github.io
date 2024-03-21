@@ -7,10 +7,22 @@
         <link href="/"/>
     
         
-    <updated>2024-02-26T18:15:21Z</updated>
+    <updated>2024-03-20T21:13:44Z</updated>
 
     <id>/students/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Finite Element Simulation of Three-Dimensional Two-Phase Flows in Complex Geometries</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/phd/danielBarbedo.html"/>
+            <updated>2024-03-19T09:00:00Z</updated>
+            <published>2024-03-19T09:00:00Z</published>
+            <id>/students/phd/danielBarbedo.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
             <entry>
             <title type="html">Numerical Analisys of Two-Phase Flows in Nuclear Reactors</title>
             <author><name>Gustavo R Anjos</name></author>
@@ -162,6 +174,42 @@
             <updated>2023-07-12T10:00:00Z</updated>
             <published>2023-07-12T10:00:00Z</published>
             <id>/students/bsc/lucasMiranda.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Numerical Analysis of the Effect of Porosity on the Production of Biofuels in the Streamfunction Vorticity Formulation Using Finite Element Method</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/msc/julianaCerqueira.html"/>
+            <updated>2023-03-01T09:00:00Z</updated>
+            <published>2023-03-01T09:00:00Z</published>
+            <id>/students/msc/julianaCerqueira.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Analysis of Filtration Efficiency in Biocombustion Emissions Through Numerical Simulation on Unstructured Grids</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/msc/annaBarbara.html"/>
+            <updated>2023-03-01T08:00:00Z</updated>
+            <published>2023-03-01T08:00:00Z</published>
+            <id>/students/msc/annaBarbara.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Study of Cold Plate Fin Geometries to Improve Heat Transfer Capabilities of Eletronics Cooling Solutions Utilizing the Finite Element Method</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/msc/lucasMiranda.html"/>
+            <updated>2023-03-01T07:00:00Z</updated>
+            <published>2023-03-01T07:00:00Z</published>
+            <id>/students/msc/lucasMiranda.html</id>
             
             <content type="html">
                 
@@ -522,18 +570,6 @@
             <updated>2020-09-24T09:00:00Z</updated>
             <published>2020-09-24T09:00:00Z</published>
             <id>/students/msc/gabrielAntao.html</id>
-            
-            <content type="html">
-                
-                            </content>
-        </entry>
-            <entry>
-            <title type="html">Two-Phase Flow Simulation in Complex Geometries</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/phd/danielBarbedo.html"/>
-            <updated>2020-09-24T09:00:00Z</updated>
-            <published>2020-09-24T09:00:00Z</published>
-            <id>/students/phd/danielBarbedo.html</id>
             
             <content type="html">
                 
