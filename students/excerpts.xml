@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2024-03-20T21:13:44Z</updated>
+    <updated>2024-06-04T13:46:24Z</updated>
 
     <id>/students/excerpts.xml/</id>
 
@@ -18,6 +18,18 @@
             <updated>2024-03-19T09:00:00Z</updated>
             <published>2024-03-19T09:00:00Z</published>
             <id>/students/phd/danielBarbedo.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Finite Element Simulation Fluid-Structure Interaction</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/postdoc/danielBarbedo.html"/>
+            <updated>2024-03-19T09:00:00Z</updated>
+            <published>2024-03-19T09:00:00Z</published>
+            <id>/students/postdoc/danielBarbedo.html</id>
             
             <content type="html">
                 
@@ -480,6 +492,18 @@
                             </content>
         </entry>
             <entry>
+            <title type="html">Reduced-Order Modeling of Fluid-Structure Interaction</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/postdoc/joaoDeodato.html"/>
+            <updated>2021-03-19T09:00:00Z</updated>
+            <published>2021-03-19T09:00:00Z</published>
+            <id>/students/postdoc/joaoDeodato.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
             <title type="html">Numerical Analysis of Flows in Equipaments</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/students/msc/higorOdilon.html"/>
@@ -810,6 +834,30 @@
             <updated>2015-07-24T15:00:00Z</updated>
             <published>2015-07-24T15:00:00Z</published>
             <id>/students/msc/eduardoVitral.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Numerical Modeling System of Multiphase flows</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/ic/pauloBerti.html"/>
+            <updated>2015-04-05T15:00:00Z</updated>
+            <published>2015-04-05T15:00:00Z</published>
+            <id>/students/ic/pauloBerti.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Data processing and numerical programming in multiphase systems</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/ic/rafaelFilomeno.html"/>
+            <updated>2015-02-01T15:00:00Z</updated>
+            <published>2015-02-01T15:00:00Z</published>
+            <id>/students/ic/rafaelFilomeno.html</id>
             
             <content type="html">
                 
