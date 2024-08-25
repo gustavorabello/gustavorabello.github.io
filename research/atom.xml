@@ -7,10 +7,43 @@
         <link href="/"/>
     
         
-    <updated>2024-07-07T11:43:48Z</updated>
+    <updated>2024-08-25T20:55:58Z</updated>
 
     <id>/research/atom.xml/</id>
 
+            <entry>
+            <title type="html">Innovative active methodologies in engineering teaching - INOVA DISCIPLINA</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/poli-2024.html"/>
+            <updated>2024-07-28T10:00:00Z</updated>
+            <published>2024-07-28T10:00:00Z</published>
+            <id>/research/poli-2024.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="active methodology"
+                        label="Active Methodology" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/poli.png&#34; /&gt;
+This pilot project aims to improve the quality of undergraduate teaching 
+in the &lt;span class=&#34;caps&#34;&gt;EEK&lt;/span&gt;-597 course offered by the Mechanical Engineering Department 
+(&lt;span class=&#34;caps&#34;&gt;DEM&lt;/span&gt;) through the use of active learning methodologies in engineering 
+problems in an engaging classroom environment, where students are 
+continuously stimulated to develop industrial-level solutions.
+The course prepares future engineers for a more competitive job market
+where efficient use of computers is essential for professional
+development. Through practical techniques for developing numerical codes
+applied to solving physical problems, the future engineer will gain
+high-level knowledge for analysis, diagnosis, and decision-making in
+various practical situations encountered in the daily life of a
+professional. The resources learned in the classroom will directly serve
+for executing complex tasks in industry, where numerical analysis is&amp;nbsp;fundamental.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Simulation of Multiphase Floes with Heat and Mass Transfer with Moving Interface</title>
             <author><name>Gustavo R Anjos</name></author>

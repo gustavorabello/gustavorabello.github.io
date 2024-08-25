@@ -7,10 +7,35 @@
         <link href="/"/>
     
         
-    <updated>2024-07-07T11:43:49Z</updated>
+    <updated>2024-08-25T20:55:59Z</updated>
 
     <id>/research/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Innovative active methodologies in engineering teaching - INOVA DISCIPLINA</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/poli-2024.html"/>
+            <updated>2024-07-28T10:00:00Z</updated>
+            <published>2024-07-28T10:00:00Z</published>
+            <id>/research/poli-2024.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="active methodology"
+                        label="Active Methodology" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/poli.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;This pilot project aims to improve the quality of undergraduate teaching 
+in the &lt;span class=&#34;caps&#34;&gt;EEK&lt;/span&gt;-597 course offered by the Mechanical Engineering Department 
+(&lt;span class=&#34;caps&#34;&gt;DEM&lt;/span&gt;) through the use of active learning methodologies in engineering 
+problems in an engaging classroom environment, where students are 
+continuously stimulated to develop industrial-level&amp;nbsp;solutions.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Simulation of Multiphase Floes with Heat and Mass Transfer with Moving Interface</title>
             <author><name>Gustavo R Anjos</name></author>
