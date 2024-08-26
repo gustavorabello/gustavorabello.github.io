@@ -7,10 +7,37 @@
         <link href="/"/>
     
         
-    <updated>2024-08-25T20:55:46Z</updated>
+    <updated>2024-08-25T21:07:08Z</updated>
 
     <id>/carreer/atom.xml/</id>
 
+            <entry>
+            <title type="html">Head of the Fluid Mechanics and Aerodynamics Laboratory</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/carreer/labmfa.html"/>
+            <updated>2024-03-25T10:00:00Z</updated>
+            <published>2024-03-25T10:00:00Z</published>
+            <id>/carreer/labmfa.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="professor"
+                        label="Professor" />
+                        <category   scheme="/res.url/tags"
+                        term="coppe"
+                        label="Coppe" />
+                        <category   scheme="/res.url/tags"
+                        term="labmfa"
+                        label="Labmfa" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/carreer/coppe/labmfa.png&#34; /&gt;
+Appointed as the head of the of Fluid Mechanics and Aerodynamics
+Laboratory in March of 2024. With more than 30 years existence, Fluid
+Mechanics and Aerodynamics Laboratory (LabMFA) is one of the most
+consolidated laboratory of the Department of Mechanical Engineering
+within Coppe - Graduate School of Engineering with strong research
+activity providing scientific and technological advances in the areas of
+fluid mechanics, aerodynamics, wind energy and atmospheric&amp;nbsp;sciences.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Coordinator of International Affairs Office</title>
             <author><name>Gustavo R Anjos</name></author>
