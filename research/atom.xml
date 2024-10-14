@@ -7,10 +7,36 @@
         <link href="/"/>
     
         
-    <updated>2024-09-14T15:15:42Z</updated>
+    <updated>2024-10-14T09:00:26Z</updated>
 
     <id>/research/atom.xml/</id>
 
+            <entry>
+            <title type="html">Minerva Aerodesign</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/aerodesign-2024.html"/>
+            <updated>2024-09-05T10:00:00Z</updated>
+            <published>2024-09-05T10:00:00Z</published>
+            <id>/research/aerodesign-2024.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/faperj.png&#34; /&gt;
+Founded in 2001, Minerva Aerodesign is an academic competition team
+dedicated to participating in aerodesign competitions promoted by the
+Society of Automotive Engineers. Its mission is to deepen technical
+knowledge, develop management skills and foster innovation through the
+design and construction of small unmanned aerial vehicles for
+competitions. Throughout the year, at &lt;span class=&#34;caps&#34;&gt;SAE&lt;/span&gt; Brasil Aerodesign, the team
+develops a prototype aimed at cargo transportation.
+Through research,
+testing and simulations, an optimized model of the aircraft is obtained.
+Using studied materials and construction techniques, prototypes are
+built and taken to São José dos Campos Airport to compete with more than
+60 teams from Brazil and other&amp;nbsp;countries.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Innovative active methodologies in engineering teaching - INOVA DISCIPLINA</title>
             <author><name>Gustavo R Anjos</name></author>
@@ -45,7 +71,7 @@ professional. The resources learned in the classroom will directly serve
 for executing complex tasks in industry, where numerical analysis is&amp;nbsp;fundamental.&lt;/p&gt;            </content>
         </entry>
             <entry>
-            <title type="html">Simulation of Multiphase Floes with Heat and Mass Transfer with Moving Interface</title>
+            <title type="html">Simulation of Multiphase Flows with Heat and Mass Transfer with Moving Interface</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/research/jcne-2022.html"/>
             <updated>2022-12-31T10:00:00Z</updated>
