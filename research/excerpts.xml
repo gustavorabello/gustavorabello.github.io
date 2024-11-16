@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>
+        BASIC blog excerpts feed    </title>
+        <link href="/research/excerpts.xml" rel="self" />
+    
+        <link href="/"/>
+    
+        
+    <updated>2024-11-16T14:09:22Z</updated>
+
+    <id>/research/excerpts.xml/</id>
+
+            <entry>
+            <title type="html">Minerva Aerodesign</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/aerodesign-2024.html"/>
+            <updated>2024-09-05T10:00:00Z</updated>
+            <published>2024-09-05T10:00:00Z</published>
+            <id>/research/aerodesign-2024.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/faperj.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Founded in 2001, Minerva Aerodesign is an academic competition team
+dedicated to participating in aerodesign competitions promoted by the
+Society of Automotive Engineers. Its mission is to deepen technical
+knowledge, develop management skills and foster innovation through the
+design and construction of small unmanned aerial vehicles for
+competitions. Throughout the year, at &lt;span class=&#34;caps&#34;&gt;SAE&lt;/span&gt; Brasil Aerodesign, the team
+develops a prototype aimed at cargo&amp;nbsp;transportation.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Innovative active methodologies in engineering teaching - INOVA DISCIPLINA</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/poli-2024.html"/>
+            <updated>2024-07-28T10:00:00Z</updated>
+            <published>2024-07-28T10:00:00Z</published>
+            <id>/research/poli-2024.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="active methodology"
+                        label="Active Methodology" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/poli.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;This pilot project aims to improve the quality of undergraduate teaching 
+in the &lt;span class=&#34;caps&#34;&gt;EEK&lt;/span&gt;-597 course offered by the Mechanical Engineering Department 
+(&lt;span class=&#34;caps&#34;&gt;DEM&lt;/span&gt;) through the use of active learning methodologies in engineering 
+problems in an engaging classroom environment, where students are 
+continuously stimulated to develop industrial-level&amp;nbsp;solutions.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Simulation of Multiphase Flows with Heat and Mass Transfer with Moving Interface</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/jcne-2022.html"/>
+            <updated>2022-12-31T10:00:00Z</updated>
+            <published>2022-12-31T10:00:00Z</published>
+            <id>/research/jcne-2022.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="complex geometries"
+                        label="Complex Geometries" />
+                        <category   scheme="/res.url/tags"
+                        term="heat and mass transfer"
+                        label="Heat And Mass Transfer" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/faperj.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Numerical simulation is an important tool to solve two-phase problems
+found in many engineering problems. Therefore, a project in the thematic
+line of multiphase flow simulation, which has important applications
+in the area of petroleum, micro-reactors and biomechanics. The project’s
+emphasis is on the development of numerical simulation methods based
+on unstructured meshes, for flows that presents two or more distinct
+phases with phase&amp;nbsp;change.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">ACoolTPS - Advanced Cooling of high power microsystems using Two-Phase Flows Systems in complex geometries</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/newton-2020.html"/>
+            <updated>2020-11-20T10:00:00Z</updated>
+            <published>2020-11-20T10:00:00Z</published>
+            <id>/research/newton-2020.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="multiphase"
+                        label="Multiphase" />
+                        <category   scheme="/res.url/tags"
+                        term="cooling of electronics"
+                        label="Cooling Of Electronics" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/royalSociety.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Cooling of electronics is a challenging subject due to the fast growth
+of computer processing capacity. Cooling of datacenters is estimated to
+have an annual electricity cost of 1.4 billion dollars in the &lt;span class=&#34;caps&#34;&gt;USA&lt;/span&gt; and
+over 3 billion dollars worldwide. Currently, pure air/water cooling is
+the most widely used means for thermal regulation of datacenters, which
+represents around 45% of the total energy consumed in a datacenter.
+However, the energy efficiency of these methods is very low. Therefore,
+improvements are essential to ensure faster processors with sustainable
+energy&amp;nbsp;management.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Study of COVID-19/SARS-Cov-2 propagation between individuals and group of individuals during social contact</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/emergencial-2020.html"/>
+            <updated>2020-09-17T10:00:00Z</updated>
+            <published>2020-09-17T10:00:00Z</published>
+            <id>/research/emergencial-2020.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="multiphase"
+                        label="Multiphase" />
+                        <category   scheme="/res.url/tags"
+                        term="covid"
+                        label="Covid" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/faperj.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;This proposal aims at investigate the means of propagating of the
+&lt;span class=&#34;caps&#34;&gt;COVID&lt;/span&gt;-19/&lt;span class=&#34;caps&#34;&gt;SARS&lt;/span&gt;-CoV-2 through two complementary approaches between
+individuals and groups of individuals during social contact. A small
+scale model is proposed to investigate the behavior of salivary droplets
+between individuals who may be contaminated by orally transmitted&amp;nbsp;diseases.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Simulation of Multiphase Systems in Complex Ophthalmologic Applications</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/jcne-2019.html"/>
+            <updated>2019-10-01T10:00:00Z</updated>
+            <published>2019-10-01T10:00:00Z</published>
+            <id>/research/jcne-2019.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="ophthalmologic"
+                        label="Ophthalmologic" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/faperj.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;The numerical simulation is an important tool to solve two-phase flow
+problems found in several engineering processes, such as oil drilling,
+reservoir filling and cooling of electronic components. In medicine, it
+has been shown an efficient tool for the study of biological problems,
+such as corneal replacement, the latter of great importance for patients
+in need of&amp;nbsp;transplant.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Simulation of Multiphase Flow Systems for Ophtalmic Applications</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/universal-2018.html"/>
+            <updated>2019-01-08T11:00:00Z</updated>
+            <published>2019-01-08T11:00:00Z</published>
+            <id>/research/universal-2018.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/cnpq.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;The numerical simulation is an important tool to solve two-phase flow
+problems found in several engineering processes, such as oil drilling,
+reservoir filling and cooling of electronic components. In medicine,
+it has been shown an efficient tool for the study of biological
+problems, such as corneal replacement, the latter of great importance
+for patients in need of&amp;nbsp;transplant.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">4th Workshop on Advances in CFD and modeling of Interface Dynamics in Capillary Two-Phase Flows</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/paep-2018.html"/>
+            <updated>2019-01-08T10:00:00Z</updated>
+            <published>2019-01-08T10:00:00Z</published>
+            <id>/research/paep-2018.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/capes.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;This document presents the proposal of the Organizing Committee of the
+4th Workshop on Advances in &lt;span class=&#34;caps&#34;&gt;CFD&lt;/span&gt; and Modeling of Interface Dynamics in
+Capillary Two-Phase Flows, to be held in the city of Rio de Janeiro - &lt;span class=&#34;caps&#34;&gt;RJ&lt;/span&gt;
+in May 2019. It is a worldwide event, held in continuously since 2015
+(Lausanne - Switzerland), and the next one in Kobe - Japan in October
+2018, where the current workshop will be held in Brazil for the first
+time in&amp;nbsp;2019.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">4th Workshop on Advances in CFD and modeling of Interface Dynamics in Capillary Two-Phase Flows</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/arc-2018.html"/>
+            <updated>2019-01-07T10:00:00Z</updated>
+            <published>2019-01-07T10:00:00Z</published>
+            <id>/research/arc-2018.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/cnpq.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;This document presents the proposal of the Organizing Committee of the
+4th Workshop on Advances in &lt;span class=&#34;caps&#34;&gt;CFD&lt;/span&gt; and Modeling of Interface Dynamics in
+Capillary Two-Phase Flows, to be held in the city of Rio de Janeiro - &lt;span class=&#34;caps&#34;&gt;RJ&lt;/span&gt;
+in May 2019. It is a worldwide event, held in continuously since 2015
+(Lausanne - Switzerland), and the next one in Kobe - Japan in October
+2018, where the current workshop will be held in Brazil for the first
+time in&amp;nbsp;2019.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Smart Thermal Management of High-Power Microprocessors Using Phase-Change</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/thermasmart-2017.html"/>
+            <updated>2017-10-30T10:00:00Z</updated>
+            <published>2017-10-30T10:00:00Z</published>
+            <id>/research/thermasmart-2017.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="cooling of electronics"
+                        label="Cooling Of Electronics" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/eu.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Developments in modern high-speed microprocessors enhance communication,
+computing and electronics, thereby playing a profound role in our
+societies and industries. Sustaining long-term high speeds and reliable
+operation requires efficient heat dissipation. Phase-change based
+cooling offers a promising alternative to conventional air-cooling in
+both earth and space&amp;nbsp;environments.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Multiphase System for Cooling of Electronics</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/emergentes-2016.html"/>
+            <updated>2016-12-02T10:00:00Z</updated>
+            <published>2016-12-02T10:00:00Z</published>
+            <id>/research/emergentes-2016.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="cooling of electronics"
+                        label="Cooling Of Electronics" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/faperj.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;The numerical simulation is an important tool to solve two-phase flow
+problems found in several physical processes, such as oil drilling,
+reservoir filling, hemodynamic and cooling of electronic components, the
+latter of great importance for describing problems related to controling
+flow and temperature conditions for new generation of stack&amp;nbsp;processors.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">High Performance System for Multiphase Flow Simulation in Complex Geometry</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/jcne-2016.html"/>
+            <updated>2016-12-01T10:00:00Z</updated>
+            <published>2016-12-01T10:00:00Z</published>
+            <id>/research/jcne-2016.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="cooling of electronics"
+                        label="Cooling Of Electronics" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/faperj.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;The numerical simulation is a essential tool to troubleshoot multiphase
+flows found in many physico-chemical processes, such as the oil and gas
+extraction and processing, filling of hydroelectric reservoirs,
+drug-eluting transport in biological systems and cooling of high
+technology electronic components, all of them of utmost importance for
+achieving technology and development to the State of Rio de&amp;nbsp;Janeiro.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Reduce Operating and Environmental Costs of Thermal Power Generation System (INT-FAPERJ)</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/int-2016.html"/>
+            <updated>2016-08-29T10:00:00Z</updated>
+            <published>2016-08-29T10:00:00Z</published>
+            <id>/research/int-2016.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="thermal power"
+                        label="Thermal Power" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/faperj.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;A third of the capacity of power generation in Rio de Janeiro and Brazil
+comes from power plants. According to the Ministry of Mines and Energy,
+the thermal power generation using coal corresponds to twenty-two plants
+with an installed capacity of about 3.&lt;span class=&#34;caps&#34;&gt;600MW&lt;/span&gt;. Considering the low quality
+of Brazilian coal and low calorific value, large coal volume is required
+to obtain adequate temperature conditions in thermoelectric generation&amp;nbsp;systems.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Multiphase Flows for Cooling of Electronics (INST-FAPERJ)</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/inst-2015.html"/>
+            <updated>2015-11-26T10:00:00Z</updated>
+            <published>2015-11-26T10:00:00Z</published>
+            <id>/research/inst-2015.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="cooling of electronics"
+                        label="Cooling Of Electronics" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/faperj.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Multiphase flow are characterized by the presence of an interface
+separating two substances which may or may not be in the same phase. The
+presence of such physical interface increases the complexity of the flow
+and as a direct consequence, much of the multiphase problems encountered
+with difficult engineering&amp;nbsp;solution.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Simulation of Biological Systems using Dynamic Meshes (APQ1-FAPERJ)</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/apq1-2015.html"/>
+            <updated>2015-10-29T10:00:00Z</updated>
+            <published>2015-10-29T10:00:00Z</published>
+            <id>/research/apq1-2015.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="biological system"
+                        label="Biological System" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/faperj.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;The numerical simulation is an important tool to solve biphasic problems
+encountered in various physical processes, such as oil drilling,
+reservoir filling, cooling of electronic components and substances
+transport processes in biological systems, the latter being of great
+importance for the description of problems related to coronary artery
+disease (&lt;span class=&#34;caps&#34;&gt;CAD&lt;/span&gt;).&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Thermal Management of High Power Microsystems Using Multiphase Flows</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/thermapower-2015.html"/>
+            <updated>2015-04-17T10:00:00Z</updated>
+            <published>2015-04-17T10:00:00Z</published>
+            <id>/research/thermapower-2015.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="cooling of electronics"
+                        label="Cooling Of Electronics" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/eu.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Increased functionality and power consumption of microdevices and high
+power electronics has come at a cost: power dissipation and heating.
+This heat must be dissipated to ensure reliable operation of such
+devices in both earthly and reduced gravity environments (eg space
+industry), without adversely affecting their performance. With a highly
+competitive world market, worth tens of billions of Euros, it is
+imperative for &lt;span class=&#34;caps&#34;&gt;EU&lt;/span&gt; to gain a competitive position in this field
+(currently led by &lt;span class=&#34;caps&#34;&gt;USA&lt;/span&gt; and&amp;nbsp;China).&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">French Chair at the State University of Rio de Janeiro</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/catedras-2015.html"/>
+            <updated>2014-11-17T10:00:00Z</updated>
+            <published>2014-11-17T10:00:00Z</published>
+            <id>/research/catedras-2015.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element method"
+                        label="Finite Element Method" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/professor/catedras.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;The modelling of rising bubbles in tubes or pipes is an important
+challenge, specifically in complex geometries, such pipes of non-uniform
+diameter. Such phenomena can be observed in oil wells or food
+processing. The objective of this study is to quantify experimentally
+and simulate numerically the rising of fluid in another immiscible fluid
+in a vertical conical&amp;nbsp;pipe.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Post-Doc (UERJ)</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/postdoc2.html"/>
+            <updated>2013-11-02T10:00:00Z</updated>
+            <published>2013-11-02T10:00:00Z</published>
+            <id>/research/postdoc2.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite element"
+                        label="Finite Element" />
+                        <category   scheme="/res.url/tags"
+                        term="surface tension"
+                        label="Surface Tension" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;sin&#34; src=&#34;/media/images/research/postdoc/gesar4.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;The topic of the post-doc is numerical two-phase flows with emphasis in
+micro-macro two-phase flows in capillaries with different geometries
+found in many applications within the oil and gas field. The work is
+being performed in Gesar Group - &lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;. (&lt;span class=&#34;caps&#34;&gt;GESAR&lt;/span&gt;) at the State University
+of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;). More info will be updated&amp;nbsp;soon!&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Post-Doc (MIT)</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/postdoc1.html"/>
+            <updated>2012-08-01T10:00:00Z</updated>
+            <published>2012-08-01T10:00:00Z</published>
+            <id>/research/postdoc1.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="finite volume"
+                        label="Finite Volume" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="turbulence"
+                        label="Turbulence" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="nuclear"
+                        label="Nuclear" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;constr&#34; src=&#34;/media/images/research/postdoc/mit-logo.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;The topic of the post-doc is boiling and condensation in convective flow
+with multiple bubbles found in nuclear reactors. The work was performed
+in the Nuclear Science and Engineering (&lt;span class=&#34;caps&#34;&gt;NSE&lt;/span&gt;) at the Massachussetts
+Institute of Technology (&lt;span class=&#34;caps&#34;&gt;MIT&lt;/span&gt;).&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">Ph.D.</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/phd.html"/>
+            <updated>2012-07-30T10:00:00Z</updated>
+            <published>2012-07-30T10:00:00Z</published>
+            <id>/research/phd.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="bubble"
+                        label="Bubble" />
+                        <category   scheme="/res.url/tags"
+                        term="surface tension"
+                        label="Surface Tension" />
+                        <category   scheme="/res.url/tags"
+                        term="curvature"
+                        label="Curvature" />
+                        <category   scheme="/res.url/tags"
+                        term="two-phase"
+                        label="Two-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="drop"
+                        label="Drop" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;vortex&#34; src=&#34;/media/images/research/phd/singleVortex.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;The topic of the doctorate is two-phase flow and heat transfer in
+microchannels. One of the major aspects of this thesis will be to extend
+the single phase code (developed during the masters studies) and
+implement two-phase and heat transfer bringing the surface tension
+effects into the code for elongated bubble flows, annular flows and
+bubbly flows (for both evaporating flows and perhaps also for some
+condensing&amp;nbsp;flows).&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">GESAR (post-M.Sc.)</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/postmsc.html"/>
+            <updated>2007-04-01T10:00:00Z</updated>
+            <published>2007-04-01T10:00:00Z</published>
+            <id>/research/postmsc.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="laminar"
+                        label="Laminar" />
+                        <category   scheme="/res.url/tags"
+                        term="reservoir"
+                        label="Reservoir" />
+                        <category   scheme="/res.url/tags"
+                        term="single phase"
+                        label="Single Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;res1&#34; src=&#34;/media/images/research/postmsc/simU225.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;From 2007 to mid-2008 I worked as a young researcher in the Group for
+Study and Simulations of Reservoir Filling (&lt;span class=&#34;caps&#34;&gt;GESAR&lt;/span&gt;) . This one-year
+experience brought me the necessary skills for large code development,
+since the multi-disciplinary project required experience in many
+different areas such as engineering, biology, chemistry and mathematics.
+The project consisted in numerical simulation of hydropower reservoirs&amp;nbsp;filling.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">M.Sc.</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/msc.html"/>
+            <updated>2005-03-20T10:00:00Z</updated>
+            <published>2005-03-20T10:00:00Z</published>
+            <id>/research/msc.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="numerical"
+                        label="Numerical" />
+                        <category   scheme="/res.url/tags"
+                        term="single phase"
+                        label="Single Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="transition"
+                        label="Transition" />
+                        <category   scheme="/res.url/tags"
+                        term="finite element"
+                        label="Finite Element" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;disk&#34; src=&#34;/media/images/research/msc/disk.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Followed by the end of my bachelor&amp;#8217;s project, I started my masters
+studies at the Federal University of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UFRJ&lt;/span&gt;) in the
+Metallurgical and Materials Engineering Department (&lt;span class=&#34;caps&#34;&gt;COPPE&lt;/span&gt;). The period
+of two years is required to receive the Master&amp;#8217;s degree and during this
+period we must follow some courses and write a dissertation based on a
+specific&amp;nbsp;theme.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">B.Eng.</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/research/bsc.html"/>
+            <updated>2000-01-03T10:00:00Z</updated>
+            <published>2000-01-03T10:00:00Z</published>
+            <id>/research/bsc.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="single phase"
+                        label="Single Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="experimental"
+                        label="Experimental" />
+                        <category   scheme="/res.url/tags"
+                        term="wind tunnel"
+                        label="Wind Tunnel" />
+                        <category   scheme="/res.url/tags"
+                        term="turbulence"
+                        label="Turbulence" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;avelino&#34; src=&#34;/media/images/research/bsc/avelino.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;I received my bachelor diploma (B.Eng.) in mechanical engineering at the
+State University of Rio de Janeiro (&lt;span class=&#34;caps&#34;&gt;UERJ&lt;/span&gt;) in 2005. In early 2003, I
+started to be involved in research by participating in monitoring and
+undergraduate research. During this period I focoused my studies on
+fluid dynamics and finally presented my bachelor&amp;nbsp;project&lt;/p&gt;            </content>
+        </entry>
+    </feed>
