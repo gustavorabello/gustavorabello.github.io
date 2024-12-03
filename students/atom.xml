@@ -7,10 +7,21 @@
         <link href="/"/>
     
         
-    <updated>2024-11-30T14:00:59Z</updated>
+    <updated>2024-12-03T15:56:06Z</updated>
 
     <id>/students/atom.xml/</id>
 
+            <entry>
+            <title type="html">Numerical Analysis of Curvature in Two-Phase Flows</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/ic/brenoMota.html"/>
+            <updated>2024-10-01T09:00:00Z</updated>
+            <published>2024-10-01T09:00:00Z</published>
+            <id>/students/ic/brenoMota.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
             <entry>
             <title type="html">Finite Element Simulation of Three-Dimensional Two-Phase Flows in Complex Geometries</title>
             <author><name>Gustavo R Anjos</name></author>
