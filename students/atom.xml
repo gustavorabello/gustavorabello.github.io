@@ -7,10 +7,21 @@
         <link href="/"/>
     
         
-    <updated>2025-03-30T22:19:09Z</updated>
+    <updated>2025-04-26T19:41:58Z</updated>
 
     <id>/students/atom.xml/</id>
 
+            <entry>
+            <title type="html">Analytical and Numerical Method for non-Linear Problems in Convection and Radiation Heat Transfer</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/postdoc/eduardoDias.html"/>
+            <updated>2025-04-01T09:00:00Z</updated>
+            <published>2025-04-01T09:00:00Z</published>
+            <id>/students/postdoc/eduardoDias.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
             <entry>
             <title type="html">What if Bridge Traffic Were a Fluid Hydrodynamic Modeling of a Road Using the Finite Difference Method</title>
             <author><name>Gustavo R Anjos</name></author>
