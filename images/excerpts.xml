@@ -7,10 +7,36 @@
         <link href="/"/>
     
         
-    <updated>2025-04-26T19:41:46Z</updated>
+    <updated>2025-05-18T17:25:19Z</updated>
 
     <id>/images/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Pressure field of flow past cylinder</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/images/pressureFSI.html"/>
+            <updated>2025-05-18T10:00:00Z</updated>
+            <published>2025-05-18T10:00:00Z</published>
+            <id>/images/pressureFSI.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="fsi"
+                        label="Fsi" />
+                        <category   scheme="/res.url/tags"
+                        term="2d"
+                        label="2d" />
+                        <category   scheme="/res.url/tags"
+                        term="single-phase"
+                        label="Single-Phase" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;disk&#34; src=&#34;/media/images/pressureFSI.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;This image depicts the pressure field around a circular obstacle in a
+single-phase flow simulation involving fluid-structure interaction
+(&lt;span class=&#34;caps&#34;&gt;FSI&lt;/span&gt;). The central gray circle represents a solid structure immersed in
+the fluid, where a high-pressure region forms upstream (red/yellow) due
+to flow stagnation, and a low-pressure wake develops downstream (blue),
+indicating flow&amp;nbsp;separation.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Sinusoidal Channel Comparison</title>
             <author><name>Gustavo R Anjos</name></author>
