@@ -1,61 +1,142 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1504.81">
-  <style type="text/css">
-      p.head1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 45.0px Times}
-      p.head2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #424242; background-color: #ffffff}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #ff7700; background-color: #ffffff}
-    span.s1 {font-kerning: none; color: #ff7700}
-    span.s2 {font-kerning: none}
-    span.s3 {font-kerning: none; color: #424242}
+  <meta charset="UTF-8">
+  <title>Lindo Balão Azul – (Guilherme Arantes)</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      background: #f8f8f8;
+      color: #222;
+      margin: 0;
+      font-family: 'Merriweather', Georgia, serif;
+    }
+    .container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #ccc;
+      max-width: 950px;
+      margin: 48px auto 24px auto;
+      padding: 36px 32px 28px 32px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 1.5px solid #e7e7e7;
+      margin-bottom: 34px;
+      padding-bottom: 10px;
+    }
+    .title {
+      font-size: 2.0em;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin: 0 0 7px 0;
+      line-height: 1.07;
+    }
+    .author-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .author-link:hover {
+      color: #f98600;
+      text-decoration: underline;
+    }
+    .columns {
+      display: flex;
+      gap: 28px;
+      margin-top: 15px;
+    }
+    .col {
+      width: 50%;
+    }
+    .singlecol {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .singlecol pre {
+      max-width: 600px;
+      margin: 0 auto 0 auto;
+    }
+    pre {
+      font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
+      font-size: 1.01em;
+      background: #f1f5fb;
+      padding: 18px 14px 17px 20px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      line-height: 1.75;
+      white-space: pre-wrap;
+      color: #20253a;
+    }
+    .chord {
+      color: #fc6108;
+      font-weight: bold;
+    }
+    @media (max-width: 900px) {
+      .container { padding: 13px 2vw 12px 2vw;}
+      .columns { flex-direction: column; gap: 0; }
+      .col { width: 100%; }
+      .singlecol pre { max-width: 98vw; }
+    }
+    @media (max-width: 600px) {
+      .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
+      .title { font-size: 1.12em;}
+      .singlecol pre { max-width: 98vw; }
+    }
   </style>
 </head>
 <body>
-    <div>
-        <center>
-            <p class="head1">Lindo Bal&atilde;o Azul</p>
-            <p class="head2">(Guilherme Arantes)</p>
-            <p class="p2"><br></p>
-            <p class="p2"><br></p>
-        </center>
+  <div class="container">
+    <div class="header">
+      <div class="title">Lindo Balão Azul</div>
+      <div class="author">
+        <a class="author-link" href="https://www.cifraclub.com.br/guilherme-arantes/" target="_blank" rel="noopener">(Guilherme Arantes)</a>
+      </div>
     </div>
-<p class="p1"><span class="s1"><b>F#m7</b></span><span class="s2"><b> <span class="Apple-converted-space">              </span></b></span><span class="s1"><b>F#m9/F</b></span><span class="s2"><b> <span class="Apple-converted-space">  </span></b></span><span class="s1"><b>F#m/E</b></span></p>
-<p class="p1"><span class="s2">Eu vivo sempre no mundo da lua</span></p>
-<p class="p2"><span class="s2"><b>F#m/D#</b></span><span class="s3"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Bm7</b></span></p>
-<p class="p1"><span class="s2">Porque sou um cientista</span></p>
-<p class="p1"><span class="s2"><b><span class="Apple-converted-space">      </span></b></span><span class="s1"><b>G#m5-/7</b></span><span class="s2"><b> <span class="Apple-converted-space">              </span></b></span><span class="s1"><b>C#4/7</b></span><span class="s2"><b> </b></span><span class="s1"><b>C#7/5+</b></span><span class="s2"><b> </b></span><span class="s1"><b>C#7</b></span></p>
-<p class="p1"><span class="s2">O meu papo &eacute; futurista e lun&aacute;tico</span></p>
-<p class="p1"><span class="s1"><b>F#m</b></span><span class="s2"><b><span class="Apple-converted-space">                </span></b></span><span class="s1"><b>A</b></span></p>
-<p class="p1"><span class="s2">Eu vivo sempre no mundo da lua</span></p>
-<p class="p2"><span class="s3"><b><span class="Apple-converted-space"> </span></b></span><span class="s2"><b>C#m</b></span><span class="s3"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Bm7</b></span></p>
-<p class="p1"><span class="s2">Tenho alma de artista</span></p>
-<p class="p1"><span class="s2"><b><span class="Apple-converted-space">        </span></b></span><span class="s1"><b>D</b></span><span class="s2"><b><span class="Apple-converted-space">                  </span></b></span><span class="s1"><b>C#4/7</b></span><span class="s2"><b> </b></span><span class="s1"><b>C#7/5+</b></span><span class="s2"><b> </b></span><span class="s1"><b>C#7</b></span></p>
-<p class="p1"><span class="s2">Sou um g&ecirc;nio sonhador e rom&acirc;ntico</span></p>
-<p class="p1"><span class="s1"><b>F#m</b></span><span class="s2"><b><span class="Apple-converted-space">                </span></b></span><span class="s1"><b>F#m9/F</b></span><span class="s2"><b><span class="Apple-converted-space">      </span></b></span><span class="s1"><b>F#m/E</b></span></p>
-<p class="p1"><span class="s2">Eu vivo sempre no mundo da lua</span></p>
-<p class="p2"><span class="s2"><b>F#m/D#</b></span><span class="s3"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Bm7</b></span></p>
-<p class="p1"><span class="s2">Porque sou aventureiro</span></p>
-<p class="p1"><span class="s2"><b><span class="Apple-converted-space">        </span></b></span><span class="s1"><b>G#m5-/7</b></span><span class="s2"><b> <span class="Apple-converted-space">            </span></b></span><span class="s1"><b>C#4/7</b></span><span class="s2"><b><span class="Apple-converted-space">      </span></b></span><span class="s1"><b>C#7/5+</b></span><span class="s2"><b> </b></span><span class="s1"><b>C#7</b></span></p>
-<p class="p1"><span class="s2">Desde o meu primeiro passo pro infinito</span></p>
-<p class="p1"><span class="s2"><b><span class="Apple-converted-space"> </span></b></span><span class="s1"><b>F#m</b></span><span class="s2"><b> <span class="Apple-converted-space">              </span></b></span><span class="s1"><b>A</b></span></p>
-<p class="p1"><span class="s2">Eu vivo sempre no mundo da lua</span></p>
-<p class="p2"><span class="s3"><b><span class="Apple-converted-space"> </span></b></span><span class="s2"><b>C#m</b></span><span class="s3"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>Bm7</b></span></p>
-<p class="p1"><span class="s2">Porque sou inteligente</span></p>
-<p class="p1"><span class="s2"><b><span class="Apple-converted-space">   </span></b></span><span class="s1"><b>Bm/A</b></span><span class="s2"><b><span class="Apple-converted-space">                </span></b></span><span class="s1"><b>E4/7</b></span><span class="s2"><b> <span class="Apple-converted-space">                      </span></b></span><span class="s1"><b>E7</b></span></p>
-<p class="p1"><span class="s2">Se voc&ecirc; quer vir com a gente, venha que ser&aacute; um barato</span></p>
-<p class="p1"><span class="s2"><b><span class="Apple-converted-space"> </span></b></span><span class="s1"><b>A</b></span><span class="s2"><b> <span class="Apple-converted-space">                  </span></b></span><span class="s1"><b>D/A</b></span></p>
-<p class="p1"><span class="s2">Pegar carona nessa cauda de cometa</span></p>
-<p class="p1"><span class="s2"><b><span class="Apple-converted-space"> </span></b></span><span class="s1"><b>E7</b></span><span class="s2"><b> <span class="Apple-converted-space">                </span></b></span><span class="s1"><b>C#m</b></span><span class="s2"><b> <span class="Apple-converted-space">          </span></b></span><span class="s1"><b>F#m</b></span></p>
-<p class="p1"><span class="s2">Ver a Via L&aacute;ctea, estrada t&atilde;o bonita</span></p>
-<p class="p1"><span class="s2"><b><span class="Apple-converted-space">                        </span></b></span><span class="s1"><b>C#m7/G#</b></span></p>
-<p class="p1"><span class="s2">Brincar de esconde-esconde numa nebulosa</span></p>
-<p class="p1"><span class="s2"><b><span class="Apple-converted-space"> </span></b></span><span class="s1"><b>A6</b></span><span class="s2"><b><span class="Apple-converted-space">                        </span></b></span><span class="s1"><b>Bm7</b></span><span class="s2"><b> <span class="Apple-converted-space">  </span></b></span><span class="s1"><b>E7</b></span></p>
-<p class="p1"><span class="s2">Voltar pra casa no nosso lindo bal&atilde;o azul</span></p>
+    
+    <div class="singlecol">
+      <pre>
+<br/>
+<br/>
+<span class="chord">F#m7</span>               <span class="chord">F#m9/F</span>   <span class="chord">F#m/E</span>
+Eu vivo sempre no mundo da lua
+<span class="chord">F#m/D#</span>  <span class="chord">Bm7</span>
+Porque sou um cientista
+      <span class="chord">G#m5</span>-/7               <span class="chord">C#4</span>/7 <span class="chord">C#7</span>/5+ <span class="chord">C#7</span>
+O meu papo é futurista e lunático
+<span class="chord">F#m</span>                <span class="chord">A</span>
+Eu vivo sempre no mundo da lua
+ <span class="chord">C#m</span>   <span class="chord">Bm7</span>
+Tenho alma de artista
+        <span class="chord">D</span>                  <span class="chord">C#4</span>/7 <span class="chord">C#7</span>/5+ <span class="chord">C#7</span>
+Sou um gênio sonhador e romântico
+<span class="chord">F#m</span>                <span class="chord">F#m9/F</span>      <span class="chord">F#m/E</span>
+Eu vivo sempre no mundo da lua
+<span class="chord">F#m/D#</span>  <span class="chord">Bm7</span>
+Porque sou aventureiro
+        <span class="chord">G#m5</span>-/7             <span class="chord">C#4</span>/7      <span class="chord">C#7</span>/5+ <span class="chord">C#7</span>
+Desde o meu primeiro passo pro infinito
+ <span class="chord">F#m</span>               <span class="chord">A</span>
+Eu vivo sempre no mundo da lua
+ <span class="chord">C#m</span>    <span class="chord">Bm7</span>
+Porque sou inteligente
+   <span class="chord">Bm/A</span>                <span class="chord">E4</span>/7                       <span class="chord">E7</span>
+Se você quer vir com a gente, venha que será um barato
+ <span class="chord">A</span>                   <span class="chord">D/A</span>
+Pegar carona nessa cauda de cometa
+ <span class="chord">E7</span>                 <span class="chord">C#m</span>           <span class="chord">F#m</span>
+Ver a Via Láctea, estrada tão bonita
+                        <span class="chord">C#m7/G#</span>
+Brincar de esconde-esconde numa nebulosa
+ <span class="chord">A6</span>                        <span class="chord">Bm7</span>   <span class="chord">E7</span>
+Voltar pra casa no nosso lindo balão azul
+      </pre>
+    </div>
+    
+  </div>
 </body>
 </html>

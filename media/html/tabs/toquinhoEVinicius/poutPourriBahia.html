@@ -1,217 +1,280 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1504.82">
-  <style type="text/css">
-       p.head1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 45.0px Times}
-	       p.head2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #ff9300; -webkit-text-stroke: #666666; background-color: #ffffff}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #666666; -webkit-text-stroke: #666666; background-color: #ffffff}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #ff9300; -webkit-text-stroke: #666666}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #ff9300}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #666666; -webkit-text-stroke: #666666; background-color: #ffffff; min-height: 17.0px}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #ff9300; background-color: #ffffff}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #666666; background-color: #ffffff}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #ff9300; -webkit-text-stroke: #424242}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #424242; -webkit-text-stroke: #424242}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #424242; -webkit-text-stroke: #424242; min-height: 17.0px}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #424242}
-    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #ff9300; -webkit-text-stroke: #ff7700}
-    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Menlo; -webkit-text-stroke: #000000; min-height: 17.0px}
-    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #ff9300; -webkit-text-stroke: #c96e3a}
-    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000}
-    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #666666; background-color: #ffffff; min-height: 17.0px}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; background-color: #ffffff}
-    span.s3 {font-kerning: none; -webkit-text-stroke: 0px #ff7700}
-    span.s4 {font-kerning: none; -webkit-text-stroke: 0px #424242}
+  <meta charset="UTF-8">
+  <title>Pout-Pourri No. 1 – A Benção Bahia, Tarde em Itapoã, Tatamirô,</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      background: #f8f8f8;
+      color: #222;
+      margin: 0;
+      font-family: 'Merriweather', Georgia, serif;
+    }
+    .container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #ccc;
+      max-width: 950px;
+      margin: 48px auto 24px auto;
+      padding: 36px 32px 28px 32px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 1.5px solid #e7e7e7;
+      margin-bottom: 34px;
+      padding-bottom: 10px;
+    }
+    .title {
+      font-size: 2.0em;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin: 0 0 7px 0;
+      line-height: 1.07;
+    }
+    .author-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .author-link:hover {
+      color: #f98600;
+      text-decoration: underline;
+    }
+    .columns {
+      display: flex;
+      gap: 28px;
+      margin-top: 15px;
+    }
+    .col {
+      width: 50%;
+    }
+    .singlecol {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .singlecol pre {
+      max-width: 600px;
+      margin: 0 auto 0 auto;
+    }
+    pre {
+      font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
+      font-size: 1.01em;
+      background: #f1f5fb;
+      padding: 18px 14px 17px 20px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      line-height: 1.75;
+      white-space: pre-wrap;
+      color: #20253a;
+    }
+    .chord {
+      color: #fc6108;
+      font-weight: bold;
+    }
+    @media (max-width: 900px) {
+      .container { padding: 13px 2vw 12px 2vw;}
+      .columns { flex-direction: column; gap: 0; }
+      .col { width: 100%; }
+      .singlecol pre { max-width: 98vw; }
+    }
+    @media (max-width: 600px) {
+      .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
+      .title { font-size: 1.12em;}
+      .singlecol pre { max-width: 98vw; }
+    }
   </style>
 </head>
 <body>
- <div>
-  <center>
-   <p class="head1">Pout-Pourri No. 1</p>
-   <p class="head2">A Ben&ccedil;&atilde;o Bahia, Tarde em Itapo&atilde;, Tatamir&ocirc;,</p>
-   <p class="head2">Meu Pai Oxal&aacute;, Canto de Oxum e Maria Vai com as Outras.</p>
-   <p class="head2">(Toquinho & Vinicius)</p>
-   <p class="p2"><br></p>
-   <p class="p2"><br></p>
-  </center>
- </div>
-<div style="float: left; width: 50%;">
-<p class="p1"><span class="s1"><b>B7<span class="Apple-converted-space">  </span>E7 A D7</b></span></p>
-<p class="p2"><span class="s1">Olor&ocirc;, Bahia</span></p>
-<p class="p3"><span class="s2"><b><span class="Apple-converted-space">   </span>G7M <span class="Apple-converted-space">              </span>A7<span class="Apple-converted-space">          </span>D7M</b></span></p>
-<p class="p2"><span class="s1">N&oacute;s viemos pedir sua b&ecirc;n&ccedil;&atilde;o, sarav&aacute;! </span></p>
-<p class="p4"><span class="s2"><b><span class="Apple-converted-space">  </span>B7 E7<span class="Apple-converted-space">      </span>A D7</b></span></p>
-<p class="p2"><span class="s1">Hepa h&ecirc;, meu guia </span></p>
-<p class="p4"><span class="s2"><b><span class="Apple-converted-space">   </span>G7M<span class="Apple-converted-space">                </span>A7<span class="Apple-converted-space">            </span>D7M<span class="Apple-converted-space"> </span></b></span></p>
-<p class="p2"><span class="s1">N&oacute;s viemos dormir no colinho de lemanj&aacute;! </span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p6"><span class="s1"><b>B7<span class="Apple-converted-space">  </span>E7<span class="Apple-converted-space">    </span>A D7</b></span></p>
-<p class="p7"><span class="s1">Olor&ocirc;, Bahia</span></p>
-<p class="p4"><span class="s2"><b><span class="Apple-converted-space">    </span>G7M<span class="Apple-converted-space">              </span>A7 <span class="Apple-converted-space">          </span>D7M</b></span></p>
-<p class="p7"><span class="s1">N&oacute;s viemos pedir sua b&ecirc;n&ccedil;&atilde;o, sarav&aacute;! </span></p>
-<p class="p4"><span class="s2"><b><span class="Apple-converted-space">  </span>B<span class="Apple-converted-space">  </span>E7<span class="Apple-converted-space">      </span>A D7</b></span></p>
-<p class="p7"><span class="s1">Hepa h&ecirc;, meu guia </span></p>
-<p class="p4"><span class="s2"><b><span class="Apple-converted-space">    </span>G7M <span class="Apple-converted-space">              </span>A7<span class="Apple-converted-space">            </span>D7/9 <span class="Apple-converted-space">    </span>D7</b></span></p>
-<p class="p7"><span class="s1">N&oacute;s viemos dormir no colinho de lemanj&aacute;! </span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p8"><span class="s3"><b>Gm7</b></span><span class="s1"><b> <span class="Apple-converted-space">              </span></b></span><span class="s3"><b>C7/9</b></span></p>
-<p class="p9"><span class="s1">Um velho cal&ccedil;&atilde;o de banho</span></p>
-<p class="p8"><span class="s3"><b>Gm7</b></span><span class="s1"><b><span class="Apple-converted-space">  </span>Gm7/F <span class="Apple-converted-space">        </span></b></span><span class="s3"><b>Em7(b5)</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s3"><b>A7(b13)</b></span></p>
-<p class="p9"><span class="s1">o dia pr&aacute; vadiar</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">   </span></b></span><span class="s3"><b>Dm7</b></span><span class="s1"><b><span class="Apple-converted-space">                  </span></b></span><span class="s3"><b>G7(13)</b></span></p>
-<p class="p9"><span class="s1">um mar que n&atilde;o tem tamanho</span></p>
-<p class="p8"><span class="s3"><b>Cm7</b></span><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s3"><b>Am7(b5)</b></span><span class="s1"><b> </b></span><span class="s3"><b>D7(b9)</b></span></p>
-<p class="p9"><span class="s1">e um arco-&iacute;ris no ar.</span></p>
-<p class="p8"><span class="s3"><b>Gm7</b></span><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s3"><b>C7/9</b></span></p>
-<p class="p9"><span class="s1">Depois na pra&ccedil;a Caymmi</span></p>
-<p class="p8"><span class="s3"><b>Gm7</b></span><span class="s1"><b><span class="Apple-converted-space">  </span>Gm7/F<span class="Apple-converted-space">        </span></b></span><span class="s3"><b>Em7(b5)</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s3"><b>A7(b13)</b></span></p>
-<p class="p9"><span class="s1">sentir pregui&ccedil;a no corpo</span></p>
-<p class="p8"><span class="s3"><b>Dm7</b></span><span class="s1"><b> <span class="Apple-converted-space">                </span></b></span><span class="s3"><b>G7(13)</b></span></p>
-<p class="p9"><span class="s1">e numa esteira de vime</span></p>
-<p class="p8"><span class="s3"><b>Cm7</b></span><span class="s1"><b> <span class="Apple-converted-space">                </span></b></span><span class="s3"><b>Am7(b5)</b></span><span class="s1"><b> </b></span><span class="s3"><b>D7(b9)</b></span></p>
-<p class="p9"><span class="s1">beber uma &aacute;gua<span class="Apple-converted-space">  </span>de c&ocirc;co.</span></p>
-<p class="p10"><span class="s1"></span><br></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">   </span></b></span><span class="s3"><b>G6</b></span><span class="s1"><b><span class="Apple-converted-space">                    </span></b></span><span class="s3"><b>Am7</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s3"><b>Bm7</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s3"><b>Am7</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s3"><b>Bb7M</b></span></p>
-<p class="p9"><span class="s1">&Eacute; bom... passar uma tarde em Itapu&atilde; ao sol que arde em Itapu&atilde;</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">           </span></b></span><span class="s3"><b>Eb7/9</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s3"><b>Am7</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s3"><b>D7/9</b></span><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s3"><b>G6</b></span></p>
-<p class="p9"><span class="s1">Ouvindo o mar de Itapu&atilde;, falar de amor em Itapu&atilde;</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">             </span></b></span><span class="s3"><b>Am7</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s3"><b>Bm7</b></span><span class="s1"><b><span class="Apple-converted-space">            </span></b></span><span class="s3"><b>Am7</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s3"><b>Bb7M</b></span></p>
-<p class="p9"><span class="s1">passar uma tarde em Itapu&atilde;, ao sol que arde em Itapu&atilde;</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s3"><b>Eb7/9</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s3"><b>Am7</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s3"><b>D7/9</b></span></p>
-<p class="p9"><span class="s1">Ouvindo o mar de Itapu&atilde;, falar de amor em Itapu&atilde;</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space"> </span></b></span><span class="s3"><b>G</b></span><span class="s1"><b> <span class="Apple-converted-space">                </span></b></span><span class="s3"><b>Em7 <span class="Apple-converted-space">   </span></b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s3"><b>Am7</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s3"><b>D7</b></span><span class="s1"><b> <span class="Apple-converted-space">                  </span></b></span><span class="s3"><b>G</b></span></p>
-<p class="p9"><span class="s1">Apanha folha por folha Tatamir&ocirc;...apanha maracan&atilde; Tatamir&ocirc;</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">       </span></b></span><span class="s3"><b>G/B</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s3"><b>Em7</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s3"><b>Am7</b></span><span class="s1"><b> </b></span><span class="s3"><b>D7</b></span><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s3"><b>G</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s3"><b>D7/A</b></span><span class="s1"><b><span class="Apple-converted-space"> </span></b></span></p>
-<p class="p9"><span class="s1">Eu sou filha de Oxal&aacute; Tatamir&ocirc;...menininha me apanhou Tatamir&ocirc;</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space"> </span></b></span><span class="s3"><b>G</b></span><span class="s1"><b> <span class="Apple-converted-space">                </span></b></span><span class="s3"><b>Em7</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s3"><b>Am7</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s3"><b>D7</b></span><span class="s1"><b> <span class="Apple-converted-space">                  </span></b></span><span class="s3"><b>G</b></span></p>
-<p class="p9"><span class="s1">Apanha folha por folha Tatamir&ocirc;...apanha maracan&atilde; Tatamir&ocirc;</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">       </span></b></span><span class="s3"><b>G/B</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s3"><b>Em7</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s3"><b>Am7</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s3"><b>D7</b></span><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s3"><b>G</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s3"><b>D7/A</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s3"><b>G</b></span></p>
-<p class="p9"><span class="s1">Eu sou filha de Ossanha Tatamir&ocirc;...menininha me aben&ccedil;oou Tatamir&ocirc;</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><b>D<span class="Apple-converted-space">        </span>C <span class="Apple-converted-space">      </span>B7<span class="Apple-converted-space">  </span>Am</b></span></p>
-<p class="p11"><span class="s1">ooohhhh ooohhhh ooohhhh<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><b>Am<span class="Apple-converted-space">  </span>E7<span class="Apple-converted-space">  </span>Am<span class="Apple-converted-space">  </span>E7</b></span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p8"><span class="s3"><b>Am</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s3"><b>Bm7(b5)</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s3"><b>E7</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s3"><b>Bm7(b5)</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s3"><b>E7</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s3"><b>Amadd9</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s3"><b>Amadd9</b></span><span class="s1"><b>/G<span class="Apple-converted-space">   </span></b></span></p>
-<p class="p9"><span class="s1">Vem<span class="Apple-converted-space">  </span>das<span class="Apple-converted-space">  </span>&aacute;guas<span class="Apple-converted-space">          </span>de <span class="Apple-converted-space">      </span>O-<span class="Apple-converted-space">    </span>xal&aacute;<span class="Apple-converted-space"> </span></span></p>
-<p class="p12"><span class="s1"><b>F#m7(b5)</b></span><span class="s4"><b><span class="Apple-converted-space">    </span></b></span><span class="s1"><b>B7</b></span><span class="s4"><b><span class="Apple-converted-space">    </span></b></span><span class="s1"><b>Emadd9</b></span><span class="s4"><b> <span class="Apple-converted-space">    </span></b></span><span class="s1"><b>F#m7(b5)</b></span><span class="s4"><b> <span class="Apple-converted-space">  </span></b></span><span class="s1"><b>B7</b></span><span class="s4"><b><span class="Apple-converted-space">      </span></b></span><span class="s1"><b>E7</b></span></p>
-<p class="p9"><span class="s1">es -<span class="Apple-converted-space">        </span>sa<span class="Apple-converted-space">    </span>m&aacute;goa<span class="Apple-converted-space">      </span>que<span class="Apple-converted-space">            </span>me<span class="Apple-converted-space">  </span>d&aacute;</span></p>
-<p class="p8"><span class="s3"><b>Gm/Bb</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s3"><b>A7</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s3"><b>Dm7</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s3"><b>Dm7/C</b></span></p>
-<p class="p9"><span class="s1">Ela<span class="Apple-converted-space">  </span>pare - cia<span class="Apple-converted-space">  </span>o<span class="Apple-converted-space">  </span>di -<span class="Apple-converted-space">  </span>a<span class="Apple-converted-space"> </span></span></p>
-<p class="p8"><span class="s3"><b>F#m7(b5)</b></span><span class="s1"><b><span class="Apple-converted-space">            </span></b></span><span class="s3"><b>B7</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s3"><b>Bm7(11)</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s3"><b>E7</b></span></p>
-<p class="p9"><span class="s1">a<span class="Apple-converted-space">  </span>romper<span class="Apple-converted-space">  </span>da<span class="Apple-converted-space">  </span>es - curi - d&atilde;o<span class="Apple-converted-space"> </span></span></p>
-<p class="p8"><span class="s3"><b>Dm7</b></span><span class="s1"><b> <span class="Apple-converted-space">            </span></b></span><span class="s3"><b>G7</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s3"><b>C7+</b></span></p>
-<p class="p9"><span class="s1">Linda<span class="Apple-converted-space">  </span>no<span class="Apple-converted-space">  </span>seu<span class="Apple-converted-space">  </span>manto<span class="Apple-converted-space">  </span>todo<span class="Apple-converted-space">  </span>branco<span class="Apple-converted-space"> </span></span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s3"><b>F7+</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s3"><b>F#°</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s3"><b>E</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s3"><b>Gm6/Bb</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s3"><b>A7</b></span></p>
-<p class="p9"><span class="s1">em<span class="Apple-converted-space">  </span>meio<span class="Apple-converted-space">  </span>&agrave;<span class="Apple-converted-space">  </span>pro - cis - s&atilde;o<span class="Apple-converted-space"> </span></span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">   </span></b></span><span class="s3"><b>Dm7</b></span><span class="s1"><b> <span class="Apple-converted-space">                </span></b></span><span class="s3"><b>G7</b></span></p>
-<p class="p9"><span class="s1">e<span class="Apple-converted-space">  </span>eu,<span class="Apple-converted-space">  </span>que<span class="Apple-converted-space">  </span>ela<span class="Apple-converted-space">  </span>nem<span class="Apple-converted-space">  </span>via,<span class="Apple-converted-space"> </span></span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">               </span></b></span><span class="s3"><b>C7+</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s3"><b>F7+</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s3"><b>F#°</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s3"><b>E</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s3"><b>A</b></span></p>
-<p class="p9"><span class="s1">ao<span class="Apple-converted-space">  </span>deus<span class="Apple-converted-space">  </span>pe - dia<span class="Apple-converted-space">  </span>a - mor<span class="Apple-converted-space">  </span>e<span class="Apple-converted-space">  </span>pro - te - &ccedil;&atilde;o<span class="Apple-converted-space"> </span></span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s3"><b>Bm7</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s3"><b>E7</b></span></p>
-<p class="p9"><span class="s1">Meu <span class="Apple-converted-space">  </span>Pai <span class="Apple-converted-space">  </span>Oxa-l&aacute; <span class="Apple-converted-space">  </span>&eacute; <span class="Apple-converted-space">  </span>o <span class="Apple-converted-space">  </span>rei,<span class="Apple-converted-space"> </span></span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                 </span></b></span><span class="s3"><b>A6</b></span></p>
-<p class="p9"><span class="s1">venha<span class="Apple-converted-space">  </span>me <span class="Apple-converted-space">  </span>va-ler<span class="Apple-converted-space"> </span></span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s3"><b>Bm7</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s3"><b>E7</b></span></p>
-<p class="p9"><span class="s1">meu <span class="Apple-converted-space">  </span>Pai <span class="Apple-converted-space">  </span>Oxa-l&aacute; <span class="Apple-converted-space">  </span>&eacute; <span class="Apple-converted-space">  </span>o <span class="Apple-converted-space">  </span>rei,<span class="Apple-converted-space"> </span></span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                 </span></b></span><span class="s3"><b>A6</b></span></p>
-<p class="p9"><span class="s1">venha<span class="Apple-converted-space">  </span>me <span class="Apple-converted-space">  </span>va-ler</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">             </span></b></span><span class="s3"><b>Bm7</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s3"><b>E7</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s3"><b>A6</b></span></p>
-<p class="p9"><span class="s1">e o velho Omu-lu<span class="Apple-converted-space">  </span>ato-tobaluai-&ecirc;<span class="Apple-converted-space"> </span></span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">             </span></b></span><span class="s3"><b>Bm7</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s3"><b>E7</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s3"><b>Amadd9</b></span><span class="s1"><b> <span class="Apple-converted-space"> </span></b></span></p>
-<p class="p9"><span class="s1">e o velho Omu-lu<span class="Apple-converted-space">  </span>ato-tobaluai-&ecirc;<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p13"><span class="s1"></span><br></p>
-</div>
-
-<div style="float: right; width: 50%;">
-<p class="p14"><span class="s1"><b>Am7 <span class="Apple-converted-space">            </span>D7 <span class="Apple-converted-space">                  </span>Am7 <span class="Apple-converted-space">          </span>D7<span class="Apple-converted-space"> </span></b></span></p>
-<p class="p15"><span class="s1">Nhe-nhen-nhen<span class="Apple-converted-space">  </span>Nhen-nhen-nhen-xo-rod&ocirc;<span class="Apple-converted-space">  </span>Nhe-nhen-nhen<span class="Apple-converted-space">  </span>Nhen-nhen-nhen-xo-rod&ocirc;<span class="Apple-converted-space">   </span></span></p>
-<p class="p14"><span class="s1"><b><span class="Apple-converted-space">    </span>Dm7<span class="Apple-converted-space">            </span>Em7<span class="Apple-converted-space">          </span>Am7<span class="Apple-converted-space"> </span></b></span></p>
-<p class="p15"><span class="s1">&Eacute; o mar, &eacute; o mar<span class="Apple-converted-space">  </span>F&eacute;-f&eacute; <span class="Apple-converted-space">  </span>xo-ro-d&ocirc;!<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><b>Am7 <span class="Apple-converted-space">            </span>D7<span class="Apple-converted-space">                  </span>Am7 <span class="Apple-converted-space">          </span>D7<span class="Apple-converted-space"> </span></b></span></p>
-<p class="p15"><span class="s1">Nhe-nhen-nhen<span class="Apple-converted-space">  </span>Nhen-nhen-nhen-xo-rod&ocirc;<span class="Apple-converted-space">  </span>Nhe-nhen-nhen<span class="Apple-converted-space">  </span>Nhen-nhen-nhen-xo-rod&ocirc;<span class="Apple-converted-space">   </span></span></p>
-<p class="p14"><span class="s1"><b><span class="Apple-converted-space">     </span>Dm7<span class="Apple-converted-space">              </span>Em7 <span class="Apple-converted-space">          </span>Am7<span class="Apple-converted-space">    </span>Dm7</b></span></p>
-<p class="p15"><span class="s1">&Eacute; o mar, &eacute; o mar<span class="Apple-converted-space">  </span>F&eacute;-f&eacute;<span class="Apple-converted-space">    </span>xo-ro-d&ocirc;!<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s3"><b>Amadd9</b></span><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s3"><b>E/G#</b></span></p>
-<p class="p9"><span class="s1">Maria<span class="Apple-converted-space">  </span>era<span class="Apple-converted-space">  </span>uma<span class="Apple-converted-space">  </span>boa<span class="Apple-converted-space">  </span>mo&ccedil;a</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">     </span></b></span><span class="s3"><b>Bm7(11)</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s3"><b>E7</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s3"><b>Amadd9</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s3"><b>Amadd9</b></span><span class="s1"><b>/</b></span><span class="s3"><b>G</b></span></p>
-<p class="p9"><span class="s1">pra<span class="Apple-converted-space">  </span>turma<span class="Apple-converted-space">  </span>l&aacute;<span class="Apple-converted-space">  </span>do<span class="Apple-converted-space">  </span>Ganto - is</span></p>
-<p class="p12"><span class="s4"><b><span class="Apple-converted-space"> </span></b></span><span class="s1"><b>F#m7(b5)</b></span><span class="s4"><b> <span class="Apple-converted-space">      </span></b></span><span class="s1"><b>B7(b9)</b></span><span class="s4"><b><span class="Apple-converted-space">          </span></b></span><span class="s1"><b>Emadd9</b></span></p>
-<p class="p9"><span class="s1">Era<span class="Apple-converted-space">  </span>Maria<span class="Apple-converted-space">  </span>vai<span class="Apple-converted-space">        </span>com<span class="Apple-converted-space">  </span>as<span class="Apple-converted-space">  </span>outras</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s3"><b>Am6/C</b></span><span class="s1"><b><span class="Apple-converted-space">            </span></b></span><span class="s3"><b>B7</b></span></p>
-<p class="p9"><span class="s1">Maria <span class="Apple-converted-space">  </span>de<span class="Apple-converted-space">  </span>coser,</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s3"><b>Bm7(b5)</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s3"><b>E7</b></span></p>
-<p class="p9"><span class="s1">Maria<span class="Apple-converted-space">  </span>de<span class="Apple-converted-space">  </span>rezar</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s3"><b>Amadd9</b></span><span class="s1"><b> <span class="Apple-converted-space">                    </span></b></span><span class="s3"><b>E/G#</b></span></p>
-<p class="p9"><span class="s1">Por&eacute;m<span class="Apple-converted-space">  </span>o<span class="Apple-converted-space">  </span>que<span class="Apple-converted-space">  </span>ningu&eacute;m<span class="Apple-converted-space">  </span>sabi - a</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">   </span></b></span><span class="s3"><b>Bm7(11)</b></span><span class="s1"><b> <span class="Apple-converted-space">            </span></b></span><span class="s3"><b>E7</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s3"><b>A7/4</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s3"><b>A7</b></span></p>
-<p class="p9"><span class="s1">&eacute;<span class="Apple-converted-space">  </span>que<span class="Apple-converted-space">  </span>tinha<span class="Apple-converted-space">  </span>um<span class="Apple-converted-space">  </span>par - ticular</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space"> </span></b></span><span class="s3"><b>Dm7</b></span><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s3"><b>D#°</b></span></p>
-<p class="p9"><span class="s1">al&eacute;m<span class="Apple-converted-space">  </span>de<span class="Apple-converted-space">  </span>coser,</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space"> </span></b></span><span class="s3"><b>Am/E</b></span><span class="s1"><b><span class="Apple-converted-space">            </span></b></span><span class="s3"><b>F7+</b></span></p>
-<p class="p9"><span class="s1">al&eacute;m<span class="Apple-converted-space">  </span>de<span class="Apple-converted-space">  </span>rezar,</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">   </span></b></span><span class="s3"><b>Bm7(11)</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s3"><b>E7</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s3"><b>A</b></span></p>
-<p class="p9"><span class="s1">tamb&eacute;m<span class="Apple-converted-space">  </span>era <span class="Apple-converted-space">  </span>Maria<span class="Apple-converted-space">  </span>de<span class="Apple-converted-space">  </span>pecar</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s3"><b>A/C#</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s3"><b>D7+</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s3"><b>D#m7(b5)</b></span></p>
-<p class="p9"><span class="s1">tumba<span class="Apple-converted-space">        </span>&ecirc;,<span class="Apple-converted-space">      </span>cabo<span class="Apple-converted-space">        </span>-<span class="Apple-converted-space">  </span>clo</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s3"><b>G#</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s3"><b>C#m7</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s3"><b>F#m</b></span></p>
-<p class="p9"><span class="s1">tumba <span class="Apple-converted-space">  </span>&ecirc;,<span class="Apple-converted-space">  </span>guerrei -<span class="Apple-converted-space">    </span>ro</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s3"><b>Bm7</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s3"><b>E7</b></span></p>
-<p class="p9"><span class="s1">tumba<span class="Apple-converted-space">  </span>&ecirc;,<span class="Apple-converted-space">  </span>meu<span class="Apple-converted-space">  </span>pai</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s3"><b>A</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s3"><b>Bm7</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s3"><b>C#m7</b></span></p>
-<p class="p9"><span class="s1">n&atilde;o<span class="Apple-converted-space">  </span>me<span class="Apple-converted-space">  </span>deixe<span class="Apple-converted-space">  </span>s&oacute;</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">       </span></b></span><span class="s3"><b>A7(13)</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s3"><b>D7+</b></span><span class="s1"><b><span class="Apple-converted-space">                        </span></b></span><span class="s3"><b>D#m7(b5)</b></span></p>
-<p class="p9"><span class="s1">tumba<span class="Apple-converted-space">  </span>&ecirc;, <span class="Apple-converted-space">  </span>cabo<span class="Apple-converted-space">  </span>- <span class="Apple-converted-space">  </span>clo,<span class="Apple-converted-space">  </span>tumba<span class="Apple-converted-space">  </span>l&aacute;<span class="Apple-converted-space">  </span>e<span class="Apple-converted-space">  </span>c&aacute;</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">       </span></b></span><span class="s3"><b>G#</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s3"><b>C#m7</b></span><span class="s1"><b> <span class="Apple-converted-space">                      </span></b></span><span class="s3"><b>F#m</b></span></p>
-<p class="p9"><span class="s1">tumba<span class="Apple-converted-space">  </span>&ecirc;,<span class="Apple-converted-space">  </span>guerrei -<span class="Apple-converted-space">    </span>ro,<span class="Apple-converted-space">  </span>tumba<span class="Apple-converted-space">  </span>l&aacute;<span class="Apple-converted-space">  </span>e<span class="Apple-converted-space">  </span>c&aacute;</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s3"><b>Bm7</b></span><span class="s1"><b><span class="Apple-converted-space">                    </span></b></span><span class="s3"><b>E7</b></span></p>
-<p class="p9"><span class="s1">tumba<span class="Apple-converted-space">  </span>&ecirc;,<span class="Apple-converted-space">  </span>meu<span class="Apple-converted-space">  </span>pai,<span class="Apple-converted-space">  </span>tumba<span class="Apple-converted-space">  </span>l&aacute;<span class="Apple-converted-space">  </span>e<span class="Apple-converted-space">  </span>c&aacute;</span></p>
-<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s3"><b>Am7</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s3"><b>D7</b></span><span class="s1"><b> <span class="Apple-converted-space">   </span></b></span></p>
-<p class="p9"><span class="s1">n&atilde;o<span class="Apple-converted-space">  </span>me<span class="Apple-converted-space">  </span>deixe<span class="Apple-converted-space">  </span>s&oacute;</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p6"><span class="s1"><b>B7<span class="Apple-converted-space">      </span>E7 A D7</b></span></p>
-<p class="p7"><span class="s1">Olor&ocirc;, Bahia</span></p>
-<p class="p4"><span class="s2"><b>  <span class="Apple-converted-space">  </span>G7M <span class="Apple-converted-space">      </span>A7 <span class="Apple-converted-space">                </span>D7M</b></span></p>
-<p class="p7"><span class="s1">N&oacute;s viemos pedir sua b&ecirc;n&ccedil;&atilde;o, sarav&aacute;! </span></p>
-<p class="p4"><span class="s2"><b>B7<span class="Apple-converted-space">      </span>E7 A D7</b></span></p>
-<p class="p7"><span class="s1">Hepa h&ecirc;, meu guia </span></p>
-<p class="p4"><span class="s2"><b>  <span class="Apple-converted-space">      </span>G7M <span class="Apple-converted-space">        </span>A7<span class="Apple-converted-space">            </span>D7M<span class="Apple-converted-space"> </span></b></span></p>
-<p class="p7"><span class="s1">N&oacute;s viemos dormir no colinho de lemanj&aacute;! </span></p>
-<p class="p16"><span class="s1"></span><br></p>
-<p class="p6"><span class="s1"><b>B7<span class="Apple-converted-space">      </span>E7 A D7</b></span></p>
-<p class="p7"><span class="s1">Olor&ocirc;, Bahia</span></p>
-<p class="p4"><span class="s2"><b>G7M <span class="Apple-converted-space">          </span>A7 <span class="Apple-converted-space">              </span>D7M</b></span></p>
-<p class="p7"><span class="s1">N&oacute;s viemos pedir sua b&ecirc;n&ccedil;&atilde;o, sarav&aacute;! </span></p>
-<p class="p4"><span class="s2"><b>B7<span class="Apple-converted-space">      </span>E7 A D7</b></span></p>
-<p class="p7"><span class="s1">Hepa h&ecirc;, meu guia </span></p>
-<p class="p4"><span class="s2"><b>G7M<span class="Apple-converted-space">          </span>A7 <span class="Apple-converted-space">            </span>D7M</b></span></p>
-<p class="p7"><span class="s1">N&oacute;s viemos dormir no colinho de lemanj&aacute;! </span></p>
-<p class="p4"><span class="s2"><b>G7M<span class="Apple-converted-space">          </span>A7 <span class="Apple-converted-space">            </span>D7M</b></span></p>
-<p class="p7"><span class="s1">N&oacute;s viemos dormir no colinho de lemanj&aacute;! </span></p>
-<p class="p4"><span class="s2"><b>G7M<span class="Apple-converted-space">          </span>A7 <span class="Apple-converted-space">            </span>D7M</b></span></p>
-<p class="p7"><span class="s1">N&oacute;s viemos dormir no colinho de lemanj&aacute;! </span></p>
-<p class="p4"><span class="s2"><b>G7M<span class="Apple-converted-space">          </span>A7 <span class="Apple-converted-space">            </span>D7M</b></span></p>
-<p class="p7"><span class="s1">N&oacute;s viemos dormir no colinho de lemanj&aacute;! </span></p>
-<p class="p4"><span class="s2"><b>G7M<span class="Apple-converted-space">          </span>A7 <span class="Apple-converted-space">            </span>D7M</b></span></p>
-<p class="p7"><span class="s1">N&oacute;s viemos dormir no colinho de lemanj&aacute;! </span></p>
-<p class="p4"><span class="s2"><b>G7M<span class="Apple-converted-space">          </span>A7 <span class="Apple-converted-space">            </span>D7M</b></span></p>
-<p class="p7"><span class="s1">N&oacute;s viemos dormir no colinho de lemanj&aacute;! </span></p>
-</div>
+  <div class="container">
+    <div class="header">
+      <div class="title">Pout-Pourri No. 1</div>
+      <div class="author">
+        <a class="author-link" href="https://www.cifraclub.com.br/a-bencao-bahia-tarde-em-itapoa-tatamiro/" target="_blank" rel="noopener">A Benção Bahia, Tarde em Itapoã, Tatamirô,</a>
+      </div>
+    </div>
+    
+    <div class="columns">
+      <div class="col">
+        <pre>
+<span class="chord">B7</span>  <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
+Olorô, Bahia
+   G7M               <span class="chord">A7</span>          D7M
+Nós viemos pedir sua bênção, saravá! 
+<p class="p4">  <span class="chord">B7</span> <span class="chord">E7</span>      <span class="chord">A</span> <span class="chord">D7</span>
+Hepa hê, meu guia 
+<p class="p4">   G7M                <span class="chord">A7</span>            D7M 
+Nós viemos dormir no colinho de lemanjá! 
+<p class="p5"><br/>
+<p class="p6"><span class="chord">B7</span>  <span class="chord">E7</span>    <span class="chord">A</span> <span class="chord">D7</span>
+<p class="p7">Olorô, Bahia
+<p class="p4">    G7M              <span class="chord">A7</span>           D7M
+<p class="p7">Nós viemos pedir sua bênção, saravá! 
+<p class="p4">  <span class="chord">B</span>  <span class="chord">E7</span>      <span class="chord">A</span> <span class="chord">D7</span>
+<p class="p7">Hepa hê, meu guia 
+<p class="p4">    G7M               <span class="chord">A7</span>            <span class="chord">D7</span>/9     <span class="chord">D7</span>
+<p class="p7">Nós viemos dormir no colinho de lemanjá! 
+<p class="p5"><br/>
+<p class="p5"><br/>
+<p class="p8"><span class="chord">Gm7</span>               <span class="chord">C7</span>/9
+<p class="p9">Um velho calção de banho
+<p class="p8"><span class="chord">Gm7</span>  <span class="chord">Gm7/F</span>         <span class="chord">Em7(b5)</span>  <span class="chord">A7(b13)</span>
+<p class="p9">o dia prá vadiar
+<p class="p8">   <span class="chord">Dm7</span>                  <span class="chord">G7(13)</span>
+<p class="p9">um mar que não tem tamanho
+<p class="p8"><span class="chord">Cm7</span>                <span class="chord">Am7(b5)</span> <span class="chord">D7(b9)</span>
+<p class="p9">e um arco-íris no ar.
+<p class="p8"><span class="chord">Gm7</span>                <span class="chord">C7</span>/9
+<p class="p9">Depois na praça Caymmi
+<p class="p8"><span class="chord">Gm7</span>  <span class="chord">Gm7/F</span>        <span class="chord">Em7(b5)</span>  <span class="chord">A7(b13)</span>
+<p class="p9">sentir preguiça no corpo
+<p class="p8"><span class="chord">Dm7</span>                 <span class="chord">G7(13)</span>
+<p class="p9">e numa esteira de vime
+<p class="p8"><span class="chord">Cm7</span>                 <span class="chord">Am7(b5)</span> <span class="chord">D7(b9)</span>
+<p class="p9">beber uma água  de côco.
+<p class="p10"><br/>
+<p class="p8">   <span class="chord">G6</span>                    <span class="chord">Am7</span>      <span class="chord">Bm7</span>           <span class="chord">Am7</span>         Bb7M
+<p class="p9">É bom... passar uma tarde em Itapuã ao sol que arde em Itapuã
+<p class="p8">           <span class="chord">Eb7</span>/9       <span class="chord">Am7</span>        <span class="chord">D7</span>/9                <span class="chord">G6</span>
+<p class="p9">Ouvindo o mar de Itapuã, falar de amor em Itapuã
+<p class="p8">             <span class="chord">Am7</span>          <span class="chord">Bm7</span>            <span class="chord">Am7</span>        Bb7M
+<p class="p9">passar uma tarde em Itapuã, ao sol que arde em Itapuã
+<p class="p8">          <span class="chord">Eb7</span>/9        <span class="chord">Am7</span>        <span class="chord">D7</span>/9
+<p class="p9">Ouvindo o mar de Itapuã, falar de amor em Itapuã
+<p class="p5"><br/>
+<p class="p5"><br/>
+<p class="p8"> <span class="chord">G</span>                 <span class="chord">Em7</span>       <span class="chord">Am7</span>     <span class="chord">D7</span>                   <span class="chord">G</span>
+<p class="p9">Apanha folha por folha Tatamirô...apanha maracanã Tatamirô
+<p class="p8">       <span class="chord">G/B</span>         <span class="chord">Em7</span>      <span class="chord">Am7</span> <span class="chord">D7</span>                <span class="chord">G</span>          <span class="chord">D7/A</span> 
+<p class="p9">Eu sou filha de Oxalá Tatamirô...menininha me apanhou Tatamirô
+<p class="p8"> <span class="chord">G</span>                 <span class="chord">Em7</span>       <span class="chord">Am7</span>     <span class="chord">D7</span>                   <span class="chord">G</span>
+<p class="p9">Apanha folha por folha Tatamirô...apanha maracanã Tatamirô
+<p class="p8">       <span class="chord">G/B</span>         <span class="chord">Em7</span>      <span class="chord">Am7</span>   <span class="chord">D7</span>              <span class="chord">G</span>          <span class="chord">D7/A</span>     <span class="chord">G</span>
+<p class="p9">Eu sou filha de Ossanha Tatamirô...menininha me abençoou Tatamirô
+<p class="p5"><br/>
+<span class="chord">D</span>        <span class="chord">C</span>       <span class="chord">B7</span>  <span class="chord">Am</span>
+<p class="p11">ooohhhh ooohhhh ooohhhh 
+<p class="p5"><br/>
+<span class="chord">Am</span>  <span class="chord">E7</span>  <span class="chord">Am</span>  <span class="chord">E7</span>
+<p class="p5"><br/>
+<p class="p8"><span class="chord">Am</span>        <span class="chord">Bm7(b5)</span>  <span class="chord">E7</span>    <span class="chord">Bm7(b5)</span>     <span class="chord">E7</span>   <span class="chord">Amadd9</span>     <span class="chord">Amadd9/G</span>   
+<p class="p9">Vem  das  águas          de       O-    xalá 
+<p class="p12"><span class="chord">F#m7(b5)</span>    <span class="chord">B7</span>    <span class="chord">Emadd9</span>     <span class="chord">F#m7(b5)</span>   <span class="chord">B7</span>      <span class="chord">E7</span>
+<p class="p9">es -        sa    mágoa      que            me  dá
+<p class="p8"><span class="chord">Gm/Bb</span>       <span class="chord">A7</span>         <span class="chord">Dm7</span>    <span class="chord">Dm7/C</span>
+<p class="p9">Ela  pare - cia  o  di -  a 
+<p class="p8"><span class="chord">F#m7(b5)</span>            <span class="chord">B7</span>     <span class="chord">Bm7(11)</span>   <span class="chord">E7</span>
+<p class="p9">a  romper  da  es - curi - dão 
+<p class="p8"><span class="chord">Dm7</span>             <span class="chord">G7</span>           <span class="chord">C7</span>+
+<p class="p9">Linda  no  seu  manto  todo  branco 
+<p class="p8">    <span class="chord">F7</span>+      <span class="chord">F#</span>°   <span class="chord">E</span>     <span class="chord">Gm6/Bb</span>   <span class="chord">A7</span>
+<p class="p9">em  meio  à  pro - cis - são 
+<p class="p8">   <span class="chord">Dm7</span>                 <span class="chord">G7</span>
+<p class="p9">e  eu,  que  ela  nem  via, 
+<p class="p8">               <span class="chord">C7</span>+      <span class="chord">F7</span>+     <span class="chord">F#</span>°   <span class="chord">E</span>    <span class="chord">A</span>
+<p class="p9">ao  deus  pe - dia  a - mor  e  pro - te - ção 
+<p class="p8">                <span class="chord">Bm7</span>           <span class="chord">E7</span>
+<p class="p9">Meu   Pai   Oxa-lá   é   o   rei, 
+<p class="p8">                 <span class="chord">A6</span>
+<p class="p9">venha  me   va-ler 
+<p class="p8">                <span class="chord">Bm7</span>           <span class="chord">E7</span>
+<p class="p9">meu   Pai   Oxa-lá   é   o   rei, 
+<p class="p8">                 <span class="chord">A6</span>
+<p class="p9">venha  me   va-ler
+<p class="p8">             <span class="chord">Bm7</span>         <span class="chord">E7</span>    <span class="chord">A6</span>
+<p class="p9">e o velho Omu-lu  ato-tobaluai-ê 
+<p class="p8">             <span class="chord">Bm7</span>         <span class="chord">E7</span>     <span class="chord">Amadd9</span>  
+<p class="p9">e o velho Omu-lu  ato-tobaluai-ê 
+<p class="p5"><br/>
+<p class="p5"><br/>
+<p class="p13"><br/>
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
+<p class="p14"><span class="chord">Am7</span>             <span class="chord">D7</span>                   <span class="chord">Am7</span>           <span class="chord">D7</span> 
+<p class="p15">Nhe-nhen-nhen  Nhen-nhen-nhen-xo-rodô  Nhe-nhen-nhen  Nhen-nhen-nhen-xo-rodô   
+<p class="p14">    <span class="chord">Dm7</span>            <span class="chord">Em7</span>          <span class="chord">Am7</span> 
+<p class="p15">É o mar, é o mar  <span class="chord">F</span>é-fé   xo-ro-dô! 
+<p class="p4"><span class="chord">Am7</span>             <span class="chord">D7</span>                  <span class="chord">Am7</span>           <span class="chord">D7</span> 
+<p class="p15">Nhe-nhen-nhen  Nhen-nhen-nhen-xo-rodô  Nhe-nhen-nhen  Nhen-nhen-nhen-xo-rodô   
+<p class="p14">     <span class="chord">Dm7</span>              <span class="chord">Em7</span>           <span class="chord">Am7</span>    <span class="chord">Dm7</span>
+<p class="p15">É o mar, é o mar  <span class="chord">F</span>é-fé    xo-ro-dô! 
+<p class="p5"><br/>
+<p class="p5"><br/>
+<p class="p8">  <span class="chord">Amadd9</span>              <span class="chord">E/G#</span>
+<p class="p9">Maria  era  uma  boa  moça
+<p class="p8">     <span class="chord">Bm7(11)</span>        <span class="chord">E7</span>      <span class="chord">Amadd9</span>     <span class="chord">Amadd9/G</span>
+<p class="p9">pra  turma  lá  do  Ganto - is
+<p class="p12"> <span class="chord">F#m7(b5)</span>       <span class="chord">B7(b9)</span>          <span class="chord">Emadd9</span>
+<p class="p9">Era  Maria  vai        com  as  outras
+<p class="p8">  <span class="chord">Am6/C</span>            <span class="chord">B7</span>
+<p class="p9">Maria   de  coser,
+<p class="p8">  <span class="chord">Bm7(b5)</span>         <span class="chord">E7</span>
+<p class="p9">Maria  de  rezar
+<p class="p8">  <span class="chord">Amadd9</span>                     <span class="chord">E/G#</span>
+<p class="p9">Porém  o  que  ninguém  sabi - a
+<p class="p8">   <span class="chord">Bm7(11)</span>             <span class="chord">E7</span>        <span class="chord">A7</span>/4  <span class="chord">A7</span>
+<p class="p9">é  que  tinha  um  par - ticular
+<p class="p8"> <span class="chord">Dm7</span>              <span class="chord">D#</span>°
+<p class="p9">além  de  coser,
+<p class="p8"> <span class="chord">Am/E</span>            <span class="chord">F7</span>+
+<p class="p9">além  de  rezar,
+<p class="p8">   <span class="chord">Bm7(11)</span>       <span class="chord">E7</span>        <span class="chord">A</span>
+<p class="p9">também  era   Maria  de  pecar
+<p class="p8">        <span class="chord">A/C#</span>        <span class="chord">D7</span>+        <span class="chord">D#m7(b5)</span>
+<p class="p9">tumba        ê,      cabo        -  clo
+<p class="p8">        <span class="chord">G#</span>          <span class="chord">C#m7</span>    <span class="chord">F#m</span>
+<p class="p9">tumba   ê,  guerrei -    ro
+<p class="p8">                <span class="chord">Bm7</span>  <span class="chord">E7</span>
+<p class="p9">tumba  ê,  meu  pai
+<p class="p8">                <span class="chord">A</span>    <span class="chord">Bm7</span>   <span class="chord">C#m7</span>
+<p class="p9">não  me  deixe  só
+<p class="p8">       <span class="chord">A7(13)</span>     <span class="chord">D7</span>+                        <span class="chord">D#m7(b5)</span>
+<p class="p9">tumba  ê,   cabo  -   clo,  tumba  lá  e  cá
+<p class="p8">       <span class="chord">G#</span>          <span class="chord">C#m7</span>                       <span class="chord">F#m</span>
+<p class="p9">tumba  ê,  guerrei -    ro,  tumba  lá  e  cá
+<p class="p8">                <span class="chord">Bm7</span>                    <span class="chord">E7</span>
+<p class="p9">tumba  ê,  meu  pai,  tumba  lá  e  cá
+<p class="p8">                <span class="chord">Am7</span>    <span class="chord">D7</span>    
+<p class="p9">não  me  deixe  só
+<p class="p5"><br/>
+<p class="p5"><br/>
+<p class="p6"><span class="chord">B7</span>      <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
+<p class="p7">Olorô, Bahia
+<p class="p4">    G7M       <span class="chord">A7</span>                 D7M
+<p class="p7">Nós viemos pedir sua bênção, saravá! 
+<p class="p4"><span class="chord">B7</span>      <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
+<p class="p7">Hepa hê, meu guia 
+<p class="p4">        G7M         <span class="chord">A7</span>            D7M 
+<p class="p7">Nós viemos dormir no colinho de lemanjá! 
+<p class="p16"><br/>
+<p class="p6"><span class="chord">B7</span>      <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
+<p class="p7">Olorô, Bahia
+<p class="p4">G7M           <span class="chord">A7</span>               D7M
+<p class="p7">Nós viemos pedir sua bênção, saravá! 
+<p class="p4"><span class="chord">B7</span>      <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
+<p class="p7">Hepa hê, meu guia 
+<p class="p4">G7M          <span class="chord">A7</span>             D7M
+<p class="p7">Nós viemos dormir no colinho de lemanjá! 
+<p class="p4">G7M          <span class="chord">A7</span>             D7M
+<p class="p7">Nós viemos dormir no colinho de lemanjá! 
+<p class="p4">G7M          <span class="chord">A7</span>             D7M
+<p class="p7">Nós viemos dormir no colinho de lemanjá! 
+<p class="p4">G7M          <span class="chord">A7</span>             D7M
+<p class="p7">Nós viemos dormir no colinho de lemanjá! 
+<p class="p4">G7M          <span class="chord">A7</span>             D7M
+<p class="p7">Nós viemos dormir no colinho de lemanjá! 
+<p class="p4">G7M          <span class="chord">A7</span>             D7M
+<p class="p7">Nós viemos dormir no colinho de lemanjá! 
+        </pre>
+      </div>
+    </div>
+    
+  </div>
 </body>
 </html>
