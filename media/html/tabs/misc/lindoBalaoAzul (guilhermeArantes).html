@@ -13,6 +13,26 @@
       margin: 0;
       font-family: 'Merriweather', Georgia, serif;
     }
+    .back-btn {
+      position: fixed;
+      top: 18px;
+      left: 22px;
+      background: #fff;
+      color: #2563eb;
+      font-size: 1.08em;
+      padding: 7px 17px 6px 12px;
+      border-radius: 22px;
+      box-shadow: 0 1px 7px #ddd;
+      border: 1.5px solid #eaeaea;
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 5000;
+      transition: background 0.16s, color 0.16s;
+    }
+    .back-btn:hover {
+      background: #2563eb;
+      color: #fff;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -90,6 +110,7 @@
   </style>
 </head>
 <body>
+  <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
   <div class="container">
     <div class="header">
       <div class="title">Lindo Balão Azul</div>
