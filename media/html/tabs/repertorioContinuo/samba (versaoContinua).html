@@ -1,206 +1,500 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>O Show Tem Que Continuar – (Fundo de Quintal)</title>
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:700,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    body {
-      background: #f8f8f8;
-      color: #222;
-      margin: 0;
-      font-family: 'Merriweather', Georgia, serif;
-    }
-    .container {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 3px 12px #ccc;
-      max-width: 950px;
-      margin: 48px auto 24px auto;
-      padding: 36px 32px 28px 32px;
-    }
-    .header {
-      text-align: center;
-      border-bottom: 1.5px solid #e7e7e7;
-      margin-bottom: 34px;
-      padding-bottom: 10px;
-    }
-    .title {
-      font-size: 2.0em;
-      font-weight: 700;
-      letter-spacing: -1px;
-      margin: 0 0 7px 0;
-      line-height: 1.07;
-    }
-    .author-link {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color .2s;
-    }
-    .author-link:hover {
-      color: #f98600;
-      text-decoration: underline;
-    }
-    .columns {
-      display: flex;
-      gap: 28px;
-      margin-top: 15px;
-    }
-    .col {
-      width: 50%;
-    }
-    .singlecol {
-      display: flex;
-      justify-content: center;
-      margin-top: 15px;
-    }
-    .singlecol pre {
-      max-width: 600px;
-      margin: 0 auto 0 auto;
-    }
-    pre {
-      font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
-      font-size: 1.01em;
-      background: #f1f5fb;
-      padding: 18px 14px 17px 20px;
-      border-radius: 8px;
-      margin-bottom: 18px;
-      line-height: 1.75;
-      white-space: pre-wrap;
-      color: #20253a;
-    }
-    .chord {
-      color: #fc6108;
-      font-weight: bold;
-    }
-    @media (max-width: 900px) {
-      .container { padding: 13px 2vw 12px 2vw;}
-      .columns { flex-direction: column; gap: 0; }
-      .col { width: 100%; }
-      .singlecol pre { max-width: 98vw; }
-    }
-    @media (max-width: 600px) {
-      .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
-      .title { font-size: 1.12em;}
-      .singlecol pre { max-width: 98vw; }
-    }
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1561.2">
+  <style type="text/css">
+      p.head1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 45.0px Times}
+      p.head2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 52.0px; font: 45.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 23.0px; font: 20.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 16.0px; font: 14.0px Menlo; color: #333333; -webkit-text-stroke: #333333; background-color: #ffffff}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 16.0px; font: 14.0px Menlo; color: #ff6600; -webkit-text-stroke: #ff6600; background-color: #ffffff}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 16.0px; font: 14.0px Menlo; color: #333333; -webkit-text-stroke: #333333}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 16.0px; font: 14.0px Menlo; color: #333333; -webkit-text-stroke: #333333; background-color: #ffffff; min-height: 16.0px}
+    p.p7 {margin: 0.0px 0.0px 12.0px 0.0px; text-align: center; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 14.0px; font: 14.0px Menlo; color: #323333; -webkit-text-stroke: #323333}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 14.0px; font: 14.0px Menlo; color: #323333; -webkit-text-stroke: #323333; min-height: 16.0px}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 14.0px; font: 12.0px Courier; color: #333333; -webkit-text-stroke: #333333}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 14.0px; font: 14.0px Menlo; color: #333333; -webkit-text-stroke: #333333; background-color: #ffffff}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 14.0px; font: 14.0px Menlo; color: #333333; -webkit-text-stroke: #333333}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 14.0px; font: 14.0px Menlo; color: #ff6600; -webkit-text-stroke: #ff6600}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 14.0px; font: 12.0px Courier; color: #323333; -webkit-text-stroke: #323333}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 12.0px 'Lucida Console'; color: #333333; -webkit-text-stroke: #333333}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 14.0px Menlo; color: #333333; -webkit-text-stroke: #333333}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 14.0px Menlo; color: #ff6600; -webkit-text-stroke: #ff6600}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 14.0px; font: 12.0px Courier; color: #333333; -webkit-text-stroke: #333333; min-height: 14.0px}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 14.0px; font: 14.0px Menlo; color: #c96e3a; -webkit-text-stroke: #c96e3a}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 14.0px; font: 14.0px Menlo; color: #333333; -webkit-text-stroke: #333333; min-height: 16.0px}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 14.0px Menlo; color: #ff6600; -webkit-text-stroke: #ff6600}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 14.0px Menlo; color: #323333; -webkit-text-stroke: #323333; min-height: 16.0px}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 14.0px Menlo; color: #323333; -webkit-text-stroke: #323333}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; color: #ff6600; -webkit-text-stroke: 0px #ff6600}
+    span.s3 {font-kerning: none; color: #333333; -webkit-text-stroke: 0px #333333}
+    span.s4 {font-kerning: none; color: #ff661b; -webkit-text-stroke: 0px #ff661b}
+    span.s5 {font-kerning: none; color: #323333; -webkit-text-stroke: 0px #323333}
+    span.s6 {font-kerning: none; color: #c96e3a; -webkit-text-stroke: 0px #c96e3a}
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="title">O Show Tem Que Continuar</div>
-      <div class="author">
-        <a class="author-link" href="https://www.cifraclub.com.br/fundo-de-quintal/" target="_blank" rel="noopener">(Fundo de Quintal)</a>
-      </div>
+    <div>
+        <center>
+            <p class="head1">O Show Tem Que Continuar</p>
+            <p class="head2">(Fundo de Quintal)</p>
+            <p class="p2"><br></p>
+            <p class="p2"><br></p>
+        </center>
     </div>
-    
-    <div class="columns">
-      <div class="col">
-        <pre>
- <span class="chord">C7</span>             <span class="chord">F#m7</span>/5-
-   Lalaia lalaia laia
-<span class="chord">Fm6</span>          <span class="chord">Em7</span>
-Lalaia lalaia laia
-Ebdim         <span class="chord">Dm7</span>    <span class="chord">G7</span>  <span class="chord">C</span>
-  Lalaia Lalaia  la.a.a.ia
-        Ebdim     <span class="chord">Dm7</span>   <span class="chord">G7</span>
-O teu choro já não toca
-    <span class="chord">C7</span>+
-Meu bandolim
-<p class="p4">        Ebdim        <span class="chord">Dm7</span>
-Diz que minha voz sufoca
-<span class="chord">G7</span>     <span class="chord">Gm7</span>
-Teu violão
-     <span class="chord">C7</span>           <span class="chord">F7</span>+
-Afrouxaram-se as cordas
-    <span class="chord">Fm6</span>      <span class="chord">Em7</span> 
-<span class="chord">E</span> assim desafina
-Ebdim        <span class="chord">Dm7</span>
-<span class="chord">E</span> pobre das rimas
-<span class="chord">G7</span>        <span class="chord">Gm7</span>
-Da nossa cancão
-     <span class="chord">C7</span>          <span class="chord">F7</span>+
-Hoje somos folha morta
- <span class="chord">Fm6</span>         <span class="chord">Em7</span>
-Metais em surdina
-  Ebdim       <span class="chord">Dm7</span>
-Fechada a cortina
-<span class="chord">G7</span>         <span class="chord">C7</span>+
- Vazio o salão
-       <span class="chord">A7</span>/5+           <span class="chord">Dm7</span>
-Se os duetos não se encontram mais
-<span class="chord">G7</span>      <span class="chord">C7</span>+             Ebdim
-<span class="chord">E</span> os solos perderam emoção
-        <span class="chord">Dm7</span>  <span class="chord">G7</span>
-Se acabou o gás
-<span class="chord">C7</span>+                    <span class="chord">Am</span>
-  Pra cantar o mais simples refrão
-           <span class="chord">Bm7</span>/5-
-Se a gente nota,
-<span class="chord">E7</span>             <span class="chord">Am</span>  <span class="chord">Am/G</span>
-   Que uma só nota
-         <span class="chord">Dm7</span>      <span class="chord">G7</span>
-Já nos esgota
-         <span class="chord">Gm7</span>       <span class="chord">C7</span>
-O show perde a razão
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
-           <span class="chord">F#m7</span>/5-    <span class="chord">Fm6</span>
-Mas iremos achar o tom
-                  <span class="chord">Em7</span>      <span class="chord">A7</span>/5+
-Um acorde com um lindo som
-                 <span class="chord">Dm7</span>
-<span class="chord">E</span> fazer com que fique bom
-<span class="chord">G7</span>       <span class="chord">Gm7</span>          <span class="chord">C7</span>
-Outra vez,    o nosso cantar
-              <span class="chord">F#m7</span>/5-    <span class="chord">Fm6</span>
-<span class="chord">E</span> a gente vai ser feliz
-                 <span class="chord">Em7</span>      <span class="chord">A7</span>/5+
-Olha nós outra vez no ar
-               <span class="chord">Dm7</span>  <span class="chord">G7</span> <span class="chord">C</span>  <span class="chord">C7</span>
-O show tem que continuar
-              <span class="chord">F#m7</span>/5-  <span class="chord">Fm6</span>
-Nós iremos até Paris
-<p class="p4">            <span class="chord">Em7</span>
-Arrasar no Olimpia
-<p class="p4"><span class="chord">A7</span>/5+          <span class="chord">Dm7</span>  <span class="chord">G7</span> <span class="chord">Gm7</span> <span class="chord">C7</span>
-O show tem que continuar
-              <span class="chord">F#m7</span>/5-
-Olha o povo pedindo bis
-<span class="chord">Fm6</span>                 <span class="chord">Em7</span>
-  Os ingresso vão se esgotar
-<p class="p4"><span class="chord">A7</span>/5+          <span class="chord">Dm7</span>  <span class="chord">G7</span> <span class="chord">Gm7</span> <span class="chord">C7</span>
-O show tem que continuar
-              <span class="chord">F#m7</span>/5-
-Todo mundo que hoje diz
-<span class="chord">Fm6</span>               <span class="chord">Em7</span>
-  Acabou vai se admirar
-<p class="p4"><span class="chord">A7</span>/5+          <span class="chord">Dm7</span>  <span class="chord">G7</span> <span class="chord">Gm7</span> <span class="chord">C7</span>
-Nosso amor vai continuar
-<p class="p5"><br/>
+<div style="float: left; width: 50%;">
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space"> </span></b></span><span class="s2"><b>C7</b></span><span class="s1"><b> <span class="Apple-converted-space">            </span></b></span><span class="s2"><b>F#m7/5-</b></span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">   </span>Lalaia lalaia laia</span></p>
+<p class="p3"><span class="s2"><b>Fm6</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Em7</b></span></p>
+<p class="p3"><span class="s1">Lalaia lalaia laia</span></p>
+<p class="p3"><span class="s2"><b>Ebdim</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s2"><b>Dm7</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>G7</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>C</b></span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>Lalaia Lalaia<span class="Apple-converted-space">  </span>la.a.a.ia</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>Ebdim</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>Dm7</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>G7</b></span></p>
+<p class="p3"><span class="s1">O teu choro já não toca</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>C7+</b></span></p>
+<p class="p3"><span class="s1">Meu bandolim</span></p>
+<p class="p4"><span class="s3"><b><span class="Apple-converted-space">        </span></b></span><span class="s1"><b>Ebdim<span class="Apple-converted-space">        </span>Dm7</b></span></p>
+<p class="p3"><span class="s1">Diz que minha voz sufoca</span></p>
+<p class="p3"><span class="s2"><b>G7</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>Gm7</b></span></p>
+<p class="p3"><span class="s1">Teu violão</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">     </span></b></span><span class="s2"><b>C7</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s2"><b>F7+</b></span></p>
+<p class="p3"><span class="s1">Afrouxaram-se as cordas</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>Fm6</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>Em7</b></span><span class="s1"><b><span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1">E assim desafina</span></p>
+<p class="p3"><span class="s4"><b>Ebdim</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>Dm7</b></span></p>
+<p class="p3"><span class="s1">E pobre das rimas</span></p>
+<p class="p3"><span class="s2"><b>G7</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>Gm7</b></span></p>
+<p class="p3"><span class="s1">Da nossa cancão</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">     </span></b></span><span class="s2"><b>C7</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>F7+</b></span></p>
+<p class="p3"><span class="s1">Hoje somos folha morta</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space"> </span></b></span><span class="s2"><b>Fm6</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s2"><b>Em7</b></span></p>
+<p class="p3"><span class="s1">Metais em surdina</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Ebdim</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>Dm7</b></span></p>
+<p class="p3"><span class="s1">Fechada a cortina</span></p>
+<p class="p3"><span class="s2"><b>G7</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s2"><b>C7+</b></span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space"> </span>Vazio o salão</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">       </span></b></span><span class="s2"><b>A7/5+</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Dm7</b></span></p>
+<p class="p3"><span class="s1">Se os duetos não se encontram mais</span></p>
+<p class="p3"><span class="s2"><b>G7</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>C7+</b></span><span class="s1"><b> <span class="Apple-converted-space">            </span></b></span><span class="s2"><b>Ebdim</b></span></p>
+<p class="p3"><span class="s1">E os solos perderam emoção</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>Dm7<span class="Apple-converted-space"> </span></b></span><span class="s1"><b> </b></span><span class="s2"><b>G7</b></span></p>
+<p class="p3"><span class="s1">Se acabou o gás</span></p>
+<p class="p3"><span class="s2"><b>C7+</b></span><span class="s1"><b><span class="Apple-converted-space">                    </span></b></span><span class="s2"><b>Am</b></span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>Pra cantar o mais simples refrão</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">           </span></b></span><span class="s2"><b>Bm7/5-</b></span></p>
+<p class="p3"><span class="s1">Se a gente nota,</span></p>
+<p class="p3"><span class="s2"><b>E7</b></span><span class="s1"><b> <span class="Apple-converted-space">            </span></b></span><span class="s2"><b>Am</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Am/G</b></span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">   </span>Que uma só nota</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">         </span></b></span><span class="s2"><b>Dm7</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>G7</b></span></p>
+<p class="p3"><span class="s1">Já nos esgota</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">         </span></b></span><span class="s2"><b>Gm7</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>C7</b></span></p>
+<p class="p3"><span class="s1">O show perde a razão</span></p>
+</div>
 
-              <span class="chord">F#m7</span>/5-
-Lalaia lalaia laia
-<span class="chord">Fm6</span>               <span class="chord">Em7</span>
-  Lalaia lalaia laia
-<p class="p4"><span class="chord">A7</span>/5+          <span class="chord">Dm7</span>  <span class="chord">G7</span> <span class="chord">Gm7</span> <span class="chord">C7</span>
-Nosso amor vai continuar
-              <span class="chord">F#m7</span>/5-
-Lalaia lalaia laia
-<span class="chord">Fm6</span>               <span class="chord">Em7</span>
-  Lalaia lalaia laia
-<span class="chord">A7</span>/5+          <span class="chord">Dm7</span>  <span class="chord">G7</span>  <span class="chord">C7</span>+
-Nosso amor vai continuar
-        </pre>
-      </div>
-    </div>
+<div style="float: right; width: 50%;">
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">           </span></b></span><span class="s2"><b>F#m7/5-</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>Fm6</b></span></p>
+<p class="p3"><span class="s1">Mas iremos achar o tom</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">                  </span></b></span><span class="s2"><b>Em7</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>A7/5+</b></span></p>
+<p class="p3"><span class="s1">Um acorde com um lindo som</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">                 </span></b></span><span class="s2"><b>Dm7</b></span></p>
+<p class="p3"><span class="s1">E fazer com que fique bom</span></p>
+<p class="p3"><span class="s2"><b>G7</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>Gm7</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>C7</b></span></p>
+<p class="p3"><span class="s1">Outra vez,<span class="Apple-converted-space">    </span>o nosso cantar</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s2"><b>F#m7/5-</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>Fm6</b></span></p>
+<p class="p3"><span class="s1">E a gente vai ser feliz</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">                 </span></b></span><span class="s2"><b>Em7</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>A7/5+</b></span></p>
+<p class="p3"><span class="s1">Olha nós outra vez no ar</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">               </span></b></span><span class="s2"><b>Dm7</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>G7</b></span><span class="s1"><b> </b></span><span class="s2"><b>C</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>C7</b></span></p>
+<p class="p3"><span class="s1">O show tem que continuar</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s2"><b>F#m7/5-</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Fm6</b></span></p>
+<p class="p3"><span class="s1">Nós iremos até Paris</span></p>
+<p class="p4"><span class="s1"><b><span class="Apple-converted-space">            </span>Em7</b></span></p>
+<p class="p3"><span class="s1">Arrasar no Olimpia</span></p>
+<p class="p4"><span class="s1"><b>A7/5+</b></span><span class="s3"><b><span class="Apple-converted-space">          </span></b></span><span class="s1"><b>Dm7</b></span><span class="s3"><b><span class="Apple-converted-space">  </span></b></span><span class="s1"><b>G7</b></span><span class="s3"><b> </b></span><span class="s1"><b>Gm7</b></span><span class="s3"><b> </b></span><span class="s1"><b>C7</b></span></p>
+<p class="p3"><span class="s1">O show tem que continuar</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s2"><b>F#m7/5-</b></span></p>
+<p class="p3"><span class="s1">Olha o povo pedindo bis</span></p>
+<p class="p3"><span class="s2"><b>Fm6</b></span><span class="s1"><b> <span class="Apple-converted-space">                </span></b></span><span class="s2"><b>Em7</b></span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>Os ingresso vão se esgotar</span></p>
+<p class="p4"><span class="s1"><b>A7/5+</b></span><span class="s3"><b><span class="Apple-converted-space">          </span></b></span><span class="s1"><b>Dm7</b></span><span class="s3"><b><span class="Apple-converted-space">  </span></b></span><span class="s1"><b>G7</b></span><span class="s3"><b> </b></span><span class="s1"><b>Gm7</b></span><span class="s3"><b> </b></span><span class="s1"><b>C7</b></span></p>
+<p class="p3"><span class="s1">O show tem que continuar</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s2"><b>F#m7/5-</b></span></p>
+<p class="p3"><span class="s1">Todo mundo que hoje diz</span></p>
+<p class="p3"><span class="s2"><b>Fm6</b></span><span class="s1"><b> <span class="Apple-converted-space">              </span></b></span><span class="s2"><b>Em7</b></span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>Acabou vai se admirar</span></p>
+<p class="p4"><span class="s1"><b>A7/5+</b></span><span class="s3"><b><span class="Apple-converted-space">          </span></b></span><span class="s1"><b>Dm7</b></span><span class="s3"><b><span class="Apple-converted-space">  </span></b></span><span class="s1"><b>G7</b></span><span class="s3"><b> </b></span><span class="s1"><b>Gm7</b></span><span class="s3"><b> </b></span><span class="s1"><b>C7</b></span></p>
+<p class="p3"><span class="s1">Nosso amor vai continuar</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s2"><b>F#m7/5-</b></span></p>
+<p class="p3"><span class="s1">Lalaia lalaia laia</span></p>
+<p class="p3"><span class="s2"><b>Fm6</b></span><span class="s1"><b> <span class="Apple-converted-space">              </span></b></span><span class="s2"><b>Em7</b></span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>Lalaia lalaia laia</span></p>
+<p class="p4"><span class="s1"><b>A7/5+</b></span><span class="s3"><b><span class="Apple-converted-space">          </span></b></span><span class="s1"><b>Dm7</b></span><span class="s3"><b><span class="Apple-converted-space">  </span></b></span><span class="s1"><b>G7</b></span><span class="s3"><b> </b></span><span class="s1"><b>Gm7</b></span><span class="s3"><b> </b></span><span class="s1"><b>C7</b></span></p>
+<p class="p3"><span class="s1">Nosso amor vai continuar</span></p>
+<p class="p3"><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s2"><b>F#m7/5-</b></span></p>
+<p class="p3"><span class="s1">Lalaia lalaia laia</span></p>
+<p class="p3"><span class="s2"><b>Fm6</b></span><span class="s1"><b> <span class="Apple-converted-space">              </span></b></span><span class="s2"><b>Em7</b></span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>Lalaia lalaia laia</span></p>
+<p class="p3"><span class="s2"><b>A7/5+</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Dm7</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>G7</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>C7+</b></span></p>
+<p class="p3"><span class="s1">Nosso amor vai continuar</span></p>
+</div>
     
-  </div>
+<p style="clear: left; margin-top: 3em">
+    <div>
+        <center>
+            <p class="p2"><br></p>
+            <p class="p2"><br></p>
+            <p class="head1">Retalhos de Cetim</p>
+            <p class="head2">(Benito Di Paula)</p>
+            <p class="p2"><br></p>
+            <p class="p2"><br></p>
+        </center>
+    </div>
+</p>
+
+<div style="float: left; width: 50%;">
+<p class="p8"><span class="s2"><b>Am7</b></span><span class="s1"><b> <span class="Apple-converted-space">                    </span></b></span><span class="s2"><b>Em</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">    </span>Ensaiei meu samba o ano inteiro</span></p>
+<p class="p8"><span class="s2"><b>Am</b></span><span class="s1"><b> <span class="Apple-converted-space">                      </span></b></span><span class="s2"><b>Em</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">   </span>Comprei surdo e tamborim</span></p>
+<p class="p8"><span class="s2"><b>Am</b></span><span class="s1"><b><span class="Apple-converted-space">                      </span></b></span><span class="s2"><b>C</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">   </span>Gastei tudo em fantasia</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">             </span></b></span><span class="s2"><b>F</b></span></p>
+<p class="p8"><span class="s1">Era só o que eu queria.</span></p>
+<p class="p8"><span class="s2"><b>F#°</b></span><span class="s1"><b> <span class="Apple-converted-space">            </span></b></span><span class="s2"><b>E</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">    </span>E ela jurou <span class="Apple-converted-space">  </span>desfilar pra mim</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p8"><span class="s2"><b>Am</b></span><span class="s1"><b> <span class="Apple-converted-space">                </span></b></span><span class="s2"><b>Em</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">   </span>Minha escola estava tão bonita</span></p>
+<p class="p8"><span class="s2"><b>Am</b></span><span class="s1"><b> <span class="Apple-converted-space">                      </span></b></span><span class="s2"><b>Em</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">   </span>Era tudo o que eu queria ver</span></p>
+<p class="p8"><span class="s2"><b>Am</b></span><span class="s1"><b> <span class="Apple-converted-space">                  </span></b></span><span class="s2"><b>C</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">   </span>Em retalhos de cetim.</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">           </span></b></span><span class="s2"><b>F</b></span></p>
+<p class="p8"><span class="s1">Eu dormi o ano inteiro</span></p>
+<p class="p8"><span class="s2"><b>F#°</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>E</b></span></p>
+<p class="p8"><span class="s1">E ela jurou desfilar pra mim</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p8"><span class="s1">Refrão:</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>A7+/G#</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>A7/G</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>F#7</b></span></p>
+<p class="p8"><span class="s1">Mas chegou<span class="Apple-converted-space">        </span>o carnaval</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>Bm</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>F7</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>E4</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>E</b></span></p>
+<p class="p8"><span class="s1">E ela não<span class="Apple-converted-space">    </span>desfilou</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">     </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>C</b></span><span class="s1"><b> <span class="Apple-converted-space">            </span></b></span><span class="s2"><b>F</b></span></p>
+<p class="p8"><span class="s1">Eu chorei na avenida, eu <span class="Apple-converted-space">  </span>chorei</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s2"><b>Dm</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>E7</b></span><span class="s1"><b> <span class="Apple-converted-space">              </span></b></span><span class="s2"><b>Am</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>E7</b></span></p>
+<p class="p8"><span class="s1">Não pensei que mentia a cabrocha, que eu tanto amei</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p8"><span class="s2"><b>Am</b></span><span class="s1"><b> <span class="Apple-converted-space">                </span></b></span><span class="s2"><b>Em</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">   </span>Minha escola estava tão bonita</span></p>
+<p class="p8"><span class="s2"><b>Am</b></span><span class="s1"><b> <span class="Apple-converted-space">                      </span></b></span><span class="s2"><b>Em</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">   </span>Era tudo o que eu queria ver</span></p>
+</div>
+
+<div style="float: right; width: 50%;">
+<p class="p8"><span class="s2"><b>Am</b></span><span class="s1"><b> <span class="Apple-converted-space">                  </span></b></span><span class="s2"><b>C</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">   </span>Em retalhos de cetim.</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">           </span></b></span><span class="s2"><b>F</b></span></p>
+<p class="p8"><span class="s1">Eu dormi o ano inteiro</span></p>
+<p class="p8"><span class="s2"><b>F#°</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>E</b></span></p>
+<p class="p8"><span class="s1">E ela jurou desfilar pra mim</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p8"><span class="s1">Refrão:</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>A7+/G#</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>A7/G</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>F#7</b></span></p>
+<p class="p8"><span class="s1">Mas chegou<span class="Apple-converted-space">        </span>o carnaval</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>Bm</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>F7</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>E4</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>E</b></span></p>
+<p class="p8"><span class="s1">E ela não<span class="Apple-converted-space">    </span>desfilou</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">     </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>C</b></span><span class="s1"><b> <span class="Apple-converted-space">            </span></b></span><span class="s2"><b>F</b></span></p>
+<p class="p8"><span class="s1">Eu chorei na avenida, eu <span class="Apple-converted-space">  </span>chorei</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s2"><b>Dm</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>E7</b></span><span class="s1"><b> <span class="Apple-converted-space">              </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>E7</b></span></p>
+<p class="p8"><span class="s1">Não pensei que mentia a cabrocha, que eu tanto amei</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>A7+/G#</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>A7/G</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>F#7</b></span></p>
+<p class="p8"><span class="s1">Mas chegou<span class="Apple-converted-space">        </span>o carnaval</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>Bm</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>F7</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>E4</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>E</b></span></p>
+<p class="p8"><span class="s1">E ela não<span class="Apple-converted-space">    </span>desfilou</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">     </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>C</b></span><span class="s1"><b> <span class="Apple-converted-space">            </span></b></span><span class="s2"><b>F</b></span></p>
+<p class="p8"><span class="s1">Eu chorei na avenida, eu <span class="Apple-converted-space">  </span>chorei</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s2"><b>Dm</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>E7</b></span><span class="s1"><b> <span class="Apple-converted-space">              </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>E7</b></span></p>
+<p class="p8"><span class="s1">Não pensei que mentia a cabrocha, que eu tanto amei</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>A7+/G#</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>A7/G</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>F#7</b></span></p>
+<p class="p8"><span class="s1">Mas chegou<span class="Apple-converted-space">        </span>o carnaval</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>Bm</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>F7</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>E4</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>E</b></span></p>
+<p class="p8"><span class="s1">E ela não<span class="Apple-converted-space">    </span>desfilou</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">     </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>C</b></span><span class="s1"><b> <span class="Apple-converted-space">            </span></b></span><span class="s2"><b>F</b></span></p>
+<p class="p8"><span class="s1">Eu chorei na avenida, eu <span class="Apple-converted-space">  </span>chorei</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s2"><b>Dm</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>E7</b></span><span class="s1"><b> <span class="Apple-converted-space">              </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>E7</b></span></p>
+<p class="p8"><span class="s1">Não pensei que mentia a cabrocha, que eu tanto amei</span></p>
+</div>
+
+<p style="clear: left; margin-top: 3em">
+    <div>
+        <center>
+            <p class="p2"><br></p>
+            <p class="p2"><br></p>
+            <p class="head1">Coração em Desalinho</p>
+            <p class="head2">(Maria Rita)</p>
+            <p class="p2"><br></p>
+            <p class="p2"><br></p>
+        </center>
+    </div>
+</p>
+
+<div style="float: left; width: 50%;">
+<p class="p11"><span class="s2"><b>G</b></span><span class="s1"><b><span class="Apple-converted-space">            </span></b></span><span class="s2"><b>G5+</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>G6</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>G5+</b></span></p>
+<p class="p11"><span class="s1">Numa estrada dessa vida</span></p>
+<p class="p11"><span class="s2"><b>G</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>E7</b></span></p>
+<p class="p11"><span class="s1">Eu te conheci</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">     </span></b></span><span class="s2"><b>Am7</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>F7</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>E7</b></span></p>
+<p class="p11"><span class="s1">Oh, Flor!</span></p>
+<p class="p11"><span class="s2"><b>Am</b></span><span class="s1"><b> <span class="Apple-converted-space">              </span></b></span><span class="s2"><b>Am5+</b></span></p>
+<p class="p11"><span class="s1">Vinhas tão desiludida</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>Am6</b></span></p>
+<p class="p11"><span class="s1">Mal sucedida</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">               </span></b></span><span class="s2"><b>G</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>G5+</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>G6</b></span><span class="s1"><b> </b></span><span class="s2"><b>D7</b></span></p>
+<p class="p11"><span class="s1">Por um falso amor</span></p>
+<p class="p12"><span class="s1"><br>
+</span></p>
+<p class="p11"><span class="s2"><b>G</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s2"><b>G5+</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>G6</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>G5+</b></span></p>
+<p class="p11"><span class="s1">Dei afeto e carinho</span></p>
+<p class="p11"><span class="s2"><b>G</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s2"><b>G7</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>C7+</b></span></p>
+<p class="p11"><span class="s1">Como retribuição</span></p>
+<p class="p13"><span class="s1"><b>C#m7/5-</b></span><span class="s5"><b> <span class="Apple-converted-space">      </span></b></span><span class="s1"><b>F#7/5+</b></span><span class="s5"><b> </b></span><span class="s1"><b>Bm7</b></span></p>
+<p class="p11"><span class="s1">Procuraste um outro ninho</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">       </span></b></span><span class="s2"><b>C#m7/5-</b></span></p>
+<p class="p11"><span class="s1">Em desalinho</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>F#7</b></span><span class="s1"><b><span class="Apple-converted-space">            </span></b></span><span class="s2"><b>F7</b></span></p>
+<p class="p11"><span class="s1">Ficou o meu coração</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>E7</b></span><span class="s1"><b><span class="Apple-converted-space">            </span></b></span><span class="s2"><b>Am7</b></span><span class="s1"><b> </b></span><span class="s2"><b>D7/9</b></span><span class="s1"><b> </b></span><span class="s2"><b>Bm7</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>E7/9-</b></span></p>
+<p class="p11"><span class="s1">Meu peito agora é só paixão</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">                 </span></b></span><span class="s2"><b>Cm/Eb</b></span><span class="s1"><b> </b></span><span class="s2"><b>D7</b></span><span class="s1"><b> </b></span><span class="s2"><b>G6</b></span></p>
+<p class="p11"><span class="s1">Meu peito agora é só paixão...</span></p>
+</div>
+
+<div style="float: right; width: 50%;">
+<p class="p13"><span class="s1"><b>D7</b></span></p>
+<p class="p11"><span class="s1">Tamanha desilusão</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">   </span></b></span><span class="s2"><b>G6</b></span></p>
+<p class="p11"><span class="s1">Me deste</span></p>
+<p class="p12"><span class="s1"><br>
+</span></p>
+<p class="p11"><span class="s1">Oh, Flor!</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>C7</b></span><span class="s1"><b> </b></span><span class="s2"><b>B7</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>F7</b></span><span class="s1"><b> </b></span><span class="s2"><b>E7</b></span></p>
+<p class="p11"><span class="s1">Me enganei redondamente</span></p>
+<p class="p11"><span class="s2"><b>Am</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>D7</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Ebº</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Em7</b></span></p>
+<p class="p11"><span class="s1">Pensando em te fazer o bem</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">            </span></b></span><span class="s2"><b>A7/9</b></span></p>
+<p class="p11"><span class="s1">Eu me apaixonei</span></p>
+<p class="p13"><span class="s1"><b>Am7</b></span><span class="s5"><b> </b></span><span class="s1"><b>D7/5+</b></span><span class="s5"><b> </b></span><span class="s1"><b>G6</b></span><span class="s5"><b><span class="Apple-converted-space">  </span></b></span><span class="s1"><b>D7</b></span></p>
+<p class="p11"><span class="s1">Foi meu mal</span></p>
+<p class="p12"><span class="s1"><br>
+</span></p>
+<p class="p13"><span class="s5"><b><span class="Apple-converted-space"> </span></b></span><span class="s1"><b>G6</b></span></p>
+<p class="p11"><span class="s1">Agora!</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s2"><b>F#7</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>Bm</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Bm7+</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Bm7</b></span></p>
+<p class="p11"><span class="s1">Uma enorme paixão me devora</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">           </span></b></span><span class="s2"><b>Bm6</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>F7</b></span><span class="s1"><b> </b></span><span class="s2"><b>E7</b></span></p>
+<p class="p11"><span class="s1">Alegria partiu, foi embora</span></p>
+<p class="p11"><span class="s2"><b>Am7</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>Cm6</b></span><span class="s1"><b> </b></span><span class="s2"><b>Bm7</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>E7/9-</b></span></p>
+<p class="p11"><span class="s1">Não sei viver sem teu amor</span></p>
+<p class="p11"><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>A7/9</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>D7/9</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>G6</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>F7</b></span><span class="s1"><b> </b></span><span class="s2"><b>E7</b></span><span class="s1"> (BIS)</span></p>
+<p class="p11"><span class="s1">Sozinho curto a minha dor</span></p>
+</div>
+
+<p style="clear: left; margin-top: 3em">
+    <div>
+        <center>
+            <p class="p2"><br></p>
+            <p class="p2"><br></p>
+            <p class="head1">Ainda É Tempo de Viver Feliz</p>
+            <p class="head2">(Arlindo Cruz)</p>
+            <p class="p2"><br></p>
+            <p class="p2"><br></p>
+        </center>
+    </div>
+</p>
+
+<p class="p8"><span class="s2"><b>C7+</b></span><span class="s1"><b> <span class="Apple-converted-space">                  </span></b></span><span class="s2"><b>F7/9</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>Bm7</b></span><span class="s1"><b> <span class="Apple-converted-space">            </span></b></span><span class="s2"><b>Bm5-/7</b></span><span class="s1"><b> </b></span><span class="s2"><b>E7/9</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>Me cansei de ficar mudo sem tentar,...... sem falar</span></p>
+<p class="p8"><span class="s2"><b>C7+</b></span><span class="s1"><b><span class="Apple-converted-space">                    </span></b></span><span class="s2"><b>F7/9</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>Bm7</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>Bm7/5</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>E7/9</b></span></p>
+<p class="p8"><span class="s1">Mas não posso deixar tudo como está. Como está você?</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s2"><b>C7+</b></span><span class="s1"><b><span class="Apple-converted-space">                    </span></b></span><span class="s2"><b>D7</b></span></p>
+<p class="p8"><span class="s1">Tô vivendo por viver, tô cansada de chorar</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s2"><b>Bm7</b></span><span class="s1"><b><span class="Apple-converted-space">                      </span></b></span><span class="s2"><b>E7/9</b></span></p>
+<p class="p8"><span class="s1">Não sei mais o que fazer, você tem que me ajudar</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s2"><b>Am</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Bm</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Am</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>D7</b></span><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>G</b></span></p>
+<p class="p8"><span class="s1">Tá difícil esquecer, impossível não lembrar vocêêê...</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>Dm</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s2"><b>G7/9</b></span></p>
+<p class="p8"><span class="s1">E você como está?</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s2"><b>C7+</b></span><span class="s1"><b><span class="Apple-converted-space">                      </span></b></span><span class="s2"><b>D7</b></span></p>
+<p class="p8"><span class="s1">Com o fim do nosso amor, eu também tô por aí</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">               </span></b></span><span class="s2"><b>Bm7</b></span><span class="s1"><b> <span class="Apple-converted-space">                    </span></b></span><span class="s2"><b>E7/9</b></span></p>
+<p class="p8"><span class="s1">Eu não sei pra onde vou, tantas noites sem dormir</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>Am</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>Bm</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>Am</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>D7</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>G</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Dm</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>G7</b></span><span class="s1"><b>*</b></span></p>
+<p class="p8"><span class="s1">Alivia minha dor, e faça por favor...sorrir</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s2"><b>C7+</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>D7</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>G</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>G7</b></span></p>
+<p class="p8"><span class="s1">Vem pros meus braços meu amor, meu acalanto<span class="Apple-converted-space"> </span></span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">            </span></b></span><span class="s2"><b>C7+</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s2"><b>D7</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Dm7</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>G7</b></span></p>
+<p class="p8"><span class="s1">Leva esse pranto pra bem longe de nós dois<span class="Apple-converted-space">          </span>REFRÃO</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">           </span></b></span><span class="s2"><b>C7+</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>D7</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>Bm5-/7</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>E7/9</b></span></p>
+<p class="p8"><span class="s1">Não deixe nada pra depois, é a saudade que me diz</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">           </span><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Am7/9</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>D7</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>G</b></span><span class="s1"><b> </b></span><span class="s2"><b>Dm</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>G7</b></span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p8"><span class="s1">Que ainda é tempo pra viver feliz...canta<span class="Apple-converted-space"> </span></span></p>
+<p class="p9"><span class="s1"></span><br></p>
+    <div>
+        <center>
+            <p class="p2"><br></p>
+            <p class="p2"><br></p>
+            <p class="head1">Feitio de Paixão</p>
+            <p class="head2">(Jorge Aragão)</p>
+            <p class="p2"><br></p>
+        </center>
+    </div>
+</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>F7M</b></span></p>
+<p class="p16"><span class="s1">Queria o prazer do amor</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>A7</b></span></p>
+<p class="p16"><span class="s1">Assim desejando estou</span></p>
+<p class="p17"><span class="s1"><b>D7</b></span></p>
+<p class="p16"><span class="s1">Só vou sossegar</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space"> </span></b></span><span class="s2"><b>Gm</b></span><span class="s1"><b> <span class="Apple-converted-space">                </span></b></span><span class="s2"><b>Gm</b></span><span class="s1"><b> - </b></span><span class="s2"><b>G#m</b></span><span class="s1"><b> - </b></span><span class="s2"><b>Am</b></span><span class="s1"><b> - </b></span><span class="s2"><b>Bbm</b></span></p>
+<p class="p16"><span class="s1">Quando te conquistar</span></p>
+<p class="p16"><span class="s1"><span class="Apple-converted-space">                   </span></span><span class="s2"><b>C#7</b></span><span class="s1"><span class="Apple-converted-space">                  </span>2x</span></p>
+<p class="p16"><span class="s1">Botar todas cartas vou</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space">   </span></b></span><span class="s2"><b>Fm</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s2"><b>F7</b></span></p>
+<p class="p16"><span class="s1">Na mesa pra decidir</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>Bbm</b></span><span class="s1"><b> <span class="Apple-converted-space">            </span></b></span><span class="s2"><b>C7</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Fm</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>C7</b></span></p>
+<p class="p16"><span class="s1">Quem sabe lutando vou conseguir</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Fm</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s2"><b>F7</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Bbm</b></span></p>
+<p class="p16"><span class="s1">Sem conseguir, joguei búzios para tê-la sem favor</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Eb7</b></span><span class="s1"><b> <span class="Apple-converted-space">                    </span></b></span><span class="s2"><b>Ab7M</b></span></p>
+<p class="p16"><span class="s1">Sem conseguir, fiz feitiço para ganhar o teu amor<span class="Apple-converted-space">    </span>2x</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>F7</b></span><span class="s1"><b><span class="Apple-converted-space">                    </span></b></span><span class="s2"><b>Bbm</b></span></p>
+<p class="p16"><span class="s1">Sem conseguir, tomei banho de arruda pra fluir</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space">    </span></b></span><span class="s2"><b>C#7</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>C7</b></span><span class="s1"><b><span class="Apple-converted-space">            </span></b></span><span class="s2"><b>Fm</b></span><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>C7</b></span></p>
+<p class="p16"><span class="s1">Do corpo todo mal sem conseguir</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space"> </span></b></span><span class="s2"><b>F7M</b></span><span class="s1"><b> <span class="Apple-converted-space">                </span></b></span><span class="s2"><b>Am</b></span><span class="s1"><b> <span class="Apple-converted-space">                    </span></b></span><span class="s2"><b>Cm</b></span></p>
+<p class="p16"><span class="s1">Sem subornar teu coração, com feitio de paixão</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>D7</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Gm</b></span><span class="s1"><b> <span class="Apple-converted-space">              </span></b></span><span class="s2"><b>Gm</b></span><span class="s1"><b> - </b></span><span class="s2"><b>G#m</b></span><span class="s1"><b> - </b></span><span class="s2"><b>Am</b></span><span class="s1"><b> - </b></span><span class="s2"><b>Bbm</b></span></p>
+<p class="p16"><span class="s1">Farei tudo pra ganhar tua confiança</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>C#7</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Fm</b></span></p>
+<p class="p16"><span class="s1">Com a esperança de aprendiz</span></p>
+<p class="p16"><span class="s1"><b><span class="Apple-converted-space">      </span></b></span><span class="s2"><b>F7</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>C#7</b></span><span class="s1"><b> </b></span><span class="s2"><b>C7</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>F</b></span></p>
+<p class="p16"><span class="s1">Juro que vou te fazer feeeeliz.</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+    <div>
+        <center>
+            <p class="p2"><br></p>
+            <p class="p2"><br></p>
+            <p class="head1">Ex-Amor</p>
+            <p class="head2">(Martinho da Vila)</p>
+            <p class="p2"><br></p>
+        </center>
+    </div>
+<p class="p18"><span class="s1"></span><br></p>
+<p class="p12"><span class="s1">Intro: </span><span class="s6"><b>Em</b></span></p>
+<p class="p12"><span class="s1"><br>
+</span></p>
+<p class="p19"><span class="s1"><b>Em</b></span><span class="s3"> </span><span class="s1"><b>E7</b></span><span class="s3"> </span><span class="s1"><b>Am</b></span></p>
+<p class="p12"><span class="s1">Ex - amor</span></p>
+<p class="p19"><span class="s3"><span class="Apple-converted-space">      </span></span><span class="s1"><b>F#m7/5-</b></span><span class="s3"> </span><span class="s1"><b>B7</b></span><span class="s3"><span class="Apple-converted-space">  </span></span><span class="s1"><b>Em</b></span></p>
+<p class="p12"><span class="s1">Gostaria tu<span class="Apple-converted-space">  </span>sou..besses</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">             </span></span><span class="s6"><b>E7<span class="Apple-converted-space">    </span></b></span><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s6"><b>Am</b></span></p>
+<p class="p12"><span class="s1">O quanto que eu so..fri</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">                   </span></span><span class="s6"><b>B7</b></span><span class="s1"> <span class="Apple-converted-space">    </span></span><span class="s6"><b>Em</b></span></p>
+<p class="p12"><span class="s1">Ao ter que me afastar de ti</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">         </span></span><span class="s6"><b>B7</b></span></p>
+<p class="p12"><span class="s1">Não chorei<span class="Apple-converted-space"> </span></span></p>
+<p class="p19"><span class="s1"><b>Em</b></span><span class="s3"><span class="Apple-converted-space">  </span></span><span class="s1"><b>E7</b></span><span class="s3"> </span><span class="s1"><b>Am</b></span></p>
+<p class="p12"><span class="s1">Não chorei</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">             </span></span><span class="s6"><b>F#m7/5-</b></span><span class="s1"> </span><span class="s6"><b>B7</b></span><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s6"><b>Em</b></span></p>
+<p class="p12"><span class="s1">Como louco eu até <span class="Apple-converted-space">  </span>so..rri</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">             </span></span><span class="s6"><b>E7 <span class="Apple-converted-space">  </span></b></span><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s6"><b>Am</b></span></p>
+<p class="p12"><span class="s1">Mas no fundo só eu sei</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">               </span></span><span class="s6"><b>B7</b></span><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s6"><b>Em</b></span><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s6"><b>E7</b></span></p>
+<p class="p12"><span class="s1">Das angústias que senti</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s6"><b>Am</b></span><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s6"><b>F#m7/5-</b></span><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s6"><b>B7</b></span></p>
+<p class="p12"><span class="s1">sempre sonhamos com o mais eterno amor</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">       </span></span><span class="s6"><b>Em</b></span><span class="s1"> <span class="Apple-converted-space">        </span></span><span class="s6"><b>B7</b></span><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6"><b>Em</b></span></p>
+<p class="p12"><span class="s1">Infelizmente eu lamento mas nao deu</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s6"><b>F#m7/5-</b></span><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s6"><b>B7</b></span></p>
+<p class="p12"><span class="s1">Nos desgastamos transformando tudo em dor</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6"><b>Em</b></span><span class="s1"> <span class="Apple-converted-space">        </span></span><span class="s6"><b>B7</b></span><span class="s1"> <span class="Apple-converted-space">        </span></span><span class="s6"><b>Em</b></span><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s6"><b>E7</b></span></p>
+<p class="p12"><span class="s1">Mas mesmo assim eu acredito que valeu</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6"><b>Am</b></span><span class="s1"> <span class="Apple-converted-space">                    </span></span><span class="s6"><b>F#m7/5-</b></span></p>
+<p class="p12"><span class="s1">Quando a saudade bate forte é envolvente</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">         </span></span><span class="s6"><b>B7</b></span><span class="s1"><span class="Apple-converted-space">                  </span></span><span class="s6"><b>Em</b></span></p>
+<p class="p12"><span class="s1">Eu me possuo e é na sua intençao</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">             </span></span><span class="s6"><b>Am</b></span><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6"><b>D7</b></span><span class="s1"> <span class="Apple-converted-space">          </span></span><span class="s6"><b>G7M</b></span><span class="s1"> <span class="Apple-converted-space">    </span></span><span class="s6"><b>C7M</b></span></p>
+<p class="p12"><span class="s1">Com a minha culpa naqueles momentos quentes</span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6"><b>F#m7/5-</b></span><span class="s1"> <span class="Apple-converted-space">      </span></span><span class="s6"><b>B7</b></span><span class="s1"> <span class="Apple-converted-space">    </span></span><span class="s6"><b>Em</b></span></p>
+<p class="p12"><span class="s1">Em que se acelerava o meu cora...ção<span class="Apple-converted-space"> </span></span></p>
+<p class="p12"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s6"><b>B7</b></span></p>
+<p class="p12"><span class="s1">Ex amor...</span></p>
+<p class="p20"><span class="s1"></span><br></p>
+    <div>
+        <center>
+            <p class="p2"><br></p>
+            <p class="p2"><br></p>
+            <p class="head1">Não Deixe o Samba Morrer</p>
+            <p class="head2">(Alcione)</p>
+            <p class="p2"><br></p>
+        </center>
+    </div>
+<p class="p21"><span class="s5">intro: </span><span class="s1"><b>Bm</b></span><span class="s5"><b> </b></span><span class="s1"><b>C#m7/b5</b></span><span class="s5"><b> </b></span><span class="s1"><b>F#7</b></span></p>
+<p class="p22"><span class="s1"></span><br></p>
+<p class="p23"><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Bm</b></span><span class="s1"><b><span class="Apple-converted-space">            </span></b></span><span class="s2"><b>B7</b></span><span class="s1"><b> <span class="Apple-converted-space">                  </span></b></span><span class="s2"><b>Em</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Em/D</b></span></p>
+<p class="p23"><span class="s1">Quando eu não puder pisar mais na avenida</span></p>
+<p class="p8"><span class="s2"><b>C#m7/b5</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s2"><b>F#7</b></span><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s2"><b>Bm</b></span></p>
+<p class="p8"><span class="s1">Quando as minhas pernas não puderem aguentar</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Em</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s2"><b>D7+</b></span></p>
+<p class="p8"><span class="s1">Levar meu corpo junto com meu samba</span></p>
+<p class="p8"><span class="s2"><b>G7+</b></span><span class="s1"><b><span class="Apple-converted-space">            </span></b></span><span class="s2"><b>C#m7/b5</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>F#7</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Bm</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space"> </span>O meu anel de bamba entrego a quem mereça usar (2x)</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">         </span></b></span><span class="s2"><b>Em</b></span><span class="s1"><b> <span class="Apple-converted-space">    </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b><span class="Apple-converted-space">                </span></b></span><span class="s2"><b>D7+</b></span></p>
+<p class="p8"><span class="s1">Eu vou ficar no meio do povo espiando</span></p>
+<p class="p8"><span class="s2"><b>C#m7/b5</b></span><span class="s1"><b><span class="Apple-converted-space">        </span></b></span><span class="s2"><b>B7</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>Em</b></span></p>
+<p class="p8"><span class="s1">Minha escola perdendo ou ganhando</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space"> </span></b></span><span class="s2"><b>A</b></span><span class="s1"><b> <span class="Apple-converted-space">          </span></b></span><span class="s2"><b>D7+</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>C#m7/b5</b></span><span class="s1"><b><span class="Apple-converted-space">  </span></b></span><span class="s2"><b>B7</b></span></p>
+<p class="p8"><span class="s1">Mais um carnaval</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space"> </span></b></span><span class="s2"><b>Em</b></span><span class="s1"><b><span class="Apple-converted-space">              </span></b></span><span class="s2"><b>A</b></span></p>
+<p class="p8"><span class="s1">Antes de me despedir</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space"> </span></b></span><span class="s2"><b>D7+</b></span><span class="s1"><b><span class="Apple-converted-space">                    </span></b></span><span class="s2"><b>Bm</b></span></p>
+<p class="p8"><span class="s1">Deixo ao sambista mais novo</span></p>
+<p class="p8"><span class="s2"><b>G</b></span><span class="s1"><b> <span class="Apple-converted-space">        </span></b></span><span class="s2"><b>F#7</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>Bm</b></span><span class="s1"><b> <span class="Apple-converted-space">  </span></b></span><span class="s2"><b>B7</b></span><span class="s1"><b> (</b></span><span class="s2"><b>F#7</b></span><span class="s1"><b>)</b></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space"> </span>O meu pedido final <span class="Apple-converted-space">    </span>(2x)</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p8"><span class="s1">(refrão 2x)</span></p>
+<p class="p8"><span class="s2"><b>Bm</b></span><span class="s1"><b><span class="Apple-converted-space">          </span></b></span><span class="s2"><b>B7</b></span><span class="s1"><b> <span class="Apple-converted-space">      </span></b></span><span class="s2"><b>Em</b></span><span class="s1"><b> </b></span><span class="s2"><b>Em/D</b></span></p>
+<p class="p8"><span class="s1">Não deixe o samba morrer</span></p>
+<p class="p13"><span class="s1"><b>C#m7/b5</b></span><span class="s5"><b> <span class="Apple-converted-space">    </span></b></span><span class="s1"><b>F#7</b></span><span class="s5"><b><span class="Apple-converted-space">      </span></b></span><span class="s1"><b>Bm</b></span></p>
+<p class="p8"><span class="s1">Não deixe o samba acabar</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">                     </span></b></span><span class="s2"><b>C#m7/b5</b></span></p>
+<p class="p8"><span class="s1">O morro foi feito de samba</span></p>
+<p class="p8"><span class="s1"><b><span class="Apple-converted-space">   </span></b></span><span class="s2"><b>F#7</b></span><span class="s1"><b> <span class="Apple-converted-space">              </span></b></span><span class="s2"><b>Bm</b></span></p>
+<p class="p8"><span class="s1">De samba pra gente sambar (2x)</span></p>
+<p class="p20"><span class="s1"></span><br></p>
 </body>
 </html>
