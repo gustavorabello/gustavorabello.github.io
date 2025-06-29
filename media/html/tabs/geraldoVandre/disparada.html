@@ -230,12 +230,13 @@ Mas o mundo foi rodando nas patas do meu cavalo
 <span class="chord">E</span> nos sonhos que fui sonhando, as visões se clareando
       <span class="chord">B7</span>        <span class="chord">Em</span>      <span class="chord">C</span>        <span class="chord">Am</span>    <span class="chord">D</span>   <span class="chord">G</span>
 As visões se clareando, até que um dia acordei
+
+    <span class="chord">D</span>              <span class="chord">G</span>    <span class="chord">D</span>               <span class="chord">G</span>
+Então não pude seguir valente em lugar tenente
         </pre>
       </div>
       <div class="col">
         <pre>
-    <span class="chord">D</span>              <span class="chord">G</span>    <span class="chord">D</span>               <span class="chord">G</span>
-Então não pude seguir valente em lugar tenente
    <span class="chord">C</span>             <span class="chord">Bm</span>   <span class="chord">C</span>       <span class="chord">Am</span>     <span class="chord">D</span>     <span class="chord">G</span>
 <span class="chord">E</span> dono de gado e gente, porque gado a gente marca
         <span class="chord">B7</span>            <span class="chord">Em</span>     <span class="chord">C</span>       <span class="chord">Am</span>     <span class="chord">D</span>   <span class="chord">G</span>
@@ -291,15 +292,6 @@ Do dono de uma boiada   cujo vaqueiro morreu
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -341,7 +333,8 @@ Do dono de uma boiada   cujo vaqueiro morreu
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

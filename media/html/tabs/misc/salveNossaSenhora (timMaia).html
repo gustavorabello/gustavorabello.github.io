@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 Intro: <span class="chord">E</span> <span class="chord">A</span> <span class="chord">E</span> <span class="chord">A</span>
-<br/>
+
 <span class="chord">E</span>              <span class="chord">A</span>
 Salve Nossa Senhora
 <span class="chord">E</span>                <span class="chord">A</span>
@@ -205,30 +203,30 @@ Salve o Nosso Senhor do Bom Fim
 Atendeu minha promessa
             <span class="chord">B</span>           <span class="chord">E</span>
 <span class="chord">E</span> trouxe Rosinha pra mim
-<br/>
+
     <span class="chord">A</span>            <span class="chord">B</span>
 Os anjos dizem amém
     <span class="chord">G#</span>              <span class="chord">A</span>
 Eu canto e rezo também
-<br/>
+
 <span class="chord">E</span> <span class="chord">A</span> <span class="chord">E</span> <span class="chord">A</span>
-<br/>
+
 <span class="chord">E</span>              <span class="chord">A</span>
 Salve Nossa Senhora
-<span class="chord">E</span>              <span class="chord">A</span><br/>
+<span class="chord">E</span>              <span class="chord">A</span>
 Salve o Nosso Senhor do Bom Fim
-<span class="chord">E</span>                 <span class="chord">A</span><br/>
+<span class="chord">E</span>                 <span class="chord">A</span>
 Atendeu minha promessa
-            <span class="chord">B</span>           <span class="chord">E</span><br/>
+            <span class="chord">B</span>           <span class="chord">E</span>
 <span class="chord">E</span> trouxe Rosinha pra mim
-<br/>
+
     <span class="chord">A</span>            <span class="chord">B</span>
 É procisão, romaria
-    <span class="chord">G#</span>              <span class="chord">A</span><br/>
-É sol no céu da Bahia<br/>
+    <span class="chord">G#</span>              <span class="chord">A</span>
+É sol no céu da Bahia
 <span class="chord">E</span>              <span class="chord">A</span>
 Salve, salve...
-<br/>
+
       </pre>
     </div>
     
@@ -245,15 +243,6 @@ Salve, salve...
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -296,7 +285,8 @@ Salve, salve...
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

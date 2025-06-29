@@ -243,10 +243,6 @@ Sem nenhuma ilusão
 Tinha sido maltratado
 
 (refrão)
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
                  <span class="chord">Dm</span>
 Tudo se transformou
                <span class="chord">Bb/D</span>
@@ -257,6 +253,10 @@ Você que me faz feliz
 Você que me faz cantar, assim...
           <span class="chord">Dm</span>
 Na na na na...
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
                      <span class="chord">Bb/D</span>
 Na na na na na na na...
                      <span class="chord">C</span>
@@ -333,15 +333,6 @@ Ainda bem
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -383,7 +374,8 @@ Ainda bem
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

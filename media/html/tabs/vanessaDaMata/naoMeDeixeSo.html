@@ -241,12 +241,12 @@ Não vou mais querer ninguém,
            <span class="chord">F#m</span>            <span class="chord">G7M</span>
 Agora que sei quem me faz bem.
 
+       <span class="chord">F#m</span>
+Não me deixe só,
         </pre>
       </div>
       <div class="col">
         <pre>
-       <span class="chord">F#m</span>
-Não me deixe só,
                   <span class="chord">Bm7</span>
 Que eu saio na capoeira,
                        <span class="chord">F#m7</span>
@@ -313,15 +313,6 @@ Ahhhh... ahhhhh
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -363,7 +354,8 @@ Ahhhh... ahhhhh
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

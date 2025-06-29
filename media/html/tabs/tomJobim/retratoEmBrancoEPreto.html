@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 [Intro:] <span class="chord">Cm7</span> <span class="chord">Cm6</span> <span class="chord">Bb7M</span> <span class="chord">Bb6</span> <span class="chord">A7(13)</span> <span class="chord">D7(#9)</span>
-<br/>
+
  <span class="chord">Gm</span>                           <span class="chord">D/F#</span>
 Já conheço os passos dessa estrada,
                        <span class="chord">Fm</span>            <span class="chord">E</span>        <span class="chord">Eb7M(#5)</span> <span class="chord">Eb7M(6)</span>
@@ -213,7 +211,7 @@ Desse amor que eu nego tanto, evito tanto
 Com seus mesmos tristes velhos fatos
        <span class="chord">Eb7M</span>         <span class="chord">Cm(7M)</span>        <span class="chord">Ebm7</span>   <span class="chord">D7</span> <span class="chord">Gm</span>  <span class="chord">Am7(b5)</span> <span class="chord">D7</span>
 Que num álbum de retratos eu teimo em colecionar
-<br/>
+
  <span class="chord">Gm</span>                         <span class="chord">D/F#</span>
 Lá vou eu de novo como um tolo,
                   <span class="chord">Fm</span>         <span class="chord">E</span>        <span class="chord">Eb7M(#5)</span> <span class="chord">Eb7M(6)</span>
@@ -250,15 +248,6 @@ Vou colecionar mais um soneto, outro retrato em branco e preto
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -301,7 +290,8 @@ Vou colecionar mais um soneto, outro retrato em branco e preto
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -292,10 +292,6 @@ Com seus moinhos de vento
 
 Solo: <span class="chord">Dm7</span>  <span class="chord">F9</span>  <span class="chord">Bb6(11+)</span>  <span class="chord">Gm7(9)</span>  <span class="chord">Bb6(11+)</span>  <span class="chord">D9(11)</span>
 
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
 Parte 1 de 8
 <span class="chord">E</span>|------------------------------------------x--------
 <span class="chord">B</span>|8h10------10------10p8------8h10--10------x--10----
@@ -307,6 +303,10 @@ Parte 1 de 8
 Parte 2 de 8
 <span class="chord">E</span>|-----3--3-----------------------------------x------
 <span class="chord">B</span>|6----6--6--6--------------------6p5--6------6------
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 <span class="chord">G</span>|5----5--5--5-----------------5-------5------5------
 <span class="chord">D</span>|3----3-----3---------3--5/7----------5------5------
 <span class="chord">A</span>|-----------------3h5------------------------x------
@@ -417,15 +417,6 @@ Riff Introdução:
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -467,7 +458,8 @@ Riff Introdução:
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

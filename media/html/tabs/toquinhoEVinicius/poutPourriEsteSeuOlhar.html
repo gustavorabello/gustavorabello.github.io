@@ -227,12 +227,12 @@ Pra fazer feliz a quem se ama
 Muita calma pra pensar
           <span class="chord">A7(b13)</span> <span class="chord">D7(9)</span>
 <span class="chord">E</span> ter tempo pra sonhar
+               <span class="chord">Dm7(b5)</span>
+Da janela vê-se o Corcovado
         </pre>
       </div>
       <div class="col">
         <pre>
-               <span class="chord">Dm7(b5)</span>
-Da janela vê-se o Corcovado
        <span class="chord">Fm6</span>
 O Redentor que lindo
 <span class="chord">Am6</span>
@@ -284,15 +284,6 @@ Se todos fossem no mundo iguais a você
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -334,7 +325,8 @@ Se todos fossem no mundo iguais a você
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

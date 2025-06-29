@@ -193,21 +193,18 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 e|-----8----8----8----8---8--6--------------|
 <span class="chord">B</span>|-----9----9----9----9--------9-8----------|
 <span class="chord">G</span>|--10----9----8----7---6-------------------|
 <span class="chord">D</span>|------------------------------------------|
 <span class="chord">A</span>|------------------------------------------|
 <span class="chord">E</span>|------------------------------------------|
-<br/>
-<br/>
+
 <span class="chord">F</span>       <span class="chord">Bbm</span>          
 Michelle,   ma belle  
 <span class="chord">Eb</span>                   <span class="chord">Dº</span>  <span class="chord">Bº</span>      <span class="chord">C</span>   <span class="chord">Db</span>    <span class="chord">C</span>     <span class="chord">C7</span> 
 These are words that go together well, my Michelle
-<br/>
+
 <span class="chord">F</span>       <span class="chord">Bbm</span>          
 Michelle,   ma belle, 
 <span class="chord">Eb</span>                <span class="chord">Dº</span>      <span class="chord">Bº</span>     <span class="chord">C</span>       <span class="chord">Db</span>           <span class="chord">C</span>      <span class="chord">C7</span> 
@@ -231,7 +228,7 @@ I need to, I need to, I need to, I need to make you see
 Oh what you mean to me
   <span class="chord">Fm</span>    riff 1                 <span class="chord">Db</span>    <span class="chord">C</span>     <span class="chord">Db</span>       
 Until I do I'm hoping you will know what I mean
-<br/>
+
 <span class="chord">C</span>      <span class="chord">F</span>  <span class="chord">Bbm</span>   <span class="chord">Eb</span>  <span class="chord">Dº</span> <span class="chord">Bº</span> <span class="chord">C</span>  <span class="chord">Db</span> <span class="chord">C</span> <span class="chord">C7</span>         
 I love youuuuuuuuuuuuuu   (solo)
       </pre>
@@ -250,15 +247,6 @@ I love youuuuuuuuuuuuuu   (solo)
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -301,7 +289,8 @@ I love youuuuuuuuuuuuuu   (solo)
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

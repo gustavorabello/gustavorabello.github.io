@@ -216,12 +216,13 @@ Samba,    soprado por muitos ares
 Atravessaste os sete mares…       com evolução
 <span class="chord">Bm7(b5)</span>     <span class="chord">E7/9</span>-       <span class="chord">Am7</span>              <span class="chord">F7/9</span>
 O teu ritmo quente torna ainda mais ardente
-<span class="chord">G7+</span>            <span class="chord">Cm6</span>          <span class="chord">G7+</span>
-Quando vem da alma de nossa gente
         </pre>
       </div>
       <div class="col">
         <pre>
+<span class="chord">G7+</span>            <span class="chord">Cm6</span>          <span class="chord">G7+</span>
+Quando vem da alma de nossa gente
+
 <span class="chord">G7+</span>                           <span class="chord">Am7</span>
 Eu quero que sejas sempre meu amigo leal
 <span class="chord">D7/9</span>             <span class="chord">G7+</span>     <span class="chord">F#7(13-)</span>
@@ -257,15 +258,6 @@ Eu canto pra esquecer a nostalgia
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -308,7 +300,8 @@ Eu canto pra esquecer a nostalgia
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

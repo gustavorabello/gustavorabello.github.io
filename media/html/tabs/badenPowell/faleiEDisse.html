@@ -193,7 +193,40 @@
     
     <div class="singlecol">
       <pre>
-
+<span class="chord">Bb</span>      <span class="chord">Dbº</span>     <span class="chord">Cm</span>         <span class="chord">F7</span>     <span class="chord">Cm</span> 
+Mulher,      se Deus não criasse você 
+<span class="chord">F7(b13)</span>          <span class="chord">Bbº</span>      <span class="chord">Bb</span> 
+Ele prórpio custava a crer 
+<span class="chord">A7</span>         <span class="chord">Dm</span>             <span class="chord">E7</span>   <span class="chord">Am</span>
+Mas só que tem que não dá pé você 
+          <span class="chord">Gm7</span>   <span class="chord">C7/9</span>             <span class="chord">C7</span>               
+Ser a mulher de quem Vinícius falou 
+   <span class="chord">F7</span>       <span class="chord">Bb</span> 
+Formosa não faz assim 
+  <span class="chord">A7</span>        <span class="chord">Dm</span> 
+Carinho não é ruim 
+      <span class="chord">Eb</span>   <span class="chord">Eº</span>      <span class="chord">Bb</span>          <span class="chord">Gm</span> 
+Eu avisei bem, não faça ingratidão 
+      <span class="chord">Cm7</span>     <span class="chord">F7</span>       <span class="chord">Fm7</span>                <span class="chord">G7</span> 
+Porque eu também sei dançar conforme a canção. 
+    <span class="chord">Cm7</span> <span class="chord">F7</span>   <span class="chord">Fm7</span>         <span class="chord">G7</span> 
+<span class="chord">E</span> quem vai embora agora sou eu 
+  <span class="chord">Cm7</span> <span class="chord">F7</span>            <span class="chord">Bb</span> 
+Adeus pra quem já me esqueceu 
+<span class="chord">F7</span> 
+Tá acabada essa parada 
+              <span class="chord">Bb</span>                        
+<span class="chord">E</span> agora cada qual no seu lugar 
+<span class="chord">Fm7</span>               <span class="chord">Bb7</span>         <span class="chord">Eb</span> 
+Não tem nada se a jogada dela 
+                              
+É ver a lua em vez de um lar  
+<span class="chord">Eb</span>          <span class="chord">Eº</span>        <span class="chord">Bb</span> 
+Teresa é um nome de mulher 
+<span class="chord">G7</span>               <span class="chord">C7</span> 
+Ah, que pena que me dá 
+                  <span class="chord">Cm7</span>      <span class="chord">F7</span> 
+Ela não ser mais Teresa mulher
       </pre>
     </div>
     
@@ -210,15 +243,6 @@
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -261,7 +285,8 @@
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

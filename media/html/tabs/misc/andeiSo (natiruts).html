@@ -191,9 +191,8 @@
       </div>
     </div>
     
-    <div class="columns">
-      <div class="col">
-        <pre>
+    <div class="singlecol">
+      <pre>
 <span class="chord">C#m</span>                     <span class="chord">G#m7</span>
    Preciso demonstrar pra ela
 <span class="chord">F#m7</span>                <span class="chord">B</span>
@@ -226,10 +225,6 @@ Me deu um beijo e foi embora
 Não vi mais a gata mais tenho a minha gaita
      <span class="chord">C#m</span>     <span class="chord">G#m7</span>  <span class="chord">F#m7</span>  <span class="chord">B</span>
 Pra me consolar
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
 <span class="chord">C#m</span>   <span class="chord">G#m7</span>   <span class="chord">F#m7</span>          <span class="chord">B</span>
 An___dei só       pela noite
 <span class="chord">C#m</span>                   <span class="chord">A7M</span>              <span class="chord">F#m7</span>   <span class="chord">B</span>
@@ -240,8 +235,7 @@ An___dei só       pela noite
    Cantei um verso daquele velho samba pra lua
 <span class="chord">C#m</span>   <span class="chord">G#m7</span>   <span class="chord">F#m7</span>          <span class="chord">B</span>
 An___dei só       pela noite
-        </pre>
-      </div>
+      </pre>
     </div>
     
   </div>
@@ -257,15 +251,6 @@ An___dei só       pela noite
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -308,7 +293,8 @@ An___dei só       pela noite
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

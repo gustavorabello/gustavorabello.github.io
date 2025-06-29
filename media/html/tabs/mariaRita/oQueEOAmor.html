@@ -193,7 +193,43 @@
     
     <div class="singlecol">
       <pre>
+Intro: <span class="chord">F7M</span> <span class="chord">G7</span> <span class="chord">C7M</span> <span class="chord">E7</span> <span class="chord">Am7</span> <span class="chord">Em7</span> <span class="chord">Bm7(5b)</span> <span class="chord">E7</span>
 
+<span class="chord">Am(9)</span>   <span class="chord">Am7M</span>   <span class="chord">Am7(9)</span>   <span class="chord">Am6(9)</span>          
+..Se perguntar o que é o amor pra mim, 
+<span class="chord">Dm7</span>             <span class="chord">Bm7(5b)</span>      <span class="chord">E7(b13)</span>
+não sei responder, Não sei explicar
+<span class="chord">Am(9)</span>   <span class="chord">Am7M</span>   <span class="chord">Am7(9)</span>   <span class="chord">Am6(9)</span>          
+Mas sei que o amor nasceu dentro de mim, 
+<span class="chord">Dm7</span>          <span class="chord">E7</span>   <span class="chord">Em7(5b)</span>   <span class="chord">A7(b13)</span>
+me fez renascer, me fez despertar
+             <span class="chord">Dm7</span>                   <span class="chord">G7</span>               <span class="chord">C6(9)</span>    
+Me disseram uma vez, que o danado do amor, pode ser fatal, 
+ <span class="chord">F7M</span>    <span class="chord">Bm7(5b)</span> <span class="chord">E7(9b)</span>     <span class="chord">A7M</span> <span class="chord">A6</span>
+dor sem ter remedio pra curar
+             <span class="chord">Dm7</span>                   <span class="chord">G7</span>          
+Me disseram tambem, Que o amor faz o bem, 
+    <span class="chord">C7M</span>        <span class="chord">F7M</span> 
+<span class="chord">E</span> que vence o mau
+            <span class="chord">F#º</span>                   <span class="chord">Bm7(5b)</span>   <span class="chord">E7</span>   <span class="chord">A7</span>   
+Até hoje ninguem conseguiu definir o que é o amor
+                   <span class="chord">A7</span>                <span class="chord">D7(9)</span>
+Quando a gente ama, brilha mais que o sol
+<span class="chord">F7M</span>      <span class="chord">G7</span>   <span class="chord">C7M</span> <span class="chord">E7</span>         <span class="chord">Am7(9)</span>      
+É muita luz, é emoção, O amor
+                <span class="chord">A7</span>              <span class="chord">D7(9)</span>        
+Quando a gente ama, é o clarão do luar, 
+
+<span class="chord">Dm7</span>         <span class="chord">G7</span>       <span class="chord">Am7</span>    <span class="chord">E7</span>   <span class="chord">Am7</span>
+Que vem abençoar, O nosso amor 
+                   <span class="chord">A7</span>                <span class="chord">D7(9)</span>
+Quando a gente ama, brilha mais que o sol
+<span class="chord">F7M</span>      <span class="chord">G7</span>     <span class="chord">C7M</span> <span class="chord">E7</span>           <span class="chord">Am7(9)</span>      
+É muita luz, é emoção, O amor
+              <span class="chord">A7</span>                <span class="chord">D7(9)</span>            
+Quando a gente ama, é o clarão do luar, 
+   <span class="chord">Dm7</span>         <span class="chord">G7</span>       <span class="chord">Am7</span>    <span class="chord">E7</span>       <span class="chord">Am7</span>
+Que vem .......abençoar, O nosso amor 
       </pre>
     </div>
     
@@ -210,15 +246,6 @@
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -261,7 +288,8 @@
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

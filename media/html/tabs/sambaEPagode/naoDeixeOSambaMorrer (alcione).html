@@ -193,10 +193,38 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 intro: <span class="chord">Bm</span> <span class="chord">C#m7/b5</span> <span class="chord">F#7</span>
-<br/>
+
+  <span class="chord">Bm</span>            <span class="chord">B7</span>                   <span class="chord">Em</span>  <span class="chord">Em/D</span>
+Quando eu não puder pisar mais na avenida
+<span class="chord">C#m7/b5</span>           <span class="chord">F#7</span>                <span class="chord">Bm</span>
+Quando as minhas pernas não puderem aguentar
+          <span class="chord">Em</span>   <span class="chord">A</span>              <span class="chord">D7+</span>
+Levar meu corpo junto com meu samba
+<span class="chord">G7+</span>            <span class="chord">C#m7/b5</span>          <span class="chord">F#7</span>          <span class="chord">Bm</span>
+ O meu anel de bamba entrego a quem mereça usar (2x)
+         <span class="chord">Em</span>     <span class="chord">A</span>                <span class="chord">D7+</span>
+Eu vou ficar no meio do povo espiando
+<span class="chord">C#m7/b5</span>        <span class="chord">B7</span>          <span class="chord">Em</span>
+Minha escola perdendo ou ganhando
+ <span class="chord">A</span>           <span class="chord">D7+</span>  <span class="chord">C#m7/b5</span>  <span class="chord">B7</span>
+Mais um carnaval
+ <span class="chord">Em</span>              <span class="chord">A</span>
+Antes de me despedir
+ <span class="chord">D7+</span>                    <span class="chord">Bm</span>
+Deixo ao sambista mais novo
+<span class="chord">G</span>         <span class="chord">F#7</span>   <span class="chord">Bm</span>   <span class="chord">B7</span> (<span class="chord">F#7</span>)
+ O meu pedido final     (2x)
+
+(refrão 2x)
+<span class="chord">Bm</span>          <span class="chord">B7</span>       <span class="chord">Em</span> <span class="chord">Em/D</span>
+Não deixe o samba morrer
+<span class="chord">C#m7/b5</span>     <span class="chord">F#7</span>      <span class="chord">Bm</span>
+Não deixe o samba acabar
+                     <span class="chord">C#m7/b5</span>
+O morro foi feito de samba
+   <span class="chord">F#7</span>               <span class="chord">Bm</span>
+De samba pra gente sambar (2x)
       </pre>
     </div>
     
@@ -213,15 +241,6 @@ intro: <span class="chord">Bm</span> <span class="chord">C#m7/b5</span> <span cl
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -264,7 +283,8 @@ intro: <span class="chord">Bm</span> <span class="chord">C#m7/b5</span> <span cl
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

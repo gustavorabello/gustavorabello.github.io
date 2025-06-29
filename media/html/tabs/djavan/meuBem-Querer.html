@@ -191,13 +191,12 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
 [intro]: <span class="chord">G7M(#11)</span>    <span class="chord">F#4</span>  <span class="chord">F#</span>  <span class="chord">C7M(#11)</span>    <span class="chord">B4</span>  <span class="chord">B</span>  <span class="chord">F7M(#11)</span>
 <span class="chord">E4</span>  <span class="chord">E</span>  <span class="chord">F7M(#11)</span>    <span class="chord">E4</span>  <span class="chord">E</span>  <span class="chord">A</span>    <span class="chord">D/A</span>    <span class="chord">A7M</span>    <span class="chord">D/A</span>
-<br/>
+
 <span class="chord">A</span>              <span class="chord">D/A</span>                    <span class="chord">A</span>
 Meu bem-querer      é segre|---do, é sagra---do
              <span class="chord">D/A</span>                <span class="chord">A</span>     <span class="chord">D/A</span>
@@ -206,20 +205,24 @@ Está sacramentado em meu co---ração
 Meu bem-querer      tem um quê de peca---do
         <span class="chord">D/A</span>            <span class="chord">A</span>      <span class="chord">E7/G#</span>
 Acari-ciado  pela e|---moção
-<br/>
+
 <span class="chord">F#m7</span>                  <span class="chord">C#m7</span>
 Meu  bem-querer,  meu      en---can--to
 <span class="chord">D</span>                  <span class="chord">Dm6</span>       <span class="chord">C#/D</span>
   Tô  sofren---do, tan----to
-<br/>
+
  <span class="chord">C#m7/G#</span>          <span class="chord">Fº</span>           <span class="chord">Eº</span>
 Amor        o que é o   sofrer
    <span class="chord">D#m7(b5)</span>       <span class="chord">Dm6</span>            <span class="chord">A/C#</span> <span class="chord">A/B</span> <span class="chord">A</span>* <span class="chord">A/F#</span>
 Pa---------ra mim     que estou
-<br/>
+
   <span class="chord">E7(4)</span>                <span class="chord">A</span>       <span class="chord">D/A</span>    <span class="chord">A</span>    <span class="chord">D/A</span>
 Jurado  pra morrer de amor
-<br/>
+
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 <span class="chord">A</span>              <span class="chord">D/A</span>                    <span class="chord">A</span>
 Meu bem-querer      é segre|---do, é sagra---do
              <span class="chord">D/A</span>                <span class="chord">A</span>     <span class="chord">D/A</span>
@@ -228,22 +231,23 @@ Está sacramentado em meu co---ração
 Meu bem-querer      tem um quê de peca---do
         <span class="chord">D/A</span>            <span class="chord">A</span>      <span class="chord">E7/G#</span>
 Acari-ciado  pela e|---moção
-<br/>
+
 <span class="chord">F#m7</span>                  <span class="chord">C#m7</span>
 Meu  bem-querer,  meu      en---can--to
 <span class="chord">D</span>                  <span class="chord">Dm6</span>       <span class="chord">C#/D</span>
   Tô  sofren---do, tan----to
-<br/>
+
  <span class="chord">C#m7/G#</span>          <span class="chord">Fº</span>           <span class="chord">Eº</span>
 Amor        o que é o   sofrer
    <span class="chord">D#m7(b5)</span>       <span class="chord">Dm6</span>            <span class="chord">A/C#</span> <span class="chord">A/B</span> <span class="chord">A</span>* <span class="chord">A/F#</span>
 Pa---------ra mim     que estou
-<br/>
+
   <span class="chord">E7(4)</span>                <span class="chord">Bb7M(#11)</span>    <span class="chord">A4</span>  <span class="chord">A</span>***  <span class="chord">C7M(#11)</span>
 Jurado  pra morrer de amor
-<br/>
+
 <span class="chord">B4</span>  <span class="chord">B</span>  <span class="chord">F7M(#11)</span>    <span class="chord">E4</span>  <span class="chord">E</span>  <span class="chord">F7M(#11)</span>    <span class="chord">E4</span>  <span class="chord">E</span>
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -259,15 +263,6 @@ Jurado  pra morrer de amor
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -310,7 +305,8 @@ Jurado  pra morrer de amor
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

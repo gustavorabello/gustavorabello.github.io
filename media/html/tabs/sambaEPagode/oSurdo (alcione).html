@@ -222,14 +222,14 @@
  Mais lhe machuque
                   <span class="chord">Eb7</span>
  Pois pelo seu batuque
-                    <span class="chord">C7</span>                   <span class="chord">Fm</span>
- Eu dou fim ao meu pranto e começo a cantar
-  <span class="chord">C7</span>
-
         </pre>
       </div>
       <div class="col">
         <pre>
+                    <span class="chord">C7</span>                   <span class="chord">Fm</span>
+ Eu dou fim ao meu pranto e começo a cantar
+  <span class="chord">C7</span>
+
       <span class="chord">Fm</span>                      <span class="chord">Bbm</span>
  Meu surdo bato forte no seu couro
                      <span class="chord">Eb7</span>
@@ -269,15 +269,6 @@ coração
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -320,7 +311,8 @@ coração
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

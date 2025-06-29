@@ -221,6 +221,7 @@ Tem gente que vai e quer ficar
       </div>
       <div class="col">
         <pre>
+
               <span class="chord">E/F#</span>
 Tem gente que veio só olhar
                <span class="chord">Bm7</span>        <span class="chord">Bbm7</span>
@@ -257,15 +258,6 @@ O trem que chega é o mesmo trem da partida
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -308,7 +300,8 @@ O trem que chega é o mesmo trem da partida
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

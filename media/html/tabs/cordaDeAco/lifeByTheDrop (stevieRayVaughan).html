@@ -194,6 +194,14 @@
     <div class="columns">
       <div class="col">
         <pre>
+Intro:
+-------------------------------------------------------------|
+-------------------------------------------------------------|
+-----------0-----------------0h2-0-----------------------2---|
+-----0-1-2---2-0h1p0---0-----------2-1-0---0h1p0---0-----2---|
+0--3-----------------3---3-0-------------3-------3---3-0-0---|
+-------------------------------------------------------------|
+
 <span class="chord">A</span>           <span class="chord">E</span>
 Hello there my old friend
 <span class="chord">F#m</span>                    <span class="chord">D</span>
@@ -212,16 +220,17 @@ that's how it happened livin' life by the drop
 
 <span class="chord">A</span>                       <span class="chord">E</span>
 Up and down the road in our worn out shoes
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 <span class="chord">F#m</span>                           <span class="chord">D</span>
 Talkin' 'bout good things and singin' the blues
 <span class="chord">A</span>                     <span class="chord">E</span>
 You went your way and I stayed behind
 <span class="chord">F#m</span>                        <span class="chord">D</span>
 We both knew it was just a matter or time
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
+
 <span class="chord">F#m</span>                      <span class="chord">D</span>         <span class="chord">E</span>
 You're livin' out dreams of you on top
 <span class="chord">F#m</span>                  <span class="chord">D</span>              <span class="chord">E</span>
@@ -262,15 +271,6 @@ that's how it happened livin' life by the drop
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -313,7 +313,8 @@ that's how it happened livin' life by the drop
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -191,9 +191,8 @@
       </div>
     </div>
     
-    <div class="columns">
-      <div class="col">
-        <pre>
+    <div class="singlecol">
+      <pre>
 <span class="chord">Bm</span>                  <span class="chord">B/A</span>                     <span class="chord">E7/Ab</span>
    O primeiro me chegou Como quem vem do florista
           <span class="chord">G6</span>         <span class="chord">F#7/4(9)</span>              <span class="chord">F#7(b9)</span>          <span class="chord">Bm</span>
@@ -221,10 +220,7 @@ Vasculhou minha gave___ta Me chamava de perdida
 Me encontrou tão desarmada Que arranhou meu coração
                      <span class="chord">E7/Ab</span>          <span class="chord">G6</span>       <span class="chord">F#7(b13)</span>  <span class="chord">Bm</span>
 Mas não me entregava nada   <span class="chord">E</span>, assustada, eu disse    não
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
+
 <span class="chord">B/A</span> / / <span class="chord">E7/Ab</span> / / <span class="chord">G6</span> / <span class="chord">F#7(b13)</span> <span class="chord">Bm</span> /
 
                  <span class="chord">B/A</span>                    <span class="chord">E7/Ab</span>
@@ -239,8 +235,7 @@ Se deitou na minha cama  <span class="chord">E</span> me chama de mulher
 Foi chegando sorrateiro <span class="chord">E</span> antes que  eu dissesse não
                        <span class="chord">E7/Ab</span>         <span class="chord">G6</span>     <span class="chord">F#7(b13)</span>  <span class="chord">Bm</span>
 Se instalou feito um posseiro Dentro do meu cora_____cão
-        </pre>
-      </div>
+      </pre>
     </div>
     
   </div>
@@ -256,15 +251,6 @@ Se instalou feito um posseiro Dentro do meu cora_____cão
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -307,7 +293,8 @@ Se instalou feito um posseiro Dentro do meu cora_____cão
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

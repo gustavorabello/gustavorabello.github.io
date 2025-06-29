@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
   <span class="chord">Bb</span>      <span class="chord">D7/9</span>-           <span class="chord">Am7/5</span>-   <span class="chord">D7</span>     <span class="chord">Gm7</span>
 Quem é você, adivinha se go...   sta  de mim
         <span class="chord">Gm/F</span>      <span class="chord">Gm/E</span>  <span class="chord">A7/13</span>-   <span class="chord">Dm</span>  <span class="chord">Dm/C</span>      <span class="chord">Bm7/5</span>-      <span class="chord">E7</span>      <span class="chord">Cm7</span>  <span class="chord">F7</span>
@@ -203,7 +201,6 @@ Hoje os dois mascara... dos procuram seus namorados perguntando assim
 Quem é você, diga logo que eu que...    ro saber o seu jogo
          <span class="chord">Gm/E</span> <span class="chord">A7/13</span>-  <span class="chord">Dm</span>       <span class="chord">Dm/C</span>           <span class="chord">Bm7/5</span>-   <span class="chord">E7</span>      <span class="chord">Cm7</span>        <span class="chord">F7</span>
 Que eu que... ro morrer no seu bloco, que eu que...    ro me arder no seu fogo
-<br/>
 
     <span class="chord">Bb</span>               <span class="chord">D7/9</span>- 
 Eu sou seresteiro, poeta e cantor
@@ -221,7 +218,6 @@ Eu, modéstia à parte, nasci prá sambar
 Eu sou tão menina, meu tempo passou
     <span class="chord">C</span>                <span class="chord">Cm7/5</span>-    <span class="chord">F7</span>
 Eu sou colombina, eu sou pierrô
-<br/>
 
     <span class="chord">Bb</span>      <span class="chord">D7/9</span>-                  <span class="chord">Am7/5</span>-  <span class="chord">D7</span>   <span class="chord">Gm7</span>
 Mas é carnaval, não me diga mais quem...   é você
@@ -249,15 +245,6 @@ Seja o que Deus quiser, seja você quem for, seja o que Deus quiser
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -300,7 +287,8 @@ Seja o que Deus quiser, seja você quem for, seja o que Deus quiser
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

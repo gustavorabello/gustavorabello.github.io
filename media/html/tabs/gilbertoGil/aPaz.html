@@ -193,7 +193,42 @@
     
     <div class="singlecol">
       <pre>
+Intro 4x:     <span class="chord">Bm7</span>            <span class="chord">E7</span>
 
+Pré-refrão:        <span class="chord">Gm6</span>
+
+  <span class="chord">A7M</span>          <span class="chord">F#m7</span>              <span class="chord">Bm7</span>           <span class="chord">E7</span>
+<span class="chord">A</span> paz     invadiu      o meu coração     de repente
+             <span class="chord">A7M</span>              <span class="chord">F#m7</span>                      <span class="chord">Bm7</span>
+Me encheu de paz        como  se       o vento de um tufão
+     <span class="chord">E7</span>                     <span class="chord">C7M</span>             <span class="chord">Am7</span>                  <span class="chord">Bm7</span>     <span class="chord">E7</span>
+Arrancasse os meus pés do chão     onde eu já    não me enterro mais
+
+  <span class="chord">A7M</span>             <span class="chord">F#m7</span>             <span class="chord">Bm7</span>
+<span class="chord">A</span> paz     fez um mar      da revolução
+    <span class="chord">E7</span>                 <span class="chord">A7M</span>             <span class="chord">F#m7</span>                   <span class="chord">Bm7</span>
+Invadir  meu destino a paz        como aquela    grande explosão
+       <span class="chord">E7</span>               <span class="chord">C7M</span>            <span class="chord">Am7</span>              <span class="chord">Bm7</span>     <span class="chord">Gm6</span>
+De uma bomba sobre o Japão     fez nascer    o Japão na paz
+
+Dedilhado refrão:         <span class="chord">C7M</span>                      <span class="chord">F#m7</span>            <span class="chord">F#m6</span>
+
+      <span class="chord">C7M</span>                   <span class="chord">Am7</span>                       <span class="chord">Bm7</span>           <span class="chord">Gm6</span>
+Eu pensei em mim      eu pensei em    ti    eu cho---rei  por nós
+            <span class="chord">C7M</span>                  <span class="chord">Am7</span>                           <span class="chord">Bm7</span>    <span class="chord">E7</span>
+Que contradição     só  a guerra faz        nosso  am---or em paz
+
+   <span class="chord">A7M</span>           <span class="chord">F#m7</span>                    <span class="chord">Bm7</span>             <span class="chord">E7</span>
+Eu vim     vim parar      na beira do cais     onde a estrada
+           <span class="chord">A7M</span>                <span class="chord">F#m7</span>                  <span class="chord">Bm7</span>
+Chegou ao fim         onde o fim      da tarde é lilás
+       <span class="chord">E7</span>               <span class="chord">C7M</span>          <span class="chord">Am7</span>               <span class="chord">Bm7</span>    <span class="chord">E7</span>
+Onde o mar arrebenta em mim      o lamento de tantos ''ais''
+
+( <span class="chord">Bm7</span>  <span class="chord">A/B</span>  <span class="chord">Em</span>  <span class="chord">F#m</span>  <span class="chord">Bm7</span>  <span class="chord">A/B</span>  <span class="chord">Em</span>  <span class="chord">Gm6</span> )
+
+  <span class="chord">A7M</span>
+<span class="chord">A</span> paz...
       </pre>
     </div>
     
@@ -210,15 +245,6 @@
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -261,7 +287,8 @@
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

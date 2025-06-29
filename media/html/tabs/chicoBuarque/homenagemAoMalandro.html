@@ -226,6 +226,7 @@ Aposentou a navalha, tem mulher e filho e tralha e tal
       </div>
       <div class="col">
         <pre>
+
 <span class="chord">C#m7(b5)</span> <span class="chord">Dm7(b5)</span> <span class="chord">D#m7(b5)</span> <span class="chord">Em7(b5)</span>          <span class="chord">A7(b13)</span> <span class="chord">D7(13)</span>
 Di   ...   zem    as      más línguas que ele até trabalha,
          <span class="chord">D7(b13)</span>     <span class="chord">Dm7</span>  <span class="chord">G7(b9)</span>     <span class="chord">C7M(9)</span>
@@ -269,15 +270,6 @@ Mora lá longe e chacoalha num trem da Central
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -319,7 +311,8 @@ Mora lá longe e chacoalha num trem da Central
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

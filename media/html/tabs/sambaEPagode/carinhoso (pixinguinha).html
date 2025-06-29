@@ -191,10 +191,9 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
 Primeira Parte:
          <span class="chord">G</span>  <span class="chord">G5+</span>  <span class="chord">G6</span>
 Meu coração
@@ -204,7 +203,7 @@ Não sei por quê
 Bate feliz
  <span class="chord">Bm5+</span>      <span class="chord">Bm</span>  <span class="chord">Bm5+</span>  <span class="chord">Bm6</span>
 Quando te vê
-<br/>
+
 Segunda Parte:
 <span class="chord">B7</span>        <span class="chord">Em7</span>    <span class="chord">A7(13)</span>   <span class="chord">D6(9)</span>
 <span class="chord">E</span> os meus olhos ficam sorrindo
@@ -212,19 +211,23 @@ Segunda Parte:
 <span class="chord">E</span> pelas ruas   vão te seguindo
              <span class="chord">A7(13)</span> <span class="chord">D/C</span>    <span class="chord">G/B</span>  <span class="chord">Eb7</span>  <span class="chord">D7</span>  <span class="chord">G6(9)</span>
 Mas mesmo assim,        foges de mim
-<br/>
+
 Terceira parte:
               <span class="chord">Bm7</span>                         <span class="chord">Em</span>
 Ah, se tu soubesses como eu sou tão carinhoso
              <span class="chord">F#7</span>           <span class="chord">Bm7</span>
 <span class="chord">E</span> o muito e muito que te quero
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
        <span class="chord">Bb7</span>   <span class="chord">D/A</span>  <span class="chord">Bm7</span>
 <span class="chord">E</span> como é sincero o meu amor
            <span class="chord">E7/G#</span>       <span class="chord">A/G</span>          <span class="chord">D/F#</span>
 Eu sei que tu não fugirias mais de mim
  <span class="chord">Fm7</span>   <span class="chord">Am/E</span>    <span class="chord">D7</span>      <span class="chord">G</span>
 Vem,    vem,    vem,    vem
-<br/>
+
 Quarta parte:
                 <span class="chord">F#</span>  <span class="chord">F#/E</span>   <span class="chord">F#7/C#</span>   <span class="chord">A#º</span>  <span class="chord">Am7</span>
 Vem sentir o calor dos    lá_______bios meus
@@ -238,10 +241,11 @@ Que me devora o coração
 <span class="chord">E</span> só assim, então
         <span class="chord">Am7</span>   <span class="chord">D7</span>               <span class="chord">G</span>
 Serei feliz,            bem feliz
-<br/>
+
 Final: <span class="chord">G</span>  <span class="chord">G7</span>  <span class="chord">C/G</span>  <span class="chord">Cm/G</span>
        <span class="chord">G</span>  <span class="chord">Bbm6</span>  <span class="chord">Am7</span>  <span class="chord">Ab7M</span>  <span class="chord">G7M(6)</span>
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -257,15 +261,6 @@ Final: <span class="chord">G</span>  <span class="chord">G7</span>  <span clas
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -308,7 +303,8 @@ Final: <span class="chord">G</span>  <span class="chord">G7</span>  <span clas
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

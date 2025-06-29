@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 [intro]:  <span class="chord">C</span>   <span class="chord">Cm6</span>   <span class="chord">Bm7</span>   <span class="chord">E7(9)</span>    <span class="chord">A7</span>   <span class="chord">Am7</span>  <span class="chord">D7(#5)</span>
                   
         <span class="chord">G</span>           <span class="chord">F#7</span>
@@ -205,7 +203,7 @@ Um poeta todos choram
 Vivo tranqüilo em Mangueira porque
 <span class="chord">A7</span>                       <span class="chord">Am7</span>             <span class="chord">D7(#5)</span>
 Sei que alguém há de chorar quando eu morrer
-<br/>
+
        <span class="chord">Am7</span>           <span class="chord">D7</span>          <span class="chord">Am7</span>      <span class="chord">D7</span>
 Mas o pranto em Mangueira é tão diferente
        <span class="chord">G</span>         <span class="chord">Am7</span>        <span class="chord">Bm7</span>
@@ -230,15 +228,6 @@ Através de um pandeiro ou de um tamborim
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -281,7 +270,8 @@ Através de um pandeiro ou de um tamborim
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

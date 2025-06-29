@@ -226,10 +226,52 @@ Deixar tudo no lugar 
 Você que nunca sambou 
      <span class="chord">D7</span>            <span class="chord">Gm</span> 
 Se liga, tem que sambar 
+
+<span class="chord">Gm</span>   <span class="chord">F</span>       <span class="chord">F7</span>      <span class="chord">Bb</span> 
+Vem ver, meu povo cantar 
+<span class="chord">Eb7</span>   <span class="chord">D7</span>              <span class="chord">Gm</span> 
+Vem ver, meu samba é assim 
+<span class="chord">Gm</span>    <span class="chord">F</span>          <span class="chord">F7</span>    <span class="chord">Bb</span> 
+Aaaaaamor, você pode provar 
+<span class="chord">Eb7</span>    <span class="chord">D7</span>                  <span class="chord">Gm</span> 
+Mas deixe um pouquinho pra mim 
         </pre>
       </div>
       <div class="col">
         <pre>
+
+ <span class="chord">Gm</span>    
+Meu samba tem muito axé 
+                        <span class="chord">F</span> 
+Quer ver, vem dizer no pé 
+                    
+Escute o som do tantã 
+                    <span class="chord">Bb</span> 
+Tem samba até de manhã 
+
+Pra curar o desamor  
+                 <span class="chord">F</span> 
+<span class="chord">E</span> a tristeza afastar 
+                <span class="chord">Eb</span> 
+Você que nunca sambou 
+   <span class="chord">D7</span>             <span class="chord">Gm</span> 
+Se liga tem que sambar 
+     <span class="chord">D7</span>          <span class="chord">Gm</span> 
+Meu samba é de arerê 
+                       <span class="chord">F</span> 
+Quem samba não quer parar 
+                 
+Na hora do vamo vê 
+                       <span class="chord">Bb</span>   
+Meu samba é ruim de aturar 
+
+Tem o dom de resolver 
+                  <span class="chord">F</span> 
+Deixar tudo no lugar 
+                 <span class="chord">Eb</span> 
+Você que nunca sambou 
+     <span class="chord">D7</span>            <span class="chord">Gm</span> 
+Se liga, tem que sambar 
 <span class="chord">Gm</span>   <span class="chord">F</span>       <span class="chord">F7</span>      <span class="chord">Bb</span> 
 Vem ver, meu povo cantar 
 <span class="chord">Eb7</span>   <span class="chord">D7</span>              <span class="chord">Gm</span> 
@@ -255,15 +297,6 @@ Mas deixe um pouquinho pra mim 
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -306,7 +339,8 @@ Mas deixe um pouquinho pra mim 
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

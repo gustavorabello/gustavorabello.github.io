@@ -245,6 +245,10 @@ Couplet 3 
 Ma candeur et mes 20 ans  
  <span class="chord">Em</span>              <span class="chord">F#</span> 
 Avaient su t'émouvoir 
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
                   <span class="chord">Bm</span> 
 Je te couvrais de fleurs 
                  <span class="chord">Bm(maj7)</span> 
@@ -254,10 +258,6 @@ J'ai vu des nuages noirs 
                   <span class="chord">E</span> 
 J'ai senti la froideur 
  
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
 Couplet 4 
 <span class="chord">A</span>                <span class="chord">C#m</span> 
 Mes rires et mes larmes 
@@ -323,15 +323,6 @@ Refrain (2x)
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -373,7 +364,8 @@ Refrain (2x)
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

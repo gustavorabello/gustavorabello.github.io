@@ -231,6 +231,7 @@ Pra essa moça me fazer feliz
       </div>
       <div class="col">
         <pre>
+
 <span class="chord">Am7</span>                  <span class="chord">F#m7(b5)</span>
    <span class="chord">E</span> foi assim que eu vi
 <span class="chord">Fm6</span>                <span class="chord">C7M(9)</span>   <span class="chord">E7(b9)</span>
@@ -273,15 +274,6 @@ Nem margarida     nasceu
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -323,7 +315,8 @@ Nem margarida     nasceu
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">A7M</span>        <span class="chord">F#7(b13)</span>           <span class="chord">Bm7(11)</span>   <span class="chord">E7(9)</span>
 <span class="chord">A</span>   sua lembran_____ça me dói tan_______to 
    <span class="chord">Em7(9)</span>        <span class="chord">A7(9)</span>    <span class="chord">G#m7(b5)</span>          <span class="chord">C#7</span>
@@ -203,7 +201,7 @@ Eu can____to pra ver  se espan______to esse mal
     Mas só sei dizer           Um verso banal
 <span class="chord">D7M</span>          <span class="chord">Dm6</span>        <span class="chord">G#m7(b5)</span>           <span class="chord">C#7</span>
 Fala em você Canta você É        sempre igual
-<br/>
+
   <span class="chord">F#m7</span>       <span class="chord">F#7(b13)</span>         <span class="chord">Bm7(11)</span>   <span class="chord">E7(9)</span>
 Sobrou desse nos______so desencon_______tro
    <span class="chord">Em7(9)</span>         <span class="chord">A7(9)</span>    <span class="chord">G#m7(b5)</span>       <span class="chord">C#7</span>
@@ -212,7 +210,7 @@ Um com_____to de amor  Sem pon_______to final
     Retrato sem cor           Jogado aos meus pés
   <span class="chord">D7M</span>             <span class="chord">Dm6</span>              <span class="chord">G#m7(b5)</span>      <span class="chord">C#7</span>
 <span class="chord">E</span> saudades fúteis Saudades frágeis Me______ros papéis
-<br/>
+
     <span class="chord">F#m7</span>     <span class="chord">F#7(b13)</span>          <span class="chord">Bm7(11)</span>   <span class="chord">E7(9)</span>
 Não sei se você      ainda é a mes_______ma
          <span class="chord">Em7(9)</span>     <span class="chord">A7(9)</span>       <span class="chord">C#7</span>         <span class="chord">C#7/G#</span>
@@ -221,7 +219,7 @@ Ou se cortou   os cabe___los Rasgou o que é meu
 Se ainda tem sauda___des e so_____fre como eu
    <span class="chord">A7M</span>        <span class="chord">F#7(b13)</span>   <span class="chord">Bm7(9)</span>         <span class="chord">E7(b9)</span>           <span class="chord">A6</span>
 Ou tudo já passou     Já tem   um novo amor   Já me esqueceu
-<br/>
+
 <span class="chord">D7(9)</span> / / / <span class="chord">A6</span> / / / <span class="chord">D7(9)</span> / / / <span class="chord">C#7M(9)</span> / / / / / / /
       </pre>
     </div>
@@ -239,15 +237,6 @@ Ou tudo já passou     Já tem   um novo amor   Já me esqueceu
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -290,7 +279,8 @@ Ou tudo já passou     Já tem   um novo amor   Já me esqueceu
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

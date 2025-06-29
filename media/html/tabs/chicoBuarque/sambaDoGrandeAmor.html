@@ -216,14 +216,14 @@ Com meu coração de fiador
 Hoje eu tenho apenas uma pedra no meu peito
 <span class="chord">Bb6</span>       <span class="chord">A7</span>           <span class="chord">Gm6/Bb</span>           <span class="chord">A7</span>
 Exijo respeito, não sou mais um sonhador
- <span class="chord">Dm7</span>                <span class="chord">Fm6</span>   <span class="chord">Em7</span>               <span class="chord">A7(4)</span> <span class="chord">A7</span>
-Chego a mudar de calçada quando aparece uma flor
- <span class="chord">D7(9)</span>          <span class="chord">G7(13)</span>   <span class="chord">C6</span>    <span class="chord">G7(b13)</span>
-<span class="chord">E</span> dou risada do grande amor, mentira
         </pre>
       </div>
       <div class="col">
         <pre>
+ <span class="chord">Dm7</span>                <span class="chord">Fm6</span>   <span class="chord">Em7</span>               <span class="chord">A7(4)</span> <span class="chord">A7</span>
+Chego a mudar de calçada quando aparece uma flor
+ <span class="chord">D7(9)</span>          <span class="chord">G7(13)</span>   <span class="chord">C6</span>    <span class="chord">G7(b13)</span>
+<span class="chord">E</span> dou risada do grande amor, mentira
 <span class="chord">C7M</span>          <span class="chord">Em7/B</span>        <span class="chord">Gm6/Bb</span>
 Fui muito fiel, comprei anel
             <span class="chord">F7(b13)</span>/A        <span class="chord">Gm6/Bb</span> <span class="chord">A7</span> <span class="chord">Gm6/Bb</span> <span class="chord">A7</span>
@@ -258,15 +258,6 @@ De subir a pé o Redentor
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -309,7 +300,8 @@ De subir a pé o Redentor
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

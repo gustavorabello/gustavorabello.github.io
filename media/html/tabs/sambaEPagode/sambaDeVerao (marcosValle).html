@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">F7M</span>
 Você viu só que amor, nunca vi coisa assim
 <span class="chord">Bm7(b5)</span>              <span class="chord">E7(b13)</span>
@@ -203,12 +201,12 @@ Você viu só que amor, nunca vi coisa assim
 Se voltar, vou atrás, vou pedir, vou falar
 <span class="chord">Bbm6</span>                 <span class="chord">Eb7(9)</span>
 Vou dizer que o amor foi feitinho pra dar.
-<br/>
+
 <span class="chord">Am7</span>      <span class="chord">D7(b9)</span>       <span class="chord">Gm7</span>    <span class="chord">Em7(b5)</span>        <span class="chord">A7/5</span>+       <span class="chord">Dm7(9)</span>
  Olha,     é como o verão,     quente o coração,
            <span class="chord">G7</span>         <span class="chord">Gm7</span>     <span class="chord">C#7/9</span>    <span class="chord">C7(b9)</span>
 Salta de repente para ver a menina que vem
-<br/>
+
 <span class="chord">F7M</span>
 Ela vem, sempre tem esse mar no olhar
 <span class="chord">Bm7(b5)</span>                 <span class="chord">E7(b13)</span>
@@ -217,12 +215,12 @@ Ela vem, sempre tem esse mar no olhar
 Hoje sim, diz que sim, já cansei de esperar
 <span class="chord">Bbm6</span>                  <span class="chord">Eb7(9)</span>
 Nem parei, nem dormi, só pensando em lhe dar
-<br/>
+
 <span class="chord">Am7</span>     <span class="chord">D7(b9)</span>      <span class="chord">G7(13)</span>  <span class="chord">G7(13-)</span>  <span class="chord">C7(9)</span>  <span class="chord">C7(9-)</span>
   Peço,  mas você não vem,                bem
 <span class="chord">F7M</span>                   <span class="chord">Bb7</span>                   <span class="chord">F</span>    <span class="chord">C7(b9)</span>
 Deixo, então falo só, digo ao céu, mas você vem
-<br/>
+
  <span class="chord">F7M</span>
 Samba de Verão
       </pre>
@@ -241,15 +239,6 @@ Samba de Verão
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -292,7 +281,8 @@ Samba de Verão
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

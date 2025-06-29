@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 Intro 2x: <span class="chord">Am7</span> <span class="chord">Dm7</span> (<span class="chord">Cm7</span>) <span class="chord">Am7</span>
-<br/>
+
 <span class="chord">A7(b13)</span> <span class="chord">D7(9)</span>             <span class="chord">Am7</span>       <span class="chord">D7(9)</span>              <span class="chord">Am7</span>   <span class="chord">A7(b13)</span>
 Chove chuva, chove sem parar, chove chuva, chove sem parar
                       <span class="chord">D7(9)</span>    <span class="chord">G7</span>            <span class="chord">Am7</span>  <span class="chord">A7(b13)</span>
@@ -227,15 +225,6 @@ Chove chuva, chove sem parar, chove chuva, chove sem parar
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -278,7 +267,8 @@ Chove chuva, chove sem parar, chove chuva, chove sem parar
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

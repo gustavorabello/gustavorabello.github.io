@@ -193,11 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 INTRO:  <span class="chord">Bbm</span> <span class="chord">G#</span> <span class="chord">C7</span> <span class="chord">Fm</span> <span class="chord">Bbm</span> <span class="chord">G#</span> <span class="chord">C7</span> <span class="chord">Fm</span> <span class="chord">C7</span> 
-<br/>
-<br/>
+
 <span class="chord">Fm</span>                        <span class="chord">Eb</span>  
 Depois de uma longa convivência
                 <span class="chord">Db</span>                   <span class="chord">C</span>
@@ -206,7 +203,7 @@ Lhe doeu a consciência, ela se declarou...
 Não, não gosto mais de você
                    <span class="chord">C7</span>                      <span class="chord">Fm</span>  <span class="chord">C7</span>                
 <span class="chord">E</span> pra melhor lhe dizer, eu nunca lhe tive amor
-<br/>
+
 <span class="chord">Fm</span>                        <span class="chord">Eb</span>  
 Depois de uma longa convivência
                 <span class="chord">Db</span>                   <span class="chord">C</span>
@@ -215,7 +212,7 @@ Lhe doeu a consciência, ela se declarou...
 Não, não gosto mais de você
                    <span class="chord">C7</span>                       <span class="chord">Fm</span>                 
 <span class="chord">E</span> pra melhor lhe dizer, eu nunca lhe tive amor
-<br/>
+
           <span class="chord">Eb</span>                           <span class="chord">G#</span>
 Foi para mim, o final de uma triste comédia
                   <span class="chord">C7</span>                        <span class="chord">Fm</span>
@@ -225,9 +222,8 @@ Só rindo lhe agradecia surpresa como eu nada sentisse
                    <span class="chord">Db7</span>         <span class="chord">C7</span>                    <span class="chord">Fm</span>
 <span class="chord">E</span> a convidei que saísse pela porta por onde ela entrou.
  
-<br/>
 ****** REPETIR 2a. PARTE *******
-<br/>
+
           <span class="chord">Eb</span>                           <span class="chord">G#</span>
 Foi para mim, o final de uma triste comédia
                   <span class="chord">C7</span>                        <span class="chord">Fm</span>
@@ -252,15 +248,6 @@ Só rindo lhe agradecia surpresa como eu nada sentisse
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -303,7 +290,8 @@ Só rindo lhe agradecia surpresa como eu nada sentisse
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -234,14 +234,15 @@ Did she hold me when I was out there
 Oh he liked me, does anyone care
 
 Intro: <span class="chord">D</span>  <span class="chord">Bm</span>  <span class="chord">F#m</span>  <span class="chord">G7M</span>  <span class="chord">A7(4)</span>  <span class="chord">C9</span>
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
+
 <span class="chord">D</span>        <span class="chord">Bm</span>               <span class="chord">F#m</span>
   Understand what I've become
     <span class="chord">G7M</span>    <span class="chord">A7(4)</span>  <span class="chord">C9</span>
 It wasn't my   design
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 <span class="chord">D</span>            <span class="chord">Bm</span>
   And people everywhere think
  <span class="chord">F#m</span>       <span class="chord">G7M</span>     <span class="chord">A7(4)</span>  <span class="chord">C9</span>
@@ -305,15 +306,6 @@ Does anyone care
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -355,7 +347,8 @@ Does anyone care
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -216,16 +216,16 @@ bobeira
 
            <span class="chord">Em</span>        <span class="chord">D</span>
 Eu quero é botar meu bloco na rua
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
  <span class="chord">C</span>        <span class="chord">B7</span>
 Brincar, botar pra gemer
            <span class="chord">Em</span>        <span class="chord">D</span>
 Eu quero é botar meu bloco na rua
  <span class="chord">C</span>         <span class="chord">B7</span>
 Gingar, pra dar e vender
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
         <span class="chord">Em</span>                  <span class="chord">D</span>
 Eu, por mim, queria isso e aquilo
                 <span class="chord">C</span>                     <span class="chord">B7</span>
@@ -260,15 +260,6 @@ Gingar, pra dar e vender
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -311,7 +302,8 @@ Gingar, pra dar e vender
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">F#7</span> <span class="chord">Bm7</span>                     <span class="chord">Bm7</span>       <span class="chord">F#7/A#</span>           <span class="chord">Bm7</span>
                Dinheiro na mão é vendaval, é vendaval
                   <span class="chord">F#m7</span>.      <span class="chord">B7</span>                  <span class="chord">Em</span> <span class="chord">Em/G</span>
@@ -205,10 +203,10 @@ Quanta gente aí se engana, e cai da cama
 Com toda a ilusão que sonhou
 <span class="chord">Em/D</span>       <span class="chord">F#7/C#</span> <span class="chord">F#7</span>  <span class="chord">Bm7</span>      <span class="chord">Bm7/A</span>      <span class="chord">G7M</span>
 <span class="chord">E</span> a grandeza se desfaz, quando a solidão é mais
-<br/>
+
    <span class="chord">F#7</span>      <span class="chord">Bm7</span> <span class="chord">F#7</span>
 Alguém já falou
-<br/>
+
 <span class="chord">B7M</span>
 Mas é preciso viver,
    <span class="chord">D#m7</span>         <span class="chord">G#m7</span>        <span class="chord">C#m7</span>
@@ -217,7 +215,7 @@ Mas é preciso viver,
 Quando o jeito é se virar, cada um trata de si,
   <span class="chord">A#7</span>             <span class="chord">D#m7</span> <span class="chord">Dm7</span> <span class="chord">C#m7</span>
 Irmão desconhece irmão, e aí
-<br/>
+
             <span class="chord">F#7</span>        <span class="chord">B7M</span>
 Dinheiro na mão é vendaval,
             <span class="chord">G#7</span>       <span class="chord">C#m7</span> <span class="chord">F#7</span>
@@ -232,7 +230,7 @@ Dinheiro na mão é solução
 <span class="chord">E</span> solidão
       <span class="chord">B7M</span> <span class="chord">G#m7</span> <span class="chord">C#m7</span> <span class="chord">F#7</span>
 <span class="chord">E</span> solidão...
-<a href="https://www.cifraclub.com.br/paulinho-da-viola/"></a><br/>
+
       </pre>
     </div>
     
@@ -249,15 +247,6 @@ Dinheiro na mão é solução
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -300,7 +289,8 @@ Dinheiro na mão é solução
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

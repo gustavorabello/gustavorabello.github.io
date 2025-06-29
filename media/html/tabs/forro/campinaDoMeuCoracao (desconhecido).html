@@ -193,13 +193,11 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">D</span>    <span class="chord">B7</span>     <span class="chord">Em</span>     <span class="chord">A7</span>     <span class="chord">D</span>           <span class="chord">A7</span>
 Lai - a Lai - a La lai - a lai -a lai -a
 <span class="chord">D</span>    <span class="chord">B7</span>     <span class="chord">Em</span>     <span class="chord">A7</span>     <span class="chord">D</span>           <span class="chord">A7</span>
 Lai - a Lai - a La lai - a lai -a lai -a
-<br/>
+
 <span class="chord">D</span>                                                                                         <span class="chord">B7</span>                    <span class="chord">Em</span>
 Sei que muito breve eu vou dar adeus, vou dar adeus a borborema
 <span class="chord">Em</span> (7M)                                            <span class="chord">Em7</span>                  <span class="chord">A7</span>                                     <span class="chord">D</span>              <span class="chord">A7</span>
@@ -208,19 +206,17 @@ vou por esse mundo de meu Deus não tem problema, não tem problema
 deixo pra rainha da borborema um poema uma canção
 <span class="chord">Em</span> (7M)                                  <span class="chord">Em7</span>     <span class="chord">A7</span>                                     <span class="chord">D</span>            <span class="chord">B7</span>
 adeus Campina Grande meu amor, adeus Campina do meu coração
-<br/>
+
 <span class="chord">Em</span>                  <span class="chord">A7</span>     <span class="chord">D</span>                     <span class="chord">B7</span>  <span class="chord">Em</span>                                         <span class="chord">B7</span>                           <span class="chord">Em</span>
 Vou me separar de quem tanto amei, vou levar saudade da cidade que eu mais gostei
 <span class="chord">Em</span>                                               <span class="chord">A7</span>                                       <span class="chord">Em</span>                                                          <span class="chord">A7</span>
 Só não digo no dia da despedida, que na hora da partida tem alguém que vai chorar de dor
-<br/>
-<br/>
+
 <span class="chord">D</span>                              <span class="chord">B7</span>               <span class="chord">Em</span>        <span class="chord">A7</span>                                             <span class="chord">D</span>              <span class="chord">A7</span>
 Adeus Campina Grande eu já vou,        adeus Campina Grande meu amor 
 <span class="chord">D</span>                              <span class="chord">B7</span>               <span class="chord">Em</span>        <span class="chord">A7</span>                                            <span class="chord">D</span>
 Adeus Campina Grande eu já vou,        adeus Campina Grande meu amor 
-<br/>
-<br/>
+
 <span class="chord">D</span>    <span class="chord">B7</span>     <span class="chord">Em</span>     <span class="chord">A7</span>     <span class="chord">D</span>           <span class="chord">A7</span>
 Lai - a Lai - a La lai - a lai -a lai -a
 <span class="chord">D</span>    <span class="chord">B7</span>     <span class="chord">Em</span>     <span class="chord">A7</span>     <span class="chord">D</span>           <span class="chord">A7</span>
@@ -241,15 +237,6 @@ Lai - a Lai - a La lai - a lai -a lai -a ... já me vou
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -292,7 +279,8 @@ Lai - a Lai - a La lai - a lai -a lai -a ... já me vou
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

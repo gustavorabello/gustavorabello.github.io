@@ -191,10 +191,9 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
   <span class="chord">C</span>               <span class="chord">G</span>              <span class="chord">Am</span>
 Slip inside the eye of your mind
             <span class="chord">E7</span>            <span class="chord">F</span>    <span class="chord">G</span>
@@ -207,13 +206,12 @@ You said that you'd never been
 But all the things that you've seen
             <span class="chord">C</span>    <span class="chord">Am</span>  <span class="chord">G/B</span>
 Slowly fade away
-<br/>
-<br/>
+
  <span class="chord">F</span>            <span class="chord">Fm</span>                 <span class="chord">C</span>
 So I start a revolution from my bed
 <span class="chord">F</span>                      <span class="chord">Fm</span>               <span class="chord">C</span>
 'Cause you said the brains I have went to my head
-<br/>
+
   <span class="chord">F</span>               <span class="chord">Fm</span>                <span class="chord">C</span>
 Step outside the summertime's in bloom
   <span class="chord">G</span>
@@ -222,8 +220,7 @@ Stand up beside the fireplace
 Take that look from off your face
  <span class="chord">Am</span>                 <span class="chord">G</span>                <span class="chord">F</span>             <span class="chord">G</span>   <span class="chord">G7</span>
 Cos you ain't ever going to burn my heart ouuuuuuuuuut
-<br/>
-<br/>
+
  <span class="chord">C</span>  <span class="chord">G</span>         <span class="chord">Am</span>         <span class="chord">E7</span>            <span class="chord">F</span>
 So Sally can wait, she knows it's too late
           <span class="chord">G</span>          <span class="chord">C</span>  <span class="chord">Am</span>  <span class="chord">G/B</span>
@@ -232,7 +229,7 @@ As we're walking on by
 Her soul slides away, but don't look back in anger
 <span class="chord">G</span>            <span class="chord">C</span>  <span class="chord">G</span>  <span class="chord">Am</span>  <span class="chord">E7</span>  <span class="chord">F</span>  <span class="chord">G</span>  <span class="chord">C</span>  <span class="chord">Am</span>  <span class="chord">G/B</span>
 I heard you say
-<br/>
+
  <span class="chord">C</span>               <span class="chord">G</span>              <span class="chord">Am</span>
 Take me to the place where you go
        <span class="chord">E7</span>      <span class="chord">F</span>    <span class="chord">G</span>
@@ -245,7 +242,11 @@ Please don't put your life in the hands
 Of a Rock and Roll band
                     <span class="chord">C</span>    <span class="chord">Am</span>  <span class="chord">G/B</span>
 Who'll throw it all away
-<br/>
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
+
  <span class="chord">F</span>            <span class="chord">Fm</span>                 <span class="chord">C</span>
 So I start a revolution from my bed
  <span class="chord">F</span>                         <span class="chord">Fm</span>              <span class="chord">C</span>
@@ -258,8 +259,7 @@ Stand up beside the fireplace
 Take that look from off your face
  <span class="chord">Am</span>                 <span class="chord">G</span>                <span class="chord">F</span>             <span class="chord">G</span>   <span class="chord">G7</span>
 Cos you ain't ever going to burn my heart ouuuuuuuuuut
-<br/>
-<br/>
+
  <span class="chord">C</span>  <span class="chord">G</span>         <span class="chord">Am</span>         <span class="chord">E7</span>            <span class="chord">F</span>
 So Sally can wait, she knows it's too late
           <span class="chord">G</span>          <span class="chord">C</span>  <span class="chord">Am</span>  <span class="chord">G/B</span>
@@ -268,13 +268,12 @@ As she's walking on by
 Her soul slides away, but don't look back in anger
 <span class="chord">G</span>            <span class="chord">C</span>  <span class="chord">Am</span>  <span class="chord">G/B</span>
 I heard you say
-<br/>
+
 [Solo]  <span class="chord">F</span>  <span class="chord">Fm</span>  <span class="chord">C</span>
         <span class="chord">F</span>  <span class="chord">Fm</span>  <span class="chord">C</span>
         <span class="chord">F</span>  <span class="chord">Fm</span>  <span class="chord">C</span>
         <span class="chord">G</span>  <span class="chord">G#°</span>  <span class="chord">Am</span>  <span class="chord">G</span>  <span class="chord">F</span>  <span class="chord">G</span>
-<br/>
-<br/>
+
  <span class="chord">C</span>  <span class="chord">G</span>         <span class="chord">Am</span>         <span class="chord">E7</span>            <span class="chord">F</span>
 So Sally can wait, she knows it's too late
           <span class="chord">G</span>          <span class="chord">C</span>  <span class="chord">Am</span>  <span class="chord">G/B</span>
@@ -293,7 +292,8 @@ Her soul slides away, but don't look back in anger
 Don’t look back in anger
              <span class="chord">C</span>
 I heard you say
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -309,15 +309,6 @@ I heard you say
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -360,7 +351,8 @@ I heard you say
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

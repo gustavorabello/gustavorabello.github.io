@@ -193,22 +193,20 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
          <span class="chord">F</span>
 Deixe de lado esse baixo astral
          <span class="chord">Am7</span>
 Erga a cabeça enfrente o mal
              <span class="chord">Cm7</span>         <span class="chord">F7</span>            <span class="chord">Bb7M</span>
 Que agindo assim será vital para o seu coração
-<br/>
+
          <span class="chord">Bbm7</span>                   <span class="chord">F7</span>    <span class="chord">Eb7</span>    <span class="chord">D7</span>
 É que em cada experiência se aprende uma lição
        <span class="chord">G7</span>
 Eu já sofri por amar assim
        <span class="chord">Gm</span>                   <span class="chord">C7</span>
 Me dediquei mas foi tudo em vão
-<br/>
+
      <span class="chord">F</span>           <span class="chord">Am7</span>
 Pra que se lamentar
           <span class="chord">Cm7</span>   <span class="chord">F7</span>        <span class="chord">Bb7M</span>
@@ -217,7 +215,7 @@ Se em sua vida pode encontrar
 Quem te ame com toda força e ardor
   <span class="chord">G7</span>     <span class="chord">C#7</span>    <span class="chord">C7</span>   <span class="chord">F</span>          <span class="chord">C7</span>
 Assim sucumbirá a dor  (tem que lutar)
-<br/>
+
            <span class="chord">F</span>
 Tem que lutar
          <span class="chord">Am7</span>
@@ -226,7 +224,7 @@ Não se abater
 Só se entregar
 <span class="chord">F7</span>           <span class="chord">Bb7M</span>
   <span class="chord">A</span> quem te merecer
-<br/>
+
          <span class="chord">Bbm</span>
 Não estou dando nem vendendo
    <span class="chord">F7</span>      <span class="chord">Eb7</span>   <span class="chord">D7</span>
@@ -249,15 +247,6 @@ O meu conselho é pra te ver feliz
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -300,7 +289,8 @@ O meu conselho é pra te ver feliz
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

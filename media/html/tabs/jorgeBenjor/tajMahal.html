@@ -193,7 +193,47 @@
     
     <div class="singlecol">
       <pre>
+<span class="chord">Bm7</span>                 <span class="chord">C#m7</span>      <span class="chord">F#m</span>
+Foi a mais linda história de amor
+          <span class="chord">Bm7</span>       <span class="chord">C#m7</span>          <span class="chord">F#m</span>
+Que me contaram e agora eu vou contar
+     <span class="chord">Bm7</span>                 <span class="chord">C#m7</span>          <span class="chord">F#m</span>
+Do amor do príncipe Xá-Jehan, pela princesa Nunts Mahal
+     <span class="chord">Bm7</span>                 <span class="chord">C#m7</span>          <span class="chord">F#m</span>
+Do amor do príncipe Xá-Jehan, pela princesa Nunts Mahal
 
+<span class="chord">Bm7</span>  <span class="chord">C#m7</span>  <span class="chord">F#m</span>
+Tê tê teteretete,  (4x)
+
+(<span class="chord">Bm7</span>  <span class="chord">C#m7</span>  <span class="chord">F#m</span>
+Taj Mahal
+Taj Mahallll
+Taj Mahallll
+
+<span class="chord">Bm7</span>              <span class="chord">E7/9</span>      <span class="chord">F#m</span>
+Foi uma linda história de amor
+          <span class="chord">Bm7</span>       <span class="chord">E7/9</span>          <span class="chord">F#m</span>
+Que me contaram e agora eu vou contar
+     <span class="chord">Bm7</span>                 <span class="chord">C#m7</span>          <span class="chord">F#m</span>
+Do amor do príncipe Xá-Jehan, pela princesa Nunts Mahal
+     <span class="chord">Bm7</span>                 <span class="chord">C#m7</span>          <span class="chord">F#m</span>
+Do amor do príncipe Xá-Jehan, pela princesa Nunts Mahal
+
+Pê pê pê pe pepeperepê
+(Piano play, piano play...)
+Uou uou, pê pê pê pe pepeperepê
+(Bass play, bass play...)
+Uou uou, pê pê pê pe pepeperepê
+(Drum play, drum play...)
+Pê pê pê pe pepeperepê
+(Violino play...)
+Uou uou, pê pê pê pe pepeperepê
+(a percussão...)
+Uou uou, pê pê pê pe pepeperepê
+(Guitarra play...)
+Uou uou, pê pê pê pe pepeperepê
+Contagem regressiva para o fim:
+10, 9, 8, 7, 6, 5, 4, 3, 2, 1...
       </pre>
     </div>
     
@@ -210,15 +250,6 @@
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -261,7 +292,8 @@
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

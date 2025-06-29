@@ -219,12 +219,13 @@ Tudo que Deus criou pensando em você
 Fez a Via-Láctea, fez os dinossauros
        <span class="chord">Bm7</span>         <span class="chord">F#/A</span>         <span class="chord">G7M</span>
 Sem pensar em nada fez a minha vida
-  <span class="chord">F#m7</span>   <span class="chord">G7M</span>
-<span class="chord">E</span> te deu
         </pre>
       </div>
       <div class="col">
         <pre>
+  <span class="chord">F#m7</span>   <span class="chord">G7M</span>
+<span class="chord">E</span> te deu
+
        <span class="chord">Bm7</span>          <span class="chord">F#/A</span>         <span class="chord">G7M</span>
 Sem contar os dias que me faz morrer
       <span class="chord">Bm7</span>         <span class="chord">F#/A</span>       <span class="chord">G7M(9)</span>
@@ -262,15 +263,6 @@ Eu quero mesmo é viver, pra esperar, esperar devorar você...           (2
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -313,7 +305,8 @@ Eu quero mesmo é viver, pra esperar, esperar devorar você...           (2
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

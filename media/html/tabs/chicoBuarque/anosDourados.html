@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 Introdução:  <span class="chord">Bm7</span>  <span class="chord">E7/9b</span>  <span class="chord">A7M</span>  <span class="chord">F#m7</span>  <span class="chord">Bm7</span>
  <span class="chord">E7/9b</span>      <span class="chord">A7M</span>  <span class="chord">F#m7</span>    <span class="chord">Bm7</span> <span class="chord">E7/9b</span>   <span class="chord">A7M</span>  <span class="chord">F#m7</span>  <span class="chord">Bm7</span>
 Parece que dizes,     te amo       Maria
@@ -204,7 +202,7 @@ Na fotografia     estamos       felizes
 Te ligo afobado e deixo confissões no gravador
     <span class="chord">G#7/b13</span>   <span class="chord">C#m7</span>   <span class="chord">D#m7/5b</span>   <span class="chord">G#7/b13</span>  <span class="chord">C#m7</span>   <span class="chord">F#7/b13</span>  <span class="chord">Bm7</span>
 Vai ser engraçado se tens um novo      amor
-<br/>
+
    <span class="chord">E7/9b</span>        <span class="chord">A7M</span>  <span class="chord">F#m7</span>
 Me vejo ao teu lado
    <span class="chord">Bm7</span>  <span class="chord">E7/9b</span>   <span class="chord">A7M</span>   <span class="chord">F#m7</span>  <span class="chord">Bm7</span>
@@ -235,15 +233,6 @@ Teus bei-  jos    nun-  ca mais
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -286,7 +275,8 @@ Teus bei-  jos    nun-  ca mais
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

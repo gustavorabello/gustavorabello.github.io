@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
   <span class="chord">F</span>          <span class="chord">Fº</span>         <span class="chord">F</span>
 Trama em segredo teus planos
 <span class="chord">Am7</span>      <span class="chord">D7(b9)</span> <span class="chord">Gm7</span> <span class="chord">D7(b9)</span> <span class="chord">D7</span>
@@ -203,7 +201,7 @@ Parte sem dizer adeus
 Nem lembra dos meus desenganos
 <span class="chord">G7</span>       <span class="chord">Gm7</span>     <span class="chord">C7</span>
 Fere quem tudo perdeu
-<br/>
+
 <span class="chord">Bb7M</span>    <span class="chord">Bº</span>    <span class="chord">F/C</span>
 Ah!Coração leviano
     <span class="chord">D7</span>        <span class="chord">G7</span> <span class="chord">C7</span> <span class="chord">Am7</span> <span class="chord">G#m7</span>
@@ -212,7 +210,7 @@ Não sabe o que fez do meu
 Ah!Coração leviano
     <span class="chord">D7</span>        <span class="chord">G7</span> <span class="chord">C7</span>  <span class="chord">F</span> 
 Não sabe o que fez do meu
-<br/>
+
 <span class="chord">Gm7</span>      <span class="chord">C7</span>        <span class="chord">F</span>
 Este pobre navegante
  <span class="chord">F#º</span>          <span class="chord">Gm7</span> <span class="chord">G#m7</span> <span class="chord">Am7</span> <span class="chord">Bb7</span>
@@ -225,7 +223,7 @@ No mar da paixão e da loucura
 Fruto da minha aventura
                   <span class="chord">Gm7</span> <span class="chord">C7</span>
 <span class="chord">Em</span> busca da felicidade
-<br/>
+
 <span class="chord">Bb7M</span>    <span class="chord">Bº</span>       <span class="chord">F/C</span>
 Ah!Coração teu engano
  <span class="chord">Bb7</span>       <span class="chord">Eb7(9)</span>  <span class="chord">D7(b9)</span> <span class="chord">D7</span>
@@ -250,15 +248,6 @@ Que nunca será de ninguém
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -301,7 +290,8 @@ Que nunca será de ninguém
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

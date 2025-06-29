@@ -223,12 +223,13 @@ a  vi - da  é  pra  levar, 
      <span class="chord">E7(9)</span>           <span class="chord">A7</span>         <span class="chord">D6</span>    <span class="chord">Bm7</span>    <span class="chord">Em7</span>    <span class="chord">A7(9)</span>
 Viní - cius,  velho,     saravá
 
-[improviso:] <span class="chord">D6/9</span> <span class="chord">E7(9)</span> <span class="chord">Em7(9)</span> <span class="chord">A7(13)</span> <span class="chord">D6</span> <span class="chord">Bm7</span> <span class="chord">Em7</span> <span class="chord">A7(9)</span> <span class="chord">D6</span> <span class="chord">G#m7(b5)</span>
-             <span class="chord">C#7</span> <span class="chord">F#m</span> <span class="chord">D7</span> <span class="chord">C#7</span> <span class="chord">F#m</span> <span class="chord">Cm6</span> <span class="chord">B7/C</span> <span class="chord">E7</span> <span class="chord">Gm6</span> <span class="chord">A/G</span>
         </pre>
       </div>
       <div class="col">
         <pre>
+[improviso:] <span class="chord">D6/9</span> <span class="chord">E7(9)</span> <span class="chord">Em7(9)</span> <span class="chord">A7(13)</span> <span class="chord">D6</span> <span class="chord">Bm7</span> <span class="chord">Em7</span> <span class="chord">A7(9)</span> <span class="chord">D6</span> <span class="chord">G#m7(b5)</span>
+             <span class="chord">C#7</span> <span class="chord">F#m</span> <span class="chord">D7</span> <span class="chord">C#7</span> <span class="chord">F#m</span> <span class="chord">Cm6</span> <span class="chord">B7/C</span> <span class="chord">E7</span> <span class="chord">Gm6</span> <span class="chord">A/G</span>
+
     <span class="chord">D6</span>                    <span class="chord">E7(13)</span>     <span class="chord">E7</span> 
 Poe - ta,  poetinha  vaga -    bun - do 
      <span class="chord">Em7</span>            <span class="chord">A7</span>
@@ -268,15 +269,6 @@ Viní - cius,  velho,    saravá
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -319,7 +311,8 @@ Viní - cius,  velho,    saravá
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

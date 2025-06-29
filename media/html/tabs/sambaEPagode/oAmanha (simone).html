@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">D6(9)</span>    <span class="chord">G/A</span>         <span class="chord">D6(9)</span>
 <span class="chord">A</span> cigana leu o meu destino
 <span class="chord">F#m7</span> <span class="chord">B7(b13)</span> <span class="chord">Em7(9)</span> <span class="chord">B7(b13)</span>
@@ -203,7 +201,7 @@ Eu     so...nhei
 Bola de cristal, jogo de búzios, cartomante
           <span class="chord">G/A</span>  <span class="chord">A7(9)</span> <span class="chord">D6(9)</span>
 Eu sempre per...gun...tei
-<br/>
+
        <span class="chord">Am7</span> <span class="chord">D7(9)</span> <span class="chord">G7M</span> <span class="chord">G6</span>
 O que será o amanhã
          <span class="chord">E7(9)</span>        <span class="chord">G/A</span> <span class="chord">A7(9)</span>
@@ -212,17 +210,17 @@ Como vai ser o meu destino
 Já desfolhei o mal-me-quer
          <span class="chord">E7(9)</span>        <span class="chord">G/A</span> <span class="chord">A7(9)</span>
 Primeiro amor de um meni...no
-<br/>
+
 <span class="chord">D6(9)</span>           <span class="chord">B7(b13)</span> <span class="chord">Em7(9)</span>
 <span class="chord">E</span> vai chegando o amanhecer
-<br/>
+
 <span class="chord">G/A</span>            <span class="chord">A7(9)</span> <span class="chord">D6(9)</span> <span class="chord">Em7</span> <span class="chord">F#m7</span> <span class="chord">Em7</span>
 Leio a mensagem zodiacal
       <span class="chord">F#m7</span> <span class="chord">B7(b13)</span> <span class="chord">Em7</span>
 <span class="chord">E</span> o reale...jo     diz
          <span class="chord">G/A</span> <span class="chord">A7(9)</span> <span class="chord">D6(9)</span>       <span class="chord">A7(b13)</span>
 Que eu serei  fe...liz, sempre feliz
-<br/>
+
 <span class="chord">D6(9)</span>  <span class="chord">G/A</span>     <span class="chord">D6(9)</span>
 Como será o amanhã
           <span class="chord">F#m7</span> <span class="chord">B7(b13)</span> <span class="chord">Em7(9)</span> <span class="chord">B7(b13)</span>
@@ -247,15 +245,6 @@ O meu destino será como Deus quiser
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -298,7 +287,8 @@ O meu destino será como Deus quiser
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -218,12 +218,12 @@ o meu amor       e semeou em    mim
 essa  incrível   saudade,
 <span class="chord">Gm7</span>          <span class="chord">C7(9)</span>       <span class="chord">Gb7(#11)</span>   <span class="chord">F7M(#5)</span> <span class="chord">F7M</span>
 se é por vontade de Deus        valei,       valei!
+<span class="chord">Bm7(9/11)</span>    <span class="chord">Bb7(9/#11)</span>  <span class="chord">F7(#5/#9)</span>   <span class="chord">Am7(9)</span>          <span class="chord">D7(9)</span>      <span class="chord">Am7(9)</span>        <span class="chord">D7(9)</span>
+se eu pedir a Deus pelo meu prazer     não for pecado
         </pre>
       </div>
       <div class="col">
         <pre>
-<span class="chord">Bm7(9/11)</span>    <span class="chord">Bb7(9/#11)</span>  <span class="chord">F7(#5/#9)</span>   <span class="chord">Am7(9)</span>          <span class="chord">D7(9)</span>      <span class="chord">Am7(9)</span>        <span class="chord">D7(9)</span>
-se eu pedir a Deus pelo meu prazer     não for pecado
          <span class="chord">Am7(9)</span>
 eu vou rezar pra quando
       <span class="chord">D7(9)</span>     <span class="chord">Am7(9)</span>          <span class="chord">D7(9)</span>    <span class="chord">Abm7</span>     <span class="chord">Gm7</span>
@@ -268,15 +268,6 @@ Se o senhor me for louvado...
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -318,7 +309,8 @@ Se o senhor me for louvado...
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

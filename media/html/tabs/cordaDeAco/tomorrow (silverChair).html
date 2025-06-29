@@ -191,15 +191,12 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
 Tom: <span class="chord">G</span>
-<br/>
 
 intro. <span class="chord">A</span> <span class="chord">G</span> <span class="chord">C9</span> (<span class="chord">C9/B</span> <span class="chord">C9/G</span>) 
-<br/>
 
 <span class="chord">A</span>                              <span class="chord">G</span>           <span class="chord">D4</span> (<span class="chord">C9</span> <span class="chord">C9/B</span> <span class="chord">C9/G</span>)
 It's twelve o'clock, and it's a wonderful day.
@@ -215,18 +212,20 @@ There's no bathroom, and there is no sink.
 The water out of the tap is very, hard to drink,
              <span class="chord">B</span>     <span class="chord">C</span>  -solo1-      -solo2-     
 Very hard to drink.
-<br/>
 
 <span class="chord">A</span> <span class="chord">D</span> <span class="chord">C</span> <span class="chord">D</span>         <span class="chord">A</span>   <span class="chord">D</span> <span class="chord">C</span> <span class="chord">D</span> 
   You, wait till tomorrow
 <span class="chord">A</span> <span class="chord">D</span> <span class="chord">C</span> <span class="chord">D</span>         <span class="chord">A</span>   <span class="chord">D</span> <span class="chord">C</span> <span class="chord">D</span>
   You, wait till tomorrow
-<br/>
 
 <span class="chord">A</span>                   <span class="chord">G</span>           <span class="chord">D4</span> (<span class="chord">C9</span> <span class="chord">C9/B</span> <span class="chord">C9/G</span>)
 You say that money, isn't everything,
 <span class="chord">A</span>                              <span class="chord">G</span>           <span class="chord">D4</span> (<span class="chord">C9</span> <span class="chord">C9/B</span> <span class="chord">C9/G</span>)
 But I'd like to see you live without it.
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 <span class="chord">A</span>                              <span class="chord">G</span>               <span class="chord">D4</span> (<span class="chord">C9</span> <span class="chord">C9/B</span> <span class="chord">C9/G</span>)
 You think you can keep on going living like a king.
 <span class="chord">A</span>                        <span class="chord">G</span>           <span class="chord">D4</span> 
@@ -238,7 +237,6 @@ You gonna wait till, fat boy,
 <span class="chord">C</span>      <span class="chord">D</span>              <span class="chord">A</span>      <span class="chord">D</span> <span class="chord">C</span> <span class="chord">D</span>
 Fat boy, wait until tomorrow
 solo1                           solo2
-<br/>
 
 ------------------              -5--10-12-10--8--
 ------------------              -5--10--------8--
@@ -246,11 +244,9 @@ solo1                           solo2
 -------5-7--------              -7--12--------10-
 -0-5-7------------              -0--0---------0--
 ------------------              -----------------
-<br/>
 
-<br/>
-
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -266,15 +262,6 @@ solo1                           solo2
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -317,7 +304,8 @@ solo1                           solo2
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

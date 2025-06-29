@@ -193,7 +193,48 @@
     
     <div class="singlecol">
       <pre>
+ <span class="chord">Dm7</span>  <span class="chord">Dm/C</span>      <span class="chord">E7/B</span>      <span class="chord">Bbm6</span>   <span class="chord">A7</span>    <span class="chord">Dm7</span>
+Vai  minha tristeza e diz a el que sem ela
+          <span class="chord">A5+/7</span>   <span class="chord">Dm7</span>     <span class="chord">E7</span>    <span class="chord">Am7</span>
+Não pode ser,    diz-lhe numa prece
+            <span class="chord">Bb7+</span>                 <span class="chord">Em5</span>-/7
+Que ela regresse, porque eu não posso
+      <span class="chord">A7/5</span>+    <span class="chord">Dm7</span>  <span class="chord">Dm/C</span>  <span class="chord">E7/B</span>        <span class="chord">Bbm6</span>
+Mais sofrer. Chega de saudade a realidade
+    <span class="chord">A7</span>    <span class="chord">Am6</span>         <span class="chord">D7/9b</span>         <span class="chord">Gm7</span>
+É que sem ela não há paz, não há beleza
+   <span class="chord">A7</span>  <span class="chord">Dm7</span>                <span class="chord">Dm/C</span>
+É só tristeza e a melancolia
+         <span class="chord">E7/B</span>            <span class="chord">Bbm6</span>            <span class="chord">Dm7</span>  <span class="chord">A7/5</span>+
+Que não sai de mim, não sai de mim, não sai
 
+ <span class="chord">D7M</span>   <span class="chord">B7/5</span>+   <span class="chord">E7/9</span>
+Mas se ela voltar, se ela voltar,
+           <span class="chord">G/A</span>     <span class="chord">A7/9b</span>    <span class="chord">D7M</span>
+Que coisa linda, que coisa louca
+      <span class="chord">D/F#</span>        <span class="chord">F°</span>         <span class="chord">Em7</span>
+Pois há menos peixinhos a nadar no mar
+
+              <span class="chord">Bm6</span>
+Do que os beijinhos que eu darei
+        <span class="chord">Em5</span>-/7  <span class="chord">A7/5</span>+  <span class="chord">D7M</span>    <span class="chord">Bm7</span>       <span class="chord">E7/9</span>
+Na sua bo......ca,    dentro dos meus braços
+      <span class="chord">F#7</span>          <span class="chord">Bm7</span>     <span class="chord">Bbm7</span>      <span class="chord">Am7</span>
+Os abraços hão de ser, milhões de abraços
+<span class="chord">D7/9</span>   <span class="chord">G7M</span>           <span class="chord">Gm7</span>           <span class="chord">F#m7</span>
+Aper..tado assim, colado assim, calado assim
+<span class="chord">B7/9</span>-            <span class="chord">E7/9</span>       <span class="chord">A7</span>          <span class="chord">F#m7</span>
+Abraços e beijinhos e carinhos sem ter fim
+
+              <span class="chord">B7</span>             <span class="chord">E7/9</span>       <span class="chord">A7/13</span>
+Que é pra acabar com este negócio de você
+           <span class="chord">D7M/9</span>
+Viver sem mim
+
+           <span class="chord">B7</span>          <span class="chord">E7/9</span>     <span class="chord">A7/13</span>         <span class="chord">D7M/9</span>
+Não quero mais esse negócio de você longe de mim
+          <span class="chord">B7</span>           <span class="chord">E7/9</span>       <span class="chord">A7/13</span>          <span class="chord">D7M/9</span>
+Vamos deixar com esse negócio de você viver sem mim
       </pre>
     </div>
     
@@ -210,15 +251,6 @@
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -261,7 +293,8 @@
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

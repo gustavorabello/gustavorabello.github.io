@@ -193,9 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
-                                                
  <span class="chord">Gmaj7</span> <span class="chord">A#°</span>       <span class="chord">Am7</span>  <span class="chord">A#°</span>   <span class="chord">Bm7</span>        <span class="chord">C°</span>       <span class="chord">Cmaj7</span> <span class="chord">Cm6</span>  <span class="chord">Bm7</span>   <span class="chord">A#°</span>           <span class="chord">Dm7</span>  <span class="chord">E7/#5</span>
  Mi-   nha alma can- ta,       Vejo o Rio de Janeiro,    Estou morrendo de saudade
  <span class="chord">A7/6</span>          <span class="chord">A7/#5</span>           <span class="chord">Am7</span>           <span class="chord">D7/b9</span>   
@@ -230,15 +227,6 @@
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -281,7 +269,8 @@
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

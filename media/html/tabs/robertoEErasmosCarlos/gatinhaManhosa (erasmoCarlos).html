@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 Intro: <span class="chord">E</span>  <span class="chord">C#m7</span>  <span class="chord">E</span>  <span class="chord">C#m7</span>
-<br/>
+
      <span class="chord">E</span>            <span class="chord">C#m7</span>          <span class="chord">A</span>             <span class="chord">B7</span>
 Meu bem já não precisa falar comigo dengosa assim
  <span class="chord">E</span>             <span class="chord">C#m7</span>     <span class="chord">A</span>                  <span class="chord">B7</span>  <span class="chord">Bm7</span>
@@ -215,9 +213,9 @@ Um dia gatinha manhosa eu prendo você no meu coração
 Quero ver você      fazer manha então, presa no meu coracão
 <span class="chord">F#m7</span>         <span class="chord">B7/b9</span>  <span class="chord">E</span>
  Quero ver você
-<br/>
+
 [Solo] <span class="chord">E</span>  <span class="chord">C#m7</span>  <span class="chord">A</span>  <span class="chord">B7</span>  <span class="chord">E</span>  <span class="chord">C#m7</span>  <span class="chord">A</span>  <span class="chord">B7</span>
-<br/>
+
    <span class="chord">Bm7</span>            <span class="chord">E</span>                 <span class="chord">A</span>            <span class="chord">Am</span>
 Um dia gatinha manhosa eu prendo você no meu coração
 <span class="chord">G#m7</span>        <span class="chord">C#7(9)</span> <span class="chord">F#m7</span>           <span class="chord">B7(9)</span> <span class="chord">G#m7</span>            <span class="chord">G7(5+)</span>
@@ -240,15 +238,6 @@ Quero ver você       fazer manha então, presa no meu coracão
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -291,7 +280,8 @@ Quero ver você       fazer manha então, presa no meu coracão
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

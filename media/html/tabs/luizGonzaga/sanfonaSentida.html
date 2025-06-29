@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 intro: <span class="chord">G</span>  <span class="chord">Dm</span>  <span class="chord">G</span>  <span class="chord">Dm</span> (4x)
-<br/>
+
 <span class="chord">Dm</span>   <span class="chord">Am</span>   <span class="chord">Dm</span>    <span class="chord">F</span>   
 Vem amor, vem cantar
 <span class="chord">Bb7</span>         <span class="chord">F</span>
@@ -223,10 +221,9 @@ Me entrego todinho ao amor
 <span class="chord">E</span> teu gemido disfarça
        <span class="chord">G</span>           <span class="chord">Dm</span>
 <span class="chord">Em</span> minh´alma essa dor
-<br/>
+
 <span class="chord">G</span>  <span class="chord">Dm</span>  <span class="chord">G</span>  <span class="chord">Dm</span> (2x)
-<br/>
-<br/>
+
       </pre>
     </div>
     
@@ -243,15 +240,6 @@ Me entrego todinho ao amor
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -294,7 +282,8 @@ Me entrego todinho ao amor
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

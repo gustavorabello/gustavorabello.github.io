@@ -220,14 +220,15 @@ I get down on my knees and pray
 I'm waiting for that final moment
    <span class="chord">Em</span>                   <span class="chord">F</span>
 You say the words that I can't say
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
+ 
 <span class="chord">C</span>
 [instr.]
  
 I feel fine and I feel good
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 I feel like I never should
 Whenever I get this way I just don't know what to say
 Why can't we be ourselves like we were yesterday
@@ -263,15 +264,6 @@ You say the words that I can't say  [end on <span class="chord">C</span>]
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -314,7 +306,8 @@ You say the words that I can't say  [end on <span class="chord">C</span>]
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

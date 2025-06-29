@@ -191,9 +191,8 @@
       </div>
     </div>
     
-    <div class="columns">
-      <div class="col">
-        <pre>
+    <div class="singlecol">
+      <pre>
 <span class="chord">A</span>   <span class="chord">C#m7</span>
 Menina
 <span class="chord">D7M</span>            <span class="chord">C#m7</span>
@@ -214,10 +213,6 @@ te carreguei no colo menina, cantei pra ti dormir
 
  <span class="chord">C</span>
 Lembro a menina feia, tão acanhada e de pé no chão
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
                         <span class="chord">Bm7(b5)</span>        <span class="chord">E4/B</span>  <span class="chord">E7</span>
 Hoje maliciosa, guarda segredos em seu coração
 
@@ -238,8 +233,7 @@ porque fui te encontrar agora
 te carreguei no colo menina, cantei pra ti dormir
 <span class="chord">D7M</span>       <span class="chord">E7</span>    <span class="chord">A7M</span>   <span class="chord">F#m7</span>    <span class="chord">Bm7</span>    <span class="chord">E7</span>        <span class="chord">A7M</span>
 te carreguei no colo menina, cantei pra ti dormir
-        </pre>
-      </div>
+      </pre>
     </div>
     
   </div>
@@ -255,15 +249,6 @@ te carreguei no colo menina, cantei pra ti dormir
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -306,7 +291,8 @@ te carreguei no colo menina, cantei pra ti dormir
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">G7+</span>          <span class="chord">D7</span>
 Tanto riso, oh
            <span class="chord">G7+</span>
@@ -205,7 +203,6 @@ Mais de mil palhaços no salão
 Arlequim está chorando pelo amor da colombina
      <span class="chord">Am7</span>   <span class="chord">D7</span>   <span class="chord">G7+</span>  (<span class="chord">D7</span>)
 no meio da multidão
-<br/>
 
 <span class="chord">G7+</span>         <span class="chord">E7</span>        <span class="chord">Am7</span>
 Foi bom te ver outra vez
@@ -224,8 +221,7 @@ Que te abraçou
                    <span class="chord">D</span>
 Que esconde o teu rosto
        <span class="chord">D7</span>   <span class="chord">Dm7</span>      <span class="chord">G7</span>
-Eu quero matar a saudade<br/>
-
+Eu quero matar a saudade
 <span class="chord">C7+</span>      <span class="chord">Cm7</span>     <span class="chord">Bm7</span>
   Vou beijar-te agora
         <span class="chord">E7</span>    <span class="chord">Am7</span>
@@ -248,15 +244,6 @@ Hoje é carnaval
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -299,7 +286,8 @@ Hoje é carnaval
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

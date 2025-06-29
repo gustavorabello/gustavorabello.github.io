@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 Intro:   <span class="chord">F</span>  <span class="chord">Em</span>  <span class="chord">Dm</span>  <span class="chord">E</span>  <span class="chord">Am</span>  <span class="chord">Am7</span>
-<br/>
+
 <span class="chord">Dm</span>                           <span class="chord">G</span> 
  Já tive mulheres de todas as cores 
            <span class="chord">C7+</span>              <span class="chord">Am7</span>  
@@ -251,15 +249,6 @@ Intro:   <span class="chord">F</span>  <span class="chord">Em</span>  <span c
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -301,7 +290,8 @@ Intro:   <span class="chord">F</span>  <span class="chord">Em</span>  <span c
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

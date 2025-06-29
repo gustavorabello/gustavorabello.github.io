@@ -243,10 +243,6 @@ O que eu sinto por você Ara
      <span class="chord">D</span>       <span class="chord">D/E</span>             <span class="chord">A</span>
 Não dá, não dá, não dá, não dá
 
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
 Segunda Parte:
 
        <span class="chord">Bm7</span>
@@ -265,6 +261,10 @@ Quando passa eu vou atrás
 Só sei
                         <span class="chord">A</span>
 Que o Ara Ketu é bom demais
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 
 Refrão 2x:
 
@@ -340,15 +340,6 @@ Refrão 2x:
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -390,7 +381,8 @@ Refrão 2x:
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

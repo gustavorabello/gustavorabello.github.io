@@ -237,12 +237,13 @@ Você pode se arranhar
 Se o bem e o mal existem
      <span class="chord">D</span>         <span class="chord">Bm</span>
 Você pode escolher,
-<span class="chord">E</span>           <span class="chord">G</span>      <span class="chord">A</span>
-É preciso saber viver.
         </pre>
       </div>
       <div class="col">
         <pre>
+<span class="chord">E</span>           <span class="chord">G</span>      <span class="chord">A</span>
+É preciso saber viver.
+
 <span class="chord">G</span>          <span class="chord">D</span>      <span class="chord">Bm</span>
 É preciso saber viver
 <span class="chord">G</span>          <span class="chord">D</span>      <span class="chord">Bm</span>
@@ -294,15 +295,6 @@ Saber viver
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -344,7 +336,8 @@ Saber viver
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

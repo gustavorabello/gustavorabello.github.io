@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">F7M</span>                          <span class="chord">G7(b5)</span>
    Se você disser que eu desafino amor
 <span class="chord">Gm7</span>               <span class="chord">C7(9)</span>         <span class="chord">Am7(b5)</span> <span class="chord">D7(b9)</span>
@@ -203,7 +201,7 @@ Saiba que isto em mim provoca imensa    dor
 Só privilegiados tem o ouvido igual ao seu
 <span class="chord">G7(13)</span>      <span class="chord">G7(b13)</span>    <span class="chord">Gb7M</span>        <span class="chord">Gb6</span>
 Eu possuo apenas o que Deus me deu
-<br/>
+
 <span class="chord">F7M</span>                          <span class="chord">G7(b5)</span>
    Se você insiste em classificar
 <span class="chord">Gm7</span>               <span class="chord">C7(9)</span>         <span class="chord">Am7(b5)</span> <span class="chord">D7(b9)</span>
@@ -216,7 +214,7 @@ Que isto é Bossa Nova, isto é muito natural
 O que você não sabe nem sequer pretende
     <span class="chord">A7M</span>         <span class="chord">Am7</span>         <span class="chord">Bm7(b5)</span>    <span class="chord">Bb7(#11)</span>
 É que os desafinados também tem um coração
-<br/>
+
   <span class="chord">C7M</span>        <span class="chord">C#º</span>         <span class="chord">Dm6</span>           <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span> 
 Fotografei você na minha Rolley-Flex
 <span class="chord">Gm7</span>               <span class="chord">Ebm6</span>          <span class="chord">Dm6</span>
@@ -251,15 +249,6 @@ Também bate um coração
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -302,7 +291,8 @@ Também bate um coração
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

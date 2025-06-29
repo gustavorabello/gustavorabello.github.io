@@ -226,15 +226,15 @@
 Don't worry about a thing
              <span class="chord">D</span>                                <span class="chord">A</span>
 Cause every little thing  gonna be all right
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 
 Sayin' don't worry about a thing
              <span class="chord">D</span>                                <span class="chord">A</span>
 Cause every little thing  gonna be all right
 
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
 Rise up this morning
               <span class="chord">E</span>                            <span class="chord">A</span>
 Smile with rising sun, Three little birds
@@ -289,15 +289,6 @@ Cause every little thing  gonna be all right
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -339,7 +330,8 @@ Cause every little thing  gonna be all right
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -193,49 +193,45 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">A</span>          <span class="chord">D/A</span>               <span class="chord">A</span>          <span class="chord">E7/G#</span>
 Pai e mãe      ouro de mi-na   coração        desejo e si-na
 <span class="chord">F#m7</span>               <span class="chord">C#m7</span>                      <span class="chord">D7M</span>
-     Tu---do mais       pura rotina  <i>jazz...</i>
+     Tu---do mais       pura rotina  jazz...
   <span class="chord">D#°</span>                            <span class="chord">A</span>
 Tocarei seu nome pra poder falar    de amor
-<br/>
+
 <span class="chord">D/A</span>                  <span class="chord">A</span>                <span class="chord">E7/G#</span>
-    Minha prince-sa    art  <i>nuveau</i>          da nature-za
+    Minha prince-sa    art  nuveau          da nature-za
 <span class="chord">F#m7</span>              <span class="chord">C#m7</span>                      <span class="chord">D7M</span> / / / <span class="chord">D#°</span> / / /
-     Tu--do  mais      pura beleza <i>jazz...</i>
-<br/>
-<br/>
+     Tu--do  mais      pura beleza jazz...
+
       <span class="chord">E7(4/9)</span>                       <span class="chord">D7(4/9)</span> <span class="chord">D7(9)</span> <span class="chord">C#7(#9)</span>
 <span class="chord">A</span> luz de       um grande prazer   é irre----medi--ável
 <span class="chord">G7(#11)</span> <span class="chord">F#m7</span> / / / / / / /
-<i>Néon</i>
+Néon
          <span class="chord">E7(4/9)</span>               <span class="chord">D7(4/9)</span>         <span class="chord">E7(4/9)</span>  <span class="chord">E7(9)</span>
-Quando o grito   do prazer açoitar     o ar  <i>reveillon</i>
-<br/>
-<br/>
+Quando o grito   do prazer açoitar     o ar  reveillon
+
 <span class="chord">A</span>                 <span class="chord">D/A</span>
   O luar  estrela     do mar  o sol e o dom
 <span class="chord">A</span>               <span class="chord">E7/G#</span>
-  Quiçá um dia  a     fúria desse <i>front</i>
-<br/>
+  Quiçá um dia  a     fúria desse front
+
 <span class="chord">F#m7</span>              <span class="chord">C#m7</span>                   <span class="chord">D7M</span>
      Virá lapidar o    sonho até gerar o som
                <span class="chord">E7(4/9)</span>
 Como querer caetane---ar o que há de bom
-<br/>
+
 <span class="chord">A</span>                 <span class="chord">D/A</span>
   O luar  estrela     do mar  o sol e o dom
 <span class="chord">A</span>               <span class="chord">E7/G#</span>
-  Quiçá um dia  a     fúria desse <i>front</i>
-<br/>
+  Quiçá um dia  a     fúria desse front
+
 <span class="chord">F#m7</span>              <span class="chord">C#m7</span>                   <span class="chord">D7M</span>
      Virá lapidar o    sonho até gerar o som
                <span class="chord">E7(4/9)</span>                   <span class="chord">A</span> / / /
 Como querer caetane---ar o que há de bom
-<br/>
+
 <span class="chord">D/A</span> / / / <span class="chord">A</span> / / / <span class="chord">D/A</span> / / /
       </pre>
     </div>
@@ -253,15 +249,6 @@ Como querer caetane---ar o que há de bom
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -304,7 +291,8 @@ Como querer caetane---ar o que há de bom
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

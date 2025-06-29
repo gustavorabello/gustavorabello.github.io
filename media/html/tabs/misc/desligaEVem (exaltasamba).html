@@ -193,11 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 Intro: <span class="chord">G7+</span> <span class="chord">Bm7</span> <span class="chord">C7+</span> <span class="chord">Am7</span> <span class="chord">D7</span> 
-<br/>
-<br/>
+
  <span class="chord">G7+</span>                             <span class="chord">Bm7</span>  
 Por favor me diz quem é você... que me liga toda noite  
  <span class="chord">C7+</span>                    <span class="chord">Am7</span>      <span class="chord">D7</span>  
@@ -210,7 +207,7 @@ Quero alguém em minha vida... fica do meu lado  
 Diz quem é você... quem sabe a gente se entende  
      <span class="chord">Em7</span>                <span class="chord">Bm7</span>        <span class="chord">C7+</span>   <span class="chord">D7</span>  
 Será um prazer... e eu vivo tão carente...  
-<br/>
+
   <span class="chord">G7+</span>                    <span class="chord">D/F#</span>  
 Meu bem não brinque assim comigo           
                <span class="chord">G7/11</span>            <span class="chord">G7</span>  
@@ -243,15 +240,6 @@ Desliga e vem depressa pro meu coração 
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -294,7 +282,8 @@ Desliga e vem depressa pro meu coração 
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -191,16 +191,14 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
 Tom: <span class="chord">A</span>
-<br/>
-<br/>
+
 [Intro] <span class="chord">F#m</span>  <span class="chord">C#7</span>  <span class="chord">F#</span>  <span class="chord">B7</span>  <span class="chord">E</span>
         <span class="chord">E/D</span>  <span class="chord">G#m7(5-)</span>  <span class="chord">C#7(9-)</span>  <span class="chord">C#7</span>
-<br/>
+
 <span class="chord">A7M</span>       <span class="chord">Bm7</span>        <span class="chord">Cº</span>       <span class="chord">C#m7</span>
    Quando você me deixou, meu bem
 <span class="chord">A/G</span>             <span class="chord">A7</span>    <span class="chord">D7M</span>          <span class="chord">Dm6/F</span>
@@ -209,7 +207,7 @@ Tom: <span class="chord">A</span>
    Quis morrer de ciúme,      quase  enlouqueci
 <span class="chord">A/B</span>    <span class="chord">B7(9)</span>                  <span class="chord">D/E</span>   <span class="chord">E7(9-)</span>
    Mas depois, como era de costume, obedeci
-<br/>
+
 <span class="chord">A7M</span>         <span class="chord">Bm7</span>      <span class="chord">Cº</span>    <span class="chord">C#m7</span>
    Quando você me quiser rever
 <span class="chord">A/G</span>                <span class="chord">A7</span>    <span class="chord">D7M</span>         <span class="chord">Dm6/F</span>
@@ -220,6 +218,10 @@ Olhos nos olhos, quero ver o que você faz
 Ao sentir que sem você eu passo bem demais
   <span class="chord">F#m</span>       <span class="chord">C#7/F</span>    <span class="chord">F#/E</span>
 <span class="chord">E</span> que venho até remoçando
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 <span class="chord">B7/D#</span>   <span class="chord">D7+</span>          <span class="chord">C#7</span>       <span class="chord">Cº</span>    <span class="chord">F#m/C#</span>
 Me pego cantando sem  mais nem porquê
 <span class="chord">F#m</span>      <span class="chord">C#7/F</span>    <span class="chord">F#/E</span>
@@ -228,7 +230,7 @@ Me pego cantando sem  mais nem porquê
 Quantos homens me amaram
              <span class="chord">G#m7(5-)</span>   <span class="chord">C#7(9-)</span>  <span class="chord">C#7</span>
 Bem mais e melhor que  você
-<br/>
+
 <span class="chord">A7M</span>          <span class="chord">Bm7</span> <span class="chord">Cº</span>         <span class="chord">C#m7</span>
    Quando talvez precisar de mim
 <span class="chord">A/G</span>              <span class="chord">A7</span>            <span class="chord">D7M</span>        <span class="chord">Dm6/F</span>
@@ -237,10 +239,11 @@ Bem mais e melhor que  você
 Olhos nos olhos, quero ver o que você diz
   <span class="chord">G#m7(5-)</span>                 <span class="chord">D7(9)</span>   <span class="chord">C#7(9-)</span>
 Quero ver como suporta me ver tão feliz
-<br/>
+
 ( <span class="chord">F#m</span>  <span class="chord">C#7/F</span>  <span class="chord">F#/E</span>  <span class="chord">B7/D#</span> )
 ( <span class="chord">Bb7(13-)</span>/D  <span class="chord">C#7</span>  <span class="chord">Cº</span>  <span class="chord">F#m/C#</span> )
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -256,15 +259,6 @@ Quero ver como suporta me ver tão feliz
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -307,7 +301,8 @@ Quero ver como suporta me ver tão feliz
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

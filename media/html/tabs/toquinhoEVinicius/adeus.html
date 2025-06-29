@@ -193,7 +193,35 @@
     
     <div class="singlecol">
       <pre>
+Intr.:(<span class="chord">Ebm7(b5)</span> D6m <span class="chord">Dbm7</span> <span class="chord">Gb7(b9)</span> <span class="chord">F#m7</span> <span class="chord">E7(b9)</span> <span class="chord">A7M</span>)
 
+ <span class="chord">A7M</span>     <span class="chord">F#m7</span>    <span class="chord">C#m7</span>     
+Adeus!  Adeus!  Adeus!
+<span class="chord">C#m6</span>    <span class="chord">F#7(13)</span> <span class="chord">F#7(b13)</span>  <span class="chord">Bm</span>  <span class="chord">F#7</span>
+Palavra que faz chorar
+ <span class="chord">Bm</span>              <span class="chord">Dm6/F</span>
+Adeus!  Adeus!  Adeus!
+            <span class="chord">E7</span>        <span class="chord">A°</span>   <span class="chord">A</span>  
+Não há quem possa suportar 
+
+  <span class="chord">A7M</span>         <span class="chord">D7M</span>     <span class="chord">F#7(b13)</span> <span class="chord">F#m7</span> <span class="chord">Bm7</span>
+Adeus é bem  triste, que não  se  re....siste
+<span class="chord">Ebm7(b5)</span> <span class="chord">Dm6</span> <span class="chord">C#m7</span> <span class="chord">Gb7(b9)</span>      <span class="chord">F#m7</span>   <span class="chord">E7(b9)</span> <span class="chord">A7M</span>
+Ninguém jamais  com adeus, pode viver  em   paz
+
+ <span class="chord">A7M</span>     <span class="chord">F#m7</span>    <span class="chord">C#m7</span>    
+Adeus!  Adeus!  Adeus!
+<span class="chord">C#m6</span>   <span class="chord">F#7(13)</span> <span class="chord">F#7(b13)</span>  <span class="chord">Bm</span>  <span class="chord">F#7</span>
+Palavra que faz chorar
+ <span class="chord">Bm</span>              <span class="chord">Dm6/F</span>
+Adeus!  Adeus!  Adeus!
+            <span class="chord">E7</span>        <span class="chord">A°</span>   <span class="chord">A</span>  
+Não há quem possa suportar
+
+  <span class="chord">A7M</span>          <span class="chord">D7M</span>        <span class="chord">F#7(b13)</span> <span class="chord">F#m7</span>      <span class="chord">Bm7</span>
+Pra que foste em...bora? Por ti,   tu...do   chora!
+<span class="chord">Ebm7(b5)</span> <span class="chord">Dm6</span> <span class="chord">Dbm7</span>    <span class="chord">Gb7(b9)</span>      <span class="chord">F#m7</span> <span class="chord">E7(b9)</span>  <span class="chord">A7M</span>
+Sem teu amor,   esta vida não tem mais va....lor.
       </pre>
     </div>
     
@@ -210,15 +238,6 @@
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -261,7 +280,8 @@
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 intro: <span class="chord">Gm</span>  <span class="chord">Gm7</span>  <span class="chord">Dm7</span>  <span class="chord">Eb</span>  <span class="chord">Cm</span>  <span class="chord">Am5</span>-/7  <span class="chord">D7</span>
-<br/>
+
 <span class="chord">Gm</span>          <span class="chord">Dm/A</span>            <span class="chord">Eb</span>       <span class="chord">Am5</span>-/7 <span class="chord">D7</span>
 Eu era feliz...sem saber ê ê, isso me revolta
 <span class="chord">Gm</span>             <span class="chord">Dm/A</span>                <span class="chord">Eb</span>           <span class="chord">Am5</span>-/7 <span class="chord">D7</span>
@@ -213,10 +211,10 @@ Tô doente de saudade
 Eu aprendi, não vale nada, noite, farra, madrugada
 <span class="chord">Gm</span>      <span class="chord">F</span>          <span class="chord">Eb</span>     <span class="chord">Cm</span>     <span class="chord">F7</span>
 Eu prometi não te magoar, pode confiar
-<br/>
+
                <span class="chord">Bb7M</span>  <span class="chord">F</span>                 <span class="chord">Gm</span>    <span class="chord">Dm</span>
 Foi preciso perder, pra aprender a valorizar
-<br/>
+
 <span class="chord">Eb</span>          <span class="chord">Cm</span>            <span class="chord">F7/4</span>     <span class="chord">F7</span>
 <span class="chord">A</span> mina de fé,     a mina de fé
                  <span class="chord">Bb7M</span>   <span class="chord">F</span>            <span class="chord">Gm</span>        <span class="chord">Dm</span>
@@ -239,15 +237,6 @@ Eu preciso entender, não se deve largar jamais
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -290,7 +279,8 @@ Eu preciso entender, não se deve largar jamais
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

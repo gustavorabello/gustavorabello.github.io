@@ -191,12 +191,11 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
 Intro: <span class="chord">A</span>  <span class="chord">D/A</span>  <span class="chord">F/A</span>  <span class="chord">E/A</span>  <span class="chord">D/A</span>  <span class="chord">A</span>
-<br/>
+
 <span class="chord">A</span>               <span class="chord">D/A</span>
   Todo dia a insônia
                    <span class="chord">F/A</span>
@@ -209,20 +208,18 @@ Faz tudo ficar infini___to
 É pretensão de quem fica
                    <span class="chord">D/A</span>  <span class="chord">A</span>
 Escondido fazendo fi___ta
-<br/>
-<br/>
+
 <span class="chord">G</span>
   Todo dia tem a hora
              <span class="chord">F</span>   <span class="chord">G</span>
 Da sessão coruja
                    <span class="chord">D/A</span>  <span class="chord">F4(7)</span>
 Só entende quem namora
-<br/>
+
 Agora "vão bora"
    <span class="chord">F</span>                 <span class="chord">A</span>
 Estamos bem por um triz
-<br/>
-<br/>
+
      <span class="chord">G</span>            <span class="chord">D</span>  <span class="chord">G</span>
 Pro dia nascer feliz
                   <span class="chord">D</span>  <span class="chord">G</span>
@@ -239,8 +236,7 @@ Essa é a vida que eu quis
 O mundo inteiro acordar
               <span class="chord">F/A</span>  <span class="chord">A</span>
 <span class="chord">E</span> a gente dormir
-<br/>
-<br/>
+
 <span class="chord">A</span>             <span class="chord">D/A</span>
   Todo dia é dia
                     <span class="chord">F/A</span>
@@ -253,8 +249,7 @@ Procurando vaga
 Uma hora aqui, a outra ali
                            <span class="chord">D/A</span>  <span class="chord">A</span>
 No vai e vem dos teus quadris
-<br/>
-<br/>
+
 <span class="chord">G</span>                      <span class="chord">F</span>    <span class="chord">G</span>
   Nadando contra a corrente
               <span class="chord">F</span>  <span class="chord">G</span>
@@ -263,8 +258,11 @@ Só pra exercitar
 Todo o músculo que sente
     <span class="chord">F</span>                    <span class="chord">A</span>
 Me dê de presente o teu bis
-<br/>
-<br/>
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
+
      <span class="chord">G</span>            <span class="chord">D</span>  <span class="chord">G</span>
 Pro dia nascer feliz
                   <span class="chord">D</span>  <span class="chord">G</span>
@@ -281,11 +279,9 @@ Essa é a vida que eu quis
 O mundo inteiro acordar
               <span class="chord">F/A</span>  <span class="chord">A</span>
 <span class="chord">E</span> a gente dormir
-<br/>
-<br/>
+
 Interlúdio: <span class="chord">A</span>
-<br/>
-<br/>
+
 <span class="chord">A</span>             <span class="chord">D/A</span>
   Todo dia é dia
                   <span class="chord">F/A</span>
@@ -298,8 +294,7 @@ Procurando vaga
 Uma hora aqui, a outra ali
                            <span class="chord">D/A</span>  <span class="chord">A</span>
 No vai e vem dos teus quadris
-<br/>
-<br/>
+
 <span class="chord">G</span>                      <span class="chord">F</span>    <span class="chord">G</span>
   Nadando contra a corrente
               <span class="chord">F</span>  <span class="chord">G</span>
@@ -308,10 +303,9 @@ Só pra exercitar
 Todo o músculo que sente
     <span class="chord">F</span>                    <span class="chord">A</span>
 Me dê de presente o teu bis
-<br/>
-<br/>
+
 Refrão:
-<br/>
+
      <span class="chord">G</span>            <span class="chord">D</span>  <span class="chord">G</span>
 Pro dia nascer feliz
                   <span class="chord">D</span>  <span class="chord">G</span>
@@ -328,10 +322,10 @@ Essa é a vida que eu quis
 O mundo inteiro acordar
               <span class="chord">F/A</span>  <span class="chord">A</span>
 <span class="chord">E</span> a gente dormir
-<br/>
-<br/>
+
 Solo: <span class="chord">A</span>  <span class="chord">G</span>  <span class="chord">D/F#</span>  <span class="chord">G</span>
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -347,15 +341,6 @@ Solo: <span class="chord">A</span>  <span class="chord">G</span>  <span class=
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -398,7 +383,8 @@ Solo: <span class="chord">A</span>  <span class="chord">G</span>  <span class=
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

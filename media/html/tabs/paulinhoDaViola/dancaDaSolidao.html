@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 [Intro:] <span class="chord">Am</span>
-<br/>
+
               <span class="chord">A7</span>          <span class="chord">Dm</span>
 Solidão é lava que cobre tudo
      <span class="chord">E7</span>            <span class="chord">Am</span>       <span class="chord">B7</span>                 <span class="chord">E7</span>
@@ -205,14 +203,14 @@ Amargura em minha boca, sorri seus dentes de chumbo
 Solidão palavra cavada no coração
          <span class="chord">Am</span>         <span class="chord">E7</span>             <span class="chord">Am</span>
 Resignado e mudo no compasso da desilusão
-<br/>
+
 <span class="chord">A7</span>     <span class="chord">Dm</span> <span class="chord">E7</span>      <span class="chord">A7</span>
 Desilusão, desilusão
                   <span class="chord">Dm</span>
 Danço eu dança você
                  <span class="chord">E7</span> <span class="chord">Am</span>
 Na dança da solidão
-<br/>
+
                  <span class="chord">E7</span>               <span class="chord">Am</span>
 Caméllia ficou viúva, Joana se apaixonou
                 <span class="chord">A7</span>                       <span class="chord">Dm</span>
@@ -221,7 +219,7 @@ Maria tentou a morte, por causa do seu amor
 Meu pai sempre me dizia, meu filho tome cuidado
                       <span class="chord">E7</span>                   <span class="chord">Am</span>
 Quando eu penso no futuro, não esqueço o meu passado
-<br/>
+
                  <span class="chord">E7</span>               <span class="chord">Am</span>
 Quando vem a madrugada, meu pensamento vagueia
                 <span class="chord">A7</span>                       <span class="chord">Dm</span>
@@ -246,15 +244,6 @@ Quem beber daquela água, não terá mais amargura
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -297,7 +286,8 @@ Quem beber daquela água, não terá mais amargura
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 Intro 5x: <span class="chord">Dm</span>
-<br/>
+
 <span class="chord">Dm</span>           <span class="chord">A7</span>            <span class="chord">Dm</span>  <span class="chord">D7</span>
 Eu nem sei dizer o que senti
             <span class="chord">Gm7</span> <span class="chord">C</span>
@@ -211,7 +209,7 @@ Não suportei a dor
  Mais alucinado eu fiquei
              <span class="chord">Gm7</span>    <span class="chord">C7</span>       <span class="chord">F7+</span> <span class="chord">F6</span>
 Quando li o bilhete que encontrei
-<br/>
+
     <span class="chord">Gm7</span>      <span class="chord">C</span>        <span class="chord">F7+</span>  <span class="chord">A7</span>     <span class="chord">Dm</span>
 Estava escrito num papel de pão
       <span class="chord">Em5</span>-/7     <span class="chord">A7</span>         <span class="chord">D7</span>
@@ -238,15 +236,6 @@ Ao fim, mas eu
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -289,7 +278,8 @@ Ao fim, mas eu
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

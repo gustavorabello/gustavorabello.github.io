@@ -236,12 +236,13 @@ Ogum yê, o onirê, ele é Odara  
 
 <span class="chord">Bb</span>                   <span class="chord">G7</span>  <span class="chord">Cm</span> 
 É jeje, é jeje, é querebentã 
-                    <span class="chord">F7</span>           <span class="chord">Bb</span>  
-<span class="chord">A</span> luz que vem de Daomé, reino de Dan 
         </pre>
       </div>
       <div class="col">
         <pre>
+                    <span class="chord">F7</span>           <span class="chord">Bb</span>  
+<span class="chord">A</span> luz que vem de Daomé, reino de Dan 
+
           <span class="chord">Ebm</span>           <span class="chord">Bbm</span>  
  Arte e cultura casa da mina 
           <span class="chord">Cm</span>     <span class="chord">F7</span>   <span class="chord">Bb</span> 
@@ -299,15 +300,6 @@ Agoye, o mundo deve o perdão   
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -349,7 +341,8 @@ Agoye, o mundo deve o perdão   
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

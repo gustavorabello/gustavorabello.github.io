@@ -193,14 +193,12 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 [intro]: 
 <span class="chord">Gm</span>  <span class="chord">C7</span>        <span class="chord">F</span>        <span class="chord">D7</span>      <span class="chord">Gm</span>     <span class="chord">C7</span>     <span class="chord">F</span>   <span class="chord">D7</span>
 La.... Raia raia raia   Laia raia.... ra.... ra
 <span class="chord">Gm</span>  <span class="chord">C7</span>        <span class="chord">F</span>        <span class="chord">D7</span>      <span class="chord">Gm</span>     <span class="chord">C7</span>     <span class="chord">F</span>   <span class="chord">C7</span>
 La.... Raia raia raia   Laia raia.... ra.... ra       
-<br/>
+
   <span class="chord">F</span>                    <span class="chord">Am7/5</span>-  <span class="chord">D7</span>
 Quando eu piso em folhas secas
 <span class="chord">Gm</span>              <span class="chord">Bbm</span>    <span class="chord">C7</span>
@@ -217,7 +215,7 @@ Não sei quantas vezes
 Sempre o sol me queimando
 <span class="chord">F</span>    <span class="chord">D7</span>      <span class="chord">Gm</span>  <span class="chord">C7</span>  <span class="chord">F</span>   
 <span class="chord">E</span> assim vou me acabando
-<br/>
+
 <span class="chord">A7</span>  <span class="chord">Dm</span>       <span class="chord">Am</span>
 Quando o tempo avisar
 <span class="chord">Am7/5</span>-  <span class="chord">D7</span>   <span class="chord">Gm</span>              <span class="chord">Gm</span> <span class="chord">G#m</span> <span class="chord">Am</span> <span class="chord">Bbm</span>
@@ -244,15 +242,6 @@ Da minha mocidade
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -295,7 +284,8 @@ Da minha mocidade
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

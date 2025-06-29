@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 [Intro:] <span class="chord">Em9</span> <span class="chord">Em9(#5)</span> <span class="chord">Em6(9)</span> <span class="chord">Em9(#5)</span>
-<br/>
+
  <span class="chord">Em9</span>                  <span class="chord">Bm7(b5)</span> <span class="chord">E(b9)</span>
 <span class="chord">E</span> eu que andava nessa escuridão
 <span class="chord">Am7</span>              <span class="chord">D7(4)</span>(9) <span class="chord">D4(9)</span>/C
@@ -209,6 +207,7 @@ Me mostrou o que eu temia ver
 Sem pedir licença nem perdão
 <span class="chord">Am/C</span>               <span class="chord">B7(4)</span>     <span class="chord">B7</span>
 Veio louca pra me enlouquecer
+
 <span class="chord">Em9</span>               <span class="chord">Bm7(b5)</span>/F  <span class="chord">E(b9)</span>
 Vou dormir querendo despertar
 <span class="chord">Am7</span>               <span class="chord">D7(4)</span>    <span class="chord">D7</span>
@@ -221,6 +220,7 @@ Com esse fogo que me faz arder
 Me dá medo e vem me encorajar
 <span class="chord">F#m7(b5)</span>      <span class="chord">F#m7(11)</span>   <span class="chord">Dm6/F</span> <span class="chord">E7</span>
 Fatalmente me fará sofrer
+
 <span class="chord">Am7</span>      <span class="chord">D7</span>         <span class="chord">G7M</span>           <span class="chord">C7M</span>        <span class="chord">Am/C</span>            <span class="chord">B7</span>  <span class="chord">Bm7(b5)</span> <span class="chord">E(b9)</span>
 Ando escravo da alegria e hoje em dia, minha gente, isso não é normal
 <span class="chord">Am7</span>   <span class="chord">D7(9)</span>      <span class="chord">G7M</span>         <span class="chord">C7M</span>           <span class="chord">C6</span>             <span class="chord">B7</span>  <span class="chord">Em9</span> <span class="chord">Bm7</span> <span class="chord">E7</span>
@@ -245,15 +245,6 @@ Se o amor é fantasia eu me encontro ultimamente em pleno carnaval
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -296,7 +287,8 @@ Se o amor é fantasia eu me encontro ultimamente em pleno carnaval
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

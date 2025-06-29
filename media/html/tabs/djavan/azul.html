@@ -191,30 +191,33 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
 [intro]: <span class="chord">Ab7(#4)</span> <span class="chord">Gm7</span> <span class="chord">C#º</span> <span class="chord">Dm7(9)</span> <span class="chord">F7(9)</span> <span class="chord">Bb7M</span> <span class="chord">A7(b13)</span> <span class="chord">Dm7(9)</span> <span class="chord">Ab7(#4)</span> (2x)
-<br/>
+
 e|-13-10-------------------------------------------------------|
 <span class="chord">B</span>|-------10-----------10----------------10----------10---------|
 <span class="chord">G</span>|-----------12-10-12----10-------10-------12-10-12----12-10---| 
 <span class="chord">D</span>|--------------------------12-12----12------------------------|
 <span class="chord">A</span>|-------------------------------------------------------------|
 <span class="chord">E</span>|-------------------------------------------------------------|
-<br/>
+
 e|-13-10-------------------------------------------------------|
 <span class="chord">B</span>|-------10--------------10---------------10-------------------|
 <span class="chord">G</span>|-----------12-10----10---12-10-10----10----12-10-------------| 
 <span class="chord">D</span>|-----------------12---------------12-------------12----------|
 <span class="chord">A</span>|-------------------------------------------------------------|
 <span class="chord">E</span>|-------------------------------------------------------------|
-<br/>
+
    <span class="chord">Gm7</span>     <span class="chord">C#º</span>          <span class="chord">Dm7(9)</span>      <span class="chord">F7(9)</span>    <span class="chord">Bb7M</span>        <span class="chord">A7(b13)</span> <span class="chord">Dm7(9)</span>
 Eu não sei    se vem de        Deus       do céu  ficar azul
 <span class="chord">Ab7(#4)</span>    <span class="chord">Gm7</span>     <span class="chord">C#º</span>          <span class="chord">Dm7(9)</span>       <span class="chord">F7(9)</span>  <span class="chord">Bb7M</span>
          Ou vi---rá    dos olhos        teus       essa   cor
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
               <span class="chord">Em7(b5)</span>   <span class="chord">Ab7(#4)</span>   <span class="chord">Gm7</span>   <span class="chord">C#º</span>       <span class="chord">Dm7(9)</span>
 Que azuleja o di-----a          se aca---so  anoi--tecer
 <span class="chord">F7(9)</span>    <span class="chord">Bb7M</span>           <span class="chord">A7(b13)</span> <span class="chord">Dm7(9)</span> <span class="chord">Ab7(#4)</span>         <span class="chord">Gm7</span>
@@ -225,6 +228,7 @@ Que azuleja o di-----a          se aca---so  anoi--tecer
 Ma----------re|--si--a   Buscar a------li
    <span class="chord">Bb7M</span>       <span class="chord">A7(b13)</span> <span class="chord">Dm7(9)</span> <span class="chord">Ab7(#4)</span>   <span class="chord">Gm7</span>        <span class="chord">C#º</span>     <span class="chord">Dm7(9)</span>
 Um cheiro de azul                     es---sa  cor não sai de     mim
+
 <span class="chord">F7(9)</span>        <span class="chord">Bb7M</span>     <span class="chord">Bb7M</span>        <span class="chord">A7(b13)</span>            <span class="chord">Ab7(#4)</span>
       Bate e finca pé a    sangue         de rei até o       sol nascer
  <span class="chord">Gm7</span>        <span class="chord">C#º</span>        <span class="chord">Dm7(9)</span>           <span class="chord">F7(9)</span>     <span class="chord">Bb7M</span>
@@ -233,13 +237,15 @@ Ama-relinho     queimando,    mansinho  cedinho,  cedinho
 Cedinho         corre e vá       dizer pro meu benzinho
      <span class="chord">Dm7(9)</span>        <span class="chord">F7(9)</span>       <span class="chord">Bb7M</span>     <span class="chord">A7(b13)</span>  <span class="chord">Dm7(9)</span>
 Um dizer    assim: O     amor  é     a--zulzinho
+
       <span class="chord">Ab7(#4)</span>          <span class="chord">Gm7</span>         <span class="chord">C#º</span>       <span class="chord">Dm7(9)</span>          <span class="chord">F7(9)</span>
 Até o sol       nascer ama-relinho     queimando,    mansinho cedinho
 <span class="chord">Bb7M</span>      <span class="chord">A7(b13)</span>  <span class="chord">Dm7(9)</span>         <span class="chord">Ab7(#4)</span>       <span class="chord">Gm7</span>              <span class="chord">C#º</span>
 Cedinho,  cedinho         corre e vá       dizer pro meu benzinho
      <span class="chord">Dm7(9)</span>        <span class="chord">F7(9)</span>       <span class="chord">Bb7M</span>    <span class="chord">A7(b13)</span>  <span class="chord">Dm7(9)</span> <span class="chord">Ab7(#4)</span>
 Um dizer    assim: O     amor  é    a--zulzinho
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -255,15 +261,6 @@ Um dizer    assim: O     amor  é    a--zulzinho
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -306,7 +303,8 @@ Um dizer    assim: O     amor  é    a--zulzinho
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

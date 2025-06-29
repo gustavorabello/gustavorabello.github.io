@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 riff e introdução:
 e|-------------------------------------
 <span class="chord">B</span>|-------------------------------------
@@ -202,8 +200,7 @@ e|-------------------------------------
 <span class="chord">D</span>|-------------------------------------
 <span class="chord">A</span>|-------4---------------4-7-9-7-9-7---
 <span class="chord">E</span>|---5-5---5-0-0-4-0-5-5---------------
-<br/>
-<br/>
+
 <span class="chord">A</span>          <span class="chord">E</span>          <span class="chord">A</span>        
 Get Along Gang, Get Along Gang
 <span class="chord">A</span>           <span class="chord">E</span>              <span class="chord">A</span>
@@ -220,10 +217,9 @@ And Bingo the fresh doesn't rule it
 The Logical Portia will figure it out
       <span class="chord">E</span>                            <span class="chord">E7</span>
 And that's the spirit of the leadership
-<br/>
-<br/>
+
 (Refrão)
-<br/>
+
 <span class="chord">D</span>                <span class="chord">E</span>         <span class="chord">A</span>  
 Get up! With the Get Along Gang
 <span class="chord">D</span>               <span class="chord">E</span>          <span class="chord">A</span>
@@ -247,15 +243,6 @@ Get up! With the Get Along Gang
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -298,7 +285,8 @@ Get up! With the Get Along Gang
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

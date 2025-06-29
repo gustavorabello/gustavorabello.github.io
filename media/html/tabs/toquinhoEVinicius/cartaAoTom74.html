@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
  <span class="chord">C7M</span>      <span class="chord">G/B</span>         <span class="chord">Am7</span>
 Rua Nascimento Silva, cento e sete
      <span class="chord">C7/G</span>      <span class="chord">D/F#</span>
@@ -217,7 +215,7 @@ Este Rio de amor que se perdeu
 Mesmo a tristeza da gente era mais bela
           <span class="chord">A7(b9)</span>(13)
 <span class="chord">E</span> além disso se via da janela
-<br/>
+
  <span class="chord">D7/9</span>    <span class="chord">G7(4)</span>(9)  <span class="chord">G7(9)</span>     <span class="chord">Gm6</span>  <span class="chord">C7/9</span>
 Um cantinho de céu      e o Redentor
 <span class="chord">F#m7(b5)</span>    <span class="chord">F7M</span>           <span class="chord">Em7</span>
@@ -226,7 +224,7 @@ Um cantinho de céu      e o Redentor
 É preciso acabar com essa tristeza
       <span class="chord">Ab6</span>           <span class="chord">C6/9</span>
 É preciso inventar de novo o amor
-<br/>
+
 Rua Nascimento Silva, cento e sete
 Eu saio correndo do pivete
 Tentando alcançar o elevador
@@ -252,15 +250,6 @@ Onde antes se via o Redentor
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -303,7 +292,8 @@ Onde antes se via o Redentor
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

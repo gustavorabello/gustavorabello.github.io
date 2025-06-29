@@ -220,13 +220,13 @@ Desperdiçando meu mel
  <span class="chord">D/E</span>    <span class="chord">F/G</span>  <span class="chord">G7(9)</span>
 Beija-flor
 
+<span class="chord">C7M</span>                         <span class="chord">Bm7(5-)</span> <span class="chord">E4</span>  <span class="chord">E</span>
+  Eu protegi teu nome por amor
+<span class="chord">F7M</span>          <span class="chord">G6</span>          <span class="chord">A4</span> <span class="chord">A</span>
         </pre>
       </div>
       <div class="col">
         <pre>
-<span class="chord">C7M</span>                         <span class="chord">Bm7(5-)</span> <span class="chord">E4</span>  <span class="chord">E</span>
-  Eu protegi teu nome por amor
-<span class="chord">F7M</span>          <span class="chord">G6</span>          <span class="chord">A4</span> <span class="chord">A</span>
   <span class="chord">Em</span> um codinome beija-flor
  <span class="chord">C7M</span>                       <span class="chord">Bm7(5-)</span>  <span class="chord">E4</span>  <span class="chord">E</span>
 Não responda nunca   meu amor,     nunca!
@@ -272,15 +272,6 @@ Prendia o choro
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -322,7 +313,8 @@ Prendia o choro
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

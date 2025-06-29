@@ -221,14 +221,14 @@ Disse um verso bem bonito ele vai responder pra matar minha fome
 Eu como dono da casa não sou obrigado a servir nem banana
        <span class="chord">A7</span>            <span class="chord">Dm</span>                   <span class="chord">G7</span>
 Se quiser saber meu nome, é o tal que não come
-                 <span class="chord">C</span>
-há mais de uma semana
-            <span class="chord">G7</span>
-Mas ora meu bem!
         </pre>
       </div>
       <div class="col">
         <pre>
+                 <span class="chord">C</span>
+há mais de uma semana
+            <span class="chord">G7</span>
+Mas ora meu bem!
 <span class="chord">C</span>       <span class="chord">A7</span>   <span class="chord">Dm</span>      <span class="chord">G7</span>                 <span class="chord">C</span>   <span class="chord">G7</span>
 Meu bem, perdoa! Perdoa meu coração pecador
 <span class="chord">C</span>                  <span class="chord">Cº</span>     <span class="chord">E7</span>    <span class="chord">Am</span>         <span class="chord">G7</span>   <span class="chord">C</span>
@@ -266,15 +266,6 @@ Meu bem, perdoa! Perdoa meu coração pecador
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -317,7 +308,8 @@ Meu bem, perdoa! Perdoa meu coração pecador
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

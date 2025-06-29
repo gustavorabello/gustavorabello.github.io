@@ -229,15 +229,15 @@ Como eu quero
 O que você precisa
            <span class="chord">G</span>
 É de um retoque total
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
       <span class="chord">Am</span>
 Vou transformar o seu rascunho
    <span class="chord">F7M</span>
 <span class="chord">Em</span> arte final
 
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
   <span class="chord">C</span>
 Agora não tem jeito
 <span class="chord">G</span>
@@ -282,15 +282,6 @@ Como ser bem melhor
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -332,7 +323,8 @@ Como ser bem melhor
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

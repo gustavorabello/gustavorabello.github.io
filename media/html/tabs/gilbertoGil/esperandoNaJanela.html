@@ -193,7 +193,46 @@
     
     <div class="singlecol">
       <pre>
+Intro:   <span class="chord">B7</span>  <span class="chord">E</span>  <span class="chord">B7</span>  <span class="chord">E</span>
 
+<span class="chord">E</span>                             <span class="chord">B7</span>
+ Ainda me lembro do seu caminhar
+                                    <span class="chord">E</span>
+Do seu jeito de olhar eu me lembro bem
+                             <span class="chord">B7</span>
+Fico querendo sentir o seu cheiro
+                         <span class="chord">E</span>
+<span class="chord">E</span> daquele jeito que ela tem
+                            <span class="chord">B7</span>
+O tempo todo eu fico feito tonto
+                               <span class="chord">E</span>
+Sempre procurando mas ela não vem
+                         <span class="chord">B7</span>
+Esse aperto no fundo do peito
+                                    <span class="chord">E</span>
+Desses que o sujeito não pode aguentar
+                             <span class="chord">B7</span>
+Esse aperto aumenta o meu desejo
+                                   <span class="chord">E</span>   <span class="chord">A</span>  <span class="chord">E</span>
+<span class="chord">E</span> eu não vejo a hora de poder lhe falar
+
+<span class="chord">Fº</span>                          <span class="chord">F#m</span>
+   Por isso eu vou na casa dela
+<span class="chord">B7</span>                       <span class="chord">G#m7</span>         <span class="chord">C#m7</span>
+   Falar do meu amor pra ela, ai, ai
+                    <span class="chord">F#m</span>
+Tá me esperando na janela
+<span class="chord">B7</span>                     <span class="chord">E</span>
+  Não sei se vou me segurar
+
+<span class="chord">Fº</span>                          <span class="chord">F#m</span>
+   Por isso eu vou na casa dela
+<span class="chord">B7</span>                       <span class="chord">G#m7</span>         <span class="chord">C#m7</span>
+   Falar do meu amor pra ela, ai, ai
+                    <span class="chord">F#m</span>
+Tá me esperando na janela
+<span class="chord">B7</span>                     <span class="chord">E</span>  <span class="chord">A</span> <span class="chord">E</span>
+  Não sei se vou me segurar
       </pre>
     </div>
     
@@ -210,15 +249,6 @@
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -261,7 +291,8 @@
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

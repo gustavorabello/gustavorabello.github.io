@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">D</span>          <span class="chord">B7</span>     <span class="chord">Em</span>          <span class="chord">A7</span> <span class="chord">A7/4</span> <span class="chord">A7</span> 
 Subi,mais de 1800 colinas,não vi, 
                 <span class="chord">A7</span>                 <span class="chord">D</span>     <span class="chord">A7</span>  <span class="chord">D</span>
@@ -227,15 +225,6 @@ não gosta de ninguém, 
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -278,7 +267,8 @@ não gosta de ninguém, 
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

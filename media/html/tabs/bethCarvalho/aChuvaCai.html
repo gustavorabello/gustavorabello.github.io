@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
          <span class="chord">C</span>     <span class="chord">Dm</span>            <span class="chord">G7</span>      <span class="chord">C</span> (<span class="chord">C</span> <span class="chord">B</span> <span class="chord">Bb</span>)
 <span class="chord">A</span> chuva cai lá fora você vai se molhar
 <span class="chord">A7</span>                      <span class="chord">Dm</span> 
@@ -218,7 +216,7 @@ Espere um pouco não vá agora 
 Você ficando vai fazer feliz um coração 
              <span class="chord">D7</span>                  <span class="chord">G7</span>  <span class="chord">C7</span> 
 Que está cansado de sofrer desilusão
-<br/>
+
    <span class="chord">F</span>              <span class="chord">C</span>  <span class="chord">Am</span>      <span class="chord">Dm</span>           <span class="chord">G7</span>     <span class="chord">C</span> 
 Espero que a natureza  faça você mudar de opi...nião
       </pre>
@@ -237,15 +235,6 @@ Espero que a natureza  faça você mudar de opi...nião
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -288,7 +277,8 @@ Espero que a natureza  faça você mudar de opi...nião
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

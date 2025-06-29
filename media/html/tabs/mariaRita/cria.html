@@ -223,6 +223,10 @@
   <span class="chord">A</span> porta da rua fechada
                <span class="chord">G#m7(5b)</span> <span class="chord">C#7(9b)</span>
   Criança não deixo sair
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
   
      <span class="chord">F#m7</span> 
 <span class="chord">G#m7(5b)</span> <span class="chord">C#7(9b)</span>
@@ -232,10 +236,6 @@
 <span class="chord">G#m7(5b)</span> <span class="chord">C#7(9b)</span>
   da linha
 
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
 <span class="chord">D7M</span>          <span class="chord">E7</span>                <span class="chord">F#m7</span>
   Reflexo no espelho leva à emoção
 <span class="chord">D7M</span>          <span class="chord">E7</span>                <span class="chord">F#m7</span>
@@ -270,15 +270,6 @@ Refrão
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -321,7 +312,8 @@ Refrão
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

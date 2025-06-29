@@ -233,11 +233,11 @@ tumba  ê,  meu  pai,  tumba  lá  e  cá
 não  me  deixe  só
    <span class="chord">Amadd9</span>                              <span class="chord">E/G#</span>
 Ma - ria     que  não  foi  com  as  ou -    tras
-
         </pre>
       </div>
       <div class="col">
         <pre>
+
   <span class="chord">Bm7(11)</span>        <span class="chord">E7</span>            <span class="chord">Amadd9</span>     <span class="chord">Amadd9/G</span>
 Maria  que  não  foi  pro  mar
     <span class="chord">F#m7(b5)</span>         <span class="chord">B7(b9)</span>   <span class="chord">Emadd9</span>
@@ -290,15 +290,6 @@ não  me  deixe  só
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -340,7 +331,8 @@ não  me  deixe  só
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

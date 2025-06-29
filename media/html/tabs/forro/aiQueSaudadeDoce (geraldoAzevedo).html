@@ -230,12 +230,6 @@ Quero matar meu desejo 
 Lhe mando um monte de beijos 
         <span class="chord">A7</span>         <span class="chord">D</span>   <span class="chord">D7</span>
 Ai que saudade sem fim
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
-
-
 
 <span class="chord">D</span>                 <span class="chord">G</span>
 <span class="chord">E</span> se quiser recordar 
@@ -254,7 +248,10 @@ Trabalhar é minha sina 
            <span class="chord">A7</span>       <span class="chord">D</span>   <span class="chord">D7</span>
 Eu gosto mesmo é d'ocê
 
-
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 <span class="chord">D</span>                 <span class="chord">G</span>
 <span class="chord">E</span> se quiser recordar 
        <span class="chord">Gm</span>        <span class="chord">D</span>
@@ -322,15 +319,6 @@ Eu gosto mesmo é d'ocê
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -372,7 +360,8 @@ Eu gosto mesmo é d'ocê
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

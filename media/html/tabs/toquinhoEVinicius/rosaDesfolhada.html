@@ -224,6 +224,10 @@ Teu triste vulto desesperado  
 <span class="chord">A7/E</span>               <span class="chord">Dm</span> 
 Ante o que eu te dizia 
 <span class="chord">F7/C</span>             <span class="chord">Bb6</span> 
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 <span class="chord">E</span> logo o espanto,e logo o insulto 
  <span class="chord">Bm7/5b</span>      <span class="chord">E7</span> 
 O amor dilacerado 
@@ -231,10 +235,7 @@ O amor dilacerado 
 <span class="chord">E</span> logo o pranto ante a agonia 
 <span class="chord">A7</span>           <span class="chord">Dm</span> 
 Do fato consumado 
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
+ 
 <span class="chord">Gm7</span> / <span class="chord">A7</span> / <span class="chord">Gm7</span> / <span class="chord">A4/7</span> / <span class="chord">A7</span> 
  
 <span class="chord">Dm</span>          <span class="chord">D7</span> 
@@ -270,15 +271,6 @@ Tudo desfeito, tudo perdido 
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -321,7 +313,8 @@ Tudo desfeito, tudo perdido 
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

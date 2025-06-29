@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 intro: <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
-<br/>
+
            <span class="chord">D7+/9</span>
 Vou te contar
    <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
@@ -207,7 +205,7 @@ Coisas que só o coração pode entender
 Fundamental é  mesmo o amor
      <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
 É impossível ser feliz sozinho
-<br/>
+
            <span class="chord">D7+/9</span>
 O resto é mar
    <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
@@ -218,7 +216,7 @@ São coisas lindas que eu tenho pra te dar
 Vem de mansinho a brisa e me diz
      <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
 É impossível ser feliz sozinho
-<br/>
+
  <span class="chord">Gm7</span>         <span class="chord">C/Bb</span>        <span class="chord">Am7</span>
 Da primeira vez era a cida...de
  <span class="chord">Fm7</span>          <span class="chord">Bb/Ab</span>          <span class="chord">Gm/A</span>   <span class="chord">A7(13-)</span>
@@ -251,15 +249,6 @@ Sozinho...
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -302,7 +291,8 @@ Sozinho...
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

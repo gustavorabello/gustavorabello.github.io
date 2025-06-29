@@ -252,6 +252,10 @@ Você é forte dentes e músculos
     Peitos e lábios
  <span class="chord">D7M(9)</span>       <span class="chord">D#m7(5-)</span> <span class="chord">G#7</span>
 Você é forte letras e músicas
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
  <span class="chord">C#m7</span>     <span class="chord">F#7</span>
 Todas as músicas
   <span class="chord">Bm7</span>      <span class="chord">E7</span>
@@ -267,10 +271,6 @@ Mina de estrelas
  <span class="chord">Bm7</span>        <span class="chord">E7</span>
 Diga o que você quer
 
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
 [Refrão]
 
 <span class="chord">A7M</span>                 <span class="chord">C#m7</span>
@@ -337,15 +337,6 @@ Esta canção é só pra dizer e diz
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -387,7 +378,8 @@ Esta canção é só pra dizer e diz
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

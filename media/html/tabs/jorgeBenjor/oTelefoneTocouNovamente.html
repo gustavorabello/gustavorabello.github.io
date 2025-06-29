@@ -220,16 +220,16 @@ Ela é meu estado de espírito
 Ela é a minha proteção
      <span class="chord">Am7</span>  <span class="chord">D7/9</span>
 Que pena há,há,ha
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
      <span class="chord">Em7</span>
 Que pena
      <span class="chord">Am7</span>  <span class="chord">D7/9</span>
 Que pena há,há,ha
      <span class="chord">Em7</span>
 Que pena
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
      <span class="chord">D7/9</span>                      <span class="chord">Em7</span>
         Com ela eu sou mais eu
      <span class="chord">D7/9</span>                      <span class="chord">Em7</span>
@@ -263,15 +263,6 @@ O telefone, tocou novamente...
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -314,7 +305,8 @@ O telefone, tocou novamente...
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

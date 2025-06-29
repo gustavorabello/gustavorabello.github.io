@@ -232,12 +232,12 @@ Caravelas ao mar partiram 
 Por destino encontraram o Brasil... 
 <span class="chord">C7/5</span>+               <span class="chord">Fm</span>   <span class="chord">F7</span>   <span class="chord">Bbm</span> 
 Nos trazendo a maior riqueza 
+<span class="chord">Bbm/G#</span>    <span class="chord">Gm7/b5</span>          <span class="chord">C7</span>      <span class="chord">Fm</span>   <span class="chord">F7</span>  
+           <span class="chord">A</span> nossa Língua Portuguesa 
         </pre>
       </div>
       <div class="col">
         <pre>
-<span class="chord">Bbm/G#</span>    <span class="chord">Gm7/b5</span>          <span class="chord">C7</span>      <span class="chord">Fm</span>   <span class="chord">F7</span>  
-           <span class="chord">A</span> nossa Língua Portuguesa 
              <span class="chord">Bbm</span>        <span class="chord">Eb7</span>              <span class="chord">G#7+</span>        <span class="chord">C#7+</span> 
 Se misturou com tupi tupinambrasileirou 
                    <span class="chord">Gm7/b5</span>          <span class="chord">C7</span>     <span class="chord">Cm7/b5</span> 
@@ -294,15 +294,6 @@ Hoje a herança portuguesa nos conduz 
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -344,7 +335,8 @@ Hoje a herança portuguesa nos conduz 
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

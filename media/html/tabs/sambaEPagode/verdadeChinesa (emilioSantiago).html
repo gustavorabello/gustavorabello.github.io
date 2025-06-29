@@ -216,12 +216,12 @@ Muita coisa a gente faz
 Seguindo o caminho que o mundo traçou
               <span class="chord">G7M</span>                   <span class="chord">C#m7(b5)</span>
 Seguindo a cartilha que alguém ensinou
+             <span class="chord">F#7/5</span>+           <span class="chord">F#m7/11</span>
+Seguindo a receita da vida normal
         </pre>
       </div>
       <div class="col">
         <pre>
-             <span class="chord">F#7/5</span>+           <span class="chord">F#m7/11</span>
-Seguindo a receita da vida normal
           <span class="chord">B7</span>          <span class="chord">Em7</span>
 Mas o que é vida, afinal?
               <span class="chord">A7</span>                   <span class="chord">D7M</span>
@@ -259,15 +259,6 @@ O que vale é o sentimento
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -310,7 +301,8 @@ O que vale é o sentimento
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -224,12 +224,13 @@ Gira ao sol que  parou prá olhar
 Se agita e segue no seu passo
 <span class="chord">Bm</span>                    <span class="chord">E7/4</span>   <span class="chord">E7</span>       <span class="chord">A7+</span>  <span class="chord">A7/5</span>+
 Mostra toda essa poesia no olhar
+
+   <span class="chord">A7+</span>      <span class="chord">A7/5</span>+     <span class="chord">D7+/9</span>
+Deixando os versos na partida
         </pre>
       </div>
       <div class="col">
         <pre>
-   <span class="chord">A7+</span>      <span class="chord">A7/5</span>+     <span class="chord">D7+/9</span>
-Deixando os versos na partida
         <span class="chord">E/D</span>         <span class="chord">C#m7</span>     <span class="chord">Bm7</span>
 <span class="chord">E</span> só cantiga prá se cantar
   <span class="chord">A7+</span>      <span class="chord">A7/5</span>+      <span class="chord">D7+/9</span>
@@ -274,15 +275,6 @@ Repete "deixando versos na partida" até "o povo inteiro chorar)
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -324,7 +316,8 @@ Repete "deixando versos na partida" até "o povo inteiro chorar)
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

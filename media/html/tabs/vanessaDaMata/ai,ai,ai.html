@@ -221,6 +221,10 @@ Onde não haja quem possa
 com a nossa felicidade
                 <span class="chord">Gm7</span>
 Vamos brindar a vida, meu bem
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
                 <span class="chord">Bb/C</span>  <span class="chord">C9/#5</span>  
 Aonde o vento é brisa
                     <span class="chord">Gm7</span>
@@ -229,10 +233,6 @@ Aonde o vento é brisa
 O que a gente precisa
                      <span class="chord">Gm7</span>                    <span class="chord">C7</span>
 É tomar um banho de chuva, um banho de chuvaaa..
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
 <span class="chord">Gm7</span> / <span class="chord">C7</span> / <span class="chord">Gm7</span> //
 Ai, ai, ai...
 <span class="chord">Bb/C</span> / <span class="chord">C7</span> / <span class="chord">Gm7</span> //
@@ -266,15 +266,6 @@ Nã, nã, nã, nã, nã...
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -317,7 +308,8 @@ Nã, nã, nã, nã, nã...
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

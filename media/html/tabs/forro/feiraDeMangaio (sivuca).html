@@ -221,12 +221,13 @@ Tomar uma bicada com lambú assado, e olhar pra Maria do Joá
 Tinha uma vendinha no canto da rua, onde o mangaieiro ia se animar
              <span class="chord">G</span>                <span class="chord">F#</span>                          <span class="chord">Bm</span>
 Tomar uma bicada com lambú assado, e olhar pra Maria do Joá
-
-(<span class="chord">Bm</span> <span class="chord">A</span> <span class="chord">G</span> <span class="chord">F#</span> <span class="chord">Bm</span> <span class="chord">F#</span> <span class="chord">Bm</span> <span class="chord">Em</span> <span class="chord">Bm</span> <span class="chord">F#</span> <span class="chord">Bm</span>)
         </pre>
       </div>
       <div class="col">
         <pre>
+
+(<span class="chord">Bm</span> <span class="chord">A</span> <span class="chord">G</span> <span class="chord">F#</span> <span class="chord">Bm</span> <span class="chord">F#</span> <span class="chord">Bm</span> <span class="chord">Em</span> <span class="chord">Bm</span> <span class="chord">F#</span> <span class="chord">Bm</span>)
+
 <span class="chord">Bm</span>            <span class="chord">Em</span>           <span class="chord">F#</span>
 Cabresto de cavalo e rabichola
                                    <span class="chord">Bm</span>
@@ -270,15 +271,6 @@ Tem Zefa de Purcina fazendo renda, e o ronco do fole sem parar
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -320,7 +312,8 @@ Tem Zefa de Purcina fazendo renda, e o ronco do fole sem parar
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

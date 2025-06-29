@@ -217,16 +217,17 @@ Do tambor
 :Fogo eterno prá afugentar
 :<span class="chord">A7+</span>            <span class="chord">B7/4/9</span>
 :O inferno prá outro lugar
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 :<span class="chord">C#m7</span>        <span class="chord">G#7/5</span>+
 :Fogo eterno prá consumir
 :<span class="chord">A7+</span>          <span class="chord">B7/4/9</span>
 :O inferno, fora daqui
 <span class="chord">C#m7</span>    <span class="chord">G#7/5</span>+   <span class="chord">A7+</span>        <span class="chord">B7/4/9</span> <span class="chord">Cº</span>    
  La laia, laia, laia laia laia             Fora daqui
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
+
  <span class="chord">E7+</span>         <span class="chord">F#m7</span>            <span class="chord">G#m7</span>            <span class="chord">A7+</span>
 Venho para a festa, sei que muitos têm na testa
         <span class="chord">B7/4/9</span>         <span class="chord">C#m7</span> <span class="chord">G#7/5</span>+   <span class="chord">A7+</span>
@@ -260,15 +261,6 @@ Lá, lá, iá
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -311,7 +303,8 @@ Lá, lá, iá
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

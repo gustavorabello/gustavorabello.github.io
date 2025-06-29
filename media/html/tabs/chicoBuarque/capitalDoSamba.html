@@ -228,13 +228,13 @@ Até  parece que eu estou na Bahia
 Me sinto pisando      um chão de esmeraldas...
        <span class="chord">D/F#</span>     <span class="chord">G6</span>         <span class="chord">G#°</span>   <span class="chord">D7M/A</span>        <span class="chord">Am6/C</span>   <span class="chord">B7</span> 
 Quando levo meu    coração     À       Manguei_____ra
+    <span class="chord">Em7</span>          <span class="chord">G7M</span>  <span class="chord">F#7</span>       <span class="chord">Bm7</span>            <span class="chord">G#m7</span>  <span class="chord">C#7</span> 
+Sob uma chuva de ro___sas Meu sangue jorra das veias
+   <span class="chord">F#7M</span>           <span class="chord">B6/9</span>           <span class="chord">E#m7</span> <span class="chord">A#7</span> 
         </pre>
       </div>
       <div class="col">
         <pre>
-    <span class="chord">Em7</span>          <span class="chord">G7M</span>  <span class="chord">F#7</span>       <span class="chord">Bm7</span>            <span class="chord">G#m7</span>  <span class="chord">C#7</span> 
-Sob uma chuva de ro___sas Meu sangue jorra das veias
-   <span class="chord">F#7M</span>           <span class="chord">B6/9</span>           <span class="chord">E#m7</span> <span class="chord">A#7</span> 
 <span class="chord">E</span> tinge um tapete pra ela sambar
       <span class="chord">D#7</span>   <span class="chord">G#7</span>           <span class="chord">C#7</span>                 <span class="chord">F#6</span> <span class="chord">A7</span>   
 É a re___aleza dos bambas que quer se mostrar
@@ -284,15 +284,6 @@ Me sinto pisando        Um chão de esmeraldas
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -334,7 +325,8 @@ Me sinto pisando        Um chão de esmeraldas
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

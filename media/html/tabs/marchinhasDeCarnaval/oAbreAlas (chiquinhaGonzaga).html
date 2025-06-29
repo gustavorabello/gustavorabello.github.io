@@ -193,11 +193,9 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 Intro:  <span class="chord">Dm</span>   <span class="chord">Am</span>   <span class="chord">B7</span>   <span class="chord">E7</span>   <span class="chord">A7</span>
         <span class="chord">Dm</span>   <span class="chord">Am</span>   <span class="chord">B7</span>   <span class="chord">E7</span>   <span class="chord">Am</span>
-<br/>
+
 Primeira Parte:
                 <span class="chord">E7</span>           <span class="chord">Am</span>
 Ó Abre-Alas que eu quero passar
@@ -207,7 +205,7 @@ Primeira Parte:
 Eu sou da lira não posso negar
            <span class="chord">E7</span>               <span class="chord">Am</span>
 Eu sou da lira não posso negar
-<br/>
+
                 <span class="chord">E7</span>           <span class="chord">Am</span>
 Ó Abre-Alas que eu quero passar
                 <span class="chord">E7</span>           <span class="chord">Am</span>   <span class="chord">A7</span>
@@ -216,7 +214,7 @@ Eu sou da lira não posso negar
 Rosa de ouro é quem vai ganhar
         <span class="chord">E7</span>                  <span class="chord">Am</span>
 Rosa de ouro é quem vai ganhar
-<br/>
+
 Segunda Parte:
 <span class="chord">G7</span>              <span class="chord">C</span>                   <span class="chord">Dm</span>           <span class="chord">G7</span>      <span class="chord">Cº</span> <span class="chord">C</span>
 Eu não quero a rosa. Por que não a Rosa que não tenha espinhos?
@@ -242,15 +240,6 @@ a linda flor dos teus camrinhos
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -293,7 +282,8 @@ a linda flor dos teus camrinhos
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

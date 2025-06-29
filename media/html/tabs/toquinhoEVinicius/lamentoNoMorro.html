@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">Am7/4</span>    <span class="chord">G7</span>          <span class="chord">C7M</span>
 Não      posso esquecer
 <span class="chord">C7/9</span>      <span class="chord">F7M</span>  <span class="chord">F7M/F#</span>  <span class="chord">E7</span>
@@ -215,7 +213,7 @@ Destino meu
 É madrugada
 <span class="chord">F#m7/5</span>-         <span class="chord">B7/9</span>-        <span class="chord">E7</span> <span class="chord">E7/9</span>+ <span class="chord">E7/9</span>-
 Sereno dos meus olhos já correu
-<br/>
+
 <span class="chord">Am7/4</span>    <span class="chord">G7</span>          <span class="chord">C7M</span>
 Não      posso esquecer
 <span class="chord">C7/9</span>      <span class="chord">F7M</span>  <span class="chord">F7M/F#</span>  <span class="chord">E7</span>
@@ -250,15 +248,6 @@ Pra te dizer adeus
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -301,7 +290,8 @@ Pra te dizer adeus
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">E7</span>               <span class="chord">A</span>          <span class="chord">F#7</span>                         <span class="chord">Bm</span>
 Ciranda de roda, de samba de roda da vida
            <span class="chord">E7</span>          <span class="chord">A</span>
@@ -217,7 +215,7 @@ Que é da purificação
 <span class="chord">E</span> nas águas que rodeiam a ilha
                      <span class="chord">A</span>
 De São Luis do Maranhão
-<br/>
+
      <span class="chord">E7</span>               <span class="chord">A</span>
 Na rodilha embaixo da talha
            <span class="chord">F#7</span>      <span class="chord">Bm</span>
@@ -252,15 +250,6 @@ Que roda. Olha a roda, ciranda
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -303,7 +292,8 @@ Que roda. Olha a roda, ciranda
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

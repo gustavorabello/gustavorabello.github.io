@@ -191,12 +191,11 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
 [Intro] <span class="chord">A</span>  <span class="chord">Dm</span>  <span class="chord">F</span>  <span class="chord">Dm</span>
-<br/>
+
                      <span class="chord">A</span>
 We passed upon the stairs
                          <span class="chord">Dm</span>
@@ -212,8 +211,7 @@ I spoke into his eyes
                      <span class="chord">Dm</span>
 I thought you died alone
 <span class="chord">A</span> long long time ago
-<br/>
-<br/>
+
 <span class="chord">C</span>             <span class="chord">F</span>
   Oh no, not me
     <span class="chord">C#</span>              <span class="chord">F</span>
@@ -222,12 +220,15 @@ We never lost control
 You're face to face
           <span class="chord">C#</span>                <span class="chord">A</span>
 With the man who sold the world
-<br/>
-<br/>
+
                          <span class="chord">A</span>
 I laughed and shook his hand
                           <span class="chord">Dm</span>
 And made my way back home
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
                           <span class="chord">A</span>
 I searched from form and land
                              <span class="chord">F</span>
@@ -238,10 +239,9 @@ I gazed the gazeless stare 
 At all the millions hills
                    <span class="chord">Dm</span>
 I must have died alone
-<br/>
+
 <span class="chord">A</span> long long time ago
-<br/>
-<br/>
+
 <span class="chord">C</span>              <span class="chord">F</span>
   Who knows, not me
     <span class="chord">C#</span>              <span class="chord">F</span>
@@ -250,8 +250,7 @@ We never lost control
 You're face to face
           <span class="chord">C#</span>
 With the man who sold the world
-<br/>
-<br/>
+
 <span class="chord">C</span>                 <span class="chord">F</span>
   Who knows, not me
     <span class="chord">C#</span>              <span class="chord">F</span>
@@ -260,7 +259,8 @@ We never lost control
 You're face to face
           <span class="chord">C#</span>
 With the man who sold the world
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -276,15 +276,6 @@ With the man who sold the world
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -327,7 +318,8 @@ With the man who sold the world
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

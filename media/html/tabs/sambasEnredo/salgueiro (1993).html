@@ -217,12 +217,12 @@ Um dia eu volto meu pai
 Não chore, pois vou sorrir
       <span class="chord">Em7</span>           <span class="chord">A7</span>           <span class="chord">D</span>
 Felicidade, o velho Ita vai partir
+        <span class="chord">A7</span>          <span class="chord">D</span>        <span class="chord">B7</span>   <span class="chord">Em7</span>
+É no balanço das ondas........eu vou            }
         </pre>
       </div>
       <div class="col">
         <pre>
-        <span class="chord">A7</span>          <span class="chord">D</span>        <span class="chord">B7</span>   <span class="chord">Em7</span>
-É no balanço das ondas........eu vou            }
                          <span class="chord">A7</span>       <span class="chord">D</span>
 No mar eu jogo a saudade........amor            }
           <span class="chord">A7</span>        <span class="chord">D</span>     <span class="chord">D7</span>           <span class="chord">G</span>                       BIS
@@ -262,15 +262,6 @@ Embalado na magia do meu carnaval..
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -313,7 +304,8 @@ Embalado na magia do meu carnaval..
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

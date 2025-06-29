@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 (intro) <span class="chord">Gm7</span> <span class="chord">Cm7</span> <span class="chord">F7</span> <span class="chord">Gm7</span> <span class="chord">Cm7</span> <span class="chord">Gm7</span> <span class="chord">D7(#9)</span>
-<br/>
+
  <span class="chord">Gm7</span> <span class="chord">Cm7</span> <span class="chord">F7</span> <span class="chord">Gm7</span> <span class="chord">Cm7</span> <span class="chord">Gm7</span>           <span class="chord">D7(#9)</span>
 Oh.............O Ariá raiou oba oba oba
         <span class="chord">Gm7</span>                <span class="chord">D7(#9)</span>
@@ -233,15 +231,6 @@ Você não vai querer que eu chegue no final
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -284,7 +273,8 @@ Você não vai querer que eu chegue no final
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -234,12 +234,12 @@ semana  passada
   Você nem arrumou a cama, parece que 
 <span class="chord">C#m7(9+)</span> <span class="chord">D9</span>
 fugiu de  casa
+<span class="chord">E</span>
+  Mas ficou tudo fora de lugar
         </pre>
       </div>
       <div class="col">
         <pre>
-<span class="chord">E</span>
-  Mas ficou tudo fora de lugar
    <span class="chord">D9</span>
 Café sem açúcar, dança sem par
 <span class="chord">E</span>
@@ -297,15 +297,6 @@ nunca existiu
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -347,7 +338,8 @@ nunca existiu
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

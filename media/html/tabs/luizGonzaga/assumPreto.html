@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 Tom: <span class="chord">Em</span>
-<br/>
+
         <span class="chord">Em</span> 
 Tudo em vorta é só beleza 
          <span class="chord">E</span>             <span class="chord">Am</span> 
@@ -205,8 +203,7 @@ Sol de Abril e a mata em frô 
   | Mas Assum Preto, cego dos óio 
 2x|            <span class="chord">B7</span>                 <span class="chord">E</span> 
   | Num vendo a luz, ai, canta de dor    
-<br/>
-<br/>
+
       <span class="chord">Em</span> 
 Tarvez por ignorança 
        <span class="chord">E</span>       <span class="chord">Am</span> 
@@ -215,8 +212,7 @@ Ou mardade das pió 
   | Furaro os óio do Assum Preto 
 2x|           <span class="chord">B7</span>                  <span class="chord">E</span> 
   | Pra ele assim, ai, cantá de mió   (bis) 
-<br/>
-<br/>
+
      <span class="chord">Em</span> 
 Assum Preto veve sorto 
     <span class="chord">E</span>           <span class="chord">Am</span> 
@@ -225,8 +221,7 @@ Mas num pode avuá 
   | Mil vezes a sina de uma gaiola 
 2x|            <span class="chord">B7</span>                <span class="chord">Em</span> 
   | Desde que o céu, ai, pudesse oiá     (bis) 
-<br/>
-       
+
     <span class="chord">Em</span> 
 Assum Preto, o meu cantar 
    <span class="chord">E</span>                 <span class="chord">Am</span> 
@@ -251,15 +246,6 @@ Assum Preto, o meu cantar 
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -302,7 +288,8 @@ Assum Preto, o meu cantar 
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

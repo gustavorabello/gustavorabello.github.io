@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 (<span class="chord">E7/4</span> <span class="chord">F7/4</span>) <span class="chord">F#7/4</span>         <span class="chord">F#7</span>    <span class="chord">Bm7</span>         <span class="chord">E7(9)</span>   <span class="chord">A7M</span>            <span class="chord">G7/13</span>        <span class="chord">F#7/4</span>      <span class="chord">F#7</span>
             Perfumei o corredor, perfumei o elevador pra tirar de vez o mal olhado
 <span class="chord">F#7/4</span>        <span class="chord">F#7</span>        <span class="chord">Bm7</span>            <span class="chord">E7(9)</span>      <span class="chord">A7M</span>           <span class="chord">E/G#</span>      <span class="chord">Em7/G</span> A7sus9
@@ -203,7 +201,7 @@
 Nessa onda de calor eu até peguei uma cor, tô com o corpo todo bronzeado
 <span class="chord">Dm7</span>          <span class="chord">G7</span>      <span class="chord">C#m7</span>         <span class="chord">F#7</span>        <span class="chord">Bm7</span>          <span class="chord">E7(9)</span>    <span class="chord">A6/9</span>
 Seja do jeito que for, eu te juro meu amor, se quiser voltar tá perdoado
-<br/>
+
 <span class="chord">F#7/4</span>          <span class="chord">F#7</span>        <span class="chord">Bm7</span>           <span class="chord">E7(9)</span>    <span class="chord">A7M</span>         <span class="chord">G7/13</span>   <span class="chord">F#7/4</span>         <span class="chord">F#7</span>
 Fui a pé a Salvador, de joelho ao Redentor pra ver nosso amor abençoado
 <span class="chord">F#7/4</span>          <span class="chord">F#7</span>        <span class="chord">Bm7</span>          <span class="chord">E7(9)</span>       <span class="chord">A7M</span>           <span class="chord">E/G#</span>          <span class="chord">Em/G</span> A7sus9
@@ -212,7 +210,7 @@ Nosso lar se enfeitou, a esperança germinou, ah! Tem muita flor pra todo lado
 Pra curar a minha dor, procurei um bom doutor, me mandou beijar teu beijo mais molhado
 <span class="chord">Dm7</span>          <span class="chord">G7</span>      <span class="chord">C#m7</span>         <span class="chord">F#7</span>        <span class="chord">Bm7</span>         <span class="chord">E7(9)</span>     <span class="chord">A6</span>      <span class="chord">A7M</span>
 Seja do jeito que for, eu te juro meu amor, se quiser voltar tá perdoado
-<br/>
+
       <span class="chord">E7(9)</span>                     <span class="chord">A7M</span>           <span class="chord">G#m7</span>      <span class="chord">C#7</span>      <span class="chord">F</span>#7sus9 <span class="chord">F#7(9)</span>
 <span class="chord">E</span> se voltar te dou café, preliminar com cafuné pra deixar teu dia mais gostoso
       <span class="chord">E7(9)</span>                       <span class="chord">G7(#11)</span>  <span class="chord">F#7(9b)</span>   <span class="chord">Bm7</span>         <span class="chord">E7(9)</span>     <span class="chord">A6</span>   <span class="chord">A7M</span>
@@ -237,15 +235,6 @@ Deixa pintar o entardecer, o sol brincar de se esconder, tarde, chuva eu fico ma
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -288,7 +277,8 @@ Deixa pintar o entardecer, o sol brincar de se esconder, tarde, chuva eu fico ma
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

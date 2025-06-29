@@ -193,34 +193,40 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 [intro]: <span class="chord">Am</span> <span class="chord">Em</span> <span class="chord">B7</span> <span class="chord">Em</span>
-<br/>
+
         <span class="chord">Em</span>
 Naquela mesa ele sentava sempre
-                       <span class="chord">E7</span>      <span class="chord">Am</span><br/>
-e me dizia sempre o que é viver melhor<br/>
-<br/>
+                       <span class="chord">E7</span>      <span class="chord">Am</span>
+e me dizia sempre o que é viver melhor
+
 naquela mesa ele contava histórias
-                 <span class="chord">B7</span>               <span class="chord">Em</span>  <br/>
-que hoje na memória eu guardo e sei de cor<br/>
-<br/>
+                 <span class="chord">B7</span>               <span class="chord">Em</span>  
+que hoje na memória eu guardo e sei de cor
+
 naquela mesa ele juntava gente
-            <span class="chord">E7</span>               <span class="chord">Am</span><br/>
+            <span class="chord">E7</span>               <span class="chord">Am</span>
 e contava contente o que fez de manhã
-                       <span class="chord">E7</span>      <span class="chord">Am</span><br/>
-uma mesa num canto, uma casa e um jardim<br/>
-<br/>
+                        <span class="chord">Em</span>
+e nos seus olhos era tanto brilho
+             <span class="chord">B7</span>               <span class="chord">Em</span>
+que mais que seu filho eu fiquei seu fã
+       <span class="chord">Em</span>
+eu não sabia que doía tanto
+                       <span class="chord">E7</span>      <span class="chord">Am</span>
+uma mesa num canto, uma casa e um jardim
+
 se eu soubesse o quanto dói a vida
-                <span class="chord">B7</span>        <span class="chord">Em</span>  <br/>
-essa dor tão doída, não doía assim<br/>
-<br/>
+                <span class="chord">B7</span>        <span class="chord">Em</span>  
+essa dor tão doída, não doía assim
+
 agora resta uma mesa na sala
-            <span class="chord">E7</span>               <span class="chord">Am</span><br/>
+            <span class="chord">E7</span>               <span class="chord">Am</span>
 e hoje ninguém mais fala do seu bandolim
-                <span class="chord">B7</span>        <span class="chord">Em</span>  <br/>
-e a saudade dele ta doendo em mim<br/>
+                     <span class="chord">Em</span>
+naquela mesa ta faltando ele
+                <span class="chord">B7</span>        <span class="chord">Em</span>  
+e a saudade dele ta doendo em mim
       </pre>
     </div>
     
@@ -237,15 +243,6 @@ e a saudade dele ta doendo em mim<br/>
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -288,7 +285,8 @@ e a saudade dele ta doendo em mim<br/>
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

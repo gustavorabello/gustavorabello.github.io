@@ -191,22 +191,21 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
 <span class="chord">E7M(9)</span>      <span class="chord">G°</span> <span class="chord">G#m7</span>              <span class="chord">C#7(9)</span>
     Ai...        quanto querer
 <span class="chord">E7M(9)</span>             <span class="chord">G°</span>        <span class="chord">G#m7</span> / <span class="chord">B7(9)</span> /
     Cabe em meu cora--ção
-<br/>
+
 <span class="chord">E7M(9)</span>      <span class="chord">G°</span> <span class="chord">G#m7</span>              <span class="chord">C#7(9)</span>
     Ai...        me faz sofrer
 <span class="chord">E7M(9)</span>            <span class="chord">G°</span>                 <span class="chord">G#m7</span>   <span class="chord">B7(9)</span>
     Faz que me mata e se não mata      fe----re
-<br/>
+
 <span class="chord">E7M(9)</span> / <span class="chord">G°</span> / <span class="chord">G#m7</span> / <span class="chord">C#7(9)</span> / <span class="chord">E7M(9)</span> / <span class="chord">G°</span> / <span class="chord">G#m7</span> / <span class="chord">B7(9)</span> /
-<br/>
+
 <span class="chord">E7M(9)</span>      <span class="chord">G°</span>  <span class="chord">G#m7</span>            <span class="chord">C#7(9)</span>
     Vai..        sem me dizer
 <span class="chord">E7M(9)</span>         <span class="chord">G°</span>          <span class="chord">G#m7</span> / <span class="chord">B7(9)</span> /
@@ -215,32 +214,37 @@
     Sai...       quando bem quer
 <span class="chord">E7M(9)</span>          <span class="chord">G°</span>          <span class="chord">G#m7</span>         <span class="chord">B7(9)</span>
     Traz uma praga e me a----faga a pe----le
-<br/>
+
 <span class="chord">E7M(9)</span> / <span class="chord">G°</span> / <span class="chord">G#m7</span> / <span class="chord">C#7(9)</span> / <span class="chord">E7M(9)</span> / <span class="chord">G°</span> / <span class="chord">G#m7</span> / <span class="chord">B7(9)</span> /
-<br/>
+
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 <span class="chord">E7M(9)</span>           <span class="chord">G°</span>    <span class="chord">G#m7</span>         <span class="chord">C#7(9)</span>
     Cres--cer   luar    pra iluminar
       <span class="chord">A7M</span>       <span class="chord">G7M</span>        <span class="chord">F#m7</span>         <span class="chord">B7(9)</span>
 As tre---vas fun---das  da     pai--xão
-<br/>
+
 <span class="chord">E7M(9)</span>         <span class="chord">G°</span>   <span class="chord">G#m7</span>           <span class="chord">C#7(9)</span>
     Eu quis lutar    contra o poder    do a--mor
 <span class="chord">A7M(9)</span>                          <span class="chord">A#m7(b5)</span>
     Caí nos pés do vence--dor
                <span class="chord">D#7(b9)</span>                   <span class="chord">E7M(9)</span> / <span class="chord">G°</span> /
 Para ser um ser-------viçal de um samurai
-<br/>
+
 <span class="chord">G#m7</span>               <span class="chord">C#7(9)</span>
      Mas eu tô tão        feliz
 <span class="chord">E7M(9)</span>              <span class="chord">G°</span>         <span class="chord">G#m7</span> / <span class="chord">B7(9)</span> / <span class="chord">E7M(9)</span> / <span class="chord">G°</span> / <span class="chord">G#m7</span> /
     Dizem que o amor a--trai
-<br/>
+
 <span class="chord">C#7(9)</span> / <span class="chord">E7M(9)</span> / <span class="chord">G°</span> / <span class="chord">G#m7</span> / <span class="chord">B7(9)</span> / <span class="chord">E7M(9)</span> / <span class="chord">G°</span> / <span class="chord">G#m7</span> / <span class="chord">C#7(9)</span> /
-<br/>
+
 <span class="chord">E7M(9)</span> / <span class="chord">G°</span> / <span class="chord">G#m7</span> / <span class="chord">B7(9)</span> /
-<br/>
+
       <span class="chord">E7M</span>        <span class="chord">G°</span>        <span class="chord">G#m7</span>      <span class="chord">C#7(9)</span>      <span class="chord">B7(9)</span>
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -256,15 +260,6 @@ Para ser um ser-------viçal de um samurai
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -307,7 +302,8 @@ Para ser um ser-------viçal de um samurai
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

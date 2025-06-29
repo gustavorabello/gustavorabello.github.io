@@ -193,11 +193,9 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 (intro) (<span class="chord">G</span> <span class="chord">G#º</span> <span class="chord">C#7/G#</span> <span class="chord">F#m7</span> <span class="chord">B7</span> <span class="chord">Em</span> <span class="chord">A7</span> <span class="chord">D</span> <span class="chord">D7</span>)
 (<span class="chord">G</span> <span class="chord">G#º</span> <span class="chord">C#7/G#</span> <span class="chord">F#m7</span> <span class="chord">B7</span> <span class="chord">Em</span> <span class="chord">A7</span> <span class="chord">D</span>)
-<br/>
+
       <span class="chord">A7</span>
 Tá legal!
       <span class="chord">D</span>        <span class="chord">A7</span>   <span class="chord">D</span>    <span class="chord">A7</span> (no tempo do <span class="chord">A7</span> pode fazer bordões: (<span class="chord">A</span> <span class="chord">B</span> <span class="chord">C#</span> <span class="chord">D</span> <span class="chord">E</span> <span class="chord">F#</span> <span class="chord">E</span> <span class="chord">D</span> <span class="chord">C#</span> <span class="chord">B</span> <span class="chord">A</span>)
@@ -208,7 +206,7 @@ Mas não me altere o samba tanto assim
 Olha que a rapaziada está sentindo a falta
  <span class="chord">Em</span>             <span class="chord">A7</span>             <span class="chord">D</span>
 De um cavaco, de um pandeiro ou de um tamborim
-<br/>
+
    <span class="chord">Em</span>       <span class="chord">A7</span>        <span class="chord">D</span>
 Sem preconceito ou mania de passado
                      <span class="chord">Am7</span>   <span class="chord">D7</span>       <span class="chord">G</span>
@@ -233,15 +231,6 @@ Que durante o nevoeiro leva o barco devagar
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -284,7 +273,8 @@ Que durante o nevoeiro leva o barco devagar
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -241,10 +241,6 @@ Quem traz no corpo a marca
 Maria, Maria
     <span class="chord">F5+</span>    <span class="chord">Dbm/Fb</span>      <span class="chord">Ab</span>
 Mistura a dor e a alegria
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
  <span class="chord">Ab</span>                <span class="chord">Eb/Ab</span>
 Mas é preciso ter manha
       <span class="chord">B/Ab</span>     <span class="chord">Db/Ab</span>
@@ -253,6 +249,10 @@ Mas é preciso ter manha
 É preciso ter sonho sempre
   <span class="chord">Fm7</span>         <span class="chord">Fm/Eb</span>     <span class="chord">Db</span>
 Quem traz na pele essa marca
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
              <span class="chord">Gb</span>
 Possui a estranha
    <span class="chord">F5+</span>    <span class="chord">Dbm/Fb</span>    <span class="chord">Ab</span>
@@ -317,15 +317,6 @@ Mania de ter fé na vida
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -367,7 +358,8 @@ Mania de ter fé na vida
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

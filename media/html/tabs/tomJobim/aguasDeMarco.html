@@ -248,14 +248,14 @@ No rosto o desgosto, é um pouco sozinhor                     --------
 É a luz da manhã, é o tijolo chegandor                     ------------------------------------------------------------
                <span class="chord">Bb/Ab</span>               <span class="chord">Gm6</span>
 É a lenha, é o dia, é o fim da picadar                     ------------------------------------------------------------
-               <span class="chord">Ebm6/Gb</span>                 <span class="chord">Fadd4</span>
-É a garrafa de cana, o estilhaço na estradar                     ------------------------------------------------------
-              <span class="chord">Bb7(9)</span>/F   <span class="chord">Bb7</span>       <span class="chord">C7/E</span>
-É o projeto da casa, é o corpo na camar                     -----------------------------------------------------------
         </pre>
       </div>
       <div class="col">
         <pre>
+               <span class="chord">Ebm6/Gb</span>                 <span class="chord">Fadd4</span>
+É a garrafa de cana, o estilhaço na estradar                     ------------------------------------------------------
+              <span class="chord">Bb7(9)</span>/F   <span class="chord">Bb7</span>       <span class="chord">C7/E</span>
+É o projeto da casa, é o corpo na camar                     -----------------------------------------------------------
                <span class="chord">Ebm6</span>                 <span class="chord">Bb6</span>
 É o carro enguiçado, é a lama, é a lamar                     ----------------------------------------------------------
 
@@ -325,15 +325,6 @@ Sao as águas de março fechando o verãor                     -------
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -375,7 +366,8 @@ Sao as águas de março fechando o verãor                     -------
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

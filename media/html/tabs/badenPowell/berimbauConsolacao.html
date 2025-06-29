@@ -223,13 +223,13 @@ Capoeira me mandou dizer que já chegou
 Chegou para lutar
 <span class="chord">Gm7</span>   <span class="chord">C7</span>           <span class="chord">F7+</span>     <span class="chord">F7</span>            <span class="chord">Bb7</span>
 Berimbau me confirmou vai ter briga de amor
-    <span class="chord">A7</span>        <span class="chord">Dm7</span> <span class="chord">Gm7/D</span>
-Tristeza, camará
-
         </pre>
       </div>
       <div class="col">
         <pre>
+    <span class="chord">A7</span>        <span class="chord">Dm7</span> <span class="chord">Gm7/D</span>
+Tristeza, camará
+
 <span class="chord">Dm7</span>          <span class="chord">Am7</span>      <span class="chord">Dm7</span>            <span class="chord">Am7</span>      <span class="chord">Dm7</span>
    Se não tivesse o amor (Se não tivesse o amor)
          <span class="chord">Am7</span>        <span class="chord">Dm7</span>            <span class="chord">Am7</span>        <span class="chord">Dm7</span> 
@@ -269,15 +269,6 @@ mais do que eu
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -320,7 +311,8 @@ mais do que eu
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

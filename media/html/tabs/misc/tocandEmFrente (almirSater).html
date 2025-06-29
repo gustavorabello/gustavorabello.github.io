@@ -191,10 +191,9 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
 <span class="chord">G</span>                              <span class="chord">F9</span>
  Ando devagar porque já tive pressa
                                     <span class="chord">C</span>
@@ -203,7 +202,7 @@
  Hoje me sinto mais forte, mais feliz quem sabe
                                     <span class="chord">C</span>                <span class="chord">G</span>
  SÓ levo a certeza de que muito pouco eu sei, OU nada sei
-<br/>
+
 <span class="chord">F9</span>            <span class="chord">Dm</span>             <span class="chord">F9</span>
  Conhecer as manhas e as manhãs,
               <span class="chord">Dm</span>             <span class="chord">C</span>
@@ -214,7 +213,7 @@
 é preciso paz pra poder sorrir,
               <span class="chord">C</span>
 é preciso a chuva para florir.
-<br/>
+
  <span class="chord">G</span>                                    <span class="chord">F9</span>
 Penso que cumprir a vida seja simplesmente
                                         <span class="chord">C</span>
@@ -225,7 +224,7 @@ Como um velho boiadeiro levando a boiada,
 eu vou tocando os dias pela longa estrada eu vou,
        <span class="chord">G</span>
  estrada eu sou
-<br/>
+
 <span class="chord">F9</span>            <span class="chord">Dm</span>             <span class="chord">F9</span>
  Conhecer as manhas e as manhãs,
               <span class="chord">Dm</span>             <span class="chord">C</span>
@@ -236,7 +235,11 @@ eu vou tocando os dias pela longa estrada eu vou,
 é preciso paz pra poder sorrir,
               <span class="chord">C</span>
 é preciso a chuva para florir.
-<br/>
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
+
  <span class="chord">G</span>                                 <span class="chord">F9</span>
 Todo mundo ama um dia todo mundo chora,
                                       <span class="chord">C</span>
@@ -247,7 +250,7 @@ Um dia a gente chega, no outro vai embora
  <span class="chord">E</span> cada ser em si, carrega o dom de ser capaz,
     <span class="chord">G</span>
  <span class="chord">E</span> ser feliz
-<br/>
+
 <span class="chord">F9</span>            <span class="chord">Dm</span>             <span class="chord">F9</span>
  Conhecer as manhas e as manhãs,
               <span class="chord">Dm</span>             <span class="chord">C</span>
@@ -258,7 +261,7 @@ Um dia a gente chega, no outro vai embora
 é preciso paz pra poder sorrir,
               <span class="chord">C</span>
 é preciso a chuva para florir.
-<br/>
+
 <span class="chord">G</span>                              <span class="chord">F9</span>
  Ando devagar porque já tive pressa
                                    <span class="chord">C</span>
@@ -269,7 +272,8 @@ Um dia a gente chega, no outro vai embora
  <span class="chord">E</span> cada ser em si, carrega o dom de ser capaz,
     <span class="chord">G</span>
  <span class="chord">E</span> ser feliz
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -285,15 +289,6 @@ Um dia a gente chega, no outro vai embora
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -336,7 +331,8 @@ Um dia a gente chega, no outro vai embora
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

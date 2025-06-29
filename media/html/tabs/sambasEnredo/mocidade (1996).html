@@ -193,12 +193,9 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 título: Criador e criatura
 tom: <span class="chord">F</span>
-<br/>
-<br/>
+
   <span class="chord">C7</span>           <span class="chord">F</span>           <span class="chord">Gm</span>      <span class="chord">C7</span>             <span class="chord">F</span> 
 <span class="chord">A</span> mão que faz a bomba faz o samba, Deus faz gente bamba 
   <span class="chord">C7</span>          <span class="chord">F</span>           <span class="chord">F7</span>   <span class="chord">Bb</span>          <span class="chord">F</span>        <span class="chord">C7</span>              <span class="chord">F</span>       <span class="chord">C7</span> 
@@ -248,15 +245,6 @@ Vem nessa amor, prá um novo dia,    brincar no paraíso da folia 
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -298,7 +286,8 @@ Vem nessa amor, prá um novo dia,    brincar no paraíso da folia 
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

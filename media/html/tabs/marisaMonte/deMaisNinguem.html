@@ -229,16 +229,16 @@ Ou já tem um outro bem
   Se nos meus braços ela não se aninha
          <span class="chord">Bm7(b5)</span>  <span class="chord">E7</span>
 <span class="chord">A</span> dor é minha, a dor
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
 <span class="chord">Am</span>        <span class="chord">Am/G</span>  <span class="chord">F6</span>
   Se ela me deixou, a dor
 <span class="chord">Bm7(b5)</span>        <span class="chord">E7</span>     <span class="chord">Am</span>             <span class="chord">E7</span>
       É minha só, não é de mais ninguém
 <span class="chord">Am</span>           <span class="chord">A7/C#</span> <span class="chord">Dm</span>
   Aos outros eu devolvo a dor
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 <span class="chord">G7</span>            <span class="chord">G/F</span>   <span class="chord">C/E</span>  <span class="chord">C/Bb</span>
   Eu tenho a minha dor
 <span class="chord">A7</span>         <span class="chord">A7/C#</span>           <span class="chord">Dm</span>
@@ -294,15 +294,6 @@ Se nos meus braços ela não se aninha
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -344,7 +335,8 @@ Se nos meus braços ela não se aninha
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

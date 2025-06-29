@@ -193,10 +193,7 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 Int.: <span class="chord">F#7+</span> <span class="chord">B7+</span> <span class="chord">Abm7</span> <span class="chord">C#7/9</span> <span class="chord">F#7+</span>
-<br/>
 
 <span class="chord">F#7+</span>        <span class="chord">Cm5</span>-/7
 Eu sou o samba
@@ -239,15 +236,6 @@ Essa melodia de um Brasil feliz
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -289,7 +277,8 @@ Essa melodia de um Brasil feliz
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

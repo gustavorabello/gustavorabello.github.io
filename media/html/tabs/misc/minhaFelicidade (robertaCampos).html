@@ -238,10 +238,6 @@ Guardei por nós  nesse lugar
 Pra sempre
 
 [Refrão]
-        </pre>
-      </div>
-      <div class="col">
-        <pre>
                <span class="chord">F7M</span>    <span class="chord">G</span>
 Lembra aquele tempo amor
               <span class="chord">C</span>        <span class="chord">G4/B</span>   <span class="chord">Am</span>
@@ -250,6 +246,10 @@ Onde a gente se encontrou
 Foi ali que começou    minha felicidade
                <span class="chord">F7M</span>    <span class="chord">G</span>
 Lembra aquele beijo amor
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
                 <span class="chord">C</span>        <span class="chord">G4/B</span>  <span class="chord">Am</span>
 Quando a gente se encontrou
                <span class="chord">F7M</span> <span class="chord">G</span>             <span class="chord">Am</span>
@@ -319,15 +319,6 @@ Oh Ohhhhh     Uh Uhhhh
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -369,7 +360,8 @@ Oh Ohhhhh     Uh Uhhhh
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

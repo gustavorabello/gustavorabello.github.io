@@ -193,11 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 Intro: <span class="chord">Eb7(b5)</span>  <span class="chord">E/D</span>  <span class="chord">C#m7</span>    /  <span class="chord">Cdim</span>  <span class="chord">Ebdim</span> /  <span class="chord">Bm7</span>  <span class="chord">B7</span>  <span class="chord">E7</span>  <span class="chord">A7M</span>  <span class="chord">G7(13)</span>  <span class="chord">F#7</span>
-<br/>
-<br/>
+
          <span class="chord">Bm7</span>    <span class="chord">Bm7/A</span>   <span class="chord">E7/G#</span>    <span class="chord">E7</span>            <span class="chord">C#m7</span>
 Ainda é cedo amor,  mal começas-te a conhecer a vida
       <span class="chord">A6(9)</span>  <span class="chord">A7/G</span>          <span class="chord">D/F#</span>
@@ -220,7 +217,7 @@ Vai  reduzir as ilusões a pó,                    
 Preste atenção querida  de cada amor
                  <span class="chord">C#m7</span>                <span class="chord">C°</span>               <span class="chord">Bm7</span>
 Tu erdarás só o sinismo,   quando notares estás a beira do abismo 
-<br/>
+
      <span class="chord">B7</span>       <span class="chord">E7</span>            <span class="chord">A7M</span> <span class="chord">G7</span> <span class="chord">F#7</span>  
 Abismo que cavaste com teus pés.
       </pre>
@@ -239,15 +236,6 @@ Abismo que cavaste com teus pés.
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -290,7 +278,8 @@ Abismo que cavaste com teus pés.
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

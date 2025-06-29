@@ -216,12 +216,12 @@
  neste caderno sei que ainda estão
      <span class="chord">F#m</span>      <span class="chord">F#m7M</span> <span class="chord">D6</span>        
  os versos seus tão meus que peço
-     <span class="chord">F#m</span>    <span class="chord">F#m7M</span>     <span class="chord">D6</span>                       <span class="chord">A</span>
- dos versos meus tão seus que esperem que os aceite
         </pre>
       </div>
       <div class="col">
         <pre>
+     <span class="chord">F#m</span>    <span class="chord">F#m7M</span>     <span class="chord">D6</span>                       <span class="chord">A</span>
+ dos versos meus tão seus que esperem que os aceite
             <span class="chord">Bm</span>                   <span class="chord">D</span>                   <span class="chord">A</span>
  em paz eu digo o que eu sou o antigo do que vai adiante
                <span class="chord">Bm</span>                  <span class="chord">D</span>                <span class="chord">A</span>      (<span class="chord">A4</span> <span class="chord">A</span> <span class="chord">A9</span> <span class="chord">D</span>)- Uma batida cada
@@ -259,15 +259,6 @@
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -310,7 +301,8 @@
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

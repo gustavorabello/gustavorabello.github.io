@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 [Intro:] <span class="chord">Dm7</span> <span class="chord">G7</span> <span class="chord">C6(9)</span> <span class="chord">F7M</span> <span class="chord">Bm7(b5)</span> <span class="chord">E7</span> <span class="chord">Am7</span> <span class="chord">E7(b13)</span> <span class="chord">E7</span>
-<br/>
+
 <span class="chord">Am7</span>     <span class="chord">E/G#</span>       <span class="chord">Gm6</span>
 Você voltou, meu amor,
           <span class="chord">D/F#</span> <span class="chord">Dm/F</span>
@@ -207,7 +205,7 @@ Quando a porta abriu
 Você me olhou, você sorriu,
        <span class="chord">E7</span>
 Ah! você se derreteu
-<br/>
+
  <span class="chord">Am7</span>          <span class="chord">E/G#</span>         <span class="chord">Gm6</span>
 <span class="chord">E</span> se atirou, me envolveu, me brincou,
           <span class="chord">D/F#</span> <span class="chord">Dm/F</span>
@@ -236,15 +234,6 @@ Eu te amo e Deus é mais
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -287,7 +276,8 @@ Eu te amo e Deus é mais
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

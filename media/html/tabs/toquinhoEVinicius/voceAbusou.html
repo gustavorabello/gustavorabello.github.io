@@ -191,10 +191,9 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
 <span class="chord">A7+</span>     <span class="chord">E/G#</span>  <span class="chord">Em/G</span>  <span class="chord">F#7</span>
 Você abusou
 <span class="chord">Bm/F#</span>                 <span class="chord">D</span>        <span class="chord">Dm7</span>  <span class="chord">E7</span>
@@ -203,7 +202,7 @@ Tirou partido de mim, abusou
 Tirou partido de mim, abusou
   <span class="chord">Bm7</span>                 <span class="chord">D</span>       <span class="chord">E7/9</span>-  <span class="chord">E7</span>
 Tirou partido de mim abusou
-<br/>
+
   <span class="chord">Am</span>
 Mas não faz mal
          <span class="chord">Am/G</span>          <span class="chord">Dm7</span> <span class="chord">F</span>
@@ -216,15 +215,19 @@ Que eu já nem sei
 Se é meninice ou cafonice o meu amor
          <span class="chord">Am/G</span>                       <span class="chord">Dm/F</span>
 Se o quadradismo dos meus versos
-<br/>
+
           <span class="chord">G/F</span>            <span class="chord">C/Bb</span>
 Vai de encontro aos intelectos
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
     <span class="chord">F7+</span>               <span class="chord">Bm5</span>-/7            <span class="chord">E7</span>
 Que não usam o coração como expressão
-<br/>
+
 <span class="chord">A7+</span>  <span class="chord">E/G#</span>  <span class="chord">Em/G</span>  <span class="chord">F#7</span>
 Você abusou...
-<br/>
+
     <span class="chord">Am</span>                             <span class="chord">Am/G</span>       <span class="chord">Dm/F</span>
 Que me perdoem, se eu insisto neste tema
        <span class="chord">G/F</span>            <span class="chord">C/Bb</span>
@@ -239,10 +242,11 @@ Se o quadradismo dos meus versos
 Vai de encontro aos intelectos
         <span class="chord">F7+</span>          <span class="chord">Bm7/5</span>-             <span class="chord">E7</span>
 Que não usam o coração como expressão
-<br/>
+
 <span class="chord">A7+</span>  <span class="chord">E/G#</span>  <span class="chord">Em/G</span>  <span class="chord">F#7</span>
 Você abusou...
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -258,15 +262,6 @@ Você abusou...
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -309,7 +304,8 @@ Você abusou...
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

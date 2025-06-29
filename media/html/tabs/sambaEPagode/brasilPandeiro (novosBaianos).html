@@ -191,13 +191,12 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
 [Intro] <span class="chord">B</span>  <span class="chord">C°</span>  <span class="chord">C#m</span>  <span class="chord">F#</span>  <span class="chord">D#m</span>
         <span class="chord">G#</span>  <span class="chord">C#m</span>  <span class="chord">F#</span>  <span class="chord">F#m</span>  <span class="chord">B</span>  <span class="chord">E</span>  <span class="chord">Em</span>  <span class="chord">D#m7</span>  <span class="chord">G#</span>  <span class="chord">C#m</span>  <span class="chord">F#</span>
-<br/>
+
          <span class="chord">B</span>            <span class="chord">Cº</span>      <span class="chord">C#m</span>      <span class="chord">F#</span>         <span class="chord">B</span>    <span class="chord">B7</span>
 Chegou a hora dessa gente bronzeada mostrar seu valor
 <span class="chord">B7</span>                                                <span class="chord">E</span>
@@ -210,16 +209,19 @@ Eu quero ver o tio Sam tocar pandeiro para o mundo sambar
 O Tio Sam está querendo conhecer a nossa batucada
 <span class="chord">B7</span>                                                <span class="chord">E</span>
 Anda dizendo que o molho da baiana melhorou seu prato
-<br/>
+
       <span class="chord">Gº</span>                          <span class="chord">F#</span>
 Vai entrar no cuzcuz, acarajé e abará
          <span class="chord">C#m</span>          <span class="chord">F#</span>       <span class="chord">C#m</span>           <span class="chord">F#</span>   <span class="chord">B</span>
 Na Casa Branca já dançou a batucada de ioiô, iaiá
-<br/>
-<br/>
+
 ( <span class="chord">B</span>  <span class="chord">Cº</span>  <span class="chord">C#m</span>  <span class="chord">F#</span>  <span class="chord">D#m</span>  <span class="chord">G#m</span>  <span class="chord">C#m</span>  <span class="chord">F#</span> )
 ( <span class="chord">E</span>  <span class="chord">F#</span>  <span class="chord">D#m</span>  <span class="chord">G#m</span>  <span class="chord">C#m</span>  <span class="chord">F#</span>  <span class="chord">B</span>  <span class="chord">Cº</span> )
-<br/>
+
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
 <span class="chord">C#m</span>            <span class="chord">F#</span>           <span class="chord">D#m7/5</span>-
 Brasil, esquentai vossos pandeiros
       <span class="chord">G#</span>         <span class="chord">C#m</span>             <span class="chord">F#</span>      <span class="chord">F#m</span>    <span class="chord">B7</span>
@@ -234,7 +236,7 @@ Batucada, reunir vossos valores
 Pastorinhas e cantores
       <span class="chord">F#</span>              <span class="chord">B</span>             <span class="chord">B7</span>
 Expressão que não tem par, ó meu Brasil
-<br/>
+
 <span class="chord">E</span>            <span class="chord">F#</span>              <span class="chord">D#m7/5</span>-
 Brasil, esquentai vossos pandeiros
       <span class="chord">G#</span>        <span class="chord">C#m</span>             <span class="chord">F#</span>       <span class="chord">F#m</span>  <span class="chord">B</span> <span class="chord">B7</span>
@@ -245,7 +247,8 @@ Brasil, esquentai vossos pandeiros
 Iluminai os terreiros que nós queremos sambar… ohh-ohh
     <span class="chord">B</span>       <span class="chord">F#</span>.      <span class="chord">B</span>       <span class="chord">F#</span>
 Sambar… ohh-ohh, sambar… ohh-ohh
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -261,15 +264,6 @@ Sambar… ohh-ohh, sambar… ohh-ohh
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -312,7 +306,8 @@ Sambar… ohh-ohh, sambar… ohh-ohh
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

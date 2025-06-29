@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">A9</span>                      <span class="chord">E7(4/9)</span>
 Ainda lembro o que  passou
 <span class="chord">A9</span>                     <span class="chord">E7(4/9)</span>
@@ -235,7 +233,7 @@ Amor        eu não pude evitar
 Liga o som uhuuu uhuuu uu
     <span class="chord">B7</span>     <span class="chord">E7(4/9)</span>
 <span class="chord">E</span> apaga a luz...
-<br/>
+
 (repete tudo)
       </pre>
     </div>
@@ -253,15 +251,6 @@ Liga o som uhuuu uhuuu uu
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -304,7 +293,8 @@ Liga o som uhuuu uhuuu uu
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -193,10 +193,8 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 [Intro:] <span class="chord">A6(9)</span>/E <span class="chord">F6</span> <span class="chord">A6(9)</span>/E <span class="chord">F6</span>
-<br/>
+
 <span class="chord">A6(9)</span>/E              <span class="chord">G#7/D#</span>   <span class="chord">A6(9)</span>/E
 Não se afobe não, que nada é pra já
                            <span class="chord">C#m6</span>
@@ -205,7 +203,7 @@ O amor não tem pressa, ele pode esperar
 <span class="chord">Em</span> silêncio, num fundo de armário
            <span class="chord">D7M/A</span>          <span class="chord">C#7/G#</span>
 Na posta-restante, milênios, milênios no ar
-<br/>
+
 <span class="chord">A6(9)</span>/E              <span class="chord">G#7/D#</span>   <span class="chord">A6(9)</span>/E
 <span class="chord">E</span>, quem sabe, então, o Rio será
                   <span class="chord">C#m6</span>
@@ -214,7 +212,7 @@ Alguma cidade submersa
 Os escafandristas virão explorar sua casa
            <span class="chord">D7M/A</span>          <span class="chord">C#7/G#</span>
 Seu quarto, suas coisas, sua alma, desvãos
-<br/>
+
 <span class="chord">C7M</span>              <span class="chord">B7(b13)</span>       
 Sábios em vão tentarão decifrar
   <span class="chord">Bb7M</span>            <span class="chord">A7(b13)</span>
@@ -223,7 +221,7 @@ O eco de antigas palavras
 Fragmentos de cartas, poemas, mentiras, retratos
                         <span class="chord">E7/B</span>
 Vestígios de estranha civilização
-<br/>
+
 <span class="chord">A6(9)</span>/E              <span class="chord">G#7/D#</span>   <span class="chord">C#7(b9)</span>(b13)
 Não se afobe não, que nada é pra já
              <span class="chord">C#m6</span>
@@ -248,15 +246,6 @@ Com o amor que eu um dia deixei pra você
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -299,7 +288,8 @@ Com o amor que eu um dia deixei pra você
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -193,18 +193,16 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">D7M</span>             <span class="chord">C7M</span>  <span class="chord">A#7M</span> <span class="chord">A7M</span>   <span class="chord">D7M</span>  <span class="chord">C7M</span> <span class="chord">A#7M</span>  <span class="chord">A7M</span>
 Você com essa mania sensual ....de sentir e me olhar
 <span class="chord">D7M</span>              <span class="chord">C7M</span>    <span class="chord">A#7M</span>  <span class="chord">A7M</span>       <span class="chord">D7M</span>     <span class="chord">C7M</span>    <span class="chord">A#7M</span> <span class="chord">A7M</span>
 Você com esse seu jeito contagiante.... fiel e sutil de lutar
-<br/>
+
          <span class="chord">Bm7</span>             <span class="chord">E7(9)</span>          <span class="chord">C#m7</span>  <span class="chord">F#7(9)</span>
 Não sei não, assim você acaba me conquistando
        <span class="chord">Bm7</span>             <span class="chord">E7(9)</span>      <span class="chord">C#m7</span>    <span class="chord">F#7(9)</span>
 Não sei não, assim eu acabo me entregando   (2x)
-<br/>
+
 <span class="chord">D7M</span>         <span class="chord">C7M</span>      <span class="chord">A#7M</span>    <span class="chord">A7M</span>
 Pois está fazendo uma ano e meio amor
 <span class="chord">D7M</span>     <span class="chord">C7M</span>  <span class="chord">A#7M</span>  <span class="chord">A7M</span>
@@ -215,17 +213,17 @@ Desconfiado, sem jeito e quase calado
 Quando fui bem recebido e desejado por você
 <span class="chord">D7M</span>              <span class="chord">C7M</span>    <span class="chord">A#7M</span>   <span class="chord">A7M</span>
 Nunca como eu poderia esquecer amor
-<br/>
+
     <span class="chord">Bm7</span>         <span class="chord">E7(9)</span>          <span class="chord">C#m7</span>                  <span class="chord">F#7(9)</span>
 Ai, ai se naquele dia você foi tudo, foi demais pra mim
     <span class="chord">Bm7</span>         <span class="chord">E7(9)</span>         <span class="chord">C#m7</span>                 <span class="chord">F#7(9)</span>
 Ai, ai se naquele dia você foi tudo, fez de mim um anjo    (4x)
-<br/>
+
          <span class="chord">Bm7</span>             <span class="chord">E7(9)</span>          <span class="chord">C#m7</span>  <span class="chord">F#7(9)</span>
 Não sei não, assim você acaba me conquistando
        <span class="chord">Bm7</span>             <span class="chord">E7(9)</span>      <span class="chord">C#m7</span>    <span class="chord">F#7(9)</span>
 Não sei não, assim eu acabo me entregando   (2x)
-<br/>
+
      <span class="chord">Bm7</span>  <span class="chord">E7(9)</span>   <span class="chord">C#m7</span>     <span class="chord">F#7(9)</span>   <span class="chord">Bm7</span>   <span class="chord">E7(9)</span> <span class="chord">C#m7</span> <span class="chord">F#7(9)</span>
 Ive, Ive  Ive Brussel, Brussel, Brussel, Brussel    (3x)
       </pre>
@@ -244,15 +242,6 @@ Ive, Ive  Ive Brussel, Brussel, Brussel, Brussel    (3x)
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -295,7 +284,8 @@ Ive, Ive  Ive Brussel, Brussel, Brussel, Brussel    (3x)
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

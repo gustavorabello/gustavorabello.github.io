@@ -191,10 +191,9 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
        <span class="chord">A7+</span>               <span class="chord">Gº</span>  <span class="chord">Bm7</span>
 Se alguém perguntar por mim
                  <span class="chord">E7</span>    <span class="chord">F#m7</span>
@@ -211,13 +210,16 @@ Levando um violão   Debaixo do braço
 É mais um samba que eu faço
                <span class="chord">E7</span>          <span class="chord">A7+</span>           <span class="chord">F#7</span>
 Se quiserem saber  Se volto diga que sim
-<br/>
+
          <span class="chord">Bm7</span>            <span class="chord">E7</span>         <span class="chord">C#m7</span>    <span class="chord">F#7</span>
 Mas só depois que a saudade se afastar de mim
           <span class="chord">Bm7</span>           <span class="chord">E7</span>          <span class="chord">A7+</span>        <span class="chord">Gº</span>   <span class="chord">Bm7</span>
 Mas só depois que a saudade se afastar de mim
-<br/>
-<br/>
+
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
              <span class="chord">E7</span>
 Tenho um violão
                <span class="chord">C#m7</span>
@@ -242,7 +244,8 @@ Eu estou na favela
 Eu estou por aí
                  <span class="chord">A6</span>
 Sempre pensando nela
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -258,15 +261,6 @@ Sempre pensando nela
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -309,7 +303,8 @@ Sempre pensando nela
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

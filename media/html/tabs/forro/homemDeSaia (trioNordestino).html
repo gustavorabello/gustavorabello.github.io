@@ -191,10 +191,9 @@
       </div>
     </div>
     
-    <div class="singlecol">
-      <pre>
-<br/>
-<br/>
+    <div class="columns">
+      <div class="col">
+        <pre>
 <span class="chord">Em</span>                           <span class="chord">Am</span>
 Eu fui numa festa lá no Assaré
   
@@ -221,8 +220,11 @@ Só dava mulher era só mulher que dava,
               <span class="chord">B7</span>                      
   <span class="chord">Em</span>
 homem chegava na porta mas lá dentro não entrava.    (2x)
-<br/>
-  
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
+
       <span class="chord">B7/F#</span>                     
 <span class="chord">Em</span>
 Mas o Ribinha que é muito inchirido
@@ -246,7 +248,8 @@ tem homem de saia dentro do salão,
                   <span class="chord">B7</span>                         
 <span class="chord">Em</span>
 bota esse homem pra fora que é pra não dar confusão.    (2x)
-      </pre>
+        </pre>
+      </div>
     </div>
     
   </div>
@@ -262,15 +265,6 @@ bota esse homem pra fora que é pra não dar confusão.    (2x)
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -313,7 +307,8 @@ bota esse homem pra fora que é pra não dar confusão.    (2x)
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

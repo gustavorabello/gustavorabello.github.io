@@ -217,14 +217,15 @@ Entregue a paixões
 Que nunca tiveram fim
 <span class="chord">Eb7M</span>
 Vou me encontrar
-      <span class="chord">Bb/D</span>
-Longe do meu lugar
-<span class="chord">Eb/F</span>      <span class="chord">Bb</span>      <span class="chord">Bb4</span>  <span class="chord">Bb</span>  <span class="chord">D/F#</span>
-Eu caçador de mim
         </pre>
       </div>
       <div class="col">
         <pre>
+      <span class="chord">Bb/D</span>
+Longe do meu lugar
+<span class="chord">Eb/F</span>      <span class="chord">Bb</span>      <span class="chord">Bb4</span>  <span class="chord">Bb</span>  <span class="chord">D/F#</span>
+Eu caçador de mim
+
 <span class="chord">Gm</span>          <span class="chord">F7(4)</span>              <span class="chord">Eb7M</span> <span class="chord">Bb/D</span>
 Nada a temer senão o correr da luta
  <span class="chord">Cm7</span>          <span class="chord">Eb/F</span>           <span class="chord">Bb</span>  <span class="chord">Bb4</span>  <span class="chord">Bb</span>
@@ -262,15 +263,6 @@ Eu caçador de mim
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -313,7 +305,8 @@ Eu caçador de mim
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

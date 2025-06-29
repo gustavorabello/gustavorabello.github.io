@@ -218,13 +218,13 @@ Ser só minha até morrer
 <span class="chord">E</span> também de não perder esse jeitinho de falar devagarinho
          <span class="chord">E7</span>          <span class="chord">A7M</span>    <span class="chord">Em7</span>    <span class="chord">A7</span>
 Essas estórias de você
+       <span class="chord">D7M</span>         <span class="chord">E/D</span>        <span class="chord">C#6/7</span>    <span class="chord">C#5+/7</span>
+<span class="chord">E</span> de repente me fazer muito carinho
+     <span class="chord">C#m</span>  <span class="chord">F#6/7</span>        <span class="chord">B7</span>             <span class="chord">Bb7M</span>           <span class="chord">E4/7</span>    <span class="chord">E7</span>
         </pre>
       </div>
       <div class="col">
         <pre>
-       <span class="chord">D7M</span>         <span class="chord">E/D</span>        <span class="chord">C#6/7</span>    <span class="chord">C#5+/7</span>
-<span class="chord">E</span> de repente me fazer muito carinho
-     <span class="chord">C#m</span>  <span class="chord">F#6/7</span>        <span class="chord">B7</span>             <span class="chord">Bb7M</span>           <span class="chord">E4/7</span>    <span class="chord">E7</span>
 <span class="chord">E</span> chorar   bem de mansinho sem ninguém saber por que
  <span class="chord">A7M</span>             <span class="chord">Bm7</span>        <span class="chord">C#m7</span>      <span class="chord">F#6/7</span>   <span class="chord">F#5+/7</span>     <span class="chord">Bm7</span>
 <span class="chord">E</span> se mais do que minha namorada, você quer ser minha amada
@@ -263,15 +263,6 @@ Minha amiga e companheira no infinito de nós dois
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -314,7 +305,8 @@ Minha amiga e companheira no infinito de nós dois
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -194,6 +194,8 @@
     <div class="columns">
       <div class="col">
         <pre>
+(Vários Artistas)
+
                      <span class="chord">D</span>
 Mamã mamã mamãe eu quero. Mamãe eu quero
                   <span class="chord">Em</span>
@@ -241,10 +243,105 @@ Cachaça vem do alambique 
                    <span class="chord">D</span>
 <span class="chord">E</span> água vem do ribeirão   (x2)
 
+<span class="chord">D</span>
+Pode me faltar tudo na vida
+<span class="chord">B7</span>               <span class="chord">Em</span>
+Arroz, feijão e pão
+                   <span class="chord">A7</span>
+Pode me faltar manteiga
+                           <span class="chord">D</span>
+<span class="chord">E</span> tudo mais não faz falta não
+                   <span class="chord">D</span>
+Pode me faltar o amor
+<span class="chord">D7</span>              <span class="chord">G</span>
+Disto até acho graça
+                     <span class="chord">D</span>
+Só não quero que me falte
+    <span class="chord">A7</span>         <span class="chord">D</span>
+<span class="chord">A</span> danada da cachaça
+
+  <span class="chord">D</span>        <span class="chord">A7</span>                    <span class="chord">D</span>  <span class="chord">A7</span>                           
+Hei, você aí, me dá um dinheiro aí  (x2)
+ <span class="chord">D</span>                         <span class="chord">A7</span>                                 
+Não vai dar, não vai dar não 
+                              <span class="chord">D</span>
+Você vai ver que grande confusão
+         <span class="chord">D7</span>                <span class="chord">G</span>                     
+Eu vou beber, beber até cair 
+                   <span class="chord">A7</span> 
+Me dá, me dá. me dá, oi
+   <span class="chord">A7</span>              <span class="chord">D</span>
+Me dá um dinheiro aí!
+
+         <span class="chord">A7</span>                 <span class="chord">D</span>
+Allah-la-ô,  ô ô ô,  ô ô ô ô
+          <span class="chord">A7</span>               <span class="chord">D</span>
+Mas que calor, ô ô ô,  ô ô ô   
+       <span class="chord">A7</span>                    <span class="chord">D</span>
+Atravessamos o deserto do Sahara
+              <span class="chord">A7</span>                      <span class="chord">D</span>
+O sol estava quente, queimou a nossa cara (x2)
+  <span class="chord">D7</span>        <span class="chord">G</span>                  
+Viemos do Egito   
+          <span class="chord">A7</span>                       <span class="chord">D</span>
+e muitas vezes nós tivemos que rezar
+                             <span class="chord">A7</span>
+Allah-Allah-Allah, meu bom Allah
+ <span class="chord">D</span>               <span class="chord">A7</span>       <span class="chord">D</span>                
+Mande água pra Ioiô    / Mande água pra Iaiá
         </pre>
       </div>
       <div class="col">
         <pre>
+  <span class="chord">A7</span>              <span class="chord">D</span>
+Allah, meu bom Allah
+                     <span class="chord">D</span>
+Mamã mamã mamãe eu quero. Mamãe eu quero
+                  <span class="chord">Em</span>
+Mamãe eu quero mamar!
+
+<span class="chord">D</span>á a chupeta, ai, dá a chupeta
+         <span class="chord">A7</span>                   <span class="chord">D</span>   <span class="chord">A7</span>
+<span class="chord">D</span>á a chupeta pro bebê não chorar!
+
+<span class="chord">A7</span>     <span class="chord">D</span>               <span class="chord">Em</span>
+Dorme filhinho do meu coração
+            <span class="chord">A7</span>                          <span class="chord">D</span>
+Pega a mamadeira e vem entra no meu cordão
+                <span class="chord">B7</span>             <span class="chord">Em</span>
+Eu tenho uma irmã que se chama Ana
+            <span class="chord">A7</span>                      <span class="chord">D</span>
+De piscar o olho já ficou sem a pestana
+
+<span class="chord">D</span>
+Olha a cabeleira do Zezé.
+              <span class="chord">A7</span>              <span class="chord">D</span>    <span class="chord">A7</span>
+Será que ele é?  Será que ele é?
+<span class="chord">D</span>
+Olha a cabeleira do Zezé.
+              <span class="chord">A7</span>              <span class="chord">D</span>    <span class="chord">D7</span>
+Será que ele é?  Será que ele é?
+
+   <span class="chord">G</span>                  <span class="chord">D</span>       <span class="chord">F#7</span>             <span class="chord">Bm</span>
+Será que ele é bossa nova? Será que ele é Maomé
+   <span class="chord">A7</span>               <span class="chord">D</span>    
+Parece que é transviado. 
+     <span class="chord">E7</span>                    <span class="chord">A7</span>
+Mas isso eu não sei se ele é
+ <span class="chord">D</span>              <span class="chord">G</span>
+Corta o cabelo dele
+ <span class="chord">A7</span>             <span class="chord">D</span>
+Corta o cabelo dele  (x2)
+
+     <span class="chord">D</span>
+Você pensa que cachaça é água 
+                    <span class="chord">Em</span>
+Cachaça não é água não
+                   <span class="chord">A7</span>
+Cachaça vem do alambique 
+                   <span class="chord">D</span>
+<span class="chord">E</span> água vem do ribeirão   (x2)
+
 <span class="chord">D</span>
 Pode me faltar tudo na vida
 <span class="chord">B7</span>               <span class="chord">Em</span>
@@ -311,15 +408,6 @@ Allah, meu bom Allah
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
-    }
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -361,7 +449,8 @@ Allah, meu bom Allah
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

@@ -193,7 +193,37 @@
     
     <div class="singlecol">
       <pre>
+   <span class="chord">Em7</span>                    <span class="chord">C</span>               <span class="chord">D9</span>     <span class="chord">Em7</span>              <span class="chord">C</span>                <span class="chord">D9</span>
+Foi um gol de anjo um verdadeiro gol de placa que a magnética agradecida se encantava
+  <span class="chord">Em7</span>                   <span class="chord">C</span>                <span class="chord">D9</span>        <span class="chord">Em7</span>             <span class="chord">C</span>               <span class="chord">D9</span>
+Foi um gol de anjo um verdadeiro gol de placa que a magnética agradecida se encantava
 
+<span class="chord">Em7</span>                 <span class="chord">Am7</span>   <span class="chord">Bm7</span>       <span class="chord">Em7</span>   <span class="chord">Am7</span>  <span class="chord">Bm7</span>
+Fio maravilha, nós gostamos de você                (3x)
+<span class="chord">Em7</span>            <span class="chord">Am7</span>     <span class="chord">Bm7</span>        <span class="chord">Em7</span>    <span class="chord">Am7</span>  <span class="chord">Bm7</span>
+Fio maravilha faz mais um pra gente ver
+
+<span class="chord">Em7</span>             <span class="chord">C</span>     <span class="chord">D9</span>        <span class="chord">Em7</span> <span class="chord">C</span> <span class="chord">D9</span> <span class="chord">Em7</span>          <span class="chord">C</span>         <span class="chord">D9</span>   <span class="chord">Em7</span>       <span class="chord">C</span> <span class="chord">D9</span>
+<span class="chord">E</span> novamente ele chegou com inspiração,  com muito amor e emoção com explosão
+  <span class="chord">Em7</span>                   <span class="chord">C</span> <span class="chord">D9</span>     <span class="chord">Em7</span>               <span class="chord">C</span>  <span class="chord">D9</span> <span class="chord">Em7</span>                 <span class="chord">C</span>        <span class="chord">Em7</span>   <span class="chord">C</span> <span class="chord">D9</span>
+Sacudindo a torcida aos 33 minutos do segundo tempo, depois de fazer uma jogada celestial
+
+  <span class="chord">Em7</span>                      <span class="chord">C</span>    <span class="chord">D9</span>       <span class="chord">Em7</span>                  <span class="chord">C</span>    <span class="chord">D9</span>
+Tabelou, driblou dois zagueiros, deu  um toque driblou o goleiro
+<span class="chord">Em7</span>                        <span class="chord">C</span>          <span class="chord">D9</span>     <span class="chord">Em7</span>           <span class="chord">C</span>  <span class="chord">D9</span>
+Só não entrou com bola e tudo porque teve humildade em gol
+<span class="chord">Em7</span>                         <span class="chord">C</span>     <span class="chord">D9</span>          <span class="chord">Em7</span>             <span class="chord">C</span>   <span class="chord">D9</span>
+Foi um gol de classe onde ele mostrou sua malícia e sua raça
+
+   <span class="chord">Em7</span>                    <span class="chord">C</span>               <span class="chord">D9</span>     <span class="chord">Em7</span>              <span class="chord">C</span>                <span class="chord">D9</span>
+Foi um gol de anjo um verdadeiro gol de placa que a magnética agradecida se encantava
+  <span class="chord">Em7</span>                   <span class="chord">C</span>                <span class="chord">D9</span>        <span class="chord">Em7</span>              <span class="chord">C</span>               <span class="chord">D9</span>
+Foi um gol de anjo um verdadeiro gol de placa que a magnética agradecida se encantava
+
+<span class="chord">Em7</span>                 <span class="chord">Am7</span>   <span class="chord">Bm7</span>        <span class="chord">Em7</span>    <span class="chord">Am7</span>  <span class="chord">Bm7</span>
+Fio maravilha, nós gostamos de você                  (3x)
+<span class="chord">Em7</span>            <span class="chord">Am7</span>     <span class="chord">Bm7</span>        <span class="chord">Em7</span>    <span class="chord">Am7</span>  <span class="chord">Bm7</span>
+Fio maravilha faz mais um pra gente ver
       </pre>
     </div>
     
@@ -210,15 +240,6 @@
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -261,7 +282,8 @@
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {

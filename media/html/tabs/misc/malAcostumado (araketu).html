@@ -193,8 +193,6 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
 <span class="chord">Cm</span>                        <span class="chord">Fm</span>  <span class="chord">Bb</span>
 Amor de verdade eu só senti
            <span class="chord">Gm</span>        <span class="chord">Eb/G</span>  <span class="chord">Dm7(b5)</span>  <span class="chord">G7</span>   
@@ -203,7 +201,7 @@ Foi com você meu bem 
 <span class="chord">E</span> todas as loucuras desse nosso amor
          <span class="chord">Gm</span>        <span class="chord">Eb/G</span>  <span class="chord">Dm7(b5)</span>  <span class="chord">G7</span>
 Você me deu também
-<br/>
+
    <span class="chord">Cm</span>                       <span class="chord">Fm</span> 
 Você já faz parte da minha vida
    <span class="chord">Bb</span>                   <span class="chord">Gm</span>          <span class="chord">G</span>  <span class="chord">G7</span>
@@ -214,9 +212,9 @@ Você já faz parte da minha vida
 <span class="chord">A</span>í eu fico de graça
                      <span class="chord">G7</span>  
 Te chamando pra me amar 
-<br/>
+
 [Refrão]
-<br/>
+
            <span class="chord">Fm</span>
 Mal acostumado
             <span class="chord">Bb</span>
@@ -231,7 +229,7 @@ Então volta
 Traz de volta o meu sorriso
                     <span class="chord">G7</span>
 Sem você não posso ser feliz
-<br/>
+
 ( <span class="chord">Cm</span>  <span class="chord">Fm</span>  <span class="chord">Bb</span>  <span class="chord">Gm</span> )
 ( <span class="chord">Eb/G</span>  <span class="chord">Dm7(b5)</span>  <span class="chord">G7</span> )
 ( <span class="chord">Cm</span>  <span class="chord">Fm</span>  <span class="chord">Bb</span>  <span class="chord">Gm</span> )
@@ -252,15 +250,6 @@ Sem você não posso ser feliz
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -303,7 +292,8 @@ Sem você não posso ser feliz
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {
