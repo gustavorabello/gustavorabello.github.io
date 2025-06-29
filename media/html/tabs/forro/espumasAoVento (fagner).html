@@ -60,7 +60,7 @@
     }
     .key-controls {
       position: fixed;
-      top: 100px;
+      top: 100px;  /* Valor aumentado para dar mais espaço */
       right: 24px;
       z-index: 6100;
       display: flex;
@@ -193,44 +193,43 @@
     
     <div class="singlecol">
       <pre>
-<br/>
-<br/>
-[intro]: <span class="chord">B7</span> <span class="chord">Em</span> <span class="chord">A7</span> <span class="chord">D</span>   <span class="chord">B7</span> <span class="chord">Em</span> <span class="chord">F#7</span> <span class="chord">Bm</span> <span class="chord">B7</span> <span class="chord">Em</span> <span class="chord">A7</span> <span class="chord">D</span>   <span class="chord">B7</span> <span class="chord">Em</span> <span class="chord">F#7</span> <span class="chord">Bm</span>  <span class="chord">F#7</span>
-<span class="chord">Bm</span>                                                                                  <span class="chord">A</span>        
+[intro]: <span class="chord">B7</span> <span class="chord">Em</span> <span class="chord">A7</span> <span class="chord">D</span>   <span class="chord">B7</span> <span class="chord">Em</span> <span class="chord">F#7</span> <span class="chord">Bm</span> <span class="chord">B7</span> <span class="chord">Em</span> <span class="chord">A7</span> <span class="chord">D</span>   <span class="chord">B7</span> <span class="chord">Em</span> <span class="chord">F#7</span> <span class="chord">Bm</span>  <span class="chord">F#7</span>
+
+<span class="chord">Bm</span>                                            <span class="chord">A</span>
 Sei que aí dentro ainda mora um pedacinho de mim
-                                                              <span class="chord">G</span>                                        <span class="chord">D</span>
+                             <span class="chord">G</span>                        <span class="chord">D</span>
 Um grande amor não se acaba assim Feito espumas ao vento
-                                           <span class="chord">F#7</span>
+                  <span class="chord">F#7</span>
 Não é coisa de momento, raiva passageira
-                                 <span class="chord">Bm</span>
+                  <span class="chord">Bm</span>
 Mania que dá e passa feito brincadeira
-                          <span class="chord">Em</span>     <span class="chord">C#7</span>                            <span class="chord">F#7</span>
+               <span class="chord">Em</span>          <span class="chord">C#7</span>         <span class="chord">F#7</span>
 O amor deixa marcas que não dá para apagar
-<span class="chord">Bm</span>                                                                         <span class="chord">A</span>        
+<span class="chord">Bm</span>                                         <span class="chord">A</span>
 Sei que errei, estou aqui para te pedir perdão
-                                                     <span class="chord">G</span>                                   <span class="chord">D</span>
+                          <span class="chord">G</span>                   <span class="chord">D</span>
 Cabeça doida, coração na mão, desejo pegando fogo
-                                             <span class="chord">F#7</span>
+                     <span class="chord">F#7</span>
 Sem saber direito a hora e o que fazer
-                                              <span class="chord">Bm</span>
+                       <span class="chord">Bm</span>
 Mas não encontro uma palavra só pra te dizer
-                                   <span class="chord">Em</span>                 <span class="chord">F#7</span>                              <span class="chord">Bm</span>
+                  <span class="chord">Em</span>             <span class="chord">F#7</span>             <span class="chord">Bm</span>
 Mas se eu fosse você amor, eu voltava pra mim de novo
-<span class="chord">B7</span>                                         <span class="chord">Em</span>
+<span class="chord">B7</span>                        <span class="chord">Em</span>
 Mas de uma coisa fique certa, amor
-     <span class="chord">A7</span>                                        <span class="chord">D</span>           (<span class="chord">D</span> <span class="chord">C#7</span> <span class="chord">B7</span>)
+         <span class="chord">A7</span>                <span class="chord">D</span>           (<span class="chord">D</span> <span class="chord">C#7</span> <span class="chord">B7</span>)
 <span class="chord">A</span> porta vai estar sempre aberta, amor
-<span class="chord">B7</span>                                         <span class="chord">Em</span>
+<span class="chord">B7</span>                        <span class="chord">Em</span>
 O meu olhar vai dar uma festa, amor
-<span class="chord">F#7</span>                                          <span class="chord">Bm</span>
+<span class="chord">F#7</span>                     <span class="chord">Bm</span>
 Na hora em que você chegar
-<span class="chord">B7</span>                                         <span class="chord">Em</span>
+<span class="chord">B7</span>                      <span class="chord">Em</span>
 Mas de uma coisa fique certa, amor
-     <span class="chord">A7</span>                                        <span class="chord">D</span>            (<span class="chord">D</span> <span class="chord">C#7</span> <span class="chord">B7</span>)
+     <span class="chord">A7</span>                    <span class="chord">D</span>           (<span class="chord">D</span> <span class="chord">C#7</span> <span class="chord">B7</span>)
 <span class="chord">A</span> porta vai estar sempre aberta, amor
-<span class="chord">B7</span>                                         <span class="chord">Em</span>
+<span class="chord">B7</span>                        <span class="chord">Em</span>
 O meu olhar vai dar uma festa, amor
-           <span class="chord">F#7</span>                             <span class="chord">Bm</span>
+           <span class="chord">F#7</span>          <span class="chord">Bm</span>
 Na hora em que você chegar
       </pre>
     </div>
@@ -248,15 +247,6 @@ Na hora em que você chegar
     }
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
-    }
-    function transpAcorde(acorde, semitones) {
-      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
-        let n = nota_alias[nota] || nota;
-        let idx = notas.indexOf(n);
-        if (idx < 0) return m;
-        let novoIdx = (idx + semitones + 12) % 12;
-        return notas[novoIdx];
-      });
     }
     function getTomInicial() {
       let cifras = getCifras();
@@ -299,7 +289,8 @@ Na hora em que você chegar
     };
     // Inicial
     updateKeyDisplay();
-      // Font size controls
+
+    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
     function setFont(newPx) {
