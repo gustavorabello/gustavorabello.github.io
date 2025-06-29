@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">O Que é, o Que é</div>
@@ -122,40 +194,40 @@
     <div class="columns">
       <div class="col">
         <pre>
- <span class="chord">Gm</span>             <span class="chord">A7</span>           <span class="chord">Dm</span>          <span class="chord">Dm/C</span>
- Eu fico com a pureza das respostas das crianças
- <span class="chord">Bb7</span>                     <span class="chord">A7</span>
+ <span class="chord">Gm</span>             <span class="chord">A7</span>           <span class="chord">Dm</span>          <span class="chord">Dm/C</span>
+ Eu fico com a pureza das respostas das crianças
+ <span class="chord">Bb7</span>                     <span class="chord">A7</span>
 É a vida! É bonita e é bonita!
-<br/>
+
 (coro)
- <span class="chord">D</span>     <span class="chord">F#7</span>    <span class="chord">Bm</span>      <span class="chord">Bm/A</span>          <span class="chord">G</span>    <span class="chord">A7</span>
+ <span class="chord">D</span>     <span class="chord">F#7</span>    <span class="chord">Bm</span>      <span class="chord">Bm/A</span>          <span class="chord">G</span>    <span class="chord">A7</span>
 Viver   e não ter a vergonha de  ser feliz
- <span class="chord">Em</span>                  <span class="chord">A7</span>
+ <span class="chord">Em</span>                  <span class="chord">A7</span>
 Cantar, e cantar, e cantar
                             <span class="chord">D</span>
 <span class="chord">A</span> beleza de ser um eterno aprendiz
- <span class="chord">A7</span>                 <span class="chord">D</span>   <span class="chord">D7</span>
- Ah, meu Deus! Eu sei                              
+ <span class="chord">A7</span>                 <span class="chord">D</span>   <span class="chord">D7</span>
+ Ah, meu Deus! Eu sei                              
                             <span class="chord">G</span>
 Que a vida devia ser bem melhor e será
- <span class="chord">Gm</span>                         <span class="chord">D</span>         <span class="chord">B7</span>
+ <span class="chord">Gm</span>                         <span class="chord">D</span>         <span class="chord">B7</span>
 Mas isso  não impede que eu repita
 <span class="chord">Em</span>           <span class="chord">A7</span>        <span class="chord">D</span>       <span class="chord">A7</span>     (bis)
 É bonita, é bonita e é bonita!
-<br/>
+
     <span class="chord">Dm</span>                  <span class="chord">D7</span>       <span class="chord">Gm</span>
 <span class="chord">E</span> a vida? <span class="chord">E</span> a vida o que é, diga lá , meu irmão?
      <span class="chord">Em5</span>-/7             <span class="chord">A7</span>
 Ela é a batida de um coração?
- <span class="chord">Em5</span>-/7     <span class="chord">A7</span>         <span class="chord">Dm</span>
- Ela é uma doce ilusão?
-<br/>
- <span class="chord">A7</span>     <span class="chord">Dm</span>     <span class="chord">Dm7+</span> <span class="chord">Dm7</span>            <span class="chord">Gm</span>           <span class="chord">Gm7+</span>  <span class="chord">Gm7</span>
- Mas e a vida? Ela é maravilha ou é sofrimento?
+ <span class="chord">Em5</span>-/7     <span class="chord">A7</span>         <span class="chord">Dm</span>
+ Ela é uma doce ilusão?
+
+ <span class="chord">A7</span>     <span class="chord">Dm</span>     <span class="chord">Dm7+</span> <span class="chord">Dm7</span>            <span class="chord">Gm</span>           <span class="chord">Gm7+</span>  <span class="chord">Gm7</span>
+ Mas e a vida? Ela é maravilha ou é sofrimento?
                    <span class="chord">Em5</span>-    <span class="chord">A</span>
 Ela é alegria ou lamento?
- <span class="chord">Bb</span>          <span class="chord">A7</span>          <span class="chord">Dm</span>
- O que é? O que é, meu irmão?
+ <span class="chord">Bb</span>          <span class="chord">A7</span>          <span class="chord">Dm</span>
+ O que é? O que é, meu irmão?
         </pre>
       </div>
       <div class="col">
@@ -168,7 +240,7 @@ Há quem fale que a vida da gente é um nada no mundo
 Que nem dá um segundo
          <span class="chord">Gm</span>                             <span class="chord">Dm</span>
 Há quem fale que é um divino mistério profundo
-<br/>
+
      <span class="chord">Bb</span>            <span class="chord">Bb7</span>          <span class="chord">A7</span>
 É o sopro do criador numa  atitude repleta  de amor
     <span class="chord">Em5</span>-/7             <span class="chord">A7</span>
@@ -187,14 +259,14 @@ Eu só sei que confio na moça
 Somos nós qu e fazemos a vida
       <span class="chord">A7</span>
 Como der, ou puder, ou quiser
- <span class="chord">Gm</span>       <span class="chord">A7</span>  <span class="chord">Dm</span>        <span class="chord">C7</span>            <span class="chord">F</span>
- Sempre desejada  por mais que esteja errada
- <span class="chord">A</span>      <span class="chord">A7/C#</span>    <span class="chord">Dm</span>    <span class="chord">Bb</span>       <span class="chord">A7</span>
- Ninguém quer a morte só saúde e sorte
- <span class="chord">Em5</span>-/7  <span class="chord">A7</span>     <span class="chord">Dm</span>      <span class="chord">C7</span>            <span class="chord">F</span>  <span class="chord">D7/F#</span>
+ <span class="chord">Gm</span>       <span class="chord">A7</span>  <span class="chord">Dm</span>        <span class="chord">C7</span>            <span class="chord">F</span>
+ Sempre desejada  por mais que esteja errada
+ <span class="chord">A</span>      <span class="chord">A7/C#</span>    <span class="chord">Dm</span>    <span class="chord">Bb</span>       <span class="chord">A7</span>
+ Ninguém quer a morte só saúde e sorte
+ <span class="chord">Em5</span>-/7  <span class="chord">A7</span>     <span class="chord">Dm</span>      <span class="chord">C7</span>            <span class="chord">F</span>  <span class="chord">D7/F#</span>
 <span class="chord">E</span>  a pergunta  roda,  e a cabeça  agita
- <span class="chord">Gm</span>          <span class="chord">A7</span>              <span class="chord">Dm</span>      <span class="chord">Dm/C</span>
- Fico com a pureza das respostas das crianças
+ <span class="chord">Gm</span>          <span class="chord">A7</span>              <span class="chord">Dm</span>      <span class="chord">Dm/C</span>
+ Fico com a pureza das respostas das crianças
    <span class="chord">Bb7</span>                    <span class="chord">A7</span>
 É a vida! É bonita e é bonita!
         </pre>
@@ -202,5 +274,83 @@ Como der, ou puder, ou quiser
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>

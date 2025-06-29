@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">Pout-Pourri No. 1</div>
@@ -126,176 +198,248 @@
 Olorô, Bahia
    <span class="chord">G7M</span>               <span class="chord">A7</span>          <span class="chord">D7M</span>
 Nós viemos pedir sua bênção, saravá! 
-<p class="p4">  <span class="chord">B7</span> <span class="chord">E7</span>      <span class="chord">A</span> <span class="chord">D7</span>
+  <span class="chord">B7</span> <span class="chord">E7</span>      <span class="chord">A</span> <span class="chord">D7</span>
 Hepa hê, meu guia 
-<p class="p4">   <span class="chord">G7M</span>                <span class="chord">A7</span>            <span class="chord">D7M</span> 
+   <span class="chord">G7M</span>                <span class="chord">A7</span>            <span class="chord">D7M</span> 
 Nós viemos dormir no colinho de lemanjá! 
-<p class="p5"><br/>
-<p class="p6">B7  <span class="chord">E7</span>    <span class="chord">A</span> <span class="chord">D7</span>
-<p class="p7">Olorô, Bahia
-<p class="p4">    <span class="chord">G7M</span>              <span class="chord">A7</span>           <span class="chord">D7M</span>
-<p class="p7">Nós viemos pedir sua bênção, saravá! 
-<p class="p4">  <span class="chord">B</span>  <span class="chord">E7</span>      <span class="chord">A</span> <span class="chord">D7</span>
-<p class="p7">Hepa hê, meu guia 
-<p class="p4">    <span class="chord">G7M</span>               <span class="chord">A7</span>            <span class="chord">D7/9</span>     <span class="chord">D7</span>
-<p class="p7">Nós viemos dormir no colinho de lemanjá! 
-<p class="p5"><br/>
-<p class="p5"><br/>
-<p class="p8">Gm7               <span class="chord">C7/9</span>
-<p class="p9">Um velho calção de banho
-<p class="p8">Gm7  <span class="chord">Gm7/F</span>         <span class="chord">Em7(b5)</span>  <span class="chord">A7(b13)</span>
-<p class="p9">o dia prá vadiar
-<p class="p8">   <span class="chord">Dm7</span>                  <span class="chord">G7(13)</span>
-<p class="p9">um mar que não tem tamanho
-<p class="p8">Cm7                <span class="chord">Am7(b5)</span> <span class="chord">D7(b9)</span>
-<p class="p9">e um arco-íris no ar.
-<p class="p8">Gm7                <span class="chord">C7/9</span>
-<p class="p9">Depois na praça Caymmi
-<p class="p8">Gm7  <span class="chord">Gm7/F</span>        <span class="chord">Em7(b5)</span>  <span class="chord">A7(b13)</span>
-<p class="p9">sentir preguiça no corpo
-<p class="p8">Dm7                 <span class="chord">G7(13)</span>
-<p class="p9">e numa esteira de vime
-<p class="p8">Cm7                 <span class="chord">Am7(b5)</span> <span class="chord">D7(b9)</span>
-<p class="p9">beber uma água  de côco.
-<p class="p10"><br/>
-<p class="p8">   <span class="chord">G6</span>                    <span class="chord">Am7</span>      <span class="chord">Bm7</span>           <span class="chord">Am7</span>         <span class="chord">Bb7M</span>
-<p class="p9">É bom... passar uma tarde em Itapuã ao sol que arde em Itapuã
-<p class="p8">           <span class="chord">Eb7/9</span>       <span class="chord">Am7</span>        <span class="chord">D7/9</span>                <span class="chord">G6</span>
-<p class="p9">Ouvindo o mar de Itapuã, falar de amor em Itapuã
-<p class="p8">             <span class="chord">Am7</span>          <span class="chord">Bm7</span>            <span class="chord">Am7</span>        <span class="chord">Bb7M</span>
-<p class="p9">passar uma tarde em Itapuã, ao sol que arde em Itapuã
-<p class="p8">          <span class="chord">Eb7/9</span>        <span class="chord">Am7</span>        <span class="chord">D7/9</span>
-<p class="p9">Ouvindo o mar de Itapuã, falar de amor em Itapuã
-<p class="p5"><br/>
-<p class="p5"><br/>
-<p class="p8"> <span class="chord">G</span>                 <span class="chord">Em7</span>       <span class="chord">Am7</span>     <span class="chord">D7</span>                   <span class="chord">G</span>
-<p class="p9">Apanha folha por folha Tatamirô...apanha maracanã Tatamirô
-<p class="p8">       <span class="chord">G/B</span>         <span class="chord">Em7</span>      <span class="chord">Am7</span> <span class="chord">D7</span>                <span class="chord">G</span>          <span class="chord">D7/A</span> 
-<p class="p9">Eu sou filha de Oxalá Tatamirô...menininha me apanhou Tatamirô
-<p class="p8"> <span class="chord">G</span>                 <span class="chord">Em7</span>       <span class="chord">Am7</span>     <span class="chord">D7</span>                   <span class="chord">G</span>
-<p class="p9">Apanha folha por folha Tatamirô...apanha maracanã Tatamirô
-<p class="p8">       <span class="chord">G/B</span>         <span class="chord">Em7</span>      <span class="chord">Am7</span>   <span class="chord">D7</span>              <span class="chord">G</span>          <span class="chord">D7/A</span>     <span class="chord">G</span>
-<p class="p9">Eu sou filha de Ossanha Tatamirô...menininha me abençoou Tatamirô
-<p class="p5"><br/>
+
+<span class="chord">B7</span>  <span class="chord">E7</span>    <span class="chord">A</span> <span class="chord">D7</span>
+Olorô, Bahia
+    <span class="chord">G7M</span>              <span class="chord">A7</span>           <span class="chord">D7M</span>
+Nós viemos pedir sua bênção, saravá! 
+  <span class="chord">B</span>  <span class="chord">E7</span>      <span class="chord">A</span> <span class="chord">D7</span>
+Hepa hê, meu guia 
+    <span class="chord">G7M</span>               <span class="chord">A7</span>            <span class="chord">D7/9</span>     <span class="chord">D7</span>
+Nós viemos dormir no colinho de lemanjá! 
+
+<span class="chord">Gm7</span>               <span class="chord">C7/9</span>
+Um velho calção de banho
+<span class="chord">Gm7</span>  <span class="chord">Gm7/F</span>         <span class="chord">Em7(b5)</span>  <span class="chord">A7(b13)</span>
+o dia prá vadiar
+   <span class="chord">Dm7</span>                  <span class="chord">G7(13)</span>
+um mar que não tem tamanho
+<span class="chord">Cm7</span>                <span class="chord">Am7(b5)</span> <span class="chord">D7(b9)</span>
+e um arco-íris no ar.
+<span class="chord">Gm7</span>                <span class="chord">C7/9</span>
+Depois na praça Caymmi
+<span class="chord">Gm7</span>  <span class="chord">Gm7/F</span>        <span class="chord">Em7(b5)</span>  <span class="chord">A7(b13)</span>
+sentir preguiça no corpo
+<span class="chord">Dm7</span>                 <span class="chord">G7(13)</span>
+e numa esteira de vime
+<span class="chord">Cm7</span>                 <span class="chord">Am7(b5)</span> <span class="chord">D7(b9)</span>
+beber uma água  de côco.
+
+   <span class="chord">G6</span>                    <span class="chord">Am7</span>      <span class="chord">Bm7</span>           <span class="chord">Am7</span>         <span class="chord">Bb7M</span>
+É bom... passar uma tarde em Itapuã ao sol que arde em Itapuã
+           <span class="chord">Eb7/9</span>       <span class="chord">Am7</span>        <span class="chord">D7/9</span>                <span class="chord">G6</span>
+Ouvindo o mar de Itapuã, falar de amor em Itapuã
+             <span class="chord">Am7</span>          <span class="chord">Bm7</span>            <span class="chord">Am7</span>        <span class="chord">Bb7M</span>
+passar uma tarde em Itapuã, ao sol que arde em Itapuã
+          <span class="chord">Eb7/9</span>        <span class="chord">Am7</span>        <span class="chord">D7/9</span>
+Ouvindo o mar de Itapuã, falar de amor em Itapuã
+
+ <span class="chord">G</span>                 <span class="chord">Em7</span>       <span class="chord">Am7</span>     <span class="chord">D7</span>                   <span class="chord">G</span>
+Apanha folha por folha Tatamirô...apanha maracanã Tatamirô
+       <span class="chord">G/B</span>         <span class="chord">Em7</span>      <span class="chord">Am7</span> <span class="chord">D7</span>                <span class="chord">G</span>          <span class="chord">D7/A</span> 
+Eu sou filha de Oxalá Tatamirô...menininha me apanhou Tatamirô
+ <span class="chord">G</span>                 <span class="chord">Em7</span>       <span class="chord">Am7</span>     <span class="chord">D7</span>                   <span class="chord">G</span>
+Apanha folha por folha Tatamirô...apanha maracanã Tatamirô
+       <span class="chord">G/B</span>         <span class="chord">Em7</span>      <span class="chord">Am7</span>   <span class="chord">D7</span>              <span class="chord">G</span>          <span class="chord">D7/A</span>     <span class="chord">G</span>
+Eu sou filha de Ossanha Tatamirô...menininha me abençoou Tatamirô
+
 <span class="chord">D</span>        <span class="chord">C</span>       <span class="chord">B7</span>  <span class="chord">Am</span>
-<p class="p11">ooohhhh ooohhhh ooohhhh 
-<p class="p5"><br/>
+ooohhhh ooohhhh ooohhhh 
+
 <span class="chord">Am</span>  <span class="chord">E7</span>  <span class="chord">Am</span>  <span class="chord">E7</span>
-<p class="p5"><br/>
-<p class="p8">Am        <span class="chord">Bm7(b5)</span>  <span class="chord">E7</span>    <span class="chord">Bm7(b5)</span>     <span class="chord">E7</span>   <span class="chord">Amadd9</span>     <span class="chord">Amadd9/G</span>   
-<p class="p9">Vem  das  águas          de       O-    xalá 
-<p class="p12">F#m7(b5)    <span class="chord">B7</span>    <span class="chord">Emadd9</span>     <span class="chord">F#m7(b5)</span>   <span class="chord">B7</span>      <span class="chord">E7</span>
-<p class="p9">es -        sa    mágoa      que            me  dá
-<p class="p8">Gm/Bb       <span class="chord">A7</span>         <span class="chord">Dm7</span>    <span class="chord">Dm7/C</span>
-<p class="p9">Ela  pare - cia  o  di -  a 
-<p class="p8">F#m7(b5)            <span class="chord">B7</span>     <span class="chord">Bm7(11)</span>   <span class="chord">E7</span>
-<p class="p9">a  romper  da  es - curi - dão 
-<p class="p8">Dm7             <span class="chord">G7</span>           <span class="chord">C7+</span>
-<p class="p9">Linda  no  seu  manto  todo  branco 
-<p class="p8">    <span class="chord">F7+</span>      <span class="chord">F#°</span>   <span class="chord">E</span>     <span class="chord">Gm6/Bb</span>   <span class="chord">A7</span>
-<p class="p9">em  meio  à  pro - cis - são 
-<p class="p8">   <span class="chord">Dm7</span>                 <span class="chord">G7</span>
-<p class="p9">e  eu,  que  ela  nem  via, 
-<p class="p8">               <span class="chord">C7+</span>      <span class="chord">F7+</span>     <span class="chord">F#°</span>   <span class="chord">E</span>    <span class="chord">A</span>
-<p class="p9">ao  deus  pe - dia  a - mor  e  pro - te - ção 
-<p class="p8">                <span class="chord">Bm7</span>           <span class="chord">E7</span>
-<p class="p9">Meu   Pai   Oxa-lá   é   o   rei, 
-<p class="p8">                 <span class="chord">A6</span>
-<p class="p9">venha  me   va-ler 
-<p class="p8">                <span class="chord">Bm7</span>           <span class="chord">E7</span>
-<p class="p9">meu   Pai   Oxa-lá   é   o   rei, 
-<p class="p8">                 <span class="chord">A6</span>
-<p class="p9">venha  me   va-ler
-<p class="p8">             <span class="chord">Bm7</span>         <span class="chord">E7</span>    <span class="chord">A6</span>
-<p class="p9">e o velho Omu-lu  ato-tobaluai-ê 
-<p class="p8">             <span class="chord">Bm7</span>         <span class="chord">E7</span>     <span class="chord">Amadd9</span>  
-<p class="p9">e o velho Omu-lu  ato-tobaluai-ê 
-<p class="p5"><br/>
-<p class="p5"><br/>
-<p class="p13"><br/>
+
+<span class="chord">Am</span>        <span class="chord">Bm7(b5)</span>  <span class="chord">E7</span>    <span class="chord">Bm7(b5)</span>     <span class="chord">E7</span>   <span class="chord">Amadd9</span>     <span class="chord">Amadd9/G</span>   
+Vem  das  águas          de       O-    xalá 
+<span class="chord">F#m7(b5)</span>    <span class="chord">B7</span>    <span class="chord">Emadd9</span>     <span class="chord">F#m7(b5)</span>   <span class="chord">B7</span>      <span class="chord">E7</span>
+es -        sa    mágoa      que            me  dá
+<span class="chord">Gm/Bb</span>       <span class="chord">A7</span>         <span class="chord">Dm7</span>    <span class="chord">Dm7/C</span>
+Ela  pare - cia  o  di -  a 
+<span class="chord">F#m7(b5)</span>            <span class="chord">B7</span>     <span class="chord">Bm7(11)</span>   <span class="chord">E7</span>
+a  romper  da  es - curi - dão 
+<span class="chord">Dm7</span>             <span class="chord">G7</span>           <span class="chord">C7+</span>
+Linda  no  seu  manto  todo  branco 
+    <span class="chord">F7+</span>      <span class="chord">F#°</span>   <span class="chord">E</span>     <span class="chord">Gm6/Bb</span>   <span class="chord">A7</span>
+em  meio  à  pro - cis - são 
+   <span class="chord">Dm7</span>                 <span class="chord">G7</span>
+e  eu,  que  ela  nem  via, 
+               <span class="chord">C7+</span>      <span class="chord">F7+</span>     <span class="chord">F#°</span>   <span class="chord">E</span>    <span class="chord">A</span>
+ao  deus  pe - dia  a - mor  e  pro - te - ção 
+                <span class="chord">Bm7</span>           <span class="chord">E7</span>
+Meu   Pai   Oxa-lá   é   o   rei, 
+                 <span class="chord">A6</span>
+venha  me   va-ler 
+                <span class="chord">Bm7</span>           <span class="chord">E7</span>
+meu   Pai   Oxa-lá   é   o   rei, 
+                 <span class="chord">A6</span>
+venha  me   va-ler
+             <span class="chord">Bm7</span>         <span class="chord">E7</span>    <span class="chord">A6</span>
+e o velho Omu-lu  ato-tobaluai-ê 
+             <span class="chord">Bm7</span>         <span class="chord">E7</span>     <span class="chord">Amadd9</span>  
+e o velho Omu-lu  ato-tobaluai-ê 
+
         </pre>
       </div>
       <div class="col">
         <pre>
-<p class="p14">Am7             <span class="chord">D7</span>                   <span class="chord">Am7</span>           <span class="chord">D7</span> 
-<p class="p15">Nhe-nhen-nhen  Nhen-nhen-nhen-xo-rodô  Nhe-nhen-nhen  Nhen-nhen-nhen-xo-rodô   
-<p class="p14">    <span class="chord">Dm7</span>            <span class="chord">Em7</span>          <span class="chord">Am7</span> 
-<p class="p15">É o mar, é o mar  <span class="chord">F</span>é-fé   xo-ro-dô! 
-<p class="p4">Am7             <span class="chord">D7</span>                  <span class="chord">Am7</span>           <span class="chord">D7</span> 
-<p class="p15">Nhe-nhen-nhen  Nhen-nhen-nhen-xo-rodô  Nhe-nhen-nhen  Nhen-nhen-nhen-xo-rodô   
-<p class="p14">     <span class="chord">Dm7</span>              <span class="chord">Em7</span>           <span class="chord">Am7</span>    <span class="chord">Dm7</span>
-<p class="p15">É o mar, é o mar  <span class="chord">F</span>é-fé    xo-ro-dô! 
-<p class="p5"><br/>
-<p class="p5"><br/>
-<p class="p8">  <span class="chord">Amadd9</span>              <span class="chord">E/G#</span>
-<p class="p9">Maria  era  uma  boa  moça
-<p class="p8">     <span class="chord">Bm7(11)</span>        <span class="chord">E7</span>      <span class="chord">Amadd9</span>     <span class="chord">Amadd9/G</span>
-<p class="p9">pra  turma  lá  do  Ganto - is
-<p class="p12"> <span class="chord">F#m7(b5)</span>       <span class="chord">B7(b9)</span>          <span class="chord">Emadd9</span>
-<p class="p9">Era  Maria  vai        com  as  outras
-<p class="p8">  <span class="chord">Am6/C</span>            <span class="chord">B7</span>
-<p class="p9">Maria   de  coser,
-<p class="p8">  <span class="chord">Bm7(b5)</span>         <span class="chord">E7</span>
-<p class="p9">Maria  de  rezar
-<p class="p8">  <span class="chord">Amadd9</span>                     <span class="chord">E/G#</span>
-<p class="p9">Porém  o  que  ninguém  sabi - a
-<p class="p8">   <span class="chord">Bm7(11)</span>             <span class="chord">E7</span>        <span class="chord">A7/4</span>  <span class="chord">A7</span>
-<p class="p9">é  que  tinha  um  par - ticular
-<p class="p8"> <span class="chord">Dm7</span>              <span class="chord">D#°</span>
-<p class="p9">além  de  coser,
-<p class="p8"> <span class="chord">Am/E</span>            <span class="chord">F7+</span>
-<p class="p9">além  de  rezar,
-<p class="p8">   <span class="chord">Bm7(11)</span>       <span class="chord">E7</span>        <span class="chord">A</span>
-<p class="p9">também  era   Maria  de  pecar
-<p class="p8">        <span class="chord">A/C#</span>        <span class="chord">D7+</span>        <span class="chord">D#m7(b5)</span>
-<p class="p9">tumba        ê,      cabo        -  clo
-<p class="p8">        <span class="chord">G#</span>          <span class="chord">C#m7</span>    <span class="chord">F#m</span>
-<p class="p9">tumba   ê,  guerrei -    ro
-<p class="p8">                <span class="chord">Bm7</span>  <span class="chord">E7</span>
-<p class="p9">tumba  ê,  meu  pai
-<p class="p8">                <span class="chord">A</span>    <span class="chord">Bm7</span>   <span class="chord">C#m7</span>
-<p class="p9">não  me  deixe  só
-<p class="p8">       <span class="chord">A7(13)</span>     <span class="chord">D7+</span>                        <span class="chord">D#m7(b5)</span>
-<p class="p9">tumba  ê,   cabo  -   clo,  tumba  lá  e  cá
-<p class="p8">       <span class="chord">G#</span>          <span class="chord">C#m7</span>                       <span class="chord">F#m</span>
-<p class="p9">tumba  ê,  guerrei -    ro,  tumba  lá  e  cá
-<p class="p8">                <span class="chord">Bm7</span>                    <span class="chord">E7</span>
-<p class="p9">tumba  ê,  meu  pai,  tumba  lá  e  cá
-<p class="p8">                <span class="chord">Am7</span>    <span class="chord">D7</span>    
-<p class="p9">não  me  deixe  só
-<p class="p5"><br/>
-<p class="p5"><br/>
-<p class="p6">B7      <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
-<p class="p7">Olorô, Bahia
-<p class="p4">    <span class="chord">G7M</span>       <span class="chord">A7</span>                 <span class="chord">D7M</span>
-<p class="p7">Nós viemos pedir sua bênção, saravá! 
-<p class="p4">B7      <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
-<p class="p7">Hepa hê, meu guia 
-<p class="p4">        <span class="chord">G7M</span>         <span class="chord">A7</span>            <span class="chord">D7M</span> 
-<p class="p7">Nós viemos dormir no colinho de lemanjá! 
-<p class="p16"><br/>
-<p class="p6">B7      <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
-<p class="p7">Olorô, Bahia
-<p class="p4">G7M           <span class="chord">A7</span>               <span class="chord">D7M</span>
-<p class="p7">Nós viemos pedir sua bênção, saravá! 
-<p class="p4">B7      <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
-<p class="p7">Hepa hê, meu guia 
-<p class="p4">G7M          <span class="chord">A7</span>             <span class="chord">D7M</span>
-<p class="p7">Nós viemos dormir no colinho de lemanjá! 
-<p class="p4">G7M          <span class="chord">A7</span>             <span class="chord">D7M</span>
-<p class="p7">Nós viemos dormir no colinho de lemanjá! 
-<p class="p4">G7M          <span class="chord">A7</span>             <span class="chord">D7M</span>
-<p class="p7">Nós viemos dormir no colinho de lemanjá! 
-<p class="p4">G7M          <span class="chord">A7</span>             <span class="chord">D7M</span>
-<p class="p7">Nós viemos dormir no colinho de lemanjá! 
-<p class="p4">G7M          <span class="chord">A7</span>             <span class="chord">D7M</span>
-<p class="p7">Nós viemos dormir no colinho de lemanjá! 
-<p class="p4">G7M          <span class="chord">A7</span>             <span class="chord">D7M</span>
-<p class="p7">Nós viemos dormir no colinho de lemanjá! 
+<span class="chord">Am7</span>             <span class="chord">D7</span>                   <span class="chord">Am7</span>           <span class="chord">D7</span> 
+Nhe-nhen-nhen  Nhen-nhen-nhen-xo-rodô  Nhe-nhen-nhen  Nhen-nhen-nhen-xo-rodô   
+    <span class="chord">Dm7</span>            <span class="chord">Em7</span>          <span class="chord">Am7</span> 
+É o mar, é o mar  <span class="chord">F</span>é-fé   xo-ro-dô! 
+<span class="chord">Am7</span>             <span class="chord">D7</span>                  <span class="chord">Am7</span>           <span class="chord">D7</span> 
+Nhe-nhen-nhen  Nhen-nhen-nhen-xo-rodô  Nhe-nhen-nhen  Nhen-nhen-nhen-xo-rodô   
+     <span class="chord">Dm7</span>              <span class="chord">Em7</span>           <span class="chord">Am7</span>    <span class="chord">Dm7</span>
+É o mar, é o mar  <span class="chord">F</span>é-fé    xo-ro-dô! 
+
+  <span class="chord">Amadd9</span>              <span class="chord">E/G#</span>
+Maria  era  uma  boa  moça
+     <span class="chord">Bm7(11)</span>        <span class="chord">E7</span>      <span class="chord">Amadd9</span>     <span class="chord">Amadd9/G</span>
+pra  turma  lá  do  Ganto - is
+ <span class="chord">F#m7(b5)</span>       <span class="chord">B7(b9)</span>          <span class="chord">Emadd9</span>
+Era  Maria  vai        com  as  outras
+  <span class="chord">Am6/C</span>            <span class="chord">B7</span>
+Maria   de  coser,
+  <span class="chord">Bm7(b5)</span>         <span class="chord">E7</span>
+Maria  de  rezar
+  <span class="chord">Amadd9</span>                     <span class="chord">E/G#</span>
+Porém  o  que  ninguém  sabi - a
+   <span class="chord">Bm7(11)</span>             <span class="chord">E7</span>        <span class="chord">A7/4</span>  <span class="chord">A7</span>
+é  que  tinha  um  par - ticular
+ <span class="chord">Dm7</span>              <span class="chord">D#°</span>
+além  de  coser,
+ <span class="chord">Am/E</span>            <span class="chord">F7+</span>
+além  de  rezar,
+   <span class="chord">Bm7(11)</span>       <span class="chord">E7</span>        <span class="chord">A</span>
+também  era   Maria  de  pecar
+        <span class="chord">A/C#</span>        <span class="chord">D7+</span>        <span class="chord">D#m7(b5)</span>
+tumba        ê,      cabo        -  clo
+        <span class="chord">G#</span>          <span class="chord">C#m7</span>    <span class="chord">F#m</span>
+tumba   ê,  guerrei -    ro
+                <span class="chord">Bm7</span>  <span class="chord">E7</span>
+tumba  ê,  meu  pai
+                <span class="chord">A</span>    <span class="chord">Bm7</span>   <span class="chord">C#m7</span>
+não  me  deixe  só
+       <span class="chord">A7(13)</span>     <span class="chord">D7+</span>                        <span class="chord">D#m7(b5)</span>
+tumba  ê,   cabo  -   clo,  tumba  lá  e  cá
+       <span class="chord">G#</span>          <span class="chord">C#m7</span>                       <span class="chord">F#m</span>
+tumba  ê,  guerrei -    ro,  tumba  lá  e  cá
+                <span class="chord">Bm7</span>                    <span class="chord">E7</span>
+tumba  ê,  meu  pai,  tumba  lá  e  cá
+                <span class="chord">Am7</span>    <span class="chord">D7</span>    
+não  me  deixe  só
+
+<span class="chord">B7</span>      <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
+Olorô, Bahia
+    <span class="chord">G7M</span>       <span class="chord">A7</span>                 <span class="chord">D7M</span>
+Nós viemos pedir sua bênção, saravá! 
+<span class="chord">B7</span>      <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
+Hepa hê, meu guia 
+        <span class="chord">G7M</span>         <span class="chord">A7</span>            <span class="chord">D7M</span> 
+Nós viemos dormir no colinho de lemanjá! 
+
+<span class="chord">B7</span>      <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
+Olorô, Bahia
+<span class="chord">G7M</span>           <span class="chord">A7</span>               <span class="chord">D7M</span>
+Nós viemos pedir sua bênção, saravá! 
+<span class="chord">B7</span>      <span class="chord">E7</span> <span class="chord">A</span> <span class="chord">D7</span>
+Hepa hê, meu guia 
+<span class="chord">G7M</span>          <span class="chord">A7</span>             <span class="chord">D7M</span>
+Nós viemos dormir no colinho de lemanjá! 
+<span class="chord">G7M</span>          <span class="chord">A7</span>             <span class="chord">D7M</span>
+Nós viemos dormir no colinho de lemanjá! 
+<span class="chord">G7M</span>          <span class="chord">A7</span>             <span class="chord">D7M</span>
+Nós viemos dormir no colinho de lemanjá! 
+<span class="chord">G7M</span>          <span class="chord">A7</span>             <span class="chord">D7M</span>
+Nós viemos dormir no colinho de lemanjá! 
+<span class="chord">G7M</span>          <span class="chord">A7</span>             <span class="chord">D7M</span>
+Nós viemos dormir no colinho de lemanjá! 
+<span class="chord">G7M</span>          <span class="chord">A7</span>             <span class="chord">D7M</span>
+Nós viemos dormir no colinho de lemanjá! 
         </pre>
       </div>
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>

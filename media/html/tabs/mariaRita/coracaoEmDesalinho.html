@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">Coração em Desalinho</div>
@@ -122,67 +194,145 @@
     <div class="columns">
       <div class="col">
         <pre>
-<p class="p4">G            <span class="chord">G5+</span>   <span class="chord">G6</span>     <span class="chord">G5+</span>
-<p class="p4">Numa estrada dessa vida
-<p class="p4">G          <span class="chord">E7</span>
-<p class="p4">Eu te conheci
-<p class="p4">     <span class="chord">Am7</span>    <span class="chord">F7</span>  <span class="chord">E7</span>
-<p class="p4">Oh, Flor!
-<p class="p4">Am               <span class="chord">Am5+</span>
-<p class="p4">Vinhas tão desiludida
-<p class="p4">        <span class="chord">Am6</span>
-<p class="p4">Mal sucedida
-<p class="p4">               <span class="chord">G</span>  <span class="chord">G5+</span>  <span class="chord">G6</span> <span class="chord">D7</span>
-<p class="p4">Por um falso amor
-<br/>
-<p class="p4">G         <span class="chord">G5+</span>  <span class="chord">G6</span>    <span class="chord">G5+</span>
-<p class="p4">Dei afeto e carinho
-<p class="p4">G         <span class="chord">G7</span>  <span class="chord">C7+</span>
-<p class="p4">Como retribuição
-<p class="p5">C#m7/5-       <span class="chord">F#7/5</span>+ <span class="chord">Bm7</span>
-<p class="p4">Procuraste um outro ninho
-<p class="p4">       <span class="chord">C#m7/5</span>-
-<p class="p4">Em desalinho
-<p class="p4">  <span class="chord">F#7</span>            <span class="chord">F7</span>
-<p class="p4">Ficou o meu coração
-<p class="p4">    <span class="chord">E7</span>            <span class="chord">Am7</span> <span class="chord">D7/9</span> <span class="chord">Bm7</span>  <span class="chord">E7/9</span>-
-<p class="p4">Meu peito agora é só paixão
-<p class="p4">                 <span class="chord">Cm/Eb</span> <span class="chord">D7</span> <span class="chord">G6</span>
-<p class="p4">Meu peito agora é só paixão...
-<br/>
+<span class="chord">G</span>            <span class="chord">G5+</span>   <span class="chord">G6</span>     <span class="chord">G5+</span>
+Numa estrada dessa vida
+<span class="chord">G</span>          <span class="chord">E7</span>
+Eu te conheci
+     <span class="chord">Am7</span>    <span class="chord">F7</span>  <span class="chord">E7</span>
+Oh, Flor!
+<span class="chord">Am</span>               <span class="chord">Am5+</span>
+Vinhas tão desiludida
+        <span class="chord">Am6</span>
+Mal sucedida
+               <span class="chord">G</span>  <span class="chord">G5+</span>  <span class="chord">G6</span> <span class="chord">D7</span>
+Por um falso amor
+
+<span class="chord">G</span>         <span class="chord">G5+</span>  <span class="chord">G6</span>    <span class="chord">G5+</span>
+Dei afeto e carinho
+<span class="chord">G</span>         <span class="chord">G7</span>  <span class="chord">C7+</span>
+Como retribuição
+<span class="chord">C#m7/5</span>-       <span class="chord">F#7/5</span>+ <span class="chord">Bm7</span>
+Procuraste um outro ninho
+       <span class="chord">C#m7/5</span>-
+<span class="chord">Em</span> desalinho
+  <span class="chord">F#7</span>            <span class="chord">F7</span>
+Ficou o meu coração
+    <span class="chord">E7</span>            <span class="chord">Am7</span> <span class="chord">D7/9</span> <span class="chord">Bm7</span>  <span class="chord">E7/9</span>-
+Meu peito agora é só paixão
+                 <span class="chord">Cm/Eb</span> <span class="chord">D7</span> <span class="chord">G6</span>
+Meu peito agora é só paixão...
+
         </pre>
       </div>
       <div class="col">
         <pre>
-<p class="p5">D7
-<p class="p4">Tamanha desilusão
-<p class="p4">   <span class="chord">G6</span>
-<p class="p4">Me deste
-<br/>
-<p class="p4">Oh, Flor!
-<p class="p4">        <span class="chord">C7</span> <span class="chord">B7</span>     <span class="chord">F7</span> <span class="chord">E7</span>
-<p class="p4">Me enganei redondamente
-<p class="p4">Am          <span class="chord">D7</span>   <span class="chord">Ebº</span>   <span class="chord">Em7</span>
-<p class="p4">Pensando em te fazer o bem
-<p class="p4">            <span class="chord">A7/9</span>
-<p class="p4">Eu me apaixonei
-<p class="p5">Am7 <span class="chord">D7/5</span>+ <span class="chord">G6</span>  <span class="chord">D7</span>
-<p class="p4">Foi meu mal
-<br/>
-<p class="p5"> <span class="chord">G6</span>
-<p class="p4">Agora!
-<p class="p4">              <span class="chord">F#7</span>       <span class="chord">Bm</span>   <span class="chord">Bm7+</span>  <span class="chord">Bm7</span>
-<p class="p4">Uma enorme paixão me devora
-<p class="p4">           <span class="chord">Bm6</span>        <span class="chord">F7</span> <span class="chord">E7</span>
-<p class="p4">Alegria partiu, foi embora
-<p class="p4">Am7       <span class="chord">Cm6</span> <span class="chord">Bm7</span>      <span class="chord">E7/9</span>-
-<p class="p4">Não sei viver sem teu amor
-<p class="p4">  <span class="chord">A7/9</span>          <span class="chord">D7/9</span>  <span class="chord">G6</span>  <span class="chord">F7</span> <span class="chord">E7</span> (BIS)
-<p class="p4">Sozinho curto a minha dor
+<span class="chord">D7</span>
+Tamanha desilusão
+   <span class="chord">G6</span>
+Me deste
+
+Oh, Flor!
+        <span class="chord">C7</span> <span class="chord">B7</span>     <span class="chord">F7</span> <span class="chord">E7</span>
+Me enganei redondamente
+<span class="chord">Am</span>          <span class="chord">D7</span>   <span class="chord">Ebº</span>   <span class="chord">Em7</span>
+Pensando em te fazer o bem
+            <span class="chord">A7/9</span>
+Eu me apaixonei
+<span class="chord">Am7</span> <span class="chord">D7/5</span>+ <span class="chord">G6</span>  <span class="chord">D7</span>
+Foi meu mal
+
+ <span class="chord">G6</span>
+Agora!
+              <span class="chord">F#7</span>       <span class="chord">Bm</span>   <span class="chord">Bm7+</span>  <span class="chord">Bm7</span>
+Uma enorme paixão me devora
+           <span class="chord">Bm6</span>        <span class="chord">F7</span> <span class="chord">E7</span>
+Alegria partiu, foi embora
+<span class="chord">Am7</span>       <span class="chord">Cm6</span> <span class="chord">Bm7</span>      <span class="chord">E7/9</span>-
+Não sei viver sem teu amor
+  <span class="chord">A7/9</span>          <span class="chord">D7/9</span>  <span class="chord">G6</span>  <span class="chord">F7</span> <span class="chord">E7</span> (BIS)
+Sozinho curto a minha dor
         </pre>
       </div>
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>

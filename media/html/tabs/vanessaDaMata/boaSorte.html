@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">Boa Sorte/Good Luck</div>
@@ -123,14 +195,14 @@
       <div class="col">
         <pre>
 Primeira Parte:
-<br/>
+
         <span class="chord">C#m7</span>
 É só isso
                  <span class="chord">E</span>
 Não tem mais jeito
         <span class="chord">B</span>         <span class="chord">F#</span>
 Acabou,   boa sorte
-<br/>
+
                    <span class="chord">C#m7</span>
 Não tenho o que dizer
              <span class="chord">E</span>
@@ -139,9 +211,9 @@ São só palavras
 <span class="chord">E</span> o que eu sinto
          <span class="chord">F#</span>
 Não mudará
-<br/>
+
 Refrão:
- 
+ 
                     <span class="chord">C#m7</span>
 Tudo o que quer me dar
      <span class="chord">E</span>
@@ -150,7 +222,7 @@ Tudo o que quer me dar
 É pesado
         <span class="chord">F#</span>
 Não há paz
-<br/>
+
                     <span class="chord">C#m7</span>
 Tudo o que quer de mim
     <span class="chord">E</span>
@@ -159,175 +231,174 @@ Irreais
 Expectativas
      <span class="chord">F#</span>
 Desleais
-<br/>
+
 Segunda Parte:
-<br/>
+
        <span class="chord">C#m7</span>
 That's it
             <span class="chord">B</span>
 There's no way
        <span class="chord">F#</span>
 It's over, good luck
-<br/>
+
               <span class="chord">C#m7</span>
 I've nothing left to say
            <span class="chord">B</span>
 It's only words
             <span class="chord">F#</span>
 And what l feel
-<br/>
+
 Won't change
-<br/>
+
 Refrão:
-<br/>
+
                     <span class="chord">C#m7</span>
 Tudo o que quer me dar
-<br/>
+
 (Everything you want to give me)
      <span class="chord">E</span>
 É demais
-<br/>
+
 (It's too much)
      <span class="chord">B</span>
 É pesado
-<br/>
+
 (It's heavy)
         <span class="chord">F#</span>
 Não há paz
-<br/>
-<br/>
+
 (There is no peace)
                     <span class="chord">C#m7</span>
 Tudo o que quer de mim
-<br/>
+
 (All you want from me)
     <span class="chord">E</span>
 Irreais
-<br/>
+
 (Isn't real)
         <span class="chord">B</span>
 Expectativas
-<br/>
-(Expectations) 
+
+(Expectations) 
      <span class="chord">F#</span>
 Desleais
-<br/>
+
 Base Solo 4x: <span class="chord">C#m7</span>  <span class="chord">B</span>  <span class="chord">F#</span>
-<br/>
+
 Solo
         </pre>
       </div>
       <div class="col">
         <pre>
 Terceira Parte:
-<br/>
+
             <span class="chord">C#m7</span>
 Mesmo se segure
               <span class="chord">A</span>
 Quero que se cure
           <span class="chord">F#</span>
 Dessa pessoa
-<br/>
+
 Que o aconselha
-<br/>
+
             <span class="chord">C#m7</span>
 Há um desencontro
                <span class="chord">A</span>
 Veja por esse ponto
               <span class="chord">F#</span>
 Há tantas pessoas especiais
-<br/>
+
     <span class="chord">C#m7</span>                      <span class="chord">A</span>
 Now even if you hold yourself
         <span class="chord">F#</span>
 I want you, to get cured
-<br/>
+
 From this person
-<br/>
+
        <span class="chord">C#m7</span>     <span class="chord">A</span>
 Who advises you
                   <span class="chord">F#</span>
 There is a disconnection
-<br/>
+
                            <span class="chord">C#m7</span>
 See through this point of view
            <span class="chord">A</span>
 There are so many special
-<br/>
- <span class="chord">F#</span>
+
+ <span class="chord">F#</span>
 People in the world
           <span class="chord">C#m7</span>
 So many special
-<br/>
+
                <span class="chord">A</span>
 People in the world
         <span class="chord">F#</span>
 In the world
          (pausa)
 All you want
-<br/>
+
 All you want
-<br/>
+
 Refrão:
-<br/>
+
                     <span class="chord">C#m7</span>
 Tudo o que quer me dar
-<br/>
+
 (Everything you want to give me)
      <span class="chord">E</span>
 É demais
-<br/>
+
 (It's too much)
      <span class="chord">B</span>
 É pesado
-<br/>
+
 (It's heavy)
         <span class="chord">F#</span>
 Não há paz
-<br/>
+
 (There is no peace)
-<br/>
+
                     <span class="chord">C#m7</span>
 Tudo o que quer de mim
-<br/>
+
 (All you want from me)
     <span class="chord">E</span>
 Irreais
-<br/>
+
 (Isn't real)
         <span class="chord">B</span>
 Expectativas
-<br/>
-(Expectations) 
+
+(Expectations) 
      <span class="chord">F#</span>
 Desleais
-<br/>
+
 Final:
            <span class="chord">C#m7</span>
 Now we're falling, falling
- <span class="chord">B</span>
+ <span class="chord">B</span>
 Falling, falling
           <span class="chord">F#</span>
 Into the night, into the night
-<br/>
+
            <span class="chord">C#m7</span>
 Now we're falling, falling
- <span class="chord">B</span>
+ <span class="chord">B</span>
 Falling, falling
           <span class="chord">F#</span>
 Into the night
-<br/>
+
 Bom encontro é de dois
-<br/>
+
            <span class="chord">C#m7</span>
 Now we're falling, falling
- <span class="chord">B</span>
+ <span class="chord">B</span>
 Falling, falling
           <span class="chord">F#</span>
 Into the night, into the night
            <span class="chord">C#m7</span>
 Now we're falling, falling
- <span class="chord">B</span>
+ <span class="chord">B</span>
 Falling, falling
           <span class="chord">F#</span>
 Into the night
@@ -336,5 +407,83 @@ Into the night
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>

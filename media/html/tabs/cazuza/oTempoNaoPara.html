@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">O Tempo Não Para</div>
@@ -122,118 +194,195 @@
     <div class="columns">
       <div class="col">
         <pre>
-Intro.: <span class="chord">Em7</span>
-<br/>
-<span class="chord">Em7</span> 
-Disparo contra o sol
+Intro.: <span class="chord">Em7</span> 
+
+<span class="chord">Em7</span> 
+Disparo contra o sol 
                         <span class="chord">Am7</span>   
-Sou forte, sou por acaso
+Sou forte, sou por acaso  
                               <span class="chord">D</span>
-Minha metralhadora cheia de mágoas
-           <span class="chord">Em7</span>
-Eu sou um cara
-<br/>
-Cansado de correr na direção contrária
-<span class="chord">Am7</span> 
-Sem pódium de chegada
+Minha metralhadora cheia de mágoas 
+           <span class="chord">Em7</span> 
+Eu sou um cara 
+
+Cansado de correr na direção contrária 
+<span class="chord">Am7</span> 
+Sem pódium de chegada 
                  <span class="chord">D</span>
-Ou beijo de namorada
-                <span class="chord">Em7</span>
-Eu sou mais um cara
-<br/>
-Mas se você achar que eu estou derrotado
+Ou beijo de namorada 
+                <span class="chord">Em7</span> 
+Eu sou mais um cara 
+
+Mas se você achar que eu estou derrotado 
 <span class="chord">Am7</span>                                   <span class="chord">D</span>         
-Saiba que ainda estão rolando os dados
-                          <span class="chord">Em7</span>
-Porque o tempo, o tempo não pára
-<br/>
+Saiba que ainda estão rolando os dados 
+                          <span class="chord">Em7</span> 
+Porque o tempo, o tempo não pára 
+
 (<span class="chord">Em7</span>  <span class="chord">Em</span>)                   
-Dias sim, dias não
-    <span class="chord">Am7</span>                           <span class="chord">D</span>
-Eu vou sobrevivendo sem um arranhão
+Dias sim, dias não 
+    <span class="chord">Am7</span>                           <span class="chord">D</span> 
+Eu vou sobrevivendo sem um arranhão 
                           <span class="chord">Em7</span>*   (<span class="chord">Em7</span>*   <span class="chord">D</span>   <span class="chord">Bm</span>   <span class="chord">A</span>   <span class="chord">G</span>  )
-Da caridade de quem me detesta
-<br/>
-      <span class="chord">G</span>                            <span class="chord">Am7</span>
-      <span class="chord">A</span> tua piscina está cheia de ratos
+Da caridade de quem me detesta 
+
+      <span class="chord">G</span>                            <span class="chord">Am7</span> 
+      <span class="chord">A</span> tua piscina está cheia de ratos 
                                         <span class="chord">D</span>    <span class="chord">D#º</span>
-R     Suas idéias não correspondem aos fatos
-e                  <span class="chord">C</span>
-f     O tempo não pára
-r     <span class="chord">G</span>                               <span class="chord">Am7</span>
-ã     Eu vejo um futuro repetir o passado
+R     Suas idéias não correspondem aos fatos 
+e                  <span class="chord">C</span> 
+f     O tempo não pára 
+r     <span class="chord">G</span>                               <span class="chord">Am7</span> 
+ã     Eu vejo um futuro repetir o passado 
 o                                  <span class="chord">D</span>    <span class="chord">D#º</span>
-      Eu vejo um museu de grandes novidades
-                   <span class="chord">C</span>         <span class="chord">D</span>       <span class="chord">D#º</span>       <span class="chord">Em7</span>
-      O tempo não pára, não pára não, não pára
-<br/>
+      Eu vejo um museu de grandes novidades 
+                   <span class="chord">C</span>         <span class="chord">D</span>       <span class="chord">D#º</span>       <span class="chord">Em7</span> 
+      O tempo não pára, não pára não, não pára 
+
 (Introdução)
-<br/>
+
 <span class="chord">Em7</span>
-Eu não tenho data pra comemorar
+Eu não tenho data pra comemorar 
 <span class="chord">Am7</span>                                      
-As vezes os meus dias são de par em par
-<span class="chord">D</span>                         <span class="chord">Em7</span>
-Procurando agulhas no palheiro
+As vezes os meus dias são de par em par 
+<span class="chord">D</span>                         <span class="chord">Em7</span> 
+Procurando agulhas no palheiro 
         </pre>
       </div>
       <div class="col">
         <pre>
 <span class="chord">Em7</span>
-Nas noites de frio é melhor nem nascer
-     <span class="chord">Am7</span>
-Nas de calor, se escolhe:
+Nas noites de frio é melhor nem nascer 
+     <span class="chord">Am7</span> 
+Nas de calor, se escolhe: 
                   
-É matar ou morrer
-     <span class="chord">D</span>                     <span class="chord">Em7</span>
-<span class="chord">E</span> assim nos tornamos brasileiros
+É matar ou morrer 
+     <span class="chord">D</span>                     <span class="chord">Em7</span> 
+<span class="chord">E</span> assim nos tornamos brasileiros 
                   
 <span class="chord">Em</span> (abafado)   
-Te chamam de ladrão, de bicha, maconheiro
+Te chamam de ladrão, de bicha, maconheiro 
 <span class="chord">Am7</span>                         
-Transformam um país inteiro num puteiro
+Transformam um país inteiro num puteiro 
 <span class="chord">D</span>                            <span class="chord">Em7</span>*   (<span class="chord">Em7</span>*   <span class="chord">D</span>   <span class="chord">Bm</span>   <span class="chord">A</span>   <span class="chord">G</span>  )
-Pois assim se ganha mais dinheiro
-<br/>
-      <span class="chord">G</span>                            <span class="chord">Am7</span>
-      <span class="chord">A</span> tua piscina está cheia de ratos
+Pois assim se ganha mais dinheiro 
+
+      <span class="chord">G</span>                            <span class="chord">Am7</span> 
+      <span class="chord">A</span> tua piscina está cheia de ratos 
                                         <span class="chord">D</span>    <span class="chord">D#º</span>
-R     Suas idéias não correspondem aos fatos
-e                  <span class="chord">C</span>
-f     O tempo não pára
-r     <span class="chord">G</span>                               <span class="chord">Am7</span>
-ã     Eu vejo um futuro repetir o passado
+R     Suas idéias não correspondem aos fatos 
+e                  <span class="chord">C</span> 
+f     O tempo não pára 
+r     <span class="chord">G</span>                               <span class="chord">Am7</span> 
+ã     Eu vejo um futuro repetir o passado 
 o                                  <span class="chord">D</span>    <span class="chord">D#º</span>
-      Eu vejo um museu de grandes novidades
-                   <span class="chord">C</span>         <span class="chord">D</span>       <span class="chord">D#º</span>       <span class="chord">Em7</span>
-      O tempo não pára, não pára não, não pára
-<br/>
-Solo:(<span class="chord">G</span> <span class="chord">Am7</span> <span class="chord">D</span> <span class="chord">D#</span> <span class="chord">C</span> <span class="chord">Em</span> <span class="chord">Am7</span> <span class="chord">D</span> <span class="chord">C</span>)
-<br/>
-<br/>
+      Eu vejo um museu de grandes novidades 
+                   <span class="chord">C</span>         <span class="chord">D</span>       <span class="chord">D#º</span>       <span class="chord">Em7</span> 
+      O tempo não pára, não pára não, não pára 
+
+Solo:(<span class="chord">G</span> <span class="chord">Am7</span> <span class="chord">D</span> <span class="chord">D#</span> <span class="chord">C</span> <span class="chord">Em</span> <span class="chord">Am7</span> <span class="chord">D</span> <span class="chord">C</span>) 
+
 <span class="chord">Em7</span>             
-Dias sim, dias não
+Dias sim, dias não 
 <span class="chord">Am7</span>
-Eu vou sobrevivendo sem um arranhão
+Eu vou sobrevivendo sem um arranhão 
 <span class="chord">D</span>                          <span class="chord">Em7</span>  (<span class="chord">Em7</span>   <span class="chord">D</span>   <span class="chord">Bm</span>   <span class="chord">A</span>   <span class="chord">G</span>  )
-Da caridade de quem me detesta
-<br/>
-      <span class="chord">G</span>                            <span class="chord">Am7</span>
-      <span class="chord">A</span> tua piscina está cheia de ratos
+Da caridade de quem me detesta 
+
+      <span class="chord">G</span>                            <span class="chord">Am7</span> 
+      <span class="chord">A</span> tua piscina está cheia de ratos 
                                         <span class="chord">D</span>    <span class="chord">D#º</span>
-R     Suas idéias não correspondem aos fatos
-e                  <span class="chord">C</span>
-f     O tempo não pára
-r     <span class="chord">G</span>                               <span class="chord">Am7</span>
-ã     Eu vejo um futuro repetir o passado
+R     Suas idéias não correspondem aos fatos 
+e                  <span class="chord">C</span> 
+f     O tempo não pára 
+r     <span class="chord">G</span>                               <span class="chord">Am7</span> 
+ã     Eu vejo um futuro repetir o passado 
 o                                  <span class="chord">D</span>    <span class="chord">D#º</span>
-      Eu vejo um museu de grandes novidades
-                   <span class="chord">C</span>         <span class="chord">D</span>       <span class="chord">D#º</span>                            <span class="chord">Em7</span>
-      O tempo não pára, não pára não, não, não pára!
+      Eu vejo um museu de grandes novidades 
+                   <span class="chord">C</span>         <span class="chord">D</span>       <span class="chord">D#º</span>                            <span class="chord">Em7</span> 
+      O tempo não pára, não pára não, não, não pára! 
         </pre>
       </div>
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>

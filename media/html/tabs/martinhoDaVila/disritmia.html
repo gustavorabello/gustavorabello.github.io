@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">Disritmia</div>
@@ -123,41 +195,119 @@
       <pre>
 <br/>
 <br/>
- <span class="chord">Gm</span>                    <span class="chord">Gm7</span>
-Eu quero me esconder debaixo
+ <span class="chord">Gm</span>                    <span class="chord">Gm7</span>
+ Eu quero me esconder debaixo
         <span class="chord">Gm6</span>                    <span class="chord">Gm7</span>
-Dessa tua saia prá fugir do mundo
- <span class="chord">Dm5</span>-/7          <span class="chord">G7</span>          <span class="chord">Dm5</span>-/7
-Pretendo também me embrenhar
+ Dessa tua saia prá fugir do mundo
+ <span class="chord">Dm5</span>-/7          <span class="chord">G7</span>          <span class="chord">Dm5</span>-/7
+ Pretendo também me embrenhar
        <span class="chord">G7</span>      <span class="chord">Dm5</span>-/7        <span class="chord">G7</span>     <span class="chord">Cm7</span>
-No emaranhado desses teus cabelos
+ No emaranhado desses teus cabelos
                          <span class="chord">D7</span>
-Preciso transfundir teu sangue
+ Preciso transfundir teu sangue
                  <span class="chord">D7/9</span>-         <span class="chord">Gm7</span>
-Pro meu coração que é tão vagabundo
+ Pro meu coração que é tão vagabundo
     <span class="chord">Cm7</span>                 <span class="chord">Gm7</span>
-Me deixa te fazer um dengo
+ Me deixa te fazer um dengo
                    <span class="chord">D7</span>           <span class="chord">Gm7</span>
-Prá num cafuné fazer os meus apelos
+ Prá num cafuné fazer os meus apelos
     <span class="chord">Gm</span>               <span class="chord">Gm7</span>
-Eu quero ser exorcisado
+ Eu quero ser exorcisado
          <span class="chord">Gm6</span>                    <span class="chord">Gm7</span>
-Pela água benta desse olhar infindo
+ Pela água benta desse olhar infindo
     <span class="chord">Dm5</span>-/7      <span class="chord">G7</span>       <span class="chord">Dm5</span>-/7
-Que bom é ser fotografado
+ Que bom é ser fotografado
        <span class="chord">G7</span>        <span class="chord">Dm5</span>-/7           <span class="chord">G7</span>      <span class="chord">Cm7</span>
-Mas pelas retinas desses olhos lindos
+ Mas pelas retinas desses olhos lindos
                   <span class="chord">D7</span>
-Me deixe hipnotizado
+ Me deixe hipnotizado
                  <span class="chord">D7/9</span>-          <span class="chord">Gm7</span>
-Prá acabar de vez com essa disritmia
+ Prá acabar de vez com essa disritmia
      <span class="chord">Cm7</span>                 <span class="chord">Gm7</span>
-Vem logo, vem curar teu nêgo
+ Vem logo, vem curar teu nêgo
                 <span class="chord">D7</span>           <span class="chord">Gm7</span>
-Que chegou de porre lá da boêmia
+ Que chegou de porre lá da boêmia
       </pre>
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>

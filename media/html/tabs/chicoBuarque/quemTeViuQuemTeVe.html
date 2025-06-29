@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">Quem Te Viu, Quem Te Ve</div>
@@ -130,7 +202,7 @@ Você era a favori_____ta onde eu era  mestre-sa__________la
 Hoje a gente nem se fa__la, mas a festa continu___a
                      <span class="chord">F°</span>                             <span class="chord">F#7/4(b9)</span>
 Suas noites são de ga___la, nosso samba ainda é na ru________a
-<br/>
+
        <span class="chord">F#7</span>        <span class="chord">B6/F#</span>            <span class="chord">F#7/4(9)</span>     <span class="chord">F#7/9</span>      <span class="chord">Eb7/G</span>
 Hoje o samba saiu    (lai-alai-a)       procurando você
 <span class="chord">F#m6</span>         <span class="chord">E7M</span> <span class="chord">F#7/Bb</span>      <span class="chord">B/A</span>
@@ -139,7 +211,7 @@ Quem te viu,    quem te vê
 Quem não a conhe_____ce não pode mais ver pra crer
 <span class="chord">Ab7</span>                 <span class="chord">E7M/Ab</span>              <span class="chord">F#7(13)</span>
 Quem jamais a esque_____ce não pode reco____nhecer
-<br/>
+
 <span class="chord">Bm7</span>                     <span class="chord">Em6/B</span>        <span class="chord">Bb°</span>                <span class="chord">Bm/A</span>
    Quando o samba começa_____va você era a mais brilhan_____te
        <span class="chord">E7/Ab</span>          <span class="chord">A/G</span>         <span class="chord">A7/9</span>            <span class="chord">D7M(9)</span>/A  <span class="chord">D6/A</span>
@@ -148,7 +220,7 @@ Quem jamais a esque_____ce não pode reco____nhecer
 Hoje a gente anda distan__te do calor do seu ginga___do
                      <span class="chord">F°</span>                          <span class="chord">F#7/4(b9)</span>
 Você só dá chá dançan___te onde eu não sou convida________do
-<br/>
+
        <span class="chord">F#7</span>        <span class="chord">B6/F#</span>            <span class="chord">F#7/4(9)</span>     <span class="chord">F#7/9</span>      <span class="chord">Eb7/G</span>
 Hoje o samba saiu    (lai-alai-a)       procurando você
 <span class="chord">F#m6</span>         <span class="chord">E7M</span> <span class="chord">F#7/Bb</span>      <span class="chord">B/A</span>
@@ -157,7 +229,7 @@ Quem te viu,    quem te vê
 Quem não a conhe_____ce não pode mais ver pra crer
 <span class="chord">Ab7</span>                 <span class="chord">E7M/Ab</span>              <span class="chord">F#7(13)</span>
 Quem jamais a esque_____ce não pode reco____nhecer
-<br/>
+
 <span class="chord">Bm7</span>                    <span class="chord">Em6/B</span>        <span class="chord">Bb°</span>                 <span class="chord">Bm/A</span>
    O meu samba se marca_____va na cadência dos seus pas_____sos
       <span class="chord">E7/Ab</span>          <span class="chord">A/G</span>        <span class="chord">A7/9</span>             <span class="chord">D7M(9)</span>/A   <span class="chord">D6/A</span>
@@ -178,7 +250,7 @@ Quem te viu,    quem te vê
 Quem não a conhe_____ce não pode mais ver pra crer
 <span class="chord">Ab7</span>                 <span class="chord">E7M/Ab</span>              <span class="chord">F#7(13)</span>
 Quem jamais a esque_____ce não pode reco____nhecer
-<br/>
+
 <span class="chord">Bm7</span>                    <span class="chord">Em6/B</span>        <span class="chord">Bb°</span>                 <span class="chord">Bm/A</span>
    Todo ano eu lhe fazi_____a uma cabrocha de alta clas_____se
       <span class="chord">E7/Ab</span>          <span class="chord">A/G</span>            <span class="chord">A7/9</span>       <span class="chord">D7M(9)</span>/A  <span class="chord">D6/A</span>
@@ -187,7 +259,7 @@ De dourado lhe vesti_____a pra que o povo admiras__________se
 Eu não sei bem com certe__za por que foi que um belo di___a
                        <span class="chord">F°</span>                       <span class="chord">F#7/4(b9)</span>
 Quem brincava de prince___sa acostumou na fantasi________a
-<br/>
+
        <span class="chord">F#7</span>        <span class="chord">B6/F#</span>            <span class="chord">F#7/4(9)</span>     <span class="chord">F#7/9</span>      <span class="chord">Eb7/G</span>
 Hoje o samba saiu    (lai-alai-a)       procurando você
 <span class="chord">F#m6</span>         <span class="chord">E7M</span> <span class="chord">F#7/Bb</span>      <span class="chord">B/A</span>
@@ -196,7 +268,7 @@ Quem te viu,    quem te vê
 Quem não a conhe_____ce não pode mais ver pra crer
 <span class="chord">Ab7</span>                 <span class="chord">E7M/Ab</span>              <span class="chord">F#7(13)</span>
 Quem jamais a esque_____ce não pode reco____nhecer
-<br/>
+
 <span class="chord">Bm7</span>                         <span class="chord">Em6/B</span>         <span class="chord">Bb°</span>           <span class="chord">Bm/A</span>
    Hoje eu vou sambar na pis_____ta, você vai de galeri_____a
       <span class="chord">E7/Ab</span>          <span class="chord">A/G</span>           <span class="chord">A7/9</span>        <span class="chord">D7M(9)</span>/A <span class="chord">D6/A</span>
@@ -205,7 +277,7 @@ Quero que você assis_____ta na mais fina companhi__________a
 Se você sentir sauda__de, por favor, não dê na vis___ta
                      <span class="chord">F°</span>                            <span class="chord">F#7/4(b9)</span>
 Bate palmas com vonta___de, faz de conta que é turis________ta
-<br/>
+
        <span class="chord">F#7</span>        <span class="chord">B6/F#</span>            <span class="chord">F#7/4(9)</span>     <span class="chord">F#7/9</span>      <span class="chord">Eb7/G</span>
 Hoje o samba saiu    (lai-alai-a)       procurando você
 <span class="chord">F#m6</span>         <span class="chord">E7M</span> <span class="chord">F#7/Bb</span>      <span class="chord">B/A</span>
@@ -219,5 +291,83 @@ Quem jamais a esque_____ce não pode reco____nhecer
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>

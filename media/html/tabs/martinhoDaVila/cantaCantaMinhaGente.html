@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">Canta, Canta Minha Gente</div>
@@ -138,17 +210,17 @@ Que a vida vai melhorar
 Que a vida vai melhorar
 <span class="chord">E/G#</span>                   <span class="chord">A7M</span>
 Que a vida vai melhorar
-<br/>
+
 <span class="chord">A7M</span>
 Cantem o samba de roda
             <span class="chord">Fm7</span>       <span class="chord">B°</span>
 O samba-canção e o samba rasgado
-<br/>
+
                     <span class="chord">E/G#</span>
 Cantem o samba de breque
                              <span class="chord">A7M</span>
 O samba moderno e o samba quadrado
-<br/>
+
 Cantem ciranda e frevo
                   <span class="chord">Fm7</span>       <span class="chord">B°</span>
 O coco, maxixe, baião e xaxado
@@ -156,7 +228,7 @@ O coco, maxixe, baião e xaxado
 Mas não cantem essa moça bonita
                                 <span class="chord">A7M</span>
 Porque ela está com o marido do lado
-<br/>
+
 <span class="chord">A7M</span>
 Canta, canta minha gente
             <span class="chord">Fm7</span>       <span class="chord">B°</span>
@@ -177,7 +249,7 @@ Que a vida vai melhorar
 Que a vida vai melhorar
 <span class="chord">E/G#</span>                  <span class="chord">A7M</span>
 Que a vida vai melhorar
-<br/>
+
 <span class="chord">A7M</span>
 Quem canta seus males espanta
                           <span class="chord">Fm7</span>       <span class="chord">B°</span>
@@ -186,7 +258,7 @@ Lá em cima do morro ou sambando no asfalto
 Eu canto o samba-enredo
                                  <span class="chord">A7M</span>
 Um sambinha lento ou um partido alto
-<br/>
+
 Há muito tempo não ouço
          <span class="chord">Fm7</span>       <span class="chord">B°</span>
 O tal do samba sincopado
@@ -194,7 +266,7 @@ O tal do samba sincopado
 Só não dá pra cantar mesmo
                           <span class="chord">A7M</span>
 É vendo o sol nascer quadrado
-<br/>
+
 <span class="chord">A7M</span>
 Canta, canta minha gente
             <span class="chord">Fm7</span>       <span class="chord">B°</span>
@@ -203,7 +275,7 @@ Deixa a tristeza pra lá
 Canta forte, canta alto
                      <span class="chord">A7M</span>
 Que a vida vai melhorar
-<br/>
+
 <span class="chord">E/G#</span>                   <span class="chord">A7M</span>
 Que a vida vai melhorar
 <span class="chord">E/G#</span>                 <span class="chord">A7M</span>
@@ -217,5 +289,83 @@ Que a vida vai melhorar
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>

@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">Domingo de Sol</div>
@@ -122,86 +194,162 @@
     <div class="columns">
       <div class="col">
         <pre>
-<p class="p4">  <span class="chord">G</span>     <span class="chord">D</span>
-<p class="p6">Domingo de sol
-<p class="p4">G        
-<p class="p6">Domingo de sol
-<p class="p4">E7                <span class="chord">Am</span>                (2x)
-<p class="p6">Adivinha pra onde nos vamos
-<p class="p4">                <span class="chord">D</span>
-<p class="p6">Aluguei um caminhão
-<p class="p4">         <span class="chord">D7</span>                     <span class="chord">G</span>
-<p class="p6">Vou levar a familia na praia de Ramos
-<br/>
-<p class="p6">  <span class="chord">D</span>                  <span class="chord">G</span>
-<p class="p6">Minha sogra aquela besta
-<p class="p4">E7                <span class="chord">Am</span>
-<p class="p6">Cismou de me acompanhar
-<p class="p4">                 <span class="chord">D</span>
-<p class="p6">Levou sabonete e henê
-<p class="p4">D7                <span class="chord">G</span>
-<p class="p6">Só para me envergonhar
-<p class="p4">D                <span class="chord">G</span>
-<p class="p6">Minha nega toda prosa
-<p class="p4">Dm               <span class="chord">C</span>
-<p class="p6">Num maior samba-canção
-<p class="p4">               <span class="chord">G</span>                <span class="chord">D7</span>           <span class="chord">G</span>
-<p class="p6">E meu filho Joazinho jogou um siri no meu calção
-<br/>
-<p class="p4">G     <span class="chord">D</span>
-<p class="p6">Domingo de sol
-<p class="p4">G        
-<p class="p6">Domingo de sol
-<p class="p4">E7                <span class="chord">Am</span>                (2x)
-<p class="p6">Adivinha pra onde nos vamos
-<p class="p4">                <span class="chord">D</span>
-<p class="p6">Aluguei um caminhão
-<p class="p4">         <span class="chord">D7</span>                     <span class="chord">G</span>
-<p class="p6">Vou levar a familia na praia de Ramos
+  <span class="chord">G</span>     <span class="chord">D</span> 
+Domingo de sol 
+<span class="chord">G</span>        
+Domingo de sol 
+<span class="chord">E7</span>                <span class="chord">Am</span>                (2x) 
+Adivinha pra onde nos vamos 
+                <span class="chord">D</span> 
+Aluguei um caminhão 
+         <span class="chord">D7</span>                     <span class="chord">G</span> 
+Vou levar a familia na praia de Ramos 
+
+  <span class="chord">D</span>                  <span class="chord">G</span> 
+Minha sogra aquela besta 
+<span class="chord">E7</span>                <span class="chord">Am</span> 
+Cismou de me acompanhar 
+                 <span class="chord">D</span> 
+Levou sabonete e henê 
+<span class="chord">D7</span>                <span class="chord">G</span> 
+Só para me envergonhar 
+<span class="chord">D</span>                <span class="chord">G</span> 
+Minha nega toda prosa 
+<span class="chord">Dm</span>               <span class="chord">C</span> 
+Num maior samba-canção 
+               <span class="chord">G</span>                <span class="chord">D7</span>           <span class="chord">G</span> 
+<span class="chord">E</span> meu filho Joazinho jogou um siri no meu calção 
+
+<span class="chord">G</span>     <span class="chord">D</span> 
+Domingo de sol 
+<span class="chord">G</span>        
+Domingo de sol 
+<span class="chord">E7</span>                <span class="chord">Am</span>                (2x) 
+Adivinha pra onde nos vamos 
+                <span class="chord">D</span> 
+Aluguei um caminhão 
+         <span class="chord">D7</span>                     <span class="chord">G</span> 
+Vou levar a familia na praia de Ramos 
         </pre>
       </div>
       <div class="col">
         <pre>
-<p class="p4">D                <span class="chord">G</span>
-<p class="p6">De repente o reboliço
-<p class="p4">E7                <span class="chord">Am</span>
-<p class="p6">Era minha sogra se afogando
-<p class="p4">                <span class="chord">D</span>
-<p class="p6">Eu pulava de alegria
-<p class="p4">            <span class="chord">D7</span>            <span class="chord">G</span>
-<p class="p6">Meu sonho estava se realizando
-<p class="p4">D                       <span class="chord">G</span>
-<p class="p6">Mas tudo que é bom dura pouco
-<p class="p4">           <span class="chord">Dm</span>             <span class="chord">C</span>
-<p class="p6">O salva-vida um tremendo negão
-<p class="p4">                   <span class="chord">G</span>              <span class="chord">D7</span>            <span class="chord">G</span>
-<p class="p6">trouxe a velha no braço, mas na onda perdeu o calção
-<br/>
-<br/>
-<p class="p4">E7        <span class="chord">Am</span>    
-<p class="p6">Que confusão
-<p class="p4">D         <span class="chord">G</span>
-<p class="p6">Que confusão
-<p class="p4">E7                 <span class="chord">Am</span>
-<p class="p6">Todo mundo achava enorme
-<p class="p4">    <span class="chord">D</span>          <span class="chord">G</span>
-<p class="p6">A coragem do negão
-<br/>
-<br/>
-<p class="p4">G     <span class="chord">D</span>
-<p class="p6">Domingo de sol
-<p class="p4">G        
-<p class="p6">Domingo de sol
-<p class="p4">E7                <span class="chord">Am</span>                (2x)
-<p class="p6">Adivinha pra onde nos vamos
-<p class="p4">                <span class="chord">D</span>
-<p class="p6">Aluguei um caminhão
-<p class="p4">         <span class="chord">D7</span>                     <span class="chord">G</span>
-<p class="p6">Vou levar a familia na praia de Ramos
+<span class="chord">D</span>                <span class="chord">G</span>  
+De repente o reboliço 
+<span class="chord">E7</span>                <span class="chord">Am</span> 
+Era minha sogra se afogando 
+                <span class="chord">D</span> 
+Eu pulava de alegria 
+            <span class="chord">D7</span>            <span class="chord">G</span> 
+Meu sonho estava se realizando 
+<span class="chord">D</span>                       <span class="chord">G</span> 
+Mas tudo que é bom dura pouco 
+           <span class="chord">Dm</span>             <span class="chord">C</span> 
+O salva-vida um tremendo negão 
+                   <span class="chord">G</span>              <span class="chord">D7</span>            <span class="chord">G</span> 
+trouxe a velha no braço, mas na onda perdeu o calção 
+
+<span class="chord">E7</span>        <span class="chord">Am</span>    
+Que confusão  
+<span class="chord">D</span>         <span class="chord">G</span> 
+Que confusão 
+<span class="chord">E7</span>                 <span class="chord">Am</span> 
+Todo mundo achava enorme 
+    <span class="chord">D</span>          <span class="chord">G</span>  
+<span class="chord">A</span> coragem do negão 
+
+<span class="chord">G</span>     <span class="chord">D</span> 
+Domingo de sol 
+<span class="chord">G</span>        
+Domingo de sol 
+<span class="chord">E7</span>                <span class="chord">Am</span>                (2x) 
+Adivinha pra onde nos vamos 
+                <span class="chord">D</span> 
+Aluguei um caminhão 
+         <span class="chord">D7</span>                     <span class="chord">G</span> 
+Vou levar a familia na praia de Ramos 
         </pre>
       </div>
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>

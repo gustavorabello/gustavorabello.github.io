@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">Tomorrow</div>
@@ -126,14 +198,14 @@
 Tom: <span class="chord">G</span>
 <br/>
 
-intro. <span class="chord">A</span> <span class="chord">G</span> <span class="chord">C9</span> (<span class="chord">C9/B</span> <span class="chord">C9/G</span>) 
+intro. <span class="chord">A</span> <span class="chord">G</span> <span class="chord">C9</span> (<span class="chord">C9/B</span> <span class="chord">C9/G</span>) 
 <br/>
 
 <span class="chord">A</span>                              <span class="chord">G</span>           <span class="chord">D4</span> (<span class="chord">C9</span> <span class="chord">C9/B</span> <span class="chord">C9/G</span>)
 It's twelve o'clock, and it's a wonderful day.
 <span class="chord">A</span>                              <span class="chord">G</span>        <span class="chord">D4</span> (<span class="chord">C9</span> <span class="chord">C9/B</span> <span class="chord">C9/G</span>)
 I know you hate me, but I'll ask anyway.
-<span class="chord">A</span>                              <span class="chord">G</span>                   <span class="chord">D4</span> (<span class="chord">C9</span> <span class="chord">C9/B</span> <span class="chord">C9/G</span>) 
+<span class="chord">A</span>                              <span class="chord">G</span>                   <span class="chord">D4</span> (<span class="chord">C9</span> <span class="chord">C9/B</span> <span class="chord">C9/G</span>) 
 Won't you come with me, to a place in a little town.
 <span class="chord">A</span>                              <span class="chord">G</span>            <span class="chord">D4</span> (<span class="chord">C9</span> <span class="chord">C9/B</span> <span class="chord">C9/G</span>)   
 The only way to get there's to go straight down.
@@ -145,7 +217,7 @@ The water out of the tap is very, hard to drink,
 Very hard to drink.
 <br/>
 
-<span class="chord">A</span> <span class="chord">D</span> <span class="chord">C</span> <span class="chord">D</span>         <span class="chord">A</span>   <span class="chord">D</span> <span class="chord">C</span> <span class="chord">D</span> 
+<span class="chord">A</span> <span class="chord">D</span> <span class="chord">C</span> <span class="chord">D</span>         <span class="chord">A</span>   <span class="chord">D</span> <span class="chord">C</span> <span class="chord">D</span> 
   You, wait till tomorrow
 <span class="chord">A</span> <span class="chord">D</span> <span class="chord">C</span> <span class="chord">D</span>         <span class="chord">A</span>   <span class="chord">D</span> <span class="chord">C</span> <span class="chord">D</span>
   You, wait till tomorrow
@@ -157,7 +229,7 @@ You say that money, isn't everything,
 But I'd like to see you live without it.
 <span class="chord">A</span>                              <span class="chord">G</span>               <span class="chord">D4</span> (<span class="chord">C9</span> <span class="chord">C9/B</span> <span class="chord">C9/G</span>)
 You think you can keep on going living like a king.
-<span class="chord">A</span>                        <span class="chord">G</span>           <span class="chord">D4</span> 
+<span class="chord">A</span>                        <span class="chord">G</span>           <span class="chord">D4</span> 
 Oohh babe, but I strongly doubt it.
 <span class="chord">A</span>             <span class="chord">B</span>  <span class="chord">C</span>
 Very hard to drink.
@@ -170,7 +242,7 @@ solo1                           solo2
 
 ------------------              -5--10-12-10--8--
 ------------------              -5--10--------8--
-------------5-0---              -6--11--------9-- 
+------------5-0---              -6--11--------9-- 
 -------5-7--------              -7--12--------10-
 -0-5-7------------              -0--0---------0--
 ------------------              -----------------
@@ -182,5 +254,83 @@ solo1                           solo2
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>

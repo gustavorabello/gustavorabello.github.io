@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">O Poeta Está Vivo</div>
@@ -123,18 +195,18 @@
       <div class="col">
         <pre>
 Intro: <span class="chord">Dm7</span>
-<br/>
+
 Riff Intro:
   <span class="chord">Dm7</span>
-<p class="p4">E|5---5---5-5-5-5--5-----------------------
-<p class="p4">B|6---6---6-6-6-6--6-----------------------
-<p class="p4">G|5---5---5-5-5-5--5--5---5--5/7-----------
-<p class="p4">D|7---7---7-7-7-7--7-----------------------
-<p class="p4">A|5--5---5-5-5-5--5--3---3--3/5------------
-<p class="p4">E|-----------------------------------------
-<br/>
+<span class="chord">E</span>|5---5---5-5-5-5--5-----------------------
+<span class="chord">B</span>|6---6---6-6-6-6--6-----------------------
+<span class="chord">G</span>|5---5---5-5-5-5--5--5---5--5/7-----------
+<span class="chord">D</span>|7---7---7-7-7-7--7-----------------------
+<span class="chord">A</span>|5--5---5-5-5-5--5--3---3--3/5------------
+<span class="chord">E</span>|-----------------------------------------
+
 Primeira Parte:
- <span class="chord">Dm7</span>
+ <span class="chord">Dm7</span>
 Baby, compra o jornal
    <span class="chord">C/E</span>       <span class="chord">F9</span>
 <span class="chord">E</span> vem ver o sol
@@ -142,7 +214,7 @@ Baby, compra o jornal
 Ele continua a brilhar
     <span class="chord">D9(11)</span>
 Apesar de tanta barbaridade
- <span class="chord">Dm7</span>
+ <span class="chord">Dm7</span>
 Baby escuta o galo cantar
 <span class="chord">F9</span>
    <span class="chord">A</span> aurora dos nossos tempos
@@ -150,7 +222,7 @@ Baby escuta o galo cantar
 Não é hora de chorar
        <span class="chord">D9(11)</span>
 Amanheceu o pensamento
-<br/>
+
 Segunda Parte:
 <span class="chord">Bb6(11+)</span>               <span class="chord">C</span>
          O poeta está vivo
@@ -160,7 +232,7 @@ Com seus moinhos de vento
          <span class="chord">A</span> impulsionar
                       <span class="chord">D9(11)</span>
 <span class="chord">A</span> grande roda da história
-<br/>
+
 Refrão:
       <span class="chord">Eb7M</span>                 <span class="chord">Dm7</span>
 Mas quem tem coragem de ouvir
@@ -170,9 +242,9 @@ Amanheceu o pensamento
 Que vai mudar o mundo
                      <span class="chord">D7</span>
 Com seus moinhos de vento
-<br/>
+
 (Primeira Parte com variação na letra)
- <span class="chord">Dm7</span>
+ <span class="chord">Dm7</span>
 Se você não pode ser forte
 <span class="chord">F9</span>
    Seja pelo menos humana
@@ -180,7 +252,7 @@ Se você não pode ser forte
 Quando o papa e seu rebanho chegar
              <span class="chord">D9(11)</span>
 Não tenha pena...
- <span class="chord">Dm7</span>
+ <span class="chord">Dm7</span>
 Todo mundo é parecido
         <span class="chord">F9</span>
 Quando sente dor
@@ -188,7 +260,7 @@ Quando sente dor
 Mas nú e só ao meio dia
                <span class="chord">D9(11)</span>
 Só quem está pronto pro amor
-<br/>
+
 Segunda Parte com variação na letra:
 <span class="chord">Bb6(11+)</span>                 <span class="chord">C</span>
          O poeta não morreu
@@ -198,7 +270,7 @@ Foi ao inferno e voltou
          Conheceu os jardins do Éden
    <span class="chord">D9(11)</span>
 <span class="chord">E</span> nos contou
-<br/>
+
 Refrão:
       <span class="chord">Eb7M</span>                 <span class="chord">Dm7</span>
 Mas quem tem coragem de ouvir
@@ -208,7 +280,7 @@ Amanheceu o pensamento
 Que vai mudar o mundo
                      <span class="chord">Dm7</span>
 Com seus moinhos de vento
-<br/>
+
       <span class="chord">Eb7M</span>                 <span class="chord">Dm7</span>
 Mas quem tem coragem de ouvir
        <span class="chord">Eb7M</span>       <span class="chord">D7</span>
@@ -217,77 +289,77 @@ Amanheceu o pensamento
 Que vai mudar o mundo
                      <span class="chord">Dm7</span>
 Com seus moinhos de vento
-<br/>
+
 Solo: <span class="chord">Dm7</span>  <span class="chord">F9</span>  <span class="chord">Bb6(11+)</span>  <span class="chord">Gm7(9)</span>  <span class="chord">Bb6(11+)</span>  <span class="chord">D9(11)</span>
-<br/>
+
         </pre>
       </div>
       <div class="col">
         <pre>
 Parte 1 de 8
-<p class="p4">E|------------------------------------------x--------
-<p class="p4">B|8h10------10------10p8------8h10--10------x--10----
-<p class="p4">G|------------------------10----------------x--10----
-<p class="p4">D|------------------------------------------x--------
-<p class="p4">A|------------------------------------------x--------
-<p class="p4">E|10----10------10----------------------10-----------
-<br/>
+<span class="chord">E</span>|------------------------------------------x--------
+<span class="chord">B</span>|8h10------10------10p8------8h10--10------x--10----
+<span class="chord">G</span>|------------------------10----------------x--10----
+<span class="chord">D</span>|------------------------------------------x--------
+<span class="chord">A</span>|------------------------------------------x--------
+<span class="chord">E</span>|10----10------10----------------------10-----------
+
 Parte 2 de 8
-<p class="p4">E|-----3--3-----------------------------------x------
-<p class="p4">B|6----6--6--6--------------------6p5--6------6------
-<p class="p4">G|5----5--5--5-----------------5-------5------5------
-<p class="p4">D|3----3-----3---------3--5/7----------5------5------
-<p class="p4">A|-----------------3h5------------------------x------
-<p class="p4">E|---------------------------------------------------
-<br/>
+<span class="chord">E</span>|-----3--3-----------------------------------x------
+<span class="chord">B</span>|6----6--6--6--------------------6p5--6------6------
+<span class="chord">G</span>|5----5--5--5-----------------5-------5------5------
+<span class="chord">D</span>|3----3-----3---------3--5/7----------5------5------
+<span class="chord">A</span>|-----------------3h5------------------------x------
+<span class="chord">E</span>|---------------------------------------------------
+
 Parte 3 de 8
-<p class="p4">E|8h10---8p5----5--------------x--10--x--------------
-<p class="p4">B|------------8----8/10\8--7---x--7---x--------------
-<p class="p4">G|-----------------------------x------x--------------
-<p class="p4">D|8------------------------0---x--0---x--------------
-<p class="p4">A|---------------------------------------------------
-<p class="p4">E|-------6-------------------------------------------
-<br/>
+<span class="chord">E</span>|8h10---8p5----5--------------x--10--x--------------
+<span class="chord">B</span>|------------8----8/10\8--7---x--7---x--------------
+<span class="chord">G</span>|-----------------------------x------x--------------
+<span class="chord">D</span>|8------------------------0---x--0---x--------------
+<span class="chord">A</span>|---------------------------------------------------
+<span class="chord">E</span>|-------6-------------------------------------------
+
 Parte 4 de 8
-<p class="p4">E|---13h15--13--12-------------x---------------------
-<p class="p4">B|10----------------13-----13--x--11-10-11p10--------
-<p class="p4">G|-----------------------------x--------------12-10--
-<p class="p4">D|0-----------------0----------x--0------------------
-<p class="p4">A|---------------------------------------------------
-<p class="p4">E|--------------------------------------0------------
-<br/>
+<span class="chord">E</span>|---13h15--13--12-------------x---------------------
+<span class="chord">B</span>|10----------------13-----13--x--11-10-11p10--------
+<span class="chord">G</span>|-----------------------------x--------------12-10--
+<span class="chord">D</span>|0-----------------0----------x--0------------------
+<span class="chord">A</span>|---------------------------------------------------
+<span class="chord">E</span>|--------------------------------------0------------
+
 Parte 5 de 8
-<p class="p4">E|---------------------------------------------------
-<p class="p4">B|-10----X-----10----X-------------------------------
-<p class="p4">G|-------X-----------X-------------------------------
-<p class="p4">D|-------X-----------X-------------------------------
-<p class="p4">A|-8-----X-----8-----X-------------------------------
-<p class="p4">E|---------------------------------------------------
-<br/>
+<span class="chord">E</span>|---------------------------------------------------
+<span class="chord">B</span>|-10----X-----10----X-------------------------------
+<span class="chord">G</span>|-------X-----------X-------------------------------
+<span class="chord">D</span>|-------X-----------X-------------------------------
+<span class="chord">A</span>|-8-----X-----8-----X-------------------------------
+<span class="chord">E</span>|---------------------------------------------------
+
 Parte 6 de 8
-<p class="p4">E|1h3---3----3p1-----1--x--1-------------------------
-<p class="p4">B|----------------3-----x--3-----------------6/8/10--
-<p class="p4">G|----------------------x--------x-------5-7---------
-<p class="p4">D|----------------------x-----7--x-7-5h7-------------
-<p class="p4">A|-------------------1--x--1--5--x-5-----------------
-<p class="p4">E|3-------3------------------------------------------
-<br/>
+<span class="chord">E</span>|1h3---3----3p1-----1--x--1-------------------------
+<span class="chord">B</span>|----------------3-----x--3-----------------6/8/10--
+<span class="chord">G</span>|----------------------x--------x-------5-7---------
+<span class="chord">D</span>|----------------------x-----7--x-7-5h7-------------
+<span class="chord">A</span>|-------------------1--x--1--5--x-5-----------------
+<span class="chord">E</span>|3-------3------------------------------------------
+
 Parte 7 de 8
-<p class="p4">E|1h3---3----3p1----1---x--1-------------------------
-<p class="p4">B|----------------3-----x--3-----------------6/8/10--
-<p class="p4">G|----------------------x--------x-------5-7---------
-<p class="p4">D|----------------------x-----7--x-7-5h7-------------
-<p class="p4">A|-------------------1--x--1--5--x-5-----------------
-<p class="p4">E|3-------3------------------------------------------
-<br/>
+<span class="chord">E</span>|1h3---3----3p1----1---x--1-------------------------
+<span class="chord">B</span>|----------------3-----x--3-----------------6/8/10--
+<span class="chord">G</span>|----------------------x--------x-------5-7---------
+<span class="chord">D</span>|----------------------x-----7--x-7-5h7-------------
+<span class="chord">A</span>|-------------------1--x--1--5--x-5-----------------
+<span class="chord">E</span>|3-------3------------------------------------------
+
 Parte 8 de 8
-<p class="p4">E|-8---------0---0---0-0-0-0-------------------------
-<p class="p4">B|----10-----6---6---6-6-6-6-------------------------
-<p class="p4">G|-----------5---5---5-5-5-5-------------------------
-<p class="p4">D|-----------0---0---0-0-0-0-------------------------
-<p class="p4">A|---------------------------------------------------
-<p class="p4">E|-----------6---6---6-6-6-6-------------------------
-<br/>
+<span class="chord">E</span>|-8---------0---0---0-0-0-0-------------------------
+<span class="chord">B</span>|----10-----6---6---6-6-6-6-------------------------
+<span class="chord">G</span>|-----------5---5---5-5-5-5-------------------------
+<span class="chord">D</span>|-----------0---0---0-0-0-0-------------------------
+<span class="chord">A</span>|---------------------------------------------------
+<span class="chord">E</span>|-----------6---6---6-6-6-6-------------------------
+
 Segunda Parte:
 <span class="chord">Bb6(11+)</span>                 <span class="chord">C</span>
          O poeta não morreu
@@ -297,7 +369,7 @@ Foi ao inferno e voltou
          Conheceu os jardins do Éden
    <span class="chord">D9(11)</span>
 <span class="chord">E</span> nos contou
-<br/>
+
 Refrão:
       <span class="chord">Eb7M</span>                 <span class="chord">Dm7</span>
 Mas quem tem coragem de ouvir
@@ -307,7 +379,7 @@ Amanheceu o pensamento
 Que vai mudar o mundo
                      <span class="chord">Dm7</span>
 Com seus moinhos de vento
-<br/>
+
       <span class="chord">Eb7M</span>                 <span class="chord">Dm7</span>
 Mas quem tem coragem de ouvir
        <span class="chord">Eb7M</span>       <span class="chord">D7</span>
@@ -316,21 +388,99 @@ Amanheceu o pensamento
 Que vai mudar o mundo
                      <span class="chord">Dm7</span>
 Com seus moinhos de vento
-<br/>
+
 Parte Final: <span class="chord">Dm7</span>
-<br/>
+
 Riff Introdução:
 <span class="chord">Dm7</span>
-<p class="p4">E|5---5---5-5-5-5--5-----------------------
-<p class="p4">B|6---6---6-6-6-6--6-----------------------
-<p class="p4">G|5---5---5-5-5-5--5--5---5--5/7-----------
-<p class="p4">D|7---7---7-7-7-7--7-----------------------
-<p class="p4">A|5---5---5-5-5-5--5--3---3--3/5-----------
-<p class="p4">E|-----------------------------------------
+<span class="chord">E</span>|5---5---5-5-5-5--5-----------------------
+<span class="chord">B</span>|6---6---6-6-6-6--6-----------------------
+<span class="chord">G</span>|5---5---5-5-5-5--5--5---5--5/7-----------
+<span class="chord">D</span>|7---7---7-7-7-7--7-----------------------
+<span class="chord">A</span>|5---5---5-5-5-5--5--3---3--3/5-----------
+<span class="chord">E</span>|-----------------------------------------
         </pre>
       </div>
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>

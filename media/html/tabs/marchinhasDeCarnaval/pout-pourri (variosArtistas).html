@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">Pout-Pourri Carnaval</div>
@@ -122,111 +194,187 @@
     <div class="columns">
       <div class="col">
         <pre>
-<p class="p4">                     <span class="chord">D</span>
-<p class="p4">Mamã mamã mamãe eu quero. Mamãe eu quero
-<p class="p4">                  <span class="chord">Em</span>
-<p class="p4">Mamãe eu quero mamar!
-<p class="p5"><br/>
-<p class="p4">Dá a chupeta, ai, dá a chupeta
-<p class="p4">         <span class="chord">A7</span>                   <span class="chord">D</span>   <span class="chord">A7</span>
-<p class="p4">Dá a chupeta pro bebê não chorar!
-<p class="p5"><br/>
-<p class="p4">A7     <span class="chord">D</span>               <span class="chord">Em</span>
-<p class="p4">Dorme filhinho do meu coração
-<p class="p4">            <span class="chord">A7</span>                          <span class="chord">D</span>
-<p class="p4">Pega a mamadeira e vem entra no meu cordão
-<p class="p4">                <span class="chord">B7</span>             <span class="chord">Em</span>
-<p class="p4">Eu tenho uma irmã que se chama Ana
-<p class="p4">            <span class="chord">A7</span>                      <span class="chord">D</span>
-<p class="p4">De piscar o olho já ficou sem a pestana
-<p class="p5"><br/>
-<p class="p6">D
-<p class="p4">Olha a cabeleira do Zezé.
-<p class="p4">              <span class="chord">A7</span>              <span class="chord">D</span>    <span class="chord">A7</span>
-<p class="p4">Será que ele é?  Será que ele é?
-<p class="p6">D
-<p class="p4">Olha a cabeleira do Zezé.
-<p class="p4">              <span class="chord">A7</span>              <span class="chord">D</span>    <span class="chord">D7</span>
-<p class="p4">Será que ele é?  Será que ele é?
-<p class="p5"><br/>
-<p class="p4">   <span class="chord">G</span>                  <span class="chord">D</span>       <span class="chord">F#7</span>             <span class="chord">Bm</span>
-<p class="p4">Será que ele é bossa nova? Será que ele é Maomé
-<p class="p4">   <span class="chord">A7</span>               <span class="chord">D</span>    
-<p class="p4">Parece que é transviado. 
-<p class="p4">     <span class="chord">E7</span>                    <span class="chord">A7</span>
-<p class="p4">Mas isso eu não sei se ele é
-<p class="p4"> <span class="chord">D</span>              <span class="chord">G</span>
-<p class="p4">Corta o cabelo dele
-<p class="p4"> <span class="chord">A7</span>             <span class="chord">D</span>
-<p class="p4">Corta o cabelo dele  (x2)
-<p class="p5"><br/>
-<p class="p4">     <span class="chord">D</span>
-<p class="p4">Você pensa que cachaça é água 
-<p class="p4">                    <span class="chord">Em</span>
-<p class="p4">Cachaça não é água não
-<p class="p4">                   <span class="chord">A7</span>
-<p class="p4">Cachaça vem do alambique 
-<p class="p4">                   <span class="chord">D</span>
-<p class="p4">E água vem do ribeirão   (x2)
-<p class="p5"><br/>
+                     <span class="chord">D</span>
+Mamã mamã mamãe eu quero. Mamãe eu quero
+                  <span class="chord">Em</span>
+Mamãe eu quero mamar!
+
+<span class="chord">D</span>á a chupeta, ai, dá a chupeta
+         <span class="chord">A7</span>                   <span class="chord">D</span>   <span class="chord">A7</span>
+<span class="chord">D</span>á a chupeta pro bebê não chorar!
+
+<span class="chord">A7</span>     <span class="chord">D</span>               <span class="chord">Em</span>
+Dorme filhinho do meu coração
+            <span class="chord">A7</span>                          <span class="chord">D</span>
+Pega a mamadeira e vem entra no meu cordão
+                <span class="chord">B7</span>             <span class="chord">Em</span>
+Eu tenho uma irmã que se chama Ana
+            <span class="chord">A7</span>                      <span class="chord">D</span>
+De piscar o olho já ficou sem a pestana
+
+<span class="chord">D</span>
+Olha a cabeleira do Zezé.
+              <span class="chord">A7</span>              <span class="chord">D</span>    <span class="chord">A7</span>
+Será que ele é?  Será que ele é?
+<span class="chord">D</span>
+Olha a cabeleira do Zezé.
+              <span class="chord">A7</span>              <span class="chord">D</span>    <span class="chord">D7</span>
+Será que ele é?  Será que ele é?
+
+   <span class="chord">G</span>                  <span class="chord">D</span>       <span class="chord">F#7</span>             <span class="chord">Bm</span>
+Será que ele é bossa nova? Será que ele é Maomé
+   <span class="chord">A7</span>               <span class="chord">D</span>    
+Parece que é transviado. 
+     <span class="chord">E7</span>                    <span class="chord">A7</span>
+Mas isso eu não sei se ele é
+ <span class="chord">D</span>              <span class="chord">G</span>
+Corta o cabelo dele
+ <span class="chord">A7</span>             <span class="chord">D</span>
+Corta o cabelo dele  (x2)
+
+     <span class="chord">D</span>
+Você pensa que cachaça é água 
+                    <span class="chord">Em</span>
+Cachaça não é água não
+                   <span class="chord">A7</span>
+Cachaça vem do alambique 
+                   <span class="chord">D</span>
+<span class="chord">E</span> água vem do ribeirão   (x2)
+
         </pre>
       </div>
       <div class="col">
         <pre>
-<p class="p6">D
-<p class="p4">Pode me faltar tudo na vida
-<p class="p4">B7               <span class="chord">Em</span>
-<p class="p4">Arroz, feijão e pão
-<p class="p4">                   <span class="chord">A7</span>
-<p class="p4">Pode me faltar manteiga
-<p class="p4">                           <span class="chord">D</span>
-<p class="p4">E tudo mais não faz falta não
-<p class="p4">                   <span class="chord">D</span>
-<p class="p4">Pode me faltar o amor
-<p class="p4">D7              <span class="chord">G</span>
-<p class="p4">Disto até acho graça
-<p class="p4">                     <span class="chord">D</span>
-<p class="p4">Só não quero que me falte
-<p class="p4">    <span class="chord">A7</span>         <span class="chord">D</span>
-<p class="p4">A danada da cachaça
-<p class="p4"><br/>
+<span class="chord">D</span>
+Pode me faltar tudo na vida
+<span class="chord">B7</span>               <span class="chord">Em</span>
+Arroz, feijão e pão
+                   <span class="chord">A7</span>
+Pode me faltar manteiga
+                           <span class="chord">D</span>
+<span class="chord">E</span> tudo mais não faz falta não
+                   <span class="chord">D</span>
+Pode me faltar o amor
+<span class="chord">D7</span>              <span class="chord">G</span>
+Disto até acho graça
+                     <span class="chord">D</span>
+Só não quero que me falte
+    <span class="chord">A7</span>         <span class="chord">D</span>
+<span class="chord">A</span> danada da cachaça
 
-<p class="p4">  <span class="chord">D</span>        <span class="chord">A7</span>                    <span class="chord">D</span>  <span class="chord">A7</span>                           
-<p class="p4">Hei, você aí, me dá um dinheiro aí  (x2)
-<p class="p4"> <span class="chord">D</span>                         <span class="chord">A7</span>                                 
-<p class="p4">Não vai dar, não vai dar não 
-<p class="p4">                              <span class="chord">D</span>
-<p class="p4">Você vai ver que grande confusão
-<p class="p4">         <span class="chord">D7</span>                <span class="chord">G</span>                     
-<p class="p4">Eu vou beber, beber até cair 
-<p class="p4">                   <span class="chord">A7</span> 
-<p class="p4">Me dá, me dá. me dá, oi
-<p class="p4">   <span class="chord">A7</span>              <span class="chord">D</span>
-<p class="p4">Me dá um dinheiro aí!
-<p class="p4"><br/>
+  <span class="chord">D</span>        <span class="chord">A7</span>                    <span class="chord">D</span>  <span class="chord">A7</span>                           
+Hei, você aí, me dá um dinheiro aí  (x2)
+ <span class="chord">D</span>                         <span class="chord">A7</span>                                 
+Não vai dar, não vai dar não 
+                              <span class="chord">D</span>
+Você vai ver que grande confusão
+         <span class="chord">D7</span>                <span class="chord">G</span>                     
+Eu vou beber, beber até cair 
+                   <span class="chord">A7</span> 
+Me dá, me dá. me dá, oi
+   <span class="chord">A7</span>              <span class="chord">D</span>
+Me dá um dinheiro aí!
 
-<p class="p4">         <span class="chord">A7</span>                 <span class="chord">D</span>
-<p class="p4">Allah-la-ô,  ô ô ô,  ô ô ô ô
-<p class="p4">          <span class="chord">A7</span>               <span class="chord">D</span>
-<p class="p4">Mas que calor, ô ô ô,  ô ô ô   
-<p class="p4">       <span class="chord">A7</span>                    <span class="chord">D</span>
-<p class="p4">Atravessamos o deserto do Sahara
-<p class="p4">              <span class="chord">A7</span>                      <span class="chord">D</span>
-<p class="p4">O sol estava quente, queimou a nossa cara (x2)
-<p class="p4">  <span class="chord">D7</span>        <span class="chord">G</span>                  
-<p class="p4">Viemos do Egito   
-<p class="p4">          <span class="chord">A7</span>                       <span class="chord">D</span>
-<p class="p4">e muitas vezes nós tivemos que rezar
-<p class="p4">                             <span class="chord">A7</span>
-<p class="p4">Allah-Allah-Allah, meu bom Allah
-<p class="p4"> <span class="chord">D</span>               <span class="chord">A7</span>       <span class="chord">D</span>                
-<p class="p4">Mande água pra Ioiô    / Mande água pra Iaiá
-<p class="p4">  <span class="chord">A7</span>              <span class="chord">D</span>
-<p class="p4">Allah, meu bom Allah
+         <span class="chord">A7</span>                 <span class="chord">D</span>
+Allah-la-ô,  ô ô ô,  ô ô ô ô
+          <span class="chord">A7</span>               <span class="chord">D</span>
+Mas que calor, ô ô ô,  ô ô ô   
+       <span class="chord">A7</span>                    <span class="chord">D</span>
+Atravessamos o deserto do Sahara
+              <span class="chord">A7</span>                      <span class="chord">D</span>
+O sol estava quente, queimou a nossa cara (x2)
+  <span class="chord">D7</span>        <span class="chord">G</span>                  
+Viemos do Egito   
+          <span class="chord">A7</span>                       <span class="chord">D</span>
+e muitas vezes nós tivemos que rezar
+                             <span class="chord">A7</span>
+Allah-Allah-Allah, meu bom Allah
+ <span class="chord">D</span>               <span class="chord">A7</span>       <span class="chord">D</span>                
+Mande água pra Ioiô    / Mande água pra Iaiá
+  <span class="chord">A7</span>              <span class="chord">D</span>
+Allah, meu bom Allah
         </pre>
       </div>
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>

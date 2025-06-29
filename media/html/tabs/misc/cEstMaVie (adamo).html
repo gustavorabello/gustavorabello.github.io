@@ -33,6 +33,66 @@
       background: #2563eb;
       color: #fff;
     }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
     .container {
       background: #fff;
       border-radius: 12px;
@@ -89,7 +149,7 @@
       border-radius: 8px;
       margin-bottom: 18px;
       line-height: 1.15;
-      white-space: pre-wrap;
+      white-space: pre;
       color: #20253a;
     }
     .chord {
@@ -101,6 +161,9 @@
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -111,6 +174,15 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
   <div class="container">
     <div class="header">
       <div class="title">C'est Ma Vie</div>
@@ -122,126 +194,199 @@
     <div class="columns">
       <div class="col">
         <pre>
-Intro : <span class="chord">A</span> <span class="chord">C#m</span> <span class="chord">Em</span> <span class="chord">F#</span> <span class="chord">Bm</span> <span class="chord">D</span> <span class="chord">E</span>
-Couplet 1
-<span class="chord">A</span>                <span class="chord">C#m</span>
-Notre histoire a commencé
-    <span class="chord">Em</span>               <span class="chord">F#</span>
-Par quelques mots d'amour
-                       <span class="chord">Bm</span>
-<span class="chord">C</span>'est fou ce qu'on s'aimait
-                    <span class="chord">Bm(maj7)</span>
-Et c'est vrai, tu m'as donné
-    <span class="chord">Bm7</span>                     <span class="chord">D</span>
-Les plus beaux de mes jours
-                <span class="chord">E</span>
-Et je te les rendais
-<p class="p4">
-Couplet 2
-<span class="chord">A</span>              <span class="chord">C#m</span>
-Je t'ai confié sans pudeur
-    <span class="chord">Em</span>             <span class="chord">F#</span>
-Les secrets de mon coeur
-                   <span class="chord">Bm</span>
-De chansons en chansons
-                <span class="chord">Bm(maj7)</span>
-Et mes rêves et mes "je t'aime"
-   <span class="chord">Bm7</span>                  <span class="chord">D</span>
-Le meilleur de moi-même
-                    <span class="chord">E</span>
-Jusqu'au moindre frisson
-<p class="p4">
-Refrain
-         <span class="chord">A</span>
-<span class="chord">C</span>'est ma vie
-         <span class="chord">C#m</span>
-<span class="chord">C</span>'est ma vie
-            <span class="chord">Em</span>
-Je n'y peux rien
-                       <span class="chord">F#</span>
-<span class="chord">C</span>'est elle qui m'a choisit
-         <span class="chord">Bm</span>
-<span class="chord">C</span>'est ma vie
-              <span class="chord">D</span>
-<span class="chord">C</span>'est pas l'enfer
-                     <span class="chord">E</span>
-Mais c'est pas l'paradis
-<p class="p4">
-<p class="p4">
-Couplet 3
-<span class="chord">A</span>             <span class="chord">C#m</span>
-Ma candeur et mes 20 ans
-<span class="chord">Em</span>              <span class="chord">F#</span>
-Avaient su t'émouvoir
-                  <span class="chord">Bm</span>
-Je te couvrais de fleurs
-                 <span class="chord">Bm(maj7)</span>
-Mais quand à mon firmament
-     <span class="chord">Bm7</span>                 <span class="chord">D</span>
-J'ai vu des nuages noirs
-                  <span class="chord">E</span>
-J'ai senti la froideur
-<p class="p4">
-<p class="p4">
+Intro : <span class="chord">A</span> <span class="chord">C#m</span> <span class="chord">Em</span> <span class="chord">F#</span> <span class="chord">Bm</span> <span class="chord">D</span> <span class="chord">E</span> 
+ 
+Couplet 1 
+<span class="chord">A</span>                <span class="chord">C#m</span> 
+Notre histoire a commencé  
+    <span class="chord">Em</span>               <span class="chord">F#</span> 
+Par quelques mots d'amour 
+                       <span class="chord">Bm</span> 
+<span class="chord">C</span>'est fou ce qu'on s'aimait 
+                    <span class="chord">Bm(maj7)</span> 
+Et c'est vrai, tu m'as donné  
+    <span class="chord">Bm7</span>                     <span class="chord">D</span> 
+Les plus beaux de mes jours 
+                <span class="chord">E</span> 
+Et je te les rendais 
+ 
+Couplet 2 
+<span class="chord">A</span>              <span class="chord">C#m</span> 
+Je t'ai confié sans pudeur 
+    <span class="chord">Em</span>             <span class="chord">F#</span> 
+Les secrets de mon coeur 
+                   <span class="chord">Bm</span> 
+De chansons en chansons 
+                <span class="chord">Bm(maj7)</span> 
+Et mes rêves et mes "je t'aime" 
+   <span class="chord">Bm7</span>                  <span class="chord">D</span> 
+Le meilleur de moi-même 
+                    <span class="chord">E</span> 
+Jusqu'au moindre frisson 
+ 
+Refrain 
+         <span class="chord">A</span> 
+<span class="chord">C</span>'est ma vie 
+         <span class="chord">C#m</span> 
+<span class="chord">C</span>'est ma vie 
+            <span class="chord">Em</span> 
+Je n'y peux rien 
+                       <span class="chord">F#</span> 
+<span class="chord">C</span>'est elle qui m'a choisit 
+         <span class="chord">Bm</span> 
+<span class="chord">C</span>'est ma vie 
+              <span class="chord">D</span> 
+<span class="chord">C</span>'est pas l'enfer 
+                     <span class="chord">E</span> 
+Mais c'est pas l'paradis 
+ 
+Couplet 3 
+<span class="chord">A</span>             <span class="chord">C#m</span> 
+Ma candeur et mes 20 ans  
+ <span class="chord">Em</span>              <span class="chord">F#</span> 
+Avaient su t'émouvoir 
+                  <span class="chord">Bm</span> 
+Je te couvrais de fleurs 
+                 <span class="chord">Bm(maj7)</span> 
+Mais quand à mon firmament 
+     <span class="chord">Bm7</span>                 <span class="chord">D</span> 
+J'ai vu des nuages noirs 
+                  <span class="chord">E</span> 
+J'ai senti la froideur 
+ 
         </pre>
       </div>
       <div class="col">
         <pre>
-Couplet 4
-<span class="chord">A</span>                <span class="chord">C#m</span>
-Mes rires et mes larmes
-   <span class="chord">Em</span>          <span class="chord">F#</span>
-La pluie et le soleil
-                  <span class="chord">Bm</span>
-<span class="chord">C</span>'est toi qui les régit
-             <span class="chord">Bm(maj7)</span>
-Je suis sous ton charme
-   <span class="chord">Bm7</span>                   <span class="chord">D</span>
-Souvent tu m'émerveilles
-                     <span class="chord">E</span>
-Mais parfois tu m'oublies
-<p class="p4">
-<p class="p4">
-Refrain
-<p class="p4">
-Interlude (accords du refrain)
-<p class="p4">
-<p class="p4">
-Couplet 5
-<span class="chord">A</span>               <span class="chord">C#m</span>
-J'ai choisi tes chaînes
-    <span class="chord">Em</span>           <span class="chord">F#</span>
-Mes amours, mes amis
-                   <span class="chord">Bm</span>
-Savent que tu me tiens
-                      <span class="chord">Bm(maj7)</span>
-Mais devant toi, sur scène
-   <span class="chord">Bm7</span>              <span class="chord">D</span>
-Je trouve ma patrie
-                       <span class="chord">E</span>
-Dans tes bras, je suis bien
-<p class="p4">
-<p class="p4">
-Couplet 6
-<span class="chord">A</span>               <span class="chord">C#m</span>
-Le droit d'être triste
-      <span class="chord">Em</span>                   <span class="chord">F#</span>
-Quand parfois j'ai l'coeur gros
-                  <span class="chord">Bm</span>
-Je te l'ai sacrifié
-                     <span class="chord">Bm(maj7)</span>
-Mais devant toi, j'existe
-   <span class="chord">Bm7</span>               <span class="chord">D</span>
-Je gagne le gros lot
-                 <span class="chord">E</span>
-Je me sens si ruiné
-<p class="p4">
-<p class="p4">
+Couplet 4 
+<span class="chord">A</span>                <span class="chord">C#m</span> 
+Mes rires et mes larmes 
+   <span class="chord">Em</span>          <span class="chord">F#</span> 
+La pluie et le soleil 
+                  <span class="chord">Bm</span> 
+<span class="chord">C</span>'est toi qui les régit 
+             <span class="chord">Bm(maj7)</span> 
+Je suis sous ton charme 
+   <span class="chord">Bm7</span>                   <span class="chord">D</span> 
+Souvent tu m'émerveilles 
+                     <span class="chord">E</span> 
+Mais parfois tu m'oublies 
+ 
+Refrain 
+ 
+Interlude (accords du refrain) 
+ 
+Couplet 5 
+<span class="chord">A</span>               <span class="chord">C#m</span> 
+J'ai choisi tes chaînes 
+    <span class="chord">Em</span>           <span class="chord">F#</span> 
+Mes amours, mes amis 
+                   <span class="chord">Bm</span> 
+Savent que tu me tiens 
+                      <span class="chord">Bm(maj7)</span> 
+Mais devant toi, sur scène 
+   <span class="chord">Bm7</span>              <span class="chord">D</span> 
+Je trouve ma patrie 
+                       <span class="chord">E</span> 
+Dans tes bras, je suis bien 
+ 
+Couplet 6 
+<span class="chord">A</span>               <span class="chord">C#m</span> 
+Le droit d'être triste 
+      <span class="chord">Em</span>                   <span class="chord">F#</span> 
+Quand parfois j'ai l'coeur gros 
+                  <span class="chord">Bm</span> 
+Je te l'ai sacrifié 
+                     <span class="chord">Bm(maj7)</span> 
+Mais devant toi, j'existe 
+   <span class="chord">Bm7</span>               <span class="chord">D</span> 
+Je gagne le gros lot 
+                 <span class="chord">E</span> 
+Je me sens si ruiné 
+ 
 Refrain (2x)
         </pre>
       </div>
     </div>
     
   </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
 </body>
 </html>
