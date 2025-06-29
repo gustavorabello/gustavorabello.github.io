@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Sampa – (Caetano Veloso)</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      background: #f8f8f8;
+      color: #222;
+      margin: 0;
+      font-family: 'Merriweather', Georgia, serif;
+    }
+    .back-btn {
+      position: fixed;
+      top: 18px;
+      left: 22px;
+      background: #fff;
+      color: #2563eb;
+      font-size: 1.08em;
+      padding: 7px 17px 6px 12px;
+      border-radius: 22px;
+      box-shadow: 0 1px 7px #ddd;
+      border: 1.5px solid #eaeaea;
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 5000;
+      transition: background 0.16s, color 0.16s;
+    }
+    .back-btn:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
+    .container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #ccc;
+      max-width: 950px;
+      margin: 48px auto 24px auto;
+      padding: 36px 32px 28px 32px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 1.5px solid #e7e7e7;
+      margin-bottom: 34px;
+      padding-bottom: 10px;
+    }
+    .title {
+      font-size: 2.0em;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin: 0 0 7px 0;
+      line-height: 1.07;
+    }
+    .author-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .author-link:hover {
+      color: #f98600;
+      text-decoration: underline;
+    }
+    .columns {
+      display: flex;
+      gap: 28px;
+      margin-top: 15px;
+    }
+    .col {
+      width: 50%;
+    }
+    .singlecol {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .singlecol pre {
+      max-width: 600px;
+      margin: 0 auto 0 auto;
+    }
+    pre {
+      font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
+      font-size: 0.85em;
+      background: #f1f5fb;
+      padding: 18px 14px 17px 20px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      line-height: 1.15;
+      white-space: pre;
+      color: #20253a;
+    }
+    .chord {
+      color: #fc6108;
+      font-weight: bold;
+    }
+    @media (max-width: 900px) {
+      .container { padding: 13px 2vw 12px 2vw;}
+      .columns { flex-direction: column; gap: 0; }
+      .col { width: 100%; }
+      .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
+    }
+    @media (max-width: 600px) {
+      .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
+      .title { font-size: 1.12em;}
+      .singlecol pre { max-width: 98vw; }
+    }
+  </style>
+</head>
+<body>
+  <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
+  <div class="container">
+    <div class="header">
+      <div class="title">Sampa</div>
+      <div class="author">
+        <a class="author-link" href="https://www.cifraclub.com.br/caetano-veloso/" target="_blank" rel="noopener">(Caetano Veloso)</a>
+      </div>
+    </div>
+    
+    <div class="columns">
+      <div class="col">
+        <pre>
+(intro) <span class="chord">D7(9)</span>  <span class="chord">Abm6</span>  <span class="chord">G7</span>  <span class="chord">C7M</span>  <span class="chord">G7(9/13-)</span>
+
+   <span class="chord">D7(9)</span>           <span class="chord">Abm6</span>    <span class="chord">G7</span>     <span class="chord">C7M</span>
+<span class="chord">E</span>|-0-0-0-5---5-5----------------------------|
+<span class="chord">B</span>|---------------4---4-4-3-----3-1-------0--|
+<span class="chord">G</span>|-5---------------4-------4-5---------0----|
+<span class="chord">D</span>|-4---------------3-------3---------2------|
+<span class="chord">A</span>|-5-------0-----------------------3--------|
+<span class="chord">E</span>|-----------------4-------3----------------|
+
+           <span class="chord">G7(9/13-)</span>
+<span class="chord">E</span>|---------------5--------------------------|
+<span class="chord">B</span>|-1p0-----------4--------------------------|
+<span class="chord">G</span>|-----0-------4----------------------------|
+<span class="chord">D</span>|-------2---3------------------------------|
+<span class="chord">A</span>|------------------------------------------|
+<span class="chord">E</span>|---------3--------------------------------|
+
+(parte I)
+<span class="chord">C7M</span>                  <span class="chord">Bm7(11)</span>   <span class="chord">E7(9-)</span>    <span class="chord">Am(7M)</span>  <span class="chord">Am7</span>  <span class="chord">Gm7</span>  <span class="chord">C7(9-)</span>
+   Alguma coisa acontece   no meu   coração
+     <span class="chord">F7M</span>                  <span class="chord">A7</span>                     <span class="chord">Dm7</span>
+Que só quando cruza a Ipiranga e a avenida São João
+        <span class="chord">G7</span>                     <span class="chord">G#°</span>             <span class="chord">Am7</span>
+É que quando eu cheguei por aqui eu nada entendi
+    <span class="chord">D7(9)</span>
+Da dura poesia concreta de tuas esquinas
+                                    <span class="chord">Dm7</span>  <span class="chord">G7</span> <span class="chord">G7(13-)</span>
+Da deselegância discreta de tuas meninas
+ <span class="chord">C7M</span>                  <span class="chord">C7</span>                   <span class="chord">F7M</span>                <span class="chord">F#°</span>
+Ainda não havia para mim  Rita Lee, a tua mais completa tradução
+<span class="chord">C/G</span>     <span class="chord">A7(13-)</span>   <span class="chord">Dm7(9)</span>  <span class="chord">G7(13-)</span>  <span class="chord">E7(9-)</span>  <span class="chord">A4(7)</span>  <span class="chord">A7</span>
+Alguma coisa acontece no meu  coração
+     <span class="chord">D7(9)</span>                  <span class="chord">Abm6</span>         <span class="chord">G7</span>        <span class="chord">C7M</span>   <span class="chord">G7(9/13-)</span>
+Que só   quando cruza a Ipiranga e a avenida São João
+
+(parte II)
+       <span class="chord">C7M</span>                      <span class="chord">Bm7(11)</span>
+Quando eu te encarei frente a frente
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
+     <span class="chord">E7(9-)</span>   <span class="chord">Am(7M)</span>  <span class="chord">Am7</span>  <span class="chord">Gm7</span>  <span class="chord">C7(9-)</span>
+não vi o meu rosto
+    <span class="chord">F7M</span>                    <span class="chord">A7</span>                     <span class="chord">Dm7</span>
+Chamei de mau gosto o que vi, de mau gosto o mau gosto
+<span class="chord">G7</span>                  <span class="chord">G#°</span>                <span class="chord">Am7</span>
+É que Narciso acha feio o que não é espelho
+     <span class="chord">D7(9)</span>
+<span class="chord">E</span> a mente apavora o que ainda não é mesmo velho
+                                              <span class="chord">Dm7</span>  <span class="chord">G7</span> <span class="chord">G7(13-)</span>
+Nada do que não era antes quando não somos mutantes
+  <span class="chord">C7M</span>                 <span class="chord">C7</span>                        <span class="chord">F7M</span>
+<span class="chord">E</span> foste um difícil começo, afasto o que não conheço
+                             <span class="chord">F#°</span>
+<span class="chord">E</span> quem vem de outro sonho feliz de cidade
+   <span class="chord">C/G</span>      <span class="chord">A7(13-)</span>    <span class="chord">Dm7(9)</span>    <span class="chord">G7</span>   <span class="chord">E7(9-)</span>  <span class="chord">A4(7)</span>  <span class="chord">A7</span>
+Aprende depressa a chamar-te de realidade
+   <span class="chord">D7(9)</span>                 <span class="chord">Abm6</span>      <span class="chord">G7</span>        <span class="chord">C7M</span>   <span class="chord">G7(9/13-)</span>
+Porque  és o avesso do avesso do avesso do avesso
+
+(parte III)
+    <span class="chord">C7M</span>               <span class="chord">Bm7(11)</span>    <span class="chord">E7(9-)</span>   <span class="chord">Am(7M)</span>  <span class="chord">Am7</span>  <span class="chord">Gm7</span>  <span class="chord">C7(9-)</span>
+Do povo oprimido nas filas, nas vilas, favelas
+    <span class="chord">F7M</span>                <span class="chord">A7</span>                     <span class="chord">Dm7</span>
+Da força da grana que ergue e destrói coisas belas
+    <span class="chord">G7</span>              <span class="chord">G#°</span>                 <span class="chord">Am7</span>
+Da feia fumaça que sobe apagando as estrelas
+    <span class="chord">D7(9)</span>
+Eu vejo  surgir teus poetas de campos e espaços
+                                             <span class="chord">Dm7(9)</span>  <span class="chord">G7</span>  <span class="chord">G7(13-)</span>
+Tuas oficinas de florestas, teus deuses da chuva
+ <span class="chord">C7</span>                  <span class="chord">C7</span>                <span class="chord">F7M</span>
+Pan-américas de Áfricas utópicas, túmulo do samba
+                     <span class="chord">F#°</span>
+Mais possível novo quilombo de Zumbi
+      <span class="chord">C/G</span>     <span class="chord">A7(13-)</span>  <span class="chord">Dm7(9)</span>   <span class="chord">G7(13-)</span>  <span class="chord">E7(9-)</span> <span class="chord">A4(7)</span>  <span class="chord">A7</span>
+<span class="chord">E</span> os novos baianos passeiam na tua   garoa
+      <span class="chord">D7(9)</span>            <span class="chord">Abm6</span>     <span class="chord">G7</span>       <span class="chord">C7M</span>
+<span class="chord">E</span> os novos baianos te podem curtir numa boa
+        </pre>
+      </div>
+    </div>
+    
+  </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function transpAcorde(acorde, semitones) {
+      return acorde.replace(baseAcordeRegex, function(m, nota, acc) {
+        let n = nota_alias[nota] || nota;
+        let idx = notas.indexOf(n);
+        if (idx < 0) return m;
+        let novoIdx = (idx + semitones + 12) % 12;
+        return notas[novoIdx];
+      });
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+      // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
+</body>
+</html>
