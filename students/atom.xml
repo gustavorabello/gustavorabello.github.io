@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2025-07-04T11:57:33Z</updated>
+    <updated>2025-07-04T12:03:46Z</updated>
 
     <id>/students/atom.xml/</id>
 
@@ -848,6 +848,17 @@
                                             </content>
         </entry>
             <entry>
+            <title type="html">Techno-Economic Analysis of the Steam System for a Microbrewery</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc%202/Yan_Yanomami_da_Fonte_Eloy.html"/>
+            <updated>2017-12-14T09:00:00Z</updated>
+            <published>2017-12-14T09:00:00Z</published>
+            <id>/students/bsc%202/Yan_Yanomami_da_Fonte_Eloy.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
             <title type="html">Nano-patterning of Surfaces by Ion Sputtering - Numerical Study of the Anisotropic Damped Kuramoto-Sivashinsky Equation</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/students/msc/eduardoVitral.html"/>
@@ -876,17 +887,6 @@
             <updated>2015-02-01T15:00:00Z</updated>
             <published>2015-02-01T15:00:00Z</published>
             <id>/students/ic/rafaelFilomeno.html</id>
-            
-            <content type="html">
-                                            </content>
-        </entry>
-            <entry>
-            <title type="html">Techno-Economic Analysis of the Steam System for a Microbrewery</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc%202/Yan_Yanomami_da_Fonte_Eloy.html"/>
-            <updated>1900-01-01T09:00:00Z</updated>
-            <published>1900-01-01T09:00:00Z</published>
-            <id>/students/bsc%202/Yan_Yanomami_da_Fonte_Eloy.html</id>
             
             <content type="html">
                                             </content>
