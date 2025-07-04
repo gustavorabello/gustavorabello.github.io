@@ -7,17 +7,17 @@
         <link href="/"/>
     
         
-    <updated>2025-07-02T16:05:54Z</updated>
+    <updated>2025-07-04T11:57:34Z</updated>
 
     <id>/students/excerpts.xml/</id>
 
             <entry>
             <title type="html">Variational and Numerical Analysis of the Poisson Equation for Heat Transfer Problems</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/yuriGomes.html"/>
-            <updated>2025-05-23T10:00:00Z</updated>
-            <published>2025-05-23T10:00:00Z</published>
-            <id>/students/bsc/yuriGomes.html</id>
+            <link href="/students/bsc%202/Yuri_Paes_Gomes.html"/>
+            <updated>2025-05-23T09:00:00Z</updated>
+            <published>2025-05-23T09:00:00Z</published>
+            <id>/students/bsc%202/Yuri_Paes_Gomes.html</id>
             
             <content type="html">
                 
@@ -36,24 +36,36 @@
                             </content>
         </entry>
             <entry>
-            <title type="html">What if Bridge Traffic Were a Fluid Hydrodynamic Modeling of a Road Using the Finite Difference Method</title>
+            <title type="html">What If Bridge Traffic Were a Fluid? Hydrodynamic Modeling of a Road Using the Finite Difference Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/daviSouza.html"/>
-            <updated>2025-03-28T10:00:00Z</updated>
-            <published>2025-03-28T10:00:00Z</published>
-            <id>/students/bsc/daviSouza.html</id>
+            <link href="/students/bsc%202/Davi_Carvalho_Lopes_de_Souza.html"/>
+            <updated>2025-03-28T09:00:00Z</updated>
+            <published>2025-03-28T09:00:00Z</published>
+            <id>/students/bsc%202/Davi_Carvalho_Lopes_de_Souza.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">Design and Construction of a Low Cost Subsonic Wind Tunnel</title>
+            <title type="html">Design and Construction of a Low-Cost Subsonic Wind Tunnel</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/anaMariaDantas.html"/>
-            <updated>2025-03-27T10:00:00Z</updated>
-            <published>2025-03-27T10:00:00Z</published>
-            <id>/students/bsc/anaMariaDantas.html</id>
+            <link href="/students/bsc%202/Ana_Maria_Dantas_Balmant.html"/>
+            <updated>2025-03-27T09:00:00Z</updated>
+            <published>2025-03-27T09:00:00Z</published>
+            <id>/students/bsc%202/Ana_Maria_Dantas_Balmant.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Study of Heat Transfer in a Plate-Fin Heat Sink Using the Finite Element Method Implemented in Python</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc%202/Mateus_Duarte_de_Oliveira.html"/>
+            <updated>2025-03-25T09:00:00Z</updated>
+            <published>2025-03-25T09:00:00Z</published>
+            <id>/students/bsc%202/Mateus_Duarte_de_Oliveira.html</id>
             
             <content type="html">
                 
@@ -66,18 +78,6 @@
             <updated>2025-03-24T09:00:00Z</updated>
             <published>2025-03-24T09:00:00Z</published>
             <id>/students/msc/higorOdilon.html</id>
-            
-            <content type="html">
-                
-                            </content>
-        </entry>
-            <entry>
-            <title type="html">Study of Heat Transfer in a Plate Fin Heat Sink Using the Finite Element Method Implemented in Python</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/mateusDuarte.html"/>
-            <updated>2025-03-15T10:00:00Z</updated>
-            <published>2025-03-15T10:00:00Z</published>
-            <id>/students/bsc/mateusDuarte.html</id>
             
             <content type="html">
                 
@@ -132,12 +132,12 @@
                             </content>
         </entry>
             <entry>
-            <title type="html">Neural Network Algorithm for the Calculation of Aerodynamic Forces in an Airfoil Trained with a Finite Element CFD Model</title>
+            <title type="html">Neural-Network Algorithm for the Calculation of Aerodynamic Forces in an Airfoil Trained with a Finite Element Cfd Model</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/leonardoXavier.html"/>
-            <updated>2024-03-11T10:00:00Z</updated>
-            <published>2024-03-11T10:00:00Z</published>
-            <id>/students/bsc/leonardoXavier.html</id>
+            <link href="/students/bsc%202/Leonardo_da_Costa_Lima_Xavier_de_Mendonca.html"/>
+            <updated>2024-03-11T09:00:00Z</updated>
+            <published>2024-03-11T09:00:00Z</published>
+            <id>/students/bsc%202/Leonardo_da_Costa_Lima_Xavier_de_Mendonca.html</id>
             
             <content type="html">
                 
@@ -158,10 +158,22 @@
             <entry>
             <title type="html">Study of Flows in Particulate Filters in Biodiesel Emissions</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/joaoPedro.html"/>
-            <updated>2023-11-30T10:00:00Z</updated>
-            <published>2023-11-30T10:00:00Z</published>
-            <id>/students/bsc/joaoPedro.html</id>
+            <link href="/students/bsc%202/Joao_Pedro_Rodrigues_Ferreira.html"/>
+            <updated>2023-12-01T09:00:00Z</updated>
+            <published>2023-12-01T09:00:00Z</published>
+            <id>/students/bsc%202/Joao_Pedro_Rodrigues_Ferreira.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Numerical Solution of the Elliptical Problem of Air Potential Flow Around High-Speed Train Profiles Through the Finite Element Method</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc%202/Antonio_Vinicius_Varandas_Pires.html"/>
+            <updated>2023-11-08T09:00:00Z</updated>
+            <published>2023-11-08T09:00:00Z</published>
+            <id>/students/bsc%202/Antonio_Vinicius_Varandas_Pires.html</id>
             
             <content type="html">
                 
@@ -170,10 +182,10 @@
             <entry>
             <title type="html">Analysis of Filtration Efficiency in Biocombustion Emissions Through Numerical Simulation on Unstructured Grids</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/annaBarbara.html"/>
-            <updated>2023-10-19T10:00:00Z</updated>
-            <published>2023-10-19T10:00:00Z</published>
-            <id>/students/bsc/annaBarbara.html</id>
+            <link href="/students/bsc%202/Anna_Barbara_Serejo_Coimbra.html"/>
+            <updated>2023-10-19T09:00:00Z</updated>
+            <published>2023-10-19T09:00:00Z</published>
+            <id>/students/bsc%202/Anna_Barbara_Serejo_Coimbra.html</id>
             
             <content type="html">
                 
@@ -204,48 +216,24 @@
                             </content>
         </entry>
             <entry>
-            <title type="html">Finite Element Method for Heat Transfer in Voltage Regulator Module Cooled by Heat Sink</title>
+            <title type="html">Finite Element Method for Heat Transfer in a Voltage Regulator Module Cooled by Heat Sink</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/gabrielWaelmeldt.html"/>
-            <updated>2023-08-30T10:00:00Z</updated>
-            <published>2023-08-30T10:00:00Z</published>
-            <id>/students/bsc/gabrielWaelmeldt.html</id>
+            <link href="/students/bsc%202/Gabriel_Affonso_Costa_Waehneldt.html"/>
+            <updated>2023-08-28T09:00:00Z</updated>
+            <published>2023-08-28T09:00:00Z</published>
+            <id>/students/bsc%202/Gabriel_Affonso_Costa_Waehneldt.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">Numerical Analysis of Biofuels Flow in a Porous Media</title>
+            <title type="html">Numerical Analysis of Biofuels Flow in a Porous Medium</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/danielSpesani.html"/>
-            <updated>2023-08-23T10:00:00Z</updated>
-            <published>2023-08-23T10:00:00Z</published>
-            <id>/students/bsc/danielSpesani.html</id>
-            
-            <content type="html">
-                
-                            </content>
-        </entry>
-            <entry>
-            <title type="html">Numerical Solution of the Elliptical Problem of Air Potential Flow Around High Speed Trains Profiles Through the Finite Element Method</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/antonioPires.html"/>
-            <updated>2023-08-11T10:00:00Z</updated>
-            <published>2023-08-11T10:00:00Z</published>
-            <id>/students/bsc/antonioPires.html</id>
-            
-            <content type="html">
-                
-                            </content>
-        </entry>
-            <entry>
-            <title type="html">Implementation of the Finite Element Method in Python for the Parametric Study of Heat Sink in Computer Processors</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/thyagoCapitanio.html"/>
-            <updated>2023-08-11T10:00:00Z</updated>
-            <published>2023-08-11T10:00:00Z</published>
-            <id>/students/bsc/thyagoCapitanio.html</id>
+            <link href="/students/bsc%202/Daniel_Moreira_Spesani.html"/>
+            <updated>2023-08-23T09:00:00Z</updated>
+            <published>2023-08-23T09:00:00Z</published>
+            <id>/students/bsc%202/Daniel_Moreira_Spesani.html</id>
             
             <content type="html">
                 
@@ -264,18 +252,6 @@
                             </content>
         </entry>
             <entry>
-            <title type="html">Solution of the Three-Dimensional Laplace Equation for Temperature Applied to an Engine Block Through the Finite Element Method</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/matheusMesquita.html"/>
-            <updated>2023-07-20T10:00:00Z</updated>
-            <published>2023-07-20T10:00:00Z</published>
-            <id>/students/bsc/matheusMesquita.html</id>
-            
-            <content type="html">
-                
-                            </content>
-        </entry>
-            <entry>
             <title type="html">CFD Analysis of a Diesel Particulate Filter Performance Using Biodiesel</title>
             <author><name>Gustavo R Anjos</name></author>
             <link href="/students/msc/felipeFeres.html"/>
@@ -288,12 +264,36 @@
                             </content>
         </entry>
             <entry>
-            <title type="html">Study of Cold Plate Fin Geometries to Improve Heat Transfer Capabilities of Eletronics Cooling Solutions Utilizing the Finite Element Method</title>
+            <title type="html">Solution of the Three-Dimensional Laplace Equation for Temperature Applied to an Engine Block Through the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/lucasMiranda.html"/>
-            <updated>2023-07-12T10:00:00Z</updated>
-            <published>2023-07-12T10:00:00Z</published>
-            <id>/students/bsc/lucasMiranda.html</id>
+            <link href="/students/bsc%202/Mateus_Mesquita_Teixeira.html"/>
+            <updated>2023-07-11T09:00:00Z</updated>
+            <published>2023-07-11T09:00:00Z</published>
+            <id>/students/bsc%202/Mateus_Mesquita_Teixeira.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Study of Cold-Plate Fin Geometries to Improve Heat-Transfer Capability of Electronics Cooling Solutions Utilizing the Finite Element Method</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc%202/Lucas_Mendes_Miranda.html"/>
+            <updated>2023-07-10T09:00:00Z</updated>
+            <published>2023-07-10T09:00:00Z</published>
+            <id>/students/bsc%202/Lucas_Mendes_Miranda.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Solucao Numerica da Equacao da Onda Unidimensional Pelo Metodo de Diferencas Finitas de Forma Explicita e Implicita</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc%202/Alex_Fraga_Rocha.html"/>
+            <updated>2023-05-01T09:00:00Z</updated>
+            <published>2023-05-01T09:00:00Z</published>
+            <id>/students/bsc%202/Alex_Fraga_Rocha.html</id>
             
             <content type="html">
                 
@@ -324,24 +324,36 @@
                             </content>
         </entry>
             <entry>
-            <title type="html">Medicine Diffusion from Drug-eluting Stents in Coronary Arteries</title>
+            <title type="html">Study of the Implementation of Tesla Valves in Heat Exchangers by the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/gabrielSantos.html"/>
-            <updated>2023-01-09T10:00:00Z</updated>
-            <published>2023-01-09T10:00:00Z</published>
-            <id>/students/bsc/gabrielSantos.html</id>
+            <link href="/students/bsc%202/Pedro_Mattos_da_Silva.html"/>
+            <updated>2023-01-04T09:00:00Z</updated>
+            <published>2023-01-04T09:00:00Z</published>
+            <id>/students/bsc%202/Pedro_Mattos_da_Silva.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">Study of the Implementation of Tesla Valves in Heat Exchangers by the Finite Elements Method</title>
+            <title type="html">Medicine Diffusion from Drug-Eluting Stents in Coronary Arteries</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/pedroMattos.html"/>
-            <updated>2023-01-04T10:00:00Z</updated>
-            <published>2023-01-04T10:00:00Z</published>
-            <id>/students/bsc/pedroMattos.html</id>
+            <link href="/students/bsc%202/Gabriel_dos_Santos_Oliveira.html"/>
+            <updated>2023-01-02T09:00:00Z</updated>
+            <published>2023-01-02T09:00:00Z</published>
+            <id>/students/bsc%202/Gabriel_dos_Santos_Oliveira.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Implementation of the Finite Element Method in Python for the Parametric Study of Heat Sink in Computer Processors</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc%202/Thyago_Araujo_Capitanio.html"/>
+            <updated>2023-01-01T09:00:00Z</updated>
+            <published>2023-01-01T09:00:00Z</published>
+            <id>/students/bsc%202/Thyago_Araujo_Capitanio.html</id>
             
             <content type="html">
                 
@@ -350,46 +362,58 @@
             <entry>
             <title type="html">Comparison and Validation of Numerical Methods Applied to Heat Transfer</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/rodrigoSeefelder.html"/>
-            <updated>2022-12-13T10:00:00Z</updated>
-            <published>2022-12-13T10:00:00Z</published>
-            <id>/students/bsc/rodrigoSeefelder.html</id>
+            <link href="/students/bsc%202/Rodrigo_Seefelder_de_Assis_Araujo.html"/>
+            <updated>2022-12-01T09:00:00Z</updated>
+            <published>2022-12-01T09:00:00Z</published>
+            <id>/students/bsc%202/Rodrigo_Seefelder_de_Assis_Araujo.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">Analysis of Stresses in a Oil Pipe Under a Fire Using Analytical Methods and Finite Elements</title>
+            <title type="html">Analysis of Stresses in an Oil Pipe under Fire Using Analytical Methods and Finite Elements</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/rodrigoFreixa.html"/>
-            <updated>2022-11-23T11:00:00Z</updated>
-            <published>2022-11-23T11:00:00Z</published>
-            <id>/students/bsc/rodrigoFreixa.html</id>
+            <link href="/students/bsc%202/Rodrigo_Freixa_de_Albuquerque_e_Mello.html"/>
+            <updated>2022-11-16T09:00:00Z</updated>
+            <published>2022-11-16T09:00:00Z</published>
+            <id>/students/bsc%202/Rodrigo_Freixa_de_Albuquerque_e_Mello.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">CFD Analisys of the Flow in a test Cell for Aircraft Engines</title>
+            <title type="html">Cfd Analysis of the Flow in a Test Cell for Aircraft Engines</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/camilaBorges.html"/>
-            <updated>2022-10-13T10:00:00Z</updated>
-            <published>2022-10-13T10:00:00Z</published>
-            <id>/students/bsc/camilaBorges.html</id>
+            <link href="/students/bsc%202/Camila_Borges_Santos.html"/>
+            <updated>2022-10-13T09:00:00Z</updated>
+            <published>2022-10-13T09:00:00Z</published>
+            <id>/students/bsc%202/Camila_Borges_Santos.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">Analysis of Vibration Induced by Internal Flow in a Bi-Supported Pipe Using Finite Element Method</title>
+            <title type="html">Numerical Analysis of the Effect of Porosity on Biofuel Production in the Stream-Function Vorticity Formulation Using the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/victorRieger.html"/>
-            <updated>2022-08-17T16:00:00Z</updated>
-            <published>2022-08-17T16:00:00Z</published>
-            <id>/students/bsc/victorRieger.html</id>
+            <link href="/students/bsc%202/Juliana_Calazans_de_Cerqueira.html"/>
+            <updated>2022-09-12T09:00:00Z</updated>
+            <published>2022-09-12T09:00:00Z</published>
+            <id>/students/bsc%202/Juliana_Calazans_de_Cerqueira.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Analysis of Vibration Induced by Internal Flow in a Bi-Supported Pipe Using the Finite Element Method</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc%202/Victor_Rieger_Queiroz_Goncalves.html"/>
+            <updated>2022-08-16T09:00:00Z</updated>
+            <published>2022-08-16T09:00:00Z</published>
+            <id>/students/bsc%202/Victor_Rieger_Queiroz_Goncalves.html</id>
             
             <content type="html">
                 
@@ -398,10 +422,10 @@
             <entry>
             <title type="html">Simulation of Lift and Drag Coefficients for a Free Flow Using the Stream-Vorticity Formulation</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/joaoSalgueiro.html"/>
-            <updated>2022-08-01T13:00:00Z</updated>
-            <published>2022-08-01T13:00:00Z</published>
-            <id>/students/bsc/joaoSalgueiro.html</id>
+            <link href="/students/bsc%202/Joao_Salgueiro_Lage.html"/>
+            <updated>2022-08-15T09:00:00Z</updated>
+            <published>2022-08-15T09:00:00Z</published>
+            <id>/students/bsc%202/Joao_Salgueiro_Lage.html</id>
             
             <content type="html">
                 
@@ -410,10 +434,10 @@
             <entry>
             <title type="html">Numerical Simulation of Heat Transfer on a Processor with Different Thermal Pastes Using the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/gustavoPrado.html"/>
-            <updated>2022-08-01T10:00:00Z</updated>
-            <published>2022-08-01T10:00:00Z</published>
-            <id>/students/bsc/gustavoPrado.html</id>
+            <link href="/students/bsc%202/Gustavo_Prado_Ferreira.html"/>
+            <updated>2022-08-05T09:00:00Z</updated>
+            <published>2022-08-05T09:00:00Z</published>
+            <id>/students/bsc%202/Gustavo_Prado_Ferreira.html</id>
             
             <content type="html">
                 
@@ -422,10 +446,10 @@
             <entry>
             <title type="html">Replacement of Boilers by Reverse Osmosis Systems in Oil Rigs</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/matheusRamalho.html"/>
-            <updated>2022-07-29T14:00:00Z</updated>
-            <published>2022-07-29T14:00:00Z</published>
-            <id>/students/bsc/matheusRamalho.html</id>
+            <link href="/students/bsc%202/Matheus_da_Cunha_Ramalho.html"/>
+            <updated>2022-08-04T09:00:00Z</updated>
+            <published>2022-08-04T09:00:00Z</published>
+            <id>/students/bsc%202/Matheus_da_Cunha_Ramalho.html</id>
             
             <content type="html">
                 
@@ -434,34 +458,34 @@
             <entry>
             <title type="html">Code Verification for Flow Simulation Using the Streamfunction-Vorticity Formulation with the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/rodolfoCarrasco.html"/>
-            <updated>2022-07-11T13:00:00Z</updated>
-            <published>2022-07-11T13:00:00Z</published>
-            <id>/students/bsc/rodolfoCarrasco.html</id>
+            <link href="/students/bsc%202/Rodolfo_Rafael_Palacios_Carrasco.html"/>
+            <updated>2022-07-11T09:00:00Z</updated>
+            <published>2022-07-11T09:00:00Z</published>
+            <id>/students/bsc%202/Rodolfo_Rafael_Palacios_Carrasco.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">Study of Flows for Cooling of Electronics with Finite Element Method</title>
+            <title type="html">Investigation of Velocity, Vorticity and Streamfunction Fields of a Free Flow Using the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/ygorFlorentino.html"/>
-            <updated>2022-06-15T13:00:00Z</updated>
-            <published>2022-06-15T13:00:00Z</published>
-            <id>/students/bsc/ygorFlorentino.html</id>
+            <link href="/students/bsc%202/Juan_de_Oliveira_dos_Santos.html"/>
+            <updated>2022-06-15T09:00:00Z</updated>
+            <published>2022-06-15T09:00:00Z</published>
+            <id>/students/bsc%202/Juan_de_Oliveira_dos_Santos.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">Investigation of the Velocity, Vorticity and Streamfunction Fields of a Free Flow Using the Finite Elements Method</title>
+            <title type="html">Study of Flows for Cooling of Electronics with the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/juanOliveira.html"/>
-            <updated>2022-06-15T10:00:00Z</updated>
-            <published>2022-06-15T10:00:00Z</published>
-            <id>/students/bsc/juanOliveira.html</id>
+            <link href="/students/bsc%202/Ygor_da_Silva_Florentino.html"/>
+            <updated>2022-06-15T09:00:00Z</updated>
+            <published>2022-06-15T09:00:00Z</published>
+            <id>/students/bsc%202/Ygor_da_Silva_Florentino.html</id>
             
             <content type="html">
                 
@@ -470,10 +494,10 @@
             <entry>
             <title type="html">Analysis of Heat Conduction in Electronic Components with Heterogeneous Material Through the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/victorGuido.html"/>
-            <updated>2022-03-07T13:00:00Z</updated>
-            <published>2022-03-07T13:00:00Z</published>
-            <id>/students/bsc/victorGuido.html</id>
+            <link href="/students/bsc%202/Victor_Guido_Pinheiro.html"/>
+            <updated>2022-03-07T09:00:00Z</updated>
+            <published>2022-03-07T09:00:00Z</published>
+            <id>/students/bsc%202/Victor_Guido_Pinheiro.html</id>
             
             <content type="html">
                 
@@ -494,22 +518,22 @@
             <entry>
             <title type="html">Numerical Methods for the Computation of Surface Tension Forces and Interface Modeling in Two-Phase Flows</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/leonardoVoltarelli.html"/>
-            <updated>2021-11-17T13:00:00Z</updated>
-            <published>2021-11-17T13:00:00Z</published>
-            <id>/students/bsc/leonardoVoltarelli.html</id>
+            <link href="/students/bsc%202/Leonardo_Votarelli_Regini_de_Andrade.html"/>
+            <updated>2021-11-17T09:00:00Z</updated>
+            <published>2021-11-17T09:00:00Z</published>
+            <id>/students/bsc%202/Leonardo_Votarelli_Regini_de_Andrade.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">CFD Analysis of Flow in Coronary Arteries for Different Flow Restrictions Configurations</title>
+            <title type="html">Cfd Analysis of Flow in Coronary Arteries for Different Flow Restriction Configurations</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/matheusGomes.html"/>
-            <updated>2021-10-15T10:00:00Z</updated>
-            <published>2021-10-15T10:00:00Z</published>
-            <id>/students/bsc/matheusGomes.html</id>
+            <link href="/students/bsc%202/Matheus_Ferreira_Gomes.html"/>
+            <updated>2021-10-15T09:00:00Z</updated>
+            <published>2021-10-15T09:00:00Z</published>
+            <id>/students/bsc%202/Matheus_Ferreira_Gomes.html</id>
             
             <content type="html">
                 
@@ -554,34 +578,34 @@
             <entry>
             <title type="html">Application of Computational Fluid Dynamics in the Evaluation of Motion of Droplets in the Context of the Covid-19 Pandemic</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/vitorFontenele.html"/>
-            <updated>2021-07-08T13:00:00Z</updated>
-            <published>2021-07-08T13:00:00Z</published>
-            <id>/students/bsc/vitorFontenele.html</id>
+            <link href="/students/bsc%202/Vitor_Tavares_Fontenele.html"/>
+            <updated>2021-07-08T09:00:00Z</updated>
+            <published>2021-07-08T09:00:00Z</published>
+            <id>/students/bsc%202/Vitor_Tavares_Fontenele.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">Study of the Influence of Geometric Parameters in the Failure Pressure of Corroded Pipelines Using the Finite Elements Method</title>
+            <title type="html">Study of the Influence of Geometric Parameters on Failure Pressure of Corroded Pipelines Using the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/claraCosta.html"/>
-            <updated>2021-05-19T10:00:00Z</updated>
-            <published>2021-05-19T10:00:00Z</published>
-            <id>/students/bsc/claraCosta.html</id>
+            <link href="/students/bsc%202/Clara_Costa_Hildebrandt.html"/>
+            <updated>2021-05-25T09:00:00Z</updated>
+            <published>2021-05-25T09:00:00Z</published>
+            <id>/students/bsc%202/Clara_Costa_Hildebrandt.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">Solution of the Three-Dimensional Transient Heat Equation Using the Finite Element Analysis Applied to Disk Breaks</title>
+            <title type="html">Solution of the Three-Dimensional Transient Heat Equation Using Finite Element Analysis Applied to Brake Discs</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/felipeMello.html"/>
-            <updated>2021-05-14T10:00:00Z</updated>
-            <published>2021-05-14T10:00:00Z</published>
-            <id>/students/bsc/felipeMello.html</id>
+            <link href="/students/bsc%202/Felipe_Rodrigo_de_Mello_Alves.html"/>
+            <updated>2021-05-14T09:00:00Z</updated>
+            <published>2021-05-14T09:00:00Z</published>
+            <id>/students/bsc%202/Felipe_Rodrigo_de_Mello_Alves.html</id>
             
             <content type="html">
                 
@@ -600,24 +624,12 @@
                             </content>
         </entry>
             <entry>
-            <title type="html">Finite Element Method Applied to Barrage Temperature Profile</title>
+            <title type="html">Cfd Analysis of Chemical Species Diffusion for Different Pharmacological Stent Geometries</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/dalvanMendes.html"/>
-            <updated>2021-01-25T10:00:00Z</updated>
-            <published>2021-01-25T10:00:00Z</published>
-            <id>/students/bsc/dalvanMendes.html</id>
-            
-            <content type="html">
-                
-                            </content>
-        </entry>
-            <entry>
-            <title type="html">CFD analysis of chemical species diffusion for differents farmacological stent geometries</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/tiagoCalvano.html"/>
+            <link href="/students/bsc%202/Tiago_Alves_Calvano_do_Amaral.html"/>
             <updated>2020-12-17T09:00:00Z</updated>
             <published>2020-12-17T09:00:00Z</published>
-            <id>/students/bsc/tiagoCalvano.html</id>
+            <id>/students/bsc%202/Tiago_Alves_Calvano_do_Amaral.html</id>
             
             <content type="html">
                 
@@ -648,24 +660,12 @@
                             </content>
         </entry>
             <entry>
-            <title type="html">CFD Analysis of the Flow Around a Horizontal Axis Wind Turbine</title>
+            <title type="html">Cfd Analysis of the Flow Around a Horizontal-Axis Wind Turbine</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/felipeFeres.html"/>
+            <link href="/students/bsc%202/Felipe_Feres_Ferreira.html"/>
             <updated>2020-11-26T09:00:00Z</updated>
             <published>2020-11-26T09:00:00Z</published>
-            <id>/students/bsc/felipeFeres.html</id>
-            
-            <content type="html">
-                
-                            </content>
-        </entry>
-            <entry>
-            <title type="html">ALE-FE Method in Python for an Oscillating Cylinder in a Transversal Flow</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/jessicaSilva.html"/>
-            <updated>2020-11-06T09:00:00Z</updated>
-            <published>2020-11-06T09:00:00Z</published>
-            <id>/students/bsc/jessicaSilva.html</id>
+            <id>/students/bsc%202/Felipe_Feres_Ferreira.html</id>
             
             <content type="html">
                 
@@ -720,24 +720,24 @@
                             </content>
         </entry>
             <entry>
-            <title type="html">Numerical simulation of heat transfer in a brake disc during braking using the finite element method</title>
+            <title type="html">Numerical Simulation of Heat Transfer in a Brake Disc During Braking Using the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/gabrielAguiar.html"/>
-            <updated>2020-09-17T15:00:00Z</updated>
-            <published>2020-09-17T15:00:00Z</published>
-            <id>/students/bsc/gabrielAguiar.html</id>
+            <link href="/students/bsc%202/Gabriel_da_Silva_Oliveira_Nunes_de_Aguiar.html"/>
+            <updated>2020-09-17T09:00:00Z</updated>
+            <published>2020-09-17T09:00:00Z</published>
+            <id>/students/bsc%202/Gabriel_da_Silva_Oliveira_Nunes_de_Aguiar.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">Numerical Analysis of the Effect of Porosity on the Production of Biofuels in the Streamfunction Vorticity Formulation Using Finite Element Method</title>
+            <title type="html">Ale-Fe Method in Python for an Oscillating Cylinder in a Transverse Flow</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/julianaCerqueira.html"/>
+            <link href="/students/bsc%202/Jessica_Aparecida_Silva.html"/>
             <updated>2020-09-06T09:00:00Z</updated>
             <published>2020-09-06T09:00:00Z</published>
-            <id>/students/bsc/julianaCerqueira.html</id>
+            <id>/students/bsc%202/Jessica_Aparecida_Silva.html</id>
             
             <content type="html">
                 
@@ -780,12 +780,12 @@
                             </content>
         </entry>
             <entry>
-            <title type="html">Development of Numerical Tool for Analysis of Two-Dimensional Thermo-Structural Problems via Finite Element Method</title>
+            <title type="html">Development of a Numerical Tool for Two-Dimensional Thermo-Structural Analysis Via Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/joseGomes.html"/>
-            <updated>2020-04-03T15:00:00Z</updated>
-            <published>2020-04-03T15:00:00Z</published>
-            <id>/students/bsc/joseGomes.html</id>
+            <link href="/students/bsc%202/Jose_Vinicius_Victorino_Gomes.html"/>
+            <updated>2020-04-03T09:00:00Z</updated>
+            <published>2020-04-03T09:00:00Z</published>
+            <id>/students/bsc%202/Jose_Vinicius_Victorino_Gomes.html</id>
             
             <content type="html">
                 
@@ -806,18 +806,6 @@
             <entry>
             <title type="html">Streamfunction-Vorticity Formulation for Conjugated Heat Transfer Problems using FEM</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/luisHenrique.html"/>
-            <updated>2020-02-01T15:00:00Z</updated>
-            <published>2020-02-01T15:00:00Z</published>
-            <id>/students/bsc/luisHenrique.html</id>
-            
-            <content type="html">
-                
-                            </content>
-        </entry>
-            <entry>
-            <title type="html">Streamfunction-Vorticity Formulation for Conjugated Heat Transfer Problems using FEM</title>
-            <author><name>Gustavo R Anjos</name></author>
             <link href="/students/ic/luisHenrique.html"/>
             <updated>2020-02-01T15:00:00Z</updated>
             <published>2020-02-01T15:00:00Z</published>
@@ -828,12 +816,12 @@
                             </content>
         </entry>
             <entry>
-            <title type="html">Numerical Simulation of Dispersed Flows in Turbomachines using the Finite Element Method</title>
+            <title type="html">Finite Element Method Applied to Barrage Temperature Profile</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/lucasSousa.html"/>
-            <updated>2019-06-26T15:00:00Z</updated>
-            <published>2019-06-26T15:00:00Z</published>
-            <id>/students/bsc/lucasSousa.html</id>
+            <link href="/students/bsc%202/Dalvan_Oliveira_Mendes.html"/>
+            <updated>2020-01-25T09:00:00Z</updated>
+            <published>2020-01-25T09:00:00Z</published>
+            <id>/students/bsc%202/Dalvan_Oliveira_Mendes.html</id>
             
             <content type="html">
                 
@@ -842,22 +830,46 @@
             <entry>
             <title type="html">Deep Learning for Computational Fluid Dynamics</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/leonardoFerreira.html"/>
-            <updated>2019-03-17T15:00:00Z</updated>
-            <published>2019-03-17T15:00:00Z</published>
-            <id>/students/bsc/leonardoFerreira.html</id>
+            <link href="/students/bsc%202/Leonardo_Fernando_Ferreira.html"/>
+            <updated>2019-12-11T09:00:00Z</updated>
+            <published>2019-12-11T09:00:00Z</published>
+            <id>/students/bsc%202/Leonardo_Fernando_Ferreira.html</id>
             
             <content type="html">
                 
                             </content>
         </entry>
             <entry>
-            <title type="html">Numerical simulator for heat exchangers and thermal design of an aeronautical Fuel Cooled Oil Cooler</title>
+            <title type="html">Numerical Simulation of Dispersed Flows in Turbomachines Using the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/joseCerqueira.html"/>
-            <updated>2018-11-21T15:00:00Z</updated>
-            <published>2018-11-21T15:00:00Z</published>
-            <id>/students/bsc/joseCerqueira.html</id>
+            <link href="/students/bsc%202/Lucas_Carvalho_de_Sousa.html"/>
+            <updated>2019-06-25T09:00:00Z</updated>
+            <published>2019-06-25T09:00:00Z</published>
+            <id>/students/bsc%202/Lucas_Carvalho_de_Sousa.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Stream-Function Vorticity Formulation for Conjugated Heat-Transfer Problems Using Fem</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc%202/Luis_Henrique_Carnevale_da_Cunha.html"/>
+            <updated>2019-02-01T09:00:00Z</updated>
+            <published>2019-02-01T09:00:00Z</published>
+            <id>/students/bsc%202/Luis_Henrique_Carnevale_da_Cunha.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Numerical Simulator for Heat Exchangers and Thermal Design of an Aeronautical Fuel-Cooled Oil Cooler</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc%202/Jose_Ricardo_da_Silva_Cerqueira_Junior.html"/>
+            <updated>2018-11-08T09:00:00Z</updated>
+            <published>2018-11-08T09:00:00Z</published>
+            <id>/students/bsc%202/Jose_Ricardo_da_Silva_Cerqueira_Junior.html</id>
             
             <content type="html">
                 
@@ -866,10 +878,10 @@
             <entry>
             <title type="html">Finite Element Numerical Simulation of Flow in Coronary Artery</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/leandroMarques.html"/>
-            <updated>2018-09-10T15:00:00Z</updated>
-            <published>2018-09-10T15:00:00Z</published>
-            <id>/students/bsc/leandroMarques.html</id>
+            <link href="/students/bsc%202/Leandro_Marques_dos_Santos.html"/>
+            <updated>2018-09-10T09:00:00Z</updated>
+            <published>2018-09-10T09:00:00Z</published>
+            <id>/students/bsc%202/Leandro_Marques_dos_Santos.html</id>
             
             <content type="html">
                 
@@ -878,22 +890,10 @@
             <entry>
             <title type="html">Temperature Distribution Analysis by the Finite Element Method</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/leonardoCunha.html"/>
-            <updated>2018-08-28T15:00:00Z</updated>
-            <published>2018-08-28T15:00:00Z</published>
-            <id>/students/bsc/leonardoCunha.html</id>
-            
-            <content type="html">
-                
-                            </content>
-        </entry>
-            <entry>
-            <title type="html">Modelling of Refrigeration System of Novo Meriti Fridge</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/leonardoLobo.html"/>
-            <updated>2018-06-28T15:00:00Z</updated>
-            <published>2018-06-28T15:00:00Z</published>
-            <id>/students/bsc/leonardoLobo.html</id>
+            <link href="/students/bsc%202/Leonardo_Vieira_Cunha.html"/>
+            <updated>2018-08-28T09:00:00Z</updated>
+            <published>2018-08-28T09:00:00Z</published>
+            <id>/students/bsc%202/Leonardo_Vieira_Cunha.html</id>
             
             <content type="html">
                 
@@ -912,12 +912,12 @@
                             </content>
         </entry>
             <entry>
-            <title type="html">Analise Tecnico-economica do Sistema de Vapor para uma Micro-cervejaria</title>
+            <title type="html">Modelling of Refrigeration System of Novo Meriti Fridge</title>
             <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/bsc/yanEloy.html"/>
-            <updated>2017-12-14T15:00:00Z</updated>
-            <published>2017-12-14T15:00:00Z</published>
-            <id>/students/bsc/yanEloy.html</id>
+            <link href="/students/bsc%202/Leonardo_Lobo_da_Nobrega.html"/>
+            <updated>2018-01-01T09:00:00Z</updated>
+            <published>2018-01-01T09:00:00Z</published>
+            <id>/students/bsc%202/Leonardo_Lobo_da_Nobrega.html</id>
             
             <content type="html">
                 
@@ -954,6 +954,18 @@
             <updated>2015-02-01T15:00:00Z</updated>
             <published>2015-02-01T15:00:00Z</published>
             <id>/students/ic/rafaelFilomeno.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Techno-Economic Analysis of the Steam System for a Microbrewery</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc%202/Yan_Yanomami_da_Fonte_Eloy.html"/>
+            <updated>1900-01-01T09:00:00Z</updated>
+            <published>1900-01-01T09:00:00Z</published>
+            <id>/students/bsc%202/Yan_Yanomami_da_Fonte_Eloy.html</id>
             
             <content type="html">
                 
