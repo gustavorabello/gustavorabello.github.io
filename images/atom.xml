@@ -7,10 +7,48 @@
         <link href="/"/>
     
         
-    <updated>2025-08-16T17:00:20Z</updated>
+    <updated>2025-08-27T16:00:12Z</updated>
 
     <id>/images/atom.xml/</id>
 
+            <entry>
+            <title type="html">Turek Fluid-Structure Interaction</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/images/turek.html"/>
+            <updated>2025-08-27T10:00:00Z</updated>
+            <published>2025-08-27T10:00:00Z</published>
+            <id>/images/turek.html</id>
+                        <category   scheme="/res.url/tags"
+                        term="single-phase"
+                        label="Single-Phase" />
+                        <category   scheme="/res.url/tags"
+                        term="2d"
+                        label="2d" />
+                        <category   scheme="/res.url/tags"
+                        term="turek"
+                        label="Turek" />
+            
+            <content type="html">
+                                &lt;p&gt;&lt;img alt=&#34;disk&#34; src=&#34;/media/images/turek.png&#34; /&gt;
+This figure shows the numerical validation of a benchmark problem originally
+proposed by Turek and colleagues for flow around a circular cylinder with an
+attached downstream bar. The color map represents the velocity magnitude, with
+blue indicating low values and red to yellow showing higher velocities. The
+flow accelerates around the sides of the obstacle and develops a wake
+characterized by recirculation and shear layers, consistent with the reference
+benchmark.
+The unstructured quadrilateral finite element mesh is also visible, capturing
+both the cylinder and the narrow bar with good resolution in the boundary layer
+and wake regions. The velocity scale on the right confirms a normalized maximum
+around 2.0, matching the expected Turek validation range. Numerical results
+such as drag, lift, and pressure drop can be compared directly with the Turek
+paper to ensure accuracy of the solver. The mesh adapts well to the geometry,
+showing refinement near solid boundaries and coarser elements far from the
+obstacle. This setup is widely used to test stability and accuracy of &lt;span class=&#34;caps&#34;&gt;ALE&lt;/span&gt;–&lt;span class=&#34;caps&#34;&gt;FEM&lt;/span&gt;
+formulations in computational fluid dynamics. The qualitative agreement of the
+flow pattern and velocity distribution demonstrates correct implementation of
+the&amp;nbsp;solver.&lt;/p&gt;            </content>
+        </entry>
             <entry>
             <title type="html">Pressure field of flow past cylinder</title>
             <author><name>Gustavo R Anjos</name></author>
