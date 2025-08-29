@@ -7,10 +7,21 @@
         <link href="/"/>
     
         
-    <updated>2025-08-27T21:49:35Z</updated>
+    <updated>2025-08-29T16:43:04Z</updated>
 
     <id>/students/atom.xml/</id>
 
+            <entry>
+            <title type="html">Implementation of Polynomial Regression for Numerical Analysis of 2d Flow over a Backward-Facing Step</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/Heitor_Gomes_de_Souza_Batista.html"/>
+            <updated>2025-08-20T09:00:00Z</updated>
+            <published>2025-08-20T09:00:00Z</published>
+            <id>/students/bsc/Heitor_Gomes_de_Souza_Batista.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
             <entry>
             <title type="html">Variational and Numerical Analysis of the Poisson Equation for Heat Transfer Problems</title>
             <author><name>Gustavo R Anjos</name></author>
