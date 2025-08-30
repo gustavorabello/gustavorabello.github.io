@@ -1,8 +1,8 @@
 
 /* STUDENTS - 1 COLUMN LAYOUT */
 
-#singleColumns 
-{ 
+#singleColumns
+{
  height:3900px;
  width:660px;
 }
@@ -10,7 +10,7 @@
 #singleColumns p
 {
  color:red;
- font-size:16px; 
+ font-size:16px;
  letter-spacing:-1px;
 }
 
@@ -20,13 +20,13 @@
  letter-spacing:-1px;
  text-decoration: none;
  margin-left:40px;
- font-size:18px; 
+ font-size:18px;
 }
 
 #singleColumns h1
-{ 
- font-size:24px; 
- font-weight:none; 
+{
+ font-size:24px;
+ font-weight:none;
  color:blue;
  width:400px;
  border-bottom: 2px solid black;
@@ -36,19 +36,19 @@
 }
 
 #singleColumns span
-{ 
- font-size:14px; 
+{
+ font-size:14px;
  font-style: italic;
  vertical-align:text-top;
  letter-spacing:-1px;
- font-weight:none; 
+ font-weight:none;
  color:red;
 }
 
 #singleColumns ul
-{ 
+{
  margin-left:-20px;
- text-align:left; 
+ text-align:left;
 }
 
 #singleColumns li
@@ -56,12 +56,12 @@
  margin-left:60px;
  list-style-type: square;
  color:gray;
- font-size:14px; 
+ font-size:14px;
  letter-spacing:-1px;
 }
 
 #singleColumns hr
-{ 
+{
  background-color:red;
  height:2px;
  border:0;
