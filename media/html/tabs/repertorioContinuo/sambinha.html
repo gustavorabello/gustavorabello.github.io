@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Conselho – (Almir Guineto)</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      background: #f8f8f8;
+     	background-image: url("../../../images/background.png");
+      color: #222;
+      margin: 0;
+      font-family: 'Merriweather', Georgia, serif;
+    }
+    .back-btn {
+      position: fixed;
+      top: 18px;
+      left: 22px;
+      background: #fff;
+      color: #2563eb;
+      font-size: 1.08em;
+      padding: 7px 17px 6px 12px;
+      border-radius: 22px;
+      box-shadow: 0 1px 7px #ddd;
+      border: 1.5px solid #eaeaea;
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 5000;
+      transition: background 0.16s, color 0.16s;
+    }
+    .back-btn:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
+    .container {
+      background: #dcdcdc;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #ccc;
+      max-width: 950px;
+      margin: 48px auto 24px auto;
+      padding: 36px 32px 28px 32px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 1.5px solid #e7e7e7;
+      margin-bottom: 34px;
+      padding-bottom: 10px;
+    }
+    .title {
+      font-size: 2.0em;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin: 0 0 7px 0;
+      line-height: 1.07;
+    }
+    .author-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .author-link:hover {
+      color: #f98600;
+      text-decoration: underline;
+    }
+    .columns {
+      display: flex;
+      gap: 28px;
+      margin-top: 15px;
+    }
+    .col {
+      width: 50%;
+    }
+    .singlecol {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .singlecol pre {
+      max-width: 600px;
+      margin: 0 auto 0 auto;
+    }
+    pre {
+      font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
+      font-size: 0.85em;
+      background: #f1f5fb;
+      padding: 18px 14px 17px 20px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      line-height: 1.15;
+      white-space: pre;
+      color: #20253a;
+    }
+    .chord {
+      color: #fc6108;
+      font-weight: bold;
+    }
+    @media (max-width: 900px) {
+      .container { padding: 13px 2vw 12px 2vw;}
+      .columns { flex-direction: column; gap: 0; }
+      .col { width: 100%; }
+      .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
+    }
+    @media (max-width: 600px) {
+      .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
+      .title { font-size: 1.12em;}
+      .singlecol pre { max-width: 98vw; }
+    }
+  </style>
+</head>
+<body>
+  <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
+  <div class="container">
+    <div class="header">
+      <div class="title">Conselho</div>
+      <div class="author">
+        <a class="author-link" href="https://www.cifraclub.com.br/almir-guineto/" target="_blank" rel="noopener">(Almir Guineto)</a>
+      </div>
+    </div>
+    
+    <div class="columns">
+      <div class="col">
+        <pre>
+         <span class="chord">F</span>
+Deixe de lado esse baixo astral
+         <span class="chord">Am7</span>
+Erga a cabeça enfrente o mal
+             <span class="chord">Cm7</span>         <span class="chord">F7</span>            <span class="chord">Bb7M</span>
+Que agindo assim será vital para o seu coração
+
+         <span class="chord">Bbm7</span>                   <span class="chord">F7</span>    <span class="chord">Eb7</span>    <span class="chord">D7</span>
+É que em cada experiência se aprende uma lição
+       <span class="chord">G7</span>
+Eu já sofri por amar assim
+       <span class="chord">Gm</span>                   <span class="chord">C7</span>
+Me dediquei mas foi tudo em vão
+
+     <span class="chord">F</span>           <span class="chord">Am7</span>
+Pra que se lamentar
+          <span class="chord">Cm7</span>   <span class="chord">F7</span>        <span class="chord">Bb7M</span>
+Se em sua vida pode encontrar
+        <span class="chord">Bbm7</span>          <span class="chord">F7</span>   <span class="chord">Eb7</span>   <span class="chord">D7</span>
+Quem te ame com toda força e ardor
+  <span class="chord">G7</span>     <span class="chord">C#7</span>    <span class="chord">C7</span>   <span class="chord">F</span>          <span class="chord">C7</span>
+Assim sucumbirá a dor  (tem que lutar)
+
+           <span class="chord">F</span>
+Tem que lutar
+         <span class="chord">Am7</span>
+Não se abater
+           <span class="chord">Cm7</span>
+Só se entregar
+<span class="chord">F7</span>           <span class="chord">Bb7M</span>
+  <span class="chord">A</span> quem te merecer
+
+         <span class="chord">Bbm</span>
+Não estou dando nem vendendo
+   <span class="chord">F7</span>      <span class="chord">Eb7</span>   <span class="chord">D7</span>
+É como o ditado diz
+         <span class="chord">Gm</span>             <span class="chord">C7</span>    <span class="chord">F</span>
+O meu conselho é pra te ver feliz
+
+<span class="chord">A</span> Voz do Samba
+(Zé Keti)
+
+Int.: <span class="chord">F#7+</span> <span class="chord">B7+</span> <span class="chord">Abm7</span> <span class="chord">C#7/9</span> <span class="chord">F#7+</span>
+
+<span class="chord">F#7+</span>        <span class="chord">Cm5</span>-/7
+Eu sou o samba
+<span class="chord">Bm7</span>                    <span class="chord">Bbm7</span>
+<span class="chord">A</span> voz do morro sou eu mesmo sim senhor
+<span class="chord">Aº</span>                      <span class="chord">Abm</span>
+Quero mostrar ao mundo que tenho valor
+<span class="chord">C#7</span>                 <span class="chord">F#7+</span>
+Eu sou o rei do terreiro
+          <span class="chord">Cm5</span>-/7
+Eu sou o samba
+<span class="chord">Bm</span>                     <span class="chord">Bbm7</span>
+Sou natural daqui do Rio de Janeiro
+<span class="chord">Aº</span>                    <span class="chord">Abm</span>
+Sou eu quem levo a alegria
+       <span class="chord">Bm7</span>          <span class="chord">C#7</span>       <span class="chord">F#7+</span>
+Para milhões de corações brasileiros
+         <span class="chord">Cm5</span>-/7   <span class="chord">Bm7</span>   <span class="chord">Bbm7</span>
+Salve o samba, queremos samba
+<span class="chord">Aº</span>           <span class="chord">Abm</span>        <span class="chord">C#7</span>      <span class="chord">F#7+</span>
+Quem está pedindo é a voz do povo de um país
+         <span class="chord">Cm5</span>-/7  <span class="chord">Bm7</span>    <span class="chord">Bbm7</span>
+Salve o samba, queremos samba
+<span class="chord">Aº</span>      <span class="chord">Abm</span>           <span class="chord">C#7</span>     <span class="chord">F#7+</span>
+Essa melodia de um Brasil feliz
+
+Não Deixe o Samba Morrer
+(Alcione)
+
+intro: <span class="chord">Bm</span> <span class="chord">C#m7/b5</span> <span class="chord">F#7</span>
+
+  <span class="chord">Bm</span>            <span class="chord">B7</span>                   <span class="chord">Em</span>  <span class="chord">Em/D</span>
+Quando eu não puder pisar mais na avenida
+<span class="chord">C#m7/b5</span>           <span class="chord">F#7</span>                <span class="chord">Bm</span>
+Quando as minhas pernas não puderem aguentar
+          <span class="chord">Em</span>   <span class="chord">A</span>              <span class="chord">D7+</span>
+Levar meu corpo junto com meu samba
+<span class="chord">G7+</span>            <span class="chord">C#m7/b5</span>          <span class="chord">F#7</span>          <span class="chord">Bm</span>
+ O meu anel de bamba entrego a quem mereça usar (2x)
+         <span class="chord">Em</span>     <span class="chord">A</span>                <span class="chord">D7+</span>
+Eu vou ficar no meio do povo espiando
+<span class="chord">C#m7/b5</span>        <span class="chord">B7</span>          <span class="chord">Em</span>
+Minha escola perdendo ou ganhando
+ <span class="chord">A</span>           <span class="chord">D7+</span>  <span class="chord">C#m7/b5</span>  <span class="chord">B7</span>
+Mais um carnaval
+ <span class="chord">Em</span>              <span class="chord">A</span>
+Antes de me despedir
+ <span class="chord">D7+</span>                    <span class="chord">Bm</span>
+Deixo ao sambista mais novo
+<span class="chord">G</span>         <span class="chord">F#7</span>   <span class="chord">Bm</span>   <span class="chord">B7</span> (<span class="chord">F#7</span>)
+ O meu pedido final     (2x)
+
+(refrão 2x)
+<span class="chord">Bm</span>          <span class="chord">B7</span>       <span class="chord">Em</span> <span class="chord">Em/D</span>
+Não deixe o samba morrer
+<span class="chord">C#m7/b5</span>     <span class="chord">F#7</span>      <span class="chord">Bm</span>
+Não deixe o samba acabar
+                     <span class="chord">C#m7/b5</span>
+O morro foi feito de samba
+   <span class="chord">F#7</span>               <span class="chord">Bm</span>
+De samba pra gente sambar (2x)
+
+Se Voce Jurar
+(Ismael Silva)
+
+Intro: <span class="chord">A7</span> <span class="chord">D</span> <span class="chord">Em</span>-<span class="chord">A7</span> <span class="chord">D</span> <span class="chord">Em</span> <span class="chord">D</span> <span class="chord">Em</span>-<span class="chord">A7</span> <span class="chord">D</span> <span class="chord">A7</span>
+          <span class="chord">D</span> 
+Se você jurar
+       <span class="chord">A</span>        <span class="chord">F#7</span>
+Que me tem amor
+<span class="chord">Bm</span>                <span class="chord">F#7</span>         
+Eu posso me regenerar          REFRÃO
+<span class="chord">B7</span>
+Mas se é
+        <span class="chord">Em</span>
+Para fingir, mulher
+     <span class="chord">Bm</span>    <span class="chord">C#m</span>    <span class="chord">F#7</span>     <span class="chord">Bm</span>  
+<span class="chord">A</span> orgia assim não vou deixar
+
+<span class="chord">Bm</span>
+<span class="chord">A</span> mulher é um jogo
+               <span class="chord">F#7(ou A#º)</span>
+Difícil de acertar
+
+<span class="chord">E</span> o homem como um bobo
+         <span class="chord">F#7</span>       <span class="chord">Bm</span>
+Não se cansa de jogar
+                 <span class="chord">B7</span>
+O que eu posso fazer
+             <span class="chord">Em</span>
+<span class="chord">E</span> se você jurar
+
+              <span class="chord">Bm</span> 
+Arriscar a perder
+          <span class="chord">C#m</span>   <span class="chord">F#7</span>    <span class="chord">Bm</span>  <span class="chord">Bm</span>-<span class="chord">A#7</span>-<span class="chord">A7</span>
+Ou desta vez então ganhar
+(Refrão)
+
+<span class="chord">Bm</span>
+Mulher tenho sofrido
+              <span class="chord">F#7</span>   
+Por minha lealdade
+
+Agora estou sabido
+                    <span class="chord">Bm</span>
+Não vou atrás de amizade
+               <span class="chord">B7</span>
+<span class="chord">A</span> minha vida é boa
+                    <span class="chord">Em</span>
+Não tenho em que pensar
+                <span class="chord">Bm</span>
+Por uma coisa à toa
+        <span class="chord">C#m</span>  <span class="chord">F#7</span>  <span class="chord">Bm</span>  <span class="chord">Bm</span>-<span class="chord">A#7</span>-<span class="chord">A7</span>
+Não vou me regenerar
+
+Trem das Onze
+(Adoniran Barbosa)
+
+Intro:  <span class="chord">Gm</span> - <span class="chord">G#º</span> - <span class="chord">Dm/A</span> - <span class="chord">Bb7</span> - <span class="chord">A7</span> - <span class="chord">Dm</span> - <span class="chord">D7</span>
+        <span class="chord">Gm</span> - <span class="chord">G#º</span> - <span class="chord">Dm/A</span> - <span class="chord">Bb7</span> - <span class="chord">A7</span> - <span class="chord">Dm</span> - <span class="chord">A7</span>
+
+          <span class="chord">Dm</span>
+Não posso ficar nem mais um minuto com você 
+                              <span class="chord">A7</span>    <span class="chord">Eb7</span>  <span class="chord">D7</span>
+Sinto muito amor, mas não pode ser
+<span class="chord">Gm</span>          <span class="chord">Dm</span>                     <span class="chord">Bb7</span>
+Moro em Jaçanã, se eu perder esse trem
+           <span class="chord">A7</span>
+Que sai agora às onze horas
+                 <span class="chord">Dm</span>
+Só amanhã de manhã
+
+       <span class="chord">D7</span>                        <span class="chord">Gm</span>
+<span class="chord">E</span> além disso mulher, tem outra coisa
+                                       <span class="chord">A7</span>  <span class="chord">Eb7</span>  <span class="chord">D7</span>
+Minha mãe não dorme enquanto eu não chegar
+<span class="chord">Gm</span>   <span class="chord">G#º</span>     <span class="chord">Dm</span>
+Sou  filho  único
+<span class="chord">Bb7</span>          <span class="chord">A7</span>         <span class="chord">Dm</span>  <span class="chord">D7</span>
+Tenho minha casa pra olhar
+
+Retalhos de Cetim
+(Benito Di Paula)
+
+<span class="chord">Am7</span>                     <span class="chord">Em</span>
+    Ensaiei meu samba o ano inteiro
+<span class="chord">Am</span>                       <span class="chord">Em</span>
+   Comprei surdo e tamborim
+<span class="chord">Am</span>                      <span class="chord">C</span>
+   Gastei tudo em fantasia
+             <span class="chord">F</span>
+Era só o que eu queria.
+<span class="chord">F#°</span>             <span class="chord">E</span>
+    <span class="chord">E</span> ela jurou   desfilar pra mim
+
+<span class="chord">Am</span>                 <span class="chord">Em</span>
+   Minha escola estava tão bonita
+<span class="chord">Am</span>                       <span class="chord">Em</span>
+   Era tudo o que eu queria ver
+<span class="chord">Am</span>                   <span class="chord">C</span>
+   <span class="chord">Em</span> retalhos de cetim.
+           <span class="chord">F</span>
+Eu dormi o ano inteiro
+<span class="chord">F#°</span>          <span class="chord">E</span>
+<span class="chord">E</span> ela jurou desfilar pra mim
+
+Refrão:
+
+        <span class="chord">A</span>  <span class="chord">A7+/G#</span>       <span class="chord">A7/G</span>  <span class="chord">F#7</span>
+Mas chegou        o carnaval
+    <span class="chord">Bm</span>    <span class="chord">F7</span>     <span class="chord">E4</span>   <span class="chord">E</span>
+<span class="chord">E</span> ela não    desfilou
+     <span class="chord">A</span>     <span class="chord">C</span>             <span class="chord">F</span>
+Eu chorei na avenida, eu   chorei
+                <span class="chord">Dm</span>       <span class="chord">E7</span>               <span class="chord">Am</span>        <span class="chord">E7</span>
+Não pensei que mentia a cabrocha, que eu tanto amei
+
+<span class="chord">Am</span>                 <span class="chord">Em</span>
+   Minha escola estava tão bonita
+<span class="chord">Am</span>                       <span class="chord">Em</span>
+   Era tudo o que eu queria ver
+
+<span class="chord">Am</span>                   <span class="chord">C</span>
+   <span class="chord">Em</span> retalhos de cetim.
+           <span class="chord">F</span>
+Eu dormi o ano inteiro
+<span class="chord">F#°</span>          <span class="chord">E</span>
+<span class="chord">E</span> ela jurou desfilar pra mim
+
+Refrão:
+
+        <span class="chord">A</span>  <span class="chord">A7+/G#</span>       <span class="chord">A7/G</span>  <span class="chord">F#7</span>
+Mas chegou        o carnaval
+    <span class="chord">Bm</span>    <span class="chord">F7</span>     <span class="chord">E4</span>   <span class="chord">E</span>
+<span class="chord">E</span> ela não    desfilou
+     <span class="chord">A</span>     <span class="chord">C</span>             <span class="chord">F</span>
+Eu chorei na avenida, eu   chorei
+                <span class="chord">Dm</span>       <span class="chord">E7</span>               <span class="chord">A</span>        <span class="chord">E7</span>
+Não pensei que mentia a cabrocha, que eu tanto amei
+
+        <span class="chord">A</span>  <span class="chord">A7+/G#</span>       <span class="chord">A7/G</span>  <span class="chord">F#7</span>
+Mas chegou        o carnaval
+    <span class="chord">Bm</span>    <span class="chord">F7</span>     <span class="chord">E4</span>   <span class="chord">E</span>
+<span class="chord">E</span> ela não    desfilou
+     <span class="chord">A</span>     <span class="chord">C</span>             <span class="chord">F</span>
+Eu chorei na avenida, eu   chorei
+                <span class="chord">Dm</span>       <span class="chord">E7</span>               <span class="chord">A</span>        <span class="chord">E7</span>
+Não pensei que mentia a cabrocha, que eu tanto amei
+
+        <span class="chord">A</span>  <span class="chord">A7+/G#</span>       <span class="chord">A7/G</span>  <span class="chord">F#7</span>
+Mas chegou        o carnaval
+    <span class="chord">Bm</span>    <span class="chord">F7</span>     <span class="chord">E4</span>   <span class="chord">E</span>
+<span class="chord">E</span> ela não    desfilou
+     <span class="chord">A</span>     <span class="chord">C</span>             <span class="chord">F</span>
+Eu chorei na avenida, eu   chorei
+                <span class="chord">Dm</span>       <span class="chord">E7</span>               <span class="chord">A</span>        <span class="chord">E7</span>
+Não pensei que mentia a cabrocha, que eu tanto amei
+
+Deixa Eu Te Amar
+(Agepê)
+
+<span class="chord">Am</span>
+Quero ir na fonte do teu ser
+ 
+    <span class="chord">Em5</span>-/7    <span class="chord">A7</span>     <span class="chord">Dm</span>
+<span class="chord">E</span> banhar-me na tua pureza
+                                <span class="chord">E7</span>
+Guardar em pote gotas de felicidade
+         <span class="chord">Bm5</span>-/7   <span class="chord">E7</span>              <span class="chord">Am</span>
+Matar saudade que ainda existe em mim
+     <span class="chord">E7</span>                 <span class="chord">Am</span>
+Afagar teus cabelos molhados
+       <span class="chord">Em5</span>-/7      <span class="chord">A7</span>        <span class="chord">Dm</span>
+Pelo orvalho que a natureza rega
+                                  <span class="chord">Bm7(b5)</span>
+Com a sutileza que lhe fez a perfeição
+               <span class="chord">E7</span>                 <span class="chord">Am</span>  <span class="chord">A7(b13)</span> <span class="chord">A7</span>
+Deixando a certeza de amor no coração
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">A7(b5)</span> <span class="chord">A7</span> 
+Eu quero estar o tempo inteiro
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">Bm5</span>-/7 <span class="chord">E7</span>
+Eu quero estar o tempo inteiro
+
+<span class="chord">Am</span>
+Quero saciar a minha sede
+     <span class="chord">Em5</span>-/7      <span class="chord">A7</span>            <span class="chord">Dm</span>
+No desejo da paixão que me alucina
+                                      <span class="chord">E7</span>                
+Vou me embrenhar em densa mata só porque
+              <span class="chord">Bm5</span>-/7        <span class="chord">E7</span>        <span class="chord">Am</span>
+Existe uma cascata que tem água cristalina
+      <span class="chord">E7</span>                  <span class="chord">Am</span>
+<span class="chord">A</span>í então vou te amar com sede
+             <span class="chord">Em5</span>-/7    <span class="chord">A7</span>        <span class="chord">Dm</span>
+Na relva, na rede, onde você quiser
+<span class="chord">E7</span>                <span class="chord">Am</span>
+Quero te pegar no colo
+             <span class="chord">Bm5</span>-/7      <span class="chord">E7</span>   <span class="chord">Am</span>  <span class="chord">Em5</span>-/7  <span class="chord">A7</span>
+Te deitar no solo e te fazer mulher
+<span class="chord">Dm</span>                <span class="chord">Am</span>
+Quero te pegar no colo
+               <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>   <span class="chord">Am</span>  <span class="chord">Em5</span>-/7  <span class="chord">A7</span>
+Te deitar no solo e te fazer mulher
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">A7(b5)</span> <span class="chord">A7</span> 
+Eu quero estar o tempo inteiro
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">Bm5</span>-/7 <span class="chord">E7</span>
+Eu quero estar o tempo inteiro
+
+Flor de Lis
+(Djavan)
+
+Intro.: <span class="chord">C7M(9)</span>     <span class="chord">Fm6</span>     <span class="chord">C7M(9)</span>     <span class="chord">Fm6</span>
+
+     <span class="chord">C7M</span>                         <span class="chord">Bm7(11)</span>
+Valei-me,   Deus!   É o fim  do nos--------so amor
+<span class="chord">E7(b9)</span>          <span class="chord">Am7</span>     
+    Perdo---a, por favor
+<span class="chord">D7(13)</span>            <span class="chord">Gm7</span>        <span class="chord">C7(9)</span>
+    Eu sei  que o erro aconteceu
+             <span class="chord">F#m7(b5)</span>       
+Mas não  sei o que fez
+<span class="chord">B7(b9)</span>     <span class="chord">Bb7M</span>       
+    Tudo mudar de vez
+<span class="chord">A7(b13)</span>                <span class="chord">F#m7(b5)</span>
+    Onde foi  que eu errei?
+<span class="chord">B7(b9)</span>         <span class="chord">Em7</span>     <span class="chord">A7(b13)</span>
+Eu só sei que amei,  que amei
+    <span class="chord">D7(9)</span>   <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span>
+Que amei, que amei
+
+  <span class="chord">C7M</span>                   <span class="chord">Bm7(11)</span>
+Será talvez,  que minha ilusão
+<span class="chord">E7(b9)</span>            <span class="chord">Am7</span>
+    Foi dar  meu coração
+<span class="chord">D7(9)</span>        <span class="chord">Gm7</span>
+    Com toda força
+         <span class="chord">C7(9)</span>   <span class="chord">F#m7(b5)</span>
+Pra essa moça me fazer feliz
+<span class="chord">B7(b9)</span>      <span class="chord">Bb7M</span>
+    <span class="chord">E</span> o destino não quis
+<span class="chord">A7(b13)</span>   <span class="chord">F#m7(b5)</span>
+   Me ver como raiz
+<span class="chord">B7(b9)</span>    <span class="chord">C/E</span>      
+   De uma flor de lis
+
+<span class="chord">Am7</span>                  <span class="chord">F#m7(b5)</span>
+   <span class="chord">E</span> foi assim que eu vi
+<span class="chord">Fm6</span>                <span class="chord">C7M(9)</span>   <span class="chord">E7(b9)</span>
+   Nosso amor  na poeira   poeira
+<span class="chord">Am</span>                <span class="chord">Fm/Ab</span>       <span class="chord">C/G</span>
+   Morto na beleza fria  de Maria
+
+    <span class="chord">C7/4(9)</span>  <span class="chord">C7(9)</span>    <span class="chord">F#m5(b5)</span>
+<span class="chord">E</span> o meu    jardim da vida
+     <span class="chord">Fm6</span>      <span class="chord">Em7</span>
+Ressecou, morreu
+   <span class="chord">Am7</span>             <span class="chord">D7(9)</span>
+Do pé que brotou Maria
+      <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span> <span class="chord">Gm7</span>
+Nem margarida    nasceu
+
+    <span class="chord">C7/4(9)</span>  <span class="chord">C7(9)</span>    <span class="chord">F#m5(b5)</span>
+<span class="chord">E</span> o meu    jardim da vida
+     <span class="chord">Fm6</span>      <span class="chord">Em7</span>
+Ressecou, morreu
+   <span class="chord">Am7</span>             <span class="chord">D7(9)</span>
+Do pé que brotou Maria
+      <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span> <span class="chord">Gm7</span>
+Nem margarida     nasceu
+
+Wave
+(Tom Jobim)
+
+intro: <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+
+           <span class="chord">D7+/9</span>
+Vou te contar
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+Os olhos já não podem ver
+            <span class="chord">G7M</span>      <span class="chord">Gm6</span>           <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+Coisas que só o coração pode entender
+      <span class="chord">B7(9-)</span>    <span class="chord">E7(9)</span>
+Fundamental é  mesmo o amor
+     <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+É impossível ser feliz sozinho
+
+           <span class="chord">D7+/9</span>
+O resto é mar
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+É tudo que não sei contar
+            <span class="chord">G7M</span>           <span class="chord">Gm6</span>           <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+São coisas lindas que eu tenho pra te dar
+         <span class="chord">B7(9-)</span>     <span class="chord">E7(9)</span>
+Vem de mansinho a brisa e me diz
+     <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+É impossível ser feliz sozinho
+
+ <span class="chord">Gm7</span>         <span class="chord">C/Bb</span>        <span class="chord">Am7</span>
+Da primeira vez era a cida...de
+ <span class="chord">Fm7</span>          <span class="chord">Bb/Ab</span>          <span class="chord">Gm/A</span>   <span class="chord">A7(13-)</span>
+Da segunda o cais e a eternida...de
+           <span class="chord">D7+/9</span>
+Agora eu já sei
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+Da onda que se ergueu no mar
+          <span class="chord">G7M</span>            <span class="chord">Gm6</span>         <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+<span class="chord">E</span> das estrelas que esquecemos de contar
+        <span class="chord">B7(9-)</span>   <span class="chord">E7(9)</span>
+O amor se deixa surpreender
+         <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+Enquanto a noite vem nos envolver
+   <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+Sozinho...
+Trem das Onze
+(Adoniran Barbosa)
+
+Intro:  <span class="chord">Gm</span> - <span class="chord">G#º</span> - <span class="chord">Dm/A</span> - <span class="chord">Bb7</span> - <span class="chord">A7</span> - <span class="chord">Dm</span> - <span class="chord">D7</span>
+        <span class="chord">Gm</span> - <span class="chord">G#º</span> - <span class="chord">Dm/A</span> - <span class="chord">Bb7</span> - <span class="chord">A7</span> - <span class="chord">Dm</span> - <span class="chord">A7</span>
+
+          <span class="chord">Dm</span>
+Não posso ficar nem mais um minuto com você 
+                              <span class="chord">A7</span>    <span class="chord">Eb7</span>  <span class="chord">D7</span>
+Sinto muito amor, mas não pode ser
+<span class="chord">Gm</span>          <span class="chord">Dm</span>                     <span class="chord">Bb7</span>
+Moro em Jaçanã, se eu perder esse trem
+           <span class="chord">A7</span>
+Que sai agora às onze horas
+                 <span class="chord">Dm</span>
+Só amanhã de manhã
+
+       <span class="chord">D7</span>                        <span class="chord">Gm</span>
+<span class="chord">E</span> além disso mulher, tem outra coisa
+                                       <span class="chord">A7</span>  <span class="chord">Eb7</span>  <span class="chord">D7</span>
+Minha mãe não dorme enquanto eu não chegar
+<span class="chord">Gm</span>   <span class="chord">G#º</span>     <span class="chord">Dm</span>
+Sou  filho  único
+<span class="chord">Bb7</span>          <span class="chord">A7</span>         <span class="chord">Dm</span>  <span class="chord">D7</span>
+Tenho minha casa pra olhar
+
+Retalhos de Cetim
+(Benito Di Paula)
+
+<span class="chord">Am7</span>                     <span class="chord">Em</span>
+    Ensaiei meu samba o ano inteiro
+<span class="chord">Am</span>                       <span class="chord">Em</span>
+   Comprei surdo e tamborim
+<span class="chord">Am</span>                      <span class="chord">C</span>
+   Gastei tudo em fantasia
+             <span class="chord">F</span>
+Era só o que eu queria.
+<span class="chord">F#°</span>             <span class="chord">E</span>
+    <span class="chord">E</span> ela jurou   desfilar pra mim
+
+<span class="chord">Am</span>                 <span class="chord">Em</span>
+   Minha escola estava tão bonita
+<span class="chord">Am</span>                       <span class="chord">Em</span>
+   Era tudo o que eu queria ver
+<span class="chord">Am</span>                   <span class="chord">C</span>
+   <span class="chord">Em</span> retalhos de cetim.
+           <span class="chord">F</span>
+Eu dormi o ano inteiro
+<span class="chord">F#°</span>          <span class="chord">E</span>
+<span class="chord">E</span> ela jurou desfilar pra mim
+
+Refrão:
+
+        <span class="chord">A</span>  <span class="chord">A7+/G#</span>       <span class="chord">A7/G</span>  <span class="chord">F#7</span>
+Mas chegou        o carnaval
+    <span class="chord">Bm</span>    <span class="chord">F7</span>     <span class="chord">E4</span>   <span class="chord">E</span>
+<span class="chord">E</span> ela não    desfilou
+     <span class="chord">A</span>     <span class="chord">C</span>             <span class="chord">F</span>
+Eu chorei na avenida, eu   chorei
+                <span class="chord">Dm</span>       <span class="chord">E7</span>               <span class="chord">Am</span>        <span class="chord">E7</span>
+Não pensei que mentia a cabrocha, que eu tanto amei
+
+<span class="chord">Am</span>                 <span class="chord">Em</span>
+   Minha escola estava tão bonita
+<span class="chord">Am</span>                       <span class="chord">Em</span>
+   Era tudo o que eu queria ver
+
+<span class="chord">Am</span>                   <span class="chord">C</span>
+   <span class="chord">Em</span> retalhos de cetim.
+           <span class="chord">F</span>
+Eu dormi o ano inteiro
+<span class="chord">F#°</span>          <span class="chord">E</span>
+<span class="chord">E</span> ela jurou desfilar pra mim
+
+Refrão:
+
+        <span class="chord">A</span>  <span class="chord">A7+/G#</span>       <span class="chord">A7/G</span>  <span class="chord">F#7</span>
+Mas chegou        o carnaval
+    <span class="chord">Bm</span>    <span class="chord">F7</span>     <span class="chord">E4</span>   <span class="chord">E</span>
+<span class="chord">E</span> ela não    desfilou
+     <span class="chord">A</span>     <span class="chord">C</span>             <span class="chord">F</span>
+Eu chorei na avenida, eu   chorei
+                <span class="chord">Dm</span>       <span class="chord">E7</span>               <span class="chord">A</span>        <span class="chord">E7</span>
+Não pensei que mentia a cabrocha, que eu tanto amei
+
+        <span class="chord">A</span>  <span class="chord">A7+/G#</span>       <span class="chord">A7/G</span>  <span class="chord">F#7</span>
+Mas chegou        o carnaval
+    <span class="chord">Bm</span>    <span class="chord">F7</span>     <span class="chord">E4</span>   <span class="chord">E</span>
+<span class="chord">E</span> ela não    desfilou
+     <span class="chord">A</span>     <span class="chord">C</span>             <span class="chord">F</span>
+Eu chorei na avenida, eu   chorei
+                <span class="chord">Dm</span>       <span class="chord">E7</span>               <span class="chord">A</span>        <span class="chord">E7</span>
+Não pensei que mentia a cabrocha, que eu tanto amei
+
+        <span class="chord">A</span>  <span class="chord">A7+/G#</span>       <span class="chord">A7/G</span>  <span class="chord">F#7</span>
+Mas chegou        o carnaval
+    <span class="chord">Bm</span>    <span class="chord">F7</span>     <span class="chord">E4</span>   <span class="chord">E</span>
+<span class="chord">E</span> ela não    desfilou
+     <span class="chord">A</span>     <span class="chord">C</span>             <span class="chord">F</span>
+Eu chorei na avenida, eu   chorei
+                <span class="chord">Dm</span>       <span class="chord">E7</span>               <span class="chord">A</span>        <span class="chord">E7</span>
+Não pensei que mentia a cabrocha, que eu tanto amei
+
+Deixa Eu Te Amar
+(Agepê)
+
+<span class="chord">Am</span>
+Quero ir na fonte do teu ser
+ 
+    <span class="chord">Em5</span>-/7    <span class="chord">A7</span>     <span class="chord">Dm</span>
+<span class="chord">E</span> banhar-me na tua pureza
+                                <span class="chord">E7</span>
+Guardar em pote gotas de felicidade
+         <span class="chord">Bm5</span>-/7   <span class="chord">E7</span>              <span class="chord">Am</span>
+Matar saudade que ainda existe em mim
+     <span class="chord">E7</span>                 <span class="chord">Am</span>
+Afagar teus cabelos molhados
+       <span class="chord">Em5</span>-/7      <span class="chord">A7</span>        <span class="chord">Dm</span>
+Pelo orvalho que a natureza rega
+                                  <span class="chord">Bm7(b5)</span>
+Com a sutileza que lhe fez a perfeição
+               <span class="chord">E7</span>                 <span class="chord">Am</span>  <span class="chord">A7(b13)</span> <span class="chord">A7</span>
+Deixando a certeza de amor no coração
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">A7(b5)</span> <span class="chord">A7</span> 
+Eu quero estar o tempo inteiro
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">Bm5</span>-/7 <span class="chord">E7</span>
+Eu quero estar o tempo inteiro
+
+<span class="chord">Am</span>
+Quero saciar a minha sede
+     <span class="chord">Em5</span>-/7      <span class="chord">A7</span>            <span class="chord">Dm</span>
+No desejo da paixão que me alucina
+                                      <span class="chord">E7</span>                
+Vou me embrenhar em densa mata só porque
+              <span class="chord">Bm5</span>-/7        <span class="chord">E7</span>        <span class="chord">Am</span>
+Existe uma cascata que tem água cristalina
+      <span class="chord">E7</span>                  <span class="chord">Am</span>
+<span class="chord">A</span>í então vou te amar com sede
+             <span class="chord">Em5</span>-/7    <span class="chord">A7</span>        <span class="chord">Dm</span>
+Na relva, na rede, onde você quiser
+<span class="chord">E7</span>                <span class="chord">Am</span>
+Quero te pegar no colo
+             <span class="chord">Bm5</span>-/7      <span class="chord">E7</span>   <span class="chord">Am</span>  <span class="chord">Em5</span>-/7  <span class="chord">A7</span>
+Te deitar no solo e te fazer mulher
+<span class="chord">Dm</span>                <span class="chord">Am</span>
+Quero te pegar no colo
+               <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>   <span class="chord">Am</span>  <span class="chord">Em5</span>-/7  <span class="chord">A7</span>
+Te deitar no solo e te fazer mulher
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">A7(b5)</span> <span class="chord">A7</span> 
+Eu quero estar o tempo inteiro
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">Bm5</span>-/7 <span class="chord">E7</span>
+Eu quero estar o tempo inteiro
+
+Flor de Lis
+(Djavan)
+
+Intro.: <span class="chord">C7M(9)</span>     <span class="chord">Fm6</span>     <span class="chord">C7M(9)</span>     <span class="chord">Fm6</span>
+
+     <span class="chord">C7M</span>                         <span class="chord">Bm7(11)</span>
+Valei-me,   Deus!   É o fim  do nos--------so amor
+<span class="chord">E7(b9)</span>          <span class="chord">Am7</span>     
+    Perdo---a, por favor
+<span class="chord">D7(13)</span>            <span class="chord">Gm7</span>        <span class="chord">C7(9)</span>
+    Eu sei  que o erro aconteceu
+             <span class="chord">F#m7(b5)</span>       
+Mas não  sei o que fez
+<span class="chord">B7(b9)</span>     <span class="chord">Bb7M</span>       
+    Tudo mudar de vez
+<span class="chord">A7(b13)</span>                <span class="chord">F#m7(b5)</span>
+    Onde foi  que eu errei?
+<span class="chord">B7(b9)</span>         <span class="chord">Em7</span>     <span class="chord">A7(b13)</span>
+Eu só sei que amei,  que amei
+    <span class="chord">D7(9)</span>   <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span>
+Que amei, que amei
+
+  <span class="chord">C7M</span>                   <span class="chord">Bm7(11)</span>
+Será talvez,  que minha ilusão
+<span class="chord">E7(b9)</span>            <span class="chord">Am7</span>
+    Foi dar  meu coração
+<span class="chord">D7(9)</span>        <span class="chord">Gm7</span>
+    Com toda força
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
+         <span class="chord">C7(9)</span>   <span class="chord">F#m7(b5)</span>
+Pra essa moça me fazer feliz
+<span class="chord">B7(b9)</span>      <span class="chord">Bb7M</span>
+    <span class="chord">E</span> o destino não quis
+<span class="chord">A7(b13)</span>   <span class="chord">F#m7(b5)</span>
+   Me ver como raiz
+<span class="chord">B7(b9)</span>    <span class="chord">C/E</span>      
+   De uma flor de lis
+
+<span class="chord">Am7</span>                  <span class="chord">F#m7(b5)</span>
+   <span class="chord">E</span> foi assim que eu vi
+<span class="chord">Fm6</span>                <span class="chord">C7M(9)</span>   <span class="chord">E7(b9)</span>
+   Nosso amor  na poeira   poeira
+<span class="chord">Am</span>                <span class="chord">Fm/Ab</span>       <span class="chord">C/G</span>
+   Morto na beleza fria  de Maria
+
+    <span class="chord">C7/4(9)</span>  <span class="chord">C7(9)</span>    <span class="chord">F#m5(b5)</span>
+<span class="chord">E</span> o meu    jardim da vida
+     <span class="chord">Fm6</span>      <span class="chord">Em7</span>
+Ressecou, morreu
+   <span class="chord">Am7</span>             <span class="chord">D7(9)</span>
+Do pé que brotou Maria
+      <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span> <span class="chord">Gm7</span>
+Nem margarida    nasceu
+
+    <span class="chord">C7/4(9)</span>  <span class="chord">C7(9)</span>    <span class="chord">F#m5(b5)</span>
+<span class="chord">E</span> o meu    jardim da vida
+     <span class="chord">Fm6</span>      <span class="chord">Em7</span>
+Ressecou, morreu
+   <span class="chord">Am7</span>             <span class="chord">D7(9)</span>
+Do pé que brotou Maria
+      <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span> <span class="chord">Gm7</span>
+Nem margarida     nasceu
+
+Wave
+(Tom Jobim)
+
+intro: <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+
+           <span class="chord">D7+/9</span>
+Vou te contar
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+Os olhos já não podem ver
+            <span class="chord">G7M</span>      <span class="chord">Gm6</span>           <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+Coisas que só o coração pode entender
+      <span class="chord">B7(9-)</span>    <span class="chord">E7(9)</span>
+Fundamental é  mesmo o amor
+     <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+É impossível ser feliz sozinho
+
+           <span class="chord">D7+/9</span>
+O resto é mar
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+É tudo que não sei contar
+            <span class="chord">G7M</span>           <span class="chord">Gm6</span>           <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+São coisas lindas que eu tenho pra te dar
+         <span class="chord">B7(9-)</span>     <span class="chord">E7(9)</span>
+Vem de mansinho a brisa e me diz
+     <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+É impossível ser feliz sozinho
+
+ <span class="chord">Gm7</span>         <span class="chord">C/Bb</span>        <span class="chord">Am7</span>
+Da primeira vez era a cida...de
+ <span class="chord">Fm7</span>          <span class="chord">Bb/Ab</span>          <span class="chord">Gm/A</span>   <span class="chord">A7(13-)</span>
+Da segunda o cais e a eternida...de
+           <span class="chord">D7+/9</span>
+Agora eu já sei
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+Da onda que se ergueu no mar
+          <span class="chord">G7M</span>            <span class="chord">Gm6</span>         <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+<span class="chord">E</span> das estrelas que esquecemos de contar
+        <span class="chord">B7(9-)</span>   <span class="chord">E7(9)</span>
+O amor se deixa surpreender
+         <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+Enquanto a noite vem nos envolver
+   <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+Sozinho...
+<span class="chord">Am7</span>                     <span class="chord">Em</span>
+    Ensaiei meu samba o ano inteiro
+<span class="chord">Am</span>                       <span class="chord">Em</span>
+   Comprei surdo e tamborim
+<span class="chord">Am</span>                      <span class="chord">C</span>
+   Gastei tudo em fantasia
+             <span class="chord">F</span>
+Era só o que eu queria.
+<span class="chord">F#°</span>             <span class="chord">E</span>
+    <span class="chord">E</span> ela jurou   desfilar pra mim
+
+<span class="chord">Am</span>                 <span class="chord">Em</span>
+   Minha escola estava tão bonita
+<span class="chord">Am</span>                       <span class="chord">Em</span>
+   Era tudo o que eu queria ver
+<span class="chord">Am</span>                   <span class="chord">C</span>
+   <span class="chord">Em</span> retalhos de cetim.
+           <span class="chord">F</span>
+Eu dormi o ano inteiro
+<span class="chord">F#°</span>          <span class="chord">E</span>
+<span class="chord">E</span> ela jurou desfilar pra mim
+
+Refrão:
+
+        <span class="chord">A</span>  <span class="chord">A7+/G#</span>       <span class="chord">A7/G</span>  <span class="chord">F#7</span>
+Mas chegou        o carnaval
+    <span class="chord">Bm</span>    <span class="chord">F7</span>     <span class="chord">E4</span>   <span class="chord">E</span>
+<span class="chord">E</span> ela não    desfilou
+     <span class="chord">A</span>     <span class="chord">C</span>             <span class="chord">F</span>
+Eu chorei na avenida, eu   chorei
+                <span class="chord">Dm</span>       <span class="chord">E7</span>               <span class="chord">Am</span>        <span class="chord">E7</span>
+Não pensei que mentia a cabrocha, que eu tanto amei
+
+<span class="chord">Am</span>                 <span class="chord">Em</span>
+   Minha escola estava tão bonita
+<span class="chord">Am</span>                       <span class="chord">Em</span>
+   Era tudo o que eu queria ver
+<span class="chord">Am</span>                   <span class="chord">C</span>
+   <span class="chord">Em</span> retalhos de cetim.
+           <span class="chord">F</span>
+Eu dormi o ano inteiro
+<span class="chord">F#°</span>          <span class="chord">E</span>
+<span class="chord">E</span> ela jurou desfilar pra mim
+
+Refrão:
+
+        <span class="chord">A</span>  <span class="chord">A7+/G#</span>       <span class="chord">A7/G</span>  <span class="chord">F#7</span>
+Mas chegou        o carnaval
+    <span class="chord">Bm</span>    <span class="chord">F7</span>     <span class="chord">E4</span>   <span class="chord">E</span>
+<span class="chord">E</span> ela não    desfilou
+     <span class="chord">A</span>     <span class="chord">C</span>             <span class="chord">F</span>
+Eu chorei na avenida, eu   chorei
+                <span class="chord">Dm</span>       <span class="chord">E7</span>               <span class="chord">A</span>        <span class="chord">E7</span>
+Não pensei que mentia a cabrocha, que eu tanto amei
+
+        <span class="chord">A</span>  <span class="chord">A7+/G#</span>       <span class="chord">A7/G</span>  <span class="chord">F#7</span>
+Mas chegou        o carnaval
+    <span class="chord">Bm</span>    <span class="chord">F7</span>     <span class="chord">E4</span>   <span class="chord">E</span>
+<span class="chord">E</span> ela não    desfilou
+     <span class="chord">A</span>     <span class="chord">C</span>             <span class="chord">F</span>
+Eu chorei na avenida, eu   chorei
+                <span class="chord">Dm</span>       <span class="chord">E7</span>               <span class="chord">A</span>        <span class="chord">E7</span>
+Não pensei que mentia a cabrocha, que eu tanto amei
+
+        <span class="chord">A</span>  <span class="chord">A7+/G#</span>       <span class="chord">A7/G</span>  <span class="chord">F#7</span>
+Mas chegou        o carnaval
+    <span class="chord">Bm</span>    <span class="chord">F7</span>     <span class="chord">E4</span>   <span class="chord">E</span>
+<span class="chord">E</span> ela não    desfilou
+     <span class="chord">A</span>     <span class="chord">C</span>             <span class="chord">F</span>
+Eu chorei na avenida, eu   chorei
+                <span class="chord">Dm</span>       <span class="chord">E7</span>               <span class="chord">A</span>        <span class="chord">E7</span>
+Não pensei que mentia a cabrocha, que eu tanto amei
+
+Deixa Eu Te Amar
+(Agepê)
+
+<span class="chord">Am</span>
+Quero ir na fonte do teu ser
+ 
+    <span class="chord">Em5</span>-/7    <span class="chord">A7</span>     <span class="chord">Dm</span>
+<span class="chord">E</span> banhar-me na tua pureza
+                                <span class="chord">E7</span>
+Guardar em pote gotas de felicidade
+         <span class="chord">Bm5</span>-/7   <span class="chord">E7</span>              <span class="chord">Am</span>
+Matar saudade que ainda existe em mim
+     <span class="chord">E7</span>                 <span class="chord">Am</span>
+Afagar teus cabelos molhados
+       <span class="chord">Em5</span>-/7      <span class="chord">A7</span>        <span class="chord">Dm</span>
+Pelo orvalho que a natureza rega
+                                  <span class="chord">Bm7(b5)</span>
+Com a sutileza que lhe fez a perfeição
+               <span class="chord">E7</span>                 <span class="chord">Am</span>  <span class="chord">A7(b13)</span> <span class="chord">A7</span>
+Deixando a certeza de amor no coração
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">A7(b5)</span> <span class="chord">A7</span> 
+Eu quero estar o tempo inteiro
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">Bm5</span>-/7 <span class="chord">E7</span>
+Eu quero estar o tempo inteiro
+
+<span class="chord">Am</span>
+Quero saciar a minha sede
+     <span class="chord">Em5</span>-/7      <span class="chord">A7</span>            <span class="chord">Dm</span>
+No desejo da paixão que me alucina
+                                      <span class="chord">E7</span>                
+Vou me embrenhar em densa mata só porque
+              <span class="chord">Bm5</span>-/7        <span class="chord">E7</span>        <span class="chord">Am</span>
+Existe uma cascata que tem água cristalina
+      <span class="chord">E7</span>                  <span class="chord">Am</span>
+<span class="chord">A</span>í então vou te amar com sede
+             <span class="chord">Em5</span>-/7    <span class="chord">A7</span>        <span class="chord">Dm</span>
+Na relva, na rede, onde você quiser
+<span class="chord">E7</span>                <span class="chord">Am</span>
+Quero te pegar no colo
+             <span class="chord">Bm5</span>-/7      <span class="chord">E7</span>   <span class="chord">Am</span>  <span class="chord">Em5</span>-/7  <span class="chord">A7</span>
+Te deitar no solo e te fazer mulher
+<span class="chord">Dm</span>                <span class="chord">Am</span>
+Quero te pegar no colo
+               <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>   <span class="chord">Am</span>  <span class="chord">Em5</span>-/7  <span class="chord">A7</span>
+Te deitar no solo e te fazer mulher
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">A7(b5)</span> <span class="chord">A7</span> 
+Eu quero estar o tempo inteiro
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">Bm5</span>-/7 <span class="chord">E7</span>
+Eu quero estar o tempo inteiro
+
+Flor de Lis
+(Djavan)
+
+Intro.: <span class="chord">C7M(9)</span>     <span class="chord">Fm6</span>     <span class="chord">C7M(9)</span>     <span class="chord">Fm6</span>
+
+     <span class="chord">C7M</span>                         <span class="chord">Bm7(11)</span>
+Valei-me,   Deus!   É o fim  do nos--------so amor
+<span class="chord">E7(b9)</span>          <span class="chord">Am7</span>     
+    Perdo---a, por favor
+<span class="chord">D7(13)</span>            <span class="chord">Gm7</span>        <span class="chord">C7(9)</span>
+    Eu sei  que o erro aconteceu
+             <span class="chord">F#m7(b5)</span>       
+Mas não  sei o que fez
+<span class="chord">B7(b9)</span>     <span class="chord">Bb7M</span>       
+    Tudo mudar de vez
+<span class="chord">A7(b13)</span>                <span class="chord">F#m7(b5)</span>
+    Onde foi  que eu errei?
+<span class="chord">B7(b9)</span>         <span class="chord">Em7</span>     <span class="chord">A7(b13)</span>
+Eu só sei que amei,  que amei
+    <span class="chord">D7(9)</span>   <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span>
+Que amei, que amei
+
+  <span class="chord">C7M</span>                   <span class="chord">Bm7(11)</span>
+Será talvez,  que minha ilusão
+<span class="chord">E7(b9)</span>            <span class="chord">Am7</span>
+    Foi dar  meu coração
+<span class="chord">D7(9)</span>        <span class="chord">Gm7</span>
+    Com toda força
+         <span class="chord">C7(9)</span>   <span class="chord">F#m7(b5)</span>
+Pra essa moça me fazer feliz
+<span class="chord">B7(b9)</span>      <span class="chord">Bb7M</span>
+    <span class="chord">E</span> o destino não quis
+<span class="chord">A7(b13)</span>   <span class="chord">F#m7(b5)</span>
+   Me ver como raiz
+<span class="chord">B7(b9)</span>    <span class="chord">C/E</span>      
+   De uma flor de lis
+
+<span class="chord">Am7</span>                  <span class="chord">F#m7(b5)</span>
+   <span class="chord">E</span> foi assim que eu vi
+<span class="chord">Fm6</span>                <span class="chord">C7M(9)</span>   <span class="chord">E7(b9)</span>
+   Nosso amor  na poeira   poeira
+<span class="chord">Am</span>                <span class="chord">Fm/Ab</span>       <span class="chord">C/G</span>
+   Morto na beleza fria  de Maria
+
+    <span class="chord">C7/4(9)</span>  <span class="chord">C7(9)</span>    <span class="chord">F#m5(b5)</span>
+<span class="chord">E</span> o meu    jardim da vida
+     <span class="chord">Fm6</span>      <span class="chord">Em7</span>
+Ressecou, morreu
+   <span class="chord">Am7</span>             <span class="chord">D7(9)</span>
+Do pé que brotou Maria
+      <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span> <span class="chord">Gm7</span>
+Nem margarida    nasceu
+
+    <span class="chord">C7/4(9)</span>  <span class="chord">C7(9)</span>    <span class="chord">F#m5(b5)</span>
+<span class="chord">E</span> o meu    jardim da vida
+     <span class="chord">Fm6</span>      <span class="chord">Em7</span>
+Ressecou, morreu
+   <span class="chord">Am7</span>             <span class="chord">D7(9)</span>
+Do pé que brotou Maria
+      <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span> <span class="chord">Gm7</span>
+Nem margarida     nasceu
+
+Wave
+(Tom Jobim)
+
+intro: <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+
+           <span class="chord">D7+/9</span>
+Vou te contar
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+Os olhos já não podem ver
+            <span class="chord">G7M</span>      <span class="chord">Gm6</span>           <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+Coisas que só o coração pode entender
+      <span class="chord">B7(9-)</span>    <span class="chord">E7(9)</span>
+Fundamental é  mesmo o amor
+     <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+É impossível ser feliz sozinho
+
+           <span class="chord">D7+/9</span>
+O resto é mar
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+É tudo que não sei contar
+            <span class="chord">G7M</span>           <span class="chord">Gm6</span>           <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+São coisas lindas que eu tenho pra te dar
+         <span class="chord">B7(9-)</span>     <span class="chord">E7(9)</span>
+Vem de mansinho a brisa e me diz
+     <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+É impossível ser feliz sozinho
+
+ <span class="chord">Gm7</span>         <span class="chord">C/Bb</span>        <span class="chord">Am7</span>
+Da primeira vez era a cida...de
+ <span class="chord">Fm7</span>          <span class="chord">Bb/Ab</span>          <span class="chord">Gm/A</span>   <span class="chord">A7(13-)</span>
+Da segunda o cais e a eternida...de
+           <span class="chord">D7+/9</span>
+Agora eu já sei
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+Da onda que se ergueu no mar
+          <span class="chord">G7M</span>            <span class="chord">Gm6</span>         <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+<span class="chord">E</span> das estrelas que esquecemos de contar
+        <span class="chord">B7(9-)</span>   <span class="chord">E7(9)</span>
+O amor se deixa surpreender
+         <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+Enquanto a noite vem nos envolver
+   <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+Sozinho...
+Deixa Eu Te Amar
+(Agepê)
+
+<span class="chord">Am</span>
+Quero ir na fonte do teu ser
+ 
+    <span class="chord">Em5</span>-/7    <span class="chord">A7</span>     <span class="chord">Dm</span>
+<span class="chord">E</span> banhar-me na tua pureza
+                                <span class="chord">E7</span>
+Guardar em pote gotas de felicidade
+         <span class="chord">Bm5</span>-/7   <span class="chord">E7</span>              <span class="chord">Am</span>
+Matar saudade que ainda existe em mim
+     <span class="chord">E7</span>                 <span class="chord">Am</span>
+Afagar teus cabelos molhados
+       <span class="chord">Em5</span>-/7      <span class="chord">A7</span>        <span class="chord">Dm</span>
+Pelo orvalho que a natureza rega
+                                  <span class="chord">Bm7(b5)</span>
+Com a sutileza que lhe fez a perfeição
+               <span class="chord">E7</span>                 <span class="chord">Am</span>  <span class="chord">A7(b13)</span> <span class="chord">A7</span>
+Deixando a certeza de amor no coração
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">A7(b5)</span> <span class="chord">A7</span> 
+Eu quero estar o tempo inteiro
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">Bm5</span>-/7 <span class="chord">E7</span>
+Eu quero estar o tempo inteiro
+<span class="chord">Am</span>
+Quero saciar a minha sede
+     <span class="chord">Em5</span>-/7      <span class="chord">A7</span>            <span class="chord">Dm</span>
+No desejo da paixão que me alucina
+                                      <span class="chord">E7</span>                
+Vou me embrenhar em densa mata só porque
+              <span class="chord">Bm5</span>-/7        <span class="chord">E7</span>        <span class="chord">Am</span>
+Existe uma cascata que tem água cristalina
+      <span class="chord">E7</span>                  <span class="chord">Am</span>
+<span class="chord">A</span>í então vou te amar com sede
+             <span class="chord">Em5</span>-/7    <span class="chord">A7</span>        <span class="chord">Dm</span>
+Na relva, na rede, onde você quiser
+<span class="chord">E7</span>                <span class="chord">Am</span>
+Quero te pegar no colo
+             <span class="chord">Bm5</span>-/7      <span class="chord">E7</span>   <span class="chord">Am</span>  <span class="chord">Em5</span>-/7  <span class="chord">A7</span>
+Te deitar no solo e te fazer mulher
+<span class="chord">Dm</span>                <span class="chord">Am</span>
+Quero te pegar no colo
+               <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>   <span class="chord">Am</span>  <span class="chord">Em5</span>-/7  <span class="chord">A7</span>
+Te deitar no solo e te fazer mulher
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">A7(b5)</span> <span class="chord">A7</span> 
+Eu quero estar o tempo inteiro
+
+<span class="chord">Dm</span>
+Deixa eu te amar
+        <span class="chord">Bm5</span>-/7    <span class="chord">E7</span>       <span class="chord">Am</span>
+Faz de conta que sou o primeiro
+      <span class="chord">C</span>               <span class="chord">Bm5</span>-/7
+Na beleza desse teu olhar
+            <span class="chord">E7</span>            <span class="chord">Am</span>  <span class="chord">Bm5</span>-/7 <span class="chord">E7</span>
+Eu quero estar o tempo inteiro
+
+Flor de Lis
+(Djavan)
+
+Intro.: <span class="chord">C7M(9)</span>     <span class="chord">Fm6</span>     <span class="chord">C7M(9)</span>     <span class="chord">Fm6</span>
+
+     <span class="chord">C7M</span>                         <span class="chord">Bm7(11)</span>
+Valei-me,   Deus!   É o fim  do nos--------so amor
+<span class="chord">E7(b9)</span>          <span class="chord">Am7</span>     
+    Perdo---a, por favor
+<span class="chord">D7(13)</span>            <span class="chord">Gm7</span>        <span class="chord">C7(9)</span>
+    Eu sei  que o erro aconteceu
+             <span class="chord">F#m7(b5)</span>       
+Mas não  sei o que fez
+<span class="chord">B7(b9)</span>     <span class="chord">Bb7M</span>       
+    Tudo mudar de vez
+<span class="chord">A7(b13)</span>                <span class="chord">F#m7(b5)</span>
+    Onde foi  que eu errei?
+<span class="chord">B7(b9)</span>         <span class="chord">Em7</span>     <span class="chord">A7(b13)</span>
+Eu só sei que amei,  que amei
+    <span class="chord">D7(9)</span>   <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span>
+Que amei, que amei
+
+  <span class="chord">C7M</span>                   <span class="chord">Bm7(11)</span>
+Será talvez,  que minha ilusão
+<span class="chord">E7(b9)</span>            <span class="chord">Am7</span>
+    Foi dar  meu coração
+<span class="chord">D7(9)</span>        <span class="chord">Gm7</span>
+    Com toda força
+         <span class="chord">C7(9)</span>   <span class="chord">F#m7(b5)</span>
+Pra essa moça me fazer feliz
+<span class="chord">B7(b9)</span>      <span class="chord">Bb7M</span>
+    <span class="chord">E</span> o destino não quis
+<span class="chord">A7(b13)</span>   <span class="chord">F#m7(b5)</span>
+   Me ver como raiz
+<span class="chord">B7(b9)</span>    <span class="chord">C/E</span>      
+   De uma flor de lis
+
+<span class="chord">Am7</span>                  <span class="chord">F#m7(b5)</span>
+   <span class="chord">E</span> foi assim que eu vi
+<span class="chord">Fm6</span>                <span class="chord">C7M(9)</span>   <span class="chord">E7(b9)</span>
+   Nosso amor  na poeira   poeira
+<span class="chord">Am</span>                <span class="chord">Fm/Ab</span>       <span class="chord">C/G</span>
+   Morto na beleza fria  de Maria
+
+    <span class="chord">C7/4(9)</span>  <span class="chord">C7(9)</span>    <span class="chord">F#m5(b5)</span>
+<span class="chord">E</span> o meu    jardim da vida
+     <span class="chord">Fm6</span>      <span class="chord">Em7</span>
+Ressecou, morreu
+   <span class="chord">Am7</span>             <span class="chord">D7(9)</span>
+Do pé que brotou Maria
+      <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span> <span class="chord">Gm7</span>
+Nem margarida    nasceu
+
+    <span class="chord">C7/4(9)</span>  <span class="chord">C7(9)</span>    <span class="chord">F#m5(b5)</span>
+<span class="chord">E</span> o meu    jardim da vida
+     <span class="chord">Fm6</span>      <span class="chord">Em7</span>
+Ressecou, morreu
+   <span class="chord">Am7</span>             <span class="chord">D7(9)</span>
+Do pé que brotou Maria
+      <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span> <span class="chord">Gm7</span>
+Nem margarida     nasceu
+
+Wave
+(Tom Jobim)
+
+intro: <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+
+           <span class="chord">D7+/9</span>
+Vou te contar
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+Os olhos já não podem ver
+            <span class="chord">G7M</span>      <span class="chord">Gm6</span>           <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+Coisas que só o coração pode entender
+      <span class="chord">B7(9-)</span>    <span class="chord">E7(9)</span>
+Fundamental é  mesmo o amor
+     <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+É impossível ser feliz sozinho
+
+           <span class="chord">D7+/9</span>
+O resto é mar
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+É tudo que não sei contar
+            <span class="chord">G7M</span>           <span class="chord">Gm6</span>           <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+São coisas lindas que eu tenho pra te dar
+         <span class="chord">B7(9-)</span>     <span class="chord">E7(9)</span>
+Vem de mansinho a brisa e me diz
+     <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+É impossível ser feliz sozinho
+
+ <span class="chord">Gm7</span>         <span class="chord">C/Bb</span>        <span class="chord">Am7</span>
+Da primeira vez era a cida...de
+ <span class="chord">Fm7</span>          <span class="chord">Bb/Ab</span>          <span class="chord">Gm/A</span>   <span class="chord">A7(13-)</span>
+Da segunda o cais e a eternida...de
+           <span class="chord">D7+/9</span>
+Agora eu já sei
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+Da onda que se ergueu no mar
+          <span class="chord">G7M</span>            <span class="chord">Gm6</span>         <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+<span class="chord">E</span> das estrelas que esquecemos de contar
+        <span class="chord">B7(9-)</span>   <span class="chord">E7(9)</span>
+O amor se deixa surpreender
+         <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+Enquanto a noite vem nos envolver
+   <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+Sozinho...
+Flor de Lis
+(Djavan)
+
+Intro.: <span class="chord">C7M(9)</span>     <span class="chord">Fm6</span>     <span class="chord">C7M(9)</span>     <span class="chord">Fm6</span>
+
+     <span class="chord">C7M</span>                         <span class="chord">Bm7(11)</span>
+Valei-me,   Deus!   É o fim  do nos--------so amor
+<span class="chord">E7(b9)</span>          <span class="chord">Am7</span>     
+    Perdo---a, por favor
+<span class="chord">D7(13)</span>            <span class="chord">Gm7</span>        <span class="chord">C7(9)</span>
+    Eu sei  que o erro aconteceu
+             <span class="chord">F#m7(b5)</span>       
+Mas não  sei o que fez
+<span class="chord">B7(b9)</span>     <span class="chord">Bb7M</span>       
+    Tudo mudar de vez
+<span class="chord">A7(b13)</span>                <span class="chord">F#m7(b5)</span>
+    Onde foi  que eu errei?
+<span class="chord">B7(b9)</span>         <span class="chord">Em7</span>     <span class="chord">A7(b13)</span>
+Eu só sei que amei,  que amei
+    <span class="chord">D7(9)</span>   <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span>
+Que amei, que amei
+
+  <span class="chord">C7M</span>                   <span class="chord">Bm7(11)</span>
+Será talvez,  que minha ilusão
+<span class="chord">E7(b9)</span>            <span class="chord">Am7</span>
+    Foi dar  meu coração
+<span class="chord">D7(9)</span>        <span class="chord">Gm7</span>
+    Com toda força
+         <span class="chord">C7(9)</span>   <span class="chord">F#m7(b5)</span>
+Pra essa moça me fazer feliz
+<span class="chord">B7(b9)</span>      <span class="chord">Bb7M</span>
+    <span class="chord">E</span> o destino não quis
+<span class="chord">A7(b13)</span>   <span class="chord">F#m7(b5)</span>
+   Me ver como raiz
+<span class="chord">B7(b9)</span>    <span class="chord">C/E</span>      
+   De uma flor de lis
+
+<span class="chord">Am7</span>                  <span class="chord">F#m7(b5)</span>
+   <span class="chord">E</span> foi assim que eu vi
+<span class="chord">Fm6</span>                <span class="chord">C7M(9)</span>   <span class="chord">E7(b9)</span>
+   Nosso amor  na poeira   poeira
+<span class="chord">Am</span>                <span class="chord">Fm/Ab</span>       <span class="chord">C/G</span>
+   Morto na beleza fria  de Maria
+
+    <span class="chord">C7/4(9)</span>  <span class="chord">C7(9)</span>    <span class="chord">F#m5(b5)</span>
+<span class="chord">E</span> o meu    jardim da vida
+     <span class="chord">Fm6</span>      <span class="chord">Em7</span>
+Ressecou, morreu
+   <span class="chord">Am7</span>             <span class="chord">D7(9)</span>
+Do pé que brotou Maria
+      <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span> <span class="chord">Gm7</span>
+Nem margarida    nasceu
+
+    <span class="chord">C7/4(9)</span>  <span class="chord">C7(9)</span>    <span class="chord">F#m5(b5)</span>
+<span class="chord">E</span> o meu    jardim da vida
+     <span class="chord">Fm6</span>      <span class="chord">Em7</span>
+Ressecou, morreu
+   <span class="chord">Am7</span>             <span class="chord">D7(9)</span>
+Do pé que brotou Maria
+      <span class="chord">G7(13)</span> <span class="chord">G7(b13)</span> <span class="chord">Gm7</span>
+Nem margarida     nasceu
+
+Wave
+(Tom Jobim)
+
+intro: <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+
+           <span class="chord">D7+/9</span>
+Vou te contar
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+Os olhos já não podem ver
+            <span class="chord">G7M</span>      <span class="chord">Gm6</span>           <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+Coisas que só o coração pode entender
+      <span class="chord">B7(9-)</span>    <span class="chord">E7(9)</span>
+Fundamental é  mesmo o amor
+     <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+É impossível ser feliz sozinho
+
+           <span class="chord">D7+/9</span>
+O resto é mar
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+É tudo que não sei contar
+            <span class="chord">G7M</span>           <span class="chord">Gm6</span>           <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+São coisas lindas que eu tenho pra te dar
+         <span class="chord">B7(9-)</span>     <span class="chord">E7(9)</span>
+Vem de mansinho a brisa e me diz
+     <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+É impossível ser feliz sozinho
+
+ <span class="chord">Gm7</span>         <span class="chord">C/Bb</span>        <span class="chord">Am7</span>
+Da primeira vez era a cida...de
+ <span class="chord">Fm7</span>          <span class="chord">Bb/Ab</span>          <span class="chord">Gm/A</span>   <span class="chord">A7(13-)</span>
+Da segunda o cais e a eternida...de
+           <span class="chord">D7+/9</span>
+Agora eu já sei
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+Da onda que se ergueu no mar
+          <span class="chord">G7M</span>            <span class="chord">Gm6</span>         <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+<span class="chord">E</span> das estrelas que esquecemos de contar
+        <span class="chord">B7(9-)</span>   <span class="chord">E7(9)</span>
+O amor se deixa surpreender
+         <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+Enquanto a noite vem nos envolver
+   <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+Sozinho...
+Wave
+(Tom Jobim)
+
+intro: <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+
+           <span class="chord">D7+/9</span>
+Vou te contar
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+Os olhos já não podem ver
+            <span class="chord">G7M</span>      <span class="chord">Gm6</span>           <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+Coisas que só o coração pode entender
+      <span class="chord">B7(9-)</span>    <span class="chord">E7(9)</span>
+Fundamental é  mesmo o amor
+     <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+É impossível ser feliz sozinho
+
+           <span class="chord">D7+/9</span>
+O resto é mar
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+É tudo que não sei contar
+            <span class="chord">G7M</span>           <span class="chord">Gm6</span>           <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+São coisas lindas que eu tenho pra te dar
+         <span class="chord">B7(9-)</span>     <span class="chord">E7(9)</span>
+Vem de mansinho a brisa e me diz
+     <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span> <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+É impossível ser feliz sozinho
+
+ <span class="chord">Gm7</span>         <span class="chord">C/Bb</span>        <span class="chord">Am7</span>
+Da primeira vez era a cida...de
+ <span class="chord">Fm7</span>          <span class="chord">Bb/Ab</span>          <span class="chord">Gm/A</span>   <span class="chord">A7(13-)</span>
+Da segunda o cais e a eternida...de
+           <span class="chord">D7+/9</span>
+Agora eu já sei
+   <span class="chord">Bbº</span>                  <span class="chord">Am7</span>   <span class="chord">D7(9-)</span>
+Da onda que se ergueu no mar
+          <span class="chord">G7M</span>            <span class="chord">Gm6</span>         <span class="chord">F#7(13)</span> <span class="chord">F#7(13-)</span> <span class="chord">F#m7</span>
+<span class="chord">E</span> das estrelas que esquecemos de contar
+        <span class="chord">B7(9-)</span>   <span class="chord">E7(9)</span>
+O amor se deixa surpreender
+         <span class="chord">Bb7(9)</span>       <span class="chord">A7(13-)</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+Enquanto a noite vem nos envolver
+   <span class="chord">Dm7</span>  <span class="chord">G/D</span>  <span class="chord">Dm7</span>  <span class="chord">G/D</span>
+Sozinho...
+
+        </pre>
+      </div>
+    </div>
+    
+  </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+
+    // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
+</body>
+</html>

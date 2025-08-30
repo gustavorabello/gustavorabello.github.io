@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Mr. Jones – (Counting Crows)</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      background: #f8f8f8;
+     	background-image: url("../../../images/background.png");
+      color: #222;
+      margin: 0;
+      font-family: 'Merriweather', Georgia, serif;
+    }
+    .back-btn {
+      position: fixed;
+      top: 18px;
+      left: 22px;
+      background: #fff;
+      color: #2563eb;
+      font-size: 1.08em;
+      padding: 7px 17px 6px 12px;
+      border-radius: 22px;
+      box-shadow: 0 1px 7px #ddd;
+      border: 1.5px solid #eaeaea;
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 5000;
+      transition: background 0.16s, color 0.16s;
+    }
+    .back-btn:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .fontsize-controls {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 6000;
+      display: flex;
+      gap: 5px;
+    }
+    .fontsize-controls button {
+      font-size: 1.05em;
+      font-family: inherit;
+      padding: 5px 12px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .fontsize-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .key-controls {
+      position: fixed;
+      top: 100px;
+      right: 24px;
+      z-index: 6100;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .key-controls button {
+      font-size: 1.03em;
+      font-family: inherit;
+      padding: 3px 9px;
+      border: 1.5px solid #eaeaea;
+      background: #fff;
+      color: #2563eb;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 1px 7px #ddd;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+    }
+    .key-controls button:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    #current-key {
+      min-width: 46px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      color: #fc6108;
+      font-size: 1.09em;
+      letter-spacing: 1.2px;
+    }
+    .container {
+      background: #dcdcdc;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #ccc;
+      max-width: 950px;
+      margin: 48px auto 24px auto;
+      padding: 36px 32px 28px 32px;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 1.5px solid #e7e7e7;
+      margin-bottom: 34px;
+      padding-bottom: 10px;
+    }
+    .title {
+      font-size: 2.0em;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin: 0 0 7px 0;
+      line-height: 1.07;
+    }
+    .author-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .author-link:hover {
+      color: #f98600;
+      text-decoration: underline;
+    }
+    .columns {
+      display: flex;
+      gap: 28px;
+      margin-top: 15px;
+    }
+    .col {
+      width: 50%;
+    }
+    .singlecol {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .singlecol pre {
+      max-width: 600px;
+      margin: 0 auto 0 auto;
+    }
+    pre {
+      font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
+      font-size: 0.85em;
+      background: #f1f5fb;
+      padding: 18px 14px 17px 20px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      line-height: 1.15;
+      white-space: pre;
+      color: #20253a;
+    }
+    .chord {
+      color: #fc6108;
+      font-weight: bold;
+    }
+    @media (max-width: 900px) {
+      .container { padding: 13px 2vw 12px 2vw;}
+      .columns { flex-direction: column; gap: 0; }
+      .col { width: 100%; }
+      .singlecol pre { max-width: 98vw; }
+      .fontsize-controls, .key-controls {
+        right: 10px;
+      }
+    }
+    @media (max-width: 600px) {
+      .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
+      .title { font-size: 1.12em;}
+      .singlecol pre { max-width: 98vw; }
+    }
+  </style>
+</head>
+<body>
+  <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <div class="fontsize-controls">
+    <button id="font-dec" title="Diminuir fonte">A-</button>
+    <button id="font-inc" title="Aumentar fonte">A+</button>
+  </div>
+  <div class="key-controls">
+    <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
+    <span id="current-key">Tom</span>
+    <button id="tone-inc" title="Transpor para cima">&#8593;</button>
+  </div>
+  <div class="container">
+    <div class="header">
+      <div class="title">Mr. Jones</div>
+      <div class="author">
+        <a class="author-link" href="https://www.cifraclub.com.br/counting-crows/" target="_blank" rel="noopener">(Counting Crows)</a>
+      </div>
+    </div>
+    
+    <div class="columns">
+      <div class="col">
+        <pre>
+INTRO: <span class="chord">Am</span> <span class="chord">F</span> <span class="chord">Dm</span> <span class="chord">G</span> <span class="chord">Am</span> <span class="chord">F</span> <span class="chord">G</span> 
+
+<span class="chord">Am</span> <span class="chord">F</span> <span class="chord">Dm</span> <span class="chord">G</span> <span class="chord">Am</span> <span class="chord">F</span> <span class="chord">G</span> 
+sha la la la la la la
+
+<span class="chord">Am</span>                  <span class="chord">F</span>              <span class="chord">Dm</span>              <span class="chord">G</span> 
+I was down at the New Amsterdam starring at this yellow haired girl
+<span class="chord">Am</span>                    <span class="chord">F</span>                     <span class="chord">G</span>  
+Mr. Jones strikes up a conversation with the black haired flamenco dancer (You know)
+<span class="chord">Am</span>                  <span class="chord">F</span>              <span class="chord">Dm</span>              <span class="chord">G</span> 
+She dances while his father playes guitar.  She's suddenly beautiful
+<span class="chord">Am</span>                    <span class="chord">F</span>                     <span class="chord">G</span>  
+We all want something beautiful. man I wish I was beautiful
+
+<span class="chord">Am</span>                  <span class="chord">F</span>              <span class="chord">Dm</span>              <span class="chord">G</span> 
+So come dance this silence down through the morning.  sha la la la la la
+<span class="chord">Am</span>   <span class="chord">F</span>  <span class="chord">G</span>
+
+   Uh, huh...
+1-----------------
+2-0--1--0---------
+3-----------0---2-
+4-----------------      
+5-----------------       
+6-----------------
+
+<span class="chord">Am</span>            <span class="chord">F</span>          <span class="chord">Dm</span>              <span class="chord">G</span> 
+Cut up Maria!  Show me some of them spanish dances.
+<span class="chord">Am</span>        <span class="chord">F</span>           <span class="chord">G</span> 
+Pass me a bottle, Mr. Jones
+<span class="chord">Am</span>        <span class="chord">F</span>          <span class="chord">Dm</span>              <span class="chord">G</span> 
+Believe in me   Help me believe in anything
+      <span class="chord">Am</span>             <span class="chord">F</span>           <span class="chord">G</span> 
+Cause I want to be someone who believes
+
+<span class="chord">C</span>   <span class="chord">F</span>           <span class="chord">G</span> 
+Mr. Jones and me tell each other fairy tales
+<span class="chord">C</span>            <span class="chord">F</span>            
+Stare at the beautiful women
+<span class="chord">G</span>
+"She's looking at you.  Ah no, no she's looking at me."
+<span class="chord">C</span>             <span class="chord">F</span> 
+Smiling in the bright lights
+<span class="chord">G</span>
+Coming through in stereo
+<span class="chord">C</span>             <span class="chord">F</span>          <span class="chord">G</span> 
+When everybody loves you, you can never be lonely
+
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
+<span class="chord">Am</span>            <span class="chord">F</span>          <span class="chord">Dm</span>              <span class="chord">G</span> 
+I will paint my picture   Paint my self in blue and red and black and gray
+<span class="chord">Am</span>                   <span class="chord">F</span>                    <span class="chord">G</span> 
+All of the beautiful colors are very very meaninful
+
+<span class="chord">Am</span>            <span class="chord">F</span>          <span class="chord">Dm</span>              <span class="chord">G</span> 
+You know Grey is my favorite color I felt so symbolic yesterday
+<span class="chord">Am</span>        <span class="chord">F</span>                            <span class="chord">G</span> 
+If I knew Picasso I would buy my self a grey guitar and play
+
+<span class="chord">C</span>   <span class="chord">F</span>            <span class="chord">G</span> 
+Mr. Jones and me look into the future
+<span class="chord">C</span>           <span class="chord">F</span>            
+Stare at the beautiful women
+<span class="chord">G</span>
+"She's looking at you.  Uh, I don't think so.  She's looking at me."
+<span class="chord">C</span>              <span class="chord">F</span>         <span class="chord">G</span> 
+Standing in the spotlight I bought myself a gray guitar
+<span class="chord">C</span>             <span class="chord">F</span>           <span class="chord">G</span>                  <span class="chord">Am</span>
+When everybody loves me, I will never be lonely
+                 <span class="chord">F</span>
+I will never be lonely              
+        <span class="chord">Am</span>         <span class="chord">G</span>       
+I will never be lonely
+                    <span class="chord">Am</span>                  <span class="chord">F</span>
+I want to be a lion Everybody wants to pass as cats
+<span class="chord">Am</span>                               <span class="chord">G</span>
+We all want to be big big stars, but we got different reasons for that.
+<span class="chord">Am</span>                    <span class="chord">F</span>
+Believe in me because I don't believe in anything
+<span class="chord">Am</span>                  <span class="chord">G</span>
+and I want to be someone to believe, to believe, to believe.
+
+<span class="chord">C</span>   <span class="chord">F</span>            <span class="chord">G</span> 
+Mr. Jones and me stumbling through the barrio
+<span class="chord">C</span>                   <span class="chord">F</span>
+Yeah we stare at the beautiful women
+<span class="chord">G</span>
+"She's perfect for you, Man, there's got to be somebody for me."
+<span class="chord">C</span>                <span class="chord">F</span>
+I want to be Bob Dylan 
+<span class="chord">G</span>
+Mr. Jones wishes he was someone just a little more funky
+<span class="chord">C</span>              <span class="chord">F</span>              <span class="chord">G</span> 
+When everybody loves you, son, that's just about as funky as you can be.
+
+<span class="chord">C</span>    <span class="chord">F</span>           <span class="chord">G</span> 
+Mr. Jones and me staring at the video
+<span class="chord">C</span>        <span class="chord">F</span>                    <span class="chord">G</span> 
+When I look at the television, I want to see me staring right back at me.
+<span class="chord">C</span>                <span class="chord">F</span>                    <span class="chord">G</span> 
+We all want to be big stars, but we don't know why, and we don't know how.
+<span class="chord">C</span>                 <span class="chord">F</span>           <span class="chord">G</span> 
+But when everybody loves me, I'm going to be just about as happy as I can be.
+<span class="chord">C</span>         <span class="chord">F</span>           <span class="chord">G</span> 
+Mr. Jones and me, we gonna be big stars.....
+        </pre>
+      </div>
+    </div>
+    
+  </div>
+  <script>
+  (function() {
+    // --- Transposição de acordes ---
+    const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+    const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
+    const baseAcordeRegex = /^([A-G](#|b)?)/;
+    let origCifras = [];
+    function getCifras() {
+      return Array.from(document.querySelectorAll('span.chord'));
+    }
+    function salvarOriginais() {
+      origCifras = getCifras().map(e => e.textContent);
+    }
+    function getTomInicial() {
+      let cifras = getCifras();
+      if (cifras.length === 0) return 'C';
+      let m = cifras[0].textContent.match(baseAcordeRegex);
+      if (!m) return 'C';
+      let base = m[1];
+      return nota_alias[base] || base;
+    }
+    function atualizarCifras(semitones) {
+      getCifras().forEach(function(el, i) {
+        let acordeOrig = origCifras[i];
+        el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
+          let n = nota_alias[nota] || nota;
+          let idx = notas.indexOf(n);
+          if (idx < 0) return m;
+          let novoIdx = (idx + semitones + 12) % 12;
+          return notas[novoIdx];
+        });
+      });
+    }
+    let tomInicial = getTomInicial();
+    let offset = 0;
+    let idxTom = notas.indexOf(tomInicial);
+    if (idxTom === -1) idxTom = 0;
+    salvarOriginais();
+    function updateKeyDisplay() {
+      let novoTom = notas[(idxTom + offset + 12) % 12];
+      document.getElementById('current-key').textContent = novoTom;
+    }
+    document.getElementById('tone-inc').onclick = function() {
+      offset += 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    document.getElementById('tone-dec').onclick = function() {
+      offset -= 1;
+      atualizarCifras(offset);
+      updateKeyDisplay();
+    };
+    // Inicial
+    updateKeyDisplay();
+
+    // Font size controls
+    const preBlocks = document.querySelectorAll('pre');
+    let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+    function setFont(newPx) {
+      preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
+      cur.value = newPx;
+    }
+    document.getElementById('font-inc').onclick = function() {
+      setFont(Math.min(cur.value + 2, 40));
+    };
+    document.getElementById('font-dec').onclick = function() {
+      setFont(Math.max(cur.value - 2, 10));
+    };
+  })();
+  </script>
+</body>
+</html>
