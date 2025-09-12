@@ -7,10 +7,32 @@
         <link href="/"/>
     
         
-    <updated>2025-08-30T13:49:40Z</updated>
+    <updated>2025-09-12T19:14:43Z</updated>
 
     <id>/students/atom.xml/</id>
 
+            <entry>
+            <title type="html">Numerical Analysis of Two-Phase Flow in a Micro-Reactor for Biodiesel Production</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/msc/Antonio_Emanuel_Marques_dos_Santos.html"/>
+            <updated>2025-09-12T09:00:00Z</updated>
+            <published>2025-09-12T09:00:00Z</published>
+            <id>/students/msc/Antonio_Emanuel_Marques_dos_Santos.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">An Arbitrary Lagrangian-Eulerian Finite Element Method for Vortex-Induced Vibrations Prediction</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/Gabriel_de_Lucas_Garden.html"/>
+            <updated>2025-09-10T09:00:00Z</updated>
+            <published>2025-09-10T09:00:00Z</published>
+            <id>/students/bsc/Gabriel_de_Lucas_Garden.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
             <entry>
             <title type="html">Implementation of Polynomial Regression for Numerical Analysis of 2d Flow over a Backward-Facing Step</title>
             <author><name>Gustavo R Anjos</name></author>
@@ -95,17 +117,6 @@
             <updated>2025-01-01T09:00:00Z</updated>
             <published>2025-01-01T09:00:00Z</published>
             <id>/students/msc/Afranio_Augusto_Gomes_Goncalves.html</id>
-            
-            <content type="html">
-                                            </content>
-        </entry>
-            <entry>
-            <title type="html">Numerical Analysis of Two-Phase Flow in a Micro-Reactor for Biodiesel Production</title>
-            <author><name>Gustavo R Anjos</name></author>
-            <link href="/students/msc/Antonio_Emanuel_Marques_dos_Santos.html"/>
-            <updated>2025-01-01T09:00:00Z</updated>
-            <published>2025-01-01T09:00:00Z</published>
-            <id>/students/msc/Antonio_Emanuel_Marques_dos_Santos.html</id>
             
             <content type="html">
                                             </content>
