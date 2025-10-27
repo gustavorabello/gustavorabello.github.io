@@ -7,10 +7,21 @@
         <link href="/"/>
     
         
-    <updated>2025-10-19T03:37:20Z</updated>
+    <updated>2025-10-27T12:58:55Z</updated>
 
     <id>/students/atom.xml/</id>
 
+            <entry>
+            <title type="html">CFD Application in the Safety Assessment of Offshore Helicopters under Hot Air Flow</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/Igor_Maiello_Maia.html"/>
+            <updated>2025-10-22T09:00:00Z</updated>
+            <published>2025-10-22T09:00:00Z</published>
+            <id>/students/bsc/Igor_Maiello_Maia.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
             <entry>
             <title type="html">Numerical Analysis of Two-Phase Flow in a Micro-Reactor for Biodiesel Production</title>
             <author><name>Gustavo R Anjos</name></author>
