@@ -189,30 +189,62 @@ Transport Phenomena </a> <br>
   <li>
   <h1> BOOK AN APPOINTMENT: </h1>
   <br>
-<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+ <div id="schedule-container"></div>
+
+<style>
+  .gc-btn {
+    background: #893625;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    /* Tipografia no estilo do seu site */
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-transform: none;
+  }
+  .gc-btn:focus { outline: 2px solid rgba(0,0,0,.25); outline-offset: 2px; }
+</style>
 
 <script>
-(function() {
-  var target = document.currentScript;
-  window.addEventListener('load', function() {
-    calendar.schedulingButton.load({
-      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ28ljV6YdzkTRbUDPZc95rQMVQf1g-Qcx7HTGMs274xt0jp3D3mIcruynwFrdTyQC1fzuYIv9U4?gv=true',
-      color: '#893625',
-      label: 'Click here!',
-      target,
-    });
+(function () {
+  const url = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ28ljV6YdzkTRbUDPZc95rQMVQf1g-Qcx7HTGMs274xt0jp3D3mIcruynwFrdTyQC1fzuYIv9U4?gv=true';
+  const container = document.getElementById('schedule-container');
 
-    // aplica estilo depois que o botão é criado
-    setTimeout(() => {
-      const btn = document.querySelector('.gc-appointment-button');
-      if (btn) {
-        btn.style.fontFamily = '"Helvetica Neue", Helvetica, Arial, sans-serif';
-        btn.style.fontSize = '16px';
-        btn.style.fontWeight = '300';
-        btn.style.letterSpacing = '0.5px';
-      }
-    }, 500);
+  // cria o botão
+  const btn = document.createElement('button');
+  btn.className = 'gc-btn';
+  btn.textContent = 'Click here!';
+  container.appendChild(btn);
+
+  // abre popup centralizada (robusta p/ multi-monitor e Safari)
+  function openCentered(href, w = 900, h = 700) {
+    const dualLeft = window.screenX !== undefined ? window.screenX : window.screenLeft;
+    const dualTop  = window.screenY !== undefined ? window.screenY : window.screenTop;
+
+    // largura/altura da janela atual (fallbacks p/ navegadores)
+    const winW = window.outerWidth || document.documentElement.clientWidth || 800;
+    const winH = window.outerHeight || document.documentElement.clientHeight || 600;
+
+    const left = dualLeft + (winW - w) / 2;
+    const top  = dualTop  + (winH - h) / 2;
+
+    const features = [
+      `width=${w}`, `height=${h}`,
+      `left=${left}`, `top=${top}`,
+      'resizable=yes', 'scrollbars=yes', 'noopener=yes', 'noreferrer=yes'
+    ].join(',');
+
+    const popup = window.open(href, 'GoogleCalendarPopup', features);
+    if (popup && popup.focus) popup.focus();
+  }
+
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    openCentered(url, 900, 700);
   });
 })();
 </script>
