@@ -9,7 +9,7 @@
   <style>
     body {
       background: #f8f8f8;
-     	background-image: url("../../../images/background.png");
+      background-image: url("../../../images/background.png");
       color: #222;
       margin: 0;
       font-family: 'Merriweather', Georgia, serif;
@@ -34,6 +34,36 @@
       background: #2563eb;
       color: #fff;
     }
+    .suggest-btn {
+      position: fixed;
+      top: 62px;
+      left: 22px;
+      background: #fff;
+      color: #111;              /* texto padrão em preto */
+      font-size: 0.95em;
+      padding: 6px 14px;
+      border-radius: 22px;
+      box-shadow: 0 1px 7px #ddd;
+      border: 1.5px solid #eaeaea;
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 4900;
+      transition: background 0.16s, color 0.16s;
+    }
+
+    .suggest-btn .suggest-prefix {
+      color: #2563eb;           /* azul igual ao Previous Page */
+    }
+
+    .suggest-btn:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .suggest-btn:hover .suggest-prefix {
+      color: #fff;
+    }
+
     .fontsize-controls {
       position: fixed;
       top: 18px;
@@ -175,15 +205,19 @@
 </head>
 <body>
   <a class="back-btn" href="javascript:history.back()">&#8592; Previous Page</a>
+  <a class="suggest-btn" href="https://gustavorabello.github.io/media/html/tabs/sambaEPagode/deixaEuTeAmar (agepe).html" target="_self" rel="noopener"><span class="suggest-prefix">🎵 Sugestion:</span> Deixa Eu Te Amar</a>
+
   <div class="fontsize-controls">
     <button id="font-dec" title="Diminuir fonte">A-</button>
     <button id="font-inc" title="Aumentar fonte">A+</button>
   </div>
+
   <div class="key-controls">
     <button id="tone-dec" title="Transpor para baixo">&#8595;</button>
     <span id="current-key">Tom</span>
     <button id="tone-inc" title="Transpor para cima">&#8593;</button>
   </div>
+
   <div class="container">
     <div class="header">
       <div class="title">Conto de Areia</div>
@@ -256,6 +290,7 @@ Foi beira-mar ê, foi beira-mar
     </div>
     
   </div>
+
   <script>
   (function() {
     // --- Transposição de acordes ---
@@ -263,12 +298,15 @@ Foi beira-mar ê, foi beira-mar
     const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
     const baseAcordeRegex = /^([A-G](#|b)?)/;
     let origCifras = [];
+
     function getCifras() {
       return Array.from(document.querySelectorAll('span.chord'));
     }
+
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
+
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -277,9 +315,10 @@ Foi beira-mar ê, foi beira-mar
       let base = m[1];
       return nota_alias[base] || base;
     }
+
     function atualizarCifras(semitones) {
       getCifras().forEach(function(el, i) {
-        let acordeOrig = origCifras[i];
+        let acordeOrig = origCifras[i] || el.textContent;
         el.textContent = acordeOrig.replace(baseAcordeRegex, function(m, nota, acc) {
           let n = nota_alias[nota] || nota;
           let idx = notas.indexOf(n);
@@ -289,38 +328,46 @@ Foi beira-mar ê, foi beira-mar
         });
       });
     }
+
     let tomInicial = getTomInicial();
     let offset = 0;
     let idxTom = notas.indexOf(tomInicial);
     if (idxTom === -1) idxTom = 0;
+
     salvarOriginais();
+
     function updateKeyDisplay() {
       let novoTom = notas[(idxTom + offset + 12) % 12];
       document.getElementById('current-key').textContent = novoTom;
     }
+
     document.getElementById('tone-inc').onclick = function() {
       offset += 1;
       atualizarCifras(offset);
       updateKeyDisplay();
     };
+
     document.getElementById('tone-dec').onclick = function() {
       offset -= 1;
       atualizarCifras(offset);
       updateKeyDisplay();
     };
-    // Inicial
+
     updateKeyDisplay();
 
     // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
+
     function setFont(newPx) {
       preBlocks.forEach(function(el) { el.style.fontSize = newPx + 'px'; });
       cur.value = newPx;
     }
+
     document.getElementById('font-inc').onclick = function() {
       setFont(Math.min(cur.value + 2, 40));
     };
+
     document.getElementById('font-dec').onclick = function() {
       setFont(Math.max(cur.value - 2, 10));
     };
