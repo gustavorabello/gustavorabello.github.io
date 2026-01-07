@@ -34,12 +34,13 @@
       background: #2563eb;
       color: #fff;
     }
+
     .suggest-btn {
       position: fixed;
       top: 62px;
       left: 22px;
       background: #fff;
-      color: #111;              /* texto padrão em preto */
+      color: #111; /* texto padrão em preto (artista – música) */
       font-size: 0.95em;
       padding: 6px 14px;
       border-radius: 22px;
@@ -50,16 +51,13 @@
       z-index: 4900;
       transition: background 0.16s, color 0.16s;
     }
-
     .suggest-btn .suggest-prefix {
-      color: #2563eb;           /* azul igual ao Previous Page */
+      color: #2563eb; /* prefixo azul */
     }
-
     .suggest-btn:hover {
       background: #2563eb;
       color: #fff;
     }
-
     .suggest-btn:hover .suggest-prefix {
       color: #fff;
     }
@@ -89,6 +87,7 @@
       background: #2563eb;
       color: #fff;
     }
+
     .key-controls {
       position: fixed;
       top: 100px;
@@ -124,6 +123,7 @@
       font-size: 1.09em;
       letter-spacing: 1.2px;
     }
+
     .container {
       background: #dcdcdc;
       border-radius: 12px;
@@ -155,6 +155,7 @@
       color: #f98600;
       text-decoration: underline;
     }
+
     .columns {
       display: flex;
       gap: 28px;
@@ -187,14 +188,13 @@
       color: #fc6108;
       font-weight: bold;
     }
+
     @media (max-width: 900px) {
       .container { padding: 13px 2vw 12px 2vw;}
       .columns { flex-direction: column; gap: 0; }
       .col { width: 100%; }
       .singlecol pre { max-width: 98vw; }
-      .fontsize-controls, .key-controls {
-        right: 10px;
-      }
+      .fontsize-controls, .key-controls { right: 10px; }
     }
     @media (max-width: 600px) {
       .container { max-width: 99vw; padding: 7vw 1vw 3vw 1vw;}
@@ -204,13 +204,11 @@
   </style>
 </head>
 <body>
-  <a class="back-btn"
-   href="https://gustavorabello.github.io/musics/"
-   target="_self"
-   rel="noopener">
-  &#8592; All Musics
-</a>
-  <a class="suggest-btn" href="https://gustavorabello.github.io/media/html/tabs/sambaEPagode/brasilPandeiro (novosBaianos).html" target="_self" rel="noopener"><span class="suggest-prefix">🎵 Sugestion:</span> Brasil Pandeiro</a>
+  <a class="back-btn" href="https://gustavorabello.github.io/musics/" target="_self" rel="noopener">&#8592; All Musics</a>
+
+  <a class="suggest-btn" href="https://gustavorabello.github.io/media/html/tabs/sambaEPagode/brasilPandeiro (novosBaianos).html" target="_self" rel="noopener">
+    <span class="suggest-prefix">🎵 Sugestion:</span> (Novos Baianos) – Brasil Pandeiro
+  </a>
 
   <div class="fontsize-controls">
     <button id="font-dec" title="Diminuir fonte">A-</button>
