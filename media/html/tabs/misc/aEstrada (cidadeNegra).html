@@ -40,7 +40,7 @@
       top: 62px;
       left: 22px;
       background: #fff;
-      color: #111; /* texto padrão em preto (artista – música) */
+      color: #111;
       font-size: 0.95em;
       padding: 6px 14px;
       border-radius: 22px;
@@ -52,7 +52,7 @@
       transition: background 0.16s, color 0.16s;
     }
     .suggest-btn .suggest-prefix {
-      color: #2563eb; /* prefixo azul */
+      color: #2563eb;
     }
     .suggest-btn:hover {
       background: #2563eb;
@@ -207,7 +207,7 @@
   <a class="back-btn" href="https://gustavorabello.github.io/musics/" target="_self" rel="noopener">&#8592; All Musics</a>
 
   <a class="suggest-btn" href="https://gustavorabello.github.io/media/html/tabs/misc/aFrancesa (marinaLima).html" target="_self" rel="noopener">
-    <span class="suggest-prefix">🎵 Sugestion:</span> (Antônio Cícero versão Marina Lima) – A francesa
+    <span class="suggest-prefix">🎵 Suggestion:</span> (Antônio Cícero versão Marina Lima) – A francesa
   </a>
 
   <div class="fontsize-controls">
@@ -340,7 +340,6 @@ Together...oo...
 
   <script>
   (function() {
-    // --- Transposição de acordes ---
     const notas = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
     const nota_alias = { 'Db':'C#', 'D#':'Eb', 'Gb':'F#', 'G#':'Ab', 'A#':'Bb' };
     const baseAcordeRegex = /^([A-G](#|b)?)/;
@@ -349,11 +348,9 @@ Together...oo...
     function getCifras() {
       return Array.from(document.querySelectorAll('span.chord'));
     }
-
     function salvarOriginais() {
       origCifras = getCifras().map(e => e.textContent);
     }
-
     function getTomInicial() {
       let cifras = getCifras();
       if (cifras.length === 0) return 'C';
@@ -362,7 +359,6 @@ Together...oo...
       let base = m[1];
       return nota_alias[base] || base;
     }
-
     function atualizarCifras(semitones) {
       getCifras().forEach(function(el, i) {
         let acordeOrig = origCifras[i] || el.textContent;
@@ -393,16 +389,13 @@ Together...oo...
       atualizarCifras(offset);
       updateKeyDisplay();
     };
-
     document.getElementById('tone-dec').onclick = function() {
       offset -= 1;
       atualizarCifras(offset);
       updateKeyDisplay();
     };
-
     updateKeyDisplay();
 
-    // Font size controls
     const preBlocks = document.querySelectorAll('pre');
     let cur = { value: parseFloat(getComputedStyle(preBlocks[0]).fontSize) };
 
@@ -414,7 +407,6 @@ Together...oo...
     document.getElementById('font-inc').onclick = function() {
       setFont(Math.min(cur.value + 2, 40));
     };
-
     document.getElementById('font-dec').onclick = function() {
       setFont(Math.max(cur.value - 2, 10));
     };
