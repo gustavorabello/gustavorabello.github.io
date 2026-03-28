@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2026-03-28T13:31:54Z</updated>
+    <updated>2026-03-28T13:41:02Z</updated>
 
     <id>/students/atom.xml/</id>
 
@@ -62,6 +62,17 @@
             <updated>2026-01-01T09:00:00Z</updated>
             <published>2026-01-01T09:00:00Z</published>
             <id>/students/ic/Gabriel_Braz.html</id>
+            
+            <content type="html">
+                                            </content>
+        </entry>
+            <entry>
+            <title type="html">Multiphase Flow Injection Model of Biodiesel B100 and Air in a Combustion Chamber</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/ic/Rodrigo_Gadelha_Salvaterra_Dutra.html"/>
+            <updated>2026-01-01T09:00:00Z</updated>
+            <published>2026-01-01T09:00:00Z</published>
+            <id>/students/ic/Rodrigo_Gadelha_Salvaterra_Dutra.html</id>
             
             <content type="html">
                                             </content>
