@@ -7,10 +7,22 @@
         <link href="/"/>
     
         
-    <updated>2026-03-28T13:41:02Z</updated>
+    <updated>2026-03-30T22:50:01Z</updated>
 
     <id>/students/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">Experimental Study on Taylor Bubbles</title>
+            <author><name>Gustavo R Anjos</name></author>
+            <link href="/students/bsc/Renato_Rosa_Oliveira.html"/>
+            <updated>2026-03-30T09:00:00Z</updated>
+            <published>2026-03-30T09:00:00Z</published>
+            <id>/students/bsc/Renato_Rosa_Oliveira.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
             <entry>
             <title type="html">Subsea Dampener Design Parameters Exploration</title>
             <author><name>Gustavo R Anjos</name></author>
