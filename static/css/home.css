@@ -1,0 +1,235 @@
+.page-home .hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.page-home .hero-copy,
+.page-home .hero-panel,
+.page-home .feature-card {
+  background: var(--surface);
+  border: 1px solid rgba(19, 39, 53, 0.08);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.page-home .hero-copy {
+  padding: 44px;
+}
+
+.page-home .hero-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 18px;
+  display: grid;
+  gap: 18px;
+  background:
+    linear-gradient(180deg, rgba(15, 96, 116, 0.1), rgba(15, 96, 116, 0)),
+    rgba(255, 253, 249, 0.82);
+}
+
+.page-home .hero h1 {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  margin-top: 12px;
+}
+
+.page-home .hero-text {
+  margin-top: 20px;
+  max-width: 60ch;
+}
+
+.page-home .hero-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.page-home .hero-shortcut {
+  display: grid;
+  gap: 8px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 252, 246, 0.72);
+  border: 1px solid rgba(19, 39, 53, 0.08);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.page-home .hero-shortcut:hover {
+  transform: translateY(-1px);
+  border-color: rgba(15, 96, 116, 0.18);
+  background: rgba(255, 252, 246, 0.9);
+}
+
+.page-home .hero-shortcut strong {
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-size: 1.1rem;
+}
+
+.page-home .hero-shortcut span:last-child {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.page-home .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.page-home .hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin-top: 28px;
+}
+
+.page-home .hero-pills li {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(15, 96, 116, 0.08);
+  color: var(--primary-deep);
+  font-size: 0.88rem;
+}
+
+.page-home .portrait {
+  border-radius: 24px;
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 4 / 4.8;
+}
+
+.page-home .profile-card {
+  padding: 18px 18px 22px;
+  background: rgba(255, 252, 246, 0.88);
+  border: 1px solid rgba(19, 39, 53, 0.06);
+  border-radius: 24px;
+}
+
+.page-home .profile-kicker {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.page-home .profile-card h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.page-home .profile-links,
+.page-home .favorite-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.page-home .profile-links a,
+.page-home .favorite-links a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.page-home .metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.page-home .metric-card {
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(255, 252, 246, 0.7);
+  border: 1px solid rgba(19, 39, 53, 0.08);
+}
+
+.page-home .metric-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 2rem;
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+}
+
+.page-home .metric-card span {
+  color: var(--muted);
+}
+
+.page-home .section-block {
+  padding: 32px;
+}
+
+.page-home .card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.page-home .feature-card {
+  overflow: hidden;
+}
+
+.page-home .feature-card h2,
+.page-home .feature-card h3 {
+  font-size: 1.7rem;
+}
+
+.page-home .feature-media {
+  min-height: 200px;
+  background:
+    linear-gradient(135deg, rgba(15, 96, 116, 0.12), rgba(191, 111, 62, 0.1)),
+    var(--bg-soft);
+  padding: 22px;
+}
+
+.page-home .feature-media img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.page-home .feature-body {
+  padding: 24px;
+  display: grid;
+  gap: 14px;
+}
+
+@media (max-width: 1080px) {
+  .page-home .hero,
+  .page-home .metrics-grid,
+  .page-home .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-home .hero-shortcuts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .page-home .hero-copy,
+  .page-home .hero-panel,
+  .page-home .section-block {
+    padding: 20px;
+  }
+
+  .page-home .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .page-home .profile-card h2,
+  .page-home .feature-card h2,
+  .page-home .feature-card h3 {
+    font-size: 1.45rem;
+  }
+}

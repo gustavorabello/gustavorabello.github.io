@@ -1,0 +1,99 @@
+.page-students .student-status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.page-students .student-status-sections {
+  display: grid;
+  gap: 20px;
+}
+
+.page-students .student-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.page-students .student-summary-card {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.54);
+  border: 1px solid rgba(19, 39, 53, 0.08);
+}
+
+.page-students .student-summary-card.is-active {
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.page-students .student-summary-card.is-bachelor {
+  background:
+    linear-gradient(135deg, rgba(191, 111, 62, 0.12), rgba(191, 111, 62, 0.04)),
+    rgba(255, 255, 255, 0.62);
+  border-color: rgba(191, 111, 62, 0.16);
+}
+
+.page-students .student-summary-card strong {
+  font-size: 2rem;
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+}
+
+.page-students .student-summary-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.page-students .student-level-block {
+  display: grid;
+  gap: 14px;
+}
+
+.page-students .student-level-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.page-students .student-level-heading h3,
+.page-students .student-list-item h4 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.page-students .student-list-item {
+  display: grid;
+  gap: 10px;
+}
+
+.page-students .status-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(15, 96, 116, 0.08);
+  color: var(--primary-deep);
+  font-size: 0.88rem;
+}
+
+.page-students .status-pill.is-active {
+  background: rgba(191, 111, 62, 0.12);
+  color: #8f4f24;
+}
+
+@media (max-width: 1080px) {
+  .page-students .student-status-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .page-students .student-level-heading h3,
+  .page-students .student-list-item h4 {
+    font-size: 1.45rem;
+  }
+}
