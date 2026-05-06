@@ -46,16 +46,17 @@
 }
 
 .page-students .student-summary-card.is-publication-metric .eyebrow {
-  font-size: 0.66rem;
-  letter-spacing: 0.1em;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
 }
 
 .page-students .student-summary-card.is-publication-metric strong {
-  font-size: 1.54rem;
+  font-size: 1.42rem;
 }
 
 .page-students .student-summary-card.is-publication-metric p {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
+  line-height: 1.18;
 }
 
 .page-students .student-summary-card.is-bachelor {
