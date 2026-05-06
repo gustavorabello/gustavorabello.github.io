@@ -29,33 +29,43 @@
   background: rgba(255, 255, 255, 0.62);
 }
 
-.page-students .student-summary-card.is-publication-metric {
-  background:
-    linear-gradient(135deg, rgba(196, 78, 92, 0.14), rgba(196, 78, 92, 0.05)),
-    rgba(255, 255, 255, 0.64);
-  border-color: rgba(196, 78, 92, 0.18);
+.page-students .student-summary-card-combo {
+  grid-column: 1 / -1;
+  padding: 12px 14px;
 }
 
-.page-students .student-summary-card.is-publication-metric strong,
-.page-students .student-summary-card.is-publication-metric .eyebrow {
-  color: #8d2f43;
+.page-students .student-summary-combo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
-.page-students .student-summary-card.is-publication-metric {
+.page-students .student-summary-metric {
+  display: grid;
   gap: 4px;
 }
 
-.page-students .student-summary-card.is-publication-metric .eyebrow {
+.page-students .student-summary-metric.is-publication-metric {
+  padding-left: 10px;
+  border-left: 1px solid rgba(196, 78, 92, 0.22);
+}
+
+.page-students .student-summary-metric.is-publication-metric strong,
+.page-students .student-summary-metric.is-publication-metric .eyebrow {
+  color: #8d2f43;
+}
+
+.page-students .student-summary-metric.is-publication-metric .eyebrow {
   font-size: 0.6rem;
   letter-spacing: 0.08em;
 }
 
-.page-students .student-summary-card.is-publication-metric strong {
-  font-size: 1.42rem;
+.page-students .student-summary-metric.is-publication-metric strong {
+  font-size: 1.3rem;
 }
 
-.page-students .student-summary-card.is-publication-metric p {
-  font-size: 0.72rem;
+.page-students .student-summary-metric.is-publication-metric p {
+  font-size: 0.68rem;
   line-height: 1.18;
 }
 
@@ -71,9 +81,19 @@
   font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
 }
 
+.page-students .student-summary-metric strong {
+  font-size: 1.52rem;
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+}
+
 .page-students .student-summary-card p {
   color: var(--muted);
   font-size: 0.86rem;
+}
+
+.page-students .student-summary-metric p {
+  color: var(--muted);
+  font-size: 0.76rem;
 }
 
 .page-students .student-level-block {
@@ -251,6 +271,17 @@
 }
 
 @media (max-width: 760px) {
+  .page-students .student-summary-combo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-students .student-summary-metric.is-publication-metric {
+    padding-left: 0;
+    padding-top: 8px;
+    border-left: 0;
+    border-top: 1px solid rgba(196, 78, 92, 0.22);
+  }
+
   .page-students .student-level-heading h3,
   .page-students .student-list-item h4 {
     font-size: 1rem;
