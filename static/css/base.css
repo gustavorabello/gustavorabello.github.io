@@ -31,11 +31,7 @@ body {
   margin: 0;
   color: var(--text);
   font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
-  background:
-    radial-gradient(circle at 12% 16%, rgba(37, 143, 164, 0.26), transparent 22%),
-    radial-gradient(circle at 82% 10%, rgba(191, 111, 62, 0.2), transparent 20%),
-    radial-gradient(circle at 58% 82%, rgba(196, 78, 92, 0.16), transparent 24%),
-    linear-gradient(155deg, #0b141c 0%, #12202c 42%, #1a2530 100%);
+  background: linear-gradient(145deg, #091017 0%, #101a23 48%, #16212b 100%);
 }
 
 body::before {
@@ -44,11 +40,29 @@ body::before {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    radial-gradient(circle at center, transparent 0%, rgba(7, 15, 21, 0.28) 100%);
+    linear-gradient(rgba(7, 12, 17, 0.72), rgba(10, 16, 22, 0.82)),
+    radial-gradient(circle at 16% 18%, rgba(35, 85, 100, 0.24), transparent 24%),
+    radial-gradient(circle at 81% 20%, rgba(166, 100, 60, 0.2), transparent 20%),
+    url("../../media/images/background-mosaic-dark.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto, auto, auto, cover;
+  filter: saturate(0.92) brightness(0.62) contrast(1.04);
+  opacity: 0.92;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    radial-gradient(circle at center, transparent 38%, rgba(6, 12, 17, 0.44) 100%);
   background-size: 72px 72px, 72px 72px, auto;
-  opacity: 0.65;
+  opacity: 0.4;
   z-index: 0;
 }
 
