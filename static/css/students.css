@@ -41,6 +41,23 @@
   color: #8d2f43;
 }
 
+.page-students .student-summary-card.is-publication-metric {
+  gap: 4px;
+}
+
+.page-students .student-summary-card.is-publication-metric .eyebrow {
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+}
+
+.page-students .student-summary-card.is-publication-metric strong {
+  font-size: 1.54rem;
+}
+
+.page-students .student-summary-card.is-publication-metric p {
+  font-size: 0.78rem;
+}
+
 .page-students .student-summary-card.is-bachelor {
   background:
     linear-gradient(135deg, rgba(191, 111, 62, 0.12), rgba(191, 111, 62, 0.04)),
