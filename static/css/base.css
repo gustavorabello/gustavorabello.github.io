@@ -1,9 +1,9 @@
 :root {
-  --bg: #f4efe5;
-  --bg-soft: #fffaf2;
-  --surface: rgba(255, 253, 249, 0.78);
-  --surface-strong: #fffdf8;
-  --surface-tint: #f1e4d0;
+  --bg: #121c27;
+  --bg-soft: #172534;
+  --surface: rgba(255, 252, 247, 0.82);
+  --surface-strong: rgba(255, 252, 247, 0.92);
+  --surface-tint: #eadcc7;
   --text: #132735;
   --muted: #5c6b72;
   --line: rgba(19, 39, 53, 0.12);
@@ -11,7 +11,7 @@
   --primary-deep: #083b50;
   --accent: #bf6f3e;
   --accent-soft: #f7e0ce;
-  --shadow: 0 24px 60px rgba(11, 31, 42, 0.12);
+  --shadow: 0 26px 70px rgba(7, 18, 26, 0.28);
   --radius-xl: 30px;
   --radius-lg: 22px;
   --radius-md: 16px;
@@ -27,13 +27,29 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   color: var(--text);
   font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(15, 96, 116, 0.12), transparent 28%),
-    radial-gradient(circle at top right, rgba(191, 111, 62, 0.16), transparent 24%),
-    linear-gradient(180deg, #fbf7f0 0%, #f4efe5 55%, #ece5d8 100%);
+    radial-gradient(circle at 12% 16%, rgba(37, 143, 164, 0.26), transparent 22%),
+    radial-gradient(circle at 82% 10%, rgba(191, 111, 62, 0.2), transparent 20%),
+    radial-gradient(circle at 58% 82%, rgba(196, 78, 92, 0.16), transparent 24%),
+    linear-gradient(155deg, #0b141c 0%, #12202c 42%, #1a2530 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at center, transparent 0%, rgba(7, 15, 21, 0.28) 100%);
+  background-size: 72px 72px, 72px 72px, auto;
+  opacity: 0.65;
+  z-index: 0;
 }
 
 a {
@@ -67,6 +83,8 @@ h4 {
 }
 
 .site-shell {
+  position: relative;
+  z-index: 1;
   width: min(calc(100% - 32px), var(--max-width));
   margin: 0 auto;
   padding: 24px 0 56px;
@@ -88,10 +106,10 @@ h4 {
   gap: 20px;
   padding: 18px 22px;
   margin-bottom: 24px;
-  background: rgba(255, 252, 246, 0.78);
-  border: 1px solid rgba(19, 39, 53, 0.08);
+  background: rgba(255, 251, 246, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 999px;
-  box-shadow: 0 12px 32px rgba(11, 31, 42, 0.08);
+  box-shadow: 0 18px 40px rgba(6, 16, 24, 0.2);
   backdrop-filter: blur(18px);
 }
 
@@ -197,7 +215,7 @@ main > section + section {
 .panel {
   padding: 32px;
   background: var(--surface);
-  border: 1px solid rgba(19, 39, 53, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
@@ -245,14 +263,14 @@ main > section + section {
 
 .panel-accent {
   background:
-    radial-gradient(circle at top right, rgba(191, 111, 62, 0.14), transparent 34%),
-    rgba(255, 252, 246, 0.82);
+    radial-gradient(circle at top right, rgba(191, 111, 62, 0.18), transparent 34%),
+    rgba(255, 251, 246, 0.84);
 }
 
 .panel-soft {
   background:
-    radial-gradient(circle at top left, rgba(15, 96, 116, 0.12), transparent 34%),
-    rgba(255, 252, 246, 0.82);
+    radial-gradient(circle at top left, rgba(15, 96, 116, 0.16), transparent 34%),
+    rgba(255, 251, 246, 0.84);
 }
 
 .stack-list,
@@ -266,8 +284,8 @@ main > section + section {
 .resource-panel {
   padding: 18px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.64);
-  border: 1px solid rgba(19, 39, 53, 0.08);
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(19, 39, 53, 0.09);
 }
 
 .list-card.compact h3 {
