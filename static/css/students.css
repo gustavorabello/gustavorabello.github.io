@@ -97,14 +97,44 @@
   font-size: 0.93rem;
 }
 
+.page-students .student-abstract,
 .page-students .student-institution,
 .page-students .student-note {
   font-size: 0.84rem;
 }
 
+.page-students .student-abstract {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--text);
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.page-students .student-meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.page-students .student-meta-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(15, 96, 116, 0.08);
+  color: var(--primary-deep);
+  font-size: 0.76rem;
+}
+
 .page-students .student-list-item .link-row {
   margin-top: 2px;
   gap: 8px;
+}
+
+.page-students .student-detail-stack {
+  gap: 10px;
 }
 
 .page-students .status-pill {
