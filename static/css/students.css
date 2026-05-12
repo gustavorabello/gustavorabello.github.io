@@ -120,11 +120,74 @@
   gap: 10px;
 }
 
+.page-students .student-list-grid.is-completed {
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+.page-students .student-list-grid.is-completed.is-bsc {
+  gap: 4px;
+}
+
 .page-students .student-list-item {
   display: grid;
   gap: 6px;
   padding: 14px;
   border-radius: 16px;
+}
+
+.page-students .student-list-item.is-completed {
+  padding: 7px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.page-students .student-list-item.is-completed.is-bsc {
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.page-students .student-compact-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.page-students .student-compact-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px;
+  min-width: 0;
+}
+
+.page-students .student-compact-main strong {
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.page-students .student-compact-main span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.25;
+}
+
+.page-students .student-list-item.is-bsc .student-compact-main strong {
+  font-size: 0.8rem;
+}
+
+.page-students .student-list-item.is-bsc .student-compact-main span,
+.page-students .student-list-item.is-bsc .student-compact-year {
+  font-size: 0.74rem;
+}
+
+.page-students .student-compact-year {
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 800;
 }
 
 .page-students .student-list-item .meta-line {

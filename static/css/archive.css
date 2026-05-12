@@ -1,0 +1,255 @@
+.archive-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.archive-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.archive-card h2 {
+  margin-top: 8px;
+  font-size: 1.9rem;
+}
+
+.archive-card p:not(.meta-line) {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.archive-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-end;
+  gap: 10px;
+  min-width: 250px;
+}
+
+.archive-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.archive-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.icon-button,
+.symbol-button {
+  display: inline-grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  appearance: none;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.icon-button {
+  background: linear-gradient(135deg, var(--accent), #d08742);
+  color: white;
+  box-shadow: 0 14px 24px rgba(191, 111, 62, 0.22);
+}
+
+.symbol-button {
+  background: rgba(15, 96, 116, 0.08);
+  color: var(--primary-deep);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.icon-button:hover,
+.symbol-button:hover {
+  transform: translateY(-1px);
+}
+
+.icon-button svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.archive-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.34fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.archive-layout-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.archive-sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+.archive-sidebar .list-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.archive-sidebar p {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.archive-document {
+  overflow: hidden;
+}
+
+.latex-content {
+  display: grid;
+  gap: 18px;
+  color: var(--text);
+  font-size: calc(2rem * var(--archive-font-scale, 0.75));
+}
+
+.latex-content > section {
+  display: grid;
+  gap: 14px;
+}
+
+.latex-content h1,
+.latex-content h2,
+.latex-content h3,
+.latex-content h4 {
+  color: var(--primary-deep);
+  letter-spacing: 0;
+}
+
+.latex-content h1 {
+  font-size: 2.4rem;
+}
+
+.latex-content h2 {
+  margin-top: 8px;
+  font-size: 2rem;
+}
+
+.latex-content h3 {
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+.latex-content h4,
+.latex-content h5 {
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.45;
+}
+
+.latex-content p,
+.latex-content li {
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.latex-content ul,
+.latex-content ol {
+  display: grid;
+  gap: 8px;
+}
+
+.latex-content a {
+  color: var(--primary);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.latex-content .math {
+  overflow-x: auto;
+}
+
+.latex-content figure,
+.latex-content .figure-note {
+  padding: 16px;
+  background: rgba(15, 96, 116, 0.08);
+  border: 1px solid rgba(15, 96, 116, 0.12);
+  border-radius: var(--radius-md);
+  color: var(--muted);
+}
+
+.latex-content figure {
+  display: grid;
+  gap: 12px;
+}
+
+.latex-content figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: white;
+}
+
+.latex-content figcaption {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 1080px) {
+  .archive-card,
+  .archive-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-card {
+    display: grid;
+  }
+
+  .archive-actions {
+    justify-content: flex-start;
+    min-width: 0;
+  }
+
+  .archive-sidebar {
+    position: static;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  body::before,
+  body::after,
+  .site-header,
+  .site-footer,
+  .archive-page-actions {
+    display: none;
+  }
+
+  .site-shell {
+    width: 100%;
+    padding: 0;
+  }
+
+  .page-intro,
+  .panel {
+    box-shadow: none;
+    border: 0;
+    background: white;
+  }
+}

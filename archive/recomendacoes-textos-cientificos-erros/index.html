@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Definição de Erros e Normas | Gustavo R. Anjos</title>
+  <meta name="description" content="Numerical simulation of single- and two-phase flows, heat transfer and scientific computing.">
+  <base href="../../">
+  <link rel="stylesheet" href="static/css/base.css?v=4700cdc6899b">
+  <link rel="stylesheet" href="static/css/archive.css?v=4700cdc6899b">
+</head>
+<body class="page-archive">
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="brand-wrap">
+        <a class="brand-mark" href="index.html">GRA</a>
+        <div class="brand-copy">
+          <a class="brand-name" href="index.html">Gustavo R. Anjos</a>
+          <p class="brand-role">COPPE/UFRJ · Department of Mechanical Engineering</p>
+        </div>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" data-nav-toggle>Menu</button>
+      <nav class="site-nav" data-nav-menu>
+        <a class="" href="index.html">Home</a>
+        <a class="" href="research/index.html">Research</a>
+        <a class="" href="publications/index.html">Publications</a>
+        <a class="" href="videos/index.html">Videos</a>
+        <a class="" href="teaching/index.html">Teaching</a>
+        <a class="" href="students/index.html">Students</a>
+        <a class="active" href="archive/index.html">Archive</a>
+      </nav>
+      <a class="header-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ28ljV6YdzkTRbUDPZc95rQMVQf1g-Qcx7HTGMs274xt0jp3D3mIcruynwFrdTyQC1fzuYIv9U4?gv=true" target="_blank" rel="noreferrer">Book a meeting</a>
+    </header>
+
+    <main>
+<section class="page-intro" data-reveal>
+  <span class="eyebrow">Archive</span>
+  <h1>Definição de Erros e Normas</h1>
+  <p class="lead">Definições de erro, normas discretas e contínuas, e análise de convergência.</p>
+  <div class="archive-page-actions" aria-label="Archive actions">
+    <a class="button button-secondary" href="archive/index.html">Back to archive</a>
+    <div class="archive-tools">
+      <button class="symbol-button" type="button" title="Decrease font size" aria-label="Decrease font size" data-font-action="decrease">−</button>
+      <button class="symbol-button" type="button" title="Increase font size" aria-label="Increase font size" data-font-action="increase">+</button>
+      <button class="icon-button" type="button" title="Generate PDF from this page" aria-label="Generate PDF from this page" onclick="window.print()">
+        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+          <path d="M7 2h7l5 5v5h-2V8h-4V4H7v8H5V4a2 2 0 0 1 2-2Z"></path>
+          <path d="M6 14h12a2 2 0 0 1 2 2v3h-3v3H7v-3H4v-3a2 2 0 0 1 2-2Zm3 3v3h6v-3H9Z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="archive-layout archive-layout-single" data-reveal>
+  <article class="panel archive-document">
+    <div class="latex-content">
+      <p><span id="definição-de-erros-e-normas"></span>
+<span id="sec:erro"></span></p>
+<p>Para quantificar a precisão da solução numérica, define-se o erro como a diferença entre a solução numérica <span class="math inline">\(u_h\)</span> e a solução de referência <span class="math inline">\(u\)</span> (analítica, experimental ou altamente refinada).</p>
+<h5 id="erro-absoluto">Erro absoluto</h5>
+<p><span class="math display">\[\begin{equation}
+e = u - u_h
+\end{equation}\]</span></p>
+<h5 id="erro-relativo">Erro relativo</h5>
+<p><span class="math display">\[\begin{equation}
+e_{rel} = \frac{\|u - u_h\|}{\|u\|}
+\end{equation}\]</span></p>
+<h5 id="normas-em-malhas-estruturadas">Normas em malhas estruturadas</h5>
+<p>Para malhas estruturadas (diferenças finitas, por exemplo), as normas discretas mais comuns são:</p>
+<ul>
+<li><p>Norma <span class="math inline">\(L^2\)</span> discreta: <span class="math display">\[\begin{equation}
+    \|e\|_{L^2} = \left( \sum_{i=1}^{N} |e_i|^2 \right)^{1/2}
+\end{equation}\]</span></p></li>
+<li><p>Norma do máximo (<span class="math inline">\(L^\infty\)</span>): <span class="math display">\[\begin{equation}
+    \|e\|_{L^\infty} = \max_{1 \le i \le N} |e_i|
+\end{equation}\]</span></p></li>
+</ul>
+<h5 id="normas-em-malhas-não-estruturadas-mef">Normas em malhas não estruturadas (MEF)</h5>
+<p>Para métodos de elementos finitos, as normas são definidas de forma contínua sobre o domínio <span class="math inline">\(\Omega\)</span>:</p>
+<ul>
+<li><p>Norma <span class="math inline">\(L^2\)</span>: <span class="math display">\[\begin{equation}
+    \|e\|_{L^2(\Omega)} = \left( \int_{\Omega} |u - u_h|^2 \, d\Omega \right)^{1/2}
+\end{equation}\]</span></p></li>
+<li><p>Norma <span class="math inline">\(H^1\)</span>: <span class="math display">\[\begin{equation}
+    \|e\|_{H^1(\Omega)} = \left( \int_{\Omega} |u - u_h|^2 + |\nabla(u - u_h)|^2 \, d\Omega \right)^{1/2}
+\end{equation}\]</span></p></li>
+</ul>
+<p>Para o Método de Elementos Finitos, as normas podem ser escritas em forma matricial, utilizando as matrizes do sistema discreto.</p>
+<p>Seja <span class="math inline">\(\mathbf{e} = \mathbf{u} - \mathbf{u}_h\)</span> o vetor erro nodal.</p>
+<ul>
+<li><p>Norma <span class="math inline">\(L^2\)</span>: <span class="math display">\[\begin{equation}
+    \|e\|_{L^2(\Omega)} = \left( \mathbf{e}^T \mathbf{M} \mathbf{e} \right)^{1/2}
+\end{equation}\]</span></p></li>
+<li><p>Norma <span class="math inline">\(H^1\)</span>: <span class="math display">\[\begin{equation}
+    \|e\|_{H^1(\Omega)} = \left( \mathbf{e}^T \mathbf{M} \mathbf{e} + \mathbf{e}^T \mathbf{K} \mathbf{e} \right)^{1/2}
+\end{equation}\]</span></p></li>
+</ul>
+<p>onde <span class="math inline">\(\mathbf{M}\)</span> é a matriz de massa, definida por</p>
+<p><span class="math display">\[\begin{equation}
+  M_{ij} = \int_{\Omega} \phi_i \, \phi_j \, d\Omega,
+\end{equation}\]</span> e <span class="math inline">\(\mathbf{K}\)</span> é a matriz de rigidez (ou Laplaciano discreto), dada por <span class="math display">\[\begin{equation}
+  K_{ij} = \int_{\Omega} \nabla \phi_i \cdot \nabla \phi_j \, d\Omega,
+\end{equation}\]</span></p>
+<p>sendo <span class="math inline">\(\phi_i\)</span> as funções de forma do espaço aproximante.</p>
+<p>A escolha da norma utilizada para medir o erro está diretamente relacionada ao tipo de informação que se deseja avaliar na solução numérica.</p>
+<p>A norma <span class="math inline">\(L^2\)</span> mede o erro na solução em si, isto é, a diferença entre os valores aproximados e exatos da variável de interesse ao longo do domínio. Trata-se de uma medida global da magnitude do erro, sendo adequada quando o interesse principal está na precisão da variável primária (por exemplo, velocidade, temperatura, pressão).</p>
+<p>Por outro lado, a norma <span class="math inline">\(H^1\)</span> incorpora não apenas o erro na solução, mas também o erro em seu gradiente. Isso a torna mais rigorosa, pois avalia simultaneamente a qualidade da aproximação da variável e de suas derivadas espaciais. Essa norma é particularmente relevante em problemas onde os gradientes possuem significado físico importante, como em fluxos difusivos, tensões ou escoamentos viscosos.</p>
+<p>Em termos práticos, é possível obter valores pequenos para o erro em norma <span class="math inline">\(L^2\)</span> mesmo quando a solução apresenta gradientes mal resolvidos. A norma <span class="math inline">\(H^1\)</span>, por sua vez, penaliza esse comportamento, sendo mais adequada para verificar a qualidade global da aproximação em problemas governados por equações diferenciais parciais elípticas e parabólicas.</p>
+<p>Assim, a análise conjunta das normas <span class="math inline">\(L^2\)</span> e <span class="math inline">\(H^1\)</span> fornece uma avaliação mais completa da precisão e da qualidade da solução numérica.</p>
+<h5 id="análise-de-convergência">Análise de convergência</h5>
+<p>Para verificar a ordem de convergência do método, utiliza-se frequentemente gráficos do tipo:</p>
+<p><span class="math display">\[\begin{equation}
+\log(N) \quad \text{vs} \quad \log(\|e\|)
+\end{equation}\]</span></p>
+<p>ou, equivalentemente,</p>
+<p><span class="math display">\[\begin{equation}
+\log(h) \quad \text{vs} \quad \log(\|e\|)
+\end{equation}\]</span></p>
+<p>onde <span class="math inline">\(h\)</span> representa o tamanho característico da malha. A inclinação da reta obtida indica a ordem de convergência do método numérico.</p>
+<h2 id="relação-entre-n-e-h-e-interpretação-das-taxas-de-convergência">Relação entre <span class="math inline">\(N\)</span> e <span class="math inline">\(h\)</span> e interpretação das taxas de convergência</h2>
+<p>Em problemas numéricos, a análise de erro pode ser realizada tanto em função do tamanho característico do elemento da malha (<span class="math inline">\(h\)</span>) quanto do número total de elementos (<span class="math inline">\(N\)</span>). Essas duas quantidades estão diretamente relacionadas.</p>
+<p>Para malhas aproximadamente uniformes em um domínio de dimensão espacial <span class="math inline">\(d\)</span>, tem-se, de forma assintótica:</p>
+<p><span class="math display">\[\begin{equation}
+N \sim h^{-d}
+\end{equation}\]</span></p>
+<p>ou, equivalentemente,</p>
+<p><span class="math display">\[\begin{equation}
+h \sim N^{-1/d}.
+\end{equation}\]</span></p>
+<p>Assim, uma lei de convergência expressa em termos de <span class="math inline">\(h\)</span>:</p>
+<p><span class="math display">\[\begin{equation}
+\|e\| \sim h^p
+\end{equation}\]</span></p>
+<p>pode ser reescrita em função de <span class="math inline">\(N\)</span> como:</p>
+<p><span class="math display">\[\begin{equation}
+\|e\| \sim N^{-p/d}.
+\end{equation}\]</span></p>
+<p>Portanto, as inclinações observadas em gráficos log-log do tipo <span class="math inline">\(\|e\|\)</span> versus <span class="math inline">\(N\)</span> refletem a ordem de convergência do método, levando em conta a dimensão do problema.</p>
+<p><strong>Exemplos típicos:</strong></p>
+<ul>
+<li><p><span class="math inline">\(\|e\| \sim N^{-1}\)</span>:</p>
+<ul>
+<li><p>corresponde a <span class="math inline">\(p = d\)</span>;</p></li>
+<li><p>em 2D: <span class="math inline">\(\|e\| \sim h^2\)</span>;</p></li>
+<li><p>em 3D: <span class="math inline">\(\|e\| \sim h^3\)</span>.</p></li>
+</ul></li>
+<li><p><span class="math inline">\(\|e\| \sim N^{-1/2}\)</span>:</p>
+<ul>
+<li><p>corresponde a <span class="math inline">\(p = d/2\)</span>;</p></li>
+<li><p>em 2D: <span class="math inline">\(\|e\| \sim h\)</span>;</p></li>
+<li><p>em 3D: <span class="math inline">\(\|e\| \sim h^{3/2}\)</span>.</p></li>
+</ul></li>
+<li><p><span class="math inline">\(\|e\| \sim N^{-3/2}\)</span>:</p>
+<ul>
+<li><p>corresponde a <span class="math inline">\(p = 3d/2\)</span>;</p></li>
+<li><p>em 2D: <span class="math inline">\(\|e\| \sim h^3\)</span>;</p></li>
+<li><p>em 3D: <span class="math inline">\(\|e\| \sim h^{9/2}\)</span>.</p></li>
+</ul></li>
+</ul>
+<p>Dessa forma, a inclinação das retas em gráficos log-log de erro em função de <span class="math inline">\(N\)</span> permite inferir a ordem de convergência do método em termos de <span class="math inline">\(h\)</span>, desde que a dimensão do problema seja conhecida.</p>
+<p><strong>Observação:</strong> a análise de convergência pode ser realizada tanto em função do tamanho de elemento <span class="math inline">\(h\)</span> quanto do número de elementos <span class="math inline">\(N\)</span>, sendo essas duas abordagens equivalentes do ponto de vista assintótico. No entanto, ao utilizar <span class="math inline">\(N\)</span> como variável independente, é necessário levar em conta a relação <span class="math inline">\(N \sim h^{-d}\)</span>, de modo que as taxas de convergência devem ser interpretadas na forma <span class="math inline">\(\|e\| \sim N^{-p/d}\)</span>, conforme descrito anteriormente. Em malhas não estruturadas ou não uniformes, essa relação permanece aproximada, mas ainda fornece uma estimativa consistente da ordem de convergência.</p>
+<p>As Figs. <a href="#fig:erro_N" data-reference-type="ref" data-reference="fig:erro_N">1</a> e <a href="#fig:erro_h" data-reference-type="ref" data-reference="fig:erro_h">2</a> apresentam, respectivamente, a evolução do erro numérico em função do número de elementos <span class="math inline">\(N\)</span> e do tamanho característico da malha <span class="math inline">\(h\)</span>, ambas em escala log-log. Essas duas representações são equivalentes do ponto de vista assintótico, mas fornecem interpretações complementares da qualidade da aproximação numérica.</p>
+<p>Na Fig. <a href="#fig:erro_N" data-reference-type="ref" data-reference="fig:erro_N">1</a>, observa-se que o erro decresce com o aumento do número de elementos, evidenciando o efeito do refinamento global da malha. As inclinações das curvas indicam que a norma <span class="math inline">\(L^2\)</span> apresenta comportamento compatível com <span class="math inline">\(\mathcal{O}(N^{-1})\)</span>, enquanto a norma <span class="math inline">\(H^1\)</span> segue aproximadamente <span class="math inline">\(\mathcal{O}(N^{-1/2})\)</span>. Esse resultado está em concordância com a relação teórica <span class="math inline">\(N \sim h^{-d}\)</span>, considerando um problema bidimensional (<span class="math inline">\(d=2\)</span>), na qual uma ordem <span class="math inline">\(\mathcal{O}(h^2)\)</span> em <span class="math inline">\(L^2\)</span> se traduz em <span class="math inline">\(\mathcal{O}(N^{-1})\)</span>, e uma ordem <span class="math inline">\(\mathcal{O}(h)\)</span> em <span class="math inline">\(H^1\)</span> corresponde a <span class="math inline">\(\mathcal{O}(N^{-1/2})\)</span>.</p>
+<p>Já na Fig. <a href="#fig:erro_h" data-reference-type="ref" data-reference="fig:erro_h">2</a>, a análise é realizada diretamente em função do tamanho de elemento, permitindo uma interpretação mais imediata da ordem de convergência do método numérico. Nesse caso, observa-se que o erro na norma <span class="math inline">\(L^2\)</span> apresenta comportamento aproximadamente quadrático, isto é, <span class="math inline">\(\mathcal{O}(h^2)\)</span>, enquanto o erro na norma <span class="math inline">\(H^1\)</span> apresenta comportamento linear, <span class="math inline">\(\mathcal{O}(h)\)</span>. Esses resultados são característicos de aproximações por elementos finitos lineares, nas quais a variável primária é aproximada com ordem superior à de seu gradiente.</p>
+<p>De forma geral, a Fig. <a href="#fig:erro_h" data-reference-type="ref" data-reference="fig:erro_h">2</a> fornece uma interpretação mais direta das propriedades de aproximação do método, enquanto a Fig. <a href="#fig:erro_N" data-reference-type="ref" data-reference="fig:erro_N">1</a> é útil para avaliar o custo computacional em termos do número de graus de liberdade. A consistência entre ambas as representações confirma a correta implementação do método numérico e a obtenção da ordem de convergência esperada.</p>
+<figure id="fig:erro_N" data-latex-placement="h!">
+<img src="media/images/archive/recomendacoes-textos-cientificos/erro-N.png" alt="Figura gerada em LaTeX/TikZ: erro_N">
+<figcaption>Norma do erro em função do número de elementos <span class="math inline">\(N\)</span> (escala log-log). Observa-se que o erro na norma <span class="math inline">\(L^2\)</span> apresenta comportamento compatível com <span class="math inline">\(\mathcal{O}(N^{-1})\)</span>, enquanto o erro na norma <span class="math inline">\(H^1\)</span> é compatível com <span class="math inline">\(\mathcal{O}(N^{-1/2})\)</span>.</figcaption>
+</figure>
+<figure id="fig:erro_h" data-latex-placement="h!">
+<img src="media/images/archive/recomendacoes-textos-cientificos/erro-h.png" alt="Figura gerada em LaTeX/TikZ: erro_h">
+<figcaption>Norma do erro em função do tamanho característico da malha <span class="math inline">\(h\)</span> (escala log-log). Observa-se que o erro na norma <span class="math inline">\(L^2\)</span> apresenta comportamento compatível com <span class="math inline">\(\mathcal{O}(h^{2})\)</span>, enquanto o erro na norma <span class="math inline">\(H^1\)</span> é compatível com <span class="math inline">\(\mathcal{O}(h)\)</span>. As retas de referência indicam diferentes ordens de convergência.</figcaption>
+</figure>
+<h5 id="estratégia-de-refinamento-da-malha">Estratégia de refinamento da malha</h5>
+<p>Para que a análise de convergência seja consistente e confiável, é fundamental que o refinamento da malha seja realizado de forma sistemática e controlada, partindo de uma malha inicial pouco refinada até níveis progressivamente mais refinados.</p>
+<p>Duas abordagens principais podem ser utilizadas:</p>
+<ul>
+<li><p><strong>Refinamento em termos de <span class="math inline">\(h\)</span>:</strong> consiste na redução do tamanho característico dos elementos por meio da subdivisão das arestas (ou faces). Nesse caso, cada elemento é dividido em subelementos menores, mantendo-se a estrutura local da malha. Esse procedimento é típico de refinamentos do tipo <span class="math inline">\(h\)</span>-refinement.</p></li>
+<li><p><strong>Refinamento em termos de <span class="math inline">\(N\)</span>:</strong> consiste no aumento do número total de elementos do domínio, geralmente por subdivisão sistemática dos elementos existentes. Embora relacionado ao refinamento em <span class="math inline">\(h\)</span>, essa abordagem é expressa diretamente em função do número total de graus de liberdade.</p></li>
+</ul>
+<p>Idealmente, o refinamento deve ser realizado de forma <strong>sequencial</strong>, garantindo que cada nova malha seja obtida a partir da anterior por subdivisão controlada, evitando alterações abruptas na qualidade ou distribuição dos elementos.</p>
+<p>Esse procedimento é essencial para:</p>
+<ul>
+<li><p>garantir que a relação assintótica entre erro e refinamento seja válida;</p></li>
+<li><p>evitar interpretações incorretas da ordem de convergência;</p></li>
+<li><p>assegurar comparabilidade entre diferentes níveis de discretização.</p></li>
+</ul>
+<p>Em particular, refinamentos não sistemáticos (por exemplo, malhas geradas independentemente sem controle de <span class="math inline">\(h\)</span> ou <span class="math inline">\(N\)</span>) podem introduzir inconsistências, dificultando a identificação clara da ordem de convergência do método numérico.</p>
+    </div>
+  </article>
+</section>
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      macros: {
+        vvet: "\\mathbf{v}",
+        uvet: "\\mathbf{u}",
+        xvet: "\\mathbf{x}",
+        Imat: "\\mathbf{I}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<script>
+  (() => {
+    const content = document.querySelector('.latex-content');
+    if (!content) {
+      return;
+    }
+    let scale = 1;
+    const setScale = (nextScale) => {
+      scale = Math.min(1.2, Math.max(0.55, nextScale));
+      content.style.setProperty('--archive-font-scale', scale.toFixed(2));
+    };
+    document.querySelectorAll('[data-font-action]').forEach((button) => {
+      button.addEventListener('click', () => {
+        setScale(scale + (button.dataset.fontAction === 'increase' ? 0.05 : -0.05));
+      });
+    });
+  })();
+</script>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="footer-title">Gustavo Rabello dos Anjos</p>
+        <p>Professor of Mechanical Engineering and Computational Scientist</p>
+      </div>
+      <div>
+        <p class="footer-title">Contact</p>
+        <a href="mailto:gustavo.rabello@coppe.ufrj.br">gustavo.rabello@coppe.ufrj.br</a>
+        <span>+55 21 3938-8402</span>
+      </div>
+      <div>
+        <p class="footer-title">Profiles</p>
+        <a href="http://lattes.cnpq.br/2430893976345647" target="_blank" rel="noreferrer">Lattes CV</a>
+        <a href="https://orcid.org/0000-0003-0687-8466" target="_blank" rel="noreferrer">ORCID</a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=55930084200" target="_blank" rel="noreferrer">Scopus</a>
+        <a href="https://scholar.google.com/citations?user=LlX16aAAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+        <a href="https://github.com/gustavorabello" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="static/js/main.js?v=4700cdc6899b"></script>
+</body>
+</html>
