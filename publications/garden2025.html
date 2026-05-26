@@ -59,6 +59,15 @@
         <p>COBEM</p>
       </div>
       <div class="list-card compact">
+        <p class="meta-line">Citation data</p>
+        <p>
+No. COB-2025-0524        </p>
+      </div>
+      <div class="list-card compact">
+        <p class="meta-line">Keywords</p>
+        <p>moving mesh, fluid-structure interaction (FSI), finite element method (FEM), unconditionally stable</p>
+      </div>
+      <div class="list-card compact">
         <p class="meta-line">Links</p>
         <div class="link-row">
           <a href="publications/index.html">Back to publications</a>
@@ -74,7 +83,7 @@
     </div>
     <div class="rich-text">
       <h2>Abstract</h2>
-<p>No abstract available.</p>
+<p>Vortex-induced vibration (VIV) is a well-known problem in the offshore industry, especially when dealing with riser dynamics. This issue arises due to the nonlinear interaction between the fluid flow past cylindrical structures, which generate a von Karman vortex street. This vortex shedding phenomenon causes pressure differentials, which generate oscillating forces such as lift and drag. These forces induce vibrations that may lead to structural failure due to mechanical fatigue. This study focuses on the analysis of the physical problem using a bidimensional approach. The flow of fluids around blunt objects creates a wake behind the geometry, which excites the structure, making it oscillate in the transverse direction of the flow. To accurately model the intricate dynamics of this phenomenon, we employ the non-dimensional incompressible Navier-Stokes equations within the arbitrary Lagrangian-Eulerian (ALE) framework. This enables us to account for large mesh motion and effectively describe the complex fluid-structure interactions. The finite element method (FEM) has been chosen to discretize the equations and the five-noded quadrilateral was used to discretize the fluid domain, which automatically satisfies the Ladyzhenskaya-Babuška-Brezzi (LBB) condition, also known as the “inf- sup” condition. In order to stabilize the numerical code for higher Reynolds numbers, a first-order semi-Lagrangian (SL) scheme has been used. This method is unconditionally stable thus, large time steps may be used if necessary. The search-interpolation algorithm is remarkably efficient since it starts by inquiring about one of the node’s neighbouring elements. On the other hand, the solid structure was considered a rigid body therefore, its boundary was non-deformable. Several benchmark test cases have been investigated to confirm the accuracy of the proposed methodology. As for results, the flow past a moving cylinder and other blunt geometries in which the Reynolds number varies between 100 and 1000 was investigated. Flow patterns due to the vortex-shedding phenomenon are also presented. This study allows for a better understanding of the dynamics of the problem, as well as the development of mitigation strategies.</p>
     </div>
   </article>
 </section>

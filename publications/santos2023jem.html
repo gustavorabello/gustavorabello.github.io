@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hydrodynamics of Electrochemical Cells with a Rotating Semi-Spherical Electrode | Gustavo R. Anjos</title>
+  <title>Three Dimensional Two-Phase Finite Element Simulation Using a Front-Tracking Method | Gustavo R. Anjos</title>
   <meta name="description" content="Numerical simulation of single- and two-phase flows, heat transfer and scientific computing.">
   <base href="../">
   <link rel="stylesheet" href="static/css/base.css?v=4700cdc6899b">
@@ -35,36 +35,32 @@
     <main>
 <section class="page-intro" data-reveal>
   <span class="eyebrow">Conference</span>
-  <h1>Hydrodynamics of Electrochemical Cells with a Rotating Semi-Spherical Electrode</h1>
-  <p class="lead">R. M. Lucena; G. R. Anjos; N. Mangiavacchi; J. Pontes</p>
+  <h1>Three Dimensional Two-Phase Finite Element Simulation Using a Front-Tracking Method</h1>
+  <p class="lead">D. B. V. Santos; G.R. Anjos</p>
 </section>
 
 <section class="two-column" data-reveal>
   <article class="panel panel-accent">
     <div class="section-heading">
       <span class="eyebrow">Bibliographic record</span>
-      <h2>2012</h2>
+      <h2>2023</h2>
     </div>
     <div class="stack-list">
       <div class="list-card compact">
         <p class="meta-line">Date</p>
-        <p>2012</p>
+        <p>2023</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Venue</p>
-        <p>Proceedings of the 14th Brazilian Congress of Thermal Engineering and Sciences</p>
+        <p>JEM</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Event</p>
-        <p>ENCIT</p>
-      </div>
-      <div class="list-card compact">
-        <p class="meta-line">Place</p>
-        <p>Rio de Janeiro, Brazil</p>
+        <p>JEM</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Keywords</p>
-        <p>Corrosion, Rotating Disk Flow, Semi-spherical Electrode, Finite Element Method</p>
+        <p>Finite Element Method, Two-phase flows, Arbitrary Lagrangian-Eulerian, Oscillating bubble, Laplace-Beltrami</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Links</p>
@@ -82,7 +78,7 @@
     </div>
     <div class="rich-text">
       <h2>Abstract</h2>
-<p>We propose a numerical model to obtain results for the velocity and concentration profiles close to semi-spherical rotating electrodes in electrochemical cells. The profiles refer to nondimensional velocity components along the radial direction, for straight lines ranging from angles with the rotating axis 0, angle, pi/2 obtained by solving the Navier-Stokes equations using the finite element method. The discretization of the domain is made with an object oriented approach. Spatial discretization of diffusive terms and the pressure is made by the Galerkin method. For the material derivative we use a semi-lagrangian method.</p>
+<p>The goal of this research is to accurately depict two-phase dynamics, using axisymmetric finite element numer- ical simulation. To achieve this goal, the incompressible Navier-Stokes equations for two-phase flows, are solved through the Finite Element Method (FEM), using a two-phase separation strategy where there are two distinct meshes, one for the two-phase fluid and one for the interface. The mini element is utilized in order to respect the LBB condition, and avoid artificial stabilization terms in the fluid motion equations. The non-linear convective term on the Navier-Stokes equation is solved by applying a first order semi-Lagrangian scheme. Of the two meshes used, the fluid mesh has several finite element nodes and is fixed, not requiring any re-meshing or interference during the simulation. The interface mesh moves and requires re-meshing, but has quite fewer points relative to the fluid mesh, and so the movement and re-meshing computational costs are negligible. The fluid and interface meshes are decoupled; the only link between them is the inter- face mesh position update, based on the velocity fields obtained from the fluid mesh, through the finite element solution. Fluid properties are smoothed over a defined thickness of the fluid interfaces, thus avoiding numerical instability. Surface tension is implemented using the well-known continuum surface tension model, using the Laplace-Beltrami operator for curvature computation. As validation for the discussed approach, three test cases will be presented. The static droplet, where a droplet stays still while surface tension is balanced by pressure; the oscillating droplet, where a droplet starts in elliptical shape, and oscillates; and the gravity driven bubbles, where bubbles rises inside a quiescent fluid, dominated by gravity force, all presenting satisfactory results according to the available literature.</p>
     </div>
   </article>
 </section>

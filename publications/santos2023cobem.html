@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hydrodynamics of Electrochemical Cells with a Rotating Semi-Spherical Electrode | Gustavo R. Anjos</title>
+  <title>Three Dimensional Finite Element Two-Phase Flow Simulation Using a Front Tracking Method | Gustavo R. Anjos</title>
   <meta name="description" content="Numerical simulation of single- and two-phase flows, heat transfer and scientific computing.">
   <base href="../">
   <link rel="stylesheet" href="static/css/base.css?v=4700cdc6899b">
@@ -35,36 +35,36 @@
     <main>
 <section class="page-intro" data-reveal>
   <span class="eyebrow">Conference</span>
-  <h1>Hydrodynamics of Electrochemical Cells with a Rotating Semi-Spherical Electrode</h1>
-  <p class="lead">R. M. Lucena; G. R. Anjos; N. Mangiavacchi; J. Pontes</p>
+  <h1>Three Dimensional Finite Element Two-Phase Flow Simulation Using a Front Tracking Method</h1>
+  <p class="lead">D. B. V. Santos; G.R. Anjos</p>
 </section>
 
 <section class="two-column" data-reveal>
   <article class="panel panel-accent">
     <div class="section-heading">
       <span class="eyebrow">Bibliographic record</span>
-      <h2>2012</h2>
+      <h2>2023</h2>
     </div>
     <div class="stack-list">
       <div class="list-card compact">
         <p class="meta-line">Date</p>
-        <p>2012</p>
+        <p>2023</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Venue</p>
-        <p>Proceedings of the 14th Brazilian Congress of Thermal Engineering and Sciences</p>
+        <p>Proceedings of the 27th International Congress of Mechanical Engineering</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Event</p>
-        <p>ENCIT</p>
+        <p>COBEM</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Place</p>
-        <p>Rio de Janeiro, Brazil</p>
+        <p>Florianópolis, Brazil</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Keywords</p>
-        <p>Corrosion, Rotating Disk Flow, Semi-spherical Electrode, Finite Element Method</p>
+        <p>Laplace-Beltrami, Semi-Lagrangian Method, Front Tracking, 3-D CFD modelling</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Links</p>
@@ -82,7 +82,7 @@
     </div>
     <div class="rich-text">
       <h2>Abstract</h2>
-<p>We propose a numerical model to obtain results for the velocity and concentration profiles close to semi-spherical rotating electrodes in electrochemical cells. The profiles refer to nondimensional velocity components along the radial direction, for straight lines ranging from angles with the rotating axis 0, angle, pi/2 obtained by solving the Navier-Stokes equations using the finite element method. The discretization of the domain is made with an object oriented approach. Spatial discretization of diffusive terms and the pressure is made by the Galerkin method. For the material derivative we use a semi-lagrangian method.</p>
+<p>This research aims to accurately simulate two-phase flow using the Finite Element Method along with a Front Tracking method for capturing the fluid interface. This is achieved by solving the Navier-Stokes equations with varying properties over the fluid domain, using two meshes, one representing both phases of the fluid and one representing the fluid interface. The fluid mesh is fixed, and it is not altered during the simulations. The interface mesh is advected by the velocity fields, and is subjected to remeshing to maintain the same node density in all areas. Since the interface mesh has considerably less nodes compared to the fixed fluid mesh, the remeshing operation does not increase the computational cost significantly. The two meshes are decoupled, they do not share any nodes. The surface tension force is calculated by evaluation of the interface mesh curvature by the Laplace-Beltrami operator. This term is added to the Navier-Stokes equation, and the velocity fields obtained from the FEM solution on the fixed fluid mesh are used to advect the interface mesh. The surface tension term is treated explicitly using the continuum surface force model, and calculated using the curvature obtained by the application of a finite element discretization of the Laplace-Beltrami operator to the interface mesh. The chosen finite element is the Mini element, in order to respect the LBB condition, avoiding the addition of artificial stabilization terms. The convective term in the Navier-Stokes equation is discretized through a first order semi- Lagrangian method. Fluid properties at the interface are smoothed through a Heaviside function to avoid numerical instability, over an artificial thickness of the fluid interface. To validate the method discussed, some test cases are proposed. The first test is the static droplet, where surface tension forces are balanced by the pressure gradient. In this test no velocities should appear, any velocity values are due to numerical errors, therefore the lower, the better. The second test is the oscillating droplet, where a droplet of fluid with a slight perturbation in its diameter is released with no gravity forces. The droplet should oscillate with a known frequency towards a spherical shape. Lastly, the rising bubble test case, where the gravity forces promote the bubble’s ascension in quiescent fluid. The bubble shape evolution can be compared to experimental data.</p>
     </div>
   </article>
 </section>

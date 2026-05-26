@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hydrodynamics of Electrochemical Cells with a Rotating Semi-Spherical Electrode | Gustavo R. Anjos</title>
+  <title>A Semi-Lagrangian Finite Element Method for Two-Phase Flows | Gustavo R. Anjos</title>
   <meta name="description" content="Numerical simulation of single- and two-phase flows, heat transfer and scientific computing.">
   <base href="../">
   <link rel="stylesheet" href="static/css/base.css?v=4700cdc6899b">
@@ -35,36 +35,32 @@
     <main>
 <section class="page-intro" data-reveal>
   <span class="eyebrow">Conference</span>
-  <h1>Hydrodynamics of Electrochemical Cells with a Rotating Semi-Spherical Electrode</h1>
-  <p class="lead">R. M. Lucena; G. R. Anjos; N. Mangiavacchi; J. Pontes</p>
+  <h1>A Semi-Lagrangian Finite Element Method for Two-Phase Flows</h1>
+  <p class="lead">G. R. Anjos; R. A. Vidal</p>
 </section>
 
 <section class="two-column" data-reveal>
   <article class="panel panel-accent">
     <div class="section-heading">
       <span class="eyebrow">Bibliographic record</span>
-      <h2>2012</h2>
+      <h2>2023</h2>
     </div>
     <div class="stack-list">
       <div class="list-card compact">
         <p class="meta-line">Date</p>
-        <p>2012</p>
+        <p>2023</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Venue</p>
-        <p>Proceedings of the 14th Brazilian Congress of Thermal Engineering and Sciences</p>
+        <p>JEM</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Event</p>
-        <p>ENCIT</p>
-      </div>
-      <div class="list-card compact">
-        <p class="meta-line">Place</p>
-        <p>Rio de Janeiro, Brazil</p>
+        <p>JEM</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Keywords</p>
-        <p>Corrosion, Rotating Disk Flow, Semi-spherical Electrode, Finite Element Method</p>
+        <p>Two-phase flows, Finite Element Method, semi-Lagrangian, front-tracking.</p>
       </div>
       <div class="list-card compact">
         <p class="meta-line">Links</p>
@@ -82,7 +78,7 @@
     </div>
     <div class="rich-text">
       <h2>Abstract</h2>
-<p>We propose a numerical model to obtain results for the velocity and concentration profiles close to semi-spherical rotating electrodes in electrochemical cells. The profiles refer to nondimensional velocity components along the radial direction, for straight lines ranging from angles with the rotating axis 0, angle, pi/2 obtained by solving the Navier-Stokes equations using the finite element method. The discretization of the domain is made with an object oriented approach. Spatial discretization of diffusive terms and the pressure is made by the Galerkin method. For the material derivative we use a semi-lagrangian method.</p>
+<p>This work aims to present a computational approach to study two-phase flows using direct numerical simulation. The flows are modeled by the two-dimensional incompressible Navier-Stokes equations, which are approximated by the Finite Element Method. The Galerkin formulation is used to discretize the Navier-Stokes equations in the spatial domain and the semi-Lagrangian method is used to discretize the material derivative in the temporal domain. A static unstructured triangular mesh is defined in the whole spatial domain. In order to satisfy the Ladyzhenskaya-Babuška-Brezzi condition, the mini and the quadratic elements are used, with pressure and velocity fields being calculated on different sets of the triangular mesh points. The interface is modeled by an adaptive moving one-dimensional mesh, according to a front- tracking method, in which connected marker points are moved with the imposed velocity of the triangular mesh. The interfacial tension is calculated using the interface curvature and a Heaviside function gradient, and included in the Navier-Stokes equations as a volume force. In order to stabilize the simulation results, a smooth transition between fluid properties is defined on the interface region. Several benchmark tests, such as the rising bubble and the oscillating drop, have been carried out to validate the proposed approach and the obtained results have matched analytical solutions and results found in literature. Therefore, the presented approach is validated to provide an accurate description of diverse two-phase flow phenomena.</p>
     </div>
   </article>
 </section>
