@@ -333,17 +333,47 @@
   margin-top: 18px;
 }
 
-.page-students .student-histogram {
-  display: grid;
-  gap: 8px;
+.page-students .student-histogram-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
 }
 
-.page-students .student-histogram-row {
-  display: grid;
-  grid-template-columns: 4ch minmax(0, 1fr) 3ch;
+.page-students .student-histogram-legend-item {
+  display: inline-flex;
   align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.page-students .student-histogram-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--level-color);
+  box-shadow: inset 0 0 0 1px rgba(19, 39, 53, 0.1);
+}
+
+.page-students .student-histogram {
+  display: flex;
+  align-items: end;
   gap: 12px;
-  min-height: 32px;
+  min-height: 248px;
+  overflow-x: auto;
+  padding: 10px 4px 2px;
+  border-bottom: 1px solid rgba(19, 39, 53, 0.12);
+}
+
+.page-students .student-histogram-column {
+  display: grid;
+  grid-template-rows: 18px 190px 22px;
+  justify-items: center;
+  align-items: end;
+  gap: 7px;
+  flex: 0 0 52px;
 }
 
 .page-students .student-histogram-year,
@@ -359,25 +389,46 @@
 
 .page-students .student-histogram-count {
   color: var(--primary-deep);
-  text-align: right;
 }
 
-.page-students .student-histogram-track {
-  position: relative;
-  height: 16px;
+.page-students .student-histogram-stack {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 30px;
+  height: var(--bar-height);
+  min-height: 4px;
   overflow: hidden;
-  border-radius: 999px;
+  border-radius: 8px 8px 3px 3px;
   background: rgba(15, 96, 116, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(19, 39, 53, 0.08);
 }
 
-.page-students .student-histogram-bar {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: var(--bar-width);
-  min-width: 8px;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #0f6074, #c44e5c);
-  box-shadow: 0 8px 18px rgba(15, 96, 116, 0.16);
+.page-students .student-histogram-segment {
+  display: block;
+  width: 100%;
+  height: var(--segment-height);
+  min-height: 4px;
+  background: var(--level-color);
+}
+
+.page-students .is-bsc {
+  --level-color: #c44e5c;
+}
+
+.page-students .is-ic {
+  --level-color: #e09034;
+}
+
+.page-students .is-msc {
+  --level-color: #0f6074;
+}
+
+.page-students .is-phd {
+  --level-color: #4f6fb3;
+}
+
+.page-students .is-postdoc {
+  --level-color: #6b4b8f;
 }
 
 @media (max-width: 1080px) {
@@ -407,8 +458,11 @@
     grid-template-columns: 1fr;
   }
 
-  .page-students .student-histogram-row {
-    grid-template-columns: 4ch minmax(0, 1fr) 3ch;
-    gap: 8px;
+  .page-students .student-histogram {
+    gap: 9px;
+  }
+
+  .page-students .student-histogram-column {
+    flex-basis: 44px;
   }
 }
