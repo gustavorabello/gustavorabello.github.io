@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Computação Científica Remota no LabMFA: Linux, SSH e Pós-processamento | Gustavo R. Anjos</title>
+  <meta name="description" content="Numerical simulation of single- and two-phase flows, heat transfer and scientific computing.">
+  <base href="../../">
+  <link rel="stylesheet" href="static/css/base.css?v=4700cdc6899b">
+  <link rel="stylesheet" href="static/css/archive.css?v=4700cdc6899b">
+</head>
+<body class="page-archive">
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="brand-wrap">
+        <a class="brand-mark" href="index.html">GRA</a>
+        <div class="brand-copy">
+          <a class="brand-name" href="index.html">Gustavo R. Anjos</a>
+          <p class="brand-role">COPPE/UFRJ · Department of Mechanical Engineering</p>
+        </div>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" data-nav-toggle>Menu</button>
+      <nav class="site-nav" data-nav-menu>
+        <a class="" href="index.html">Home</a>
+        <a class="" href="research/index.html">Research</a>
+        <a class="" href="publications/index.html">Publications</a>
+        <a class="" href="videos/index.html">Videos</a>
+        <a class="" href="teaching/index.html">Teaching</a>
+        <a class="" href="students/index.html">Students</a>
+        <a class="active" href="archive/index.html">Archive</a>
+      </nav>
+      <a class="header-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ28ljV6YdzkTRbUDPZc95rQMVQf1g-Qcx7HTGMs274xt0jp3D3mIcruynwFrdTyQC1fzuYIv9U4?gv=true" target="_blank" rel="noreferrer">Book a meeting</a>
+    </header>
+
+    <main>
+<section class="page-intro" data-reveal>
+  <span class="eyebrow">Archive</span>
+  <h1>Computação Científica Remota no LabMFA: Linux, SSH e Pós-processamento</h1>
+  <p class="lead">Guia introdutório de Linux, terminal, SSH, servidores do LabMFA, ambientes Conda e pós-processamento remoto.</p>
+  <div class="archive-page-actions" aria-label="Archive actions">
+    <a class="button button-secondary" href="archive/index.html">Back to archive</a>
+    <div class="archive-tools">
+      <button class="symbol-button" type="button" title="Decrease font size" aria-label="Decrease font size" data-font-action="decrease">−</button>
+      <button class="symbol-button" type="button" title="Increase font size" aria-label="Increase font size" data-font-action="increase">+</button>
+      <button class="icon-button" type="button" title="Generate PDF from this page" aria-label="Generate PDF from this page" onclick="window.print()">
+        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+          <path d="M7 2h7l5 5v5h-2V8h-4V4H7v8H5V4a2 2 0 0 1 2-2Z"></path>
+          <path d="M6 14h12a2 2 0 0 1 2 2v3h-3v3H7v-3H4v-3a2 2 0 0 1 2-2Zm3 3v3h6v-3H9Z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="archive-layout archive-layout-single" data-reveal>
+  <article class="panel archive-document">
+    <div class="latex-content">
+      <div class="minipage">
+<p><img src="media/images/archive/labmfa-computacao-cientifica-remota/coppe-ufrj-logo.png" style="height:21mm" alt="image" /></p>
+</div>
+<div class="minipage">
+<p><strong>PEM//UFRJ<br />
+Universidade Federal do Rio de Janeiro<br />
+ENGENHARIA MECÂNICA</strong></p>
+</div>
+<p><strong>COMPUTAÇÃO CIENTÍFICA</strong><br />
+<strong>REMOTA NO LABMFA</strong><br />
+<strong>LINUX, SSH E PÓS-PROCESSAMENTO</strong><br />
+<br />
+<code>Preparado por: Prof. Gustavo R. Anjos</code><br />
+<code>E-mail: gustavo.rabello@coppe.ufrj.br</code><br />
+<code>Versão: 2026-06-10</code></p>
+<div class="center">
+<div class="tcolorbox">
+<p><span><strong>Resumo.</strong> Este texto de nível introdutório tem como objetivo apresentar o uso básico do Linux, do terminal e dos servidores de computação disponíveis no Laboratório de Mecânica dos Fluidos e Aerodinâmica - LabMFA.</span></p>
+</div>
+</div>
+<figure data-latex-placement="!h">
+<embed src="media/images/archive/labmfa-computacao-cientifica-remota/conexao.svg" />
+</figure>
+<div class="flushright">
+<div class="minipage">
+<p><em>Esta figura ilustra as conexões de dados entre um computador pessoal, como um <em>laptop</em>, e um servidor remoto de computação de alto desempenho. Nota-se que as conexões podem partir de qualquer computador para qualquer outro computador ligado a uma rede local ou à internet.</em></p>
+</div>
+</div>
+<h1 id="introdução">Introdução</h1>
+<h2 id="considerações-iniciais">Considerações iniciais</h2>
+<p>Este texto foi elaborado para atender às necessidades de utilização remota dos computadores de alto desempenho disponíveis no Laboratório de Mecânica dos Fluidos e Aerodinâmica - LabMFA, na Universidade Federal do Rio de Janeiro - UFRJ.</p>
+<p>O objetivo é servir como um guia de primeiros passos. O público principal é formado por alunos que precisam usar os servidores do laboratório para simulações, processamento de dados, armazenamento de resultados e controle de arquivos, mas que ainda não têm familiaridade com Linux ou com o uso do terminal.</p>
+<p>Ao longo do texto, os comandos são apresentados de forma prática. Primeiro é explicado o que o comando faz, depois são mostrados exemplos simples e, por fim, são indicadas situações comuns no contexto do laboratório. Sempre que aparecer um exemplo como</p>
+<pre><code>comando exemplo</code></pre>
+<p>isso significa que o texto deve ser digitado no terminal, seguido da tecla <code>Enter</code>. Os nomes de usuários, servidores, endereços IP, portas e diretórios usados aqui são ilustrativos; cada aluno deve substituí-los pelos dados recebidos do responsável pela infraestrutura do LabMFA.</p>
+<p>O acesso aos computadores depende do local de onde o aluno está conectado. Dentro da rede do laboratório, cada servidor é acessado diretamente pelo seu IP interno. Fora do laboratório, normalmente existe um único IP externo para entrada na rede, e cada servidor é alcançado por uma porta diferente. Essa diferença aparece principalmente nos comandos <code>ssh</code> e <code>scp</code>.</p>
+<p>O uso responsável dos recursos computacionais é essencial. Os computadores do LabMFA são compartilhados e seus recursos são limitados: espaço em disco, memória, processadores, placas gráficas, rede e sistemas de armazenamento precisam atender vários usuários ao mesmo tempo. Uma simulação mal planejada, um processo esquecido ou a geração excessiva de arquivos pode sobrecarregar a máquina e inviabilizar o trabalho de outro aluno. Portanto, antes de executar simulações longas ou que consumam muita memória, procure entender em qual máquina você está, quantos recursos serão usados, onde seus arquivos serão gravados e se há alguma orientação específica para o grupo ou projeto.</p>
+<p><strong>O espaço em disco deve ser cuidadosamente respeitado: não grave grandes quantidades de arquivos de dados sem necessidade, não mantenha sequências enormes de arquivos intermediários quando elas já foram pós-processadas e remova ou compacte resultados temporários depois de confirmar que os arquivos importantes foram preservados.</strong></p>
+<p>Como estudo complementar, recomenda-se que o aluno faça o curso <em>The Missing Semester of Your CS Education</em>, disponível em português <span class="citation" data-cites="missingSemesterPt">(The Missing Semester of Your CS Education 2026)</span>. O curso apresenta, de forma prática, ferramentas que aparecem no uso diário de servidores Linux, como terminal, shell, editores de texto, Git, scripts, automação e organização do ambiente de trabalho.</p>
+<h2 id="recursos-computacionais">Recursos computacionais</h2>
+<p>O LabMFA dispõe de computadores e dispositivos de armazenamento voltados para atividades de pesquisa, desenvolvimento de códigos e execução de simulações numéricas. Esses recursos devem ser usados preferencialmente para tarefas que exigem mais processamento, memória ou armazenamento do que um computador pessoal costuma oferecer. Uma descrição pública das instalações do laboratório também está disponível na página de instalações do LabMFA <span class="citation" data-cites="labmfaFacilities2026">(LabMFA 2026)</span>.</p>
+<ul>
+<li><p>1x switch Mikrotik de 48 portas com rede de alta velocidade, usado para interligar servidores, estações de trabalho e dispositivos de armazenamento na rede local do laboratório.</p></li>
+<li><p>1x NAS Synology, com processador dual-core de 2,3 GHz, 4 GB de memória e 24 TB de armazenamento configurado em RAID, usado para armazenamento centralizado de dados e resultados.</p></li>
+<li><p>1x servidor Dell PowerEdge R650, com hostname <code>jacaranda</code>, equipado com um processador Intel Xeon Gold 6348 de 2,60 GHz, 28 cores, 128 GB de RAM e SSD de aproximadamente 1,87 TB.</p></li>
+<li><p>1x servidor Dell R650xs, com hostname <code>abeto</code>, equipado com dois processadores Intel Xeon Silver 4316 de 2,30 GHz, totalizando 40 cores, 256 GB de RAM e SSD de aproximadamente 960 GB.</p></li>
+<li><p>1x servidor Dell R650xs, com hostname <code>pinho</code>, com configuração equivalente ao <code>abeto</code>: dois processadores Intel Xeon Silver 4316, 40 cores no total, 256 GB de RAM e SSD de aproximadamente 960 GB.</p></li>
+</ul>
+<p>Em geral, o aluno acessa esses computadores remotamente a partir do seu notebook ou de uma estação de trabalho do laboratório. Quando o acesso é feito dentro da rede do LabMFA, usa-se o IP interno do servidor desejado. Quando o acesso é feito de fora do laboratório, usa-se um IP externo único e uma porta específica para cada máquina. Essa configuração é comum quando a rede do laboratório usa redirecionamento de portas.</p>
+<p>Uma forma simples de registrar esses dados é manter uma tabela de consulta. Na rede interna do LabMFA, cada equipamento possui seu próprio IP:</p>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Equipamento</th>
+<th style="text-align: left;">IP interno</th>
+<th style="text-align: left;">IP externo</th>
+<th style="text-align: left;">Porta externa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>abeto</code></td>
+<td style="text-align: left;"><code>192.168.68.51</code></td>
+<td style="text-align: left;"><code>IP_EXTERNO_RESTRITO</code></td>
+<td style="text-align: left;"><code>omitida</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pinho</code></td>
+<td style="text-align: left;"><code>192.168.68.52</code></td>
+<td style="text-align: left;"><code>IP_EXTERNO_RESTRITO</code></td>
+<td style="text-align: left;"><code>omitida</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jacaranda</code></td>
+<td style="text-align: left;"><code>192.168.68.53</code></td>
+<td style="text-align: left;"><code>IP_EXTERNO_RESTRITO</code></td>
+<td style="text-align: left;"><code>omitida</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>synology</code></td>
+<td style="text-align: left;"><code>192.168.68.71</code></td>
+<td style="text-align: left;"><code>IP_EXTERNO_RESTRITO</code></td>
+<td style="text-align: left;"><code>omitida</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Dentro da rede local do laboratório, o acesso é feito diretamente para o IP interno do equipamento desejado. Fora do laboratório, use o IP externo único <code>IP_EXTERNO_RESTRITO</code> e a porta correspondente ao servidor desejado.</p>
+<p>Arquivos pequenos, scripts e configurações podem ser editados diretamente no terminal. Arquivos maiores, como malhas, resultados de simulação e bases de dados, devem ser organizados em diretórios claros para facilitar a manutenção, o backup e o eventual compartilhamento com orientadores e colegas.</p>
+<p>Evite salvar resultados grandes na pasta errada, duplicar arquivos sem necessidade ou deixar simulações abandonadas consumindo recursos. Em um ambiente compartilhado, organização local também é uma forma de respeito aos demais usuários.</p>
+<h1 id="linux-e-terminal">Linux e terminal</h1>
+<h2 id="o-que-é-o-linux">O que é o Linux</h2>
+<p>Linux é o sistema operacional utilizado na maior parte dos servidores de computação científica. Ele faz o mesmo papel geral do Windows ou do macOS: organiza arquivos, executa programas, controla usuários, gerencia memória, usa discos e conversa com a rede. A diferença mais importante para este manual é que, em servidores, normalmente usamos o Linux por meio de texto, digitando comandos em um terminal.</p>
+<p>Essa forma de trabalho parece estranha no começo, mas é muito eficiente para computação remota. Um servidor do LabMFA pode estar em outra sala, ou mesmo em outra rede, e ainda assim ser usado quase como se estivesse na sua frente. O aluno envia comandos, acompanha programas, copia resultados e organiza arquivos sem precisar de uma interface gráfica.</p>
+<h2 id="arquivos-e-diretórios">Arquivos e diretórios</h2>
+<p>No Linux, tudo é organizado em uma árvore de diretórios. Um diretório é o mesmo que uma pasta. O topo dessa árvore é representado por uma barra <code>/</code>. A partir dela existem diretórios como <code>/home</code>, <code>/usr</code>, <code>/tmp</code> e outros. Em geral, os arquivos pessoais dos usuários ficam dentro de <code>/home</code>.</p>
+<p>Se o usuário se chama <code>aluno</code>, sua pasta pessoal provavelmente será <code>/home/aluno</code>. Essa pasta também pode ser escrita como <code>~</code>, que é um atalho para “minha pasta pessoal”. Assim, os caminhos abaixo apontam para locais equivalentes quando o usuário logado é <code>aluno</code>:</p>
+<pre><code>/home/aluno
+~</code></pre>
+<p>Um caminho que começa com <code>/</code> é chamado de caminho absoluto, pois indica o local desde a raiz do sistema. Um caminho que não começa com <code>/</code> é chamado de caminho relativo, pois depende do diretório em que o usuário está naquele momento. Por exemplo, se você está em <code>/home/aluno</code> e digita <code>resultados/caso1.dat</code>, o Linux entende <code>/home/aluno/resultados/caso1.dat</code>.</p>
+<h2 id="o-terminal">O terminal</h2>
+<p>O terminal é a janela ou sessão onde comandos são digitados. Ele apresenta um indicador chamado <em>prompt</em>. O prompt pode variar de um computador para outro, mas normalmente mostra o usuário, o nome da máquina e o diretório atual. Um exemplo típico é:</p>
+<pre><code>aluno@servidor:~/simulacoes$</code></pre>
+<p>Nesse exemplo, <code>aluno</code> é o nome do usuário, <code>servidor</code> é o nome do computador, <code>~/simulacoes</code> é o diretório atual e o símbolo <code>$</code> indica que o terminal está pronto para receber comandos.</p>
+<p>Um comando tem, em geral, três partes: o nome do programa, opções e argumentos. As opções modificam o comportamento do comando e frequentemente começam com <code>-</code> ou <code>--</code>. Os argumentos indicam sobre quais arquivos, diretórios ou textos o comando deve atuar.</p>
+<pre><code>ls -lh resultados</code></pre>
+<p>No exemplo acima, <code>ls</code> é o comando, <code>-lh</code> são opções e <code>resultados</code> é o argumento. O comando lista o conteúdo do diretório <code>resultados</code>, mostrando tamanhos em unidades mais legíveis.</p>
+<h2 id="shell-e-bash">Shell e Bash</h2>
+<p>Quando o aluno digita um comando no terminal, quem interpreta esse texto não é o terminal em si, mas um programa chamado <em>shell</em>. O shell lê o comando, expande atalhos, encontra o programa correspondente e inicia sua execução. Em outras palavras, o terminal é a janela de interação; o shell é o interpretador de comandos que trabalha dentro dela.</p>
+<p>O shell mais comum em servidores Linux é o <code>bash</code>, abreviação de <em>Bourne Again Shell</em>. Ele é usado há décadas, está disponível em praticamente todas as distribuições Linux e é a escolha mais segura para scripts que precisam funcionar em muitos computadores. Grande parte dos exemplos deste manual assume comportamento compatível com <code>bash</code>.</p>
+<p>Para saber qual shell está sendo usado na sessão atual, digite:</p>
+<pre><code>echo $SHELL</code></pre>
+<p>Para saber qual programa de shell está executando o terminal naquele momento:</p>
+<pre><code>echo $0</code></pre>
+<p>Esses comandos podem retornar caminhos como <code>/bin/bash</code>, <code>/bin/zsh</code> ou <code>/usr/bin/fish</code>.</p>
+<h2 id="outros-shells-zsh-fish-e-sh">Outros shells: <code>zsh</code>, <code>fish</code> e <code>sh</code></h2>
+<p>Além do <code>bash</code>, existem outros shells. Eles executam comandos parecidos, mas podem ter diferenças em atalhos, arquivos de configuração e recursos interativos.</p>
+<ul>
+<li><p><code>sh</code>: shell histórico e mínimo. É usado como base de compatibilidade para muitos scripts. Quando um script começa com <code>#!/bin/sh</code>, ele deve evitar recursos específicos de <code>bash</code> ou <code>zsh</code>.</p></li>
+<li><p><code>bash</code>: padrão em muitos servidores Linux. É recomendado para scripts de laboratório, automação simples e comandos que precisam funcionar de forma previsível.</p></li>
+<li><p><code>zsh</code>: shell moderno e bastante usado em computadores pessoais, especialmente no macOS. Tem recursos interativos convenientes, como autocompletar avançado e temas de prompt. Scripts simples costumam ser parecidos com <code>bash</code>, mas há diferenças.</p></li>
+<li><p><code>fish</code>: shell amigável e interativo, com sugestões automáticas e sintaxe mais legível. Porém, sua sintaxe de script é diferente da sintaxe de <code>bash</code>; por isso, não é a melhor escolha para scripts que precisam executar em servidores variados.</p></li>
+</ul>
+<p>Para listar shells disponíveis em um sistema Linux, use:</p>
+<pre><code>cat /etc/shells</code></pre>
+<p>Para iniciar temporariamente outro shell, basta chamar o programa:</p>
+<pre><code>bash
+zsh
+fish</code></pre>
+<p>Esse comando muda apenas a sessão atual. Para voltar ao shell anterior, digite:</p>
+<pre><code>exit</code></pre>
+<h2 id="arquivos-de-configuração-do-shell">Arquivos de configuração do shell</h2>
+<p>Cada shell lê arquivos de configuração quando uma nova sessão começa. Esses arquivos definem aliases, variáveis de ambiente, funções e ajustes do prompt. Os mais comuns são:</p>
+<ul>
+<li><p><code>~/.bashrc</code>: configuração usual do <code>bash</code> em sessões interativas.</p></li>
+<li><p><code>~/.bash_profile</code> ou <code>~/.profile</code>: configuração lida em sessões de login, dependendo da distribuição.</p></li>
+<li><p><code>~/.zshrc</code>: configuração usual do <code>zsh</code>.</p></li>
+<li><p><code>~/.config/fish/config.fish</code>: configuração usual do <code>fish</code>.</p></li>
+</ul>
+<p>Os aliases de acesso ao LabMFA, por exemplo, podem ser colocados no <code>~/.bashrc</code> se o aluno usa <code>bash</code>, ou no <code>~/.zshrc</code> se usa <code>zsh</code>. Depois de editar o arquivo, é possível recarregar a configuração sem fechar o terminal:</p>
+<pre><code>source ~/.bashrc
+source ~/.zshrc</code></pre>
+<h2 id="como-mudar-o-shell-padrão">Como mudar o shell padrão</h2>
+<p>Em Linux, o shell padrão de um usuário pode ser alterado com o comando <code>chsh</code>, se essa opção estiver habilitada pelo administrador do sistema. Antes de mudar, confira quais shells estão permitidos:</p>
+<pre><code>cat /etc/shells</code></pre>
+<p>Para mudar o shell padrão para <code>bash</code>:</p>
+<pre><code>chsh -s /bin/bash</code></pre>
+<p>Para mudar para <code>zsh</code>, quando ele está instalado e listado em <code>/etc/shells</code>:</p>
+<pre><code>chsh -s /bin/zsh</code></pre>
+<p>Depois de usar <code>chsh</code>, normalmente é necessário sair da sessão e entrar novamente para que a mudança tenha efeito. Em servidores compartilhados do LabMFA, recomenda-se manter <code>bash</code> como shell padrão, a menos que haja um motivo claro para mudar. Isso reduz diferenças entre exemplos do manual, scripts de colegas e instruções fornecidas pelo responsável técnico.</p>
+<h2 id="boas-práticas-no-uso-do-terminal">Boas práticas no uso do terminal</h2>
+<p>Antes de executar um comando que altera arquivos, confirme onde você está e o que será afetado. Dois comandos simples ajudam muito:</p>
+<pre><code>pwd
+ls</code></pre>
+<p>O comando <code>pwd</code> mostra o diretório atual. O comando <code>ls</code> lista os arquivos desse diretório. Usar os dois antes de copiar, mover ou apagar arquivos evita muitos erros.</p>
+<p>Também é importante ler as mensagens de erro. No terminal, mensagens como <code>No such file or directory</code>, <code>Permission denied</code> e <code>command not found</code> são pistas úteis. Elas indicam, respectivamente, que um arquivo ou diretório não foi encontrado, que o usuário não tem permissão para a operação, ou que o comando digitado não está instalado ou foi escrito incorretamente.</p>
+<h2 id="ajuda-dentro-do-próprio-linux">Ajuda dentro do próprio Linux</h2>
+<p>Muitos comandos possuem documentação local. Para consultar o manual de um comando, use <code>man</code>:</p>
+<pre><code>man ls
+man ssh</code></pre>
+<p>Dentro do manual, use as setas do teclado para navegar, <code>/palavra</code> para procurar uma palavra e <code>q</code> para sair. Alguns comandos também aceitam a opção <code>--help</code>, que mostra um resumo curto:</p>
+<pre><code>ls --help
+ssh --help</code></pre>
+<p>Ao estudar os comandos deste manual, não é necessário decorar tudo. O mais importante é entender a lógica geral: localizar-se no sistema, listar arquivos, copiar dados, executar programas e acompanhar o que está rodando.</p>
+<h1 id="ambientes-python-com-conda">Ambientes Python com Conda</h1>
+<h2 id="por-que-usar-ambientes">Por que usar ambientes</h2>
+<p>Em computação científica, é comum que projetos diferentes precisem de versões diferentes de Python, NumPy, SciPy, Matplotlib, Jupyter, FEniCS, meshio, pyvista ou outras bibliotecas. Instalar tudo diretamente no Python do sistema é uma prática ruim em servidores compartilhados, pois pode quebrar programas de outros usuários ou do próprio sistema operacional.</p>
+<p>Ferramentas da família Conda resolvem esse problema criando <em>ambientes</em>. Um ambiente é uma instalação isolada de Python e de bibliotecas. Assim, um aluno pode ter um ambiente para uma disciplina, outro para um projeto de mestrado e outro para testar uma versão nova de uma biblioteca, sem misturar dependências.</p>
+<p>No LabMFA, a recomendação geral é instalar essas ferramentas dentro da pasta pessoal do usuário, por exemplo em <code>~/miniforge3</code> ou <code>~/miniconda3</code>. Não use <code>sudo</code> para instalar pacotes Python nos servidores, a menos que isso tenha sido explicitamente pedido pelo responsável técnico.</p>
+<h2 id="miniforge">Miniforge</h2>
+<p>O Miniforge é uma distribuição mínima de Conda mantida pelo projeto conda-forge. Segundo a página oficial do projeto, seus instaladores são voltados para os comandos <code>conda</code> e <code>mamba</code>, com o canal <code>conda-forge</code> configurado como canal padrão <span class="citation" data-cites="miniforgeGithub">(<span class="nocase">conda-forge</span> 2026)</span>.</p>
+<p>Na prática, isso significa que o Miniforge é uma boa escolha para computação científica em Linux, porque o canal <code>conda-forge</code> costuma ter pacotes atualizados para bibliotecas numéricas, compiladores, ferramentas de visualização e dependências científicas.</p>
+<h2 id="miniconda">Miniconda</h2>
+<p>O Miniconda é a distribuição mínima mantida pela Anaconda. A documentação da Anaconda descreve o Miniconda como um instalador leve que inclui Conda, Python e um pequeno conjunto de pacotes essenciais <span class="citation" data-cites="minicondaLinuxInstall">(Anaconda 2026)</span>.</p>
+<p>A principal diferença prática é o canal padrão. No Miniconda, o usuário normalmente trabalha com os canais da Anaconda, podendo adicionar <code>conda-forge</code> quando necessário. Em ambientes acadêmicos e de pesquisa, é importante observar os termos de uso da Anaconda, especialmente em usos institucionais ou comerciais.</p>
+<h2 id="qual-escolher-no-labmfa">Qual escolher no LabMFA</h2>
+<p>Para a maioria dos alunos do LabMFA, o Miniforge é uma escolha simples e adequada, pois já usa <code>conda-forge</code> por padrão e também disponibiliza <code>mamba</code>. O <code>mamba</code> executa operações semelhantes ao <code>conda</code>, mas frequentemente resolve e instala pacotes mais rapidamente.</p>
+<p>O Miniconda continua sendo uma alternativa válida quando o aluno já usa a distribuição da Anaconda em outros computadores, precisa reproduzir um ambiente específico criado com Miniconda ou recebeu instruções de um projeto que dependem desse instalador.</p>
+<h2 id="instalação-do-miniforge-no-linux">Instalação do Miniforge no Linux</h2>
+<p>As instruções oficiais do Miniforge recomendam baixar o instalador apropriado para o sistema operacional e arquitetura usando <code>curl</code> ou <code>wget</code> e depois executar o script com <code>bash</code> <span class="citation" data-cites="miniforgeGithub">(<span class="nocase">conda-forge</span> 2026)</span>. Em um servidor Linux típico do LabMFA, use:</p>
+<pre><code>cd ~
+curl -L -O &quot;https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh&quot;
+bash Miniforge3-$(uname)-$(uname -m).sh</code></pre>
+<p>Durante a instalação interativa, leia as mensagens, aceite a licença se concordar com os termos e confirme o local de instalação. Para uso individual, o local padrão na pasta pessoal costuma ser adequado.</p>
+<p>Se o instalador perguntar se deve inicializar o Conda no shell, responda <code>yes</code>. Essa etapa modifica arquivos como <code>~/.bashrc</code> ou <code>~/.zshrc</code> para que o comando <code>conda</code> fique disponível em novas sessões de terminal.</p>
+<p>Depois da instalação, feche e abra o terminal, ou recarregue a configuração:</p>
+<pre><code>source ~/.bashrc</code></pre>
+<p>Se a instalação foi feita sem inicialização automática, inicialize manualmente com:</p>
+<pre><code>~/miniforge3/bin/conda init
+source ~/.bashrc</code></pre>
+<h2 id="instalação-do-miniconda-no-linux">Instalação do Miniconda no Linux</h2>
+<p>Para Linux em arquitetura <code>x86_64</code>, a documentação da Anaconda apresenta o download do instalador mais recente e a execução com <code>bash</code> <span class="citation" data-cites="minicondaLinuxInstall">(Anaconda 2026)</span>:</p>
+<pre><code>cd ~
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash ./Miniconda3-latest-Linux-x86_64.sh</code></pre>
+<p>Também é possível baixar com <code>wget</code>:</p>
+<pre><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash ./Miniconda3-latest-Linux-x86_64.sh</code></pre>
+<p>A documentação recomenda verificar a integridade do instalador comparando o hash SHA-256 com o valor oficial disponibilizado no repositório da Anaconda. Para gerar o hash local:</p>
+<pre><code>sha256sum Miniconda3-latest-Linux-x86_64.sh</code></pre>
+<p>Durante a instalação, aceite os termos se concordar, confirme o diretório de instalação e responda <code>yes</code> quando o instalador perguntar se deve inicializar o Conda. Em seguida, feche e abra o terminal, ou rode:</p>
+<pre><code>source ~/.bashrc</code></pre>
+<h2 id="desativar-ativação-automática-do-ambiente-base">Desativar ativação automática do ambiente <code>base</code></h2>
+<p>Após a inicialização do Conda, é comum aparecer <code>(base)</code> no início do prompt. Isso indica que o ambiente base está ativo. Para evitar confusão, é mais organizado não trabalhar diretamente no <code>base</code>. O próprio projeto Miniforge sugere desativar a ativação automática do ambiente base e criar ambientes específicos para cada projeto <span class="citation" data-cites="miniforgeGithub">(<span class="nocase">conda-forge</span> 2026)</span>:</p>
+<pre><code>conda config --set auto_activate_base false</code></pre>
+<p>Depois disso, feche e abra o terminal. O comando <code>conda</code> continuará disponível, mas nenhum ambiente será ativado automaticamente.</p>
+<h2 id="criar-um-ambiente-para-trabalho-no-labmfa">Criar um ambiente para trabalho no LabMFA</h2>
+<p>Para criar um ambiente chamado <code>labmfa</code> com Python e algumas bibliotecas comuns:</p>
+<pre><code>conda create -n labmfa python=3.11 numpy scipy matplotlib pandas jupyterlab</code></pre>
+<p>Se estiver usando Miniforge, também pode usar <code>mamba</code>:</p>
+<pre><code>mamba create -n labmfa python=3.11 numpy scipy matplotlib pandas jupyterlab</code></pre>
+<p>Para ativar o ambiente:</p>
+<pre><code>conda activate labmfa</code></pre>
+<p>Depois de ativado, os comandos <code>python</code>, <code>pip</code>, <code>jupyter</code> e bibliotecas instaladas passam a se referir a esse ambiente. Para verificar:</p>
+<pre><code>which python
+python --version
+conda list</code></pre>
+<p>Para sair do ambiente:</p>
+<pre><code>conda deactivate</code></pre>
+<h2 id="criar-ambiente-a-partir-de-arquivo-yaml">Criar ambiente a partir de arquivo <code>YAML</code></h2>
+<p>Em projetos de pesquisa, a forma mais organizada de criar ambientes é usar um arquivo <code>YAML</code>. Esse arquivo descreve o nome do ambiente, os canais de pacotes e as bibliotecas necessárias. Assim, outro aluno consegue reproduzir o mesmo ambiente no computador pessoal ou em um servidor do LabMFA.</p>
+<p>Crie um arquivo chamado <code>environment.yml</code>:</p>
+<pre><code>nano environment.yml</code></pre>
+<p>Um exemplo básico para um ambiente chamado <code>mef</code>, voltado para estudos de método dos elementos finitos, é:</p>
+<pre><code>name: mef
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - sympy
+  - jupyterlab
+  - ipykernel
+  - pip
+  - pip:
+      - meshio
+      - pygmsh
+      - gmsh
+      - scienceplots
+      - rich</code></pre>
+<p>O campo <code>name</code> define o nome do ambiente. O campo <code>channels</code> indica de onde o Conda deve procurar pacotes; neste exemplo, usamos <code>conda-forge</code>. A lista <code>dependencies</code> contém os pacotes instalados pelo Conda. A subseção <code>pip</code> instala pacotes usando <code>pip</code> dentro do próprio ambiente.</p>
+<p>Depois de salvar o arquivo, crie o ambiente com:</p>
+<pre><code>conda env create -f environment.yml</code></pre>
+<p>Se estiver usando Miniforge, o mesmo arquivo pode ser instalado com <code>mamba</code>:</p>
+<pre><code>mamba env create -f environment.yml</code></pre>
+<p>Para ativar e testar o ambiente:</p>
+<pre><code>conda activate mef
+python -c &quot;import numpy, scipy, matplotlib; print(&#39;ambiente mef ok&#39;)&quot;</code></pre>
+<p>Para usar esse ambiente em notebooks Jupyter, registre o kernel:</p>
+<pre><code>python -m ipykernel install --user --name mef --display-name &quot;Python (mef)&quot;</code></pre>
+<p>Quando o arquivo <code>environment.yml</code> for alterado, por exemplo para acrescentar um pacote, atualize o ambiente existente com:</p>
+<pre><code>conda env update -n mef -f environment.yml --prune</code></pre>
+<p>A opção <code>--prune</code> remove pacotes que não aparecem mais no arquivo. Isso mantém o ambiente mais próximo da descrição oficial do projeto.</p>
+<p>Use <code>pip</code> dentro do arquivo <code>YAML</code> com cuidado. Em geral, prefira instalar por Conda quando o pacote existir no canal <code>conda-forge</code>, pois isso reduz conflitos entre bibliotecas compiladas. Deixe <code>pip</code> para pacotes que não estão disponíveis no Conda, versões específicas exigidas por um projeto ou ferramentas Python puras.</p>
+<h2 id="boas-práticas">Boas práticas</h2>
+<p>Crie ambientes com nomes claros, como <code>cfd</code>, <code>mef</code>, <code>posprocessamento</code> ou <code>tese</code>. Evite instalar todos os pacotes no ambiente <code>base</code>. Antes de apagar ou recriar um ambiente, confirme se ele não contém configurações importantes.</p>
+<p>Para listar ambientes existentes:</p>
+<pre><code>conda env list</code></pre>
+<p>Para remover um ambiente que não é mais necessário:</p>
+<pre><code>conda remove -n labmfa --all</code></pre>
+<p>Para registrar os pacotes de um ambiente em um arquivo, use:</p>
+<pre><code>conda env export &gt; environment.yml</code></pre>
+<p>Esse comando exporta o ambiente ativo com versões detalhadas dos pacotes. Para criar um arquivo mais fácil de revisar manualmente, como no exemplo do ambiente <code>mef</code>, prefira escrever o <code>environment.yml</code> com os pacotes principais do projeto.</p>
+<p>Esse arquivo ajuda a reproduzir o mesmo ambiente em outro computador ou em um servidor do laboratório:</p>
+<pre><code>conda env create -f environment.yml</code></pre>
+<h2 id="instalar-programas-e-registrar-o-ambiente">Instalar programas e registrar o ambiente</h2>
+<p>Depois que o Miniforge ou o Miniconda estiver instalado, o aluno deve instalar pacotes dentro de ambientes específicos, e não diretamente no ambiente <code>base</code>. Isso reduz conflitos e torna os projetos mais reprodutíveis.</p>
+<pre><code>conda activate mef
+conda install -c conda-forge numpy scipy matplotlib</code></pre>
+<p>Para procurar um pacote antes de instalar:</p>
+<pre><code>conda search -c conda-forge pyvista</code></pre>
+<p>Para instalar ferramentas de pós-processamento:</p>
+<pre><code>conda install -c conda-forge pyvista pillow imageio ffmpeg imagemagick gnuplot</code></pre>
+<p>Quando o ambiente estiver funcionando, registre sua configuração em um arquivo:</p>
+<pre><code>conda env export &gt; environment.yml</code></pre>
+<p>Esse arquivo pode ser salvo junto com o projeto. Em outro servidor, ou no computador de outro aluno, o ambiente pode ser recriado com:</p>
+<pre><code>conda env create -f environment.yml</code></pre>
+<p>Se o ambiente já existe e o arquivo <code>environment.yml</code> foi atualizado:</p>
+<pre><code>conda env update -f environment.yml --prune</code></pre>
+<p>A opção <code>--prune</code> remove pacotes que não aparecem mais no arquivo, ajudando a manter o ambiente consistente com a descrição do projeto.</p>
+<h1 id="fundamentos-práticos-do-terminal">Fundamentos práticos do terminal</h1>
+<h2 id="redirecionamento-pipes-e-curingas">Redirecionamento, pipes e curingas</h2>
+<p>No terminal, muitos programas escrevem resultados na tela. O Linux permite redirecionar essa saída para arquivos, combinar comandos e selecionar grupos de arquivos por padrões. Esses recursos são fundamentais para trabalhar com simulações, <em>logs</em> e pós-processamento.</p>
+<h3 id="salvar-a-saída-em-arquivo">Salvar a saída em arquivo</h3>
+<p>O símbolo <code>&gt;</code> salva a saída de um comando em um arquivo. Se o arquivo já existir, ele será substituído.</p>
+<pre><code>ls -lh &gt; lista_arquivos.txt
+python simulacao.py &gt; saida.log</code></pre>
+<p>O símbolo <code>&gt;&gt;</code> acrescenta a saída ao final do arquivo, sem apagar o conteúdo anterior.</p>
+<pre><code>date &gt;&gt; historico_execucoes.log
+python pos.py &gt;&gt; historico_execucoes.log</code></pre>
+<p>Mensagens de erro geralmente usam uma saída separada chamada <code>stderr</code>. Para salvar saída normal e erros no mesmo arquivo:</p>
+<pre><code>python simulacao.py &gt; saida.log 2&gt;&amp;1</code></pre>
+<h3 id="combinar-comandos-com-pipe">Combinar comandos com pipe</h3>
+<p>O símbolo <code>|</code> envia a saída de um comando para a entrada de outro.</p>
+<pre><code>ls -lh | less
+history | grep ssh
+ps aux | grep python</code></pre>
+<p>No primeiro exemplo, a listagem é aberta no <code>less</code>. No segundo, o histórico é filtrado por comandos que contêm <code>ssh</code>. No terceiro, a lista de processos é filtrada por processos relacionados a Python.</p>
+<h3 id="selecionar-arquivos-com-curingas">Selecionar arquivos com curingas</h3>
+<p>O caractere <code>*</code> representa qualquer sequência de caracteres.</p>
+<pre><code>ls *.vtk
+ls interface-*.png
+cp *.dat resultados/</code></pre>
+<p>O caractere <code>?</code> representa exatamente um caractere.</p>
+<pre><code>ls caso?.dat</code></pre>
+<p>Antes de usar curingas com <code>rm</code>, sempre teste o padrão com <code>ls</code>.</p>
+<pre><code>ls cropped-*.png
+rm cropped-*.png</code></pre>
+<h2 id="permissões-chmod-chown-e-groups">Permissões: <code>chmod</code>, <code>chown</code> e <code>groups</code></h2>
+<p>O Linux controla quem pode ler, escrever e executar cada arquivo. Essas permissões aparecem na listagem longa do <code>ls</code>.</p>
+<pre><code>ls -lh script.py
+ls -ld resultados</code></pre>
+<p>Uma linha pode começar assim:</p>
+<pre><code>-rwxr-xr--</code></pre>
+<p>O primeiro caractere indica o tipo: <code>-</code> para arquivo comum e <code>d</code> para diretório. Depois vêm três grupos de permissões: usuário, grupo e outros. As letras significam <code>r</code> para leitura, <code>w</code> para escrita e <code>x</code> para execução.</p>
+<h3 id="chmod-alterar-permissões"><code>chmod</code>: alterar permissões</h3>
+<p>Para tornar um script executável:</p>
+<pre><code>chmod +x script.py
+./script.py</code></pre>
+<p>Para remover permissão de escrita para outras pessoas:</p>
+<pre><code>chmod o-w resultados.dat</code></pre>
+<p>Para ajustar permissões de arquivos SSH:</p>
+<pre><code>chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/id_ed25519</code></pre>
+<h3 id="groups-ver-grupos-do-usuário"><code>groups</code>: ver grupos do usuário</h3>
+<pre><code>groups
+groups aluno</code></pre>
+<p>Grupos permitem compartilhar arquivos entre usuários autorizados. Em servidores compartilhados, isso pode ser usado para projetos de pesquisa com mais de uma pessoa.</p>
+<h3 id="chown-alterar-dono"><code>chown</code>: alterar dono</h3>
+<p>O comando <code>chown</code> muda o dono de arquivos. Em geral, usuários comuns não podem mudar arquivos para outro dono; isso costuma exigir permissões de administrador.</p>
+<pre><code>chown aluno resultados.dat
+chown -R aluno:grupo projeto/</code></pre>
+<p>No LabMFA, se um arquivo importante ficou com dono incorreto, o aluno deve pedir ajuda ao responsável técnico em vez de tentar corrigir com comandos aleatórios.</p>
+<h2 id="compactação-tar-gzip-zip-e-unzip">Compactação: <code>tar</code>, <code>gzip</code>, <code>zip</code> e <code>unzip</code></h2>
+<p>Resultados de simulações podem conter muitos arquivos pequenos. Compactar esses arquivos facilita a cópia, reduz o número de transferências e ajuda a organizar versões finais.</p>
+<h3 id="tar-empacotar-diretórios"><code>tar</code>: empacotar diretórios</h3>
+<p>Para criar um arquivo compactado <code>tar.gz</code>:</p>
+<pre><code>tar -czvf resultados.tar.gz resultados/</code></pre>
+<p>As opções significam: <code>c</code> cria o arquivo, <code>z</code> usa compressão <code>gzip</code>, <code>v</code> mostra os nomes processados e <code>f</code> indica o nome do arquivo de saída.</p>
+<p>Para extrair:</p>
+<pre><code>tar -xzvf resultados.tar.gz</code></pre>
+<p>Para ver o conteúdo sem extrair:</p>
+<pre><code>tar -tzvf resultados.tar.gz</code></pre>
+<h3 id="gzip-compactar-arquivo-único"><code>gzip</code>: compactar arquivo único</h3>
+<pre><code>gzip saida.log
+gunzip saida.log.gz</code></pre>
+<p>O <code>gzip</code> é adequado para arquivos únicos, como <code>saida.log</code>. Ao compactar, ele normalmente substitui o arquivo original por uma versão terminada em <code>.gz</code>.</p>
+<h3 id="zip-e-unzip-compatibilidade-com-windows"><code>zip</code> e <code>unzip</code>: compatibilidade com Windows</h3>
+<pre><code>zip -r resultados.zip resultados/
+unzip resultados.zip
+unzip -l resultados.zip</code></pre>
+<p>Arquivos <code>zip</code> são convenientes quando os resultados precisam ser enviados para usuários de Windows, mas em servidores Linux o formato <code>tar.gz</code> costuma ser mais natural.</p>
+<h2 id="gerenciamento-de-processos-ps-kill-jobs-fg-bg-e-nohup">Gerenciamento de processos: <code>ps</code>, <code>kill</code>, <code>jobs</code>, <code>fg</code>, <code>bg</code> e <code>nohup</code></h2>
+<p>Um processo é um programa em execução. Em computação remota, é essencial saber verificar o que está rodando e encerrar processos que travaram ou foram iniciados por engano.</p>
+<h3 id="ps-listar-processos"><code>ps</code>: listar processos</h3>
+<pre><code>ps
+ps aux
+ps aux | grep python</code></pre>
+<p>O comando <code>ps aux</code> mostra processos de forma detalhada. A coluna <code>PID</code> contém o identificador do processo, usado por comandos como <code>kill</code>.</p>
+<h3 id="kill-e-killall-encerrar-processos"><code>kill</code> e <code>killall</code>: encerrar processos</h3>
+<p>Para pedir que um processo termine:</p>
+<pre><code>kill 12345</code></pre>
+<p>Se o processo não responde, pode ser necessário enviar um sinal mais forte:</p>
+<pre><code>kill -9 12345</code></pre>
+<p>Use <code>kill -9</code> apenas quando necessário. Ele encerra o processo sem dar oportunidade para salvar arquivos temporários ou fechar saídas de forma organizada.</p>
+<p>Para encerrar processos pelo nome:</p>
+<pre><code>killall python</code></pre>
+<p>Esse comando pode ser perigoso em servidores compartilhados se o nome for genérico. Antes, confira com <code>ps aux | grep python</code>.</p>
+<h3 id="jobs-fg-e-bg"><code>jobs</code>, <code>fg</code> e <code>bg</code></h3>
+<p>Se um comando foi iniciado no terminal atual, é possível pausá-lo com <code>Ctrl+z</code>. Depois disso:</p>
+<pre><code>jobs
+bg %1
+fg %1</code></pre>
+<p><code>jobs</code> lista tarefas associadas ao shell atual. <code>bg</code> continua uma tarefa em segundo plano. <code>fg</code> traz a tarefa de volta para primeiro plano.</p>
+<h3 id="nohup-manter-processo-após-sair-do-terminal"><code>nohup</code>: manter processo após sair do terminal</h3>
+<pre><code>nohup python simulacao.py &gt; saida.log 2&gt;&amp;1 &amp;</code></pre>
+<p>Esse comando inicia <code>simulacao.py</code>, salva a saída em <code>saida.log</code> e mantém o processo rodando mesmo se a conexão cair. Ainda assim, para trabalho interativo e acompanhamento mais confortável, <code>tmux</code> costuma ser uma escolha melhor.</p>
+<h2 id="variáveis-de-ambiente-e-path">Variáveis de ambiente e <code>PATH</code></h2>
+<p>Variáveis de ambiente são nomes que guardam valores usados pelo shell e por programas. Elas ajudam o sistema a saber onde procurar executáveis, onde fica o diretório pessoal do usuário e qual ambiente está ativo.</p>
+<pre><code>echo $HOME
+echo $SHELL
+echo $PATH</code></pre>
+<p>A variável <code>PATH</code> contém uma lista de diretórios onde o shell procura programas. Quando o aluno digita <code>python</code>, por exemplo, o shell procura um executável com esse nome em cada diretório listado no <code>PATH</code>.</p>
+<h3 id="which-descobrir-qual-programa-será-executado"><code>which</code>: descobrir qual programa será executado</h3>
+<pre><code>which python
+which conda
+which ffmpeg</code></pre>
+<p>Depois de ativar um ambiente Conda, o resultado de <code>which python</code> deve apontar para dentro do ambiente ativo.</p>
+<pre><code>conda activate mef
+which python</code></pre>
+<h3 id="export-definir-variável-temporária"><code>export</code>: definir variável temporária</h3>
+<pre><code>export OMP_NUM_THREADS=4
+export PYVISTA_OFF_SCREEN=true</code></pre>
+<p>Essas variáveis valem apenas para a sessão atual. Para carregá-las sempre, elas podem ser adicionadas ao <code>~/.bashrc</code> ou ao <code>~/.zshrc</code>, com cuidado para não quebrar outros programas.</p>
+<h3 id="adicionar-um-diretório-ao-path">Adicionar um diretório ao <code>PATH</code></h3>
+<p>Se o aluno tem scripts executáveis em <code>~/bin</code>, pode adicionar esse diretório ao começo do <code>PATH</code>:</p>
+<pre><code>export PATH=&quot;$HOME/bin:$PATH&quot;</code></pre>
+<p>Depois disso, um script executável em <code>~/bin/processa_caso.py</code> pode ser chamado de qualquer diretório:</p>
+<pre><code>processa_caso.py caso01</code></pre>
+<h1 id="comandos">Comandos</h1>
+<h2 id="pwd-mostrar-o-diretório-atual"><code>pwd</code>: mostrar o diretório atual</h2>
+<p>O comando <code>pwd</code> mostra o caminho completo do diretório em que o terminal está naquele momento. Ele é simples, mas muito importante: antes de copiar, mover ou apagar arquivos, o aluno deve conferir onde está.</p>
+<pre><code>pwd</code></pre>
+<p>Um resultado típico é:</p>
+<pre><code>/home/aluno/simulacoes/caso01</code></pre>
+<p>Esse caminho informa que os comandos seguintes serão executados dentro de <code>caso01</code>. No LabMFA, use <code>pwd</code> sempre que abrir uma nova conexão <code>ssh</code>, entrar em uma sessão <code>tmux</code> antiga ou mudar entre diretórios de resultados.</p>
+<pre><code>pwd
+ls -lh</code></pre>
+<p>A sequência acima confirma o local atual e mostra os arquivos disponíveis nesse local.</p>
+<h2 id="ls-listar-arquivos-e-diretórios"><code>ls</code>: listar arquivos e diretórios</h2>
+<p>O comando <code>ls</code> mostra o conteúdo de um diretório. Ele é um dos primeiros comandos que o aluno deve aprender, pois permite verificar quais arquivos existem no local atual antes de executar outras operações.</p>
+<pre><code>ls</code></pre>
+<p>O comando acima lista os arquivos e diretórios da pasta atual. Para obter uma listagem mais detalhada, use:</p>
+<pre><code>ls -lh</code></pre>
+<p>A opção <code>-l</code> mostra informações em formato longo, como permissões, dono, grupo, tamanho e data de modificação. A opção <code>-h</code> mostra tamanhos em formato mais legível, como <code>4K</code>, <code>20M</code> ou <code>3G</code>.</p>
+<p>Para mostrar arquivos ocultos, que no Linux começam com ponto, use:</p>
+<pre><code>ls -la</code></pre>
+<p>Arquivos como <code>.bashrc</code>, <code>.profile</code> e <code>.ssh</code> são ocultos por padrão porque geralmente guardam configurações do usuário. Não altere esses arquivos sem entender sua função.</p>
+<p>Também é possível listar um diretório específico:</p>
+<pre><code>ls -lh resultados
+ls -lh /home/aluno/simulacoes</code></pre>
+<p>No LabMFA, use <code>ls</code> frequentemente para confirmar se uma simulação gerou os arquivos esperados, se os resultados foram copiados para o local certo e se você está trabalhando no diretório correto.</p>
+<h2 id="cd-mudar-de-diretório"><code>cd</code>: mudar de diretório</h2>
+<p>O comando <code>cd</code> significa <em>change directory</em>, ou seja, mudar de diretório. Ele permite navegar pela árvore de pastas do Linux.</p>
+<pre><code>cd simulacoes</code></pre>
+<p>Esse comando entra no diretório <code>simulacoes</code>, desde que ele exista dentro da pasta atual. Para voltar um nível, use:</p>
+<pre><code>cd ..</code></pre>
+<p>O símbolo <code>..</code> representa o diretório acima do diretório atual. Para ir diretamente para a sua pasta pessoal, use:</p>
+<pre><code>cd</code></pre>
+<p>ou</p>
+<pre><code>cd ~</code></pre>
+<p>Para entrar em um diretório usando caminho absoluto:</p>
+<pre><code>cd /home/aluno/simulacoes/caso1</code></pre>
+<p>Depois de usar <code>cd</code>, é boa prática confirmar onde você está com:</p>
+<pre><code>pwd</code></pre>
+<p>Em servidores compartilhados, essa conferência é importante. Muitos erros acontecem porque o usuário executa um programa no diretório errado ou grava resultados em uma pasta diferente da esperada.</p>
+<h2 id="mkdir-criar-diretórios"><code>mkdir</code>: criar diretórios</h2>
+<p>O comando <code>mkdir</code> cria diretórios. Ele é útil para organizar casos de simulação, scripts, malhas, figuras e resultados.</p>
+<pre><code>mkdir simulacoes</code></pre>
+<p>O exemplo acima cria o diretório <code>simulacoes</code> dentro da pasta atual. Para criar uma estrutura com vários níveis de uma vez, use a opção <code>-p</code>:</p>
+<pre><code>mkdir -p simulacoes/caso1/resultados</code></pre>
+<p>Com <code>-p</code>, o Linux cria também os diretórios intermediários, se eles ainda não existirem. Isso é prático para preparar a organização de um novo projeto.</p>
+<p>Uma estrutura simples para trabalhos no LabMFA pode ser:</p>
+<pre><code>mkdir -p projeto/malhas
+mkdir -p projeto/casos
+mkdir -p projeto/resultados
+mkdir -p projeto/figuras</code></pre>
+<p>Use nomes claros e evite espaços em nomes de diretórios. Prefira nomes como <code>caso_re1000</code> ou <code>malha_fina</code>. Espaços funcionam no Linux, mas deixam os comandos mais sujeitos a erro.</p>
+<h2 id="cp-mv-e-rm-copiar-mover-e-apagar"><code>cp</code>, <code>mv</code> e <code>rm</code>: copiar, mover e apagar</h2>
+<p>Esses comandos alteram arquivos. Por isso, antes de usá-los, confirme o diretório atual com <code>pwd</code> e liste o conteúdo com <code>ls</code>.</p>
+<h3 id="cp-copiar-arquivos"><code>cp</code>: copiar arquivos</h3>
+<p>O comando <code>cp</code> copia arquivos. A forma geral é:</p>
+<pre><code>cp origem destino</code></pre>
+<p>Exemplos:</p>
+<pre><code>cp entrada.dat entrada_backup.dat
+cp script.py resultados/script_usado.py</code></pre>
+<p>Para copiar um diretório inteiro, use <code>-r</code>, de recursivo:</p>
+<pre><code>cp -r caso01 caso01_backup</code></pre>
+<p>No servidor, isso pode ocupar bastante espaço. Para diretórios grandes, prefira <code>rsync</code>, pois ele mostra melhor o progresso e pode continuar transferências interrompidas.</p>
+<h3 id="mv-mover-ou-renomear"><code>mv</code>: mover ou renomear</h3>
+<p>O comando <code>mv</code> move arquivos e diretórios. Ele também é usado para renomear.</p>
+<pre><code>mv saida.dat resultados/saida.dat
+mv caso_teste caso_Re200_We20</code></pre>
+<p>O primeiro exemplo move <code>saida.dat</code> para o diretório <code>resultados</code>. O segundo muda o nome do diretório <code>caso_teste</code> para <code>caso_Re200_We20</code>.</p>
+<h3 id="rm-apagar-arquivos"><code>rm</code>: apagar arquivos</h3>
+<p>O comando <code>rm</code> remove arquivos. Use com cuidado, pois no terminal normalmente não há lixeira.</p>
+<pre><code>rm teste.tmp
+rm *.log</code></pre>
+<p>Para apagar diretórios, use <code>-r</code>:</p>
+<pre><code>rm -r caso_incorreto</code></pre>
+<p>Evite usar <code>rm -rf</code> sem necessidade. Antes de apagar muitos arquivos, confira o que será afetado:</p>
+<pre><code>ls *.vtk
+rm *.vtk</code></pre>
+<p>O primeiro comando mostra os arquivos que combinam com o padrão. O segundo remove esses arquivos.</p>
+<h2 id="touch-cat-less-head-e-tail"><code>touch</code>, <code>cat</code>, <code>less</code>, <code>head</code> e <code>tail</code></h2>
+<p>Esses comandos ajudam a criar arquivos simples e inspecionar textos no terminal. Eles são úteis para arquivos de entrada, saídas de simulação, <em>logs</em> e scripts.</p>
+<h3 id="touch-criar-arquivo-vazio"><code>touch</code>: criar arquivo vazio</h3>
+<pre><code>touch notas.txt
+touch README.md</code></pre>
+<p>Se o arquivo ainda não existe, <code>touch</code> cria um arquivo vazio. Se ele já existe, o comando apenas atualiza sua data de modificação.</p>
+<h3 id="cat-mostrar-conteúdo-curto"><code>cat</code>: mostrar conteúdo curto</h3>
+<pre><code>cat README.md
+cat entrada.dat</code></pre>
+<p>Use <code>cat</code> para arquivos pequenos. Para arquivos longos, ele joga tudo na tela rapidamente, o que dificulta a leitura.</p>
+<h3 id="less-ler-arquivos-longos"><code>less</code>: ler arquivos longos</h3>
+<pre><code>less saida.log
+less resultados.dat</code></pre>
+<p>Dentro do <code>less</code>, use as setas para navegar, <code>/erro</code> para procurar a palavra <code>erro</code> e <code>q</code> para sair.</p>
+<h3 id="head-e-tail-começo-e-fim-do-arquivo"><code>head</code> e <code>tail</code>: começo e fim do arquivo</h3>
+<pre><code>head saida.log
+head -n 20 saida.log
+tail saida.log
+tail -n 50 saida.log</code></pre>
+<p><code>head</code> mostra o começo do arquivo. <code>tail</code> mostra o final. Para acompanhar um arquivo que está sendo escrito por uma simulação, use:</p>
+<pre><code>tail -f saida.log</code></pre>
+<p>Pressione <code>Ctrl+c</code> para parar o acompanhamento.</p>
+<h2 id="echo-history-e-clear"><code>echo</code>, <code>history</code> e <code>clear</code></h2>
+<p>Alguns comandos parecem pequenos, mas tornam o uso diário do terminal mais claro.</p>
+<h3 id="echo-imprimir-texto-e-variáveis"><code>echo</code>: imprimir texto e variáveis</h3>
+<pre><code>echo &quot;Teste no servidor abeto&quot;
+echo $HOME
+echo $SHELL</code></pre>
+<p>O primeiro comando imprime um texto. Os outros mostram variáveis do shell. <code>$HOME</code> indica o diretório pessoal do usuário. <code>$SHELL</code> indica o shell padrão configurado para a conta.</p>
+<h3 id="history-recuperar-comandos-anteriores"><code>history</code>: recuperar comandos anteriores</h3>
+<pre><code>history
+history | grep ssh
+history | grep conda</code></pre>
+<p>O comando <code>history</code> lista comandos já digitados. Com <code>grep</code>, é possível procurar comandos antigos relacionados a um tema específico.</p>
+<h3 id="clear-limpar-a-tela"><code>clear</code>: limpar a tela</h3>
+<pre><code>clear</code></pre>
+<p>Esse comando limpa visualmente a tela do terminal. Ele não apaga arquivos, não encerra processos e não muda o diretório atual.</p>
+<h2 id="find-encontrar-arquivos"><code>find</code>: encontrar arquivos</h2>
+<p>O comando <code>find</code> procura arquivos e diretórios a partir de um local indicado. Ele é muito útil quando o usuário não lembra onde salvou um resultado ou quando precisa localizar todos os arquivos de certo tipo.</p>
+<pre><code>find . -name &quot;resultado.dat&quot;</code></pre>
+<p>Nesse exemplo, o ponto <code>.</code> significa “comece no diretório atual”. A opção <code>-name</code> procura pelo nome indicado. As aspas são recomendadas quando o nome contém caracteres especiais ou padrões com <code>*</code>.</p>
+<p>Para encontrar todos os arquivos com extensão <code>.dat</code>:</p>
+<pre><code>find . -name &quot;*.dat&quot;</code></pre>
+<p>Para procurar somente diretórios:</p>
+<pre><code>find . -type d -name &quot;resultados&quot;</code></pre>
+<p>Para procurar arquivos modificados recentemente:</p>
+<pre><code>find . -type f -mtime -1</code></pre>
+<p>O exemplo acima lista arquivos modificados no último dia. Isso ajuda quando uma simulação gerou muitos arquivos e você quer identificar quais foram alterados mais recentemente.</p>
+<p>Evite executar buscas muito amplas a partir de <code>/</code>, pois isso pode percorrer o sistema inteiro e gerar muitas mensagens de permissão negada. Prefira iniciar a busca na sua pasta de trabalho.</p>
+<h2 id="grep-procurar-texto-dentro-de-arquivos"><code>grep</code>: procurar texto dentro de arquivos</h2>
+<p>O comando <code>grep</code> procura linhas que contêm uma palavra ou expressão. Ele é útil para examinar arquivos de configuração, códigos-fonte, relatórios de execução e arquivos de saída.</p>
+<pre><code>grep &quot;erro&quot; saida.log</code></pre>
+<p>Esse comando mostra as linhas de <code>saida.log</code> que contêm a palavra <code>erro</code>. Para ignorar diferença entre letras maiúsculas e minúsculas, use <code>-i</code>:</p>
+<pre><code>grep -i &quot;error&quot; saida.log</code></pre>
+<p>Para procurar em vários arquivos de um diretório:</p>
+<pre><code>grep -R &quot;viscosidade&quot; .</code></pre>
+<p>A opção <code>-R</code> faz a busca de forma recursiva, entrando nos subdiretórios a partir do local indicado. Para mostrar também o número da linha:</p>
+<pre><code>grep -n &quot;residual&quot; saida.log</code></pre>
+<p>Em simulações numéricas, <code>grep</code> é prático para verificar convergência ou encontrar mensagens específicas em arquivos longos:</p>
+<pre><code>grep -i &quot;converged&quot; solver.log
+grep -i &quot;nan&quot; solver.log
+grep -i &quot;warning&quot; solver.log</code></pre>
+<p>Se o arquivo for muito grande, <code>grep</code> evita que o usuário precise abrir o arquivo inteiro em um editor de texto.</p>
+<h2 id="sed-editar-texto-automaticamente"><code>sed</code>: editar texto automaticamente</h2>
+<p>O comando <code>sed</code> é usado para transformar texto de forma automática. Ele é muito útil para pequenas substituições em arquivos de entrada, scripts e listas de nomes. Para iniciantes, o uso mais importante é substituir uma palavra por outra.</p>
+<p>A forma básica de substituição é:</p>
+<pre><code>sed &#39;s/antigo/novo/&#39; arquivo.txt</code></pre>
+<p>Esse comando mostra na tela o conteúdo de <code>arquivo.txt</code> trocando a primeira ocorrência de <code>antigo</code> por <code>novo</code> em cada linha. O arquivo original não é alterado.</p>
+<p>Para substituir todas as ocorrências em cada linha, use o modificador <code>g</code>:</p>
+<pre><code>sed &#39;s/velocidade/velocity/g&#39; entrada.txt</code></pre>
+<p>Para gravar o resultado em outro arquivo:</p>
+<pre><code>sed &#39;s/Re = 100/Re = 1000/g&#39; caso_base.in &gt; caso_re1000.in</code></pre>
+<p>Esse exemplo cria um novo arquivo de entrada trocando o número de Reynolds de um caso base. Essa abordagem é útil para preparar variações de parâmetros sem editar tudo manualmente.</p>
+<h3 id="editar-o-arquivo-diretamente">Editar o arquivo diretamente</h3>
+<p>Em alguns sistemas, é possível alterar o arquivo diretamente com <code>-i</code>:</p>
+<pre><code>sed -i &#39;s/tempo_final = 10/tempo_final = 20/g&#39; caso.in</code></pre>
+<p>Use esse modo com cuidado, pois ele modifica o arquivo original. Uma prática mais segura é criar uma cópia antes:</p>
+<pre><code>cp caso.in caso.in.bak
+sed -i &#39;s/tempo_final = 10/tempo_final = 20/g&#39; caso.in</code></pre>
+<p>No macOS, o <code>sed -i</code> pode exigir uma extensão de backup explícita:</p>
+<pre><code>sed -i.bak &#39;s/tempo_final = 10/tempo_final = 20/g&#39; caso.in</code></pre>
+<p>Para trabalhos no LabMFA, <code>sed</code> é útil na criação de séries de casos, ajustes rápidos de arquivos de configuração e limpeza simples de arquivos de texto.</p>
+<h2 id="wget-baixar-arquivos-pela-internet"><code>wget</code>: baixar arquivos pela internet</h2>
+<p>O comando <code>wget</code> baixa arquivos a partir de endereços da internet. Ele é muito usado em servidores Linux porque funciona diretamente no terminal, sem precisar abrir um navegador. Isso é útil para baixar instaladores, bases de dados, scripts, arquivos compactados e resultados disponibilizados por outros grupos de pesquisa.</p>
+<p>A forma mais simples é informar o endereço do arquivo:</p>
+<pre><code>wget https://exemplo.org/dados/medidas.csv</code></pre>
+<p>O arquivo será salvo no diretório atual com o mesmo nome indicado no endereço. Antes de executar o comando, use <code>pwd</code> para confirmar em qual diretório você está.</p>
+<h3 id="escolher-o-nome-do-arquivo">Escolher o nome do arquivo</h3>
+<p>Use <code>-O</code> para escolher o nome do arquivo de saída:</p>
+<pre><code>wget -O medidas_experimento_01.csv https://exemplo.org/dados/medidas.csv</code></pre>
+<p>Esse comando baixa o arquivo remoto <code>medidas.csv</code>, mas salva localmente com o nome escolhido na opção <code>-O</code>:</p>
+<pre><code>medidas_experimento_01.csv</code></pre>
+<p>Isso é útil quando o nome original é genérico ou pouco informativo.</p>
+<h3 id="escolher-o-diretório-de-destino">Escolher o diretório de destino</h3>
+<p>Use <code>-P</code> para salvar o arquivo em um diretório específico:</p>
+<pre><code>mkdir -p dados
+wget -P dados https://exemplo.org/dados/medidas.csv</code></pre>
+<p>No exemplo acima, o arquivo será salvo dentro do diretório <code>dados</code>. O comando <code>mkdir -p dados</code> cria esse diretório caso ele ainda não exista.</p>
+<h3 id="continuar-um-download-interrompido">Continuar um download interrompido</h3>
+<p>Downloads grandes podem ser interrompidos por quedas de conexão ou pelo fechamento do terminal. A opção <code>-c</code> tenta continuar o download a partir do ponto em que ele parou:</p>
+<pre><code>wget -c https://exemplo.org/dados/simulacao_grande.tar.gz</code></pre>
+<p>Essa opção é especialmente útil para arquivos grandes, como resultados compactados de simulações, imagens de disco ou bancos de dados experimentais.</p>
+<h3 id="baixar-uma-lista-de-arquivos">Baixar uma lista de arquivos</h3>
+<p>Quando vários arquivos precisam ser baixados, coloque os endereços em um arquivo de texto, um por linha. Por exemplo, crie um arquivo chamado <code>lista_downloads.txt</code> com o seguinte conteúdo:</p>
+<pre><code>https://exemplo.org/dados/caso01.csv
+https://exemplo.org/dados/caso02.csv
+https://exemplo.org/dados/caso03.csv</code></pre>
+<p>Depois execute:</p>
+<pre><code>wget -i lista_downloads.txt</code></pre>
+<p>O <code>wget</code> lerá a lista e baixará todos os arquivos indicados.</p>
+<h3 id="exemplo-baixar-o-instalador-do-miniconda">Exemplo: baixar o instalador do Miniconda</h3>
+<p>Um uso comum em servidores Linux é baixar instaladores diretamente no terminal. Por exemplo, para baixar o instalador do Miniconda para Linux:</p>
+<pre><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></pre>
+<p>Depois de baixar, é recomendável verificar o arquivo e então executar o instalador:</p>
+<pre><code>ls -lh Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
+<h3 id="verificar-se-o-endereço-existe">Verificar se o endereço existe</h3>
+<p>Para testar se um endereço está disponível sem baixar o arquivo, use <code>--spider</code>:</p>
+<pre><code>wget --spider https://exemplo.org/dados/medidas.csv</code></pre>
+<p>Se o arquivo existir e o servidor responder corretamente, o <code>wget</code> mostrará uma mensagem de sucesso. Esse teste é útil antes de iniciar downloads grandes.</p>
+<h3 id="diferença-entre-wget-scp-e-rsync">Diferença entre <code>wget</code>, <code>scp</code> e <code>rsync</code></h3>
+<p>Use <code>wget</code> para baixar arquivos publicados em páginas ou servidores web, normalmente com endereços que começam por <code>http://</code> ou <code>https://</code>. Para transferir arquivos entre seu computador e os servidores do LabMFA usando login SSH, prefira <code>scp</code> ou <code>rsync</code>. O <code>wget</code> não substitui o acesso por <code>ssh</code>; ele é uma ferramenta para download via web.</p>
+<h2 id="df-verificar-uso-dos-discos"><code>df</code>: verificar uso dos discos</h2>
+<p>O comando <code>df</code> mostra o espaço ocupado e disponível nos sistemas de arquivos montados no Linux. Ele responde a uma pergunta importante: quanto espaço ainda existe no disco ou partição?</p>
+<pre><code>df -h</code></pre>
+<p>A opção <code>-h</code> mostra os valores em unidades mais fáceis de ler, como <code>G</code> para gigabytes e <code>T</code> para terabytes.</p>
+<p>Uma saída típica contém colunas como sistema de arquivos, tamanho total, espaço usado, espaço disponível, porcentagem de uso e ponto de montagem. O ponto de montagem indica onde aquele disco aparece na árvore de diretórios.</p>
+<p>Antes de iniciar uma simulação que produzirá muitos dados, confira o espaço disponível:</p>
+<pre><code>df -h .</code></pre>
+<p>O ponto <code>.</code> faz o <code>df</code> mostrar informações do sistema de arquivos onde está o diretório atual. Isso é mais útil do que olhar discos que não serão usados pela sua simulação.</p>
+<p>Se um disco compartilhado estiver muito cheio, avise o responsável e evite gerar grandes volumes de dados sem necessidade. Discos cheios podem fazer simulações falharem e podem afetar outros usuários.</p>
+<h2 id="du-verificar-tamanho-de-arquivos-e-diretórios"><code>du</code>: verificar tamanho de arquivos e diretórios</h2>
+<p>O comando <code>du</code> mostra quanto espaço arquivos e diretórios ocupam em disco. Enquanto <code>df</code> mostra o espaço do disco como um todo, <code>du</code> ajuda a descobrir quais pastas estão grandes.</p>
+<pre><code>du -sh resultados</code></pre>
+<p>A opção <code>-s</code> mostra apenas o total do diretório indicado. A opção <code>-h</code> mostra o tamanho em formato legível.</p>
+<p>Para ver o tamanho dos itens dentro da pasta atual:</p>
+<pre><code>du -h --max-depth=1</code></pre>
+<p>Esse comando ajuda a identificar rapidamente quais diretórios estão ocupando mais espaço. Em alguns sistemas, a opção equivalente pode ser escrita como <code>-d 1</code>.</p>
+<p>Um uso comum no LabMFA é verificar o tamanho de resultados antes de copiá-los:</p>
+<pre><code>du -sh caso1/resultados</code></pre>
+<p>Se uma pasta estiver muito grande, avalie se todos os arquivos são necessários. Muitas simulações geram arquivos temporários, campos intermediários ou saídas duplicadas que não precisam ser mantidos indefinidamente.</p>
+<h2 id="top-acompanhar-processos"><code>top</code>: acompanhar processos</h2>
+<p>O comando <code>top</code> mostra, em tempo real, os processos em execução no computador. Ele permite observar uso de CPU, memória e tempo de execução.</p>
+<pre><code>top</code></pre>
+<p>Ao abrir o <code>top</code>, as primeiras linhas mostram um resumo do sistema: carga média, quantidade de tarefas, uso de CPU e uso de memória. A tabela principal lista os processos. Colunas importantes são:</p>
+<ul>
+<li><p><code>PID</code>: identificador do processo.</p></li>
+<li><p><code>USER</code>: usuário que iniciou o processo.</p></li>
+<li><p><code>%CPU</code>: porcentagem de CPU usada.</p></li>
+<li><p><code>%MEM</code>: porcentagem de memória usada.</p></li>
+<li><p><code>TIME+</code>: tempo acumulado de CPU.</p></li>
+<li><p><code>COMMAND</code>: comando ou programa em execução.</p></li>
+</ul>
+<p>Para sair do <code>top</code>, pressione <code>q</code>. Para ver apenas processos de um usuário, é possível usar:</p>
+<pre><code>top -u aluno</code></pre>
+<p>No LabMFA, <code>top</code> é útil para verificar se uma simulação realmente está rodando, se está consumindo CPU, se está usando memória demais ou se existem processos antigos esquecidos. Em máquinas compartilhadas, observe também se outros usuários estão executando tarefas pesadas antes de iniciar uma simulação grande.</p>
+<h2 id="ssh-conectar-em-um-computador-remoto"><code>ssh</code>: conectar em um computador remoto</h2>
+<p>O comando <code>ssh</code> permite abrir uma sessão de terminal em outro computador pela rede. Depois da conexão, os comandos digitados passam a ser executados no servidor remoto, não no notebook do aluno.</p>
+<p>A forma geral do comando é:</p>
+<pre><code>ssh usuario@endereco</code></pre>
+<p>Dentro da rede local do laboratório, cada equipamento possui IP interno próprio. O acesso pode ser feito diretamente:</p>
+<pre><code>ssh nome_de_usuario@192.168.68.51   # abeto
+ssh nome_de_usuario@192.168.68.52   # pinho
+ssh nome_de_usuario@192.168.68.53   # jacaranda
+ssh nome_de_usuario@192.168.68.71   # synology</code></pre>
+<p>Fora do laboratório, o acesso usa um IP único e uma porta diferente para cada máquina. A forma geral passa a ser:</p>
+<pre><code>ssh usuario@IP_EXTERNO -p PORTA</code></pre>
+<p>Para os acessos pelo IP <code>IP_EXTERNO_RESTRITO</code>, os exemplos são:</p>
+<pre><code>ssh nome_de_usuario@IP_EXTERNO_RESTRITO -p PORTA_EXTERNA   # abeto
+ssh nome_de_usuario@IP_EXTERNO_RESTRITO -p PORTA_EXTERNA   # pinho
+ssh nome_de_usuario@IP_EXTERNO_RESTRITO -p PORTA_EXTERNA   # jacaranda
+ssh nome_de_usuario@IP_EXTERNO_RESTRITO -p PORTA_EXTERNA   # synology</code></pre>
+<p>O nome <code>nome_de_usuario</code> deve ser substituído pelo usuário de cada aluno, quando a conta individual for fornecida. A opção <code>-p</code> indica a porta de conexão. Sem essa opção, o <code>ssh</code> tenta usar a porta padrão 22, que não identifica corretamente o servidor quando há redirecionamento por portas.</p>
+<h3 id="aliases-para-facilitar-o-acesso">Aliases para facilitar o acesso</h3>
+<p>Para evitar digitar comandos longos todos os dias, é possível criar <em>aliases</em>. Um alias é um apelido para um comando. No arquivo de configuração do terminal, como <code>~/.bashrc</code> ou <code>~/.zshrc</code>, pode-se incluir:</p>
+<pre><code>alias abeto=&#39;ssh nome_de_usuario@IP_EXTERNO_RESTRITO -p PORTA_EXTERNA&#39;
+alias pinho=&#39;ssh nome_de_usuario@IP_EXTERNO_RESTRITO -p PORTA_EXTERNA&#39;
+alias jacaranda=&#39;ssh nome_de_usuario@IP_EXTERNO_RESTRITO -p PORTA_EXTERNA&#39;
+alias synology=&#39;ssh nome_de_usuario@IP_EXTERNO_RESTRITO -p PORTA_EXTERNA&#39;</code></pre>
+<p>Dentro do laboratório, se desejar aliases para os IPs internos, pode-se usar:</p>
+<pre><code>alias abeto=&#39;ssh nome_de_usuario@192.168.68.51&#39;
+alias pinho=&#39;ssh nome_de_usuario@192.168.68.52&#39;
+alias jacaranda=&#39;ssh nome_de_usuario@192.168.68.53&#39;
+alias synology=&#39;ssh nome_de_usuario@192.168.68.71&#39;</code></pre>
+<p>Depois de recarregar o terminal, basta digitar:</p>
+<pre><code>abeto
+jacaranda</code></pre>
+<p>Esses aliases devem ser adaptados para o nome de usuário correto. Se o aluno usa a conta <code>maria</code>, por exemplo, o alias deve conter <code>maria@IP_EXTERNO_RESTRITO</code> no acesso externo, ou <code>maria@192.168.68.53</code> no acesso interno ao <code>jacaranda</code>.</p>
+<h3 id="primeira-conexão">Primeira conexão</h3>
+<p>Na primeira conexão, o <code>ssh</code> pode perguntar se você confia na chave do servidor. Essa pergunta serve para confirmar a identidade da máquina remota. Confira se o endereço e a porta estão corretos antes de responder <code>yes</code>. Depois disso, a chave fica registrada no arquivo <code>~/.ssh/known_hosts</code>.</p>
+<p>Ao encerrar o trabalho, saia do servidor com:</p>
+<pre><code>exit</code></pre>
+<p>ou pressione <code>Ctrl+d</code>. Fechar a janela do terminal sem encerrar a sessão pode deixar processos em estado confuso, especialmente se uma simulação estiver rodando sem <code>tmux</code> ou <code>screen</code>.</p>
+<h3 id="chaves-ssh">Chaves SSH</h3>
+<p>Além do acesso por senha, o <code>ssh</code> permite autenticação por chave criptográfica. Nesse método, o aluno cria um par de arquivos no computador local: uma chave privada e uma chave pública. A chave privada fica somente no computador do aluno. A chave pública pode ser copiada para os servidores do LabMFA.</p>
+<p>A ideia é semelhante a uma fechadura e uma chave. O servidor guarda a parte pública, que funciona como a fechadura autorizada. O computador do aluno usa a parte privada para provar sua identidade. Por isso, a chave privada nunca deve ser enviada por e-mail, copiada para computadores compartilhados ou entregue a outra pessoa.</p>
+<p>Para gerar uma chave moderna do tipo <code>ed25519</code>, use no computador local:</p>
+<pre><code>ssh-keygen -t ed25519 -C &quot;aluno@labmfa&quot;</code></pre>
+<p>O programa perguntará onde salvar a chave. Para iniciantes, aceite o local padrão pressionando <code>Enter</code>. Normalmente os arquivos criados serão:</p>
+<pre><code>~/.ssh/id_ed25519
+~/.ssh/id_ed25519.pub</code></pre>
+<p>O arquivo sem <code>.pub</code> é a chave privada. O arquivo terminado em <code>.pub</code> é a chave pública. Ao gerar a chave, o <code>ssh-keygen</code> também pergunta por uma <em>passphrase</em>. Recomenda-se usar uma frase-senha, pois ela protege a chave privada caso o notebook seja perdido ou acessado por outra pessoa.</p>
+<h3 id="copiar-a-chave-para-os-servidores">Copiar a chave para os servidores</h3>
+<p>Depois de gerar a chave, a chave pública precisa ser instalada no servidor. Em muitos sistemas, o comando mais simples é <code>ssh-copy-id</code>. Dentro da rede local do laboratório, use o IP interno:</p>
+<pre><code>ssh-copy-id nome_de_usuario@192.168.68.51   # abeto
+ssh-copy-id nome_de_usuario@192.168.68.52   # pinho
+ssh-copy-id nome_de_usuario@192.168.68.53   # jacaranda
+ssh-copy-id nome_de_usuario@192.168.68.71   # synology</code></pre>
+<p>Fora do laboratório, use o IP externo e a porta correspondente. No <code>ssh-copy-id</code>, a porta é passada dentro da opção <code>-p</code>:</p>
+<pre><code>ssh-copy-id -p PORTA_EXTERNA nome_de_usuario@IP_EXTERNO_RESTRITO   # abeto
+ssh-copy-id -p PORTA_EXTERNA nome_de_usuario@IP_EXTERNO_RESTRITO   # pinho
+ssh-copy-id -p PORTA_EXTERNA nome_de_usuario@IP_EXTERNO_RESTRITO   # jacaranda
+ssh-copy-id -p PORTA_EXTERNA nome_de_usuario@IP_EXTERNO_RESTRITO   # synology</code></pre>
+<p>Substitua <code>nome_de_usuario</code> pelo usuário correto. Durante essa etapa, o servidor ainda pode pedir a senha normal da conta. Depois que a chave pública for copiada, as próximas conexões poderão usar a chave.</p>
+<p>Para testar:</p>
+<pre><code>ssh nome_de_usuario@192.168.68.53
+ssh nome_de_usuario@IP_EXTERNO_RESTRITO -p PORTA_EXTERNA</code></pre>
+<p>Se foi definida uma frase-senha para a chave, o sistema pode pedi-la na primeira conexão. Em computadores pessoais, um agente SSH pode guardar essa frase temporariamente durante a sessão, evitando digitá-la a cada conexão.</p>
+<h3 id="quando-ssh-copy-id-não-está-disponível">Quando <code>ssh-copy-id</code> não está disponível</h3>
+<p>Se o comando <code>ssh-copy-id</code> não existir no computador local, é possível copiar manualmente o conteúdo da chave pública. Primeiro, mostre a chave pública:</p>
+<pre><code>cat ~/.ssh/id_ed25519.pub</code></pre>
+<p>Copie a linha inteira mostrada na tela. Depois, entre no servidor com <code>ssh</code> e edite ou crie o arquivo de chaves autorizadas:</p>
+<pre><code>mkdir -p ~/.ssh
+nano ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys</code></pre>
+<p>Cole a chave pública em uma nova linha do arquivo <code>authorized_keys</code>.</p>
+<p>As permissões são importantes. Se o diretório <code>.ssh</code> ou o arquivo <code>authorized_keys</code> estiverem permissivos demais, o servidor pode recusar a autenticação por chave.</p>
+<h3 id="configuração-opcional-em-.sshconfig">Configuração opcional em <code>~/.ssh/config</code></h3>
+<p>Para evitar decorar IPs e portas, também é possível criar atalhos no arquivo <code>~/.ssh/config</code>. Um exemplo para acesso externo é:</p>
+<pre><code>Host jacaranda-labmfa
+  HostName IP_EXTERNO_RESTRITO
+  Port PORTA_EXTERNA
+  User nome_de_usuario
+  IdentityFile ~/.ssh/id_ed25519</code></pre>
+<p>Depois disso, a conexão pode ser feita com:</p>
+<pre><code>ssh jacaranda-labmfa</code></pre>
+<p>Esse método é mais organizado do que criar muitos aliases, especialmente quando o mesmo servidor precisa ser acessado por IP interno no laboratório e por porta externa fora dele.</p>
+<h2 id="scp-copiar-arquivos-pela-rede"><code>scp</code>: copiar arquivos pela rede</h2>
+<p>O comando <code>scp</code> copia arquivos entre o computador local e um servidor remoto usando a mesma autenticação do <code>ssh</code>. Ele é útil para enviar scripts e malhas para o servidor ou trazer resultados para o computador pessoal.</p>
+<p>A forma geral para copiar um arquivo local para o servidor é:</p>
+<pre><code>scp arquivo usuario@endereco:/caminho/remoto/</code></pre>
+<p>Para copiar um arquivo do servidor para o computador local:</p>
+<pre><code>scp usuario@endereco:/caminho/remoto/arquivo .</code></pre>
+<p>O ponto <code>.</code> no final significa “copiar para o diretório atual”.</p>
+<h3 id="uso-na-rede-interna">Uso na rede interna</h3>
+<p>Dentro da rede do laboratório, use o IP interno do equipamento. Por exemplo, para enviar um arquivo para o <code>abeto</code>:</p>
+<pre><code>scp caso1.py nome_de_usuario@192.168.68.51:/home/nome_de_usuario/simulacoes/</code></pre>
+<p>Para trazer um arquivo do <code>jacaranda</code> para o computador local:</p>
+<pre><code>scp nome_de_usuario@192.168.68.53:/home/nome_de_usuario/simulacoes/saida.log .</code></pre>
+<h3 id="uso-com-porta-externa">Uso com porta externa</h3>
+<p>Quando o acesso é feito pelo IP único externo do LabMFA, também é necessário indicar a porta. No <code>scp</code>, a opção de porta é <code>-P</code> maiúsculo, diferente do <code>ssh</code>, que usa <code>-p</code> minúsculo.</p>
+<p>Exemplo para enviar um arquivo para o servidor <code>jacaranda</code>:</p>
+<pre><code>scp -P PORTA_EXTERNA caso1.py nome_de_usuario@IP_EXTERNO_RESTRITO:/home/nome_de_usuario/simulacoes/</code></pre>
+<p>Exemplo para copiar um resultado do servidor <code>abeto</code> para o diretório atual do computador local:</p>
+<pre><code>scp -P PORTA_EXTERNA nome_de_usuario@IP_EXTERNO_RESTRITO:/home/nome_de_usuario/simulacoes/saida.log .</code></pre>
+<p>Para copiar diretórios inteiros, use a opção <code>-r</code>:</p>
+<pre><code>scp -P PORTA_EXTERNA -r resultados nome_de_usuario@IP_EXTERNO_RESTRITO:/home/nome_de_usuario/simulacoes/
+scp -P PORTA_EXTERNA -r nome_de_usuario@IP_EXTERNO_RESTRITO:/home/nome_de_usuario/simulacoes/resultados .</code></pre>
+<p>Antes de copiar muitos dados, verifique o tamanho com <code>du -sh</code>. Copiar diretórios grandes pela rede pode demorar e pode ocupar espaço desnecessário no computador de destino.</p>
+<h3 id="cuidado-com-a-direção-da-cópia">Cuidado com a direção da cópia</h3>
+<p>No <code>scp</code>, a ordem dos argumentos importa. O primeiro caminho é a origem; o segundo é o destino. Leia o comando antes de pressionar <code>Enter</code>. Um erro comum é inverter a direção e sobrescrever arquivos antigos com versões desatualizadas.</p>
+<h2 id="rsync-sincronizar-arquivos-e-diretórios"><code>rsync</code>: sincronizar arquivos e diretórios</h2>
+<p>O comando <code>rsync</code> copia arquivos entre diretórios locais ou entre computadores pela rede. Ele é parecido com <code>scp</code>, mas costuma ser mais eficiente para diretórios grandes, porque copia apenas o que mudou desde a última transferência.</p>
+<p>Para copiar um diretório local para outro local no mesmo computador:</p>
+<pre><code>rsync -av resultados/ backup_resultados/</code></pre>
+<p>A opção <code>-a</code> preserva atributos importantes dos arquivos e copia diretórios de forma recursiva. A opção <code>-v</code> mostra o que está sendo feito. A barra final em <code>resultados/</code> significa “copiar o conteúdo de <code>resultados</code>”.</p>
+<h3 id="uso-na-rede-interna-1">Uso na rede interna</h3>
+<p>Dentro do laboratório, use o IP interno do servidor. Para enviar um diretório de resultados para o <code>jacaranda</code>:</p>
+<pre><code>rsync -av resultados/ nome_de_usuario@192.168.68.53:/home/nome_de_usuario/simulacoes/resultados/</code></pre>
+<p>Para trazer resultados do <code>abeto</code> para o computador local:</p>
+<pre><code>rsync -av nome_de_usuario@192.168.68.51:/home/nome_de_usuario/simulacoes/resultados/ resultados/</code></pre>
+<h3 id="uso-com-porta-externa-1">Uso com porta externa</h3>
+<p>Fora do laboratório, quando o acesso é feito pelo IP externo único, indique a porta usando a opção <code>-e</code> para dizer qual comando <code>ssh</code> o <code>rsync</code> deve usar:</p>
+<pre><code>rsync -av -e &quot;ssh -p PORTA_EXTERNA&quot; resultados/ \
+  nome_de_usuario@IP_EXTERNO_RESTRITO:simulacoes/resultados/</code></pre>
+<p>O exemplo acima envia arquivos para o <code>jacaranda</code>, que usa a porta externa no acesso externo. Para o <code>abeto</code>, a porta seria PORTA_EXTERNA; para o <code>pinho</code>, PORTA_EXTERNA; para o <code>synology</code>, PORTA_EXTERNA.</p>
+<h3 id="transferência-com-progresso">Transferência com progresso</h3>
+<p>Para acompanhar melhor transferências longas, use <code>--progress</code>:</p>
+<pre><code>rsync -av --progress resultados/ backup_resultados/</code></pre>
+<p>Antes de executar uma sincronização grande, é possível fazer um teste sem copiar nada usando <code>--dry-run</code>:</p>
+<pre><code>rsync -av --dry-run resultados/ backup_resultados/</code></pre>
+<p>Esse modo mostra o que seria copiado. Ele é recomendado quando há risco de enviar arquivos para o diretório errado ou sobrescrever dados importantes.</p>
+<h2 id="tmux-manter-sessões-remotas-ativas"><code>tmux</code>: manter sessões remotas ativas</h2>
+<p>O <code>tmux</code> é um gerenciador de terminal. Ele permite iniciar uma sessão no servidor, deixar programas rodando dentro dela e desconectar sem interromper o trabalho. Isso é muito importante em acesso remoto: se a internet cair, a simulação continua dentro da sessão <code>tmux</code>.</p>
+<p>Para criar uma sessão chamada <code>caso1</code>:</p>
+<pre><code>tmux new -s caso1</code></pre>
+<p>Dentro dessa sessão, execute normalmente seus comandos:</p>
+<pre><code>cd ~/simulacoes/caso1
+./rodar.sh</code></pre>
+<p>Para sair da sessão sem interromper os programas, pressione <code>Ctrl+b</code> e depois <code>d</code>. Essa operação é chamada de <em>detach</em>. Depois, para voltar à sessão:</p>
+<pre><code>tmux attach -t caso1</code></pre>
+<p>Para listar sessões existentes:</p>
+<pre><code>tmux ls</code></pre>
+<p>Para encerrar uma sessão depois que o trabalho terminou, entre nela e digite <code>exit</code>, ou use:</p>
+<pre><code>tmux kill-session -t caso1</code></pre>
+<p>No LabMFA, recomenda-se usar <code>tmux</code> para simulações longas, compilações demoradas e transferências que não devem depender da estabilidade da conexão do notebook do aluno.</p>
+<h2 id="screen-alternativa-para-sessões-persistentes"><code>screen</code>: alternativa para sessões persistentes</h2>
+<p>O <code>screen</code> tem função parecida com o <code>tmux</code>: ele cria uma sessão de terminal que pode continuar ativa mesmo depois que o usuário desconecta do servidor. Em alguns sistemas antigos, <code>screen</code> pode estar instalado quando <code>tmux</code> não está.</p>
+<p>Para criar uma sessão chamada <code>teste</code>:</p>
+<pre><code>screen -S teste</code></pre>
+<p>Dentro dela, execute o programa desejado:</p>
+<pre><code>cd ~/simulacoes/teste
+python simulacao.py</code></pre>
+<p>Para sair da sessão sem encerrar o programa, pressione <code>Ctrl+a</code> e depois <code>d</code>. Para listar sessões:</p>
+<pre><code>screen -ls</code></pre>
+<p>Para voltar a uma sessão:</p>
+<pre><code>screen -r teste</code></pre>
+<p>Se a sessão já estiver marcada como anexada, por exemplo após queda de rede, pode ser necessário usar:</p>
+<pre><code>screen -d -r teste</code></pre>
+<p>Ao terminar o trabalho, saia da sessão com <code>exit</code>. Para novos usuários, <code>tmux</code> costuma ser mais amigável, mas é útil conhecer <code>screen</code> porque ele aparece em muitos servidores Linux.</p>
+<h2 id="git-controle-de-versões"><code>git</code>: controle de versões</h2>
+<p>O <code>git</code> é um sistema de controle de versões. Ele registra a evolução de arquivos ao longo do tempo, permitindo comparar mudanças, voltar a versões anteriores e compartilhar código com outras pessoas. Em pesquisa, isso é útil para scripts, programas, arquivos de entrada, textos e documentação.</p>
+<h3 id="criar-um-repositório">Criar um repositório</h3>
+<p>Para transformar um diretório em um repositório Git:</p>
+<pre><code>mkdir projeto
+cd projeto
+git init</code></pre>
+<p>Depois, crie ou copie arquivos para esse diretório. Para ver o estado do repositório:</p>
+<pre><code>git status</code></pre>
+<p>O comando <code>git status</code> informa quais arquivos foram modificados, quais ainda não estão sendo acompanhados e se há mudanças prontas para registro.</p>
+<h3 id="registrar-mudanças">Registrar mudanças</h3>
+<p>Um registro de versão no Git é chamado de <em>commit</em>. Antes de criar o commit, é necessário escolher quais arquivos entram nele:</p>
+<pre><code>git add caso.in
+git add rodar.sh
+git commit -m &quot;Adiciona caso inicial&quot;</code></pre>
+<p>Para adicionar todos os arquivos modificados no diretório atual, use:</p>
+<pre><code>git add .
+git commit -m &quot;Atualiza parametros da simulacao&quot;</code></pre>
+<p>Mensagens de commit devem ser curtas e descrever a mudança realizada. Evite mensagens vagas como <code>alteracoes</code> ou <code>teste</code>.</p>
+<h3 id="consultar-histórico-e-diferenças">Consultar histórico e diferenças</h3>
+<p>Para ver o histórico:</p>
+<pre><code>git log --oneline</code></pre>
+<p>Para ver o que mudou antes de registrar um commit:</p>
+<pre><code>git diff</code></pre>
+<p>Esses comandos ajudam a revisar o trabalho antes de salvar uma nova versão. Em projetos de simulação, isso evita perder a relação entre resultados e parâmetros usados para gerá-los.</p>
+<h3 id="uso-com-github">Uso com GitHub</h3>
+<p>O GitHub é um serviço para hospedar repositórios Git na internet. Depois de criar uma conta e um repositório vazio no GitHub, é possível conectar o repositório local ao remoto:</p>
+<pre><code>git remote add origin git@github.com:usuario/projeto.git
+git branch -M main
+git push -u origin main</code></pre>
+<p>Em outro computador ou servidor, o repositório pode ser copiado com:</p>
+<pre><code>git clone git@github.com:usuario/projeto.git</code></pre>
+<p>Para enviar commits novos ao GitHub:</p>
+<pre><code>git push</code></pre>
+<p>Para trazer mudanças feitas em outro computador:</p>
+<pre><code>git pull</code></pre>
+<p>Não coloque no Git arquivos enormes de resultado, dados sensíveis, senhas ou chaves privadas. O Git é excelente para código e arquivos de texto, mas não é o melhor lugar para armazenar grandes volumes de saída de simulação.</p>
+<h1 id="editores-de-texto-no-terminal">Editores de texto no terminal</h1>
+<p>Em servidores Linux, muitas vezes é necessário editar arquivos sem interface gráfica. Isso acontece ao ajustar scripts, arquivos de entrada de simulação, arquivos <code>YAML</code>, configurações do terminal e pequenos programas. Por isso, é importante saber usar pelo menos um editor em modo texto.</p>
+<p>Uma boa regra para iniciantes é simples: use <code>nano</code> quando precisar editar rapidamente um arquivo; aprenda o básico de <code>vim</code> porque ele costuma estar presente em quase todo servidor; instale <code>micro</code> ou <code>nvim</code> quando quiser uma experiência mais confortável em um ambiente Conda próprio.</p>
+<p>Antes de instalar qualquer editor, verifique se ele já existe no servidor:</p>
+<pre><code>which nano
+which vim
+which nvim
+which micro</code></pre>
+<p>Se o comando <code>which</code> mostrar um caminho, por exemplo <code>/usr/bin/vim</code>, o programa já está disponível.</p>
+<h2 id="nano-editor-simples-para-começar"><code>nano</code>: editor simples para começar</h2>
+<p>O <code>nano</code> é um editor simples e indicado para iniciantes. Ele mostra os atalhos principais na parte inferior da tela e não exige conhecer modos de edição.</p>
+<p>Para abrir ou criar um arquivo:</p>
+<pre><code>nano caso.in</code></pre>
+<p>Depois de editar, use <code>Ctrl+o</code> para salvar, pressione <code>Enter</code> para confirmar o nome do arquivo e use <code>Ctrl+x</code> para sair. O símbolo <code>^</code> mostrado pelo <code>nano</code> significa a tecla <code>Ctrl</code>.</p>
+<p>Exemplo para editar um script:</p>
+<pre><code>nano rodar.sh</code></pre>
+<p>Exemplo para abrir um arquivo já posicionando o cursor em uma linha específica:</p>
+<pre><code>nano +25 parametros.yaml</code></pre>
+<p>Esse comando abre <code>parametros.yaml</code> na linha 25, útil quando uma mensagem de erro informa exatamente a linha problemática.</p>
+<h2 id="vi-editor-mínimo-quase-sempre-disponível"><code>vi</code>: editor mínimo quase sempre disponível</h2>
+<p>O <code>vi</code> é um editor clássico do Unix. Em muitos sistemas Linux, mesmo quando <code>nano</code>, <code>vim</code> ou <code>emacs</code> não estão instalados, há alguma versão de <code>vi</code>. Por isso, ele é importante como editor de emergência.</p>
+<p>Para abrir um arquivo:</p>
+<pre><code>vi caso.in</code></pre>
+<p>Ao abrir o arquivo, o <code>vi</code> começa em modo de comando. Para inserir texto, pressione <code>i</code>. Para voltar ao modo de comando, pressione <code>Esc</code>. Para salvar e sair:</p>
+<pre><code>:wq</code></pre>
+<p>Para sair sem salvar:</p>
+<pre><code>:q!</code></pre>
+<p>Para procurar uma palavra dentro do arquivo:</p>
+<pre><code>/viscosidade</code></pre>
+<p>Depois da busca, pressione <code>n</code> para ir para a próxima ocorrência.</p>
+<h2 id="vim-versão-mais-completa-do-vi"><code>vim</code>: versão mais completa do <code>vi</code></h2>
+<p>O <code>vim</code> é uma versão mais poderosa do <code>vi</code>. Ele também trabalha com modos, mas oferece melhor ajuda, realce de sintaxe, edição mais confortável e muitos recursos extras.</p>
+<p>Para abrir um arquivo:</p>
+<pre><code>vim caso.in</code></pre>
+<p>Para abrir diretamente em uma linha:</p>
+<pre><code>vim +120 simulacao.py</code></pre>
+<p>Comandos essenciais dentro do <code>vim</code>:</p>
+<pre><code>i       # entrar no modo de insercao
+Esc     # voltar ao modo de comando
+:w      # salvar
+:q      # sair
+:wq     # salvar e sair
+:q!     # sair sem salvar
+/texto  # procurar por texto</code></pre>
+<p>Apesar de parecer difícil no começo, conhecer o básico de <code>vim</code> é útil porque ele está disponível em muitos servidores. Em uma emergência, saber abrir, editar, salvar e sair já resolve a maior parte das necessidades.</p>
+<h2 id="nvim-neovim"><code>nvim</code>: Neovim</h2>
+<p>O <code>nvim</code>, também chamado de Neovim, é uma evolução moderna do <code>vim</code>. Para uso básico, os comandos são praticamente os mesmos:</p>
+<pre><code>nvim caso.in
+nvim simulacao.py</code></pre>
+<p>Ele é uma boa opção para quem quer configurar um editor mais moderno no próprio ambiente de usuário, sem depender da configuração global do servidor.</p>
+<p>Se estiver usando Miniforge ou Miniconda, é possível instalar o Neovim dentro de um ambiente Conda:</p>
+<pre><code>conda activate labmfa
+mamba install -c conda-forge neovim</code></pre>
+<p>Se <code>mamba</code> não estiver disponível:</p>
+<pre><code>conda install -c conda-forge neovim</code></pre>
+<p>Depois da instalação, verifique:</p>
+<pre><code>which nvim
+nvim --version</code></pre>
+<h2 id="emacs-editor-extensível"><code>emacs</code>: editor extensível</h2>
+<p>O <code>emacs</code> é um editor muito poderoso e extensível. Ele pode ser usado em modo texto no terminal, sem interface gráfica, e é comum em ambientes acadêmicos.</p>
+<p>Para abrir um arquivo no terminal:</p>
+<pre><code>emacs -nw artigo.tex</code></pre>
+<p>A opção <code>-nw</code> significa <em>no window</em>, isto é, executar dentro do terminal atual. Comandos básicos:</p>
+<pre><code>Ctrl+x Ctrl+s    # salvar
+Ctrl+x Ctrl+c    # sair
+Ctrl+s           # procurar texto</code></pre>
+<p>Em alguns sistemas, o <code>emacs</code> pode não estar instalado. Em um ambiente Conda, quando o pacote estiver disponível no canal, use:</p>
+<pre><code>conda activate labmfa
+mamba install -c conda-forge emacs</code></pre>
+<h2 id="micro-editor-moderno-e-simples"><code>micro</code>: editor moderno e simples</h2>
+<p>O <code>micro</code> é um editor de terminal moderno, leve e amigável para quem está acostumado com atalhos comuns de editores gráficos. Ele usa atalhos como <code>Ctrl+s</code> para salvar e <code>Ctrl+q</code> para sair.</p>
+<p>Para instalar pelo Conda:</p>
+<pre><code>conda activate labmfa
+mamba install -c conda-forge micro</code></pre>
+<p>Para abrir um arquivo:</p>
+<pre><code>micro simulacao.py</code></pre>
+<p>Atalhos básicos:</p>
+<pre><code>Ctrl+s    # salvar
+Ctrl+q    # sair
+Ctrl+f    # procurar
+Ctrl+g    # ajuda</code></pre>
+<p>O <code>micro</code> é uma boa alternativa para alunos iniciantes quando o <code>nano</code> parece limitado e o <code>vim</code> ainda parece pouco intuitivo.</p>
+<h2 id="mcedit-editor-do-midnight-commander"><code>mcedit</code>: editor do Midnight Commander</h2>
+<p>O <code>mcedit</code> é o editor de texto associado ao Midnight Commander, normalmente instalado junto com o comando <code>mc</code>. Ele é simples, visual e funciona bem dentro do terminal.</p>
+<p>Para verificar se está disponível:</p>
+<pre><code>which mcedit</code></pre>
+<p>Para abrir um arquivo:</p>
+<pre><code>mcedit parametros.yaml</code></pre>
+<p>Atalhos comuns:</p>
+<pre><code>F2     # salvar
+F10    # sair
+F7     # procurar</code></pre>
+<p>Quando disponível no canal usado pelo aluno, o Midnight Commander pode ser instalado no ambiente Conda:</p>
+<pre><code>conda activate labmfa
+mamba install -c conda-forge mc</code></pre>
+<h2 id="joe-editor-simples-inspirado-em-editores-antigos"><code>joe</code>: editor simples inspirado em editores antigos</h2>
+<p>O <code>joe</code> é outro editor em modo texto. Ele não é tão comum quanto <code>nano</code> ou <code>vim</code>, mas pode ser confortável para quem prefere uma interface simples e atalhos visíveis.</p>
+<p>Para abrir um arquivo:</p>
+<pre><code>joe entrada.dat</code></pre>
+<p>Comandos básicos:</p>
+<pre><code>Ctrl+k h    # mostrar ajuda
+Ctrl+k x    # salvar e sair
+Ctrl+c      # sair ou cancelar</code></pre>
+<p>Se o pacote estiver disponível no canal Conda usado no servidor:</p>
+<pre><code>conda activate labmfa
+mamba install -c conda-forge joe</code></pre>
+<h2 id="como-escolher-um-editor">Como escolher um editor</h2>
+<p>Para começar, use <code>nano</code>. Se você acessa servidores com frequência, aprenda o mínimo de <code>vi</code> ou <code>vim</code>, pois eles aparecem em muitos sistemas Linux. Se você quer um editor moderno instalado no seu próprio ambiente, experimente <code>micro</code> ou <code>nvim</code>. Se já conhece <code>emacs</code>, ele também funciona bem em modo texto.</p>
+<p>O ponto mais importante é não depender de copiar arquivos para fora do servidor toda vez que uma pequena alteração for necessária. Em trabalho remoto, saber editar diretamente no terminal economiza tempo e evita erros de transferência.</p>
+<h1 id="recursos-avançados-para-processamento-de-dados-remoto">Recursos avançados para processamento de dados remoto</h1>
+<p>Em trabalhos de computação científica, o servidor remoto não deve ser usado apenas para executar simulações. Ele também pode gerar gráficos, converter imagens, preparar arquivos para visualização e montar animações a partir de resultados. Fazer essas etapas remotamente evita transferir grandes volumes de dados para o computador pessoal e torna o fluxo de trabalho mais reprodutível.</p>
+<p>O ponto central é evitar ferramentas que dependem de uma janela gráfica aberta. Em vez disso, prefira programas que salvam arquivos diretamente no disco, como <code>gnuplot</code>, scripts Python com <code>matplotlib</code> em modo <em>offscreen</em>, bibliotecas Python para VTK e o comando <code>magick</code>.</p>
+<p>Um fluxo típico em um servidor do LabMFA é:</p>
+<pre><code>ssh nome_de_usuario@192.168.68.53
+cd ~/simulacoes/caso01
+conda activate posproc
+python posprocessa.py
+gnuplot grafico.gp
+magick montage resultados_*.png -tile 4x -geometry 600x600+8+8 resumo.pdf
+ffmpeg -framerate 20 -i frames/frame_%04d.png animacao.mp4</code></pre>
+<p>Para processamentos longos, execute os comandos dentro de <code>tmux</code> ou <code>screen</code>. Assim, a tarefa continua rodando mesmo que a conexão SSH seja interrompida.</p>
+<h2 id="ambiente-conda-para-pós-processamento">Ambiente Conda para pós-processamento</h2>
+<p>Para manter as ferramentas de pós-processamento isoladas do sistema do servidor, crie um ambiente específico. O exemplo abaixo instala bibliotecas comuns para leitura de imagens, geração de gráficos, escrita de arquivos VTK e conversão de formatos:</p>
+<pre><code>mamba create -n posproc -c conda-forge \
+  python=3.11 numpy scipy matplotlib pandas imageio pillow \
+  pyvista vtk meshio gnuplot imagemagick</code></pre>
+<p>Se o comando <code>mamba</code> não estiver disponível, use <code>conda</code>:</p>
+<pre><code>conda create -n posproc -c conda-forge \
+  python=3.11 numpy scipy matplotlib pandas imageio pillow \
+  pyvista vtk meshio gnuplot imagemagick</code></pre>
+<p>Depois de criar o ambiente:</p>
+<pre><code>conda activate posproc
+which python
+which gnuplot
+which magick</code></pre>
+<p>Esses comandos verificam se o Python, o <code>gnuplot</code> e o <code>magick</code> usados são os do ambiente ativo. Isso evita confusão entre versões do sistema e versões instaladas pelo usuário.</p>
+<h2 id="gnuplot-gráficos-rápidos-no-servidor"><code>gnuplot</code>: gráficos rápidos no servidor</h2>
+<p>O <code>gnuplot</code> é uma ferramenta leve para gerar gráficos a partir de arquivos de dados. Ele é muito útil em acesso remoto porque pode gerar arquivos <code>PNG</code>, <code>PDF</code> ou <code>SVG</code> sem abrir uma janela.</p>
+<p>Para verificar se está instalado:</p>
+<pre><code>which gnuplot
+gnuplot --version</code></pre>
+<p>Suponha um arquivo <code>residuo.dat</code> com duas colunas: iteração e resíduo. Para ver as primeiras linhas:</p>
+<pre><code>head residuo.dat</code></pre>
+<p>Crie um arquivo <code>residuo.gp</code>:</p>
+<pre><code>nano residuo.gp</code></pre>
+<p>Conteúdo do arquivo:</p>
+<pre><code>set terminal pngcairo size 1200,800 enhanced font &quot;Arial,16&quot;
+set output &quot;residuo.png&quot;
+set xlabel &quot;Iteracao&quot;
+set ylabel &quot;Residuo&quot;
+set grid
+set logscale y
+plot &quot;residuo.dat&quot; using 1:2 with lines linewidth 2 title &quot;caso01&quot;</code></pre>
+<p>Execute no servidor:</p>
+<pre><code>gnuplot residuo.gp
+ls -lh residuo.png</code></pre>
+<p>Para gerar um PDF vetorial, útil para relatórios e artigos:</p>
+<pre><code>set terminal pdfcairo enhanced color font &quot;Arial,12&quot;
+set output &quot;residuo.pdf&quot;
+set xlabel &quot;Iteracao&quot;
+set ylabel &quot;Residuo&quot;
+set grid
+set logscale y
+plot &quot;residuo.dat&quot; using 1:2 with lines linewidth 2 title &quot;caso01&quot;</code></pre>
+<p>Depois rode:</p>
+<pre><code>gnuplot residuo.gp</code></pre>
+<p>Também é possível passar comandos diretamente pela linha de comando. Isso é prático para testes rápidos:</p>
+<pre><code>gnuplot -e &#39;set terminal pngcairo; set output &quot;teste.png&quot;; plot sin(x)&#39;</code></pre>
+<p>Para comparar dois arquivos de dados:</p>
+<pre><code>set terminal pngcairo size 1200,800 enhanced font &quot;Arial,16&quot;
+set output &quot;comparacao.png&quot;
+set xlabel &quot;Tempo&quot;
+set ylabel &quot;Energia&quot;
+set grid
+plot &quot;caso01.dat&quot; using 1:2 with lines title &quot;caso01&quot;, \
+     &quot;caso02.dat&quot; using 1:2 with lines title &quot;caso02&quot;</code></pre>
+<h2 id="converter-sequências-png-para-dados-vtk-com-python">Converter sequências <code>PNG</code> para dados VTK com Python</h2>
+<p>Em algumas simulações ou experimentos, os resultados aparecem como uma sequência de imagens <code>PNG</code>. Para visualizar esses dados no ParaView ou em outras ferramentas científicas, pode ser útil transformar a sequência em um volume no formato VTK. Um arquivo <code>.vti</code> é uma variante XML do formato VTK para dados em grade regular.</p>
+<p>Instale as bibliotecas necessárias no ambiente de pós-processamento:</p>
+<pre><code>conda activate posproc
+mamba install -c conda-forge numpy imageio pyvista vtk</code></pre>
+<p>Organize as imagens com nomes ordenáveis:</p>
+<pre><code>ls frames/frame_*.png | head
+ls frames/frame_*.png | tail</code></pre>
+<p>Crie o script <code>png_para_vti.py</code>:</p>
+<pre><code>nano png_para_vti.py</code></pre>
+<p>Conteúdo do script:</p>
+<pre><code>from pathlib import Path
+
+import imageio.v3 as iio
+import numpy as np
+import pyvista as pv
+
+arquivos = sorted(Path(&quot;frames&quot;).glob(&quot;frame_*.png&quot;))
+
+if not arquivos:
+    raise SystemExit(&quot;Nenhum PNG encontrado em frames/frame_*.png&quot;)
+
+fatias = []
+
+for nome in arquivos:
+    img = iio.imread(nome)
+
+    if img.ndim == 3:
+        rgb = img[..., :3].astype(np.float32)
+        cinza = 0.299 * rgb[..., 0] + 0.587 * rgb[..., 1] + 0.114 * rgb[..., 2]
+    else:
+        cinza = img.astype(np.float32)
+
+    fatias.append(cinza)
+
+volume_zyx = np.stack(fatias, axis=0)
+volume_xyz = np.transpose(volume_zyx, (2, 1, 0))
+
+nx, ny, nz = volume_xyz.shape
+
+grade = pv.ImageData()
+grade.dimensions = (nx, ny, nz)
+grade.origin = (0.0, 0.0, 0.0)
+grade.spacing = (1.0, 1.0, 1.0)
+grade.point_data[&quot;intensidade&quot;] = volume_xyz.ravel(order=&quot;F&quot;)
+
+grade.save(&quot;volume_png.vti&quot;)
+print(f&quot;Arquivo gravado: volume_png.vti ({nx} x {ny} x {nz})&quot;)</code></pre>
+<p>Execute remotamente:</p>
+<pre><code>conda activate posproc
+python png_para_vti.py
+ls -lh volume_png.vti</code></pre>
+<p>O arquivo <code>volume_png.vti</code> pode ser aberto no ParaView. Se o volume representar uma pilha temporal, cada imagem será tratada como uma fatia na direção <code>z</code>. Se a sequência representar instantes de tempo, pode ser melhor gerar um arquivo VTK separado para cada instante, ou usar um formato temporal próprio do ParaView.</p>
+<p>Para converter uma única imagem <code>PNG</code> em uma grade VTK 2D:</p>
+<pre><code>from pathlib import Path
+
+import imageio.v3 as iio
+import numpy as np
+import pyvista as pv
+
+img = iio.imread(&quot;campo.png&quot;)
+
+if img.ndim == 3:
+    img = img[..., 0]
+
+campo = img.astype(np.float32)
+ny, nx = campo.shape
+
+grade = pv.ImageData()
+grade.dimensions = (nx, ny, 1)
+grade.spacing = (1.0, 1.0, 1.0)
+grade.point_data[&quot;intensidade&quot;] = campo.T.ravel(order=&quot;F&quot;)
+grade.save(&quot;campo_2d.vti&quot;)</code></pre>
+<h2 id="renderizar-arquivos-vtk-em-png-e-pdf-com-pyvista">Renderizar arquivos VTK em PNG e PDF com <code>PyVista</code></h2>
+<p>O fluxo inverso também é muito comum: a simulação gera arquivos <code>.vtk</code>, mas o aluno precisa produzir imagens <code>PNG</code> ou <code>PDF</code> para relatórios, apresentações e artigos. Nesse caso, o <code>PyVista</code> pode abrir os arquivos VTK, renderizar a malha em modo <em>offscreen</em> e salvar a figura diretamente no servidor, sem abrir janela gráfica.</p>
+<p>O exemplo abaixo é baseado em um script usado no LabMFA para processar pares de arquivos VTK:</p>
+<pre><code>interface-*.vtk
+fluid-*.vtk</code></pre>
+<p>Ele renderiza o campo de velocidade, desenha a interface, remove a condição inicial, evita repetir figuras já geradas e aplica um corte automático nas bordas transparentes da imagem. Ao final, grava tanto o <code>PNG</code> cortado quanto uma versão <code>PDF</code> com fundo branco.</p>
+<p>Instale as dependências no ambiente de pós-processamento:</p>
+<pre><code>conda activate posproc
+mamba install -c conda-forge pyvista vtk pillow numpy</code></pre>
+<p>Se estiver em um servidor sem suporte gráfico configurado, pode ser necessário usar um framebuffer virtual. Em algumas instalações, basta descomentar a linha <code>pv.start_xvfb()</code> no script e instalar o suporte necessário no sistema. Quando o <code>off_screen=True</code> funcionar diretamente, essa linha não é necessária.</p>
+<p>Crie o script:</p>
+<pre><code>nano vtk_para_png_pdf.py</code></pre>
+<p>Conteúdo:</p>
+<pre><code>from pathlib import Path
+import re
+
+import numpy as np
+import pyvista as pv
+from PIL import Image, ImageChops
+
+# Se necessario, use framebuffer virtual:
+# pv.start_xvfb()
+
+# Diretorio base do caso.
+# Ajuste este caminho para o caso que esta sendo processado no servidor.
+project_dir = Path(&quot;/Users/nome_de_usuario/machines/studio/harmonic/&quot;)
+project_dir /= &quot;Re200_We20&quot;
+
+vtk_dir = project_dir / &quot;vtk&quot;
+png_dir = project_dir / &quot;png-generated&quot;
+
+png_dir.mkdir(parents=True, exist_ok=True)
+
+# Reutilizar um unico Plotter reduz vazamento de memoria em lotes grandes.
+plotter = pv.Plotter(off_screen=True)
+
+filenames = sorted(vtk_dir.glob(&quot;interface-*.vtk&quot;))
+
+# Remove a condicao inicial, se existir.
+if filenames:
+    filenames.pop(0)
+
+pattern = re.compile(r&quot;interface-(\d+)\.vtk&quot;)
+
+numbers = []
+for file in filenames:
+    match = pattern.search(file.name)
+    if match:
+        numbers.append(int(match.group(1)))
+
+if not numbers:
+    raise SystemExit(&quot;Nenhum arquivo interface-*.vtk valido encontrado.&quot;)
+
+max_digits = len(str(max(numbers)))
+print(f&quot;Numero de digitos: {max_digits}&quot;)
+
+for cfile in filenames:
+    file_name = cfile.name
+
+    match = re.search(r&quot;(\d+)&quot;, file_name)
+    if not match:
+        continue
+
+    num = int(match.group(1))
+    padded_name = f&quot;interface-{num:0{max_digits}d}.png&quot;
+    output_path = png_dir / padded_name
+    crop_path = png_dir / padded_name.replace(&quot;interface&quot;, &quot;cropped&quot;)
+    pdf_path = crop_path.with_suffix(&quot;.pdf&quot;)
+
+    if crop_path.exists() and pdf_path.exists():
+        print(f&quot;[SKIP] {crop_path.name} e {pdf_path.name} ja existem.&quot;)
+        continue
+
+    ivtkfile = cfile
+    vtkfile = vtk_dir / file_name.replace(&quot;interface&quot;, &quot;fluid&quot;)
+
+    if not vtkfile.exists():
+        print(f&quot;[AVISO] Arquivo nao encontrado: {vtkfile}&quot;)
+        continue
+
+    print(f&quot;Processando: {file_name}&quot;)
+
+    mesh = pv.UnstructuredGrid(pv.read(vtkfile))
+    imesh = pv.UnstructuredGrid(pv.read(ivtkfile))
+
+    velocity = mesh.point_data.get_array(&quot;velocity&quot;)
+
+    if velocity is None:
+        raise RuntimeError(f&quot;Campo velocity nao encontrado em {vtkfile}&quot;)
+
+    # Exemplo: componente y da velocidade.
+    field = velocity[:, 1]
+
+    # Alternativa: magnitude da velocidade.
+    # vel_magnitude = np.linalg.norm(velocity, axis=1)
+    # mesh.point_data[&quot;velocity_mag&quot;] = vel_magnitude
+    # field = mesh.point_data[&quot;velocity_mag&quot;]
+
+    sargs = dict(
+        label_font_size=9,
+        vertical=True,
+        n_labels=5,
+        font_family=&quot;times&quot;,
+        fmt=&quot;%.3f&quot;,
+        color=&quot;white&quot;,
+        height=0.6,
+        position_x=0.9,
+        position_y=0.1,
+    )
+
+    plotter.clear()
+    plotter.add_mesh(
+        mesh,
+        scalars=field,
+        style=&quot;surface&quot;,
+        show_edges=False,
+        line_width=1,
+        edge_color=&quot;black&quot;,
+        show_scalar_bar=False,
+        scalar_bar_args=sargs,
+        cmap=&quot;jet&quot;,
+    )
+
+    plotter.add_mesh(
+        imesh,
+        show_edges=True,
+        style=&quot;wireframe&quot;,
+        color=&quot;black&quot;,
+        line_width=6,
+        show_scalar_bar=False,
+        cmap=&quot;jet&quot;,
+    )
+
+    plotter.view_xy()
+    plotter.remove_legend()
+
+    plotter.screenshot(
+        str(output_path),
+        transparent_background=True,
+        window_size=[600, 600],
+        scale=4,
+    )
+
+    # Crop automatico: remove bordas iguais ao fundo.
+    im = Image.open(output_path)
+    bg = Image.new(im.mode, im.size, im.getpixel((0, 0)))
+    diff = ImageChops.difference(im, bg)
+    diff = ImageChops.add(diff, diff, 2.0, -100)
+    bbox = diff.getbbox()
+
+    if bbox is None:
+        print(f&quot;[AVISO] Nao foi possivel recortar {output_path.name}&quot;)
+        continue
+
+    cropped = im.crop(bbox)
+    cropped.save(crop_path)
+
+    # PDF final com fundo branco, adequado para relatorios.
+    if cropped.mode in (&quot;RGBA&quot;, &quot;LA&quot;):
+        background = Image.new(&quot;RGB&quot;, cropped.size, &quot;white&quot;)
+        background.paste(cropped, mask=cropped.split()[-1])
+        background.save(pdf_path)
+    else:
+        cropped.convert(&quot;RGB&quot;).save(pdf_path)
+
+    print(f&quot;Arquivos gravados: {crop_path.name}, {pdf_path.name}&quot;)
+
+plotter.close()</code></pre>
+<p>Execute no servidor:</p>
+<pre><code>conda activate posproc
+python vtk_para_png_pdf.py</code></pre>
+<p>Confira os arquivos gerados:</p>
+<pre><code>ls -lh /Users/nome_de_usuario/machines/studio/harmonic/Re200_We20/png-generated | head
+ls -lh /Users/nome_de_usuario/machines/studio/harmonic/Re200_We20/png-generated | tail</code></pre>
+<p>O diretório de saída terá imagens renderizadas completas, como <code>interface-0001.png</code>, e versões cortadas, como <code>cropped-0001.png</code> e <code>cropped-0001.pdf</code>. As versões cortadas são mais adequadas para incluir em documentos, porque removem margens vazias e preservam a região física de interesse.</p>
+<p>Para montar um PDF de resumo com várias figuras cortadas, use o <code>magick</code>:</p>
+<pre><code>cd /Users/nome_de_usuario/machines/studio/harmonic/Re200_We20/png-generated
+magick montage cropped-*.png -tile 4x -geometry 600x600+12+12 resumo.pdf</code></pre>
+<p>Para criar um vídeo a partir das imagens cortadas, prefira o <code>ffmpeg</code> quando o objetivo for gerar <code>MP4</code>:</p>
+<pre><code>ffmpeg -framerate 20 -pattern_type glob -i &quot;cropped-*.png&quot; \
+  -vf &quot;pad=ceil(iw/2)*2:ceil(ih/2)*2&quot; \
+  -c:v libx264 -pix_fmt yuv420p animacao.mp4</code></pre>
+<p>Antes de gerar muitos arquivos, verifique o volume de dados:</p>
+<pre><code>ls vtk/interface-*.vtk | wc -l
+du -sh vtk png-generated</code></pre>
+<h2 id="matplotlib-salvar-figuras-remotamente-em-modo-offscreen"><code>matplotlib</code>: salvar figuras remotamente em modo <em>offscreen</em></h2>
+<p>Ao usar Python por SSH, evite comandos que tentam abrir uma janela gráfica, como <code>plt.show()</code>. Em servidores remotos, o fluxo mais robusto é usar o <em>backend</em> <code>Agg</code> do Matplotlib e salvar diretamente em arquivo.</p>
+<p>Exemplo de script <code>grafico_offscreen.py</code>:</p>
+<pre><code>nano grafico_offscreen.py</code></pre>
+<p>Conteúdo:</p>
+<pre><code>import matplotlib
+matplotlib.use(&quot;Agg&quot;)
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0.0, 2.0 * np.pi, 400)
+y = np.sin(x)
+
+fig, ax = plt.subplots(figsize=(7, 4), dpi=150)
+ax.plot(x, y, linewidth=2)
+ax.set_xlabel(&quot;x&quot;)
+ax.set_ylabel(&quot;sen(x)&quot;)
+ax.grid(True)
+fig.tight_layout()
+fig.savefig(&quot;seno.png&quot;)
+fig.savefig(&quot;seno.pdf&quot;)
+plt.close(fig)</code></pre>
+<p>Execute no servidor:</p>
+<pre><code>conda activate posproc
+python grafico_offscreen.py
+ls -lh seno.png seno.pdf</code></pre>
+<p>Também é possível definir o backend pela variável de ambiente <code>MPLBACKEND</code>, sem modificar o script:</p>
+<pre><code>MPLBACKEND=Agg python grafico_offscreen.py</code></pre>
+<p>Para gerar uma sequência de figuras:</p>
+<pre><code>import matplotlib
+matplotlib.use(&quot;Agg&quot;)
+
+import matplotlib.pyplot as plt
+import numpy as np
+from pathlib import Path
+
+Path(&quot;frames&quot;).mkdir(exist_ok=True)
+
+x = np.linspace(0.0, 2.0 * np.pi, 400)
+
+for k in range(100):
+    y = np.sin(x - 0.1 * k)
+
+    fig, ax = plt.subplots(figsize=(7, 4), dpi=150)
+    ax.plot(x, y, linewidth=2)
+    ax.set_ylim(-1.2, 1.2)
+    ax.set_xlabel(&quot;x&quot;)
+    ax.set_ylabel(&quot;sen(x - ct)&quot;)
+    ax.grid(True)
+    fig.tight_layout()
+    fig.savefig(f&quot;frames/frame_{k:04d}.png&quot;)
+    plt.close(fig)</code></pre>
+<p>Depois de gerar os <code>PNG</code>, use <code>magick</code> para converter, reduzir e montar mosaicos. Para preparar vídeos, use <code>ffmpeg</code>.</p>
+<h2 id="magick-conversão-e-edição-de-imagens"><code>magick</code>: conversão e edição de imagens</h2>
+<p>O comando <code>magick</code>, do ImageMagick, converte imagens entre formatos, redimensiona figuras, recorta margens, combina imagens e pode montar animações a partir de sequências de arquivos. Ele é especialmente útil em servidores porque funciona inteiramente pela linha de comando.</p>
+<p>Para verificar a instalação:</p>
+<pre><code>which magick
+magick -version</code></pre>
+<p>Para converter uma imagem <code>PNG</code> em <code>PDF</code>:</p>
+<pre><code>magick figura.png figura.pdf</code></pre>
+<p>Para converter <code>PNG</code> em <code>JPG</code> com fundo branco:</p>
+<pre><code>magick figura.png -background white -alpha remove -alpha off figura.jpg</code></pre>
+<p>Para redimensionar uma imagem:</p>
+<pre><code>magick figura.png -resize 1600x figura_1600px.png</code></pre>
+<p>Para recortar bordas brancas automaticamente:</p>
+<pre><code>magick figura.png -trim +repage figura_trim.png</code></pre>
+<p>Para converter várias imagens <code>PNG</code> para <code>JPG</code>:</p>
+<pre><code>mkdir -p jpg
+magick mogrify -path jpg -format jpg *.png</code></pre>
+<p>O comando acima preserva os arquivos <code>PNG</code> originais e grava as versões <code>JPG</code> no diretório <code>jpg</code>. Use <code>mogrify</code> com cuidado, porque ele também pode sobrescrever arquivos se usado sem <code>-path</code>.</p>
+<p>Para criar um mosaico com várias imagens:</p>
+<pre><code>magick montage frames/frame_*.png -tile 5x4 -geometry 320x240+4+4 mosaico.png</code></pre>
+<p>Para criar um GIF animado a partir de uma sequência de <code>PNG</code>:</p>
+<pre><code>magick -delay 5 -loop 0 frames/frame_*.png animacao.gif</code></pre>
+<p>Para gerar um <code>MP4</code>, prefira o <code>ffmpeg</code>, discutido na próxima subseção. Algumas instalações do ImageMagick conseguem chamar delegados externos e gravar vídeo diretamente, mas isso depende da configuração local. O comando típico seria:</p>
+<pre><code>magick -delay 5 frames/frame_*.png animacao.mp4</code></pre>
+<p>Verifique se o formato aparece na instalação local:</p>
+<pre><code>magick -list format | grep -E &quot;MP4|MPEG|PNG&quot;</code></pre>
+<p>Em algumas instalações, o <code>magick</code> usa o <code>ffmpeg</code> por baixo dos panos para gravar <code>MP4</code>. Se o formato <code>MP4</code> não aparecer na lista, use o <code>ffmpeg</code> diretamente. Para instalar as duas ferramentas no ambiente Conda:</p>
+<pre><code>conda activate posproc
+mamba install -c conda-forge imagemagick ffmpeg</code></pre>
+<p>Depois, para vídeos, use a subseção de <code>ffmpeg</code>. Um teste rápido com <code>magick</code>, quando houver suporte local, seria:</p>
+<pre><code>magick -delay 5 frames/frame_*.png animacao.mp4
+ls -lh animacao.mp4</code></pre>
+<p>Para reduzir o tamanho de uma sequência antes de montar o vídeo:</p>
+<pre><code>mkdir -p frames_pequenos
+magick mogrify -path frames_pequenos -resize 1280x720 frames/frame_*.png
+ffmpeg -framerate 25 -i frames_pequenos/frame_%04d.png animacao_720p.mp4</code></pre>
+<p>Antes de executar conversões grandes, confira quantos arquivos serão processados:</p>
+<pre><code>ls frames/frame_*.png | wc -l
+du -sh frames</code></pre>
+<h2 id="ffmpeg-criar-e-converter-vídeos-remotamente"><code>ffmpeg</code>: criar e converter vídeos remotamente</h2>
+<p>O <code>ffmpeg</code> é a ferramenta mais indicada para criar vídeos a partir de sequências de imagens, converter formatos, ajustar resolução, controlar taxa de quadros e reduzir o tamanho de arquivos. Para gerar <code>MP4</code> a partir de <code>PNG</code>, ele costuma ser mais previsível que o <code>magick</code>.</p>
+<p>Para instalar no ambiente de pós-processamento:</p>
+<pre><code>conda activate posproc
+mamba install -c conda-forge ffmpeg</code></pre>
+<p>Verifique a instalação:</p>
+<pre><code>which ffmpeg
+ffmpeg -version</code></pre>
+<h3 id="criar-mp4-a-partir-de-nomes-numerados">Criar MP4 a partir de nomes numerados</h3>
+<p>Se as imagens estão nomeadas como:</p>
+<pre><code>frames/frame_0000.png
+frames/frame_0001.png
+frames/frame_0002.png</code></pre>
+<p>gere um vídeo com 20 quadros por segundo:</p>
+<pre><code>ffmpeg -framerate 20 -i frames/frame_%04d.png \
+  -c:v libx264 -pix_fmt yuv420p animacao.mp4</code></pre>
+<p>O padrão <code>%04d</code> indica números com quatro dígitos. Para nomes como <code>frame_000001.png</code>, use <code>%06d</code>.</p>
+<p>A opção <code>-pix_fmt yuv420p</code> melhora a compatibilidade do vídeo com reprodutores comuns, navegadores e programas de apresentação.</p>
+<h3 id="criar-mp4-a-partir-de-arquivos-com-curinga">Criar MP4 a partir de arquivos com curinga</h3>
+<p>Se os arquivos não seguem uma numeração perfeita, use o modo <code>glob</code>:</p>
+<pre><code>ffmpeg -framerate 20 -pattern_type glob -i &quot;cropped-*.png&quot; \
+  -c:v libx264 -pix_fmt yuv420p animacao.mp4</code></pre>
+<p>Antes de executar, confira a ordem dos arquivos:</p>
+<pre><code>ls cropped-*.png | head
+ls cropped-*.png | tail</code></pre>
+<p>O <code>ffmpeg</code> seguirá a ordem alfabética. Por isso, nomes com zeros à esquerda são importantes.</p>
+<h3 id="resolver-erro-de-dimensões-ímpares">Resolver erro de dimensões ímpares</h3>
+<p>O codec <code>libx264</code> frequentemente exige largura e altura pares. Se o <code>ffmpeg</code> reclamar de dimensões ímpares, aplique um <em>padding</em>:</p>
+<pre><code>ffmpeg -framerate 20 -i frames/frame_%04d.png \
+  -vf &quot;pad=ceil(iw/2)*2:ceil(ih/2)*2&quot; \
+  -c:v libx264 -pix_fmt yuv420p animacao.mp4</code></pre>
+<p>Esse filtro aumenta a imagem em no máximo um pixel por direção, apenas quando necessário.</p>
+<h3 id="controlar-qualidade-e-tamanho-do-arquivo">Controlar qualidade e tamanho do arquivo</h3>
+<p>Use <code>-crf</code> para controlar qualidade. Valores menores produzem melhor qualidade e arquivos maiores. Valores comuns ficam entre 18 e 28:</p>
+<pre><code>ffmpeg -framerate 20 -i frames/frame_%04d.png \
+  -c:v libx264 -crf 20 -pix_fmt yuv420p animacao_crf20.mp4</code></pre>
+<p>Para reduzir mais o tamanho:</p>
+<pre><code>ffmpeg -framerate 20 -i frames/frame_%04d.png \
+  -c:v libx264 -crf 28 -pix_fmt yuv420p animacao_crf28.mp4</code></pre>
+<h3 id="redimensionar-durante-a-criação-do-vídeo">Redimensionar durante a criação do vídeo</h3>
+<p>Para gerar um vídeo em largura máxima de 1280 pixels, preservando a proporção:</p>
+<pre><code>ffmpeg -framerate 25 -i frames/frame_%04d.png \
+  -vf &quot;scale=1280:-2&quot; \
+  -c:v libx264 -pix_fmt yuv420p animacao_1280.mp4</code></pre>
+<p>O valor <code>-2</code> deixa o <code>ffmpeg</code> escolher uma altura compatível com o codec.</p>
+<h3 id="converter-vídeo-entre-formatos">Converter vídeo entre formatos</h3>
+<p>Para converter um vídeo <code>MOV</code> ou <code>AVI</code> para <code>MP4</code>:</p>
+<pre><code>ffmpeg -i entrada.mov -c:v libx264 -crf 22 -pix_fmt yuv420p saida.mp4
+ffmpeg -i entrada.avi -c:v libx264 -crf 22 -pix_fmt yuv420p saida.mp4</code></pre>
+<p>Para extrair quadros de um vídeo:</p>
+<pre><code>mkdir -p frames_extraidos
+ffmpeg -i animacao.mp4 frames_extraidos/frame_%04d.png</code></pre>
+<h3 id="boas-práticas-1">Boas práticas</h3>
+<p>Antes de gerar um vídeo grande, conte os quadros e verifique o tamanho do diretório:</p>
+<pre><code>ls frames/frame_*.png | wc -l
+du -sh frames</code></pre>
+<p>Depois de gerar o vídeo, confira o arquivo:</p>
+<pre><code>ls -lh animacao.mp4
+ffmpeg -i animacao.mp4</code></pre>
+<p>O segundo comando imprime informações do vídeo, como resolução, duração, taxa de quadros e codec. Ele pode terminar com uma mensagem de uso incompleto, mas ainda assim mostra os metadados necessários para inspeção.</p>
+<h1 id="rotina-de-trabalho-no-labmfa">Rotina de trabalho no LabMFA</h1>
+<h2 id="uso-responsável-dos-servidores">Uso responsável dos servidores</h2>
+<p>Os computadores do LabMFA são recursos compartilhados. Isso significa que o comportamento de um usuário pode afetar o trabalho de outros alunos. Antes de executar tarefas pesadas, verifique a carga da máquina e combine o uso quando for necessário.</p>
+<pre><code>top
+df -h
+du -sh *</code></pre>
+<p>O comando <code>top</code> ajuda a ver CPU e memória. <code>df -h</code> mostra o uso dos discos. <code>du -sh *</code> mostra quais diretórios ocupam mais espaço no local atual.</p>
+<p>Boas práticas:</p>
+<ul>
+<li><p>evite executar muitas simulações pesadas simultaneamente sem combinar com o grupo;</p></li>
+<li><p>salve resultados de forma organizada, com nomes que indiquem o caso físico, parâmetros e data quando necessário;</p></li>
+<li><p>remova arquivos temporários depois de confirmar que os resultados importantes foram salvos;</p></li>
+<li><p>não use o diretório pessoal como depósito permanente de todos os resultados;</p></li>
+<li><p>não altere arquivos de outros usuários;</p></li>
+<li><p>documente comandos importantes em um <code>README.md</code> ou em um script.</p></li>
+</ul>
+<p>Para conferir processos do próprio usuário:</p>
+<pre><code>ps -u $USER
+ps -u $USER -o pid,pcpu,pmem,cmd</code></pre>
+<p>Se um processo foi iniciado por engano e está consumindo muitos recursos, identifique o <code>PID</code> e encerre:</p>
+<pre><code>kill 12345</code></pre>
+<h2 id="estrutura-recomendada-para-projetos">Estrutura recomendada para projetos</h2>
+<p>Um projeto organizado economiza tempo e facilita reproduzir resultados meses depois. Uma estrutura simples para simulações e pós-processamento é:</p>
+<pre><code>projeto/
+  README.md
+  environment.yml
+  scripts/
+  dados/
+  casos/
+  resultados/
+  figuras/
+  logs/</code></pre>
+<p>Um exemplo de criação dessa estrutura:</p>
+<pre><code>mkdir -p projeto/{scripts,dados,casos,resultados,figuras,logs}
+touch projeto/README.md
+touch projeto/environment.yml</code></pre>
+<p>Uso sugerido:</p>
+<ul>
+<li><p><code>scripts/</code>: programas Python, shell scripts e arquivos de pós-processamento;</p></li>
+<li><p><code>dados/</code>: dados brutos ou dados externos usados como entrada;</p></li>
+<li><p><code>casos/</code>: arquivos de entrada de simulações;</p></li>
+<li><p><code>resultados/</code>: saídas numéricas, arquivos VTK e tabelas;</p></li>
+<li><p><code>figuras/</code>: PNG, PDF e vídeos gerados para relatórios;</p></li>
+<li><p><code>logs/</code>: arquivos de saída textual de execuções longas.</p></li>
+</ul>
+<p>Um <code>README.md</code> mínimo pode conter:</p>
+<pre><code># Projeto Re200 We20
+
+Ambiente:
+conda env create -f environment.yml
+
+Execucao:
+python scripts/pos_processa.py casos/caso01.yml
+
+Resultados principais:
+resultados/caso01/</code></pre>
+<h2 id="problemas-frequentes-e-diagnóstico">Problemas frequentes e diagnóstico</h2>
+<p>Mensagens de erro são parte normal do uso do terminal. O mais importante é ler a mensagem e testar hipóteses simples antes de modificar muitos arquivos.</p>
+<h3 id="ssh-connection-refused"><code>ssh: connection refused</code></h3>
+<p>Esse erro pode indicar porta errada, serviço indisponível ou tentativa de usar o IP externo sem a porta correta.</p>
+<pre><code>ssh nome_de_usuario@IP_EXTERNO_RESTRITO -p PORTA_EXTERNA
+ssh nome_de_usuario@192.168.68.53</code></pre>
+<p>Fora do laboratório, lembre-se de usar o IP externo com a porta da máquina. Dentro do laboratório, use o IP interno correspondente.</p>
+<h3 id="senha-pedida-mesmo-com-chave-ssh">Senha pedida mesmo com chave SSH</h3>
+<p>Verifique se a chave pública foi copiada e se as permissões estão corretas:</p>
+<pre><code>ls -lh ~/.ssh
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys</code></pre>
+<p>No computador local, confira se a chave existe:</p>
+<pre><code>ls -lh ~/.ssh/id_ed25519 ~/.ssh/id_ed25519.pub</code></pre>
+<h3 id="no-space-left-on-device"><code>No space left on device</code></h3>
+<p>Esse erro significa que algum disco está cheio ou sem espaço suficiente para novos arquivos.</p>
+<pre><code>df -h
+du -sh *
+du -sh resultados/*</code></pre>
+<p>Procure arquivos temporários, vídeos antigos, sequências PNG intermediárias e diretórios de teste que possam ser arquivados ou removidos.</p>
+<h3 id="command-not-found"><code>command not found</code></h3>
+<p>O shell não encontrou o programa solicitado. Verifique se o nome está correto e se o ambiente adequado está ativo.</p>
+<pre><code>which python
+which ffmpeg
+conda activate mef
+which python</code></pre>
+<h3 id="o-ambiente-conda-não-ativa">O ambiente Conda não ativa</h3>
+<p>Se <code>conda activate</code> não funciona, inicialize o shell e abra uma nova sessão:</p>
+<pre><code>conda init bash
+source ~/.bashrc
+conda activate mef</code></pre>
+<p>Se o shell for <code>zsh</code>, use:</p>
+<pre><code>conda init zsh
+source ~/.zshrc</code></pre>
+<h3 id="rsync-copiou-para-o-lado-errado"><code>rsync</code> copiou para o lado errado</h3>
+<p>Sempre confira a direção da cópia. O lado antes do último argumento é a origem; o último argumento é o destino.</p>
+<pre><code>rsync -avh resultados/ nome_de_usuario@192.168.68.53:/home/nome_de_usuario/projeto/resultados/
+rsync -avh nome_de_usuario@192.168.68.53:/home/nome_de_usuario/projeto/resultados/ ./resultados/</code></pre>
+<p>O primeiro comando envia arquivos para o servidor. O segundo baixa arquivos do servidor.</p>
+<h2 id="jupyter-remoto-com-túnel-ssh">Jupyter remoto com túnel SSH</h2>
+<p>O Jupyter pode ser executado no servidor e acessado pelo navegador do computador local. A forma mais segura é iniciar o Jupyter sem abrir o navegador no servidor e criar um túnel SSH.</p>
+<p>No servidor, dentro de uma sessão <code>tmux</code>:</p>
+<pre><code>conda activate mef
+jupyter lab --no-browser --port 8888</code></pre>
+<p>O terminal mostrará um endereço com um <em>token</em>. Não compartilhe esse endereço publicamente.</p>
+<p>No computador local, crie o túnel para o servidor. Dentro do laboratório:</p>
+<pre><code>ssh -L 8888:localhost:8888 nome_de_usuario@192.168.68.53</code></pre>
+<p>Fora do laboratório:</p>
+<pre><code>ssh -L 8888:localhost:8888 nome_de_usuario@IP_EXTERNO_RESTRITO -p PORTA_EXTERNA</code></pre>
+<p>Depois, abra no navegador local:</p>
+<pre><code>http://localhost:8888</code></pre>
+<p>Se a porta <code>8888</code> já estiver em uso, escolha outra porta, por exemplo:</p>
+<pre><code>jupyter lab --no-browser --port 8890
+ssh -L 8890:localhost:8890 nome_de_usuario@192.168.68.53</code></pre>
+<p>Ao terminar, encerre o Jupyter com <code>Ctrl+c</code> no terminal onde ele foi iniciado.</p>
+<h2 id="vs-code-remote-ssh">VS Code Remote SSH</h2>
+<p>O VS Code pode editar arquivos diretamente no servidor usando a extensão <code>Remote - SSH</code>. Isso é útil para alunos que ainda não estão confortáveis com editores de terminal, mas o terminal continua importante para executar, monitorar e organizar os trabalhos.</p>
+<p>Primeiro, configure um atalho em <code>~/.ssh/config</code> no computador local:</p>
+<pre><code>Host jacaranda-labmfa
+  HostName IP_EXTERNO_RESTRITO
+  Port PORTA_EXTERNA
+  User nome_de_usuario
+  IdentityFile ~/.ssh/id_ed25519</code></pre>
+<p>Dentro do laboratório, um atalho por IP interno poderia ser:</p>
+<pre><code>Host jacaranda-labmfa-interno
+  HostName 192.168.68.53
+  User nome_de_usuario
+  IdentityFile ~/.ssh/id_ed25519</code></pre>
+<p>No VS Code, instale a extensão <code>Remote - SSH</code>, escolha o host configurado e abra o diretório do projeto no servidor. Pela linha de comando, quando o comando <code>code</code> está disponível, também é possível usar:</p>
+<pre><code>code --remote ssh-remote+jacaranda-labmfa /home/nome_de_usuario/projeto</code></pre>
+<p>Evite abrir diretórios enormes como <code>/home</code> inteiro. Abra apenas a pasta do projeto. Isso reduz tráfego, indexação desnecessária e consumo de recursos no servidor.</p>
+<h2 id="resumo-rápido-de-comandos">Resumo rápido de comandos</h2>
+<p>A tabela abaixo serve como consulta rápida. Para aprender, use os exemplos das seções anteriores; para lembrar, volte a esta página.</p>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Comando</strong></th>
+<th style="text-align: left;"><strong>Uso principal</strong></th>
+<th style="text-align: left;"><strong>Exemplo</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>pwd</code></td>
+<td style="text-align: left;">mostrar diretório atual</td>
+<td style="text-align: left;"><code>pwd</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ls</code></td>
+<td style="text-align: left;">listar arquivos</td>
+<td style="text-align: left;"><code>ls -lh</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cd</code></td>
+<td style="text-align: left;">mudar de diretório</td>
+<td style="text-align: left;"><code>cd resultados</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mkdir</code></td>
+<td style="text-align: left;">criar diretórios</td>
+<td style="text-align: left;"><code>mkdir -p projeto/logs</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cp</code></td>
+<td style="text-align: left;">copiar</td>
+<td style="text-align: left;"><code>cp a.dat backup.dat</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mv</code></td>
+<td style="text-align: left;">mover ou renomear</td>
+<td style="text-align: left;"><code>mv teste caso01</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rm</code></td>
+<td style="text-align: left;">apagar</td>
+<td style="text-align: left;"><code>rm arquivo.tmp</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cat</code></td>
+<td style="text-align: left;">mostrar arquivo curto</td>
+<td style="text-align: left;"><code>cat README.md</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>less</code></td>
+<td style="text-align: left;">ler arquivo longo</td>
+<td style="text-align: left;"><code>less saida.log</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tail</code></td>
+<td style="text-align: left;">ver final de arquivo</td>
+<td style="text-align: left;"><code>tail -f saida.log</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>grep</code></td>
+<td style="text-align: left;">procurar texto</td>
+<td style="text-align: left;"><code>grep erro saida.log</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>find</code></td>
+<td style="text-align: left;">encontrar arquivos</td>
+<td style="text-align: left;"><code>find . -name "*.vtk"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ssh</code></td>
+<td style="text-align: left;">conectar remoto</td>
+<td style="text-align: left;"><code>ssh usuario@192.168.68.53</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>scp</code></td>
+<td style="text-align: left;">copiar pela rede</td>
+<td style="text-align: left;"><code>scp a.dat host: /</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rsync</code></td>
+<td style="text-align: left;">sincronizar dados</td>
+<td style="text-align: left;"><code>rsync -avh resultados/ host: /</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tmux</code></td>
+<td style="text-align: left;">manter sessão ativa</td>
+<td style="text-align: left;"><code>tmux new -s caso01</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>top</code></td>
+<td style="text-align: left;">monitorar máquina</td>
+<td style="text-align: left;"><code>top</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ps</code></td>
+<td style="text-align: left;">listar processos</td>
+<td style="text-align: left;"><code>ps aux | grep python</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>kill</code></td>
+<td style="text-align: left;">encerrar processo</td>
+<td style="text-align: left;"><code>kill 12345</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tar</code></td>
+<td style="text-align: left;">compactar diretórios</td>
+<td style="text-align: left;"><code>tar -czvf r.tar.gz resultados/</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>conda</code></td>
+<td style="text-align: left;">gerenciar ambientes</td>
+<td style="text-align: left;"><code>conda activate mef</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ffmpeg</code></td>
+<td style="text-align: left;">criar vídeos</td>
+<td style="text-align: left;"><code>ffmpeg -i frame_%04d.png out.mp4</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="exercícios-guiados">Exercícios guiados</h2>
+<p>Os exercícios abaixo foram pensados para serem executados com calma. O objetivo não é decorar comandos, mas criar familiaridade com a rotina de trabalho.</p>
+<h3 id="exercício-1-entrar-no-servidor-e-localizar-se">Exercício 1: entrar no servidor e localizar-se</h3>
+<pre><code>ssh nome_de_usuario@192.168.68.53
+pwd
+ls -lh
+exit</code></pre>
+<p>Repita usando o acesso externo, quando estiver fora do laboratório:</p>
+<pre><code>ssh nome_de_usuario@IP_EXTERNO_RESTRITO -p PORTA_EXTERNA</code></pre>
+<h3 id="exercício-2-criar-estrutura-de-projeto">Exercício 2: criar estrutura de projeto</h3>
+<pre><code>mkdir -p teste_labmfa/{scripts,dados,resultados,logs}
+cd teste_labmfa
+pwd
+touch README.md
+ls -lh</code></pre>
+<h3 id="exercício-3-salvar-saída-de-comando">Exercício 3: salvar saída de comando</h3>
+<pre><code>date &gt; logs/execucao.log
+ls -lh &gt;&gt; logs/execucao.log
+cat logs/execucao.log</code></pre>
+<h3 id="exercício-4-criar-ambiente-conda">Exercício 4: criar ambiente Conda</h3>
+<pre><code>conda create -n teste-mef -c conda-forge python=3.12 numpy matplotlib
+conda activate teste-mef
+which python
+python -c &quot;import numpy; print(numpy.__version__)&quot;
+conda deactivate</code></pre>
+<h3 id="exercício-5-executar-processo-em-tmux">Exercício 5: executar processo em <code>tmux</code></h3>
+<pre><code>tmux new -s teste
+python -c &quot;import time; [print(i) or time.sleep(1) for i in range(10)]&quot;</code></pre>
+<p>Durante a execução, saia da sessão com <code>Ctrl+b</code> e depois <code>d</code>. Volte com:</p>
+<pre><code>tmux attach -t teste</code></pre>
+<h3 id="exercício-6-copiar-resultados-para-o-computador-local">Exercício 6: copiar resultados para o computador local</h3>
+<p>No computador local, execute:</p>
+<pre><code>rsync -avh nome_de_usuario@192.168.68.53:/home/nome_de_usuario/teste_labmfa/ ./teste_labmfa/</code></pre>
+<p>Adapte usuário, servidor e caminho conforme sua conta.</p>
+<h2 id="glossário">Glossário</h2>
+<div class="description">
+<p>computador acessado por outros computadores para executar programas, armazenar dados ou fornecer serviços.</p>
+<p>computador usado pelo aluno para acessar um servidor, como um notebook pessoal.</p>
+<p>interface textual onde comandos são digitados.</p>
+<p>programa que interpreta os comandos digitados no terminal. Exemplos: <code>bash</code>, <code>zsh</code> e <code>fish</code>.</p>
+<p>endereço numérico que identifica uma máquina na rede.</p>
+<p>número usado para separar serviços ou redirecionar conexões para máquinas diferentes.</p>
+<p>protocolo usado para abrir uma sessão segura em um computador remoto.</p>
+<p>sistema de armazenamento em rede, usado para guardar e compartilhar dados.</p>
+<p>pasta pessoal do usuário, normalmente representada por <code>~</code>.</p>
+<p>programa em execução.</p>
+<p>número que identifica um processo.</p>
+<p>conjunto isolado de pacotes e programas, útil para manter projetos reprodutíveis.</p>
+<p>saída normal de um programa, geralmente mostrada na tela.</p>
+<p>saída de erro de um programa.</p>
+<p>combinação de comandos usando <code>|</code>, onde a saída de um comando alimenta outro.</p>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-minicondaLinuxInstall" class="csl-entry" role="listitem">
+Anaconda. 2026. <em>Installing Miniconda on Linux</em>. <a href="https://www.anaconda.com/docs/getting-started/miniconda/install#linux" class="uri">Https://www.anaconda.com/docs/getting-started/miniconda/install#linux</a>.
+</div>
+<div id="ref-miniforgeGithub" class="csl-entry" role="listitem">
+<span class="nocase">conda-forge</span>. 2026. <em>Miniforge</em>. <a href="https://github.com/conda-forge/miniforge" class="uri">Https://github.com/conda-forge/miniforge</a>.
+</div>
+<div id="ref-labmfaFacilities2026" class="csl-entry" role="listitem">
+LabMFA. 2026. <em>Facilities</em>. <a href="https://labmfa.coppe.ufrj.br/facilities/" class="uri">Https://labmfa.coppe.ufrj.br/facilities/</a>.
+</div>
+<div id="ref-missingSemesterPt" class="csl-entry" role="listitem">
+The Missing Semester of Your CS Education. 2026. <em><span class="nocase">The Missing Semester of Your CS Education</span> Em Portugu<span>ê</span>s</em>. <a href="https://missing-semester-pt.github.io" class="uri">Https://missing-semester-pt.github.io</a>.
+</div>
+</div>
+    </div>
+  </article>
+</section>
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      macros: {
+        vvet: "\\mathbf{v}",
+        uvet: "\\mathbf{u}",
+        xvet: "\\mathbf{x}",
+        Imat: "\\mathbf{I}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<script>
+  (() => {
+    const content = document.querySelector('.latex-content');
+    if (!content) {
+      return;
+    }
+    let scale = 1;
+    const setScale = (nextScale) => {
+      scale = Math.min(1.2, Math.max(0.55, nextScale));
+      content.style.setProperty('--archive-font-scale', scale.toFixed(2));
+    };
+    document.querySelectorAll('[data-font-action]').forEach((button) => {
+      button.addEventListener('click', () => {
+        setScale(scale + (button.dataset.fontAction === 'increase' ? 0.05 : -0.05));
+      });
+    });
+  })();
+</script>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="footer-title">Gustavo Rabello dos Anjos</p>
+        <p>Professor of Mechanical Engineering and Computational Scientist</p>
+      </div>
+      <div>
+        <p class="footer-title">Contact</p>
+        <a href="mailto:gustavo.rabello@coppe.ufrj.br">gustavo.rabello@coppe.ufrj.br</a>
+        <span>+55 21 3938-8402</span>
+      </div>
+      <div>
+        <p class="footer-title">Profiles</p>
+        <a href="http://lattes.cnpq.br/2430893976345647" target="_blank" rel="noreferrer">Lattes CV</a>
+        <a href="https://orcid.org/0000-0003-0687-8466" target="_blank" rel="noreferrer">ORCID</a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=55930084200" target="_blank" rel="noreferrer">Scopus</a>
+        <a href="https://scholar.google.com/citations?user=LlX16aAAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+        <a href="https://github.com/gustavorabello" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://labmfa.coppe.ufrj.br" target="_blank" rel="noreferrer">LabMFA</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="static/js/main.js?v=4700cdc6899b"></script>
+</body>
+</html>
