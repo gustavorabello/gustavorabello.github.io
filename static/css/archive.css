@@ -114,14 +114,18 @@
 }
 
 .archive-document {
+  min-width: 0;
   overflow: hidden;
 }
 
 .latex-content {
   display: grid;
   gap: 18px;
+  min-width: 0;
+  max-width: 100%;
   color: var(--text);
   font-size: calc(2rem * var(--archive-font-scale, 0.75));
+  overflow-wrap: anywhere;
 }
 
 .latex-content > section {
@@ -177,8 +181,86 @@
   overflow-wrap: anywhere;
 }
 
+.latex-content code {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.latex-content pre {
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  padding: 14px 16px;
+  background: rgba(8, 28, 34, 0.92);
+  color: #f5fbff;
+  border-radius: 10px;
+}
+
+.latex-content pre code {
+  color: inherit;
+  white-space: inherit;
+}
+
+.latex-content table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.latex-content th,
+.latex-content td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(15, 96, 116, 0.14);
+  vertical-align: top;
+}
+
+.latex-content img,
+.latex-content embed,
+.latex-content object,
+.latex-content iframe {
+  max-width: 100%;
+}
+
 .latex-content .math {
   overflow-x: auto;
+}
+
+.latex-content .latex-toc {
+  display: block;
+  max-width: 100%;
+  padding: 18px;
+  background: rgba(15, 96, 116, 0.08);
+  border: 1px solid rgba(15, 96, 116, 0.14);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+}
+
+.latex-content .latex-toc h2 {
+  margin: 0 0 10px;
+}
+
+.latex-content .latex-toc ul {
+  display: block;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.latex-content .latex-toc li {
+  margin: 4px 0;
+  line-height: 1.45;
+}
+
+.latex-content .latex-toc .toc-level-2 {
+  margin-left: 18px;
+}
+
+.latex-content .latex-toc .toc-level-3 {
+  margin-left: 36px;
+  font-size: 0.92em;
 }
 
 .latex-content figure,

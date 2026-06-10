@@ -6,8 +6,8 @@
   <title>Computação Científica Remota no LabMFA: Linux, SSH e Pós-processamento | Gustavo R. Anjos</title>
   <meta name="description" content="Numerical simulation of single- and two-phase flows, heat transfer and scientific computing.">
   <base href="../../">
-  <link rel="stylesheet" href="static/css/base.css?v=4700cdc6899b">
-  <link rel="stylesheet" href="static/css/archive.css?v=4700cdc6899b">
+  <link rel="stylesheet" href="static/css/base.css?v=895ff9983d9c">
+  <link rel="stylesheet" href="static/css/archive.css?v=895ff9983d9c">
 </head>
 <body class="page-archive">
   <div class="site-shell">
@@ -55,7 +55,8 @@
 <section class="archive-layout archive-layout-single" data-reveal>
   <article class="panel archive-document">
     <div class="latex-content">
-      <div class="minipage">
+      <div class="latex-source-labmfa">
+<div class="minipage">
 <p><img src="media/images/archive/labmfa-computacao-cientifica-remota/coppe-ufrj-logo.png" style="height:21mm" alt="image" /></p>
 </div>
 <div class="minipage">
@@ -83,6 +84,159 @@ ENGENHARIA MECÂNICA</strong></p>
 <p><em>Esta figura ilustra as conexões de dados entre um computador pessoal, como um <em>laptop</em>, e um servidor remoto de computação de alto desempenho. Nota-se que as conexões podem partir de qualquer computador para qualquer outro computador ligado a uma rede local ou à internet.</em></p>
 </div>
 </div>
+<nav id="TOC" class="latex-toc" role="doc-toc">
+<h2>Índice</h2>
+<ul>
+<li class="toc-level-1"><a href="#introdução">Introdução</a></li>
+<li class="toc-level-2"><a href="#considerações-iniciais">Considerações iniciais</a></li>
+<li class="toc-level-2"><a href="#recursos-computacionais">Recursos computacionais</a></li>
+<li class="toc-level-1"><a href="#linux-e-terminal">Linux e terminal</a></li>
+<li class="toc-level-2"><a href="#o-que-é-o-linux">O que é o Linux</a></li>
+<li class="toc-level-2"><a href="#arquivos-e-diretórios">Arquivos e diretórios</a></li>
+<li class="toc-level-2"><a href="#o-terminal">O terminal</a></li>
+<li class="toc-level-2"><a href="#shell-e-bash">Shell e Bash</a></li>
+<li class="toc-level-2"><a href="#outros-shells-zsh-fish-e-sh">Outros shells: zsh, fish e sh</a></li>
+<li class="toc-level-2"><a href="#arquivos-de-configuração-do-shell">Arquivos de configuração do shell</a></li>
+<li class="toc-level-2"><a href="#como-mudar-o-shell-padrão">Como mudar o shell padrão</a></li>
+<li class="toc-level-2"><a href="#boas-práticas-no-uso-do-terminal">Boas práticas no uso do terminal</a></li>
+<li class="toc-level-2"><a href="#ajuda-dentro-do-próprio-linux">Ajuda dentro do próprio Linux</a></li>
+<li class="toc-level-1"><a href="#ambientes-python-com-conda">Ambientes Python com Conda</a></li>
+<li class="toc-level-2"><a href="#por-que-usar-ambientes">Por que usar ambientes</a></li>
+<li class="toc-level-2"><a href="#miniforge">Miniforge</a></li>
+<li class="toc-level-2"><a href="#miniconda">Miniconda</a></li>
+<li class="toc-level-2"><a href="#qual-escolher-no-labmfa">Qual escolher no LabMFA</a></li>
+<li class="toc-level-2"><a href="#instalação-do-miniforge-no-linux">Instalação do Miniforge no Linux</a></li>
+<li class="toc-level-2"><a href="#instalação-do-miniconda-no-linux">Instalação do Miniconda no Linux</a></li>
+<li class="toc-level-2"><a href="#desativar-ativação-automática-do-ambiente-base">Desativar ativação automática do ambiente base</a></li>
+<li class="toc-level-2"><a href="#criar-um-ambiente-para-trabalho-no-labmfa">Criar um ambiente para trabalho no LabMFA</a></li>
+<li class="toc-level-2"><a href="#criar-ambiente-a-partir-de-arquivo-yaml">Criar ambiente a partir de arquivo YAML</a></li>
+<li class="toc-level-2"><a href="#boas-práticas">Boas práticas</a></li>
+<li class="toc-level-2"><a href="#instalar-programas-e-registrar-o-ambiente">Instalar programas e registrar o ambiente</a></li>
+<li class="toc-level-1"><a href="#fundamentos-práticos-do-terminal">Fundamentos práticos do terminal</a></li>
+<li class="toc-level-2"><a href="#redirecionamento-pipes-e-curingas">Redirecionamento, pipes e curingas</a></li>
+<li class="toc-level-3"><a href="#salvar-a-saída-em-arquivo">Salvar a saída em arquivo</a></li>
+<li class="toc-level-3"><a href="#combinar-comandos-com-pipe">Combinar comandos com pipe</a></li>
+<li class="toc-level-3"><a href="#selecionar-arquivos-com-curingas">Selecionar arquivos com curingas</a></li>
+<li class="toc-level-2"><a href="#permissões-chmod-chown-e-groups">Permissões: chmod, chown e groups</a></li>
+<li class="toc-level-3"><a href="#chmod-alterar-permissões">chmod: alterar permissões</a></li>
+<li class="toc-level-3"><a href="#groups-ver-grupos-do-usuário">groups: ver grupos do usuário</a></li>
+<li class="toc-level-3"><a href="#chown-alterar-dono">chown: alterar dono</a></li>
+<li class="toc-level-2"><a href="#compactação-tar-gzip-zip-e-unzip">Compactação: tar, gzip, zip e unzip</a></li>
+<li class="toc-level-3"><a href="#tar-empacotar-diretórios">tar: empacotar diretórios</a></li>
+<li class="toc-level-3"><a href="#gzip-compactar-arquivo-único">gzip: compactar arquivo único</a></li>
+<li class="toc-level-3"><a href="#zip-e-unzip-compatibilidade-com-windows">zip e unzip: compatibilidade com Windows</a></li>
+<li class="toc-level-2"><a href="#gerenciamento-de-processos-ps-kill-jobs-fg-bg-e-nohup">Gerenciamento de processos: ps, kill, jobs, fg, bg e nohup</a></li>
+<li class="toc-level-3"><a href="#ps-listar-processos">ps: listar processos</a></li>
+<li class="toc-level-3"><a href="#kill-e-killall-encerrar-processos">kill e killall: encerrar processos</a></li>
+<li class="toc-level-3"><a href="#jobs-fg-e-bg">jobs, fg e bg</a></li>
+<li class="toc-level-3"><a href="#nohup-manter-processo-após-sair-do-terminal">nohup: manter processo após sair do terminal</a></li>
+<li class="toc-level-2"><a href="#variáveis-de-ambiente-e-path">Variáveis de ambiente e PATH</a></li>
+<li class="toc-level-3"><a href="#which-descobrir-qual-programa-será-executado">which: descobrir qual programa será executado</a></li>
+<li class="toc-level-3"><a href="#export-definir-variável-temporária">export: definir variável temporária</a></li>
+<li class="toc-level-3"><a href="#adicionar-um-diretório-ao-path">Adicionar um diretório ao PATH</a></li>
+<li class="toc-level-1"><a href="#comandos">Comandos</a></li>
+<li class="toc-level-2"><a href="#pwd-mostrar-o-diretório-atual">pwd: mostrar o diretório atual</a></li>
+<li class="toc-level-2"><a href="#ls-listar-arquivos-e-diretórios">ls: listar arquivos e diretórios</a></li>
+<li class="toc-level-2"><a href="#cd-mudar-de-diretório">cd: mudar de diretório</a></li>
+<li class="toc-level-2"><a href="#mkdir-criar-diretórios">mkdir: criar diretórios</a></li>
+<li class="toc-level-2"><a href="#cp-mv-e-rm-copiar-mover-e-apagar">cp, mv e rm: copiar, mover e apagar</a></li>
+<li class="toc-level-3"><a href="#cp-copiar-arquivos">cp: copiar arquivos</a></li>
+<li class="toc-level-3"><a href="#mv-mover-ou-renomear">mv: mover ou renomear</a></li>
+<li class="toc-level-3"><a href="#rm-apagar-arquivos">rm: apagar arquivos</a></li>
+<li class="toc-level-2"><a href="#touch-cat-less-head-e-tail">touch, cat, less, head e tail</a></li>
+<li class="toc-level-3"><a href="#touch-criar-arquivo-vazio">touch: criar arquivo vazio</a></li>
+<li class="toc-level-3"><a href="#cat-mostrar-conteúdo-curto">cat: mostrar conteúdo curto</a></li>
+<li class="toc-level-3"><a href="#less-ler-arquivos-longos">less: ler arquivos longos</a></li>
+<li class="toc-level-3"><a href="#head-e-tail-começo-e-fim-do-arquivo">head e tail: começo e fim do arquivo</a></li>
+<li class="toc-level-2"><a href="#echo-history-e-clear">echo, history e clear</a></li>
+<li class="toc-level-3"><a href="#echo-imprimir-texto-e-variáveis">echo: imprimir texto e variáveis</a></li>
+<li class="toc-level-3"><a href="#history-recuperar-comandos-anteriores">history: recuperar comandos anteriores</a></li>
+<li class="toc-level-3"><a href="#clear-limpar-a-tela">clear: limpar a tela</a></li>
+<li class="toc-level-2"><a href="#find-encontrar-arquivos">find: encontrar arquivos</a></li>
+<li class="toc-level-2"><a href="#grep-procurar-texto-dentro-de-arquivos">grep: procurar texto dentro de arquivos</a></li>
+<li class="toc-level-2"><a href="#sed-editar-texto-automaticamente">sed: editar texto automaticamente</a></li>
+<li class="toc-level-3"><a href="#editar-o-arquivo-diretamente">Editar o arquivo diretamente</a></li>
+<li class="toc-level-2"><a href="#wget-baixar-arquivos-pela-internet">wget: baixar arquivos pela internet</a></li>
+<li class="toc-level-3"><a href="#escolher-o-nome-do-arquivo">Escolher o nome do arquivo</a></li>
+<li class="toc-level-3"><a href="#escolher-o-diretório-de-destino">Escolher o diretório de destino</a></li>
+<li class="toc-level-3"><a href="#continuar-um-download-interrompido">Continuar um download interrompido</a></li>
+<li class="toc-level-3"><a href="#baixar-uma-lista-de-arquivos">Baixar uma lista de arquivos</a></li>
+<li class="toc-level-3"><a href="#exemplo-baixar-o-instalador-do-miniconda">Exemplo: baixar o instalador do Miniconda</a></li>
+<li class="toc-level-3"><a href="#verificar-se-o-endereço-existe">Verificar se o endereço existe</a></li>
+<li class="toc-level-3"><a href="#diferença-entre-wget-scp-e-rsync">Diferença entre wget, scp e rsync</a></li>
+<li class="toc-level-2"><a href="#df-verificar-uso-dos-discos">df: verificar uso dos discos</a></li>
+<li class="toc-level-2"><a href="#du-verificar-tamanho-de-arquivos-e-diretórios">du: verificar tamanho de arquivos e diretórios</a></li>
+<li class="toc-level-2"><a href="#top-acompanhar-processos">top: acompanhar processos</a></li>
+<li class="toc-level-2"><a href="#ssh-conectar-em-um-computador-remoto">ssh: conectar em um computador remoto</a></li>
+<li class="toc-level-3"><a href="#aliases-para-facilitar-o-acesso">Aliases para facilitar o acesso</a></li>
+<li class="toc-level-3"><a href="#primeira-conexão">Primeira conexão</a></li>
+<li class="toc-level-3"><a href="#chaves-ssh">Chaves SSH</a></li>
+<li class="toc-level-3"><a href="#copiar-a-chave-para-os-servidores">Copiar a chave para os servidores</a></li>
+<li class="toc-level-3"><a href="#quando-ssh-copy-id-não-está-disponível">Quando ssh-copy-id não está disponível</a></li>
+<li class="toc-level-3"><a href="#configuração-opcional-em-.sshconfig">Configuração opcional em ~/.ssh/config</a></li>
+<li class="toc-level-2"><a href="#scp-copiar-arquivos-pela-rede">scp: copiar arquivos pela rede</a></li>
+<li class="toc-level-3"><a href="#uso-na-rede-interna">Uso na rede interna</a></li>
+<li class="toc-level-3"><a href="#uso-com-porta-externa">Uso com porta externa</a></li>
+<li class="toc-level-3"><a href="#cuidado-com-a-direção-da-cópia">Cuidado com a direção da cópia</a></li>
+<li class="toc-level-2"><a href="#rsync-sincronizar-arquivos-e-diretórios">rsync: sincronizar arquivos e diretórios</a></li>
+<li class="toc-level-3"><a href="#uso-na-rede-interna-1">Uso na rede interna</a></li>
+<li class="toc-level-3"><a href="#uso-com-porta-externa-1">Uso com porta externa</a></li>
+<li class="toc-level-3"><a href="#transferência-com-progresso">Transferência com progresso</a></li>
+<li class="toc-level-2"><a href="#tmux-manter-sessões-remotas-ativas">tmux: manter sessões remotas ativas</a></li>
+<li class="toc-level-2"><a href="#screen-alternativa-para-sessões-persistentes">screen: alternativa para sessões persistentes</a></li>
+<li class="toc-level-2"><a href="#git-controle-de-versões">git: controle de versões</a></li>
+<li class="toc-level-3"><a href="#criar-um-repositório">Criar um repositório</a></li>
+<li class="toc-level-3"><a href="#registrar-mudanças">Registrar mudanças</a></li>
+<li class="toc-level-3"><a href="#consultar-histórico-e-diferenças">Consultar histórico e diferenças</a></li>
+<li class="toc-level-3"><a href="#uso-com-github">Uso com GitHub</a></li>
+<li class="toc-level-1"><a href="#editores-de-texto-no-terminal">Editores de texto no terminal</a></li>
+<li class="toc-level-2"><a href="#nano-editor-simples-para-começar">nano: editor simples para começar</a></li>
+<li class="toc-level-2"><a href="#vi-editor-mínimo-quase-sempre-disponível">vi: editor mínimo quase sempre disponível</a></li>
+<li class="toc-level-2"><a href="#vim-versão-mais-completa-do-vi">vim: versão mais completa do vi</a></li>
+<li class="toc-level-2"><a href="#nvim-neovim">nvim: Neovim</a></li>
+<li class="toc-level-2"><a href="#emacs-editor-extensível">emacs: editor extensível</a></li>
+<li class="toc-level-2"><a href="#micro-editor-moderno-e-simples">micro: editor moderno e simples</a></li>
+<li class="toc-level-2"><a href="#mcedit-editor-do-midnight-commander">mcedit: editor do Midnight Commander</a></li>
+<li class="toc-level-2"><a href="#joe-editor-simples-inspirado-em-editores-antigos">joe: editor simples inspirado em editores antigos</a></li>
+<li class="toc-level-2"><a href="#como-escolher-um-editor">Como escolher um editor</a></li>
+<li class="toc-level-1"><a href="#recursos-avançados-para-processamento-de-dados-remoto">Recursos avançados para processamento de dados remoto</a></li>
+<li class="toc-level-2"><a href="#ambiente-conda-para-pós-processamento">Ambiente Conda para pós-processamento</a></li>
+<li class="toc-level-2"><a href="#gnuplot-gráficos-rápidos-no-servidor">gnuplot: gráficos rápidos no servidor</a></li>
+<li class="toc-level-2"><a href="#converter-sequências-png-para-dados-vtk-com-python">Converter sequências PNG para dados VTK com Python</a></li>
+<li class="toc-level-2"><a href="#renderizar-arquivos-vtk-em-png-e-pdf-com-pyvista">Renderizar arquivos VTK em PNG e PDF com PyVista</a></li>
+<li class="toc-level-2"><a href="#matplotlib-salvar-figuras-remotamente-em-modo-offscreen">matplotlib: salvar figuras remotamente em modo offscreen</a></li>
+<li class="toc-level-2"><a href="#magick-conversão-e-edição-de-imagens">magick: conversão e edição de imagens</a></li>
+<li class="toc-level-2"><a href="#ffmpeg-criar-e-converter-vídeos-remotamente">ffmpeg: criar e converter vídeos remotamente</a></li>
+<li class="toc-level-3"><a href="#criar-mp4-a-partir-de-nomes-numerados">Criar MP4 a partir de nomes numerados</a></li>
+<li class="toc-level-3"><a href="#criar-mp4-a-partir-de-arquivos-com-curinga">Criar MP4 a partir de arquivos com curinga</a></li>
+<li class="toc-level-3"><a href="#resolver-erro-de-dimensões-ímpares">Resolver erro de dimensões ímpares</a></li>
+<li class="toc-level-3"><a href="#controlar-qualidade-e-tamanho-do-arquivo">Controlar qualidade e tamanho do arquivo</a></li>
+<li class="toc-level-3"><a href="#redimensionar-durante-a-criação-do-vídeo">Redimensionar durante a criação do vídeo</a></li>
+<li class="toc-level-3"><a href="#converter-vídeo-entre-formatos">Converter vídeo entre formatos</a></li>
+<li class="toc-level-3"><a href="#boas-práticas-1">Boas práticas</a></li>
+<li class="toc-level-1"><a href="#rotina-de-trabalho-no-labmfa">Rotina de trabalho no LabMFA</a></li>
+<li class="toc-level-2"><a href="#uso-responsável-dos-servidores">Uso responsável dos servidores</a></li>
+<li class="toc-level-2"><a href="#estrutura-recomendada-para-projetos">Estrutura recomendada para projetos</a></li>
+<li class="toc-level-2"><a href="#problemas-frequentes-e-diagnóstico">Problemas frequentes e diagnóstico</a></li>
+<li class="toc-level-3"><a href="#ssh-connection-refused">ssh: connection refused</a></li>
+<li class="toc-level-3"><a href="#senha-pedida-mesmo-com-chave-ssh">Senha pedida mesmo com chave SSH</a></li>
+<li class="toc-level-3"><a href="#no-space-left-on-device">No space left on device</a></li>
+<li class="toc-level-3"><a href="#command-not-found">command not found</a></li>
+<li class="toc-level-3"><a href="#o-ambiente-conda-não-ativa">O ambiente Conda não ativa</a></li>
+<li class="toc-level-3"><a href="#rsync-copiou-para-o-lado-errado">rsync copiou para o lado errado</a></li>
+<li class="toc-level-2"><a href="#jupyter-remoto-com-túnel-ssh">Jupyter remoto com túnel SSH</a></li>
+<li class="toc-level-2"><a href="#vs-code-remote-ssh">VS Code Remote SSH</a></li>
+<li class="toc-level-2"><a href="#resumo-rápido-de-comandos">Resumo rápido de comandos</a></li>
+<li class="toc-level-2"><a href="#exercícios-guiados">Exercícios guiados</a></li>
+<li class="toc-level-3"><a href="#exercício-1-entrar-no-servidor-e-localizar-se">Exercício 1: entrar no servidor e localizar-se</a></li>
+<li class="toc-level-3"><a href="#exercício-2-criar-estrutura-de-projeto">Exercício 2: criar estrutura de projeto</a></li>
+<li class="toc-level-3"><a href="#exercício-3-salvar-saída-de-comando">Exercício 3: salvar saída de comando</a></li>
+<li class="toc-level-3"><a href="#exercício-4-criar-ambiente-conda">Exercício 4: criar ambiente Conda</a></li>
+<li class="toc-level-3"><a href="#exercício-5-executar-processo-em-tmux">Exercício 5: executar processo em tmux</a></li>
+<li class="toc-level-3"><a href="#exercício-6-copiar-resultados-para-o-computador-local">Exercício 6: copiar resultados para o computador local</a></li>
+<li class="toc-level-2"><a href="#glossário">Glossário</a></li>
+</ul>
+</nav>
 <h1 id="introdução">Introdução</h1>
 <h2 id="considerações-iniciais">Considerações iniciais</h2>
 <p>Este texto foi elaborado para atender às necessidades de utilização remota dos computadores de alto desempenho disponíveis no Laboratório de Mecânica dos Fluidos e Aerodinâmica - LabMFA, na Universidade Federal do Rio de Janeiro - UFRJ.</p>
@@ -1786,6 +1940,7 @@ LabMFA. 2026. <em>Facilities</em>. <a href="https://labmfa.coppe.ufrj.br/facilit
 The Missing Semester of Your CS Education. 2026. <em><span class="nocase">The Missing Semester of Your CS Education</span> Em Portugu<span>ê</span>s</em>. <a href="https://missing-semester-pt.github.io" class="uri">Https://missing-semester-pt.github.io</a>.
 </div>
 </div>
+</div>
     </div>
   </article>
 </section>
@@ -1848,6 +2003,6 @@ The Missing Semester of Your CS Education. 2026. <em><span class="nocase">The Mi
     </footer>
   </div>
 
-  <script src="static/js/main.js?v=4700cdc6899b"></script>
+  <script src="static/js/main.js?v=895ff9983d9c"></script>
 </body>
 </html>
