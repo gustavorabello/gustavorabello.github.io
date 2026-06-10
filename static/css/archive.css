@@ -243,24 +243,36 @@
   margin: 0 0 10px;
 }
 
-.latex-content .latex-toc ul {
-  display: block;
-  margin: 0;
-  padding-left: 22px;
+.latex-content .latex-toc .toc-list {
+  display: grid;
+  gap: 4px;
 }
 
-.latex-content .latex-toc li {
-  margin: 4px 0;
-  line-height: 1.45;
+.latex-content .latex-toc .toc-link {
+  display: block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: var(--primary-deep);
+  font-weight: 650;
+  line-height: 1.35;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.latex-content .latex-toc .toc-link:hover {
+  background: rgba(15, 96, 116, 0.1);
 }
 
 .latex-content .latex-toc .toc-level-2 {
-  margin-left: 18px;
+  padding-left: 26px;
+  font-weight: 600;
 }
 
 .latex-content .latex-toc .toc-level-3 {
-  margin-left: 36px;
+  padding-left: 44px;
+  color: var(--muted);
   font-size: 0.92em;
+  font-weight: 560;
 }
 
 .latex-content figure,
