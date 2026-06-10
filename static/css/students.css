@@ -358,7 +358,7 @@
 }
 
 .page-students .student-histogram {
-  display: flex;
+  display: grid;
   align-items: end;
   gap: 12px;
   min-height: 248px;
@@ -373,7 +373,7 @@
   justify-items: center;
   align-items: end;
   gap: 7px;
-  flex: 0 0 52px;
+  min-width: 0;
 }
 
 .page-students .student-histogram-year,
@@ -394,7 +394,7 @@
 .page-students .student-histogram-stack {
   display: flex;
   flex-direction: column-reverse;
-  width: 30px;
+  width: min(72%, 64px);
   height: var(--bar-height);
   min-height: 4px;
   overflow: hidden;
@@ -459,10 +459,10 @@
   }
 
   .page-students .student-histogram {
-    gap: 9px;
+    gap: 8px;
   }
 
-  .page-students .student-histogram-column {
-    flex-basis: 44px;
+  .page-students .student-histogram-stack {
+    width: min(78%, 54px);
   }
 }
