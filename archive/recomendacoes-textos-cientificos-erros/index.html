@@ -6,8 +6,8 @@
   <title>Definição de Erros e Normas | Gustavo R. Anjos</title>
   <meta name="description" content="Numerical simulation of single- and two-phase flows, heat transfer and scientific computing.">
   <base href="../../">
-  <link rel="stylesheet" href="static/css/base.css?v=37013f82c045">
-  <link rel="stylesheet" href="static/css/archive.css?v=37013f82c045">
+  <link rel="stylesheet" href="static/css/base.css?v=2306e623a1b4">
+  <link rel="stylesheet" href="static/css/archive.css?v=2306e623a1b4">
 </head>
 <body class="page-archive">
   <div class="site-shell">
@@ -71,9 +71,11 @@ e_{rel} = \frac{\|u - u_h\|}{\|u\|}
 <ul>
 <li><p>Norma <span class="math inline">\(L^2\)</span> discreta: <span class="math display">\[\begin{equation}
     \|e\|_{L^2} = \left( \sum_{i=1}^{N} |e_i|^2 \right)^{1/2}
+
 \end{equation}\]</span></p></li>
 <li><p>Norma do máximo (<span class="math inline">\(L^\infty\)</span>): <span class="math display">\[\begin{equation}
     \|e\|_{L^\infty} = \max_{1 \le i \le N} |e_i|
+
 \end{equation}\]</span></p></li>
 </ul>
 <h5 id="normas-em-malhas-não-estruturadas-mef">Normas em malhas não estruturadas (MEF)</h5>
@@ -81,9 +83,11 @@ e_{rel} = \frac{\|u - u_h\|}{\|u\|}
 <ul>
 <li><p>Norma <span class="math inline">\(L^2\)</span>: <span class="math display">\[\begin{equation}
     \|e\|_{L^2(\Omega)} = \left( \int_{\Omega} |u - u_h|^2 \, d\Omega \right)^{1/2}
+
 \end{equation}\]</span></p></li>
 <li><p>Norma <span class="math inline">\(H^1\)</span>: <span class="math display">\[\begin{equation}
     \|e\|_{H^1(\Omega)} = \left( \int_{\Omega} |u - u_h|^2 + |\nabla(u - u_h)|^2 \, d\Omega \right)^{1/2}
+
 \end{equation}\]</span></p></li>
 </ul>
 <p>Para o Método de Elementos Finitos, as normas podem ser escritas em forma matricial, utilizando as matrizes do sistema discreto.</p>
@@ -91,9 +95,11 @@ e_{rel} = \frac{\|u - u_h\|}{\|u\|}
 <ul>
 <li><p>Norma <span class="math inline">\(L^2\)</span>: <span class="math display">\[\begin{equation}
     \|e\|_{L^2(\Omega)} = \left( \mathbf{e}^T \mathbf{M} \mathbf{e} \right)^{1/2}
+
 \end{equation}\]</span></p></li>
 <li><p>Norma <span class="math inline">\(H^1\)</span>: <span class="math display">\[\begin{equation}
     \|e\|_{H^1(\Omega)} = \left( \mathbf{e}^T \mathbf{M} \mathbf{e} + \mathbf{e}^T \mathbf{K} \mathbf{e} \right)^{1/2}
+
 \end{equation}\]</span></p></li>
 </ul>
 <p>onde <span class="math inline">\(\mathbf{M}\)</span> é a matriz de massa, definida por</p>
@@ -249,6 +255,6 @@ h \sim N^{-1/d}.
     </footer>
   </div>
 
-  <script src="static/js/main.js?v=37013f82c045"></script>
+  <script src="static/js/main.js?v=2306e623a1b4"></script>
 </body>
 </html>

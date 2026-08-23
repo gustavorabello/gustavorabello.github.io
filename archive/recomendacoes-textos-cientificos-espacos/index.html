@@ -6,8 +6,8 @@
   <title>Formalização dos Espaços de Funções para Problemas Modelo | Gustavo R. Anjos</title>
   <meta name="description" content="Numerical simulation of single- and two-phase flows, heat transfer and scientific computing.">
   <base href="../../">
-  <link rel="stylesheet" href="static/css/base.css?v=37013f82c045">
-  <link rel="stylesheet" href="static/css/archive.css?v=37013f82c045">
+  <link rel="stylesheet" href="static/css/base.css?v=2306e623a1b4">
+  <link rel="stylesheet" href="static/css/archive.css?v=2306e623a1b4">
 </head>
 <body class="page-archive">
   <div class="site-shell">
@@ -135,6 +135,7 @@ v:\Omega \rightarrow \mathbb{R}, \int_\Omega v^2 \, d\Omega &lt; \infty
     \frac{\partial \psi}{\partial y},
     -\frac{\partial \psi}{\partial x}
     \right),
+
 \end{equation}\]</span> garantindo automaticamente a condição de incompressibilidade <span class="math inline">\(\nabla \cdot \mathbf{u} = 0\)</span>;</p></li>
 <li><p><span class="math inline">\(\omega_z = \big( \nabla \times \mathbf{u} \big) \cdot \mathbf{e}_z\)</span> é a vorticidade escalar em 2D na direção perpendicular ao plano definido em <span class="math inline">\(\Omega\)</span>;</p></li>
 <li><p><span class="math inline">\(\nu &gt; 0\)</span> é a viscosidade cinemática do fluido;</p></li>
@@ -175,9 +176,11 @@ v \in L^2(\Omega) : \nabla v \in L^2(\Omega)^2
 <ul>
 <li><p><strong>Condição de Dirichlet homogênea:</strong> <span class="math display">\[\begin{equation}
     \omega_z = 0 \quad \text{em } \partial \Omega,
+
 \end{equation}\]</span></p></li>
 <li><p><strong>Condição de Neumann homogênea:</strong> <span class="math display">\[\begin{equation}
     \frac{\partial \omega_z}{\partial \mathbf{n}} = 0 \quad \text{em } \partial \Omega.
+
 \end{equation}\]</span></p></li>
 </ul>
 <p>A escolha entre essas condições deve ser consistente com a física do problema e com a forma como as condições de contorno da velocidade são impostas.</p>
@@ -397,11 +400,13 @@ q \in \mathbb{Q} : \int_\Omega q \, d\Omega = 0
     \left(
     \nabla_\Gamma^2 x_1, \dots, \nabla_\Gamma^2 x_d
     \right);
+
 \end{equation}\]</span></p></li>
 <li><p><span class="math inline">\(\nabla_\Gamma\)</span> é o operador gradiente tangencial, definido por: <span class="math display">\[\begin{equation}
     \nabla_\Gamma \mathbf{x}
     =
     \nabla \mathbf{x} - (\nabla \mathbf{x} \cdot \mathbf{n}) \mathbf{n}.
+
 \end{equation}\]</span></p></li>
 </ul>
 <p>No caso tridimensional (<span class="math inline">\(d=3\)</span>), tem-se <span class="math inline">\(\mathbf{x} = (x,y,z)\)</span> e o operador atua sobre cada componente da posição. No caso bidimensional (<span class="math inline">\(d=2\)</span>), <span class="math inline">\(\Gamma\)</span> representa uma curva no plano e <span class="math inline">\(\mathbf{x} = (x,y)\)</span>.</p>
@@ -497,6 +502,6 @@ H^1(\Gamma)
     </footer>
   </div>
 
-  <script src="static/js/main.js?v=37013f82c045"></script>
+  <script src="static/js/main.js?v=2306e623a1b4"></script>
 </body>
 </html>
