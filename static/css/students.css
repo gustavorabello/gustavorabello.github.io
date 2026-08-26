@@ -466,3 +466,160 @@
     width: min(78%, 54px);
   }
 }
+
+/* Editorial directory: hierarchy and rules replace nested cards. */
+.page-students .student-status-grid {
+  gap: 0;
+  border-bottom: 1px solid var(--ink);
+}
+
+.page-students .student-status-grid > .panel {
+  padding: 48px 38px 48px 0;
+  border-top: 0;
+  background: transparent;
+}
+
+.page-students .student-status-grid > .panel + .panel {
+  padding-right: 0;
+  padding-left: 38px;
+  border-left: 1px solid var(--line);
+}
+
+.page-students .student-summary-grid {
+  gap: 0;
+  margin-bottom: 34px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.page-students .student-summary-card,
+.page-students .student-summary-card.is-active,
+.page-students .student-summary-card.is-bachelor,
+.page-students .student-summary-card-combo {
+  padding: 15px 12px;
+  border: 0;
+  border-left: 1px solid var(--line-soft);
+  border-radius: 0;
+  background: transparent;
+}
+
+.page-students .student-summary-card:first-child {
+  border-left: 0;
+}
+
+.page-students .student-summary-card-combo {
+  padding-left: 0;
+  border-bottom: 1px solid var(--line-soft);
+  border-left: 0;
+}
+
+.page-students .student-summary-metric.is-publication-metric {
+  border-color: var(--line);
+}
+
+.page-students .student-status-sections {
+  gap: 32px;
+}
+
+.page-students .student-level-block {
+  gap: 14px;
+}
+
+.page-students .student-level-heading {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.page-students .status-pill,
+.page-students .status-pill.is-active {
+  min-height: 0;
+  padding: 0;
+  color: var(--accent);
+  font-family: var(--serif);
+  background: transparent;
+}
+
+.page-students .student-list-grid {
+  gap: 0 20px;
+}
+
+.page-students .student-list-item,
+.page-students .student-list-item.is-completed,
+.page-students .student-list-item.is-completed.is-bsc {
+  padding: 18px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line-soft);
+  border-radius: 0;
+  background: transparent;
+}
+
+.page-students .student-list-item h4 {
+  font-family: var(--serif);
+  font-size: 1.22rem;
+  font-weight: 500;
+}
+
+.page-students .student-meta-tags span,
+.page-students .student-meta-tags span.is-publication-count {
+  min-height: 0;
+  padding: 2px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  color: var(--muted);
+  background: transparent;
+}
+
+.page-students .student-meta-tags span.is-publication-count {
+  color: #8d2f43;
+  border-color: rgba(141, 47, 67, 0.35);
+}
+
+.page-students .student-publication-item,
+.page-students .student-publication-item.is-journal,
+.page-students .student-publication-item.is-thesis,
+.page-students .student-publication-item.is-chapter,
+.page-students .student-publication-item.is-book {
+  padding: 20px 0 20px 16px;
+  border: 0;
+  border-bottom: 1px solid var(--line-soft);
+  border-left: 2px solid var(--primary);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.page-students .student-publication-item.is-thesis {
+  border-left-color: #a74251;
+}
+
+.page-students .student-publication-item.is-chapter {
+  border-left-color: #af6a18;
+}
+
+.page-students .student-publication-item.is-book {
+  border-left-color: #8f5215;
+}
+
+.page-students .student-completed-histogram {
+  padding: 58px 0;
+  border-bottom: 1px solid var(--ink);
+}
+
+.page-students .student-histogram-stack,
+.page-students .student-histogram-swatch {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 1080px) {
+  .page-students .student-status-grid > .panel,
+  .page-students .student-status-grid > .panel + .panel {
+    padding: 38px 0;
+    border-left: 0;
+  }
+
+  .page-students .student-status-grid > .panel + .panel {
+    border-top: 1px solid var(--ink);
+  }
+}

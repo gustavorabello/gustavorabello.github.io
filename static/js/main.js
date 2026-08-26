@@ -5,7 +5,24 @@ document.addEventListener("DOMContentLoaded", () => {
   if (navButton && navMenu) {
     navButton.addEventListener("click", () => {
       navMenu.classList.toggle("is-open");
+      const isOpen = navMenu.classList.contains("is-open");
+      navButton.setAttribute("aria-expanded", isOpen);
+      navButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
     });
+  }
+
+  const revealItems = document.querySelectorAll("[data-reveal]");
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.documentElement.classList.add("has-reveal");
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -7%", threshold: 0.01 });
+    revealItems.forEach((item) => revealObserver.observe(item));
   }
 
   // In-page anchor links (e.g. the table of contents and citations) use bare

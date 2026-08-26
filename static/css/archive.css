@@ -347,3 +347,49 @@
     background: white;
   }
 }
+
+/* Editorial index: flat records instead of floating cards. */
+.page-archive .archive-grid {
+  gap: 0;
+  border-top: 1px solid var(--ink);
+}
+
+.page-archive .archive-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 42px;
+  padding: 34px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.page-archive .archive-card h2 {
+  margin-top: 9px;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+}
+
+.page-archive .archive-actions {
+  min-width: 0;
+}
+
+.page-archive .archive-document {
+  padding: 46px 0;
+}
+
+.page-archive .latex-content .latex-toc,
+.page-archive .latex-content figure,
+.page-archive .latex-content .figure-note {
+  border-radius: 0;
+  background: var(--paper-deep);
+}
+
+@media (max-width: 700px) {
+  .page-archive .archive-card {
+    grid-template-columns: 1fr;
+  }
+}
