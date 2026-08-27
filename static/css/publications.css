@@ -7,15 +7,15 @@
 
 .page-publications .publication-chart {
   display: grid;
-  gap: 28px;
-  padding: 48px 42px 48px 0;
+  gap: 20px;
+  padding: 30px 32px 32px 0;
   border-top: 0;
   background: transparent;
 }
 
 .page-publications .publication-chart + .publication-chart {
   padding-right: 0;
-  padding-left: 42px;
+  padding-left: 32px;
   border-left: 1px solid var(--line);
 }
 
@@ -24,7 +24,7 @@
 }
 
 .page-publications .publication-chart-heading h2 {
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
   line-height: 0.9;
 }
 
@@ -34,7 +34,7 @@
 
 .page-publications .publication-bar-list {
   display: grid;
-  gap: 14px;
+  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -86,6 +86,10 @@
   background: var(--accent);
 }
 
+.page-publications .publication-chart-journal .publication-bar-fill {
+  background: #a33b4a;
+}
+
 .page-publications .publication-chart-collaboration .publication-bar-fill {
   background: #675a96;
 }
@@ -102,9 +106,9 @@
 
 .page-publications .year-section {
   display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
-  gap: 38px;
-  padding: 48px 0;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 24px;
+  padding: 26px 0;
   border-top: 0;
   border-bottom: 1px solid var(--line);
 }
@@ -116,17 +120,29 @@
 
 .page-publications .year-section .section-heading h2 {
   color: var(--accent);
-  font-size: 2.25rem;
+  font-family: var(--sans);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.page-publications .year-section > .stack-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 20px;
 }
 
 .page-publications .publication-list-item {
+  --publication-color: #64717a;
+  --publication-tint: rgba(100, 113, 122, 0.1);
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 16px 24px;
-  align-items: start;
-  padding: 20px 0;
+  gap: 8px 14px;
+  align-items: center;
+  min-width: 0;
+  padding: 10px 0 10px 12px;
   border: 0;
   border-top: 1px solid var(--line-soft);
+  border-left: 3px solid var(--publication-color);
   background: transparent;
   box-shadow: none;
 }
@@ -137,32 +153,137 @@
 
 .page-publications .publication-copy {
   display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.page-publications .publication-meta-line {
+  display: flex;
+  align-items: center;
   gap: 7px;
+  min-width: 0;
+}
+
+.page-publications .publication-type-label {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  min-height: 19px;
+  padding: 0 6px;
+  border-radius: 999px;
+  color: var(--publication-color);
+  background: var(--publication-tint);
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.045em;
+  line-height: 1;
+}
+
+.page-publications .publication-venue {
+  overflow: hidden;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 0.61rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .page-publications .publication-list-item h2 {
-  max-width: 840px;
-  font-size: 1.28rem;
-  line-height: 1.2;
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: 100%;
+  font-family: var(--sans);
+  font-size: 0.91rem;
+  font-weight: 800;
+  line-height: 1.18;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .page-publications .publication-list-item p {
   color: var(--muted);
-  font-size: 0.86rem;
-  line-height: 1.5;
+  font-size: 0.72rem;
+  line-height: 1.25;
+}
+
+.page-publications .publication-title-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.page-publications .publication-title-link:hover,
+.page-publications .publication-title-link:focus-visible {
+  color: var(--publication-color);
+}
+
+.page-publications .publication-authors {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .page-publications .publication-links {
   align-self: center;
   justify-content: flex-end;
   min-width: max-content;
+  gap: 7px;
+}
+
+.page-publications .publication-links a {
+  font-size: 0.62rem;
+}
+
+.page-publications .publication-list-item.is-journal {
+  --publication-color: #a33b4a;
+  --publication-tint: rgba(163, 59, 74, 0.11);
+  background: rgba(163, 59, 74, 0.055);
+}
+
+.page-publications .publication-list-item.is-conference {
+  --publication-color: #315f9c;
+  --publication-tint: rgba(49, 95, 156, 0.1);
+}
+
+.page-publications .publication-list-item.is-abstract {
+  --publication-color: #6b4b8f;
+  --publication-tint: rgba(107, 75, 143, 0.1);
+}
+
+.page-publications .publication-list-item.is-book {
+  --publication-color: #83552a;
+  --publication-tint: rgba(131, 85, 42, 0.11);
+}
+
+.page-publications .publication-list-item.is-chapter {
+  --publication-color: #b06b1f;
+  --publication-tint: rgba(176, 107, 31, 0.11);
+}
+
+.page-publications .publication-list-item.is-thesis {
+  --publication-color: #64717a;
+  --publication-tint: rgba(100, 113, 122, 0.1);
+}
+
+.page-publications .publication-list-item.is-bsc-thesis {
+  --publication-color: #2c746d;
+  --publication-tint: rgba(44, 116, 109, 0.11);
+}
+
+.page-publications .publication-list-item.is-msc-thesis {
+  --publication-color: #3567a8;
+  --publication-tint: rgba(53, 103, 168, 0.11);
+}
+
+.page-publications .publication-list-item.is-phd-thesis {
+  --publication-color: #754b91;
+  --publication-tint: rgba(117, 75, 145, 0.11);
 }
 
 .page-publications .publication-coauthor-panel {
   display: grid;
   grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.35fr);
   gap: 56px;
-  padding: 64px 0;
+  padding: 42px 0;
   border-bottom: 1px solid var(--ink);
   background: transparent;
 }
@@ -192,12 +313,18 @@
 
   .page-publications .publication-chart,
   .page-publications .publication-chart + .publication-chart {
-    padding: 38px 0;
+    padding: 28px 0;
     border-left: 0;
   }
 
   .page-publications .publication-chart + .publication-chart {
     border-top: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 1100px) {
+  .page-publications .year-section > .stack-list {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -209,13 +336,27 @@
   }
 
   .page-publications .year-section {
-    gap: 20px;
-    padding: 36px 0;
+    gap: 12px;
+    padding: 24px 0;
   }
 
   .page-publications .publication-links {
-    justify-content: flex-start;
-    min-width: 0;
+    justify-content: flex-end;
+    min-width: max-content;
+  }
+
+  .page-publications .publication-list-item {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 7px;
+    padding: 8px 0 8px 9px;
+  }
+
+  .page-publications .publication-list-item h2 {
+    font-size: 0.84rem;
+  }
+
+  .page-publications .publication-authors {
+    display: none;
   }
 
   .page-publications .publication-bar-item {
