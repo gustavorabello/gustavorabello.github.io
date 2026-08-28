@@ -467,6 +467,60 @@
   }
 }
 
+/* B.Sc. records span the page so the two researcher columns remain balanced. */
+.page-students .student-bachelor-directory {
+  padding: 34px 0 38px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.page-students .student-bachelor-directory > .section-heading {
+  margin-bottom: 18px;
+}
+
+.page-students .student-bachelor-directory > .section-heading h2 {
+  font-family: var(--sans);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.page-students .student-bachelor-status-grid,
+.page-students .student-bachelor-group {
+  display: grid;
+  gap: 7px;
+}
+
+.page-students .student-bachelor-directory .student-bachelor-list,
+.page-students .student-bachelor-directory .student-bachelor-list.is-completed {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 18px;
+}
+
+@media (max-width: 1080px) {
+  .page-students .student-bachelor-directory .student-bachelor-list,
+  .page-students .student-bachelor-directory .student-bachelor-list.is-completed {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .page-students .student-bachelor-directory {
+    padding: 28px 0 32px;
+  }
+
+  .page-students .student-bachelor-directory .student-bachelor-list,
+  .page-students .student-bachelor-directory .student-bachelor-list.is-completed {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-students .student-bachelor-directory .student-bachelor-list,
+  .page-students .student-bachelor-directory .student-bachelor-list.is-completed {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Compact editorial directory: hierarchy and rules replace nested cards. */
 .page-students .student-status-grid {
   gap: 0;

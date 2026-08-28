@@ -9,14 +9,14 @@
 .page-research .research-chart-panel {
   display: grid;
   align-content: start;
-  gap: 28px;
-  padding: 52px 44px 52px 0;
+  gap: 20px;
+  padding: 30px 30px 32px 0;
   border-top: 0;
 }
 
 .page-research .research-chart-panel {
   padding-right: 0;
-  padding-left: 44px;
+  padding-left: 30px;
   border-left: 1px solid var(--line);
 }
 
@@ -27,7 +27,7 @@
 
 .page-research .research-summary-heading h2,
 .page-research .research-chart-heading h2 {
-  font-size: clamp(3.2rem, 6vw, 6rem);
+  font-size: clamp(2.35rem, 4vw, 4rem);
   line-height: 0.9;
 }
 
@@ -46,8 +46,8 @@
 
 .page-research .research-metric-card {
   display: grid;
-  gap: 8px;
-  padding: 18px 14px;
+  gap: 5px;
+  padding: 12px 10px;
   border-left: 1px solid var(--line-soft);
   background: transparent;
 }
@@ -58,14 +58,14 @@
 }
 
 .page-research .research-metric-card strong {
-  font-family: var(--serif);
-  font-size: 2rem;
-  font-weight: 500;
+  font-family: var(--sans);
+  font-size: 1.35rem;
+  font-weight: 800;
 }
 
 .page-research .research-bar-list {
   display: grid;
-  gap: 16px;
+  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -74,7 +74,7 @@
 .page-research .research-bar-item {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(100px, 1fr) auto;
-  gap: 18px;
+  gap: 12px;
   align-items: center;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .page-research .research-bar-label {
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   line-height: 1.25;
 }
 
@@ -118,32 +118,49 @@
 }
 
 .page-research .directory-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 22px;
   border-top: 1px solid var(--ink);
 }
 
 .page-research .directory-item {
   display: grid;
-  grid-template-columns: minmax(170px, 0.38fr) minmax(0, 1.62fr);
-  gap: clamp(28px, 5vw, 70px);
+  grid-template-columns: 72px minmax(0, 1fr) auto;
+  gap: 14px;
   align-items: center;
-  padding: 30px 0;
+  min-width: 0;
+  padding: 10px 0;
   border: 0;
   border-bottom: 1px solid var(--line);
   background: transparent;
 }
 
 .page-research .directory-item h2 {
-  max-width: 850px;
-  font-size: clamp(1.55rem, 2.4vw, 2.4rem);
-  line-height: 1.08;
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: 100%;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.18;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.page-research .directory-item h2 a:hover,
+.page-research .directory-item h2 a:focus-visible {
+  color: var(--primary);
 }
 
 .page-research .directory-media {
   display: grid;
-  min-height: 150px;
+  width: 72px;
+  height: 62px;
+  min-height: 0;
   overflow: hidden;
   place-items: center;
-  padding: 18px;
+  padding: 7px;
   background: var(--paper-deep);
 }
 
@@ -154,18 +171,27 @@
 
 .page-research .directory-media img {
   width: 100%;
-  max-height: 180px;
+  height: 100%;
+  max-height: 48px;
   object-fit: contain;
   filter: saturate(0.78);
 }
 
 .page-research .directory-content {
-  gap: 11px;
+  gap: 3px;
+  min-width: 0;
 }
 
-.page-research .directory-item .rich-text {
-  max-width: 720px;
-  font-size: 0.92rem;
+.page-research .directory-content .meta-line {
+  display: block;
+  overflow: hidden;
+  font-size: 0.57rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page-research .directory-link {
+  font-size: 0.6rem;
 }
 
 @media (max-width: 900px) {
@@ -175,17 +201,20 @@
 
   .page-research .research-summary-panel,
   .page-research .research-chart-panel {
-    padding: 38px 0;
+    padding: 28px 0;
     border-left: 0;
   }
 
   .page-research .research-chart-panel {
     border-top: 1px solid var(--line);
   }
+
+  .page-research .directory-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
-  .page-research .directory-item,
   .page-research .research-bar-item {
     grid-template-columns: 1fr;
   }
@@ -194,8 +223,16 @@
     gap: 8px;
   }
 
+  .page-research .directory-item {
+    grid-template-columns: 58px minmax(0, 1fr) auto;
+    gap: 10px;
+    padding: 8px 0;
+  }
+
   .page-research .directory-media {
-    min-height: 210px;
+    width: 58px;
+    height: 52px;
+    min-height: 0;
   }
 
   .page-research .research-metric-card {
