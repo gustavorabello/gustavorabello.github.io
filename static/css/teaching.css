@@ -1,78 +1,112 @@
-.page-teaching main > .stack-list {
-  border-top: 1px solid var(--ink);
+.page-teaching .teaching-summary {
+  display: flex;
+  align-items: baseline;
+  gap: 12px 28px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--ink);
+}
+
+.page-teaching .teaching-summary span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.page-teaching .teaching-summary strong {
+  margin-right: 4px;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.page-teaching .teaching-directory {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 22px;
 }
 
 .page-teaching .course-card {
   display: grid;
-  grid-template-columns: minmax(260px, 0.65fr) minmax(0, 1.35fr);
-  gap: clamp(38px, 6vw, 80px);
-  padding: 48px 0;
-  border: 0;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  min-height: 82px;
+  padding: 12px 0;
   border-bottom: 1px solid var(--line);
   background: transparent;
-  box-shadow: none;
-}
-
-.page-teaching .course-card h2 {
-  margin: 9px 0 12px;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
 }
 
 .page-teaching .course-header {
   display: grid;
-  align-content: start;
-  gap: 24px;
+  gap: 3px;
+  min-width: 0;
 }
 
-.page-teaching .course-header > div > p:not(.meta-line) {
-  color: var(--muted);
+.page-teaching .course-card h2 {
+  display: -webkit-box;
+  overflow: hidden;
+  font-family: var(--sans);
+  font-size: 0.96rem;
+  font-weight: 800;
+  line-height: 1.18;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
-.page-teaching .course-header .button {
-  justify-self: start;
+.page-teaching .course-card h2 a:hover,
+.page-teaching .course-card h2 a:focus-visible {
+  color: var(--primary);
 }
 
-.page-teaching .course-columns {
+.page-teaching .course-card .meta-line {
+  font-size: 0.58rem;
+}
+
+.page-teaching .course-directory-meta {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-content: start;
-  gap: 24px;
+  justify-items: end;
+  gap: 6px;
 }
 
-.page-teaching .resource-panel {
-  padding: 0 0 0 18px;
-  border-top: 0;
-  border-bottom: 0;
-  border-left: 1px solid var(--line);
-}
-
-.page-teaching .resource-panel ul {
-  padding-left: 18px;
-}
-
-.page-teaching .resource-panel a {
+.page-teaching .course-resource-count {
+  display: inline-flex;
+  align-items: center;
+  min-height: 20px;
+  padding: 0 7px;
+  border-radius: 999px;
   color: var(--primary-deep);
-  border-bottom: 1px solid var(--line);
+  background: rgba(15, 96, 116, 0.09);
+  font-size: 0.61rem;
+  font-weight: 800;
+  white-space: nowrap;
 }
 
-@media (max-width: 1000px) {
-  .page-teaching .course-card {
+.page-teaching .course-directory-meta .inline-link {
+  font-size: 0.61rem;
+}
+
+@media (max-width: 900px) {
+  .page-teaching .teaching-directory {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 520px) {
+  .page-teaching .teaching-summary {
+    padding: 14px 0;
+  }
+
   .page-teaching .course-card {
-    padding: 36px 0;
+    gap: 10px;
+    min-height: 76px;
+    padding: 10px 0;
   }
 
-  .page-teaching .course-columns {
-    grid-template-columns: 1fr;
+  .page-teaching .course-card h2 {
+    font-size: 0.87rem;
   }
 
-  .page-teaching .resource-panel {
-    padding: 20px 0 0;
-    border-top: 1px solid var(--line);
-    border-left: 0;
+  .page-teaching .course-resource-count {
+    font-size: 0.57rem;
   }
 }
