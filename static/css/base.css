@@ -137,15 +137,13 @@ h4 {
 }
 
 .brand-role {
-  overflow: hidden;
   color: var(--muted);
   font-size: 0.62rem;
   font-weight: 650;
   letter-spacing: 0.08em;
   line-height: 1.35;
-  text-overflow: ellipsis;
   text-transform: uppercase;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .site-nav {
@@ -569,33 +567,49 @@ main > section + section {
 
 @media (max-width: 1100px) {
   .header-inner {
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0 24px;
+    padding-top: 14px;
   }
 
-  .brand-role,
   .header-cta {
-    display: none;
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .site-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
     gap: 15px;
+  }
+
+  .site-nav a {
+    padding: 16px 0;
   }
 }
 
 @media (max-width: 860px) {
   .header-inner {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 18px;
     min-height: 70px;
+    padding: 12px 0;
+  }
+
+  .header-cta {
+    grid-column: 3;
   }
 
   .nav-toggle {
+    grid-column: 2;
+    grid-row: 1;
     display: inline-flex;
     justify-self: end;
   }
 
   .site-nav {
     position: absolute;
-    top: 70px;
+    top: 100%;
     right: 0;
     left: 0;
     display: none;
@@ -657,6 +671,17 @@ main > section + section {
   .header-inner,
   .site-shell {
     width: min(calc(100% - 28px), var(--max-width));
+  }
+
+  .header-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px 16px;
+  }
+
+  .header-cta {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: start;
   }
 
   .brand-mark {

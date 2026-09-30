@@ -449,13 +449,20 @@
   }
 
   .page-home .hero-portrait {
-    height: 280px;
-    min-height: 280px;
+    height: auto;
+    min-height: 0;
   }
 
   .page-home .portrait-frame {
     height: 280px;
     min-height: 0;
+  }
+
+  .page-home .hero-portrait figcaption {
+    position: static;
+    flex-wrap: wrap;
+    border-radius: 0;
+    background: #132f32;
   }
 
   .page-home .focus-band,
@@ -512,7 +519,6 @@
     margin-top: 16px;
   }
 
-  .page-home .hero-portrait,
   .page-home .portrait-frame {
     height: 260px;
     min-height: 260px;
