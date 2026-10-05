@@ -95,11 +95,12 @@ h4 {
 }
 
 .header-inner {
+  --header-width: min(calc(100vw - 48px), var(--max-width));
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) auto minmax(180px, 1fr);
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
   align-items: center;
-  gap: 28px;
-  width: min(calc(100% - 48px), var(--max-width));
+  gap: clamp(12px, calc(var(--header-width) * .0225), 28px);
+  width: var(--header-width);
   min-height: 76px;
   margin: 0 auto;
 }
@@ -109,6 +110,7 @@ h4 {
   align-items: center;
   gap: 12px;
   min-width: 0;
+  width: clamp(190px, calc(var(--header-width) * .24), 286px);
 }
 
 .brand-mark {
@@ -151,7 +153,8 @@ h4 {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: clamp(13px, 1.4vw, 23px);
+  min-width: 0;
+  gap: clamp(8px, calc(var(--header-width) * .014), 23px);
 }
 
 .site-nav a {
@@ -568,23 +571,16 @@ main > section + section {
   transform: translateY(0);
 }
 
-@media (max-width: 1100px) {
-  .header-inner {
-    grid-template-columns: minmax(190px, 1fr) max-content max-content;
-    gap: 12px;
-  }
-
-  .site-nav {
-    gap: clamp(8px, 1vw, 13px);
-  }
-}
-
 @media (max-width: 860px) {
   .header-inner {
     grid-template-columns: minmax(0, 1fr) auto auto;
     gap: 18px;
     min-height: 70px;
     padding: 12px 0;
+  }
+
+  .brand-wrap {
+    width: auto;
   }
 
   .header-cta {
