@@ -1,8 +1,8 @@
 .page-home .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(340px, 0.82fr);
-  min-height: 420px;
+  grid-template-columns: minmax(0, 1.22fr) minmax(300px, .78fr);
+  min-height: 540px;
   margin-top: 18px;
   overflow: hidden;
   border-radius: var(--radius-xl);
@@ -13,7 +13,7 @@
 }
 .page-home .hero-copy {
   align-self: center;
-  padding: clamp(30px, 3.8vw, 44px);
+  padding: clamp(28px, 3.2vw, 40px);
 }
 
 .page-home .hero-kicker {
@@ -27,7 +27,7 @@
 
 .page-home .hero h1 {
   max-width: 680px;
-  font-size: clamp(3.2rem, 4.8vw, 4.65rem);
+  font-size: clamp(2.8rem, 4.1vw, 4.2rem);
   font-weight: 620;
   line-height: 0.94;
   letter-spacing: -0.065em;
@@ -82,15 +82,18 @@
 
 .page-home .hero-portrait {
   position: relative;
-  height: 420px;
+  height: auto;
+  min-height: 480px;
   min-width: 0;
   margin: 0;
   background: #244347;
 }
 
 .page-home .portrait-frame {
+  position: absolute;
+  inset: 0;
   height: 100%;
-  min-height: 420px;
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -411,11 +414,11 @@
 
 @media (max-width: 1000px) {
   .page-home .hero {
-    grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+    grid-template-columns: minmax(0, 1.26fr) minmax(260px, .74fr);
   }
 
   .page-home .hero-copy {
-    padding: 32px;
+    padding: 28px;
   }
 
   .page-home .metrics-grid {
@@ -454,6 +457,8 @@
   }
 
   .page-home .portrait-frame {
+    position: relative;
+    inset: auto;
     height: 280px;
     min-height: 0;
   }
