@@ -77,6 +77,9 @@
   scroll-margin-top: 110px;
 }
 .keyword-results[hidden] { display: none; }
+.keyword-results-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; align-items: start; }
+.keyword-results-layout.has-videos { grid-template-columns: minmax(0, 1fr) clamp(270px, 24vw, 310px); }
+.keyword-academic { min-width: 0; }
 .keyword-results h3 {
   margin: 8px 0 0;
   font-size: clamp(1.5rem, 3vw, 1.8rem);
@@ -117,6 +120,8 @@
 }
 .keyword-category[aria-pressed="true"]::before { background: currentColor; }
 .keyword-category-count { opacity: .8; }
+.keyword-category:disabled { opacity: .45; cursor: default; }
+.keyword-explorer .is-video { --publication-color: var(--primary-deep); }
 /* Match the publication kind classes and palette in publications.css. */
 .keyword-explorer .is-journal { --publication-color: #a33b4a; }
 .keyword-explorer .is-conference { --publication-color: #315f9c; }
@@ -128,6 +133,7 @@
 .keyword-explorer .is-msc-thesis { --publication-color: #3567a8; }
 .keyword-explorer .is-phd-thesis { --publication-color: #754b91; }
 .keyword-timeline { position: relative; }
+.keyword-timeline[hidden] { display: none; }
 .keyword-timeline::before {
   content: '';
   position: absolute;
@@ -189,6 +195,44 @@
 .keyword-card-type { margin: 0 0 5px; color: var(--publication-color); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
 .keyword-card-title { margin: 0; font-size: 14px; line-height: 1.3; font-weight: 500; letter-spacing: -.02em; overflow-wrap: anywhere; }
 .keyword-card-venue { margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.4; overflow-wrap: anywhere; }
+.keyword-videos { position: relative; align-self: stretch; min-width: 0; min-height: 0; border-left: 1px solid var(--line); }
+.keyword-videos[hidden] { display: none; }
+.keyword-videos-content { position: absolute; inset: 0 0 0 24px; display: flex; flex-direction: column; min-height: 0; }
+.keyword-videos-heading { display: flex; flex-shrink: 0; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.keyword-videos-heading h4 { margin: 0; color: var(--muted); font-size: 13px; font-weight: 650; letter-spacing: .05em; text-transform: uppercase; }
+.keyword-video-total { color: var(--muted); font-size: 11px; }
+/* Only the academic column sets the desktop row height; videos scroll within it. */
+.keyword-video-grid { display: grid; flex: 1; min-height: 0; grid-template-columns: minmax(0, 1fr); align-content: start; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-gutter: stable; padding-right: 10px; }
+.keyword-video-grid::-webkit-scrollbar { width: 6px; }
+.keyword-video-grid::-webkit-scrollbar-track { background: var(--line-soft); border-radius: 6px; }
+.keyword-video-grid::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 6px; }
+.keyword-video-grid:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+.keyword-video-card { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 12px; align-items: center; min-width: 0; padding: 14px 0; border-bottom: 1px solid var(--line-soft); }
+.keyword-video-thumbnail { width: 104px; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px; background: var(--paper-deep); }
+.keyword-video-copy { min-width: 0; }
+.keyword-video-meta { margin: 0 0 4px; color: var(--muted); font-size: 11px; }
+.keyword-video-title { display: -webkit-box; margin: 0; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; font-size: 13px; line-height: 1.3; font-weight: 650; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.keyword-video-card:hover .keyword-video-title { color: var(--primary); }
+.keyword-results-layout.is-video-view { max-height: min(860px, calc(100svh - 158px)); grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); gap: 8px; }
+.is-video-view .keyword-videos { display: flex; padding: 0; border: 0; }
+.is-video-view .keyword-videos-content { position: static; flex: 1; min-width: 0; }
+.is-video-view .keyword-videos-heading { display: none; }
+.is-video-view .keyword-video-grid { flex: 1; max-height: none; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); grid-auto-rows: max-content; gap: 18px; padding: 3px 12px 3px 3px; }
+.is-video-view .keyword-video-card { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--paper-light); text-decoration: none; }
+.is-video-view .keyword-video-thumbnail { width: 100%; border-radius: 0; }
+.is-video-view .keyword-video-copy { padding: 11px 12px 13px; }
+.is-video-view .keyword-video-title { -webkit-line-clamp: 2; min-height: 2.6em; }
+.is-video-view .keyword-video-card:hover { border-color: var(--primary); }
+.keyword-video-card:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+::view-transition-group(*) { animation-duration: 420ms; animation-timing-function: cubic-bezier(.22, 1, .36, 1); }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 180ms; }
+@media (max-width: 1000px) {
+  .keyword-results-layout.has-videos { grid-template-columns: minmax(0, 1fr); }
+  .keyword-videos { padding-top: 20px; border-top: 1px solid var(--line); border-left: 0; }
+  .keyword-videos-content { position: static; }
+  .keyword-video-grid { flex: none; max-height: min(520px, 70svh); grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; }
+}
+@media (max-width: 680px) { .keyword-video-grid { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 540px) {
   .keyword-explorer { padding: 32px 0; }
   .keyword-explorer-integrated { padding: 0; }

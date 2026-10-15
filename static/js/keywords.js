@@ -11,9 +11,14 @@
   const heading = document.getElementById("keyword-result-title");
   const filters = root.querySelector(".keyword-categories");
   const timeline = root.querySelector(".keyword-timeline");
+  const resultLayout = root.querySelector(".keyword-results-layout");
+  const videoSection = root.querySelector(".keyword-videos");
+  const videoGrid = root.querySelector(".keyword-video-grid");
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   let selected = null;
   let category = "all";
+  let categoryRevision = 0;
+  let viewTransition = null;
 
   function node(tag, className, text) {
     const element = document.createElement(tag);
@@ -29,6 +34,18 @@
   }
 
   function renderTimeline() {
+    const videoView = category === "videos";
+    resultLayout.classList.toggle("is-video-view", videoView);
+    timeline.hidden = videoView;
+    filters.querySelectorAll("button").forEach(button => {
+      button.setAttribute("aria-pressed", String(button.dataset.category === category));
+    });
+    if (videoView) {
+      const videos = selected.video_items.map(index => data.videos[index]);
+      const years = new Set(videos.map(video => video.year));
+      root.querySelector(".keyword-total").textContent = `${videos.length} related ${videos.length === 1 ? "video" : "videos"} · ${years.size} ${years.size === 1 ? "year" : "years"}`;
+      return;
+    }
     const items = selected.items.map(index => data.items[index])
       .filter(item => category === "all" || item.category === category)
       .sort((a, b) => Number(b.year) - Number(a.year) || a.category.localeCompare(b.category) || a.title.localeCompare(b.title));
@@ -55,35 +72,88 @@
       fragment.append(group);
     }
     timeline.replaceChildren(fragment);
-    filters.querySelectorAll("button").forEach(button => {
-      button.setAttribute("aria-pressed", String(button.dataset.category === category));
-    });
     root.querySelector(".keyword-total").textContent = category === "all"
       ? `${selected.count} related items · ${years.length} years`
       : `${items.length} of ${selected.count} related items · ${years.length} years`;
   }
 
+  function changeCategory(nextCategory) {
+    if (nextCategory === category) return;
+    const revision = ++categoryRevision;
+    const topic = selected;
+    const changingVideoView = (nextCategory === "videos") !== (category === "videos");
+    viewTransition?.skipTransition();
+    const update = () => {
+      if (revision !== categoryRevision || selected !== topic) return;
+      category = nextCategory;
+      renderTimeline();
+      saveSelection();
+      if (nextCategory === "videos") results.scrollIntoView({behavior: "instant", block: "start"});
+    };
+    if (changingVideoView && !reducedMotion.matches && document.startViewTransition) {
+      viewTransition = document.startViewTransition(update);
+    } else {
+      update();
+      if (changingVideoView && !reducedMotion.matches) {
+        videoGrid.animate([{opacity: .35, transform: "translateX(24px)"}, {opacity: 1, transform: "translateX(0)"}],
+          {duration: 300, easing: "ease-out"});
+      }
+    }
+  }
+
+  function renderVideos() {
+    const videos = (selected.video_items || []).map(index => data.videos[index]);
+    videoSection.hidden = !videos.length;
+    resultLayout.classList.toggle("has-videos", videos.length > 0);
+    root.querySelector(".keyword-video-total").textContent = `${videos.length} ${videos.length === 1 ? "video" : "videos"}`;
+    const fragment = document.createDocumentFragment();
+    for (const [index, video] of videos.entries()) {
+      const card = node("a", "keyword-video-card");
+      card.style.viewTransitionName = `keyword-video-${index}`;
+      card.href = video.url;
+      card.title = video.title;
+      card.setAttribute("aria-label", `Watch video: ${video.title}`);
+      const image = node("img", "keyword-video-thumbnail");
+      image.src = video.thumbnail;
+      image.alt = "";
+      image.width = 160;
+      image.height = 90;
+      image.loading = "lazy";
+      const copy = node("div", "keyword-video-copy");
+      copy.append(node("p", "keyword-video-meta", `${video.year}${video.duration ? ` · ${video.duration}` : ""}`));
+      copy.append(node("h5", "keyword-video-title", video.title));
+      card.append(image, copy);
+      fragment.append(card);
+    }
+    videoGrid.replaceChildren(fragment);
+    videoGrid.scrollTop = 0;
+  }
+
   function selectTopic(term, requestedCategory = "all", scroll = false) {
+    categoryRevision++;
+    viewTransition?.skipTransition();
     selected = term;
     const available = data.categories.filter(group => term.items.some(index => data.items[index].category === group.id));
-    category = available.some(group => group.id === requestedCategory) ? requestedCategory : "all";
+    available.push({id: "videos", label: "Videos", kind_class: "is-video"});
+    const videoCount = (term.video_items || []).length;
+    category = available.some(group => group.id === requestedCategory) && (requestedCategory !== "videos" || videoCount)
+      ? requestedCategory : "all";
     words.forEach(word => word.setAttribute("aria-pressed", String(word.dataset.keyword === term.id)));
     heading.textContent = term.label;
     filters.replaceChildren();
     for (const group of [{id: "all", label: "All types", kind_class: ""}, ...available]) {
-      const count = group.id === "all" ? term.count : term.items.filter(index => data.items[index].category === group.id).length;
+      const count = group.id === "all" ? term.count : group.id === "videos" ? videoCount
+        : term.items.filter(index => data.items[index].category === group.id).length;
       const button = node("button", `keyword-category ${group.kind_class}`, group.label);
       button.type = "button";
       button.dataset.category = group.id;
+      button.disabled = group.id === "videos" && !videoCount;
       button.append(node("span", "keyword-category-count", String(count)));
-      button.addEventListener("click", () => {
-        category = group.id;
-        renderTimeline();
-        saveSelection();
-      });
+      button.addEventListener("click", () => changeCategory(group.id));
       filters.append(button);
     }
     renderTimeline();
+    renderVideos();
     results.hidden = false;
     if (scroll) {
       heading.focus({preventScroll: true});
@@ -93,7 +163,7 @@
 
   words.forEach(word => {
     const term = data.terms.find(item => item.id === word.dataset.keyword);
-    word.title = `${term.count} related items`;
+    word.title = `${term.count} projects and publications · ${term.video_count || 0} videos`;
     word.addEventListener("click", () => {
       selectTopic(term, "all", true);
       saveSelection();
